@@ -6,19 +6,24 @@ import { DeathScreen } from "./components/DeathScreen";
 export default function App() {
   const { state, startGame, choose, restart } = useGame();
 
+  let screen;
   if (state.phase === "title") {
-    return <TitleScreen onStart={startGame} />;
-  }
-
-  if (state.phase === "dead" && state.death) {
-    return (
+    screen = <TitleScreen onStart={startGame} />;
+  } else if (state.phase === "dead" && state.death) {
+    screen = (
       <DeathScreen
         death={state.death}
         turnsSurvived={state.turn}
         onRestart={restart}
       />
     );
+  } else {
+    screen = <GameScreen state={state} onChoice={choose} />;
   }
 
-  return <GameScreen state={state} onChoice={choose} />;
+  return (
+    <div className="mx-auto max-w-md min-h-dvh">
+      {screen}
+    </div>
+  );
 }
