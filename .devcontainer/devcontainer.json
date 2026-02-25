@@ -10,7 +10,6 @@
   // Prerequisites on host:
   // - /srv/devhome/ directories exist (shared with msc-math devcontainer)
   // - /srv/devhome/.cache/npm/ and /srv/devhome/.cache/ms-playwright/ exist
-  // - /srv/devworktrees/xrisk-pause-game/worktrees/ exists
   // - devcontainer CLI: npm i -g @devcontainers/cli
   //
   // Usage from host:
@@ -41,7 +40,6 @@
     "source=/srv/devhome/.cache/npm,target=/home/vscode/.cache/npm,type=bind,consistency=cached",
     "source=/srv/devhome/.cache/ms-playwright,target=/home/vscode/.cache/ms-playwright,type=bind,consistency=cached",
     "source=/srv/devhome/.bash_history_dir,target=/home/vscode/.bash_history_dir,type=bind,consistency=cached",
-    "source=/srv/devworktrees/xrisk-pause-game/worktrees,target=/workspaces/worktrees,type=bind,consistency=cached",
     "source=/srv/devhome/.vscode-cli,target=/home/vscode/.vscode-cli,type=bind,consistency=cached"
   ]
 }

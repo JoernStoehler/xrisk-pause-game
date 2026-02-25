@@ -257,7 +257,6 @@ Primary environment (~80% of work). Local devcontainer on Jörn's Ubuntu desktop
 - **Rebuild:** `.devcontainer/host-devcontainer-rebuild.sh` (from host)
 - **VS Code tunnel:** `.devcontainer/host-vscode-tunnel.sh` (from host)
 - **First run:** `npm install` (Playwright browsers + system deps pre-installed in image)
-- **Worktrees:** `.devcontainer/worktree-new.sh <path> <branch>` for multi-agent parallel work
 - **Playwright:** No special flags needed — Chromium runs normally in the devcontainer
 
 ---

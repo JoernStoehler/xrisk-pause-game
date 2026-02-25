@@ -13,8 +13,6 @@ Claude Code on the web is a secondary environment (20%) — uses the session-sta
   warmup-cache.sh            # Background cache warming (npm install)
   host-devcontainer-rebuild.sh  # Host-side: rebuild image + recreate container
   host-vscode-tunnel.sh      # Host-side: launch VS Code tunnel
-  worktree-new.sh            # Create worktree with dep hydration
-  worktree-remove.sh         # Safe worktree removal with diagnostics
 ```
 
 ## Dependencies
