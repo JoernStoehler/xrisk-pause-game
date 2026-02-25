@@ -59,7 +59,7 @@ Cards are drawn from a weighted pool. Each card template has a `weight(state)` f
 
 1. Draw card from weighted pool
 2. Player sees card (speaker, text) and swipes or taps
-3. On tilt: option labels always visible flanking portrait, affected resource icons show directional preview (small/large triangles — no numbers)
+3. On tilt: option labels always visible below card, affected resource icons show directional preview (small/large triangles — no numbers)
 4. On commit: effects applied, turn incremented, new card drawn
 5. If any bar hits 0 or 100: death screen with explanation
 
@@ -127,14 +127,14 @@ src/
 **Character portraits:**
 - AI-generated PNG portraits per speaker (fal.ai FLUX model, 21 portraits in `src/assets/portraits/`)
 - Dark, moody, stylized illustrations — each speaker instantly recognizable
-- Portrait occupies center of card body with choice labels flanking left/right
+- Portrait occupies center of card body (max 280px wide), choice labels sit below
 - New portraits generated via `scripts/generate-portraits.mjs`
 
 **Typography:**
 - Space Mono font (Google Fonts), monospace — surveillance-era aesthetic
 - Speaker name: small, uppercase, bold, wide tracking (header label)
 - Dialogue text: medium weight, standard case, generous line-height, centered
-- Choice labels: smaller, bold, fade in proportionally to swipe offset
+- Choice labels: text-sm bold, below speaker name, both always visible (not Reigns-style one-at-a-time reveal — our decisions are substantive and players need to compare both options before choosing)
 
 **Resource icons:**
 - 48×48 SVG icons: shield (Trust), dollar (Funding), eye (Intel), scales (Leverage)
