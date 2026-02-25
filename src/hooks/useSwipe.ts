@@ -30,6 +30,7 @@ export function useSwipe({
   const currentTiltRef = useRef<TiltDirection>("center");
   const [isExiting, setIsExiting] = useState(false);
   const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
+  const [swipeProgress, setSwipeProgress] = useState(0);
 
   const updateTransform = useCallback((x: number, transition: boolean) => {
     if (!cardRef.current) return;
@@ -73,6 +74,7 @@ export function useSwipe({
         currentTiltRef.current = newDir;
         setTiltDirection(newDir);
       }
+      setSwipeProgress(Math.min(1, Math.abs(dx) / commitThreshold));
     },
     [updateTransform],
   );
@@ -115,6 +117,7 @@ export function useSwipe({
         updateTransform(0, true);
         currentTiltRef.current = "center";
         setTiltDirection("center");
+        setSwipeProgress(0);
       }
     },
     [commitThreshold, velocityThreshold, onSwipe, updateTransform],
@@ -126,6 +129,7 @@ export function useSwipe({
     updateTransform(0, true);
     currentTiltRef.current = "center";
     setTiltDirection("center");
+    setSwipeProgress(0);
   }, [updateTransform]);
 
   const style: React.CSSProperties = {
@@ -136,6 +140,7 @@ export function useSwipe({
   return {
     cardRef,
     tiltDirection,
+    swipeProgress,
     isExiting,
     style,
     handlers: {

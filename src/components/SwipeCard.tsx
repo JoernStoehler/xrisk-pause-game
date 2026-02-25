@@ -13,6 +13,7 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
   const {
     cardRef,
     tiltDirection,
+    swipeProgress,
     isExiting,
     style,
     handlers,
@@ -64,16 +65,18 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
           </span>
         </div>
 
-        {/* Choice labels — below speaker name, highlight on swipe */}
+        {/* Choice labels — below speaker name, brighten proportional to swipe */}
         <div className="bg-tan px-4 py-2 flex justify-between rounded-b-lg">
           <span
-            className={`swipe-label text-sm font-bold select-none leading-tight text-left transition-colors ${tiltDirection === "left" ? "text-text-dark" : "text-text-muted"}`}
+            className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-left"
+            style={tiltDirection === "left" ? { opacity: 0.4 + 0.6 * swipeProgress } : undefined}
             data-testid="label-left"
           >
             {card.left.label}
           </span>
           <span
-            className={`swipe-label text-sm font-bold select-none leading-tight text-right transition-colors ${tiltDirection === "right" ? "text-text-dark" : "text-text-muted"}`}
+            className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-right"
+            style={tiltDirection === "right" ? { opacity: 0.4 + 0.6 * swipeProgress } : undefined}
             data-testid="label-right"
           >
             {card.right.label}
