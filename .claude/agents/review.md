@@ -35,9 +35,9 @@ You are the review agent for The Pause (Reigns-style card swipe game). You revie
 ### Visual design (if components or CSS changed)
 - Dark background / light card contrast model preserved
 - Card proportions match spec (~70-75% width, ~55-60% height)
-- Inter font used, not monospace
+- Space Mono font (monospace)
 - Mobile-first layout (touch targets ≥44px)
-- Resource bar colors match spec (Trust=blue, Funding=amber, Intel=violet, Leverage=red)
+- Single-color resource icons (#D4C8A0), not per-resource colors
 
 ### Interaction (if SwipeCard, useSwipe, or GameScreen changed)
 - Swipe via Pointer Events (works for touch and mouse)
