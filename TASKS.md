@@ -1,5 +1,19 @@
 # Tasks
 
+## Handoff Note (2025-02-25)
+
+This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projects/global-pause/`) to its own standalone repo. Fresh git history — all prior history is in the monorepo.
+
+**What's set up:**
+- Single merged CLAUDE.md (conventions + game spec)
+- `.claude/hooks/` — session-start (CC Web), worktree-create/remove
+- `.claude/agents/review.md` — review agent for branch changes
+- `.github/workflows/deploy.yml` — deploys to `global-pause.pages.dev` on push to main
+- GitHub secrets: CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID
+- `literature/` — AI x-risk reference materials for card content writing
+
+**Deployment:** `global-pause.pages.dev` — unchanged, wrangler.toml still uses `name = "global-pause"`.
+
 ## Current
 
 - [ ] Swipe UX polish (test on real mobile device, tune thresholds/velocity)
