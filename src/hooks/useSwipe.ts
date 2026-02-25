@@ -120,6 +120,14 @@ export function useSwipe({
     [commitThreshold, velocityThreshold, onSwipe, updateTransform],
   );
 
+  const onPointerCancel = useCallback(() => {
+    if (!dragRef.current.active) return;
+    dragRef.current.active = false;
+    updateTransform(0, true);
+    currentTiltRef.current = "center";
+    setTiltDirection("center");
+  }, [updateTransform]);
+
   const style: React.CSSProperties = {
     touchAction: "none",
     cursor: isExiting ? "default" : "grab",
@@ -134,6 +142,7 @@ export function useSwipe({
       onPointerDown,
       onPointerMove,
       onPointerUp,
+      onPointerCancel,
     },
   };
 }

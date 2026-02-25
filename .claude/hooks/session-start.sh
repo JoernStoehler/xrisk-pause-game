@@ -20,7 +20,7 @@ fi
 
 # Export GH_REPO so gh CLI works despite the git proxy.
 if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
-  REPO=$(git -C "$CLAUDE_PROJECT_DIR" remote get-url origin 2>/dev/null | sed -n 's|.*/git/\(.*\)$|\1|p')
+  REPO=$(git -C "$CLAUDE_PROJECT_DIR" remote get-url origin 2>/dev/null | sed -n 's|.*/git/\(.*\)$|\1|p' | sed 's/\.git$//')
   if [ -n "$REPO" ]; then
     echo "export GH_REPO=$REPO" >> "$CLAUDE_ENV_FILE"
   fi

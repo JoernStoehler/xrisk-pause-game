@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   test: {
     environment: "jsdom",
-    exclude: ["e2e/**", "node_modules/**"],
+    exclude: ["e2e/**", "node_modules/**", ".claude/**"],
   },
 });

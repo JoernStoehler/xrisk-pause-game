@@ -12,7 +12,8 @@ You are the review agent for The Pause (Reigns-style card swipe game). You revie
 1. **Read CLAUDE.md** to understand current conventions and design rules
 2. **Determine what changed**: Run `git diff main...HEAD --name-only` to get changed files. State the base commit explicitly.
 3. **Review each area** that has changes (see checklist below)
-4. **Run verification**: `npm run check` (typecheck + lint + build + tests)
+4. **Run verification**: `npm run check` (typecheck + lint + build + unit tests)
+   - If it fails, include the specific errors in the Issues section as must-fix items. Do not attempt to fix them.
 5. **Present findings** — unified report with calibrated recommendation
 
 **Always use local `main`, never `origin/main`.** Use three-dot diff (`git diff main...HEAD`).

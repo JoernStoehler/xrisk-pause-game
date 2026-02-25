@@ -12,7 +12,7 @@
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
-import type { GameState, ResourceKey } from "./engine/types";
+import type { GameState } from "./engine/types";
 import { newGame, applyChoice, checkDeath } from "./engine/state";
 import { drawNextCard } from "./engine/cards";
 import { CARD_TEMPLATES } from "./data/cards";
@@ -50,10 +50,6 @@ function printResources(state: GameState): void {
   console.log(`  ⚖  Leverage ${barStr(r.leverage)}`);
 }
 
-function effectStr(effects: { resource: ResourceKey; delta: number }[]): string {
-  return effects.map((e) => `${e.resource} ${e.delta > 0 ? "+" : ""}${e.delta}`).join(", ");
-}
-
 function printCard(state: GameState): void {
   if (!state.activeCard) {
     console.log("No active card.");
@@ -66,9 +62,6 @@ function printCard(state: GameState): void {
   console.log();
   console.log(
     `← ${c.left.label.padEnd(20)} → ${c.right.label}`,
-  );
-  console.log(
-    `  [${effectStr(c.left.effects)}]${"".padEnd(Math.max(0, 18 - effectStr(c.left.effects).length))}  [${effectStr(c.right.effects)}]`,
   );
   console.log("─".repeat(45));
 
@@ -164,16 +157,17 @@ if (cmd === "reset" || cmd === "new") {
   const turns = parseInt(process.argv[3] || "20", 10);
   let s = initGame();
   console.log(`Auto-playing ${turns} turns...\n`);
+  // Separate RNG for auto-play coin flips — doesn't interfere with game state
+  const coinRng = { rngState: s.rngState ^ 0x12345678 };
   for (let i = 0; i < turns; i++) {
     if (s.phase === "dead" || !s.activeCard) break;
-    const rng = { rngState: s.rngState };
-    const choice = random(rng) < 0.5 ? "left" as const : "right" as const;
+    const choice = random(coinRng) < 0.5 ? "left" as const : "right" as const;
     const card = s.activeCard;
     const choiceOption = choice === "left" ? card.left : card.right;
     console.log(
-      `Turn ${s.turn}: ${card.speaker} → ${choice} "${choiceOption.label}" [${effectStr(choiceOption.effects)}]`,
+      `Turn ${s.turn}: ${card.speaker} → ${choice} "${choiceOption.label}"`,
     );
-    s = { ...step(s, choice), rngState: rng.rngState };
+    s = step(s, choice);
   }
   save(s);
   console.log();

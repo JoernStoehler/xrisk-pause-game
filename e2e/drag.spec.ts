@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
   await page.evaluate(() => localStorage.clear());
   await page.reload();
   await page.click("text=Take Office");
-  await page.waitForTimeout(500);
+  await page.locator(".animate-card-enter").first().waitFor();
 });
 
 async function getCardCenter(page: import("@playwright/test").Page) {
@@ -103,9 +103,6 @@ test("completing a swipe advances the game", async ({ page }) => {
   await page.mouse.move(x + 150, y, { steps: 15 });
   await page.mouse.up();
 
-  // Wait for fly-off animation + new card draw
-  await page.waitForTimeout(600);
-
   // Decision count should have advanced to 1
-  await expect(page.getByText("1", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("1", { exact: true }).first()).toBeVisible({ timeout: 2000 });
 });

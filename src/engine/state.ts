@@ -1,8 +1,6 @@
 import type {
   DeathInfo,
-  Effect,
   GameState,
-  Resources,
   ResourceKey,
 } from "./types";
 import { DEATH_MESSAGES } from "../data/deaths";
@@ -26,13 +24,16 @@ export function newGame(seed?: number): GameState {
   };
 }
 
-export function applyEffects(
-  resources: Resources,
-  effects: Effect[],
-): Resources {
+/** Helper for card reducers: apply deltas to resources with clamping to 0-100 */
+export function clampResources(
+  resources: GameState["resources"],
+  deltas: Partial<Record<ResourceKey, number>>,
+): GameState["resources"] {
   const next = { ...resources };
-  for (const e of effects) {
-    next[e.resource] = Math.max(0, Math.min(100, next[e.resource] + e.delta));
+  for (const key of RESOURCE_KEYS) {
+    if (deltas[key] !== undefined) {
+      next[key] = Math.max(0, Math.min(100, next[key] + deltas[key]));
+    }
   }
   return next;
 }
@@ -44,7 +45,7 @@ export function applyChoice(
   if (!state.activeCard) return state;
 
   const option = choice === "left" ? state.activeCard.left : state.activeCard.right;
-  const resources = applyEffects(state.resources, option.effects);
+  const applied = option.apply(state);
 
   const historyEntry = {
     turn: state.turn,
@@ -53,8 +54,7 @@ export function applyChoice(
   };
 
   return {
-    ...state,
-    resources,
+    ...applied,
     turn: state.turn + 1,
     activeCard: null,
     history: [...state.history, historyEntry],

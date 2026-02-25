@@ -1,6 +1,6 @@
 # Tasks
 
-## Handoff Note (2025-02-25)
+## Handoff Note (2026-02-25)
 
 This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projects/global-pause/`) to its own standalone repo. Fresh git history — all prior history is in the monorepo.
 
@@ -16,6 +16,7 @@ This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projec
 
 ## Current
 
+- [ ] Re-set GitHub secrets (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID) — .env was corrupted, secrets may need refresh
 - [ ] Swipe UX polish (test on real mobile device, tune thresholds/velocity)
 - [ ] Card content: replace throwaway cards with real x-risk scenario cards (needs Jörn's domain input + expert)
 - [ ] More history-triggered chains (blocked on card content — no point chaining throwaway cards)
@@ -24,6 +25,7 @@ This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projec
 
 ## Done
 
+- [x] Post-migration audit & fixes: CLAUDE.md synced with v3 reality, hook/config hardening, card balance (4 cards), E2E test reliability, CLI RNG fix, useSwipe onPointerCancel, Vitest worktree exclusion, Dockerfile Playwright browsers
 - [x] Visual overhaul v3 polish: match Reigns layout precisely (remove card frame/shadow, hide card back in neutral, swipe perf via refs instead of state, bigger icons 48px, correct zone proportions, overflow:hidden fix, dead code cleanup, E2E viewport fix, screenshot script)
 - [x] Visual overhaul v3: Reigns-style layout (dark top/bottom bars, tan mid zone, card-back deck stack, Space Mono font, 21 AI-generated portraits via fal.ai, resource icons instead of bars, choice overlay on swipe)
 - [x] Visual overhaul v2: dark warm bg (#2A2118) + cream card (#FFFDF7), 21 geometric SVG speaker portraits (SpeakerPortrait.tsx), compact resource bars with bright colors, card materiality (shadow/border), Reigns-style contrast model

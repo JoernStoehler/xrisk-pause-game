@@ -50,9 +50,13 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 # Uses the playwright CLI to install the correct system packages for this OS.
 RUN npx -y playwright install-deps chromium
 
-# Switch to dev user
+# Switch to dev user (browser binaries installed as vscode, not root)
 USER vscode
 ENV HOME=/home/vscode
 ENV PATH="$HOME/.local/bin:$PATH"
+
+# Playwright browser binaries (pinned to project version).
+# install-deps above handles system libs; this downloads the actual browser.
+RUN npx -y playwright@1.56.1 install chromium
 
 WORKDIR /workspaces/xrisk-pause-game

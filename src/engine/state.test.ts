@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { newGame, applyEffects, applyChoice, checkDeath } from "./state";
+import { newGame, clampResources, applyChoice, checkDeath } from "./state";
 import { drawNextCard } from "./cards";
 import { CARD_TEMPLATES } from "../data/cards";
 
@@ -18,14 +18,10 @@ describe("newGame", () => {
   });
 });
 
-describe("applyEffects", () => {
+describe("clampResources", () => {
   it("applies deltas and clamps to 0-100", () => {
     const r = { trust: 50, funding: 10, intel: 90, leverage: 50 };
-    const result = applyEffects(r, [
-      { resource: "trust", delta: 60 },
-      { resource: "funding", delta: -20 },
-      { resource: "intel", delta: 15 },
-    ]);
+    const result = clampResources(r, { trust: 60, funding: -20, intel: 15 });
     expect(result.trust).toBe(100);
     expect(result.funding).toBe(0);
     expect(result.intel).toBe(100);

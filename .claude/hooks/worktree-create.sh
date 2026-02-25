@@ -25,6 +25,13 @@ if ! git -C "$REPO_ROOT" rev-parse --verify main >/dev/null 2>&1; then
   exit 1
 fi
 
+# Clean up stale worktree state
+git -C "$REPO_ROOT" worktree prune >&2
+if [ -d "$WORKTREE_DIR" ]; then
+  echo "[worktree-create] cleaning up stale directory $WORKTREE_DIR" >&2
+  rm -rf "$WORKTREE_DIR"
+fi
+
 # Create worktree: reuse existing local branch, or create from local main.
 if git -C "$REPO_ROOT" show-ref --verify --quiet "refs/heads/$BRANCH"; then
   echo "[worktree-create] reusing existing local branch $BRANCH" >&2

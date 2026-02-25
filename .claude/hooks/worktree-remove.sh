@@ -31,5 +31,5 @@ if [[ -n "$BRANCH" ]]; then
 fi
 
 # --- Remove worktree ---
-git -C "$REPO_ROOT" worktree remove --force "$WORKTREE_PATH" >&2
+git -C "$REPO_ROOT" worktree remove --force "$WORKTREE_PATH" >&2 || true
 echo "[worktree-remove] removed $WORKTREE_PATH" >&2

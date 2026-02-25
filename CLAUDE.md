@@ -18,13 +18,16 @@ A Reigns-clone where the player is the Director-General of the ISIA (Internation
 ```
 CLAUDE.md              # You are here
 TASKS.md               # Task tracking
+BALANCE.md             # Balance tuning process and state
 package.json           # Dependencies
 src/                   # Source code
 e2e/                   # E2E tests (Playwright)
+scripts/               # Portrait generation, utilities
 literature/            # Reference materials on AI x-risk (see literature/CLAUDE.md)
 docs/recipes.md        # Copy-paste patterns (Workers, D1, LLM, image gen)
 .devcontainer/         # Local devcontainer config (see .devcontainer/CLAUDE.md)
 .claude/               # Hooks, settings
+.github/               # CI/CD (deploy to Cloudflare Pages)
 ```
 
 ---
@@ -56,7 +59,7 @@ Cards are drawn from a weighted pool. Each card template has a `weight(state)` f
 
 1. Draw card from weighted pool
 2. Player sees card (speaker, text) and swipes or taps
-3. On tilt: option labels fade in, affected resource bars show directional preview (↑/↓ small, ↑↑/↓↓ large — no numbers)
+3. On tilt: option labels always visible flanking portrait, affected resource icons show directional preview (small/large triangles — no numbers)
 4. On commit: effects applied, turn incremented, new card drawn
 5. If any bar hits 0 or 100: death screen with explanation
 
@@ -71,13 +74,14 @@ Runs last ~15-40 turns. Death is frequent and expected. Each death teaches somet
 ```
 src/
   engine/
-    types.ts        # GameState, CardTemplate, Resources, Effect
-    rng.ts          # Seeded PRNG (mulberry32) — kept from v1
+    types.ts        # GameState, CardTemplate, Resources, ChoiceOption
+    rng.ts          # Seeded PRNG (mulberry32)
     state.ts        # newGame, applyChoice, checkDeath (pure functions)
+    state.test.ts   # Unit tests
     cards.ts        # drawNextCard (weight, filter, weighted pick)
-    useGame.ts      # React hook: state + actions + localStorage
+    useGame.ts      # React bridge: state + actions + localStorage
   data/
-    cards.ts        # Card templates (content — will be iterated heavily)
+    cards.ts        # Card templates (29 templates)
     deaths.ts       # Death messages per resource × extreme
   hooks/
     useSwipe.ts     # Pointer event drag/swipe/tilt logic
@@ -85,9 +89,11 @@ src/
     TitleScreen.tsx
     GameScreen.tsx
     SwipeCard.tsx
-    ResourceDisplay.tsx
-    ResourceBar.tsx
+    ResourceIcons.tsx
+    SpeakerPortrait.tsx
     DeathScreen.tsx
+  assets/
+    portraits/*.png   # 21 AI-generated speaker portraits
   cli.ts            # CLI playtest tool (no React, headless)
   App.tsx
   main.tsx
@@ -99,7 +105,7 @@ src/
 - **Engine has zero React dependency.** `types.ts`, `state.ts`, `cards.ts`, `rng.ts` are pure TypeScript. The CLI tool uses them directly.
 - **Cards own their weight.** No external card injection or pool mutation. Each card's `weight(state)` function determines if and how likely it is to appear.
 - **Swipe via Pointer Events.** Works for touch and mouse. CSS transforms via ref during drag (no re-renders). Spring-back on non-commit, fly-off on commit.
-- **Directional previews (Reigns-style).** On tilt, affected bars show ↑/↓ (small) or ↑↑/↓↓ (large). No numbers — player develops intuition.
+- **Directional previews (Reigns-style).** On tilt, affected resource icons show small/large colored triangles. No numbers — player develops intuition.
 
 ---
 
@@ -108,9 +114,10 @@ src/
 **Reference:** Reigns (Nerial, 2016). The gold standard for card-swipe games.
 
 **Color model — dark background, light card:**
-- Background: dark warm brown/charcoal (#2A2118 range) — the card pops as a physical object
-- Card face: warm off-white/cream (#FFFDF7) — NOT pure white
-- This contrast model is fundamental to Reigns' feel. Light-on-light kills card presence.
+- Background: dark brown (#2A1F0F) — dark top/bottom bars frame the card zone
+- Card zone: tan/gold mid-zone (#B8A668) — parchment-like feel, card-back deck stack visible
+- Card back: dark green (#1A3D2E) — the face-down card in the deck
+- Dark-on-tan contrast model creates depth and card-as-object presence
 
 **Card proportions:**
 - Card fills ~70-75% of screen width, ~55-60% of screen height
@@ -118,21 +125,21 @@ src/
 - Card is the dominant visual element — everything else is secondary
 
 **Character portraits:**
-- CSS geometric portraits per speaker: colored circle/shape backgrounds with simple geometric features
-- Flat-shaded, bold, distinctive silhouettes (inspired by Reigns' Tom Whalen-esque style)
-- Portrait occupies upper ~40% of card body — the visual anchor
-- Each speaker instantly recognizable by color + shape
+- AI-generated PNG portraits per speaker (fal.ai FLUX model, 21 portraits in `src/assets/portraits/`)
+- Dark, moody, stylized illustrations — each speaker instantly recognizable
+- Portrait occupies center of card body with choice labels flanking left/right
+- New portraits generated via `scripts/generate-portraits.mjs`
 
 **Typography:**
-- Inter font (Google Fonts), not monospace
+- Space Mono font (Google Fonts), monospace — surveillance-era aesthetic
 - Speaker name: small, uppercase, bold, wide tracking (header label)
 - Dialogue text: medium weight, standard case, generous line-height, centered
 - Choice labels: smaller, bold, fade in proportionally to swipe offset
 
-**Resource bars:**
-- Per-resource colors: Trust=blue, Funding=amber, Intel=violet, Leverage=red
-- Slim vertical bars, compact row at top of screen
-- Preview arrows on tilt (small ↑/↓, large ↑↑/↓↓)
+**Resource icons:**
+- 48×48 SVG icons: shield (Trust), dollar (Funding), eye (Intel), scales (Leverage)
+- Single color (#D4C8A0), compact row at top of screen
+- Preview indicators on tilt: small colored triangles (green ↑ / red ↓, single or double for magnitude)
 
 **Layout:**
 - Mobile-first (portrait, touch targets ≥44px)
@@ -144,7 +151,7 @@ src/
 
 ## Repo Invariants
 
-- `npm run check` passes (typecheck + lint + build + tests)
+- `npm run check` passes (typecheck + lint + build + unit tests; E2E via `npm run test:e2e`)
 - Tech stack: Vite + React + TypeScript, Tailwind CSS, Playwright, Cloudflare Pages
 - `.env` at repo root has Cloudflare credentials (account ID, API token) and service keys
 - Source it or use individual vars when tools need auth (e.g. `CLOUDFLARE_API_TOKEN` for wrangler)
@@ -298,7 +305,7 @@ CC Web is a secondary/fallback environment (~20% of work). Has restricted networ
 
 ## Review Checklist (after implementing UI changes)
 
-The core mechanic is the drag/swipe interaction. Automated checks (typecheck, lint, build) do NOT verify interactive behavior. After any change to SwipeCard, useSwipe, ResourceBar, or GameScreen:
+The core mechanic is the drag/swipe interaction. Automated checks (typecheck, lint, build) do NOT verify interactive behavior. After any change to SwipeCard, useSwipe, ResourceIcons, or GameScreen:
 
 1. **Drag E2E test passes** (`e2e/drag.spec.ts`) — simulates pointer drag, verifies tilt direction propagates to resource bar previews, verifies swipe commit advances the game
 2. **Card re-mount on new card** — the SwipeCard key must change when activeCard changes, otherwise drag state leaks between cards and enter animation doesn't fire
@@ -314,30 +321,28 @@ npm run dev &
 sleep 3
 # Title screen
 npx playwright screenshot --viewport-size="390,844" http://localhost:5173 /tmp/vqa-title.png
-# Game screen (need a script for click interaction)
-node -e "
-const pw = require('playwright');
-(async () => {
-  const b = await pw.chromium.launch();
-  const p = await b.newPage();
-  await p.setViewportSize({width:390,height:844});
-  await p.goto('http://localhost:5173');
-  await p.click('text=Take Office');
-  await p.waitForTimeout(800);
-  await p.screenshot({path:'/tmp/vqa-game.png'});
-  // Tilt right
-  const card = p.locator('[class*=card-enter]').first();
-  const box = await card.boundingBox();
-  if (box) {
-    const cx = box.x+box.width/2, cy = box.y+box.height/2;
-    await p.mouse.move(cx,cy); await p.mouse.down();
-    await p.mouse.move(cx+60,cy,{steps:10});
-    await p.waitForTimeout(200);
-    await p.screenshot({path:'/tmp/vqa-tilt.png'});
-    await p.mouse.move(cx,cy,{steps:5}); await p.mouse.up();
-  }
-  await b.close();
-})();
+# Game screen + tilt (uses tsx for ESM compatibility)
+npx tsx -e "
+import pw from 'playwright';
+const b = await pw.chromium.launch();
+const p = await b.newPage();
+await p.setViewportSize({width:390,height:844});
+await p.goto('http://localhost:5173');
+await p.click('text=Take Office');
+await p.waitForTimeout(800);
+await p.screenshot({path:'/tmp/vqa-game.png'});
+// Tilt right
+const card = p.locator('.animate-card-enter').first();
+const box = await card.boundingBox();
+if (box) {
+  const cx = box.x+box.width/2, cy = box.y+box.height/2;
+  await p.mouse.move(cx,cy); await p.mouse.down();
+  await p.mouse.move(cx+60,cy,{steps:10});
+  await p.waitForTimeout(200);
+  await p.screenshot({path:'/tmp/vqa-tilt.png'});
+  await p.mouse.move(cx,cy,{steps:5}); await p.mouse.up();
+}
+await b.close();
 "
 ```
 

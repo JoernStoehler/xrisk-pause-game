@@ -17,7 +17,7 @@ test("title screen loads and shows Take Office", async ({ page }) => {
 
 test("clicking Take Office shows game screen with card", async ({ page }) => {
   await page.click("text=Take Office");
-  await page.waitForTimeout(500);
+  await page.locator(".animate-card-enter").first().waitFor();
 
   // Resource icons should be present (SVG elements in the dark top bar)
   await expect(page.locator("svg").first()).toBeVisible();
@@ -33,13 +33,13 @@ test("clicking Take Office shows game screen with card", async ({ page }) => {
 
 test("swiping advances to next card", async ({ page }) => {
   await page.click("text=Take Office");
-  await page.waitForTimeout(500);
+  await page.locator(".animate-card-enter").first().waitFor();
 
   // Get initial decision count
   await expect(page.getByText("0", { exact: true })).toBeVisible();
 
   // Simulate a swipe by dragging the card
-  const card = page.locator("[style*='touch-action']").first();
+  const card = page.locator(".animate-card-enter").first();
   const box = await card.boundingBox();
   if (box) {
     await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
@@ -54,16 +54,14 @@ test("swiping advances to next card", async ({ page }) => {
     await page.mouse.up();
   }
 
-  await page.waitForTimeout(500);
-
   // Decision count should have advanced
-  await expect(page.getByText("1", { exact: true }).first()).toBeVisible();
+  await expect(page.getByText("1", { exact: true }).first()).toBeVisible({ timeout: 2000 });
   await page.screenshot({ path: "/tmp/e2e-03-after-choice.png" });
 });
 
 test("repeated swipes eventually trigger death screen", async ({ page }) => {
   await page.click("text=Take Office");
-  await page.waitForTimeout(300);
+  await page.locator(".animate-card-enter").first().waitFor();
 
   // Spam left swipes — should eventually die
   for (let i = 0; i < 50; i++) {
@@ -72,22 +70,26 @@ test("repeated swipes eventually trigger death screen", async ({ page }) => {
       break;
     }
 
-    const card = page.locator("[style*='touch-action']").first();
-    const isVisible = await card.isVisible().catch(() => false);
-    if (isVisible) {
-      const box = await card.boundingBox();
-      if (box) {
-        await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-        await page.mouse.down();
-        for (let j = 0; j < 8; j++) {
-          await page.mouse.move(
-            box.x + box.width / 2 - (j + 1) * 25,
-            box.y + box.height / 2,
-          );
-        }
-        await page.mouse.up();
-        await page.waitForTimeout(150);
+    // Wait for card to be ready (animate-card-enter is only present when not mid-exit)
+    const card = page.locator(".animate-card-enter").first();
+    try {
+      await card.waitFor({ timeout: 2000 });
+    } catch {
+      break; // Card didn't appear — likely on death screen
+    }
+
+    const box = await card.boundingBox();
+    if (box) {
+      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+      await page.mouse.down();
+      for (let j = 0; j < 8; j++) {
+        await page.mouse.move(
+          box.x + box.width / 2 - (j + 1) * 25,
+          box.y + box.height / 2,
+        );
       }
+      await page.mouse.up();
+      await page.waitForTimeout(150);
     }
   }
 
@@ -95,14 +97,13 @@ test("repeated swipes eventually trigger death screen", async ({ page }) => {
     .locator("text=Try Again")
     .isVisible()
     .catch(() => false);
-  if (isDead) {
-    await expect(page.locator("text=Try Again")).toBeVisible();
-    await page.screenshot({ path: "/tmp/e2e-04-death.png" });
+  expect(isDead, "Game should reach death within 50 swipes").toBe(true);
 
-    // Restart
-    await page.click("text=Try Again");
-    await page.waitForTimeout(500);
-    await expect(page.getByText("Director-General")).toBeVisible();
-    await page.screenshot({ path: "/tmp/e2e-05-restart.png" });
-  }
+  await expect(page.locator("text=Try Again")).toBeVisible();
+  await page.screenshot({ path: "/tmp/e2e-04-death.png" });
+
+  // Restart
+  await page.click("text=Try Again");
+  await expect(page.getByText("Director-General")).toBeVisible({ timeout: 2000 });
+  await page.screenshot({ path: "/tmp/e2e-05-restart.png" });
 });

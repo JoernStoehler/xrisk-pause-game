@@ -7,11 +7,6 @@ export interface Resources {
   leverage: number; // 0-100
 }
 
-export interface Effect {
-  resource: ResourceKey;
-  delta: number;
-}
-
 /** Directional preview shown on tilt: small or large change */
 export type PreviewSize = "small" | "large";
 
@@ -23,7 +18,8 @@ export interface ChoicePreview {
 
 export interface ChoiceOption {
   label: string;
-  effects: Effect[];
+  /** Reducer: takes current state, returns new state with effects applied */
+  apply: (state: GameState) => GameState;
   /** Visual-only directional previews shown on tilt (Reigns-style, no numbers) */
   previews: ChoicePreview[];
 }
