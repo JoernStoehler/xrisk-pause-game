@@ -38,16 +38,15 @@ body {
 
 @keyframes card-enter {
   from {
-    transform: translateY(30px) scale(0.97);
-    opacity: 0;
+    transform: rotateY(180deg);
   }
   to {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+    transform: rotateY(0deg);
   }
 }
 .animate-card-enter {
-  animation: card-enter 0.25s ease-out backwards;
+  animation: card-enter 0.35s ease-out backwards;
+  backface-visibility: hidden;
 }
 
 @keyframes bar-pulse {

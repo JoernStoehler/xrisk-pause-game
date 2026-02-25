@@ -46,7 +46,7 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
           </span>
 
           {/* Portrait area wrapper — card back sits behind, portrait tilts */}
-          <div className="relative flex-1 min-w-0">
+          <div className="relative flex-1 min-w-0" style={{ perspective: "800px" }}>
             {/* Card back — behind portrait, visible when portrait tilts */}
             <div className="absolute inset-0 rounded-lg bg-[#1A3D2E] flex flex-col items-center justify-center gap-12">
               <FleurDeLis />
