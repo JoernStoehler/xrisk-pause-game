@@ -16,7 +16,8 @@ This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projec
 
 ## Current
 
-- [ ] Swipe UX polish (test on real mobile device, tune thresholds/velocity)
+- [x] Swipe UX polish (test on real mobile device, tune thresholds/velocity) — Jörn tested on mobile, swipe feels fine. Title/death screens feel clunky (animations, icon sizes, layout) but better to revisit after card content pass sets the mood.
+- [ ] Title/death screen polish: animations, icon sizes, layout feel clunky on mobile — Jörn's suggestion: defer until after card content pass sets the mood
 - [ ] Card content: replace throwaway cards with real x-risk scenario cards (needs Jörn's domain input + expert)
 - [ ] More history-triggered chains (blocked on card content — no point chaining throwaway cards)
 - [ ] More degraded variant pairs (blocked on card content — variants of throwaway cards will be replaced)
