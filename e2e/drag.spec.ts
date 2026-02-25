@@ -95,9 +95,6 @@ test("dragging card shows resource impact indicators", async ({ page }) => {
 });
 
 test("completing a swipe advances the game", async ({ page }) => {
-  // Should show initial decision count of 0
-  await expect(page.getByText("0", { exact: true })).toBeVisible();
-
   const { x, y } = await getCardCenter(page);
 
   // Drag right past commit threshold (100px)
@@ -106,6 +103,6 @@ test("completing a swipe advances the game", async ({ page }) => {
   await page.mouse.move(x + 150, y, { steps: 15 });
   await page.mouse.up();
 
-  // Decision count should have advanced to 1
-  await expect(page.getByText("1", { exact: true }).first()).toBeVisible({ timeout: 2000 });
+  // New card should appear after swipe commit
+  await page.locator(".animate-card-enter").first().waitFor({ timeout: 2000 });
 });

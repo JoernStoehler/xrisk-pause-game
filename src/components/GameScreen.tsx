@@ -44,24 +44,11 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
         />
       </div>
 
-      {/* Dark bottom bar — status info */}
-      <div className="bg-bar-dark px-5 py-5">
-        <div className="flex justify-between items-baseline">
-          <span className="text-text-light text-xs font-bold">
-            Director-General
-          </span>
-          <span className="text-text-light text-2xl font-bold">
-            {2026 + Math.floor(state.turn / 12)}
-          </span>
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-text-muted text-xs">
-            <span className="text-text-light text-lg font-bold">
-              {state.turn}
-            </span>{" "}
-            decisions made
-          </span>
-        </div>
+      {/* Dark bottom bar — year display */}
+      <div className="bg-bar-dark px-5 py-5 flex justify-center">
+        <span className="text-text-light text-2xl font-bold">
+          {2026 + Math.floor(state.turn / 12)}
+        </span>
       </div>
     </div>
   );
