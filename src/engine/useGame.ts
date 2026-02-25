@@ -18,7 +18,22 @@ function loadState(): GameState | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return null;
-    return JSON.parse(raw) as GameState;
+    const state = JSON.parse(raw) as GameState;
+    // Rehydrate activeCard: JSON.stringify strips functions (apply, weight),
+    // so we restore left/right from the matching card template.
+    if (state.activeCard) {
+      const template = CARD_TEMPLATES.find(
+        (t) => t.id === state.activeCard!.templateId,
+      );
+      if (template) {
+        state.activeCard.left = template.left;
+        state.activeCard.right = template.right;
+      } else {
+        // Template removed — clear stale card, will redraw
+        state.activeCard = null;
+      }
+    }
+    return state;
   } catch {
     return null;
   }
