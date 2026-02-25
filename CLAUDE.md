@@ -198,6 +198,11 @@ src/
 - No helpers/utilities for one-time operations
 - No design for hypothetical future requirements
 
+**Documentation levels (progressive disclosure):**
+- `CLAUDE.md` — rules and context every agent needs. Keep concise.
+- `TASKS.md` — current/done work items. Read at session start.
+- Code comments — design rationale, non-obvious decisions. Found when reading relevant code.
+
 ---
 
 ## Processes
