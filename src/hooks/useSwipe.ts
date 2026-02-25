@@ -1,0 +1,139 @@
+import { useCallback, useRef, useState } from "react";
+
+export type TiltDirection = "left" | "right" | "center";
+
+interface UseSwipeOptions {
+  onSwipe: (direction: "left" | "right") => void;
+  commitThreshold?: number;
+  velocityThreshold?: number;
+}
+
+interface DragState {
+  active: boolean;
+  startX: number;
+  startTime: number;
+  offsetX: number;
+}
+
+export function useSwipe({
+  onSwipe,
+  commitThreshold = 100,
+  velocityThreshold = 0.5,
+}: UseSwipeOptions) {
+  const dragRef = useRef<DragState>({
+    active: false,
+    startX: 0,
+    startTime: 0,
+    offsetX: 0,
+  });
+  const cardRef = useRef<HTMLDivElement>(null);
+  const currentTiltRef = useRef<TiltDirection>("center");
+  const [isExiting, setIsExiting] = useState(false);
+  const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
+
+  const updateTransform = useCallback((x: number, transition: boolean) => {
+    if (!cardRef.current) return;
+    const rotation = x * 0.08;
+    cardRef.current.style.transform = `translateX(${x}px) rotate(${rotation}deg)`;
+    cardRef.current.style.transition = transition
+      ? "transform 300ms ease-out"
+      : "none";
+  }, []);
+
+  const onPointerDown = useCallback(
+    (e: React.PointerEvent) => {
+      if (isExiting) return;
+      const el = e.currentTarget as HTMLElement;
+      el.setPointerCapture(e.pointerId);
+      dragRef.current = {
+        active: true,
+        startX: e.clientX,
+        startTime: Date.now(),
+        offsetX: 0,
+      };
+      updateTransform(0, false);
+    },
+    [isExiting, updateTransform],
+  );
+
+  const onPointerMove = useCallback(
+    (e: React.PointerEvent) => {
+      if (!dragRef.current.active) return;
+      const dx = e.clientX - dragRef.current.startX;
+      dragRef.current.offsetX = dx;
+      updateTransform(dx, false);
+
+      const threshold = 30;
+      let newDir: TiltDirection;
+      if (dx < -threshold) newDir = "left";
+      else if (dx > threshold) newDir = "right";
+      else newDir = "center";
+
+      if (newDir !== currentTiltRef.current) {
+        currentTiltRef.current = newDir;
+        setTiltDirection(newDir);
+      }
+    },
+    [updateTransform],
+  );
+
+  const onPointerUp = useCallback(
+    (e: React.PointerEvent) => {
+      if (!dragRef.current.active) return;
+      dragRef.current.active = false;
+
+      const dx = dragRef.current.offsetX;
+      const dt = Date.now() - dragRef.current.startTime;
+      const velocity = Math.abs(dx) / Math.max(dt, 1);
+
+      const committed =
+        Math.abs(dx) > commitThreshold || velocity > velocityThreshold;
+
+      if (committed && dx !== 0) {
+        const direction = dx < 0 ? "left" : "right";
+        setIsExiting(true);
+        const flyTo = dx < 0 ? -window.innerWidth : window.innerWidth;
+        updateTransform(flyTo, true);
+
+        // Release pointer capture before callback
+        const el = e.currentTarget as HTMLElement;
+        try {
+          el.releasePointerCapture(e.pointerId);
+        } catch {
+          // ignore
+        }
+
+        setTimeout(() => {
+          setIsExiting(false);
+          currentTiltRef.current = "center";
+          setTiltDirection("center");
+          updateTransform(0, false);
+          onSwipe(direction);
+        }, 300);
+      } else {
+        // Spring back
+        updateTransform(0, true);
+        currentTiltRef.current = "center";
+        setTiltDirection("center");
+      }
+    },
+    [commitThreshold, velocityThreshold, onSwipe, updateTransform],
+  );
+
+  const style: React.CSSProperties = {
+    touchAction: "none",
+    cursor: isExiting ? "default" : "grab",
+  };
+
+  return {
+    cardRef,
+    tiltDirection,
+    isExiting,
+    style,
+    handlers: {
+      onPointerDown,
+      onPointerMove,
+      onPointerUp,
+    },
+  };
+}

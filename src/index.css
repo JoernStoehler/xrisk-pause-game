@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  /* Reigns-style palette */
+  --color-bar-dark: #2A1F0F;
+  --color-tan: #B8A668;
+  --color-tan-light: #C8B888;
+  --color-text-dark: #2A1F0F;
+  --color-text-light: #D4C8A0;
+  --color-text-muted: #8A7A5A;
+
+  /* Resource impact indicators */
+  --color-impact-down: #E84E6A;
+  --color-impact-up: #4EE870;
+
+  /* Death/urgency */
+  --color-urgency-red: #ef4444;
+  --color-success: #22c55e;
+
+}
+
+html {
+  overflow: hidden;
+  height: 100dvh;
+}
+
+body {
+  background-color: var(--color-bar-dark);
+  color: var(--color-text-dark);
+  font-family: "Space Mono", monospace;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  height: 100dvh;
+}
+
+@keyframes card-enter {
+  from {
+    transform: translateY(30px) scale(0.97);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.animate-card-enter {
+  animation: card-enter 0.25s ease-out backwards;
+}
+
+@keyframes bar-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.animate-bar-pulse {
+  animation: bar-pulse 0.8s ease-in-out infinite;
+}
