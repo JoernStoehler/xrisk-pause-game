@@ -64,7 +64,7 @@ export function SpeakerPortrait({ speaker }: SpeakerPortraitProps) {
     <img
       src={src}
       alt={speaker}
-      className="block w-full"
+      className="block w-full aspect-square object-cover"
       draggable={false}
     />
   );
