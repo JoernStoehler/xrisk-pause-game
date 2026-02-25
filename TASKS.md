@@ -16,7 +16,7 @@ This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projec
 
 ## Current
 
-- [ ] Re-set GitHub secrets (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID) — .env was corrupted, secrets may need refresh
+- [x] Re-set GitHub secrets (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID) — done via `gh secret set`
 - [ ] Swipe UX polish (test on real mobile device, tune thresholds/velocity)
 - [ ] Card content: replace throwaway cards with real x-risk scenario cards (needs Jörn's domain input + expert)
 - [ ] More history-triggered chains (blocked on card content — no point chaining throwaway cards)
