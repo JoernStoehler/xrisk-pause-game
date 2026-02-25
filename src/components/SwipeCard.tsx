@@ -65,7 +65,9 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
           </span>
         </div>
 
-        {/* Choice labels — below speaker name, darken proportional to swipe */}
+        {/* Choice labels — below speaker name, darken proportional to swipe.
+           Uses color-mix to interpolate muted→dark. Don't use opacity — the
+           label starts at opacity 1, so any multiplier dims it first. */}
         <div className="bg-tan px-4 py-2 flex justify-between rounded-b-lg">
           <span
             className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-left"
