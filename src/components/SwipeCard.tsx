@@ -65,18 +65,19 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
           </span>
         </div>
 
-        {/* Choice labels — below speaker name, brighten proportional to swipe */}
+        {/* Choice labels — below speaker name, darken proportional to swipe
+             Muted: #8A7A5A → Dark: #2A1F0F, interpolated by swipeProgress */}
         <div className="bg-tan px-4 py-2 flex justify-between rounded-b-lg">
           <span
-            className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-left"
-            style={tiltDirection === "left" ? { opacity: 0.4 + 0.6 * swipeProgress } : undefined}
+            className="swipe-label text-sm font-bold select-none leading-tight text-left"
+            style={{ color: lerpColor(0x8A7A5A, 0x2A1F0F, tiltDirection === "left" ? swipeProgress : 0) }}
             data-testid="label-left"
           >
             {card.left.label}
           </span>
           <span
-            className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-right"
-            style={tiltDirection === "right" ? { opacity: 0.4 + 0.6 * swipeProgress } : undefined}
+            className="swipe-label text-sm font-bold select-none leading-tight text-right"
+            style={{ color: lerpColor(0x8A7A5A, 0x2A1F0F, tiltDirection === "right" ? swipeProgress : 0) }}
             data-testid="label-right"
           >
             {card.right.label}
@@ -85,6 +86,13 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
       </div>
     </div>
   );
+}
+
+function lerpColor(from: number, to: number, t: number): string {
+  const r = ((from >> 16) & 0xff) + (((to >> 16) & 0xff) - ((from >> 16) & 0xff)) * t;
+  const g = ((from >> 8) & 0xff) + (((to >> 8) & 0xff) - ((from >> 8) & 0xff)) * t;
+  const b = (from & 0xff) + ((to & 0xff) - (from & 0xff)) * t;
+  return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
 }
 
 /** Decorative fleur-de-lis for card back (SVG, Reigns-style) */
