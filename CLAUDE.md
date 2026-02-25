@@ -134,7 +134,7 @@ src/
 - Space Mono font (Google Fonts), monospace — surveillance-era aesthetic
 - Speaker name: small, uppercase, bold, wide tracking (header label)
 - Dialogue text: medium weight, standard case, generous line-height, centered
-- Choice labels: text-sm bold, below speaker name, both always visible (not Reigns-style one-at-a-time reveal — our decisions are substantive and players need to compare both options before choosing)
+- Choice labels: text-sm bold, below speaker name, both always visible
 
 **Resource icons:**
 - 48×48 SVG icons: shield (Trust), dollar (Funding), eye (Intel), scales (Leverage)
