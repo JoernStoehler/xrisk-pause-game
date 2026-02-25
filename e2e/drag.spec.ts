@@ -8,6 +8,9 @@ test.beforeEach(async ({ page }) => {
   await page.reload();
   await page.click("text=Take Office");
   await page.locator(".animate-card-enter").first().waitFor();
+  // Wait for card-enter flip animation (350ms rotateY) to complete —
+  // backface-visibility:hidden blocks pointer events during animation
+  await page.waitForTimeout(400);
 });
 
 async function getCardCenter(page: import("@playwright/test").Page) {

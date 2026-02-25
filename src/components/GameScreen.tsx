@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import type { GameState } from "../engine/types";
 import type { TiltDirection } from "../hooks/useSwipe";
 import { ResourceIcons } from "./ResourceIcons";
@@ -11,6 +11,16 @@ interface GameScreenProps {
 
 export function GameScreen({ state, onChoice }: GameScreenProps) {
   const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
+
+  // Reset tilt immediately on commit so preview indicators don't briefly
+  // flash the new card's previews before the new SwipeCard mounts
+  const handleChoice = useCallback(
+    (choice: "left" | "right") => {
+      setTiltDirection("center");
+      onChoice(choice);
+    },
+    [onChoice],
+  );
 
   if (!state.activeCard) return null;
 
@@ -29,7 +39,7 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
         <SwipeCard
           key={state.activeCard.templateId + "-" + state.turn}
           card={state.activeCard}
-          onChoice={onChoice}
+          onChoice={handleChoice}
           onTiltChange={setTiltDirection}
         />
       </div>

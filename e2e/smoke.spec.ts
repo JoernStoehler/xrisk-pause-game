@@ -34,6 +34,8 @@ test("clicking Take Office shows game screen with card", async ({ page }) => {
 test("swiping advances to next card", async ({ page }) => {
   await page.click("text=Take Office");
   await page.locator(".animate-card-enter").first().waitFor();
+  // Wait for card-enter flip animation (350ms) to complete
+  await page.waitForTimeout(400);
 
   // Get initial decision count
   await expect(page.getByText("0", { exact: true })).toBeVisible();
@@ -62,6 +64,8 @@ test("swiping advances to next card", async ({ page }) => {
 test("repeated swipes eventually trigger death screen", async ({ page }) => {
   await page.click("text=Take Office");
   await page.locator(".animate-card-enter").first().waitFor();
+  // Wait for card-enter flip animation (350ms) to complete
+  await page.waitForTimeout(400);
 
   // Spam left swipes — should eventually die
   for (let i = 0; i < 50; i++) {
@@ -74,6 +78,7 @@ test("repeated swipes eventually trigger death screen", async ({ page }) => {
     const card = page.locator(".animate-card-enter").first();
     try {
       await card.waitFor({ timeout: 2000 });
+      await page.waitForTimeout(400); // wait for flip animation
     } catch {
       break; // Card didn't appear — likely on death screen
     }
