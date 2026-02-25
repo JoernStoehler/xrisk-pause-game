@@ -37,9 +37,6 @@ test("swiping advances to next card", async ({ page }) => {
   // Wait for card-enter flip animation (350ms) to complete
   await page.waitForTimeout(400);
 
-  // Remember initial card's speaker name
-  const speakerBefore = await page.locator(".bg-tan .font-bold").last().textContent();
-
   // Simulate a swipe by dragging the card
   const card = page.locator(".animate-card-enter").first();
   const box = await card.boundingBox();

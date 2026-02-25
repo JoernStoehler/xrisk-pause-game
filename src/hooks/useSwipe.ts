@@ -76,7 +76,7 @@ export function useSwipe({
       }
       setSwipeProgress(Math.min(1, Math.abs(dx) / commitThreshold));
     },
-    [updateTransform],
+    [updateTransform, commitThreshold],
   );
 
   const onPointerUp = useCallback(

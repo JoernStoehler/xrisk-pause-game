@@ -132,7 +132,7 @@ src/
 
 **Typography:**
 - Space Mono font (Google Fonts), monospace — surveillance-era aesthetic
-- Speaker name: small, uppercase, bold, wide tracking (header label)
+- Speaker name: base size, bold, centered below portrait
 - Dialogue text: medium weight, standard case, generous line-height, centered
 - Choice labels: text-sm bold, below speaker name, both always visible
 
@@ -143,7 +143,7 @@ src/
 
 **Layout:**
 - Mobile-first (portrait, touch targets ≥44px)
-- Card centered between resource bars (top) and turn counter (bottom)
+- Card centered between resource icons (top) and year display (bottom)
 - Minimal dead space — card dominates
 - ~2 minute runs, highly replayable
 
@@ -209,15 +209,13 @@ src/
 
 ### Session Workflow
 
-Sessions follow: **discuss → plan → implement → review → push** · · · Jörn: **PR → merge**
+Two modes:
 
-- **discuss**: Read `CLAUDE.md` and `TASKS.md`. Present your understanding back to Jörn. Flag ambiguities, contradictions, and gaps. Propose what to build and what to cut. **Wait for Jörn's feedback** before planning — he steers scope.
-- **plan**: Decompose into steps. Compare to conventions. Play through the plan and notice gaps. Present the plan to Jörn for approval.
-- **implement**: Execute the plan. Trust signatures from the plan; react to feedback from the repo.
-- **review**: Re-read the result as a whole. Compare code to plan and to scope. Run `npm run check`, visual QA, code review. Catch drift, gaps, and mismatches.
-- **push**: Update `TASKS.md` (mark done, add discovered tasks). Commit and push.
+**Planned work** (feature sessions): discuss → plan → implement → review → push
+- Read `CLAUDE.md` and `TASKS.md`. Flag ambiguities. Wait for Jörn's scope decision before planning.
+- Commit and push to main. Jörn reviews deployed result.
 
-Agents commit and push to their working branch. Jörn creates PRs, reviews, and merges. Agents do not create PRs.
+**Reactive work** (playtest sessions): Jörn tests on https://global-pause.pages.dev and reports bugs/feedback in real-time. Fix → verify → push → confirm deployed (~40s deploy via GitHub Actions). Verify deployment with `gh run list` before telling Jörn it's live.
 
 ### Verifying Changes
 
@@ -240,11 +238,7 @@ npm run cli reset        # New game
 
 ### Visual QA (screenshots)
 
-```bash
-npm run dev &
-npx playwright screenshot http://localhost:5173 /tmp/screenshot.png
-# Use Read tool to view the image
-```
+Take screenshots at mobile viewport (390×844), view with Read tool. Clear localStorage before each screenshot to start fresh. See Review Checklist for full process.
 
 ### Task Tracking
 
@@ -316,69 +310,11 @@ The core mechanic is the drag/swipe interaction. Automated checks (typecheck, li
 2. **Card re-mount on new card** — the SwipeCard key must change when activeCard changes, otherwise drag state leaks between cards and enter animation doesn't fire
 3. **Visual QA at mobile viewport** — follow the Visual QA Process below
 
-### Visual QA Process (reusable)
+### Visual QA Process
 
-**Purpose:** Evaluate visual quality against the Reigns reference. Run this after ANY visual change. Use a BACKGROUND subagent — never block the main conversation.
+After any visual change: take screenshots (title, game, tilt states at 390×844), evaluate against Reigns reference. Use background subagents for screenshots and QA — don't block the main conversation or ask Jörn to be your tester.
 
-**Step 1 — Take screenshots** (Bash subagent, background):
-```bash
-npm run dev &
-sleep 3
-# Title screen
-npx playwright screenshot --viewport-size="390,844" http://localhost:5173 /tmp/vqa-title.png
-# Game screen + tilt (uses tsx for ESM compatibility)
-npx tsx -e "
-import pw from 'playwright';
-const b = await pw.chromium.launch();
-const p = await b.newPage();
-await p.setViewportSize({width:390,height:844});
-await p.goto('http://localhost:5173');
-await p.click('text=Take Office');
-await p.waitForTimeout(800);
-await p.screenshot({path:'/tmp/vqa-game.png'});
-// Tilt right
-const card = p.locator('.animate-card-enter').first();
-const box = await card.boundingBox();
-if (box) {
-  const cx = box.x+box.width/2, cy = box.y+box.height/2;
-  await p.mouse.move(cx,cy); await p.mouse.down();
-  await p.mouse.move(cx+60,cy,{steps:10});
-  await p.waitForTimeout(200);
-  await p.screenshot({path:'/tmp/vqa-tilt.png'});
-  await p.mouse.move(cx,cy,{steps:5}); await p.mouse.up();
-}
-await b.close();
-"
-```
-
-**Step 2 — QA evaluation** (general-purpose subagent, background). Use this prompt template:
-```
-You are evaluating a Reigns-style card game's visual quality. Reference: Reigns (2016) by Nerial.
-
-Look at these screenshots: /tmp/vqa-title.png, /tmp/vqa-game.png, /tmp/vqa-tilt.png
-
-Score each dimension 1-10 against Reigns quality:
-1. Card presence: Does the card dominate the viewport? (~70-75% width, ~55-60% height)
-2. Card-as-object: Does the card feel like a physical object? (contrast with bg, shadow, materiality)
-3. Character portraits: Distinctive, recognizable, emotional connection?
-4. Color harmony: Do all colors feel like the same world?
-5. Dead space: Is space used intentionally? No wasted gaps?
-6. Typography: Clean hierarchy, readable, not competing for attention?
-7. Resource bars: Readable at a glance, not distracting?
-8. Overall polish: Would this feel at home on the App Store?
-
-For each score <7, describe the specific fix needed.
-Give an overall score and list the top 3 highest-impact improvements.
-```
-
-**Step 3 — Iterate** until all dimensions score ≥7 and overall ≥8.
-
-**Process rules:**
-- ALWAYS use background subagents for screenshots and QA evaluation
-- NEVER ask the user to be your QA tester — they are not a $1k/h visual tester
-- Design changes need a written spec BEFORE implementation (update Design Rules above)
-- After implementing, QA subagent evaluates. Iterate until quality bar is met.
-- The quality bar is EXCELLENT, not adequate
+Quality bar: card dominates viewport, colors harmonious, typography clean, no wasted space, app-store polish. Iterate until quality is excellent.
 
 ---
 
