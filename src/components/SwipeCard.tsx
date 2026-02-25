@@ -25,6 +25,10 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
     onTiltChange(tiltDirection);
   }, [tiltDirection, onTiltChange]);
 
+  const layout = new URLSearchParams(window.location.search).get("layout");
+  const labelsBelow = layout === "2";
+  const overlayLabels = layout === "3";
+
   return (
     <div className="flex flex-col items-center flex-1 relative justify-start pt-4 px-2 overflow-hidden">
       <div className="w-full flex flex-col">
@@ -35,53 +39,149 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
           </p>
         </div>
 
-        {/* Row: left label | swipeable portrait + card back | right label */}
-        <div className="flex items-stretch gap-2">
-          {/* Left choice label — always visible, vertically centered */}
-          <span
-            className="swipe-label text-text-muted text-xs font-bold w-20 flex items-center justify-center text-center shrink-0 select-none leading-tight"
-            data-testid="label-left"
-          >
-            {card.left.label}
-          </span>
+        {overlayLabels ? (
+          <>
+            {/* Portrait area — full width, labels overlaid on portrait */}
+            <div className="relative" style={{ perspective: "800px" }}>
+              {/* Card back — behind portrait, visible when portrait tilts */}
+              <div className="absolute inset-0 rounded-lg bg-[#1A3D2E] flex flex-col items-center justify-center gap-12">
+                <FleurDeLis />
+                <FleurDeLis />
+                <FleurDeLis />
+              </div>
 
-          {/* Portrait area wrapper — card back sits behind, portrait tilts */}
-          <div className="relative flex-1 min-w-0" style={{ perspective: "800px" }}>
-            {/* Card back — behind portrait, visible when portrait tilts */}
-            <div className="absolute inset-0 rounded-lg bg-[#1A3D2E] flex flex-col items-center justify-center gap-12">
-              <FleurDeLis />
-              <FleurDeLis />
-              <FleurDeLis />
+              {/* Swipeable portrait — ONLY this tilts */}
+              <div
+                ref={cardRef}
+                className={`relative overflow-hidden rounded-lg ${
+                  !isExiting ? "animate-card-enter" : ""
+                }`}
+                style={style}
+                {...handlers}
+              >
+                <SpeakerPortrait speaker={card.speaker} />
+
+                {/* Overlay labels on portrait */}
+                <span
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 rounded px-2 py-1 text-sm font-bold text-white text-center pointer-events-none select-none max-w-[5.5rem] leading-tight"
+                  data-testid="label-left"
+                >
+                  {card.left.label}
+                </span>
+                <span
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 rounded px-2 py-1 text-sm font-bold text-white text-center pointer-events-none select-none max-w-[5.5rem] leading-tight"
+                  data-testid="label-right"
+                >
+                  {card.right.label}
+                </span>
+              </div>
             </div>
 
-            {/* Swipeable portrait — ONLY this tilts */}
-            <div
-              ref={cardRef}
-              className={`relative overflow-hidden rounded-lg ${
-                !isExiting ? "animate-card-enter" : ""
-              }`}
-              style={style}
-              {...handlers}
-            >
-              <SpeakerPortrait speaker={card.speaker} />
+            {/* Fixed speaker name — does NOT tilt */}
+            <div className="bg-tan px-4 py-2.5 text-center rounded-b-lg">
+              <span className="text-text-dark text-base font-bold">
+                {card.speaker}
+              </span>
             </div>
-          </div>
+          </>
+        ) : labelsBelow ? (
+          <>
+            {/* Portrait area — full width, no flanking labels */}
+            <div className="relative" style={{ perspective: "800px" }}>
+              {/* Card back — behind portrait, visible when portrait tilts */}
+              <div className="absolute inset-0 rounded-lg bg-[#1A3D2E] flex flex-col items-center justify-center gap-12">
+                <FleurDeLis />
+                <FleurDeLis />
+                <FleurDeLis />
+              </div>
 
-          {/* Right choice label — always visible, vertically centered */}
-          <span
-            className="swipe-label text-text-muted text-xs font-bold w-20 flex items-center justify-center text-center shrink-0 select-none leading-tight"
-            data-testid="label-right"
-          >
-            {card.right.label}
-          </span>
-        </div>
+              {/* Swipeable portrait — ONLY this tilts */}
+              <div
+                ref={cardRef}
+                className={`relative overflow-hidden rounded-lg ${
+                  !isExiting ? "animate-card-enter" : ""
+                }`}
+                style={style}
+                {...handlers}
+              >
+                <SpeakerPortrait speaker={card.speaker} />
+              </div>
+            </div>
 
-        {/* Fixed speaker name — does NOT tilt */}
-        <div className="bg-tan px-4 py-2.5 text-center rounded-b-lg">
-          <span className="text-text-dark text-base font-bold">
-            {card.speaker}
-          </span>
-        </div>
+            {/* Fixed speaker name — does NOT tilt */}
+            <div className="bg-tan px-4 py-2.5 text-center">
+              <span className="text-text-dark text-base font-bold">
+                {card.speaker}
+              </span>
+            </div>
+
+            {/* Choice labels row — below speaker name */}
+            <div className="bg-tan px-4 py-2 flex justify-between rounded-b-lg">
+              <span
+                className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-left"
+                data-testid="label-left"
+              >
+                {card.left.label}
+              </span>
+              <span
+                className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-right"
+                data-testid="label-right"
+              >
+                {card.right.label}
+              </span>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Row: left label | swipeable portrait + card back | right label */}
+            <div className="flex items-stretch gap-2">
+              {/* Left choice label — always visible, vertically centered */}
+              <span
+                className="swipe-label text-text-muted text-xs font-bold w-20 flex items-center justify-center text-center shrink-0 select-none leading-tight"
+                data-testid="label-left"
+              >
+                {card.left.label}
+              </span>
+
+              {/* Portrait area wrapper — card back sits behind, portrait tilts */}
+              <div className="relative flex-1 min-w-0" style={{ perspective: "800px" }}>
+                {/* Card back — behind portrait, visible when portrait tilts */}
+                <div className="absolute inset-0 rounded-lg bg-[#1A3D2E] flex flex-col items-center justify-center gap-12">
+                  <FleurDeLis />
+                  <FleurDeLis />
+                  <FleurDeLis />
+                </div>
+
+                {/* Swipeable portrait — ONLY this tilts */}
+                <div
+                  ref={cardRef}
+                  className={`relative overflow-hidden rounded-lg ${
+                    !isExiting ? "animate-card-enter" : ""
+                  }`}
+                  style={style}
+                  {...handlers}
+                >
+                  <SpeakerPortrait speaker={card.speaker} />
+                </div>
+              </div>
+
+              {/* Right choice label — always visible, vertically centered */}
+              <span
+                className="swipe-label text-text-muted text-xs font-bold w-20 flex items-center justify-center text-center shrink-0 select-none leading-tight"
+                data-testid="label-right"
+              >
+                {card.right.label}
+              </span>
+            </div>
+
+            {/* Fixed speaker name — does NOT tilt */}
+            <div className="bg-tan px-4 py-2.5 text-center rounded-b-lg">
+              <span className="text-text-dark text-base font-bold">
+                {card.speaker}
+              </span>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
