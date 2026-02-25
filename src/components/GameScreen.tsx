@@ -18,6 +18,7 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
     <div className="flex flex-col min-h-dvh">
       {/* Dark top bar — resource icons */}
       <ResourceIcons
+        resources={state.resources}
         tiltDirection={tiltDirection}
         leftPreviews={state.activeCard.left.previews}
         rightPreviews={state.activeCard.right.previews}

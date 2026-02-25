@@ -29,8 +29,8 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
     <div className="flex flex-col items-center flex-1 relative justify-start pt-4 px-2 overflow-hidden">
       <div className="w-full flex flex-col">
         {/* Fixed text area — does NOT tilt */}
-        <div className="bg-tan px-5 py-3 min-h-[64px] flex items-center justify-center rounded-t-lg">
-          <p className="text-text-dark text-[13px] leading-relaxed text-center">
+        <div className="bg-tan px-5 py-3 h-[112px] flex items-center justify-center rounded-t-lg">
+          <p className="text-text-dark text-sm leading-relaxed text-center">
             {card.text}
           </p>
         </div>
@@ -39,7 +39,7 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
         <div className="flex items-stretch gap-2">
           {/* Left choice label — always visible, vertically centered */}
           <span
-            className="swipe-label text-text-muted text-[11px] font-bold w-14 flex items-center justify-center text-center shrink-0 select-none leading-tight"
+            className="swipe-label text-text-muted text-xs font-bold w-20 flex items-center justify-center text-center shrink-0 select-none leading-tight"
             data-testid="label-left"
           >
             {card.left.label}
@@ -69,7 +69,7 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
 
           {/* Right choice label — always visible, vertically centered */}
           <span
-            className="swipe-label text-text-muted text-[11px] font-bold w-14 flex items-center justify-center text-center shrink-0 select-none leading-tight"
+            className="swipe-label text-text-muted text-xs font-bold w-20 flex items-center justify-center text-center shrink-0 select-none leading-tight"
             data-testid="label-right"
           >
             {card.right.label}
@@ -78,7 +78,7 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
 
         {/* Fixed speaker name — does NOT tilt */}
         <div className="bg-tan px-4 py-2.5 text-center rounded-b-lg">
-          <span className="text-text-dark text-sm font-bold">
+          <span className="text-text-dark text-base font-bold">
             {card.speaker}
           </span>
         </div>

@@ -1,4 +1,4 @@
-import type { ChoicePreview, ResourceKey } from "../engine/types";
+import type { ChoicePreview, ResourceKey, Resources } from "../engine/types";
 import type { TiltDirection } from "../hooks/useSwipe";
 
 const RESOURCE_KEYS: ResourceKey[] = ["trust", "funding", "intel", "leverage"];
@@ -59,12 +59,14 @@ const ICON_COMPONENTS: Record<ResourceKey, () => React.JSX.Element> = {
 };
 
 interface ResourceIconsProps {
+  resources: Resources;
   tiltDirection: TiltDirection;
   leftPreviews: ChoicePreview[];
   rightPreviews: ChoicePreview[];
 }
 
 export function ResourceIcons({
+  resources,
   tiltDirection,
   leftPreviews,
   rightPreviews,
@@ -86,6 +88,7 @@ export function ResourceIcons({
       {RESOURCE_KEYS.map((key) => {
         const Icon = ICON_COMPONENTS[key];
         const preview = previewMap.get(key);
+        const value = resources[key];
 
         return (
           <div key={key} className="flex flex-col items-center gap-0.5">
@@ -130,8 +133,19 @@ export function ResourceIcons({
                 </svg>
               )}
             </div>
-            <div className="text-text-light">
-              <Icon />
+            {/* Icon with fill level — muted background, bright fill from bottom */}
+            <div className="relative">
+              {/* Empty state — muted icon */}
+              <div className="text-text-light opacity-25">
+                <Icon />
+              </div>
+              {/* Filled state — bright, clipped to show bottom N% */}
+              <div
+                className="absolute inset-0 text-text-light"
+                style={{ clipPath: `inset(${100 - value}% 0 0 0)` }}
+              >
+                <Icon />
+              </div>
             </div>
           </div>
         );
