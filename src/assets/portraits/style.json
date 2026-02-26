@@ -1,0 +1,6 @@
+{
+  "model": "fal-ai/flux/schnell",
+  "image_size": { "width": 512, "height": 512 },
+  "style_prefix": "Flat-shaded geometric character portrait in the style of Reigns game art by Mieko Murakami. Angular polygonal shapes, 2-4 flat colors only, no gradients, no outlines, hard edges. Simple small rectangular slit eyes, no mouth, no nose.",
+  "style_suffix": "Head and upper torso, centered. Low-poly cubist minimalist art."
+}

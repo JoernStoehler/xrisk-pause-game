@@ -105,11 +105,9 @@ export function useSwipe({
           // ignore
         }
 
+        // After fly-off animation, fire onSwipe. Don't reset local state —
+        // the key change unmounts this SwipeCard and a fresh one mounts.
         setTimeout(() => {
-          setIsExiting(false);
-          currentTiltRef.current = "center";
-          setTiltDirection("center");
-          updateTransform(0, false);
           onSwipe(direction);
         }, 300);
       } else {

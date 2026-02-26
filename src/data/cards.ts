@@ -15,6 +15,10 @@ function recentChoice(
 
 export const CARD_TEMPLATES: CardTemplate[] = [
   // --- ROUTINE EVENTS (high base weight, always available) ---
+
+  // Source: original (throwaway)
+  // Rationale: transparency vs secrecy tradeoff — Trust↔Intel baseline flow
+  // Category: routine
   {
     id: "budget-review",
     speaker: "Chief Financial Officer",
@@ -37,6 +41,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 2,
   },
+  // Source: original (throwaway)
+  // Rationale: overpromising builds Trust but sets up Trust-overloaded death
+  // Category: routine
   {
     id: "un-speech",
     speaker: "Communications Director",
@@ -59,6 +66,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 1.5,
   },
+  // Source: literature/iabied-treaty.md (Article III — ISIA staffing)
+  // Rationale: verification requires inspectors; hiring costs money and looks aggressive
+  // Category: routine
   {
     id: "hiring-spree",
     speaker: "Head of Human Resources",
@@ -82,6 +92,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 1.5,
   },
+  // Source: literature/political-statements-ai-risk.md (industry lobbying)
+  // Rationale: industry capture vs funding — Funding↔Leverage tension
+  // Category: routine
   {
     id: "lobby-meeting",
     speaker: "Political Advisor",
@@ -104,6 +117,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 2,
   },
+  // Source: original (throwaway)
+  // Rationale: media exposure trades Trust for Intel exposure risk
+  // Category: routine
   {
     id: "media-interview",
     speaker: "Press Secretary",
@@ -128,6 +144,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- INCIDENTS (moderate weight, state-dependent) ---
+
+  // Source: literature/iabied-treaty.md (Article VI — on-site verification)
+  // Rationale: core enforcement scenario; degraded pair with rogue-lab-degraded
+  // Category: incident
   {
     id: "rogue-lab-normal",
     speaker: "Intelligence Analyst",
@@ -151,6 +171,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: (s) => (s.resources.intel >= 40 ? 1.5 : 0),
   },
+  // Source: literature/iabied-treaty.md (Article VI — on-site verification)
+  // Rationale: low-intel degraded variant — worse options teach "low intel = harder"
+  // Category: incident (degraded variant of rogue-lab-normal)
   {
     id: "rogue-lab-degraded",
     speaker: "Junior Analyst",
@@ -173,6 +196,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: (s) => (s.resources.intel < 40 ? 1.5 : 0),
   },
+  // Source: literature/iabied-treaty.md (Article VII — supply chain monitoring)
+  // Rationale: physical enforcement dimension — chips are the bottleneck
+  // Category: incident
   {
     id: "chip-smuggling",
     speaker: "Customs Liaison",
@@ -196,6 +222,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 1.5,
   },
+  // Source: literature/iabied-treaty.md (Article IX — researcher monitoring)
+  // Rationale: insider tips are key intel source; chain parent for fallout/coverup
+  // Category: incident (history chain parent)
   {
     id: "whistleblower",
     speaker: "Anonymous Source",
@@ -221,6 +250,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- POLITICAL EVENTS (leverage-heavy) ---
+
+  // Source: literature/political-statements-ai-risk.md (treaty withdrawal threats)
+  // Rationale: coalition fragility — nations can always leave
+  // Category: political
   {
     id: "treaty-threat",
     speaker: "Diplomatic Attaché",
@@ -244,6 +277,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: (s) => (s.turn >= 5 ? 1.5 : 0),
   },
+  // Source: literature/us-ai-executive-orders.md (congressional oversight)
+  // Rationale: US funding dependency — must perform for biggest funder
+  // Category: political
   {
     id: "senate-hearing",
     speaker: "Political Advisor",
@@ -268,6 +304,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- HISTORY-TRIGGERED CARDS ---
+
+  // Source: original (throwaway)
+  // Rationale: consequence of protecting whistleblower — labs fight back legally
+  // Category: history-triggered (child of whistleblower→left)
   {
     id: "whistleblower-fallout",
     speaker: "Legal Counsel",
@@ -291,6 +331,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     weight: (s) =>
       recentChoice(s, "whistleblower", "left") ? 3 : 0,
   },
+  // Source: original (throwaway)
+  // Rationale: consequence of refusing whistleblower — leak damages trust
+  // Category: history-triggered (child of whistleblower→right)
   {
     id: "coverup-leak",
     speaker: "Press Secretary",
@@ -316,6 +359,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- CRISIS EVENTS (appear when bars are extreme) ---
+
+  // Source: original (throwaway)
+  // Rationale: funding thermostat — rescues from funding-depleted death at steep cost
+  // Category: crisis (funding < 20)
   {
     id: "funding-crisis",
     speaker: "Chief Financial Officer",
@@ -339,6 +386,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     weight: (s) => (s.resources.funding < 20 ? 5 : 0),
     color: "#ef4444",
   },
+  // Source: original (throwaway)
+  // Rationale: trust thermostat — rescues from trust-depleted death
+  // Category: crisis (trust < 20)
   {
     id: "trust-crisis",
     speaker: "Communications Director",
@@ -362,6 +412,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     weight: (s) => (s.resources.trust < 20 ? 5 : 0),
     color: "#ef4444",
   },
+  // Source: literature/iabied-treaty.md (Article IX — surveillance overreach)
+  // Rationale: intel thermostat — monitoring vs sovereignty tension
+  // Category: crisis (intel > 80)
   {
     id: "surveillance-backlash",
     speaker: "Civil Liberties Advocate",
@@ -385,6 +438,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     weight: (s) => (s.resources.intel > 80 ? 5 : 0),
     color: "#f97316",
   },
+  // Source: literature/iabied-treaty.md (Article III — DG accountability)
+  // Rationale: leverage thermostat — enforcement power breeds resentment
+  // Category: crisis (leverage > 80)
   {
     id: "power-grab-accusation",
     speaker: "UN Secretary-General",
@@ -410,6 +466,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- HISTORY-TRIGGERED: lobby-meeting chain ---
+
+  // Source: literature/political-statements-ai-risk.md (regulatory capture concerns)
+  // Rationale: consequence of taking lobbyist meeting — corruption accusation
+  // Category: history-triggered (child of lobby-meeting→left)
   {
     id: "regulatory-capture",
     speaker: "Ethics Watchdog",
@@ -435,6 +495,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- DEGRADED VARIANT: hostile media ---
+
+  // Source: original (throwaway)
+  // Rationale: low-trust degraded variant of media-interview — worse options
+  // Category: incident (degraded variant of media-interview)
   {
     id: "media-interview-hostile",
     speaker: "Press Secretary",
@@ -456,6 +520,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- FUNDING-SOURCE CARDS ---
+
+  // Source: literature/iabied-treaty.md (Article III — ISIA funding)
+  // Rationale: funding source — tiered dues trade influence for money
+  // Category: routine
   {
     id: "member-state-dues",
     speaker: "Finance Director",
@@ -478,6 +546,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 1.5,
   },
+  // Source: literature/iabied-treaty.md (Article V — chip centralization, seizure)
+  // Rationale: enforcement spoils — repurpose seized compute or sell it
+  // Category: routine
   {
     id: "asset-seizure",
     speaker: "Enforcement Chief",
@@ -502,6 +573,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- MISSING CRISIS CARDS ---
+
+  // Source: original (throwaway)
+  // Rationale: funding-overloaded thermostat — bloated budget invites scrutiny
+  // Category: crisis (funding > 80)
   {
     id: "waste-scandal",
     speaker: "Investigative Journalist",
@@ -526,6 +601,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     weight: (s) => (s.resources.funding > 80 ? 5 : 0),
     color: "#f97316",
   },
+  // Source: literature/political-statements-ai-risk.md (bilateral bypass)
+  // Rationale: leverage-depleted thermostat — sidelined agency fights for relevance
+  // Category: crisis (leverage < 20)
   {
     id: "irrelevance-crisis",
     speaker: "UN Secretary-General",
@@ -552,6 +630,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- LEVERAGE-PUSHING CARD ---
+
+  // Source: literature/iabied-treaty.md (military exemption debate)
+  // Rationale: universality vs power — exemptions buy allies but weaken treaty
+  // Category: routine
   {
     id: "military-ai-request",
     speaker: "NATO Liaison",
@@ -576,6 +658,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- LATE-GAME ESCALATION ---
+
+  // Source: literature/aisi-frontier-trends-2025.md (capability advances)
+  // Rationale: thresholds become obsolete as capabilities advance — late-game pressure
+  // Category: late-game (turn >= 10)
   {
     id: "capability-jump",
     speaker: "Chief Scientist",
@@ -599,6 +685,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: (s) => (s.turn >= 10 ? 2 : 0),
   },
+  // Source: literature/iabied-treaty.md (Article IV — compute threshold evasion)
+  // Rationale: distributed training defeats per-cluster thresholds — treaty design flaw
+  // Category: late-game (turn >= 15)
   {
     id: "underground-network",
     speaker: "Intelligence Analyst",
@@ -622,6 +711,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: (s) => (s.turn >= 15 ? 2.5 : 0),
   },
+  // Source: literature/ai-incident-database-2024-2025.md (viral AI demos)
+  // Rationale: public panic when capabilities outpace expectations
+  // Category: late-game (turn >= 8)
   {
     id: "public-ai-demo",
     speaker: "Press Secretary",
@@ -647,6 +739,10 @@ export const CARD_TEMPLATES: CardTemplate[] = [
   },
 
   // --- FILLER / COLOR ---
+
+  // Source: original (throwaway)
+  // Rationale: low-stakes breather card — small Trust↔Intel tradeoff
+  // Category: filler
   {
     id: "coffee-chat",
     speaker: "Deputy Director",
@@ -669,6 +765,9 @@ export const CARD_TEMPLATES: CardTemplate[] = [
     },
     weight: () => 1.5,
   },
+  // Source: original (throwaway)
+  // Rationale: networking vs credibility — attending WEF looks elitist
+  // Category: filler
   {
     id: "conference-invite",
     speaker: "Executive Assistant",

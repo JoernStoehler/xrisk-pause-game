@@ -128,7 +128,8 @@ src/
 - AI-generated PNG portraits per speaker (fal.ai FLUX model, 21 portraits in `src/assets/portraits/`)
 - Dark, moody, stylized illustrations — each speaker instantly recognizable
 - Portrait occupies center of card body (max 280px wide), choice labels sit below
-- New portraits generated via `scripts/generate-portraits.mjs`
+- **Generating portraits:** `node scripts/generate-portrait.mjs <slug> "<description>" "<bg-color>"` — one portrait at a time, outputs `.png` + `.json` sidecar with provenance. Shared style config in `src/assets/portraits/style.json`.
+- **Provenance:** Each portrait has a colocated `<slug>.json` sidecar recording how it was generated (prompt, model, timestamp).
 
 **Typography:**
 - Space Mono font (Google Fonts), monospace — surveillance-era aesthetic
@@ -235,6 +236,17 @@ npm run cli auto 20      # Random-play 20 turns
 npm run cli state        # Full state dump (pool, history)
 npm run cli reset        # New game
 ```
+
+### Writing Card Content
+
+Follow `src/data/card-writing-guide.md` — the authoritative spec for card writing. Do not invent your own card-writing prompt. The guide covers x-risk framing, mechanical constraints, tone, balance rules, and literature references.
+
+Each card in `src/data/cards.ts` has a provenance comment (Source, Rationale, Category). Maintain this convention when adding or modifying cards.
+
+### QA Reference Pages
+
+Access via URL hash on the live site or dev server:
+- **`#qa`** — numbered portrait gallery (P1-P21) + card content overview (C1-C29) + death messages. Jörn uses these numbers to reference items in feedback.
 
 ### Visual QA (screenshots)
 
