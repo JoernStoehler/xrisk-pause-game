@@ -154,7 +154,7 @@ src/
 - `npm run check` passes (typecheck + lint + build + unit tests; E2E via `npm run test:e2e`)
 - Tech stack: Vite + React + TypeScript, Tailwind CSS, Playwright, Cloudflare Pages
 - `.env` at repo root has Cloudflare credentials (account ID, API token) and service keys
-- Source it or use individual vars when tools need auth (e.g. `CLOUDFLARE_API_TOKEN` for wrangler)
+- **When an env var is missing:** `source .env` first. Never ask the user for secrets.
 
 **Definition of Done (before marking work complete):**
 - Code compiles: `npm run build` passes

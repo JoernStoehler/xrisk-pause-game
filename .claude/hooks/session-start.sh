@@ -1,10 +1,24 @@
 #!/bin/bash
 set -euo pipefail
 
-# SessionStart hook — environment setup for Claude Code on the web.
-# Local devcontainer has gh pre-installed; this hook handles CC Web only.
+# SessionStart hook — universal setup first, then CC Web-specific.
 
-# Only run in remote (Claude Code on the web) environments
+# Decrypt encrypted literature if LITERATURE_KEY is set.
+if [ -n "${LITERATURE_KEY:-}" ] && command -v age &>/dev/null; then
+  LIT_DIR="$CLAUDE_PROJECT_DIR/literature"
+  KEY_FILE=$(mktemp)
+  echo "$LITERATURE_KEY" > "$KEY_FILE"
+  for enc_file in "$LIT_DIR"/*.enc; do
+    [ -f "$enc_file" ] || continue
+    dec_file="${enc_file%.enc}"
+    if [ ! -f "$dec_file" ]; then
+      age -d -i "$KEY_FILE" -o "$dec_file" "$enc_file" 2>/dev/null || true
+    fi
+  done
+  rm -f "$KEY_FILE"
+fi
+
+# Remaining setup is CC Web only.
 if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
   exit 0
 fi
@@ -24,19 +38,4 @@ if [ -n "${CLAUDE_ENV_FILE:-}" ]; then
   if [ -n "$REPO" ]; then
     echo "export GH_REPO=$REPO" >> "$CLAUDE_ENV_FILE"
   fi
-fi
-
-# Decrypt encrypted literature if LITERATURE_KEY is set.
-if [ -n "${LITERATURE_KEY:-}" ] && command -v age &>/dev/null; then
-  LIT_DIR="$CLAUDE_PROJECT_DIR/literature"
-  KEY_FILE=$(mktemp)
-  echo "$LITERATURE_KEY" > "$KEY_FILE"
-  for enc_file in "$LIT_DIR"/*.enc; do
-    [ -f "$enc_file" ] || continue
-    dec_file="${enc_file%.enc}"
-    if [ ! -f "$dec_file" ]; then
-      age -d -i "$KEY_FILE" -o "$dec_file" "$enc_file" 2>/dev/null || true
-    fi
-  done
-  rm -f "$KEY_FILE"
 fi

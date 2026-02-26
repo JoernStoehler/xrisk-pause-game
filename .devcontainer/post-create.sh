@@ -38,6 +38,12 @@ echo "code-tunnel: $(code-tunnel --version 2>/dev/null || echo 'not found')"
 echo "node: $(node -v 2>/dev/null || echo 'not found')"
 echo "npm: $(npm -v 2>/dev/null || echo 'not found')"
 
+# Source .env into shell profile so secrets are available in all sessions.
+DOTENV="/workspaces/xrisk-pause-game/.env"
+if [ -f "$DOTENV" ] && ! grep -q 'source.*\.env' "${HOME}/.bashrc"; then
+  echo -e '\n# Project secrets\nset -a; source '"$DOTENV"'; set +a' >> "${HOME}/.bashrc"
+fi
+
 # Run warmup cache in background
 nohup .devcontainer/warmup-cache.sh >> "${HOME}/.cache/warmup.log" 2>&1 &
 

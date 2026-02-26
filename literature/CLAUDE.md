@@ -130,7 +130,7 @@ Then add `<slug>.md` to `literature/.gitignore` and set `encrypted: true` in the
 
 ### Decryption (handled by session-start hook)
 
-The `.claude/hooks/session-start.sh` hook automatically decrypts all `.enc` files in `literature/` at session start. It writes `LITERATURE_KEY` to a temp file, uses it as an age identity, then deletes it.
+The `.claude/hooks/session-start.sh` hook automatically sources `.env` and decrypts all `.enc` files in `literature/` at session start. Decrypted `.md` files should already exist by the time you read them — just use `Read` directly. If a decrypted file is missing, the hook failed; source `.env` yourself and decrypt manually rather than asking the user for keys.
 
 ---
 
