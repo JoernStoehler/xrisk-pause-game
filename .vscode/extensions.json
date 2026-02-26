@@ -2,6 +2,7 @@
     "recommendations": [
         "anthropic.claude-code",
         "miguelsolorio.symbols",
-        "github.github-vscode-theme"
+        "github.github-vscode-theme",
+        "mathematic.vscode-pdf"
     ]
 }
