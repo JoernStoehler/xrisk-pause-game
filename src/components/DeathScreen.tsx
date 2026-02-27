@@ -1,5 +1,6 @@
 import type { DeathInfo, HistoryEntry, ResourceKey } from "../engine/types";
 import { ShareButton } from "./ShareButton";
+import { generateShareText } from "./shareText";
 
 /** Small SVG icons matching ResourceIcons style */
 function DeathResourceIcon({ resource }: { resource: ResourceKey }) {
@@ -75,14 +76,19 @@ export function DeathScreen({
         {death.message}
       </p>
 
-      <div className="text-text-muted text-xs font-bold mb-8">
+      <div className="text-text-muted text-xs font-bold mb-6">
         Survived {turnsSurvived} {turnsSurvived === 1 ? "decision" : "decisions"}
+      </div>
+
+      {/* Share text preview — player reads their "story" before deciding to share */}
+      <div className="max-w-sm mb-6 px-4 py-3 border-l-2 border-text-muted/30 text-text-muted text-xs leading-relaxed text-left italic whitespace-pre-line">
+        {generateShareText(death, turnsSurvived, history)}
       </div>
 
       <div className="flex gap-4">
         <ShareButton death={death} turn={turnsSurvived} history={history} />
         <button
-          className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm active:bg-tan-light transition-colors min-h-[44px]"
+          className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-tan-light active:bg-tan-light transition-colors min-h-[44px] cursor-pointer"
           onClick={onRestart}
         >
           Try Again

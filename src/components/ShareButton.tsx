@@ -34,7 +34,7 @@ export function ShareButton({ death, turn, history }: ShareButtonProps) {
 
   return (
     <button
-      className="px-8 py-4 bg-transparent border-2 border-text-light text-text-light rounded-lg font-bold uppercase tracking-wider text-sm active:bg-text-light/10 transition-colors min-h-[44px]"
+      className="px-8 py-4 bg-transparent border-2 border-text-light text-text-light rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-text-light/10 active:bg-text-light/20 transition-colors min-h-[44px] cursor-pointer"
       onClick={handleShare}
     >
       {copied ? "Copied!" : "Share"}
