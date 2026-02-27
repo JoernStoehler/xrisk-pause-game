@@ -60,7 +60,7 @@ export function DeathScreen({
       </div>
 
       {/* Red skull indicator like Reigns death screen */}
-      <div className="text-urgency-red text-xs font-bold mb-6">
+      <div className="text-urgency-red text-3xl mb-6">
         &#x2620;
       </div>
 
