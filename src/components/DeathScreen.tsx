@@ -59,11 +59,6 @@ export function DeathScreen({
         <DeathResourceIcon resource={death.resource} />
       </div>
 
-      {/* Red skull indicator like Reigns death screen */}
-      <div className="text-urgency-red text-3xl mb-6">
-        &#x2620;
-      </div>
-
       <h1 className="text-2xl font-bold text-urgency-red mb-2 uppercase tracking-wider">
         {death.extreme === "depleted" ? "Collapsed" : "Overloaded"}
       </h1>
