@@ -82,8 +82,8 @@ test("repeated swipes eventually trigger death screen", async ({ page }) => {
     }
 
     await page.keyboard.press("ArrowLeft");
-    // Wait for fly-off (300ms) + new card mount
-    await page.waitForTimeout(350);
+    // Wait for fly-off (500ms) + new card mount
+    await page.waitForTimeout(550);
   }
 
   const isDead = await page

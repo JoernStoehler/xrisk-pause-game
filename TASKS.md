@@ -32,6 +32,9 @@ This repo was migrated from `JoernStoehler/xrisk-minigames` (monorepo at `projec
 
 ## Done
 
+- [x] Phone-frame layout: 844px max-height container centered vertically — prevents year bar from stranding at bottom of tall desktop viewports
+- [x] Death screen polish: share text preview (left-border quote), hover states on buttons, skull emoji removed
+- [x] Fly-off animation tuning: 500ms ease-in (visible departure) vs 300ms ease-out spring-back (snappy return)
 - [x] Keyboard controls: Arrow keys / A/D swipe left/right on desktop — `commitProgrammatic` in useSwipe, `forwardRef` on SwipeCard, keydown listener in GameScreen
 - [x] Social sharing from death screen: narrative share text with failure mode + notable events + time in office, Web Share API (mobile) with clipboard fallback (desktop), ShareButton alongside Try Again
 - [x] Tutorial cards (hybrid): 3 scripted Deputy Director briefing cards on first play, in-world narration + resource bar highlight, skip button, localStorage persistence (`global-pause-tutorial-done`)

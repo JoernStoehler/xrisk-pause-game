@@ -48,7 +48,7 @@ export default function App() {
   // isn't stranded at the bottom of tall desktop viewports.
   return (
     <div className="mx-auto max-w-md h-dvh flex flex-col justify-center">
-      <div className="w-full overflow-y-auto overflow-x-hidden" style={{ maxHeight: "844px", height: "100%" }}>
+      <div className="w-full overflow-hidden" style={{ maxHeight: "844px", height: "100%" }}>
         {screen}
       </div>
     </div>

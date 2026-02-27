@@ -15,6 +15,9 @@ interface DragState {
   offsetX: number;
 }
 
+const SPRING_BACK = "transform 300ms ease-out";
+const FLY_OFF = "transform 500ms ease-in";
+
 export function useSwipe({
   onSwipe,
   commitThreshold = 100,
@@ -31,9 +34,6 @@ export function useSwipe({
   const [isExiting, setIsExiting] = useState(false);
   const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
   const [swipeProgress, setSwipeProgress] = useState(0);
-
-  const SPRING_BACK = "transform 300ms ease-out";
-  const FLY_OFF = "transform 500ms ease-in";
 
   const updateTransform = useCallback(
     (x: number, transition: false | "spring" | "fly") => {
