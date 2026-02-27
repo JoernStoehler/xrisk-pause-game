@@ -4,7 +4,7 @@ interface TitleScreenProps {
 
 export function TitleScreen({ onStart }: TitleScreenProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-dvh px-6 text-center bg-bar-dark">
+    <div className="flex flex-col items-center justify-center h-full px-6 text-center bg-bar-dark">
       <div className="mb-8">
         <h1 className="text-4xl font-bold tracking-widest text-tan mb-3">
           THE PAUSE

@@ -54,7 +54,7 @@ export function DeathScreen({
   onRestart,
 }: DeathScreenProps) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-dvh px-6 text-center bg-bar-dark">
+    <div className="flex flex-col items-center justify-center h-full px-6 text-center bg-bar-dark overflow-y-auto">
       <div className="mb-4">
         <DeathResourceIcon resource={death.resource} />
       </div>

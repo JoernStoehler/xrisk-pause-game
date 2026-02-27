@@ -56,7 +56,7 @@ export function TutorialScreen({ tutorialIndex, onAdvance, onSkip }: TutorialScr
   const resources = { trust: 50, funding: 50, intel: 50, leverage: 50 };
 
   return (
-    <div className="flex flex-col min-h-dvh">
+    <div className="flex flex-col h-full">
       {/* Dark top bar — resource icons with optional highlight */}
       <ResourceIcons
         resources={resources}
