@@ -57,7 +57,17 @@ export interface DeathInfo {
   message: string;
 }
 
-export type GamePhase = "title" | "playing" | "dead";
+export type GamePhase = "title" | "tutorial" | "playing" | "dead";
+
+export interface TutorialCard {
+  id: string;
+  speaker: string;
+  text: string;
+  leftLabel: string;
+  rightLabel: string;
+  /** When true, resource bar icons get a highlight glow */
+  highlightResources?: boolean;
+}
 
 export interface GameState {
   phase: GamePhase;

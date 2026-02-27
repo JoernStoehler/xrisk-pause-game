@@ -130,6 +130,24 @@ export function useSwipe({
     setSwipeProgress(0);
   }, [updateTransform]);
 
+  /** Trigger a full commit programmatically (for keyboard controls). */
+  const commitProgrammatic = useCallback(
+    (direction: "left" | "right") => {
+      if (isExiting) return;
+      setIsExiting(true);
+      const flyTo = direction === "left" ? -window.innerWidth : window.innerWidth;
+      updateTransform(flyTo, true);
+      currentTiltRef.current = direction;
+      setTiltDirection(direction);
+      setSwipeProgress(1);
+      dragRef.current.active = false;
+      setTimeout(() => {
+        onSwipe(direction);
+      }, 300);
+    },
+    [isExiting, onSwipe, updateTransform],
+  );
+
   const style: React.CSSProperties = {
     touchAction: "none",
     cursor: isExiting ? "default" : "grab",
@@ -140,6 +158,7 @@ export function useSwipe({
     tiltDirection,
     swipeProgress,
     isExiting,
+    commitProgrammatic,
     style,
     handlers: {
       onPointerDown,

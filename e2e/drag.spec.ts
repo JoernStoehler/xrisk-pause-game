@@ -4,7 +4,10 @@ test.use({ viewport: { width: 390, height: 844 } });
 
 test.beforeEach(async ({ page }) => {
   await page.goto("/");
-  await page.evaluate(() => localStorage.clear());
+  await page.evaluate(() => {
+    localStorage.clear();
+    localStorage.setItem("global-pause-tutorial-done", "1");
+  });
   await page.reload();
   await page.click("text=Take Office");
   await page.locator(".animate-card-enter").first().waitFor();

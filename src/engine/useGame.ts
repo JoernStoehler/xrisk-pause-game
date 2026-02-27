@@ -3,6 +3,8 @@ import type { GameState } from "./types";
 import { newGame, applyChoice, checkDeath } from "./state";
 import { drawNextCard } from "./cards";
 import { CARD_TEMPLATES } from "../data/cards";
+import { TUTORIAL_CARDS } from "../data/tutorial";
+import { isTutorialCompleted, markTutorialCompleted } from "./tutorial";
 
 const STORAGE_KEY = "global-pause-state";
 // Bump this when the save format changes (e.g. new fields, restructured data).
@@ -56,8 +58,35 @@ export function useGame() {
     if (saved && saved.phase !== "title") return saved;
     return { ...newGame(), phase: "title" };
   });
+  const [tutorialIndex, setTutorialIndex] = useState(0);
 
   const startGame = useCallback(() => {
+    const s = newGame();
+    if (!isTutorialCompleted()) {
+      setState({ ...s, phase: "tutorial" });
+      setTutorialIndex(0);
+    } else {
+      const withCard = drawNextCard(s, CARD_TEMPLATES);
+      setState(withCard);
+      saveState(withCard);
+    }
+  }, []);
+
+  const advanceTutorial = useCallback(() => {
+    const nextIndex = tutorialIndex + 1;
+    if (nextIndex >= TUTORIAL_CARDS.length) {
+      markTutorialCompleted();
+      const s = newGame();
+      const withCard = drawNextCard(s, CARD_TEMPLATES);
+      setState(withCard);
+      saveState(withCard);
+    } else {
+      setTutorialIndex(nextIndex);
+    }
+  }, [tutorialIndex]);
+
+  const skipTutorial = useCallback(() => {
+    markTutorialCompleted();
     const s = newGame();
     const withCard = drawNextCard(s, CARD_TEMPLATES);
     setState(withCard);
@@ -86,5 +115,5 @@ export function useGame() {
     saveState(withCard);
   }, []);
 
-  return { state, startGame, choose, restart };
+  return { state, startGame, choose, restart, tutorialIndex, advanceTutorial, skipTutorial };
 }

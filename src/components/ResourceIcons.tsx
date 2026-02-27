@@ -63,6 +63,8 @@ interface ResourceIconsProps {
   tiltDirection: TiltDirection;
   leftPreviews: ChoicePreview[];
   rightPreviews: ChoicePreview[];
+  /** Tutorial highlight: gentle brightness pulse on all icons */
+  highlight?: boolean;
 }
 
 export function ResourceIcons({
@@ -70,6 +72,7 @@ export function ResourceIcons({
   tiltDirection,
   leftPreviews,
   rightPreviews,
+  highlight,
 }: ResourceIconsProps) {
   const activePreviews =
     tiltDirection === "left"
@@ -84,7 +87,7 @@ export function ResourceIcons({
   }
 
   return (
-    <div className="flex justify-around items-center px-6 py-5 bg-bar-dark">
+    <div className={`flex justify-around items-center px-6 py-5 bg-bar-dark${highlight ? " animate-resource-highlight" : ""}`}>
       {RESOURCE_KEYS.map((key) => {
         const Icon = ICON_COMPONENTS[key];
         const preview = previewMap.get(key);

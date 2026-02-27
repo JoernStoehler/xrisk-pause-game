@@ -3,10 +3,11 @@ import { useGame } from "./engine/useGame";
 import { TitleScreen } from "./components/TitleScreen";
 import { GameScreen } from "./components/GameScreen";
 import { DeathScreen } from "./components/DeathScreen";
+import { TutorialScreen } from "./components/TutorialScreen";
 import { QAReference } from "./components/QAReference";
 
 export default function App() {
-  const { state, startGame, choose, restart } = useGame();
+  const { state, startGame, choose, restart, tutorialIndex, advanceTutorial, skipTutorial } = useGame();
   const [hash, setHash] = useState(window.location.hash);
 
   useEffect(() => {
@@ -22,11 +23,20 @@ export default function App() {
   let screen;
   if (state.phase === "title") {
     screen = <TitleScreen onStart={startGame} />;
+  } else if (state.phase === "tutorial") {
+    screen = (
+      <TutorialScreen
+        tutorialIndex={tutorialIndex}
+        onAdvance={advanceTutorial}
+        onSkip={skipTutorial}
+      />
+    );
   } else if (state.phase === "dead" && state.death) {
     screen = (
       <DeathScreen
         death={state.death}
         turnsSurvived={state.turn}
+        history={state.history}
         onRestart={restart}
       />
     );

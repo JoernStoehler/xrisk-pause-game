@@ -1,7 +1,11 @@
-import { useEffect } from "react";
+import { forwardRef, useEffect, useImperativeHandle } from "react";
 import type { ActiveCard } from "../engine/types";
 import { useSwipe, type TiltDirection } from "../hooks/useSwipe";
 import { SpeakerPortrait } from "./SpeakerPortrait";
+
+export interface SwipeCardHandle {
+  commit: (direction: "left" | "right") => void;
+}
 
 interface SwipeCardProps {
   card: ActiveCard;
@@ -9,17 +13,23 @@ interface SwipeCardProps {
   onTiltChange: (direction: TiltDirection) => void;
 }
 
-export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
+export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
+  function SwipeCard({ card, onChoice, onTiltChange }, ref) {
   const {
     cardRef,
     tiltDirection,
     swipeProgress,
     isExiting,
+    commitProgrammatic,
     style,
     handlers,
   } = useSwipe({
     onSwipe: onChoice,
   });
+
+  useImperativeHandle(ref, () => ({
+    commit: commitProgrammatic,
+  }), [commitProgrammatic]);
 
   // Sync tilt direction to parent for resource icon previews
   useEffect(() => {
@@ -87,7 +97,7 @@ export function SwipeCard({ card, onChoice, onTiltChange }: SwipeCardProps) {
       </div>
     </div>
   );
-}
+});
 
 /** Decorative fleur-de-lis for card back (SVG, Reigns-style) */
 function FleurDeLis() {

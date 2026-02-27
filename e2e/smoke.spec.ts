@@ -3,9 +3,12 @@ import { test, expect } from "@playwright/test";
 test.use({ viewport: { width: 390, height: 844 } });
 
 test.beforeEach(async ({ page }) => {
-  // Clear saved state so each test starts fresh
+  // Clear saved state so each test starts fresh, but skip tutorial
   await page.goto("/");
-  await page.evaluate(() => localStorage.clear());
+  await page.evaluate(() => {
+    localStorage.clear();
+    localStorage.setItem("global-pause-tutorial-done", "1");
+  });
   await page.reload();
 });
 
@@ -64,35 +67,23 @@ test("repeated swipes eventually trigger death screen", async ({ page }) => {
   // Wait for card-enter flip animation (350ms) to complete
   await page.waitForTimeout(400);
 
-  // Spam left swipes — should eventually die
+  // Use keyboard shortcuts (ArrowLeft) for faster swipes than mouse drag
   for (let i = 0; i < 50; i++) {
     const tryAgain = page.locator("text=Try Again");
     if (await tryAgain.isVisible().catch(() => false)) {
       break;
     }
 
-    // Wait for card to be ready (animate-card-enter is only present when not mid-exit)
     const card = page.locator(".animate-card-enter").first();
     try {
       await card.waitFor({ timeout: 2000 });
-      await page.waitForTimeout(400); // wait for flip animation
     } catch {
       break; // Card didn't appear — likely on death screen
     }
 
-    const box = await card.boundingBox();
-    if (box) {
-      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
-      await page.mouse.down();
-      for (let j = 0; j < 8; j++) {
-        await page.mouse.move(
-          box.x + box.width / 2 - (j + 1) * 25,
-          box.y + box.height / 2,
-        );
-      }
-      await page.mouse.up();
-      await page.waitForTimeout(150);
-    }
+    await page.keyboard.press("ArrowLeft");
+    // Wait for fly-off (300ms) + new card mount
+    await page.waitForTimeout(350);
   }
 
   const isDead = await page
@@ -103,6 +94,9 @@ test("repeated swipes eventually trigger death screen", async ({ page }) => {
 
   await expect(page.locator("text=Try Again")).toBeVisible();
   await page.screenshot({ path: "/tmp/e2e-04-death.png" });
+
+  // Share button should be visible
+  await expect(page.locator("text=Share")).toBeVisible();
 
   // Restart
   await page.click("text=Try Again");

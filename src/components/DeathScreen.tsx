@@ -1,4 +1,5 @@
-import type { DeathInfo, ResourceKey } from "../engine/types";
+import type { DeathInfo, HistoryEntry, ResourceKey } from "../engine/types";
+import { ShareButton } from "./ShareButton";
 
 /** Small SVG icons matching ResourceIcons style */
 function DeathResourceIcon({ resource }: { resource: ResourceKey }) {
@@ -41,12 +42,14 @@ function DeathResourceIcon({ resource }: { resource: ResourceKey }) {
 interface DeathScreenProps {
   death: DeathInfo;
   turnsSurvived: number;
+  history: HistoryEntry[];
   onRestart: () => void;
 }
 
 export function DeathScreen({
   death,
   turnsSurvived,
+  history,
   onRestart,
 }: DeathScreenProps) {
   return (
@@ -76,12 +79,15 @@ export function DeathScreen({
         Survived {turnsSurvived} {turnsSurvived === 1 ? "decision" : "decisions"}
       </div>
 
-      <button
-        className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm active:bg-tan-light transition-colors min-h-[44px]"
-        onClick={onRestart}
-      >
-        Try Again
-      </button>
+      <div className="flex gap-4">
+        <ShareButton death={death} turn={turnsSurvived} history={history} />
+        <button
+          className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm active:bg-tan-light transition-colors min-h-[44px]"
+          onClick={onRestart}
+        >
+          Try Again
+        </button>
+      </div>
     </div>
   );
 }

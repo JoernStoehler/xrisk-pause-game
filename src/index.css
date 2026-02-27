@@ -61,3 +61,16 @@ body {
 .animate-bar-pulse {
   animation: bar-pulse 0.8s ease-in-out infinite;
 }
+
+@keyframes resource-highlight {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.4);
+  }
+}
+.animate-resource-highlight {
+  animation: resource-highlight 1.5s ease-in-out infinite;
+}

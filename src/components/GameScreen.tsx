@@ -1,8 +1,8 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { GameState } from "../engine/types";
 import type { TiltDirection } from "../hooks/useSwipe";
 import { ResourceIcons } from "./ResourceIcons";
-import { SwipeCard } from "./SwipeCard";
+import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
 
 interface GameScreenProps {
   state: GameState;
@@ -11,6 +11,7 @@ interface GameScreenProps {
 
 export function GameScreen({ state, onChoice }: GameScreenProps) {
   const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
+  const cardRef = useRef<SwipeCardHandle>(null);
 
   // Reset tilt immediately on commit so preview indicators don't briefly
   // flash the new card's previews before the new SwipeCard mounts
@@ -21,6 +22,21 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
     },
     [onChoice],
   );
+
+  // Keyboard controls: Arrow keys or A/D to swipe
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") {
+        e.preventDefault();
+        cardRef.current?.commit("left");
+      } else if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") {
+        e.preventDefault();
+        cardRef.current?.commit("right");
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, []);
 
   if (!state.activeCard) return null;
 
@@ -37,6 +53,7 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
       {/* Tan middle zone — card area */}
       <div className="flex-1 flex flex-col bg-tan py-2">
         <SwipeCard
+          ref={cardRef}
           key={state.activeCard.templateId + "-" + state.turn}
           card={state.activeCard}
           onChoice={handleChoice}
