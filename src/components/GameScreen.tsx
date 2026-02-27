@@ -7,10 +7,9 @@ import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
 interface GameScreenProps {
   state: GameState;
   onChoice: (choice: "left" | "right") => void;
-  constrained?: boolean;
 }
 
-export function GameScreen({ state, onChoice, constrained }: GameScreenProps) {
+export function GameScreen({ state, onChoice }: GameScreenProps) {
   const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
   const cardRef = useRef<SwipeCardHandle>(null);
 
@@ -42,7 +41,7 @@ export function GameScreen({ state, onChoice, constrained }: GameScreenProps) {
   if (!state.activeCard) return null;
 
   return (
-    <div className={constrained ? "flex flex-col h-full" : "flex flex-col min-h-dvh"}>
+    <div className="flex flex-col h-full">
       {/* Dark top bar — resource icons */}
       <ResourceIcons
         resources={state.resources}

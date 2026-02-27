@@ -6,15 +6,9 @@ import { DeathScreen } from "./components/DeathScreen";
 import { TutorialScreen } from "./components/TutorialScreen";
 import { QAReference } from "./components/QAReference";
 
-/** Read ?variant= from URL for layout comparison. */
-function getVariant(): string | null {
-  return new URLSearchParams(window.location.search).get("variant");
-}
-
 export default function App() {
   const { state, startGame, choose, restart, tutorialIndex, advanceTutorial, skipTutorial } = useGame();
   const [hash, setHash] = useState(window.location.hash);
-  const variant = getVariant();
 
   useEffect(() => {
     const onHash = () => setHash(window.location.hash);
@@ -25,11 +19,6 @@ export default function App() {
   if (hash === "#qa") {
     return <QAReference />;
   }
-
-  // Phone-frame variants cap total height so the year bar isn't far from
-  // the card on tall desktop screens. Screens must use h-full (not min-h-dvh)
-  // inside the capped wrapper — see GameScreen's `constrained` prop.
-  const constrained = variant === "1" || variant === "2";
 
   let screen;
   if (state.phase === "title") {
@@ -52,25 +41,16 @@ export default function App() {
       />
     );
   } else {
-    screen = <GameScreen state={state} onChoice={choose} constrained={constrained} />;
+    screen = <GameScreen state={state} onChoice={choose} />;
   }
 
-  if (constrained) {
-    // variant=1: 844px (iPhone 14 Pro height)
-    // variant=2: 700px (more compact)
-    const maxH = variant === "2" ? "700px" : "844px";
-    return (
-      <div className="mx-auto max-w-md h-dvh flex flex-col justify-center">
-        <div className="w-full overflow-hidden" style={{ maxHeight: maxH, height: "100%" }}>
-          {screen}
-        </div>
-      </div>
-    );
-  }
-
+  // Phone-frame layout: cap height at 844px (iPhone 14 Pro) so the year bar
+  // isn't stranded at the bottom of tall desktop viewports.
   return (
-    <div className="mx-auto max-w-md min-h-dvh">
-      {screen}
+    <div className="mx-auto max-w-md h-dvh flex flex-col justify-center">
+      <div className="w-full overflow-hidden" style={{ maxHeight: "844px", height: "100%" }}>
+        {screen}
+      </div>
     </div>
   );
 }
