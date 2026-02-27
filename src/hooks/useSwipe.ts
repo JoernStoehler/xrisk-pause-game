@@ -32,14 +32,21 @@ export function useSwipe({
   const [tiltDirection, setTiltDirection] = useState<TiltDirection>("center");
   const [swipeProgress, setSwipeProgress] = useState(0);
 
-  const updateTransform = useCallback((x: number, transition: boolean) => {
-    if (!cardRef.current) return;
-    const rotation = x * 0.08;
-    cardRef.current.style.transform = `translateX(${x}px) rotate(${rotation}deg)`;
-    cardRef.current.style.transition = transition
-      ? "transform 300ms ease-out"
-      : "none";
-  }, []);
+  const SPRING_BACK = "transform 300ms ease-out";
+  const FLY_OFF = "transform 500ms ease-in";
+
+  const updateTransform = useCallback(
+    (x: number, transition: false | "spring" | "fly") => {
+      if (!cardRef.current) return;
+      const rotation = x * 0.08;
+      cardRef.current.style.transform = `translateX(${x}px) rotate(${rotation}deg)`;
+      cardRef.current.style.transition =
+        transition === "spring" ? SPRING_BACK
+        : transition === "fly" ? FLY_OFF
+        : "none";
+    },
+    [],
+  );
 
   const onPointerDown = useCallback(
     (e: React.PointerEvent) => {
@@ -95,7 +102,7 @@ export function useSwipe({
         const direction = dx < 0 ? "left" : "right";
         setIsExiting(true);
         const flyTo = dx < 0 ? -window.innerWidth : window.innerWidth;
-        updateTransform(flyTo, true);
+        updateTransform(flyTo, "fly");
 
         // Release pointer capture before callback
         const el = e.currentTarget as HTMLElement;
@@ -109,10 +116,10 @@ export function useSwipe({
         // the key change unmounts this SwipeCard and a fresh one mounts.
         setTimeout(() => {
           onSwipe(direction);
-        }, 300);
+        }, 500);
       } else {
         // Spring back
-        updateTransform(0, true);
+        updateTransform(0, "spring");
         currentTiltRef.current = "center";
         setTiltDirection("center");
         setSwipeProgress(0);
@@ -124,7 +131,7 @@ export function useSwipe({
   const onPointerCancel = useCallback(() => {
     if (!dragRef.current.active) return;
     dragRef.current.active = false;
-    updateTransform(0, true);
+    updateTransform(0, "spring");
     currentTiltRef.current = "center";
     setTiltDirection("center");
     setSwipeProgress(0);
@@ -136,14 +143,14 @@ export function useSwipe({
       if (isExiting) return;
       setIsExiting(true);
       const flyTo = direction === "left" ? -window.innerWidth : window.innerWidth;
-      updateTransform(flyTo, true);
+      updateTransform(flyTo, "fly");
       currentTiltRef.current = direction;
       setTiltDirection(direction);
       setSwipeProgress(1);
       dragRef.current.active = false;
       setTimeout(() => {
         onSwipe(direction);
-      }, 300);
+      }, 500);
     },
     [isExiting, onSwipe, updateTransform],
   );
