@@ -156,6 +156,7 @@ src/
 - Tech stack: Vite + React + TypeScript, Tailwind CSS, Playwright, Cloudflare Pages
 - `.env` at repo root has Cloudflare credentials (account ID, API token) and service keys
 - **When an env var is missing:** `source .env` first. Never ask the user for secrets.
+- **Never read `.jsonl` transcript logs directly** — they are large and will crash agent context. Use memory files and conversation summaries instead.
 
 **Definition of Done (before marking work complete):**
 - Code compiles: `npm run build` passes
