@@ -569,18 +569,29 @@ Bars are continuously-updated advisor briefings, NOT things the player tries to 
 
 Derived bottom-up from 42 event sketches (`src/data/events-draft.md`). Each bar tracks a dimension that many events depend on or affect.
 
-| Bar | What it reports | Behavior | Why it's independent |
+Two types of bars, reflecting two types of game state:
+
+**Spendable resources** (bounce up and down):
+
+| Bar | What it reports | Goes up from | Goes down from |
 |---|---|---|---|
-| **Intelligence** | How much the agency can see — compute monitoring coverage, researcher surveillance, information quality | Bounces — can go up (new monitoring) and down (gaps open, systems fail) | Physical reality of what's being tracked |
-| **Political power** | Elite + government support — mandate, budget authorization, law-passing ability, enforcement permission | Bounces — responds to player choices, elections, crises | Political reality the DG operates within |
-| **Safety progress** | How far alignment research has advanced | **Monotone up** — discrete jumps via research cards, sometimes no growth (failed project). No known ceiling. No passive tick rate — grows only through card events. | Half of the race |
-| **Algorithmic progress** | How much capability knowledge has advanced, shrinking the lethal threshold | **Monotone up** — discrete jumps via report/consequence cards, partially uncontrollable (publications, AI self-improvement). No known ceiling. No passive tick rate. | The other half of the race — the clock |
+| **Political power** | Mandate, budget, authority — the engine that funds everything | Good crisis handling, elections, favorable opinion shifts | **Spending it** on research/enforcement projects, political crises, scandals |
+| **Intelligence** | How much the agency can see — compute monitoring, surveillance, information quality | Spending political power on monitoring infrastructure, surveillance R&D | **Spending it** on enforcement actions (raids expose methods, adversaries adapt — C-14), neglect, adversary evasion advances |
+
+**Monotone accumulators** (only go up, via discrete card events):
+
+| Bar | What it reports | Goes up from | Never goes down because |
+|---|---|---|---|
+| **Safety progress** | Alignment research advancement | Spending political power on research projects, lucky breakthroughs. Sometimes no growth (failed project). | You can't un-discover things |
+| **Algorithmic progress** | Capability knowledge, shrinking the lethal threshold | Report/consequence cards — publications, AI self-improvement, side effects of economic openness. Partially uncontrollable. | Knowledge is irreversible |
+
+**Key mechanic — political power as the engine**: Political power → total budget. Event cards sometimes cost political power, representing decisions that spend money or political capital. Research projects and intelligence projects trade off against each other because both draw from the same pool. The player accumulates political power through good decisions, then spends it on safety or enforcement. This creates the core tradeoff naturally: every research project funded is enforcement capacity not built, and vice versa.
+
+**Key mechanic — intelligence is consumed by enforcement**: Using intelligence to act (raiding a rogue lab, cracking down on a smuggling ring) degrades it — you've revealed your methods, the next adversary hides better (C-14). The DG can't just "have good surveillance" as a permanent state. This teaches that enforcement capability is consumed by enforcement actions and must be continuously rebuilt.
 
 **Public opinion** (salience + valence across ~6-10 clusters) is hidden state, not a bar. It feeds into political power via elections and protests, and drives which characters appear and what they propose. The player infers opinion shifts from card patterns, not from a number.
 
-**Why two monotone bars are interesting**: Safety and algorithmic progress both only go up, at different rates the player partially controls. The game is a race between two curves — the player never knows which is closer to its threshold. This is structurally different from Reigns' oscillating bars and gives the game a direction and an endgame.
-
-**Budget allocation is implicit, not explicit**: The player steers resources through card choices (fund safety vs. fund enforcement, approve a training run vs. deny it), not through a separate allocation screen. Keeps everything in the swipe interaction.
+**Why two monotone bars are interesting**: Safety and algorithmic progress both only go up, at different rates the player partially controls. The game is a race between two rising curves — the player never knows which is closer to its threshold. This is structurally different from Reigns' oscillating bars and gives the game a direction and an endgame.
 
 #### Hidden state
 
