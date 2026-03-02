@@ -363,15 +363,502 @@ These are not dynamics about the world — they are rules and notes for game des
 
 - (G2) Teaching the player which chip supply chain chokepoints matter (see C-11) and why controlling them is the key to enforcement is a worthwhile learning goal for the game.
 
-## Step 2: Design game elements to serve the dynamics
+## Step 2: Design the game
 
-Once we know the dynamics, derive:
-- **Bars** — each bar represents a tension the player manages. Chosen to make the dynamics emerge from gameplay.
-- **Deaths** — each death teaches a dynamic the player failed to navigate. The death message is the pedagogical payoff.
-- **Characters** — each character embodies a force in the dynamics.
-- **Cards** — each card is a concrete example where dynamics play out.
+<!-- STATUS: IN PROGRESS — Phase 0-1 -->
 
-The number of bars, which dimensions they represent, what characters exist — all follow from the dynamics.
+### Phase 0: Design methodology
+
+We are designing an educational game, not filling in a Reigns template. The process:
+
+1. **Start from learning goals** (Step 1 dynamics) — what must the player experience?
+2. **Research reference games** — what existing games solve similar design problems?
+3. **Explore core loops** — what repeating cycle of play serves the learning goals?
+4. **Design feedback systems** — how does the player see consequences? How many dimensions? What kills?
+5. **Map content** — how do dynamics become game elements?
+6. **Reflect** — does the design actually serve the learning goals?
+
+**Frameworks:**
+- **MDA** (Mechanics → Dynamics → Aesthetics): design backwards from desired player experience
+- **Core loop analysis**: the fundamental repeating cycle that creates engagement
+- **Meaningful choice**: every decision must have real tradeoffs with no obviously correct answer
+- **Stealth learning**: the player learns by playing, not by being lectured
+- **Transfer test** (from Step 1): player can reason about a new real-world AI pause scenario using dynamics they absorbed from the game
+
+**What we already know works (from current game + Jörn's feedback):**
+- Swipe interaction (fun, zero-friction, mobile-native)
+- Weighted card pool (elegant content delivery mechanism)
+- Die-and-restart loop (fast iteration, death teaches)
+- Visual style (dark/moody, character portraits)
+
+**What is NOT assumed:**
+- Number of visible dimensions (could be 0-6+)
+- Whether bars kill at both extremes, one extreme, or at all
+- Whether bars are the right feedback representation
+- Binary choices (could be 3+, timed, conditional)
+- Run length, win condition, persistence between runs
+- Turn = 1 year, bars start at 50, or any other Reigns default
+
+### Phase 1: Reference research
+
+What games successfully teach complex multi-dimensional systems? What mechanics do they use?
+
+**Research questions:**
+1. Political/institutional simulation games — what feedback systems do they use?
+2. Educational card games — how do they structure learning-through-play?
+3. "Systems literacy" games — how do games teach interconnected dynamics?
+4. Short-session mobile games — what makes them replayable?
+5. Games with hidden state that players learn to read — how is this achieved?
+
+**Research findings** (from analysis of ~30 games across political simulation, educational card games, systems-teaching games, and hidden-state games):
+
+#### Finding 1: Feedback systems for political/institutional simulation
+
+Games in this space use four distinct feedback models:
+
+| Model | Example | How it works | Strengths | Weaknesses |
+|---|---|---|---|---|
+| **Visible meters** | Reigns, Yes Your Grace | 3-6 resource bars, die at extremes | Immediately legible, drives short-term tension | Reduces complex systems to numbers; invites min-maxing |
+| **Narrative feedback** | Suzerain, Hidden Agenda | Stats exist but are hidden; player reads advisors, newspapers, reports | Mirrors real information asymmetry of leadership | Hard to learn from — player can't trace cause to effect |
+| **Causal graph** | Democracy 3/4 | Policy nodes connected by visible effect arrows | Teaches systems by showing the wires | Too complex for mobile; analysis paralysis |
+| **Faction simulation** | Tropico, Crisis in the Kremlin | Individual citizens/groups with modeled opinions | Emergent behavior feels alive | Computationally heavy; hard to compress into cards |
+
+**Key insight for this game**: Reigns' visible meters are the strongest fit for mobile card-swipe, but two modifications from other games deserve consideration:
+- **Frostpunk's qualitative-then-precise feedback**: During normal play, show only directional indicators (already implemented as colored triangles). At crisis points (near death), reveal more precise information. This prevents min-maxing during normal play while making crisis moments feel urgent and informative.
+- **Suzerain's narrative constraints on stats**: Stats serve as constraints on what narrative content appears, not as the primary player experience. The player engages with characters and dilemmas; the numbers run underneath. In our case: bars determine which cards appear and what options they offer, but the player's attention is on the card content, not the bar levels.
+
+#### Finding 2: How games teach complex systems (stealth learning)
+
+The research converges on one principle: **the fun action and the learning action must be the same thing.**
+
+What works:
+- **Intrinsic integration**: Plague Inc. doesn't teach epidemiology through text screens — the player learns disease transmission because those mechanics ARE the game. The CDC endorsed it specifically because it teaches outbreak dynamics through play.
+- **Discovery over instruction**: Roguelikes that let players discover rules through consequences produce stronger learning than games that explain rules upfront. "When players misidentify acid as a health potion, the resulting death creates a memorable, affective, embodied lesson."
+- **Model-based reasoning**: Players build mental models of the underlying system through repeated experimentation. Plague Inc. players learn logistic growth curves without knowing the formal terms. Mini Metro players learn the Theory of Constraints without knowing it exists.
+- **Structural spaced repetition**: Reigns' weighted card pool naturally re-exposes players to related themes. If you started a war, war-related cards dominate until resolved. This is interval learning without an explicit algorithm.
+
+What fails:
+- Games that interrupt play for educational content (quiz breaks, text dumps)
+- Games where educational content and fun content are in separate layers
+- Explicit assessment that breaks flow
+
+**For this game**: The dynamics the player needs to learn (enforcement tradeoffs, political fragility, safety research tensions) should be the dynamics that kill them. Death messages are the pedagogical payoff. The card content IS the curriculum, delivered through the fun action of swiping.
+
+#### Finding 3: Death/failure as teaching mechanism
+
+Five requirements for a satisfying death loop (from analysis of Hades, Slay the Spire, FTL, Reigns):
+
+1. **Fast restart** — seconds between death and next attempt. Every animation or loading screen converts learning into frustration.
+2. **Diagnostic death messages** — not "Game Over" but "Your surveillance program was exposed. Three nations withdrew from the treaty." Death is information, not punishment.
+3. **Variety between runs** — weighted card pool ensures different card sequences per run. Prevents "I've seen this before" staleness.
+4. **Perceived progress despite reset** — the player's KNOWLEDGE persists even when game state resets. Each death teaches a different failure mode, building understanding of the full problem space.
+5. **Deaths must feel instructive, not random** — the player must be able to trace the causal chain from choices to death. "I pushed Intel too hard → nations saw surveillance overreach → they withdrew → enforcement collapsed."
+
+**The death budget**: For a teaching game with a finite concept space, the question is: how many distinct failure modes exist? Each one is a lesson. When the player has experienced all of them, they understand the full problem space — and that IS the learning goal.
+
+#### Finding 4: Meaningful binary choices
+
+Sid Meier's framework: a meaningful choice requires (1) tradeoffs with no obviously correct answer, (2) sufficient information to reason about consequences, (3) visible consequences, (4) situational dependency — the same choice has different value in different game states, (5) temporal range from tactical to strategic.
+
+**Critical Reigns insight**: "As soon as the player discovers that some cards take into account their previous choices, potentially every card becomes meaningful because it's very difficult to discern the more randomly picked cards from the authored one." You don't need every choice to be deeply meaningful — you need a critical mass of choices that reference prior decisions. Pattern-recognition makes ALL choices feel meaningful.
+
+**Decision pacing**: ~3-6 decisions per minute is the sweet spot (Reigns data). 15-25 decisions per run prevents fatigue. Randomize WHICH card appears (variety) but make consequences of each choice predictable (agency).
+
+#### Finding 5: Hidden state that players learn to read
+
+| Pattern | Example | Mechanism | Applicable? |
+|---|---|---|---|
+| **Hidden history bias** | Darkest Dungeon | Past events increase probability of similar future events. Players observe "this hero tends to break this way" without seeing weights. | **Yes** — past enforcement failures could bias future crisis types |
+| **Visible-but-opaque clocks** | Citizen Sleeper | Progress indicators the player can see but whose meaning they must discover through play. | **Maybe** — could show "treaty stability" indicators whose behavior the player learns to interpret |
+| **AI storyteller** | RimWorld | Hidden system curates experience based on invisible state analysis. Experienced players learn to manage colony wealth to control event intensity. | **Yes** — the card pool weight system already does this |
+| **Opacity as theme** | Cultist Simulator | Almost everything is hidden. No tutorial. The opacity mirrors the content (hidden knowledge). | **No** — opacity would frustrate our audience (Goal 1: non-experts) |
+| **Full transparency** | Into the Breach | All information visible. Challenge from combinatorial complexity, not uncertainty. | **No** — the post-pause world is characterized by uncertainty; hiding state teaches that |
+| **Anti-brute-force** | Obra Dinn | Requires 3 correct answers simultaneously, forcing genuine inference rather than guess-and-check. | **Not directly** — but the principle of requiring integrated understanding (not just one right answer) applies to the overall learning model |
+
+#### Finding 6: Patterns from specific games worth carrying forward
+
+1. **Balance of Power's anticlimactic failure**: When nuclear war triggers, the game shows only text: "You have ignited a nuclear war. And no, there is no animated display of a mushroom cloud with parts of bodies flying through the air. We do not reward failure." **For ASI-escapes deaths, consider the same approach** — no dramatic animation, just blunt text. The refusal to spectacularize extinction is itself a design statement.
+
+2. **Fate of the World's tipping points**: Hidden thresholds that, once crossed, trigger irreversible cascades. The 2°C threshold acts as a hidden timer — players don't see it counting down, but once crossed, cascade begins. **Directly applicable** to the shrinking lethal threshold (B-5) — a hidden counter that makes the game progressively harder.
+
+3. **Card Shark's progressive skill layering**: 28 techniques taught one at a time, each building on the last. **Applicable to card complexity** — early-game cards teach basic tradeoffs (one bar up, one down); late-game cards require understanding interactions between 3-4 bars simultaneously.
+
+4. **Orwell's Animal Farm's structural inevitability**: No matter what you do, pigs always come to resemble humans. The teaching happens through exhausting alternatives. **Relevant if the game's thesis is "enforcement is structurally hard"** — let the player try everything and still fail most of the time. The repeated failure IS the lesson.
+
+5. **Reigns: Her Majesty's inventory system**: Items give the player a third option beyond binary swipe — "use item on this character." **Solves the "every choice feels the same" problem** that emerges after many runs. Worth considering for late-game content.
+
+6. **Crisis in the Kremlin's 3-5 option choices**: Not all decisions need to be binary. A faction triangle creates three-way tension that binary choices cannot express. **Worth exploring** for high-stakes cards where binary feels reductive.
+
+7. **Democracy's visible causal graph (for death screens)**: During play, the causal web is too complex to show. But at death, showing the player the chain of causes that killed them ("you cut enforcement → rogue labs proliferated → one succeeded") is powerful teaching. **Death as causal autopsy.**
+
+#### Synthesis: design constraints from research
+
+The research narrows the design space:
+
+- **Keep**: swipe interaction, weighted card pool, die-and-restart loop, visible resource indicators, short sessions (2-5 min)
+- **Add**: diagnostic death messages as causal autopsies, hidden state that biases card pool based on history, progressive complexity (simple early cards → multi-bar late cards), qualitative feedback (precise only at crisis)
+- **Explore**: whether binary is sufficient or some cards need 3+ options, inventory/item system for replay depth, anticlimactic failure for extinction deaths
+- **Don't assume**: 4 bars, die-at-both-extremes, turn=1 year, bars start at 50, or any other Reigns default
+
+### Phase 2: Core game loop — "Resolve crises, don't balance stats"
+
+**Key insight (from discussion with Jörn):** The game is NOT a "balance the stats" optimization puzzle. That teaches the wrong lesson — that managing a global pause is about keeping numbers in the middle. The game is a "resolve crises" simulation that teaches:
+
+1. **What the dangers are** — each crisis card presents a specific failure mode
+2. **What the solutions are** — response options, with costs and tradeoffs
+3. **What preparations help** — pre-crisis investments whose value is uncertain
+4. **What uncertainty feels like** — not every run has the same crises; different runs sample different futures
+
+#### Single turn
+
+Draw card from weighted pool → read speaker + situation → **swipe to choose response** → effects applied → hidden state updated → next card drawn.
+
+#### Interaction model: swipe left / right / down
+
+- **Left / right**: the two standard response options (always present)
+- **Down**: a special third option that appears on some cards — available only if the player has the right capabilities, or **greyed out** to show what they're missing ("We'd deploy an inspection team, but our orbital surveillance was defunded last year")
+- **Press toward an option** (without committing): bar indicators show the advisor's predicted effects (directional triangles). This is the advisor briefing — the standard, predictable costs. Release to cancel.
+- **Swipe past threshold**: commits the choice, card animates out
+
+The greyed-out third option is a key teaching mechanism: the player sees what they COULD have done with better preparation. Next run, they invest differently.
+
+#### What the player sees vs. learns
+
+**Visible (advisor briefings):**
+- Bars as continuously-updated situation reports — not optimization targets but context for decisions
+- Tilt/press previews showing predicted direct effects of each option
+- Crisis region warnings when specific dangers become acute
+
+**Learned through play (not briefed):**
+- Follow-up cards triggered by past choices
+- Actual magnitude of effects (previews show direction and rough size, not exact numbers)
+- Hidden state shifts (treaty health, algorithmic progress, opinion dynamics)
+- Second-order consequences — how today's choice changes tomorrow's card pool
+- Which preparations unlock which special options on future crisis cards
+
+This maps to how a real DG operates: advisors give you direct cost estimates, but the political ripples, delayed consequences, and hidden dynamics you learn from experience.
+
+#### State-based eras (not time-based)
+
+The game's character shifts when the **world** changes, not when a clock ticks. Two era triggers:
+
+- **Algorithmic progress**: as capabilities advance, the same enforcement becomes less adequate. New threat types appear. Cards get harder.
+- **Safety progress**: once safety "looks solved," the game doesn't get easier — it gets **different**. Nations/corporations that respected the pause now think "we can do it safely" and race to build first. They may cut corners. The cure looking ready is itself a crisis trigger. **Solving the technical problem doesn't end the political problem.**
+
+Crisis regions also highlight when specific danger areas are active:
+- Treaty close to dissolving
+- Compute monitoring gaps widening (advisors warn extinction is now plausible)
+- Political support eroding to dangerous levels
+
+#### Card types
+
+1. **Crisis cards** — a failure mode event (small/large/unknown effect size) with response options. Some options have different costs. Not all options may be available — greyed-out options show what capabilities the player lacks. Core of the game.
+2. **Preparation cards** — invest in capability before you know what you'll need. Effect size may be small, large, or unknown. Sometimes a preparation is net-negative in the current situation (costs resources you need elsewhere). The uncertain payoff teaches what it's like to prepare for an uncertain future.
+3. **Report cards** — advisor briefing, no response required. Updates the player's understanding of the world ("Monitored compute fraction dropped to 62%"). Makes the next crisis card hit differently because you know the context.
+4. **Consequence cards** — a past decision's effects arriving. "Remember when you approved that training run? The results just leaked." Teaches delayed effects and system memory.
+
+#### Information quality as a game dimension
+
+Some cards present the situation clearly (you have good intelligence). Others are vague or misleading (you don't). One category of preparation is investing in better reporting — not for a specific crisis but to see ALL crises more clearly. The player learns that **uncertainty itself is a threat** and that reducing it is a strategic choice.
+
+#### Bars as advisor dashboards
+
+Bars are continuously-updated advisor briefings, NOT things the player tries to balance. The player glances at them to understand the situation before responding to a crisis — like a DG reading a morning briefing summary.
+
+#### 4 visible bars (advisor briefings)
+
+Derived bottom-up from 42 event sketches (`src/data/events-draft.md`). Each bar tracks a dimension that many events depend on or affect.
+
+| Bar | What it reports | Behavior | Why it's independent |
+|---|---|---|---|
+| **Intelligence** | How much the agency can see — compute monitoring coverage, researcher surveillance, information quality | Bounces — can go up (new monitoring) and down (gaps open, systems fail) | Physical reality of what's being tracked |
+| **Political power** | Elite + government support — mandate, budget authorization, law-passing ability, enforcement permission | Bounces — responds to player choices, elections, crises | Political reality the DG operates within |
+| **Safety progress** | How far alignment research has advanced | **Monotone up** — discrete jumps via research cards, sometimes no growth (failed project). No known ceiling. No passive tick rate — grows only through card events. | Half of the race |
+| **Algorithmic progress** | How much capability knowledge has advanced, shrinking the lethal threshold | **Monotone up** — discrete jumps via report/consequence cards, partially uncontrollable (publications, AI self-improvement). No known ceiling. No passive tick rate. | The other half of the race — the clock |
+
+**Public opinion** (salience + valence across ~6-10 clusters) is hidden state, not a bar. It feeds into political power via elections and protests, and drives which characters appear and what they propose. The player infers opinion shifts from card patterns, not from a number.
+
+**Why two monotone bars are interesting**: Safety and algorithmic progress both only go up, at different rates the player partially controls. The game is a race between two curves — the player never knows which is closer to its threshold. This is structurally different from Reigns' oscillating bars and gives the game a direction and an endgame.
+
+**Budget allocation is implicit, not explicit**: The player steers resources through card choices (fund safety vs. fund enforcement, approve a training run vs. deny it), not through a separate allocation screen. Keeps everything in the swipe interaction.
+
+#### Hidden state
+
+| Variable | What it tracks | How it surfaces |
+|---|---|---|
+| **Opinion clusters** | ~6-10 clusters with salience + valence, shifting based on events | Which characters appear, what options they propose, election outcomes |
+| **Treaty health** | International coalition stability — mostly exogenous geopolitics | International crisis cards when low, withdrawal events |
+| **Enforcement infrastructure** | Accumulated capacity (trained police, satellite access) — decays slowly when defunded | Determines availability of "special" (third) options on crisis cards |
+| **Card history** | What the player chose in prior turns | Consequence cards, greyed-out options reflecting past failures |
+
+#### End conditions
+
+Death comes from mishandled crises or hidden thresholds being crossed, not from bars hitting numbers. Each death is a **causal autopsy** explaining the chain from player choices to outcome.
+
+**Anticlimactic extinction** (Balance of Power pattern): When death comes from uncontrolled ASI (enforcement failure, research accident), no dramatic animation. Just text on a dark screen. The refusal to spectacularize extinction is itself a design statement.
+
+**Win condition**: The player's goal is to **end the acute risk period** — the window where anyone with enough compute could build an unaligned superintelligence. NOT "build safe superintelligence" (that teaches the wrong lesson — urgency to build, rather than patience to hold the line). The player's job is to survive long enough, with enough safety progress, that something happens — a pivotal act — that flips the attack-defense asymmetry from attacker-advantaged to defender-advantaged. Examples: a corrigible low-impact ASI that monitors all compute globally, or successful uploading that gives aligned researchers effectively infinite time. The player doesn't choose the specific pivotal act — they hold the line until conditions allow one to emerge. The win screen describes what happened and teaches: the pause was a decades-long holding action, and it was worth every agonizing tradeoff.
+
+Mechanically: win triggers when safety progress is high enough and the player survives a final high-stakes crisis (the pivotal act deployment — see event E42 in events draft).
+
+---
+
+### Previous proposal (kept for reference, assumptions flagged)
+
+The below was written assuming Reigns mechanics. Many elements may survive into the final design, but they need to be justified from learning goals, not inherited from Reigns.
+
+**Proposal: 4 bars.**
+
+Why 4:
+- **3 is too few.** The core dynamics have 4 independent tensions: enforcement vs. liberty, political support vs. accountability, research speed vs. research safety, and economic restriction vs. technological risk. With 3 bars, you'd have to merge tensions that move independently in reality — e.g., political support can be high while the economy suffers — and the card design would lose interesting tradeoffs.
+- **4 is the sweet spot.** 4 bars create 6 possible pairs and 4 possible triples of opposing effects. That's enough variety for ~100 cards without repeating the same tension pattern. Each card can push 2-3 bars in different directions, creating genuine dilemmas.
+- **5 adds cognitive load without enough payoff.** The main candidate for a 5th bar is international cohesion / treaty health. But international dynamics affect the player primarily through two of the other bars (losing international partners = gaps in enforcement capability + loss of political legitimacy), so a dedicated bar would often move in lockstep with others rather than creating independent tension. If testing shows international dynamics feel underrepresented, a 5th bar can be added later.
+- **6+ is too many for a casual swipe game.** The target audience (Goal 1) is people who don't already think about AI safety. Every additional bar is cognitive overhead that makes the first play less approachable.
+
+#### Bar 1: 🔍 Control — enforcement capability
+
+What it tracks: how tightly the agency monitors and controls AI development worldwide. Chip tracking coverage, facility inspection capacity, researcher monitoring, ability to detect and stop unauthorized training runs.
+
+**At 0 — "Gone Dark":**
+The agency has lost the ability to detect unauthorized training runs. Maybe chip tracking failed, maybe key nations withdrew from monitoring agreements, maybe the agency's surveillance infrastructure was defunded. A rogue lab, nation, or corporation performs a training run above the lethal threshold. Nobody saw it coming because nobody was watching. ASI is created. Everyone dies.
+
+What the player learns: enforcement capability is the thing keeping humanity alive (C-8, C-10). Without it, the pause is just words on paper. Every time the player took an action that reduced Control, they were trading away the ability to prevent extinction.
+
+**At 100 — "Panopticon":**
+Total surveillance state. Every AI researcher is monitored 24/7, every lab is raided on suspicion, every chip is tracked in real-time, every publication is pre-screened. Nations revolt and withdraw from the treaty — their scientists refuse to work under these conditions, their citizens protest mass surveillance. Critically, the best AI researchers go underground. They're now harder to detect than before the crackdown, because they've learned the agency's methods and built countermeasures. The agency's own maximalist approach created a more dangerous, less visible threat.
+
+What the player learns: the cat-and-mouse dynamic (C-14) means you can't win by maximizing control. The structural-advantages insight (C-9): enforcement should shrink the attack surface (consolidate chips into monitored facilities), not expand the monitoring surface (put cameras on every researcher). Maximum surveillance is a trap — it drives the threat where you can't see it.
+
+#### Bar 2: ✊ Support — political legitimacy
+
+What it tracks: how much domestic and international political support the pause and the agency have. Public opinion favorability, legislative backing, media sentiment, institutional credibility, treaty member engagement.
+
+**At 0 — "Voted Out":**
+The agency has no political support left. Maybe elections brought in anti-pause governments. Maybe a long stretch of success made the threat look imaginary (E-52). Maybe economic suffering turned the public against the pause (E-33). A new government dissolves the agency, or a popular movement forces defunding. The pause ends. Within months, competing nations and corporations race to build ASI.
+
+What the player learns: the pause is a political arrangement, not a law of physics. It exists only as long as enough people in enough countries believe it should exist. Political support is not optional — it IS the pause. This teaches E-42 (elections can reverse everything), F-37 (politicians can dissolve the agency), and E-52 (success erodes its own support). Long stretches of stability should make the player nervous, not comfortable.
+
+**At 100 — "Hubris":**
+The agency is universally beloved and politically untouchable. Unlimited funding, zero criticism, no oversight. Three things go wrong simultaneously: (1) the agency becomes complacent because no one challenges it — internal problems go unaddressed; (2) it gets captured by the industries it regulates (F-39) because there's no external check on corruption; (3) it over-promises ("we've basically solved this!") and when something finally goes wrong, credibility collapses from 100 to 0 overnight because the fall from universal trust is total.
+
+What the player learns: unchecked institutions rot (F-39), and the higher the trust, the harder the crash (F-36 — institutional fragility). The agency needs *some* critics to stay honest. This is an unintuitive lesson — the player's instinct is to maximize support, but the game teaches that healthy institutions need accountability.
+
+#### Bar 3: 🧬 Safety — alignment research progress
+
+What it tracks: how much progress humanity has made toward solving alignment — the actual technical problem of making ASI safe to build. Funding, talent, methodology, breakthroughs.
+
+This bar is the timer the player is racing against. The lethal threshold keeps shrinking (B-5, B-6) from sources enforcement can't control (theoretical research, AI self-improvement). Eventually, building ASI becomes easy enough that enforcement can't prevent it. The only long-term survival path is solving alignment before that point.
+
+**At 0 — "Running Out of Time":**
+Safety research has stalled. Maybe the best researchers left (driven away by surveillance or recruited by industry). Maybe the agency defunded research to pay for enforcement. Maybe the problems are genuinely too hard (D-17). Meanwhile, algorithmic progress continues from uncontrollable sources — theorists keep publishing, AI systems keep improving. The lethal threshold drops below what enforcement can prevent. A consumer-grade computer cluster becomes enough. The pause becomes physically unenforceable. ASI is built.
+
+What the player learns: the pause is buying time, not solving the problem (A-2). If safety research stalls, time runs out. The uncontrollable sources of algorithmic progress (B-6a, B-6d) mean the clock never stops ticking. This teaches the fundamental structure of the game: enforcement alone cannot save you. You must also make progress on actually solving the problem.
+
+**At 100 — "The Cure Kills":**
+Safety research used increasingly dangerous methods to accelerate: frontier AI systems as research assistants (D-22 — smart enough to help means smart enough to be dangerous), large-scale experiments that approach the lethal threshold (B-26 — even permitted training is risky), and published results that inadvertently gave away capability advances (B-24 — dual-use knowledge). The safety research program itself creates ASI — or creates something that leaks into the hands of someone who uses it to build ASI.
+
+What the player learns: the "kill everyone now vs. kill everyone in 5 years" tradeoff (D-22) is real and has no clean resolution. Safety research is itself dangerous (B-24). The most aggressive path to solving alignment is also the most likely to trigger the catastrophe it's trying to prevent. This is one of the deepest and most unintuitive dynamics: the cure and the disease are made of the same substance.
+
+#### Bar 4: 💹 Prosperity — economic AI freedom
+
+What it tracks: how much AI use and economic activity is permitted during the pause. Ranges from "total AI ban, economy in freefall" to "AI barely restricted, economy booming but diffusion approaching danger."
+
+This bar represents the tension between real, legitimate economic needs and the risk that AI use itself creates. The current game's "Funding" bar was about agency budgets; this is about whether the world the agency operates in is thriving or suffering.
+
+**At 0 — "Bread and Circuses":**
+The agency has banned almost all AI use. The economy is in freefall — millions unemployed, industries collapsed, medical research halted. The public revolts: not because they disagree about ASI risk, but because they can't feed their families. Politicians who supported the pause are voted out by desperate constituents. The agency is defunded not by ideological opponents but by economic necessity.
+
+What the player learns: the economic cost of the pause is real and legitimate (E-32, E-33). "The thing you want might kill everyone" is a hard sell when people are starving (E-35). You cannot maintain a 30-year pause while destroying the economy. Economic management is not a distraction from the mission — it IS part of the mission, because a suffering public will end the pause.
+
+**At 100 — "The Last Quarter":**
+AI use is barely restricted. The economy is booming — 10% GDP growth, AI in every hospital, factory, logistics chain, military system. Society has been transformed. Then one of these systems — optimized relentlessly for economic productivity, running on massive compute, recursively self-improving to serve its users better — crosses the lethal threshold. It becomes ASI before anyone, including its operators, realizes what happened. The most profitable quarter in human history is also the last.
+
+What the player learns: the line between "enormously valuable AI tool" and "world-ending ASI" may be invisible (E-34). Economic success is itself a path to extinction. Allowing broad AI use means more systems running on more compute, and any one of them might self-improve past the point of no return. This is the sneakiest death — it doesn't come from a villain or a failure, it comes from success.
+
+### Hidden state (not visible to player, affects card pool)
+
+Some dynamics are too complex or too discrete to express as continuous bars. These live in hidden state — tracked internally by the game engine, affecting which cards appear and what options they offer. The player never sees these numbers directly; they infer the hidden state from the patterns of cards they encounter.
+
+This is actually well-aligned with the learning model (Step 1): players inductively generalize dynamics from concrete examples (cards), not from reading numbers (bars). The hidden state creates the FEEL of the dynamics without burdening the player with more UI.
+
+**Opinion cluster distribution** (from E-27, E-29, E-43):
+The population is divided among ~6-8 opinion clusters (simplified from Jörn's ~10 for implementation). Each cluster has a fraction, and fractions shift in response to game events. The cluster distribution determines:
+- Which characters appear more often (when the "ASI is impossible" cluster grows, the skeptical journalist shows up more)
+- What options cards offer (when the "surveillance state scheme" cluster is large, enforcement cards have worse political consequences)
+- How events propagate (a non-ASI AI incident shifts different clusters in different directions — E-53)
+
+The player experiences this as: "I keep getting cards about politicians doubting the mission — what happened?" The answer is that an opinion cluster shifted, but the player discovers this through gameplay, not through a number on screen.
+
+**Algorithmic progress level** (from B-5, B-6):
+A hidden counter that increases over time, representing how close the lethal threshold has dropped to enforceable limits. Driven primarily by uncontrollable sources (B-6a theoretical research, B-6d AI self-improvement) but accelerated by high Prosperity (more AI use = more data for self-improvement) and high Safety (dual-use research).
+
+Effect: as this counter increases, cards get harder. Enforcement cards require more extreme tradeoffs. The "safe" options become less safe. This creates the feeling of time pressure without an explicit timer on screen — the player just notices that the game is getting harder.
+
+**Treaty health** (from E-49, F-41):
+How many nations are actively cooperating vs. wavering vs. threatening withdrawal. Affected by Control (too much surveillance drives nations away), Support (international prestige matters), and specific card choices about international incidents.
+
+Effect: when treaty health is low, the player gets more international crisis cards with worse options. When treaty health collapses (a hidden threshold), it can trigger a direct game-over similar to Control=0 — enforcement becomes impossible when major nations withdraw.
+
+**Turn counter / era marker** (from E-44, E-65):
+The passage of time triggers structural shifts. At decade boundaries, the card pool changes to reflect generational turnover, new political leaders, and accumulated social change. Cards that appear in year 1-5 are different from cards in year 20-25. The player who restarts and plays again will encounter the early-era cards with the knowledge they gained from late-era deaths.
+
+### Deaths
+
+Each death teaches a specific set of dynamics. The death message is the pedagogical payoff — it's the moment the player goes "oh, THAT's what I should have been watching for."
+
+| Bar | Extreme | Death name | Message (draft) | Dynamics taught |
+|-----|---------|-----------|----------------|----------------|
+| Control | 0 | Gone Dark | "You lost sight of what mattered — literally. Somewhere in the world, a training run you couldn't see produced something that saw everything." | C-8, C-10 |
+| Control | 100 | Panopticon | "You watched everyone so closely that the ones who mattered most learned to hide where you'd never look." | C-9, C-14 |
+| Support | 0 | Voted Out | "The pause was never permanent — it was always a promise that could be broken. This election, it was." | F-37, E-42, E-52 |
+| Support | 100 | Hubris | "Everyone trusted the agency. Nobody checked whether it deserved that trust. When the answer turned out to be no, the trust didn't erode — it shattered." | F-39, F-36 |
+| Safety | 0 | Running Out of Time | "Every year, building ASI got a little easier. You needed a solution before the problem solved itself. You didn't find one." | D-17, B-5, B-6, D-23 |
+| Safety | 100 | The Cure Kills | "The most advanced AI safety research in history produced... the most advanced AI in history. Turns out those are the same thing." | D-22, B-24 |
+| Prosperity | 0 | Bread and Circuses | "People can support a cause that frightens them. They cannot support a cause that starves them." | E-32, E-33, E-35 |
+| Prosperity | 100 | The Last Quarter | "Q3 earnings exceeded all projections. An AI system found a way to grow GDP even faster. It grew so fast it outgrew us." | E-34, E-56 |
+
+### Character archetypes
+
+Characters embody forces from the dynamics. Each archetype's proposals tend to push specific bars in specific directions, creating predictable tension. The player learns to recognize: "when the enforcement chief shows up, she'll want more surveillance (Control ↑) at the cost of something else."
+
+Not all archetypes need separate characters. Some can be combined, and some archetypes may have multiple named characters (two different politicians from different opinion clusters, for example).
+
+**Enforcement Chief** — embodies group C dynamics.
+Wants: more surveillance, more raids, tighter chip control, bigger enforcement budget.
+Typical effect: Control ↑, Support ↓ (heavy-handed) or Prosperity ↓ (restricts AI use).
+Card flavor: facility raids, chip audits, monitoring expansions, border seizures.
+
+**Chief Scientist** — embodies group D dynamics.
+Wants: more research funding, permission to run larger experiments, access to frontier AI tools.
+Typical effect: Safety ↑, Control ↓ (dual-use risk) or Prosperity ↓ (diverts resources).
+The dual-use tension (B-24) means the scientist's proposals are genuinely ambiguous — are they advancing safety or capabilities? The player must decide without certainty.
+Card flavor: research proposals, experiment approvals, breakthrough announcements, "we need to use the AI" requests.
+
+**Political Advisor** — embodies group E (opinion/election) dynamics.
+Wants: whatever keeps the agency politically alive. Their proposals are reactive — shaped by which opinion clusters are currently dominant.
+Typical effect: Support ↑, but at the cost of whatever the current political environment demands (maybe Control ↓ to appease surveillance critics, or Prosperity ↑ to appease economic interests).
+Card flavor: election strategy, media crisis response, public messaging, legislative negotiations.
+
+**Economic Advisor** — embodies E-30 through E-35 dynamics.
+Wants: broader AI permissions, economic growth, industry partnerships.
+Typical effect: Prosperity ↑, Control ↓ (more AI to monitor, more diffusion risk).
+The economic advisor's arguments are genuinely legitimate (E-33) — the player should feel the pull, not dismiss them as wrong.
+Card flavor: industry proposals, economic reports, trade negotiations, "the economy can't sustain this" warnings.
+
+**Foreign Diplomat** — embodies E-49 and F-41 dynamics.
+Wants: treaty stability, international cooperation, concessions to keep wavering nations onboard.
+Typical effect: varies — might require Support ↓ (unpopular concessions to China) or Control ↓ (easing enforcement to keep allies) in exchange for maintaining treaty health (hidden state).
+Card flavor: treaty negotiations, international incidents, intelligence sharing, sanctions.
+
+**Journalist** — embodies E-47, E-48, E-52, E-53 dynamics.
+Comes in two modes: ally (investigating real threats, raising public awareness) and adversary (investigating the agency itself, amplifying skepticism). Which mode they're in depends on the opinion cluster distribution (hidden state).
+Typical effect: Support ↑ or ↓ depending on the story.
+Card flavor: leaked documents, public opinion shifts, investigative stories, non-ASI AI incidents in the news.
+
+**Corporate Executive** — embodies E-51, E-62 dynamics.
+Wants: weaker enforcement, broader AI use, regulatory exceptions for their industry.
+Typical effect: Prosperity ↑, Control ↓, sometimes Support ↑ (economic promises to politicians).
+The executive is NOT simply a villain — their economic arguments are real (E-33), and sometimes cooperating with industry genuinely helps enforcement (access to private chip data, industry self-monitoring).
+Card flavor: lobbying, economic threats, partnership offers, treaty-undermining moves.
+
+**Internal Dissenter** — embodies F-40 dynamics.
+An agency employee who disagrees with the director's approach — not from corruption but from sincere belief. Could be a hawk (thinks enforcement is too weak), a dove (thinks it's too aggressive), a skeptic (thinks the mission is wrong), or an ideologue (puts their politics above the mission).
+Typical effect: unpredictable — targets whichever bar reflects their complaint.
+Card flavor: internal memos, sabotage reports, whistleblowing, resignation threats, leaked classified information.
+
+**The Agency's AI** — embodies C-59, C-61, D-22 dynamics.
+The AI systems the agency uses for its own operations. Appears when something unexpected happens. Not a traditional character — more of a wildcard.
+Typical effect: unpredictable, often reveals information or creates dilemmas.
+Card flavor: "the surveillance AI flagged something strange," "the research assistant refused a direct order," "the analysis system's latest report doesn't make sense."
+
+### Sample card sketches
+
+A few examples showing how dynamics become specific card decisions. These are sketches, not finished content — they demonstrate the mapping from dynamics to gameplay.
+
+**"The Chip Audit"** (Enforcement Chief, early-game)
+"Our latest audit found 200 unaccounted H100s at a university in Germany. They say it's a paperwork error."
+- Left: "Log it and move on." → Control ↓small (you let one slide), Support ↑small (seen as reasonable)
+- Right: "Raid the facility. Seize the chips." → Control ↑, Support ↓ (seen as heavy-handed), Prosperity ↓small (university research disrupted)
+
+Teaches: C-10 (chip tracking is the pillar of enforcement), C-8 (every potential violation matters).
+The right answer is ambiguous on purpose — both choices have real costs.
+
+**"The Safety Shortcut"** (Chief Scientist, mid-game)
+"We could make a breakthrough in corrigibility — if we run a training experiment at 5×10²³ FLOP. It's below the estimated lethal threshold... probably."
+- Left: "Too risky. Use smaller experiments only." → Safety ↓small (slower progress), Control ↑small (staying within safe limits)
+- Right: "Approved, with triple monitoring." → Safety ↑, Control ↓small (monitoring resources diverted)
+
+Teaches: D-22 (frontier AI trap), B-26 (even permitted training is dangerous). If the player has been neglecting Safety, the temptation to approve is strong.
+
+**"The Economic Report"** (Economic Advisor, mid-game)
+"GDP growth is 1.2% — down from 4% before the pause. Three nations are threatening to withdraw unless we allow broader AI deployment in manufacturing."
+- Left: "The pause exists for a reason. Hold the line." → Prosperity ↓, Support ↓ (economic suffering + international tension), treaty health ↓ (hidden)
+- Right: "Expand permitted AI use in non-research sectors." → Prosperity ↑, Control ↓ (more AI systems to monitor, more diffusion risk)
+
+Teaches: E-32/33 (economic cost is real and legitimate), E-34 (broader AI use increases extinction risk from within).
+
+**"Eight Years of Peace"** (Political Advisor, appears after long stretch without crisis)
+"Senator Morris is proposing to cut the agency budget by 40%. Her argument: 'Eight years, zero incidents. The threat was clearly exaggerated.'"
+- Left: "Make the case publicly — show them what we've prevented." → Support ↑small (but you CAN'T show what you prevented — E-52), Safety ↓small (budget politics distracts from research)
+- Right: "Accept the cut gracefully. Prove efficiency." → Support ↑small (cooperative), Control ↓ (less enforcement), Prosperity ↑small (tax savings)
+
+Teaches: E-52 (the success trap). This card appears BECAUSE things have been going well — it teaches the player that stability breeds complacency. The left option is subtly a trap: you can't actually demonstrate prevented catastrophes.
+
+**"The Dissident"** (Internal Dissenter, any time)
+"Your Deputy Director just leaked classified enforcement data to a journalist. His note: 'The public deserves to know how much surveillance this agency conducts.'"
+- Left: "Fire him publicly. Send a message." → Control ↑small (discipline restored), Support ↓ (looks authoritarian, confirms surveillance fears)
+- Right: "Handle it quietly. Reassign him." → Control ↓small (signal of weakness), Support ↑small (no public scandal)
+
+Teaches: F-40 (internal ideological conflict — the dissenter isn't corrupt, they genuinely believe the public should know).
+
+### How dynamics map to game elements
+
+Summary of which dynamics are expressed through which game element.
+
+**Through visible bars:**
+- A (stakes) → the death conditions — the existence of lethal extremes
+- B (threat model) → Control bar (enforcement detects training runs) + Safety bar (dual-use risk)
+- C (enforcement) → Control bar (primary home)
+- D (safety progress) → Safety bar (primary home)
+- E (political economy) → Support bar (opinion/political dynamics) + Prosperity bar (economic dynamics)
+- F (institutional failures) → cards that damage multiple bars simultaneously (not its own bar — institutional failures CAUSE drops in other bars)
+
+**Through hidden state:**
+- E-27/29/43 (opinion clusters) → card pool weights, character frequency, option quality
+- B-5/6 (algorithmic progress) → escalating difficulty over time
+- E-44/65 (generational drift) → era-based card pool shifts
+- E-49 (international dynamics) → treaty health hidden variable → crisis cards
+- E-56/57 (AI diffusion) → Prosperity-linked card escalation
+
+**Through deaths:**
+- C-8 (enforcement asymmetry) → Control=0
+- C-9/14 (structural advantages, cat-and-mouse) → Control=100
+- E-52 (success trap) + F-37 (political dissolution) → Support=0
+- F-39 (regulatory capture) + F-36 (institutional fragility) → Support=100
+- D-17/23 (safety is hard) + B-5/6 (shrinking threshold) → Safety=0
+- D-22 (frontier AI trap) + B-24 (dual-use) → Safety=100
+- E-32/33/35 (economic cost) → Prosperity=0
+- E-34 (economic path to extinction) + E-56 (diffusion) → Prosperity=100
+
+**Through characters:**
+- E-30a (short-term economic incentives) → Economic Advisor, Corporate Executive
+- E-30b (long-term strategic ambition) → Foreign Diplomat (international threats)
+- F-40 (internal ideological conflict) → Internal Dissenter
+- C-14 (cat-and-mouse) → recurring Enforcement Chief cards
+- D-19/20 (desperate, weird research) → Chief Scientist's increasingly unusual proposals
+- E-27 (opinion clusters) → Journalist and Political Advisor vary based on hidden state
+
+### What this design does NOT capture
+
+Honest limitations:
+
+- **Opinion clusters as discrete groups** (E-27): The bars are continuous, so the game cannot natively represent discrete opinion clusters. The hidden-state approach (opinion clusters affect card pool) is a workaround, not a direct representation. A player who examines the mechanics will see continuous bars, not clusters. The *feel* of cluster dynamics comes from card pool effects, but the *structure* is different from reality.
+
+- **International dynamics in full detail** (E-49): Without a dedicated bar, the richness of international relations is compressed into hidden state + effects on other bars. Complex scenarios like "China threatens to build ASI for concessions" work as individual cards but the game can't model the ongoing multi-party negotiation.
+
+- **Institutional dysfunction as a slow process** (F-36-41): Institutional rot happens over years, not single card decisions. The game represents it through individual crisis events (dissenter leaks documents, political appointee replaces competent director) rather than through gradual decay. This is a compression artifact — in reality, institutions fail slowly then suddenly.
+
+- **30-year timescale with generational turnover** (E-44, E-65): A ~15-40 turn run represents ~30 years, which means each turn covers roughly a year. This is too coarse for generational dynamics. The era-based card pool shift is an approximation.
 
 ## Step 3: Write content (incremental)
 
