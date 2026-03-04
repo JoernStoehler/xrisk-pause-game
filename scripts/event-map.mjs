@@ -769,8 +769,9 @@ function writeHtml(events, analysis) {
     .attr('class', 'node')
     .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
     .call(d3.drag()
-      .on('start', function(event, d) { isDragging = true; })
+      .on('start', function(event, d) { isDragging = true; wasDragged = false; })
       .on('drag', function(event, d) {
+        wasDragged = true;
         d.x = event.x; d.y = event.y;
         d3.select(this).attr('transform', 'translate(' + event.x + ',' + event.y + ')');
         var connected = nodeEdgeMap.get(d.id) || [];
@@ -816,6 +817,7 @@ function writeHtml(events, analysis) {
   var highlightedNode = null;
   var edgeElements = link.nodes();
   var isDragging = false;
+  var wasDragged = false;
 
   // Pre-compute edge connections per node for drag
   var nodeEdgeMap = new Map();
@@ -864,9 +866,6 @@ function writeHtml(events, analysis) {
         (d.file ? '<div style="color:#6c757d;font-size:10px;margin-top:4px">' + d.file + '</div>' : '');
     }
     tooltip.style.display = 'block';
-
-    // Highlight only changes if no other node is locked
-    if (lockedNode && lockedNode !== d.id) return;
     highlightedNode = d.id;
 
     // O(1) adjacency lookup: get connected edge indices and neighbor IDs
@@ -901,56 +900,22 @@ function writeHtml(events, analysis) {
   .on('mouseleave', function() {
     if (isDragging) return;
     tooltip.style.display = 'none';
-    if (lockedNode) return;
     highlightedNode = null;
     resetHighlight();
   });
 
-  // ── Click to lock highlight + copy ID ──
-  var lockedNode = null;
+  // ── Click to copy node ID ──
   var copyToast = document.getElementById('copy-toast');
   var copyTimeout = null;
   node.on('click', function(event, d) {
+    if (wasDragged) return; // Don't copy after drag
     event.stopPropagation();
-    event.preventDefault();
-    if (lockedNode === d.id) {
-      // Unlock
-      lockedNode = null;
-      resetHighlight();
-      return;
-    }
-    lockedNode = d.id;
-    // Copy node ID to clipboard
     navigator.clipboard.writeText(d.id).then(function() {
       copyToast.textContent = 'Copied: ' + d.id;
       copyToast.classList.add('show');
       clearTimeout(copyTimeout);
       copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 1500);
     });
-    var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
-    var neighbors = neighborIds.get(d.id) || new Set();
-
-    edgeElements.forEach(function(el, idx) {
-      if (connectedEdges.has(idx)) {
-        el.setAttribute('stroke', '#2563eb');
-        el.setAttribute('stroke-opacity', '0.7');
-        el.setAttribute('stroke-width', '1.5');
-      } else {
-        el.setAttribute('stroke-opacity', '0.05');
-      }
-    });
-    node.select('circle').attr('opacity', function(n) {
-      if (n.id === d.id) return 1;
-      return neighbors.has(n.id) ? 0.9 : 0.08;
-    });
-  });
-
-  // Click background to unlock
-  svg.on('click', function() {
-    if (lockedNode) {
-      lockedNode = null;
-      resetHighlight();
-    }
   });
 
   // ── Controls ──
