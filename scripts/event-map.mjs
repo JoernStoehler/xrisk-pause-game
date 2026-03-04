@@ -708,12 +708,16 @@ function writeHtml(events, analysis) {
   };
 
   // ── Pre-compute layout synchronously — no timer, no requestAnimationFrame ──
+  // alphaDecay(0) keeps forces at full strength; velocityDecay converges positions.
+  // This is safe here because no timer runs — we tick synchronously then discard the simulation.
   var simulation = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(edges).id(function(d) { return d.id; }).distance(80))
-    .force('charge', d3.forceManyBody().strength(-120))
+    .force('charge', d3.forceManyBody().strength(-150))
     .force('center', d3.forceCenter(W / 2, H / 2))
+    .alphaDecay(0)
+    .velocityDecay(0.3)
     .stop();
-  for (var i = 0; i < 300; i++) simulation.tick();
+  for (var i = 0; i < 1000; i++) simulation.tick();
 
   // Container for zoom/pan
   var g = svg.append('g');
