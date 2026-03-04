@@ -378,7 +378,7 @@
         d3.select(this).attr('transform', 'translate(' + event.x + ',' + event.y + ')');
         var connected = nodeEdgeMap.get(d.id) || [];
         for (var i = 0; i < connected.length; i++) {
-          var el = linkElements[connected[i].idx];
+          var el = edgeElements[connected[i].idx];
           if (connected[i].role === 'source') { el.setAttribute('x1', event.x); el.setAttribute('y1', event.y); }
           else { el.setAttribute('x2', event.x); el.setAttribute('y2', event.y); }
         }
@@ -389,8 +389,7 @@
         setTimeout(function() { wasDragged = false; }, 0);
         // Clean up tooltip/highlight in case cursor ended outside the node
         tooltip.style.display = 'none';
-        highlightedNode = null;
-        resetHighlight();
+            resetHighlight();
       }));
 
   // Circle for each node
@@ -424,14 +423,12 @@
   var tooltip = document.getElementById('tooltip');
 
   // ── Highlight helpers ──
-  var highlightedNode = null;
   var edgeElements = link.nodes();
   var isDragging = false;
   var wasDragged = false;
 
   // Pre-compute edge connections per node for drag
   var nodeEdgeMap = new Map();
-  var linkElements = link.nodes();
   nodes.forEach(function(n) { nodeEdgeMap.set(n.id, []); });
   edges.forEach(function(e, i) {
     var sid = typeof e.source === 'object' ? e.source.id : e.source;
@@ -500,7 +497,6 @@
         (d.file ? '<div style="color:#6c757d;font-size:10px;margin-top:4px">' + d.file + '</div>' : '');
     }
     tooltip.style.display = 'block';
-    highlightedNode = d.id;
 
     // O(1) adjacency lookup: get connected edge indices and neighbor IDs
     var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
@@ -529,6 +525,7 @@
     var tx = event.pageX + 14;
     var ty = event.pageY + 14;
     if (tx + tw > W) tx = event.pageX - tw - 14;
+    if (tx < 0) tx = 8;
     if (ty + th > H) ty = event.pageY - th - 14;
     if (ty < 0) ty = 8;
     tooltip.style.left = tx + 'px';
@@ -537,7 +534,6 @@
   .on('mouseleave', function() {
     if (isDragging) return;
     tooltip.style.display = 'none';
-    highlightedNode = null;
     resetHighlight();
   });
 
@@ -547,18 +543,19 @@
   node.on('click', function(event, d) {
     if (wasDragged) return; // Don't copy after drag
     event.stopPropagation();
+    function showFallbackToast() {
+      copyToast.textContent = d.id;
+      copyToast.classList.add('show');
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 3000);
+    }
+    if (!navigator.clipboard) { showFallbackToast(); return; }
     navigator.clipboard.writeText(d.id).then(function() {
       copyToast.textContent = 'Copied: ' + d.id;
       copyToast.classList.add('show');
       clearTimeout(copyTimeout);
       copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 1500);
-    }).catch(function() {
-      // Clipboard unavailable (HTTP or permissions) — show ID in toast so user can copy manually
-      copyToast.textContent = d.id;
-      copyToast.classList.add('show');
-      clearTimeout(copyTimeout);
-      copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 3000);
-    });
+    }).catch(showFallbackToast);
   });
 
   // ── Controls ──
