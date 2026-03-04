@@ -939,6 +939,12 @@ function writeHtml(events, analysis) {
       copyToast.classList.add('show');
       clearTimeout(copyTimeout);
       copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 1500);
+    }).catch(function() {
+      // Clipboard unavailable (HTTP or permissions) — show ID in toast so user can copy manually
+      copyToast.textContent = d.id;
+      copyToast.classList.add('show');
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 3000);
     });
   });
 
