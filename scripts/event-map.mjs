@@ -575,6 +575,24 @@ function writeHtml(events, analysis) {
   }
   #search-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
   #search-input::placeholder { color: #adb5bd; }
+
+  /* Copy toast */
+  #copy-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  #copy-toast.show { opacity: 1; }
 </style>
 </head>
 <body>
@@ -610,7 +628,10 @@ function writeHtml(events, analysis) {
   <div id="controls">
     <button id="btn-reset">Reset Zoom</button>
     <button id="btn-labels" class="active">Labels</button>
+    <button id="btn-stubs">Hide Stubs</button>
   </div>
+
+  <div id="copy-toast">Copied!</div>
 
   <div id="search-box">
     <input id="search-input" type="text" placeholder="Search nodes..." />
@@ -708,16 +729,15 @@ function writeHtml(events, analysis) {
   };
 
   // ── Pre-compute layout synchronously — no timer, no requestAnimationFrame ──
-  // alphaDecay(0) keeps forces at full strength; velocityDecay converges positions.
-  // This is safe here because no timer runs — we tick synchronously then discard the simulation.
+  // alphaDecay(0.005) → forces fade to ~0 over ~1400 ticks (vs 300 with default 0.0228).
+  // Gives enough time for 223 nodes to untangle while converging to true equilibrium.
   var simulation = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(edges).id(function(d) { return d.id; }).distance(80))
     .force('charge', d3.forceManyBody().strength(-150))
     .force('center', d3.forceCenter(W / 2, H / 2))
-    .alphaDecay(0)
-    .velocityDecay(0.3)
+    .alphaDecay(0.005)
     .stop();
-  for (var i = 0; i < 1000; i++) simulation.tick();
+  for (var i = 0; i < 1500; i++) simulation.tick();
 
   // Container for zoom/pan
   var g = svg.append('g');
@@ -886,8 +906,10 @@ function writeHtml(events, analysis) {
     resetHighlight();
   });
 
-  // ── Click to lock highlight ──
+  // ── Click to lock highlight + copy ID ──
   var lockedNode = null;
+  var copyToast = document.getElementById('copy-toast');
+  var copyTimeout = null;
   node.on('click', function(event, d) {
     event.stopPropagation();
     event.preventDefault();
@@ -898,6 +920,13 @@ function writeHtml(events, analysis) {
       return;
     }
     lockedNode = d.id;
+    // Copy node ID to clipboard
+    navigator.clipboard.writeText(d.id).then(function() {
+      copyToast.textContent = 'Copied: ' + d.id;
+      copyToast.classList.add('show');
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 1500);
+    });
     var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
     var neighbors = neighborIds.get(d.id) || new Set();
 
@@ -933,6 +962,44 @@ function writeHtml(events, analysis) {
     showLabels = !showLabels;
     labels.style('display', showLabels ? 'block' : 'none');
     this.classList.toggle('active', showLabels);
+  });
+
+  // ── Hide stubs (entities/topics with only 1 edge) ──
+  var stubsHidden = false;
+  var stubNodeIds = new Set();
+  nodes.forEach(function(n) {
+    if (n.nodeType !== 'event') {
+      var deg = (neighborIds.get(n.id) || new Set()).size;
+      if (deg <= 1) stubNodeIds.add(n.id);
+    }
+  });
+  // Pre-compute which edges connect to stub nodes
+  var stubEdgeIndices = new Set();
+  edges.forEach(function(e, i) {
+    var sid = typeof e.source === 'object' ? e.source.id : e.source;
+    var tid = typeof e.target === 'object' ? e.target.id : e.target;
+    if (stubNodeIds.has(sid) || stubNodeIds.has(tid)) stubEdgeIndices.add(i);
+  });
+
+  document.getElementById('btn-stubs').addEventListener('click', function() {
+    stubsHidden = !stubsHidden;
+    this.classList.toggle('active', stubsHidden);
+    this.textContent = stubsHidden ? 'Show Stubs' : 'Hide Stubs';
+    node.style('display', function(d) {
+      if (stubsHidden && stubNodeIds.has(d.id)) return 'none';
+      return null;
+    });
+    labels.style('display', function(d) {
+      if (stubsHidden && stubNodeIds.has(d.id)) return 'none';
+      return showLabels ? 'block' : 'none';
+    });
+    edgeElements.forEach(function(el, idx) {
+      if (stubsHidden && stubEdgeIndices.has(idx)) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = '';
+      }
+    });
   });
 
   // ── Search ──

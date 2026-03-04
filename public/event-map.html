@@ -310,16 +310,15 @@
   };
 
   // ── Pre-compute layout synchronously — no timer, no requestAnimationFrame ──
-  // alphaDecay(0) keeps forces at full strength; velocityDecay converges positions.
-  // This is safe here because no timer runs — we tick synchronously then discard the simulation.
+  // alphaDecay(0.005) → forces fade to ~0 over ~1400 ticks (vs 300 with default 0.0228).
+  // Gives enough time for 223 nodes to untangle while converging to true equilibrium.
   var simulation = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(edges).id(function(d) { return d.id; }).distance(80))
     .force('charge', d3.forceManyBody().strength(-150))
     .force('center', d3.forceCenter(W / 2, H / 2))
-    .alphaDecay(0)
-    .velocityDecay(0.3)
+    .alphaDecay(0.005)
     .stop();
-  for (var i = 0; i < 1000; i++) simulation.tick();
+  for (var i = 0; i < 1500; i++) simulation.tick();
 
   // Container for zoom/pan
   var g = svg.append('g');
