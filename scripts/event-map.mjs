@@ -558,8 +558,8 @@ function writeHtml(events, analysis) {
   /* Search */
   #search-box {
     position: absolute;
-    top: 80px;
-    right: 16px;
+    top: 16px;
+    right: 280px;
     z-index: 10;
   }
   #search-input {
@@ -722,6 +722,7 @@ function writeHtml(events, analysis) {
     .scaleExtent([0.1, 6])
     .on('zoom', function(event) { g.attr('transform', event.transform); });
   svg.call(zoomBehavior);
+  svg.on('dblclick.zoom', null);
 
   // ── Draw edges (positions from pre-computed layout) ──
   var linkG = g.append('g').attr('class', 'links');
@@ -794,9 +795,8 @@ function writeHtml(events, analysis) {
 
   node.on('mouseenter', function(event, d) {
     if (isDragging) return;
-    highlightedNode = d.id;
 
-    // Build tooltip content based on node type
+    // Tooltip always shows on hover, regardless of lock state
     if (d.nodeType === 'entity') {
       tooltip.innerHTML =
         '<span class="tt-id">' + d.label + '</span>' +
@@ -820,6 +820,10 @@ function writeHtml(events, analysis) {
         (d.file ? '<div style="color:#6c757d;font-size:10px;margin-top:4px">' + d.file + '</div>' : '');
     }
     tooltip.style.display = 'block';
+
+    // Highlight only changes if no other node is locked
+    if (lockedNode && lockedNode !== d.id) return;
+    highlightedNode = d.id;
 
     // O(1) adjacency lookup: get connected edge indices and neighbor IDs
     var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
@@ -852,8 +856,9 @@ function writeHtml(events, analysis) {
   })
   .on('mouseleave', function() {
     if (isDragging) return;
-    highlightedNode = null;
     tooltip.style.display = 'none';
+    if (lockedNode) return;
+    highlightedNode = null;
     resetHighlight();
   });
 
@@ -861,6 +866,7 @@ function writeHtml(events, analysis) {
   var lockedNode = null;
   node.on('click', function(event, d) {
     event.stopPropagation();
+    event.preventDefault();
     if (lockedNode === d.id) {
       // Unlock
       lockedNode = null;
