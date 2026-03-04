@@ -177,6 +177,24 @@
   }
   #search-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
   #search-input::placeholder { color: #adb5bd; }
+
+  /* Copy toast */
+  #copy-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e293b;
+    color: #f8fafc;
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 12px;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  #copy-toast.show { opacity: 1; }
 </style>
 </head>
 <body>
@@ -212,7 +230,10 @@
   <div id="controls">
     <button id="btn-reset">Reset Zoom</button>
     <button id="btn-labels" class="active">Labels</button>
+    <button id="btn-stubs">Hide Stubs</button>
   </div>
+
+  <div id="copy-toast">Copied!</div>
 
   <div id="search-box">
     <input id="search-input" type="text" placeholder="Search nodes..." />
@@ -350,8 +371,9 @@
     .attr('class', 'node')
     .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
     .call(d3.drag()
-      .on('start', function(event, d) { isDragging = true; })
+      .on('start', function(event, d) { isDragging = true; wasDragged = false; })
       .on('drag', function(event, d) {
+        wasDragged = true;
         d.x = event.x; d.y = event.y;
         d3.select(this).attr('transform', 'translate(' + event.x + ',' + event.y + ')');
         var connected = nodeEdgeMap.get(d.id) || [];
@@ -397,6 +419,7 @@
   var highlightedNode = null;
   var edgeElements = link.nodes();
   var isDragging = false;
+  var wasDragged = false;
 
   // Pre-compute edge connections per node for drag
   var nodeEdgeMap = new Map();
@@ -410,18 +433,42 @@
   });
 
   function resetHighlight() {
-    edgeElements.forEach(function(el) {
-      el.setAttribute('stroke', '#cbd5e1');
-      el.setAttribute('stroke-opacity', '0.3');
-      el.setAttribute('stroke-width', '0.6');
-    });
-    node.select('circle').attr('opacity', 0.9);
+    var q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    if (q) {
+      // Restore search state instead of default
+      var matchingIds = new Set();
+      nodes.forEach(function(d) {
+        var match = d.label.toLowerCase().includes(q)
+          || d.id.toLowerCase().includes(q)
+          || (d.entities && d.entities.some(function(e) { return e.toLowerCase().includes(q); }))
+          || (d.topics && d.topics.some(function(t) { return t.toLowerCase().includes(q); }))
+          || (d.situation && d.situation.toLowerCase().includes(q));
+        if (match) matchingIds.add(d.id);
+      });
+      node.select('circle').attr('opacity', function(d) { return matchingIds.has(d.id) ? 1 : 0.05; });
+      edgeElements.forEach(function(el, idx) {
+        var e = edges[idx];
+        var sid = typeof e.source === 'object' ? e.source.id : e.source;
+        var tid = typeof e.target === 'object' ? e.target.id : e.target;
+        var connected = matchingIds.has(sid) || matchingIds.has(tid);
+        el.setAttribute('stroke', '#cbd5e1');
+        el.setAttribute('stroke-opacity', connected ? '0.5' : '0.05');
+        el.setAttribute('stroke-width', '0.6');
+      });
+    } else {
+      edgeElements.forEach(function(el) {
+        el.setAttribute('stroke', '#cbd5e1');
+        el.setAttribute('stroke-opacity', '0.3');
+        el.setAttribute('stroke-width', '0.6');
+      });
+      node.select('circle').attr('opacity', 0.9);
+    }
   }
 
   node.on('mouseenter', function(event, d) {
     if (isDragging) return;
 
-    // Tooltip always shows on hover, regardless of lock state
+    // Show tooltip on hover
     if (d.nodeType === 'entity') {
       tooltip.innerHTML =
         '<span class="tt-id">' + d.label + '</span>' +
@@ -445,9 +492,6 @@
         (d.file ? '<div style="color:#6c757d;font-size:10px;margin-top:4px">' + d.file + '</div>' : '');
     }
     tooltip.style.display = 'block';
-
-    // Highlight only changes if no other node is locked
-    if (lockedNode && lockedNode !== d.id) return;
     highlightedNode = d.id;
 
     // O(1) adjacency lookup: get connected edge indices and neighbor IDs
@@ -482,47 +526,22 @@
   .on('mouseleave', function() {
     if (isDragging) return;
     tooltip.style.display = 'none';
-    if (lockedNode) return;
     highlightedNode = null;
     resetHighlight();
   });
 
-  // ── Click to lock highlight ──
-  var lockedNode = null;
+  // ── Click to copy node ID ──
+  var copyToast = document.getElementById('copy-toast');
+  var copyTimeout = null;
   node.on('click', function(event, d) {
+    if (wasDragged) return; // Don't copy after drag
     event.stopPropagation();
-    event.preventDefault();
-    if (lockedNode === d.id) {
-      // Unlock
-      lockedNode = null;
-      resetHighlight();
-      return;
-    }
-    lockedNode = d.id;
-    var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
-    var neighbors = neighborIds.get(d.id) || new Set();
-
-    edgeElements.forEach(function(el, idx) {
-      if (connectedEdges.has(idx)) {
-        el.setAttribute('stroke', '#2563eb');
-        el.setAttribute('stroke-opacity', '0.7');
-        el.setAttribute('stroke-width', '1.5');
-      } else {
-        el.setAttribute('stroke-opacity', '0.05');
-      }
+    navigator.clipboard.writeText(d.id).then(function() {
+      copyToast.textContent = 'Copied: ' + d.id;
+      copyToast.classList.add('show');
+      clearTimeout(copyTimeout);
+      copyTimeout = setTimeout(function() { copyToast.classList.remove('show'); }, 1500);
     });
-    node.select('circle').attr('opacity', function(n) {
-      if (n.id === d.id) return 1;
-      return neighbors.has(n.id) ? 0.9 : 0.08;
-    });
-  });
-
-  // Click background to unlock
-  svg.on('click', function() {
-    if (lockedNode) {
-      lockedNode = null;
-      resetHighlight();
-    }
   });
 
   // ── Controls ──
@@ -534,6 +553,44 @@
     showLabels = !showLabels;
     labels.style('display', showLabels ? 'block' : 'none');
     this.classList.toggle('active', showLabels);
+  });
+
+  // ── Hide stubs (entities/topics with only 1 edge) ──
+  var stubsHidden = false;
+  var stubNodeIds = new Set();
+  nodes.forEach(function(n) {
+    if (n.nodeType !== 'event') {
+      var deg = (neighborIds.get(n.id) || new Set()).size;
+      if (deg <= 1) stubNodeIds.add(n.id);
+    }
+  });
+  // Pre-compute which edges connect to stub nodes
+  var stubEdgeIndices = new Set();
+  edges.forEach(function(e, i) {
+    var sid = typeof e.source === 'object' ? e.source.id : e.source;
+    var tid = typeof e.target === 'object' ? e.target.id : e.target;
+    if (stubNodeIds.has(sid) || stubNodeIds.has(tid)) stubEdgeIndices.add(i);
+  });
+
+  document.getElementById('btn-stubs').addEventListener('click', function() {
+    stubsHidden = !stubsHidden;
+    this.classList.toggle('active', stubsHidden);
+    this.textContent = stubsHidden ? 'Show Stubs' : 'Hide Stubs';
+    node.style('display', function(d) {
+      if (stubsHidden && stubNodeIds.has(d.id)) return 'none';
+      return null;
+    });
+    labels.style('display', function(d) {
+      if (stubsHidden && stubNodeIds.has(d.id)) return 'none';
+      return showLabels ? 'block' : 'none';
+    });
+    edgeElements.forEach(function(el, idx) {
+      if (stubsHidden && stubEdgeIndices.has(idx)) {
+        el.style.display = 'none';
+      } else {
+        el.style.display = '';
+      }
+    });
   });
 
   // ── Search ──
