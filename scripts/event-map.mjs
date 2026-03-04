@@ -319,16 +319,16 @@ function printTerminal(events, analysis) {
   console.log(`\n${"═".repeat(60)}\n`);
 }
 
-// ── HTML Output (Interactive D3 Force Graph) ─────────────────────────
+// ── HTML Output (Interactive D3 Tripartite Force Graph) ───────────────
 
 function writeHtml(events, analysis) {
-  const { barMentions, orphans, brokenRefs } = analysis;
+  const { entityCounts, topicCounts, barMentions, brokenRefs } = analysis;
 
-  // Determine cluster for each event
-  const clusterOf = (e) => (e.entities[0] || "untagged").split("-")[0];
-
-  // Assign stable cluster positions for force layout grouping
-  const clusterSet = [...new Set(events.map(clusterOf))];
+  // Normalize type (strip parenthetical suffixes like "crisis (chain starter)")
+  const normalizeType = (t) => {
+    const base = t.split("(")[0].trim();
+    return ["crisis", "report", "consequence", "preparation"].includes(base) ? base : "crisis";
+  };
 
   // Count bars affected per event
   const barsAffected = (e) => {
@@ -339,19 +339,31 @@ function writeHtml(events, analysis) {
     return count;
   };
 
-  // Normalize type (strip parenthetical suffixes like "crisis (chain starter)")
-  const normalizeType = (t) => {
-    const base = t.split("(")[0].trim();
-    return ["crisis", "report", "consequence", "preparation"].includes(base) ? base : "crisis";
-  };
+  // ── Build tripartite graph: entity nodes, event nodes, topic nodes ──
 
-  // Build nodes
-  const allIds = new Set(events.map((e) => e.id));
-  const nodes = events.map((e) => ({
-    id: e.id,
-    type: normalizeType(e.type),
+  // 1. Entity nodes (unique entities across all events)
+  const entityNodes = Object.entries(entityCounts).map(([name, count]) => ({
+    id: "entity:" + name,
+    label: name,
+    nodeType: "entity",
+    degree: count,
+  }));
+
+  // 2. Topic nodes (unique topics across all events)
+  const topicNodes = Object.entries(topicCounts).map(([name, count]) => ({
+    id: "topic:" + name,
+    label: name,
+    nodeType: "topic",
+    degree: count,
+  }));
+
+  // 3. Event nodes
+  const eventNodes = events.map((e) => ({
+    id: "event:" + e.id,
+    label: e.id.replace("#", ""),
+    nodeType: "event",
+    eventType: normalizeType(e.type),
     rawType: e.type,
-    cluster: clusterOf(e),
     entities: e.entities,
     topics: e.topics,
     situation: e.situation,
@@ -359,15 +371,20 @@ function writeHtml(events, analysis) {
     barCount: barsAffected(e),
     refs: e.refs,
     file: e.file,
-    isOrphan: orphans.some((o) => o.id === e.id),
+    degree: e.entities.length + e.topics.length + e.refs.length,
   }));
 
-  // Build edges (only for refs that point to existing events)
+  const allNodes = [...entityNodes, ...eventNodes, ...topicNodes];
+
+  // 4. Edges: entity->event, event->topic
   const edges = [];
   for (const e of events) {
-    for (const ref of e.refs) {
-      const isBroken = !allIds.has(ref);
-      edges.push({ source: e.id, target: ref, broken: isBroken });
+    const eventId = "event:" + e.id;
+    for (const ent of e.entities) {
+      edges.push({ source: "entity:" + ent, target: eventId, edgeType: "entity-event" });
+    }
+    for (const t of e.topics) {
+      edges.push({ source: eventId, target: "topic:" + t, edgeType: "event-topic" });
     }
   }
 
@@ -377,40 +394,20 @@ function writeHtml(events, analysis) {
     .sort((a, b) => b[1] - a[1])
     .map(([b, c]) => ({ key: b, name: barNames[b], count: c, pct: Math.round((c / events.length) * 100) }));
 
-  // Cluster color palette
-  const clusterColors = {
-    isia: "#4a9eff",
-    gov: "#ff6b6b",
-    public: "#ffd93d",
-    rogue: "#ff4757",
-    researcher: "#2ed573",
-    natl: "#ff7f50",
-    chip: "#a29bfe",
-    journalist: "#fd79a8",
-    military: "#636e72",
-    treaty: "#00cec9",
-    civil: "#e17055",
-    ai: "#6c5ce7",
-    smuggler: "#d63031",
-    corp: "#e84393",
-    who: "#00b894",
-    untagged: "#888888",
-  };
-
-  const graphData = JSON.stringify({ nodes, edges, clusterSet, clusterColors, barData, brokenRefs });
+  const graphData = JSON.stringify({ nodes: allNodes, edges, barData });
 
   const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Event Map -- ${events.length} events</title>
+<title>Event Map -- ${events.length} events (tripartite)</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Space Mono', 'SF Mono', 'Fira Code', monospace;
-    background: #1a1a2e;
-    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
     overflow: hidden;
     width: 100vw;
     height: 100vh;
@@ -420,7 +417,24 @@ function writeHtml(events, analysis) {
     height: 100%;
     position: relative;
   }
-  svg { display: block; }
+  svg { display: block; background: #ffffff; }
+
+  /* Panels share a common look */
+  .panel {
+    position: absolute;
+    z-index: 10;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .panel h3 {
+    color: #212529;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
 
   /* Top-left header */
   #header {
@@ -431,81 +445,59 @@ function writeHtml(events, analysis) {
     pointer-events: none;
   }
   #header h1 {
-    color: #f0c040;
+    color: #212529;
     font-size: 18px;
+    font-weight: 700;
     margin-bottom: 4px;
   }
   #header p {
-    color: #888;
+    color: #6c757d;
     font-size: 12px;
   }
 
-  /* Bar imbalance panel */
-  #bar-panel {
-    position: absolute;
+  /* Stats panel (top-right) */
+  #stats-panel {
     top: 16px;
     right: 16px;
-    z-index: 10;
-    background: rgba(22, 33, 62, 0.92);
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 12px 16px;
-    min-width: 220px;
+    min-width: 240px;
   }
-  #bar-panel h3 {
-    color: #f0c040;
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
-  .bar-row {
+  .stat-row {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 4px;
     font-size: 12px;
   }
-  .bar-label { width: 110px; color: #ccc; }
+  .stat-label { width: 120px; color: #495057; }
+  .stat-value { font-weight: 600; color: #212529; }
   .bar-track {
     flex: 1;
-    height: 14px;
-    background: #0f0f23;
+    height: 12px;
+    background: #e9ecef;
     border-radius: 3px;
     overflow: hidden;
-    position: relative;
   }
   .bar-fill {
     height: 100%;
     border-radius: 3px;
-    transition: width 0.3s;
   }
-  .bar-pct { width: 36px; text-align: right; color: #aaa; }
+  .bar-pct { width: 36px; text-align: right; color: #6c757d; font-size: 11px; }
 
-  /* Legend */
+  /* Legend (bottom-left) */
   #legend {
-    position: absolute;
     bottom: 16px;
     left: 16px;
-    z-index: 10;
-    background: rgba(22, 33, 62, 0.92);
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 12px 16px;
-  }
-  #legend h3 {
-    color: #f0c040;
-    font-size: 13px;
-    margin-bottom: 8px;
   }
   .legend-section { margin-bottom: 8px; }
   .legend-section:last-child { margin-bottom: 0; }
-  .legend-title { color: #888; font-size: 10px; text-transform: uppercase; margin-bottom: 4px; }
-  .legend-items { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .legend-title { color: #6c757d; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .legend-items { display: flex; flex-wrap: wrap; gap: 6px 14px; }
   .legend-item {
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 11px;
-    color: #ccc;
+    color: #495057;
   }
   .legend-dot {
     width: 10px;
@@ -513,38 +505,13 @@ function writeHtml(events, analysis) {
     border-radius: 50%;
     flex-shrink: 0;
   }
-  .legend-rect {
-    width: 14px;
-    height: 10px;
-    border-radius: 2px;
-    flex-shrink: 0;
-    border: 1.5px solid;
-  }
-
-  /* Cluster labels */
-  #cluster-labels {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    z-index: 10;
-    background: rgba(22, 33, 62, 0.92);
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 12px 16px;
-    max-width: 240px;
-  }
-  #cluster-labels h3 {
-    color: #f0c040;
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
 
   /* Tooltip */
   #tooltip {
     position: absolute;
     z-index: 100;
-    background: rgba(16, 16, 36, 0.96);
-    border: 1px solid #555;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
     border-radius: 8px;
     padding: 12px 16px;
     max-width: 380px;
@@ -552,19 +519,18 @@ function writeHtml(events, analysis) {
     line-height: 1.5;
     pointer-events: none;
     display: none;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    color: #212529;
   }
-  #tooltip .tt-id { color: #f0c040; font-weight: bold; font-size: 14px; }
-  #tooltip .tt-type { display: inline-block; padding: 1px 6px; border-radius: 3px; color: white; font-size: 10px; font-weight: bold; margin-left: 6px; }
-  #tooltip .tt-situation { color: #bbb; margin: 6px 0; }
+  #tooltip .tt-id { color: #212529; font-weight: 700; font-size: 14px; }
+  #tooltip .tt-type-badge { display: inline-block; padding: 1px 6px; border-radius: 3px; color: white; font-size: 10px; font-weight: 600; margin-left: 6px; }
+  #tooltip .tt-desc { color: #495057; margin: 6px 0; }
   #tooltip .tt-section { margin-top: 6px; }
-  #tooltip .tt-label { color: #888; font-size: 10px; text-transform: uppercase; }
+  #tooltip .tt-label { color: #6c757d; font-size: 10px; text-transform: uppercase; }
   #tooltip .tt-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
-  #tooltip .tt-tag-entity { background: #1a3d5c; padding: 1px 5px; border-radius: 2px; font-size: 10px; }
-  #tooltip .tt-tag-topic { background: #3d1a5c; padding: 1px 5px; border-radius: 2px; font-size: 10px; }
-  #tooltip .tt-bars { color: #7fdbca; margin-top: 4px; }
-  #tooltip .tt-refs { color: #f0c040; margin-top: 4px; }
-  #tooltip .tt-broken { color: #e74c3c; }
+  #tooltip .tt-tag-entity { background: #dbeafe; color: #1e40af; padding: 1px 5px; border-radius: 2px; font-size: 10px; }
+  #tooltip .tt-tag-topic { background: #dcfce7; color: #166534; padding: 1px 5px; border-radius: 2px; font-size: 10px; }
+  #tooltip .tt-bars { color: #0d9488; margin-top: 4px; }
 
   /* Controls */
   #controls {
@@ -577,17 +543,17 @@ function writeHtml(events, analysis) {
     gap: 4px;
   }
   #controls button {
-    background: rgba(22, 33, 62, 0.92);
-    border: 1px solid #444;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
     border-radius: 4px;
-    color: #ccc;
+    color: #495057;
     padding: 4px 10px;
     font-size: 11px;
     font-family: inherit;
     cursor: pointer;
   }
-  #controls button:hover { background: #2a2a4e; border-color: #666; }
-  #controls button.active { border-color: #f0c040; color: #f0c040; }
+  #controls button:hover { background: #f1f3f5; border-color: #adb5bd; }
+  #controls button.active { border-color: #3b82f6; color: #3b82f6; font-weight: 600; }
 
   /* Search */
   #search-box {
@@ -597,58 +563,71 @@ function writeHtml(events, analysis) {
     z-index: 10;
   }
   #search-input {
-    background: rgba(22, 33, 62, 0.92);
-    border: 1px solid #444;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
     border-radius: 4px;
-    color: #e0e0e0;
+    color: #212529;
     padding: 5px 10px;
     font-size: 12px;
     font-family: inherit;
     width: 200px;
     outline: none;
   }
-  #search-input:focus { border-color: #f0c040; }
-  #search-input::placeholder { color: #666; }
+  #search-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 2px rgba(59,130,246,0.15); }
+  #search-input::placeholder { color: #adb5bd; }
 </style>
 </head>
 <body>
 <div id="graph-container">
   <div id="header">
-    <h1>Event Map -- ${events.length} events</h1>
-    <p>${new Set(events.map((e) => e.file)).size} source files | ${edges.length} references | ${brokenRefs.length} broken</p>
+    <h1>Event Map -- Tripartite Graph</h1>
+    <p>${events.length} events | ${Object.keys(entityCounts).length} entities | ${Object.keys(topicCounts).length} topics</p>
   </div>
 
-  <div id="bar-panel">
-    <h3>Bar Imbalance</h3>
+  <div id="stats-panel" class="panel">
+    <h3>Summary</h3>
+    <div class="stat-row">
+      <span class="stat-label">Entity nodes</span>
+      <span class="stat-value">${entityNodes.length}</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Event nodes</span>
+      <span class="stat-value">${eventNodes.length}</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Topic nodes</span>
+      <span class="stat-value">${topicNodes.length}</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Total edges</span>
+      <span class="stat-value">${edges.length}</span>
+    </div>
+    <div style="margin-top:8px">
+      <div class="legend-title">Bar Coverage</div>
+    </div>
   </div>
 
   <div id="controls">
     <button id="btn-reset">Reset Zoom</button>
     <button id="btn-labels" class="active">Labels</button>
-    <button id="btn-broken">Broken Refs</button>
   </div>
 
   <div id="search-box">
-    <input id="search-input" type="text" placeholder="Search events..." />
+    <input id="search-input" type="text" placeholder="Search nodes..." />
   </div>
 
-  <div id="legend">
+  <div id="legend" class="panel">
     <h3>Legend</h3>
     <div class="legend-section">
-      <div class="legend-title">Event Type (node color)</div>
+      <div class="legend-title">Node Type</div>
       <div class="legend-items">
-        <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div>Crisis</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#3498db"></div>Report</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div>Consequence</div>
-        <div class="legend-item"><div class="legend-dot" style="background:#2ecc71"></div>Preparation</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>Entity</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div>Event</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div>Topic</div>
       </div>
     </div>
     <div class="legend-section">
-      <div class="legend-title">Node size = bars affected (1-4)</div>
-    </div>
-    <div class="legend-section">
-      <div class="legend-title">Cluster (outline color)</div>
-      <div class="legend-items" id="cluster-legend-items"></div>
+      <div class="legend-title">Entity/topic size = connection count</div>
     </div>
   </div>
 
@@ -661,191 +640,109 @@ function writeHtml(events, analysis) {
 <script>
 (function() {
   const DATA = ${graphData};
-  const { nodes, edges, clusterSet, clusterColors, barData, brokenRefs } = DATA;
+  const { nodes, edges, barData } = DATA;
 
-  // -- Bar panel --
-  const barPanel = document.getElementById('bar-panel');
-  const barColorMap = { pol: '#e74c3c', int: '#3498db', saf: '#2ecc71', alg: '#e67e22' };
-  barData.forEach(b => {
-    const row = document.createElement('div');
-    row.className = 'bar-row';
+  // ── Bar coverage in stats panel ──
+  const statsPanel = document.getElementById('stats-panel');
+  const barColorMap = { pol: '#ef4444', int: '#3b82f6', saf: '#22c55e', alg: '#f97316' };
+  barData.forEach(function(b) {
+    var row = document.createElement('div');
+    row.className = 'stat-row';
     row.innerHTML =
-      '<span class="bar-label">' + b.name + '</span>' +
+      '<span class="stat-label">' + b.name + '</span>' +
       '<div class="bar-track"><div class="bar-fill" style="width:' + b.pct + '%;background:' + barColorMap[b.key] + '"></div></div>' +
       '<span class="bar-pct">' + b.pct + '%</span>';
-    barPanel.appendChild(row);
+    statsPanel.appendChild(row);
   });
 
-  // -- Cluster legend --
-  const clLegend = document.getElementById('cluster-legend-items');
-  clusterSet.forEach(c => {
-    const col = clusterColors[c] || '#888';
-    const item = document.createElement('div');
-    item.className = 'legend-item';
-    item.innerHTML = '<div class="legend-rect" style="border-color:' + col + ';background:transparent"></div>' + c;
-    clLegend.appendChild(item);
-  });
+  // ── Dimensions ──
+  var W = window.innerWidth;
+  var H = window.innerHeight;
 
-  // -- Dimensions --
-  const W = window.innerWidth;
-  const H = window.innerHeight;
-
-  const svg = d3.select('#graph-svg')
+  var svg = d3.select('#graph-svg')
     .attr('width', W)
     .attr('height', H);
 
-  // Arrow marker for directed edges
-  const defs = svg.append('defs');
-  defs.append('marker')
-    .attr('id', 'arrow')
-    .attr('viewBox', '0 0 10 6')
-    .attr('refX', 10)
-    .attr('refY', 3)
-    .attr('markerWidth', 8)
-    .attr('markerHeight', 6)
-    .attr('orient', 'auto')
-    .append('path')
-    .attr('d', 'M0,0 L10,3 L0,6')
-    .attr('fill', '#555');
+  // ── Pre-compute adjacency maps for O(1) hover lookups ──
+  // neighborIds: nodeId -> Set of connected node IDs
+  // nodeEdgeIndices: nodeId -> Set of edge indices in the edges array
+  var neighborIds = new Map();
+  var nodeEdgeIndices = new Map();
 
-  defs.append('marker')
-    .attr('id', 'arrow-broken')
-    .attr('viewBox', '0 0 10 6')
-    .attr('refX', 10)
-    .attr('refY', 3)
-    .attr('markerWidth', 8)
-    .attr('markerHeight', 6)
-    .attr('orient', 'auto')
-    .append('path')
-    .attr('d', 'M0,0 L10,3 L0,6')
-    .attr('fill', '#e74c3c');
+  // Initialize sets for all nodes
+  nodes.forEach(function(n) {
+    neighborIds.set(n.id, new Set());
+    nodeEdgeIndices.set(n.id, new Set());
+  });
 
-  defs.append('marker')
-    .attr('id', 'arrow-highlight')
-    .attr('viewBox', '0 0 10 6')
-    .attr('refX', 10)
-    .attr('refY', 3)
-    .attr('markerWidth', 8)
-    .attr('markerHeight', 6)
-    .attr('orient', 'auto')
-    .append('path')
-    .attr('d', 'M0,0 L10,3 L0,6')
-    .attr('fill', '#f0c040');
+  edges.forEach(function(e, i) {
+    var sid = e.source;
+    var tid = e.target;
+    if (neighborIds.has(sid)) {
+      neighborIds.get(sid).add(tid);
+      nodeEdgeIndices.get(sid).add(i);
+    }
+    if (neighborIds.has(tid)) {
+      neighborIds.get(tid).add(sid);
+      nodeEdgeIndices.get(tid).add(i);
+    }
+  });
 
-  // Container for zoom/pan
-  const g = svg.append('g');
-
-  const zoom = d3.zoom()
-    .scaleExtent([0.1, 6])
-    .on('zoom', (event) => g.attr('transform', event.transform));
-  svg.call(zoom);
-
-  // Type color
-  const typeColor = (t) => {
-    switch(t) {
-      case 'crisis': return '#e74c3c';
-      case 'report': return '#3498db';
-      case 'consequence': return '#e67e22';
-      case 'preparation': return '#2ecc71';
-      default: return '#e74c3c';
+  // ── Node color by type ──
+  var nodeColor = function(d) {
+    switch (d.nodeType) {
+      case 'entity': return '#3b82f6';
+      case 'event': return '#f97316';
+      case 'topic': return '#22c55e';
+      default: return '#6c757d';
     }
   };
 
-  // Node radius based on bar count (min 6, max 18)
-  const nodeRadius = (d) => 6 + (d.barCount || 0) * 3;
+  // ── Node radius ──
+  // Entities/topics: sized by degree (connection count), min 4 max 16
+  // Events: uniform size 6
+  var nodeRadius = function(d) {
+    if (d.nodeType === 'event') return 6;
+    var deg = d.degree || 1;
+    return Math.max(4, Math.min(16, 3 + Math.sqrt(deg) * 2.5));
+  };
 
-  // Cluster center positions (arranged in a circle)
-  const clusterAngle = {};
-  clusterSet.forEach((c, i) => {
-    const angle = (2 * Math.PI * i) / clusterSet.length - Math.PI / 2;
-    clusterAngle[c] = angle;
-  });
-  const clusterRadius = Math.min(W, H) * 0.28;
+  // ── Pre-compute layout synchronously — no timer, no requestAnimationFrame ──
+  var simulation = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(edges).id(function(d) { return d.id; }).distance(80))
+    .force('charge', d3.forceManyBody().strength(-120))
+    .force('center', d3.forceCenter(W / 2, H / 2))
+    .stop();
+  for (var i = 0; i < 300; i++) simulation.tick();
 
-  // Create a node map for edge lookups (including broken ref ghost nodes)
-  const nodeMap = new Map(nodes.map(n => [n.id, n]));
+  // Container for zoom/pan
+  var g = svg.append('g');
 
-  // Add ghost nodes for broken ref targets so edges can be drawn
-  const ghostNodes = [];
-  for (const br of brokenRefs) {
-    if (!nodeMap.has(br.to)) {
-      const ghost = {
-        id: br.to,
-        type: 'ghost',
-        rawType: 'ghost',
-        cluster: 'untagged',
-        entities: [],
-        topics: [],
-        situation: '(missing event)',
-        bars: '',
-        barCount: 0,
-        refs: [],
-        file: '',
-        isOrphan: false,
-        isGhost: true,
-      };
-      ghostNodes.push(ghost);
-      nodeMap.set(br.to, ghost);
-    }
-  }
-  const allNodes = [...nodes, ...ghostNodes];
+  var zoomBehavior = d3.zoom()
+    .scaleExtent([0.1, 6])
+    .on('zoom', function(event) { g.attr('transform', event.transform); });
+  svg.call(zoomBehavior);
 
-  // Force simulation
-  const simulation = d3.forceSimulation(allNodes)
-    .force('link', d3.forceLink(edges).id(d => d.id).distance(80).strength(0.3))
-    .force('charge', d3.forceManyBody().strength(-200).distanceMax(400))
-    .force('center', d3.forceCenter(W / 2, H / 2).strength(0.05))
-    .force('cluster', (alpha) => {
-      allNodes.forEach(d => {
-        const angle = clusterAngle[d.cluster] || 0;
-        const cx = W / 2 + Math.cos(angle) * clusterRadius;
-        const cy = H / 2 + Math.sin(angle) * clusterRadius;
-        d.vx += (cx - d.x) * alpha * 0.08;
-        d.vy += (cy - d.y) * alpha * 0.08;
-      });
-    })
-    .force('collision', d3.forceCollide().radius(d => nodeRadius(d) + 3));
-
-  // Draw edges
-  const linkG = g.append('g').attr('class', 'links');
-  const link = linkG.selectAll('line')
+  // ── Draw edges (positions from pre-computed layout) ──
+  var linkG = g.append('g').attr('class', 'links');
+  var link = linkG.selectAll('line')
     .data(edges)
     .join('line')
-    .attr('stroke', d => d.broken ? '#e74c3c' : '#444')
-    .attr('stroke-width', d => d.broken ? 1 : 1.2)
-    .attr('stroke-dasharray', d => d.broken ? '4,3' : 'none')
-    .attr('stroke-opacity', d => d.broken ? 0.4 : 0.5)
-    .attr('marker-end', d => d.broken ? 'url(#arrow-broken)' : 'url(#arrow)');
+    .attr('stroke', '#cbd5e1')
+    .attr('stroke-width', 0.6)
+    .attr('stroke-opacity', 0.3)
+    .attr('x1', function(d) { return d.source.x; })
+    .attr('y1', function(d) { return d.source.y; })
+    .attr('x2', function(d) { return d.target.x; })
+    .attr('y2', function(d) { return d.target.y; });
 
-  // Initially hide broken refs
-  let showBroken = false;
-  link.filter(d => d.broken).style('display', 'none');
-
-  // Draw cluster background labels
-  const clusterLabelG = g.append('g').attr('class', 'cluster-labels');
-  clusterSet.forEach(c => {
-    const angle = clusterAngle[c] || 0;
-    const cx = W / 2 + Math.cos(angle) * clusterRadius * 1.35;
-    const cy = H / 2 + Math.sin(angle) * clusterRadius * 1.35;
-    clusterLabelG.append('text')
-      .attr('x', cx)
-      .attr('y', cy)
-      .attr('text-anchor', 'middle')
-      .attr('dominant-baseline', 'central')
-      .attr('fill', clusterColors[c] || '#888')
-      .attr('font-size', '14px')
-      .attr('font-weight', 'bold')
-      .attr('font-family', 'inherit')
-      .attr('opacity', 0.4)
-      .text(c.toUpperCase());
-  });
-
-  // Draw nodes
-  const nodeG = g.append('g').attr('class', 'nodes');
-  const node = nodeG.selectAll('g')
-    .data(allNodes)
+  // ── Draw nodes (positions from pre-computed layout) ──
+  var nodeG = g.append('g').attr('class', 'nodes');
+  var node = nodeG.selectAll('g')
+    .data(nodes)
     .join('g')
     .attr('class', 'node')
+    .attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; })
     .call(d3.drag()
       .on('start', dragStarted)
       .on('drag', dragged)
@@ -853,143 +750,192 @@ function writeHtml(events, analysis) {
 
   // Circle for each node
   node.append('circle')
-    .attr('r', d => nodeRadius(d))
-    .attr('fill', d => d.isGhost ? '#333' : typeColor(d.type))
-    .attr('stroke', d => clusterColors[d.cluster] || '#888')
-    .attr('stroke-width', d => d.isGhost ? 1 : 2)
-    .attr('stroke-dasharray', d => d.isGhost ? '2,2' : 'none')
-    .attr('opacity', d => d.isGhost ? 0.3 : 0.85);
+    .attr('r', function(d) { return nodeRadius(d); })
+    .attr('fill', function(d) { return nodeColor(d); })
+    .attr('stroke', function(d) {
+      switch (d.nodeType) {
+        case 'entity': return '#1e40af';
+        case 'event': return '#c2410c';
+        case 'topic': return '#15803d';
+        default: return '#4b5563';
+      }
+    })
+    .attr('stroke-width', 1.2)
+    .attr('opacity', 0.9);
 
-  // Labels
-  let showLabels = true;
-  const labels = node.append('text')
-    .text(d => d.id.replace('#', '').replace(/--/g, '/'))
-    .attr('x', d => nodeRadius(d) + 4)
+  // Labels — only show for entities and topics by default (events are too dense)
+  var showLabels = true;
+  var labels = node.append('text')
+    .text(function(d) { return d.label.replace(/#/g, '').replace(/--/g, ' '); })
+    .attr('x', function(d) { return nodeRadius(d) + 4; })
     .attr('y', 3)
-    .attr('fill', '#aaa')
-    .attr('font-size', '9px')
+    .attr('fill', function(d) { return d.nodeType === 'event' ? '#9ca3af' : '#374151'; })
+    .attr('font-size', function(d) { return d.nodeType === 'event' ? '7px' : '9px'; })
+    .attr('font-weight', function(d) { return d.nodeType === 'event' ? 'normal' : '500'; })
     .attr('font-family', 'inherit')
     .style('pointer-events', 'none');
 
-  // Tooltip
-  const tooltip = document.getElementById('tooltip');
+  // ── Tooltip ──
+  var tooltip = document.getElementById('tooltip');
 
-  node.on('mouseenter', (event, d) => {
-    if (d.isGhost) {
+  // ── Highlight helpers ──
+  var highlightedNode = null;
+  var edgeElements = link.nodes();
+  var isDragging = false;
+
+  function resetHighlight() {
+    edgeElements.forEach(function(el) {
+      el.setAttribute('stroke', '#cbd5e1');
+      el.setAttribute('stroke-opacity', '0.3');
+      el.setAttribute('stroke-width', '0.6');
+    });
+    node.select('circle').attr('opacity', 0.9);
+  }
+
+  node.on('mouseenter', function(event, d) {
+    if (isDragging) return;
+    highlightedNode = d.id;
+
+    // Build tooltip content based on node type
+    if (d.nodeType === 'entity') {
       tooltip.innerHTML =
-        '<span class="tt-id">' + d.id + '</span>' +
-        '<span class="tt-type tt-broken" style="background:#e74c3c">MISSING</span>' +
-        '<div class="tt-situation" style="color:#e74c3c">This event is referenced but not defined in any file.</div>';
+        '<span class="tt-id">' + d.label + '</span>' +
+        '<span class="tt-type-badge" style="background:#3b82f6">ENTITY</span>' +
+        '<div class="tt-desc">Appears in ' + d.degree + ' event(s)</div>';
+    } else if (d.nodeType === 'topic') {
+      tooltip.innerHTML =
+        '<span class="tt-id">' + d.label + '</span>' +
+        '<span class="tt-type-badge" style="background:#22c55e">TOPIC</span>' +
+        '<div class="tt-desc">Appears in ' + d.degree + ' event(s)</div>';
     } else {
-      const entityTags = d.entities.map(e => '<span class="tt-tag-entity">' + e + '</span>').join('');
-      const topicTags = d.topics.map(t => '<span class="tt-tag-topic">' + t + '</span>').join('');
-      const refsList = d.refs.length > 0
-        ? '<div class="tt-refs">Refs: ' + d.refs.join(', ') + '</div>'
-        : '';
+      var entityTags = (d.entities || []).map(function(e) { return '<span class="tt-tag-entity">' + e + '</span>'; }).join('');
+      var topicTags = (d.topics || []).map(function(t) { return '<span class="tt-tag-topic">' + t + '</span>'; }).join('');
       tooltip.innerHTML =
-        '<span class="tt-id">' + d.id + '</span>' +
-        '<span class="tt-type" style="background:' + typeColor(d.type) + '">' + d.rawType + '</span>' +
-        '<div class="tt-situation">' + d.situation.slice(0, 300) + (d.situation.length > 300 ? '...' : '') + '</div>' +
-        '<div class="tt-section"><span class="tt-label">Entities</span><div class="tt-tags">' + entityTags + '</div></div>' +
-        '<div class="tt-section"><span class="tt-label">Topics</span><div class="tt-tags">' + topicTags + '</div></div>' +
+        '<span class="tt-id">' + d.label + '</span>' +
+        '<span class="tt-type-badge" style="background:#f97316">' + (d.rawType || 'event') + '</span>' +
+        '<div class="tt-desc">' + (d.situation || '').slice(0, 300) + ((d.situation || '').length > 300 ? '...' : '') + '</div>' +
+        (entityTags ? '<div class="tt-section"><span class="tt-label">Entities</span><div class="tt-tags">' + entityTags + '</div></div>' : '') +
+        (topicTags ? '<div class="tt-section"><span class="tt-label">Topics</span><div class="tt-tags">' + topicTags + '</div></div>' : '') +
         (d.bars ? '<div class="tt-bars">Bars: ' + d.bars + '</div>' : '') +
-        refsList +
-        '<div style="color:#666;font-size:10px;margin-top:4px">' + d.file + '</div>';
+        (d.file ? '<div style="color:#6c757d;font-size:10px;margin-top:4px">' + d.file + '</div>' : '');
     }
     tooltip.style.display = 'block';
 
-    // Highlight connected edges
-    link.attr('stroke', l => {
-      const sid = typeof l.source === 'object' ? l.source.id : l.source;
-      const tid = typeof l.target === 'object' ? l.target.id : l.target;
-      if (sid === d.id || tid === d.id) return '#f0c040';
-      return l.broken ? '#e74c3c' : '#444';
-    }).attr('stroke-opacity', l => {
-      const sid = typeof l.source === 'object' ? l.source.id : l.source;
-      const tid = typeof l.target === 'object' ? l.target.id : l.target;
-      if (sid === d.id || tid === d.id) return 1;
-      return l.broken ? 0.4 : 0.5;
-    }).attr('stroke-width', l => {
-      const sid = typeof l.source === 'object' ? l.source.id : l.source;
-      const tid = typeof l.target === 'object' ? l.target.id : l.target;
-      if (sid === d.id || tid === d.id) return 2.5;
-      return l.broken ? 1 : 1.2;
-    }).attr('marker-end', l => {
-      const sid = typeof l.source === 'object' ? l.source.id : l.source;
-      const tid = typeof l.target === 'object' ? l.target.id : l.target;
-      if (sid === d.id || tid === d.id) return 'url(#arrow-highlight)';
-      return l.broken ? 'url(#arrow-broken)' : 'url(#arrow)';
+    // O(1) adjacency lookup: get connected edge indices and neighbor IDs
+    var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
+    var neighbors = neighborIds.get(d.id) || new Set();
+
+    // Highlight connected edges, dim others
+    edgeElements.forEach(function(el, idx) {
+      if (connectedEdges.has(idx)) {
+        el.setAttribute('stroke', '#2563eb');
+        el.setAttribute('stroke-opacity', '0.7');
+        el.setAttribute('stroke-width', '1.5');
+      } else {
+        el.setAttribute('stroke-opacity', '0.05');
+      }
     });
 
     // Dim non-connected nodes
-    node.select('circle').attr('opacity', n => {
+    node.select('circle').attr('opacity', function(n) {
       if (n.id === d.id) return 1;
-      const connected = edges.some(l => {
-        const sid = typeof l.source === 'object' ? l.source.id : l.source;
-        const tid = typeof l.target === 'object' ? l.target.id : l.target;
-        return (sid === d.id && tid === n.id) || (tid === d.id && sid === n.id);
-      });
-      return connected ? 0.9 : (n.isGhost ? 0.1 : 0.2);
+      return neighbors.has(n.id) ? 0.9 : 0.08;
     });
   })
-  .on('mousemove', (event) => {
-    let tx = event.pageX + 14;
-    let ty = event.pageY + 14;
+  .on('mousemove', function(event) {
+    var tx = event.pageX + 14;
+    var ty = event.pageY + 14;
     if (tx + 380 > W) tx = event.pageX - 394;
     if (ty + 200 > H) ty = event.pageY - 200;
     tooltip.style.left = tx + 'px';
     tooltip.style.top = ty + 'px';
   })
-  .on('mouseleave', () => {
+  .on('mouseleave', function() {
+    if (isDragging) return;
+    highlightedNode = null;
     tooltip.style.display = 'none';
-    // Reset highlights
-    link.attr('stroke', d => d.broken ? '#e74c3c' : '#444')
-      .attr('stroke-opacity', d => d.broken ? 0.4 : 0.5)
-      .attr('stroke-width', d => d.broken ? 1 : 1.2)
-      .attr('marker-end', d => d.broken ? 'url(#arrow-broken)' : 'url(#arrow)');
-    node.select('circle').attr('opacity', d => d.isGhost ? 0.3 : 0.85);
+    resetHighlight();
   });
 
-  // Tick
-  simulation.on('tick', () => {
-    link
-      .attr('x1', d => d.source.x)
-      .attr('y1', d => d.source.y)
-      .attr('x2', d => {
-        const dx = d.target.x - d.source.x;
-        const dy = d.target.y - d.source.y;
-        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-        return d.target.x - (dx / dist) * nodeRadius(d.target);
-      })
-      .attr('y2', d => {
-        const dx = d.target.x - d.source.x;
-        const dy = d.target.y - d.source.y;
-        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-        return d.target.y - (dy / dist) * nodeRadius(d.target);
-      });
+  // ── Click to lock highlight ──
+  var lockedNode = null;
+  node.on('click', function(event, d) {
+    event.stopPropagation();
+    if (lockedNode === d.id) {
+      // Unlock
+      lockedNode = null;
+      resetHighlight();
+      return;
+    }
+    lockedNode = d.id;
+    var connectedEdges = nodeEdgeIndices.get(d.id) || new Set();
+    var neighbors = neighborIds.get(d.id) || new Set();
 
-    node.attr('transform', d => 'translate(' + d.x + ',' + d.y + ')');
+    edgeElements.forEach(function(el, idx) {
+      if (connectedEdges.has(idx)) {
+        el.setAttribute('stroke', '#2563eb');
+        el.setAttribute('stroke-opacity', '0.7');
+        el.setAttribute('stroke-width', '1.5');
+      } else {
+        el.setAttribute('stroke-opacity', '0.05');
+      }
+    });
+    node.select('circle').attr('opacity', function(n) {
+      if (n.id === d.id) return 1;
+      return neighbors.has(n.id) ? 0.9 : 0.08;
+    });
   });
 
-  // Drag handlers
+  // Click background to unlock
+  svg.on('click', function() {
+    if (lockedNode) {
+      lockedNode = null;
+      resetHighlight();
+    }
+  });
+
+  // ── No tick handler — layout is pre-computed, no simulation timer runs ──
+
+  // ── Drag: manually reposition node + connected edges (no simulation restart) ──
+  // Pre-compute which edge indices connect to each node for O(1) drag updates
+  var nodeEdgeMap = new Map();
+  nodes.forEach(function(n) { nodeEdgeMap.set(n.id, []); });
+  var linkElements = link.nodes();
+  edges.forEach(function(e, i) {
+    var sid = typeof e.source === 'object' ? e.source.id : e.source;
+    var tid = typeof e.target === 'object' ? e.target.id : e.target;
+    if (nodeEdgeMap.has(sid)) nodeEdgeMap.get(sid).push({ idx: i, role: 'source' });
+    if (nodeEdgeMap.has(tid)) nodeEdgeMap.get(tid).push({ idx: i, role: 'target' });
+  });
+
   function dragStarted(event, d) {
-    if (!event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
+    isDragging = true;
   }
   function dragged(event, d) {
-    d.fx = event.x;
-    d.fy = event.y;
+    d.x = event.x;
+    d.y = event.y;
+    // Move this node's group
+    d3.select(this).attr('transform', 'translate(' + event.x + ',' + event.y + ')');
+    // Update connected edges via pre-computed map
+    var connected = nodeEdgeMap.get(d.id) || [];
+    for (var i = 0; i < connected.length; i++) {
+      var el = linkElements[connected[i].idx];
+      if (connected[i].role === 'source') {
+        el.setAttribute('x1', event.x);
+        el.setAttribute('y1', event.y);
+      } else {
+        el.setAttribute('x2', event.x);
+        el.setAttribute('y2', event.y);
+      }
+    }
   }
   function dragEnded(event, d) {
-    if (!event.active) simulation.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
+    isDragging = false;
   }
 
-  // Controls
-  document.getElementById('btn-reset').addEventListener('click', () => {
-    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  // ── Controls ──
+  document.getElementById('btn-reset').addEventListener('click', function() {
+    svg.transition().duration(500).call(zoomBehavior.transform, d3.zoomIdentity);
   });
 
   document.getElementById('btn-labels').addEventListener('click', function() {
@@ -998,45 +944,59 @@ function writeHtml(events, analysis) {
     this.classList.toggle('active', showLabels);
   });
 
-  document.getElementById('btn-broken').addEventListener('click', function() {
-    showBroken = !showBroken;
-    link.filter(d => d.broken).style('display', showBroken ? 'block' : 'none');
-    node.filter(d => d.isGhost).style('display', showBroken ? 'block' : 'none');
-    this.classList.toggle('active', showBroken);
-  });
-
-  // Search
-  const searchInput = document.getElementById('search-input');
-  searchInput.addEventListener('input', () => {
-    const q = searchInput.value.toLowerCase().trim();
+  // ── Search ──
+  var searchInput = document.getElementById('search-input');
+  searchInput.addEventListener('input', function() {
+    var q = searchInput.value.toLowerCase().trim();
     if (!q) {
-      node.select('circle').attr('opacity', d => d.isGhost ? 0.3 : 0.85);
-      labels.attr('fill', '#aaa');
+      node.select('circle').attr('opacity', 0.9);
+      labels.attr('fill', '#333');
+      edgeElements.forEach(function(el) {
+        el.setAttribute('stroke', '#cbd5e1');
+        el.setAttribute('stroke-opacity', '0.3');
+      });
       return;
     }
-    node.select('circle').attr('opacity', d => {
-      const match = d.id.toLowerCase().includes(q)
-        || d.entities.some(e => e.toLowerCase().includes(q))
-        || d.topics.some(t => t.toLowerCase().includes(q))
-        || d.situation.toLowerCase().includes(q)
-        || d.cluster.toLowerCase().includes(q);
-      return match ? 1 : 0.08;
+    node.select('circle').attr('opacity', function(d) {
+      var match = d.label.toLowerCase().includes(q)
+        || d.id.toLowerCase().includes(q)
+        || (d.entities && d.entities.some(function(e) { return e.toLowerCase().includes(q); }))
+        || (d.topics && d.topics.some(function(t) { return t.toLowerCase().includes(q); }))
+        || (d.situation && d.situation.toLowerCase().includes(q));
+      return match ? 1 : 0.05;
     });
     labels.attr('fill', function(d) {
-      const match = d.id.toLowerCase().includes(q)
-        || d.entities.some(e => e.toLowerCase().includes(q))
-        || d.topics.some(t => t.toLowerCase().includes(q))
-        || d.situation.toLowerCase().includes(q)
-        || d.cluster.toLowerCase().includes(q);
-      return match ? '#f0c040' : '#333';
+      var match = d.label.toLowerCase().includes(q)
+        || d.id.toLowerCase().includes(q)
+        || (d.entities && d.entities.some(function(e) { return e.toLowerCase().includes(q); }))
+        || (d.topics && d.topics.some(function(t) { return t.toLowerCase().includes(q); }))
+        || (d.situation && d.situation.toLowerCase().includes(q));
+      return match ? '#1d4ed8' : '#ccc';
+    });
+    // Also dim edges for non-matching nodes
+    var matchingIds = new Set();
+    nodes.forEach(function(d) {
+      var match = d.label.toLowerCase().includes(q)
+        || d.id.toLowerCase().includes(q)
+        || (d.entities && d.entities.some(function(e) { return e.toLowerCase().includes(q); }))
+        || (d.topics && d.topics.some(function(t) { return t.toLowerCase().includes(q); }))
+        || (d.situation && d.situation.toLowerCase().includes(q));
+      if (match) matchingIds.add(d.id);
+    });
+    edgeElements.forEach(function(el, idx) {
+      var e = edges[idx];
+      var sid = typeof e.source === 'object' ? e.source.id : e.source;
+      var tid = typeof e.target === 'object' ? e.target.id : e.target;
+      var connected = matchingIds.has(sid) || matchingIds.has(tid);
+      el.setAttribute('stroke-opacity', connected ? '0.5' : '0.05');
     });
   });
 
-  // Resize handler
-  window.addEventListener('resize', () => {
-    const nw = window.innerWidth;
-    const nh = window.innerHeight;
-    svg.attr('width', nw).attr('height', nh);
+  // ── Resize handler ──
+  window.addEventListener('resize', function() {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    svg.attr('width', W).attr('height', H);
   });
 })();
 </script>
