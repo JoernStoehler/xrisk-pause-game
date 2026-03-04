@@ -21,6 +21,39 @@ import { join } from "path";
 
 const DATA_DIR = join(import.meta.dirname, "..", "src", "data");
 
+// ── Label formatting ─────────────────────────────────────────────────
+
+/** Known acronyms that should stay uppercase in labels */
+const ACRONYMS = new Set([
+  "isia", "un", "ai", "nato", "who", "ctrl", "sec", "accel", "econ",
+]);
+
+/**
+ * Convert a kebab-case ID (with optional leading #) to a human-readable
+ * Title Case label. Known acronyms stay uppercase.
+ * Double-hyphens (--) represent category separators and become ": ".
+ *   "#chip-monitoring"             → "Chip Monitoring"
+ *   "isia-enforcement"             → "ISIA Enforcement"
+ *   "un-security-council"          → "UN Security Council"
+ *   "#mon--120day-audit"           → "Mon: 120day Audit"
+ *   "#isia--ai-refuses-order"      → "ISIA: AI Refuses Order"
+ */
+function kebabToTitleCase(id) {
+  const stripped = id.replace(/^#/, "");
+  // Split on "--" first (category separator), then title-case each segment
+  return stripped
+    .split("--")
+    .map((segment) =>
+      segment
+        .split("-")
+        .map((word) =>
+          ACRONYMS.has(word) ? word.toUpperCase() : word.charAt(0).toUpperCase() + word.slice(1)
+        )
+        .join(" ")
+    )
+    .join(": ");
+}
+
 // ── Parse ────────────────────────────────────────────────────────────
 
 function findEventFiles() {
@@ -344,7 +377,7 @@ function writeHtml(events, analysis) {
   // 1. Entity nodes (unique entities across all events)
   const entityNodes = Object.entries(entityCounts).map(([name, count]) => ({
     id: "entity:" + name,
-    label: name,
+    label: kebabToTitleCase(name),
     nodeType: "entity",
     degree: count,
   }));
@@ -352,7 +385,7 @@ function writeHtml(events, analysis) {
   // 2. Topic nodes (unique topics across all events)
   const topicNodes = Object.entries(topicCounts).map(([name, count]) => ({
     id: "topic:" + name,
-    label: name,
+    label: kebabToTitleCase(name),
     nodeType: "topic",
     degree: count,
   }));
@@ -360,7 +393,7 @@ function writeHtml(events, analysis) {
   // 3. Event nodes
   const eventNodes = events.map((e) => ({
     id: "event:" + e.id,
-    label: e.id.replace("#", ""),
+    label: kebabToTitleCase(e.id),
     nodeType: "event",
     eventType: normalizeType(e.type),
     rawType: e.type,
@@ -663,6 +696,16 @@ function writeHtml(events, analysis) {
   const DATA = ${graphData};
   const { nodes, edges, barData } = DATA;
 
+  // ── Kebab-case to Title Case for tooltip tags ──
+  var ACRONYMS = new Set(${JSON.stringify([...ACRONYMS])});
+  function kebabToTitle(id) {
+    return id.replace(/^#/, '').split('--').map(function(seg) {
+      return seg.split('-').map(function(w) {
+        return ACRONYMS.has(w) ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1);
+      }).join(' ');
+    }).join(': ');
+  }
+
   // ── Bar coverage in stats panel ──
   const statsPanel = document.getElementById('stats-panel');
   const barColorMap = { pol: '#ef4444', int: '#3b82f6', saf: '#22c55e', alg: '#f97316' };
@@ -812,7 +855,7 @@ function writeHtml(events, analysis) {
   // Labels — only show for entities and topics by default (events are too dense)
   var showLabels = true;
   var labels = node.append('text')
-    .text(function(d) { return d.label.replace(/#/g, '').replace(/--/g, ' '); })
+    .text(function(d) { return d.label; })
     .attr('x', function(d) { return nodeRadius(d) + 4; })
     .attr('y', 3)
     .attr('fill', function(d) { return d.nodeType === 'event' ? '#9ca3af' : '#374151'; })
@@ -887,8 +930,8 @@ function writeHtml(events, analysis) {
         '<span class="tt-type-badge" style="background:#22c55e">TOPIC</span>' +
         '<div class="tt-desc">Appears in ' + d.degree + ' event(s)</div>';
     } else {
-      var entityTags = (d.entities || []).map(function(e) { return '<span class="tt-tag-entity">' + e + '</span>'; }).join('');
-      var topicTags = (d.topics || []).map(function(t) { return '<span class="tt-tag-topic">' + t + '</span>'; }).join('');
+      var entityTags = (d.entities || []).map(function(e) { return '<span class="tt-tag-entity">' + kebabToTitle(e) + '</span>'; }).join('');
+      var topicTags = (d.topics || []).map(function(t) { return '<span class="tt-tag-topic">' + kebabToTitle(t) + '</span>'; }).join('');
       tooltip.innerHTML =
         '<span class="tt-id">' + d.label + '</span>' +
         '<span class="tt-type-badge" style="background:#f97316">' + (d.rawType || 'event') + '</span>' +
