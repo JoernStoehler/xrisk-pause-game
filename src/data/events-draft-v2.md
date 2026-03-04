@@ -5,7 +5,7 @@ Not card text — explains what each event is, what it teaches, how it connects.
 
 ## Conventions
 
-- Event IDs: `#prefix--short-description` (e.g., `#mon--heat-sig-foreign`)
+- Event IDs: `#prefix--short-description` (e.g., `#monitoring--heat-signature-foreign`)
 - Tags: `#tag-name` for thematic cross-references (e.g., `#chip-monitoring`, `#dual-use`)
 - Direct refs: `→ #event-id` for follow-up chains
 - Algorithmic progress: expressed as multiplier relative to 2022 compute efficiency (start >1x)
@@ -23,12 +23,12 @@ Actors, institutions, and systems that generate events. Each entity has **interf
 | Entity | What it does | Interfaces |
 |---|---|---|
 | **isia-enforcement** | Chip audits, facility inspections, raid teams, border seizures | #chip-monitoring, #challenge-inspection, #raid, #smuggling |
-| **isia-research-ctrl** | Approves/denies research proposals, classifies results as Controlled/Banned | #research-approval, #dual-use, #classification |
-| **isia-intel** | Receives intelligence from national services, whistleblowers, satellites, AI surveillance | #sigint, #humint, #satellite, #whistleblower |
+| **isia-research-control** | Approves/denies research proposals, classifies results as Controlled/Banned | #research-approval, #dual-use, #classification |
+| **isia-intelligence** | Receives intelligence from national services, whistleblowers, satellites, AI surveillance | #signals-intelligence, #human-intelligence, #satellite, #whistleblower |
 | **isia-safety-team** | The agency's own alignment researchers | #safety-research, #experiment, #dual-use |
 | **isia-ai-tools** | AI systems used for surveillance, analysis, research assistance | #ai-behavior, #false-positive, #capability-leak |
-| **isia-internal-sec** | Catches moles, manages clearances, internal investigations | #mole, #leak, #insider-threat |
-| **isia-comms** | Public messaging, media relations, narrative management | #public-opinion, #narrative, #declassification |
+| **isia-internal-security** | Catches moles, manages clearances, internal investigations | #mole, #leak, #insider-threat |
+| **isia-communications** | Public messaging, media relations, narrative management | #public-opinion, #narrative, #declassification |
 | **isia-political** | Legislative liaison, treaty diplomacy, budget negotiations | #election, #budget, #treaty-negotiation |
 
 ### National actors
@@ -38,19 +38,19 @@ Actors, institutions, and systems that generate events. Each entity has **interf
 | **gov-treaty-major** | US, China, EU govs — core treaty supporters with own agendas | #treaty-negotiation, #election, #military, #budget |
 | **gov-treaty-minor** | Smaller treaty nations — less influence, different pressures | #treaty-negotiation, #withdrawal, #economic-pressure |
 | **gov-non-treaty** | Nations outside the treaty — potential violators or converts | #smuggling, #hostage-gambit, #covert-program |
-| **natl-intel** | NSA, MI6, MSS, etc. — have own priorities, may or may not cooperate with ISIA | #sigint, #covert-program, #political-pressure, #foreign-attack |
-| **natl-enforcement** | Domestic police/agencies implementing ISIA directives | #raid, #chip-monitoring, #jurisdiction |
+| **national-intelligence** | NSA, MI6, MSS, etc. — have own priorities, may or may not cooperate with ISIA | #signals-intelligence, #covert-program, #political-pressure, #foreign-attack |
+| **national-enforcement** | Domestic police/agencies implementing ISIA directives | #raid, #chip-monitoring, #jurisdiction |
 | **military** | Armed forces — last resort for protective actions, also source of political pressure | #military, #protective-action, #taiwan |
 
 ### Industry
 
 | Entity | What it does | Interfaces |
 |---|---|---|
-| **chip-fab** | TSMC, Samsung — fabricate chips. Extreme chokepoint (90% concentration) | #chip-supply, #taiwan, #chokepoint |
+| **chip-fabricator** | TSMC, Samsung — fabricate chips. Extreme chokepoint (90% concentration) | #chip-supply, #taiwan, #chokepoint |
 | **chip-design** | NVIDIA, AMD — design AI chips. Another chokepoint (~98% AI training) | #chip-supply, #chokepoint, #economic-pressure |
-| **chip-equip** | ASML — sole EUV lithography supplier. Ultimate chokepoint | #chip-supply, #chokepoint, #joint-venture |
+| **chip-equipment** | ASML — sole EUV lithography supplier. Ultimate chokepoint | #chip-supply, #chokepoint, #joint-venture |
 | **ai-company** | Frontier labs — DeepMind, Anthropic-alikes. Dual role: safety partner + economic pressure source | #training-run, #safety-research, #lobbying, #model-weights |
-| **corp-lobby** | Industry associations, lobbyists — structurally opposed to pause | #lobbying, #election, #economic-pressure, #hypocrisy |
+| **corporate-lobby** | Industry associations, lobbyists — structurally opposed to pause | #lobbying, #election, #economic-pressure, #hypocrisy |
 
 ### Research
 
@@ -77,10 +77,10 @@ Actors, institutions, and systems that generate events. Each entity has **interf
 |---|---|---|
 | **public-cluster-fear** | "My children will die if anyone builds ASI" — strong pause supporters | #public-opinion, #election, #protest |
 | **public-cluster-skeptic** | "ASI is physically impossible" or "the threat was exaggerated" | #public-opinion, #election, #defund |
-| **public-cluster-econ** | "I lost my job because of AI restrictions" — economic grievance | #public-opinion, #economic-pressure, #protest |
+| **public-cluster-economic** | "I lost my job because of AI restrictions" — economic grievance | #public-opinion, #economic-pressure, #protest |
 | **public-cluster-liberty** | "This is really a surveillance state scheme" | #public-opinion, #surveillance, #protest |
-| **public-cluster-accel** | "I deserve to be emperor of the galaxy" / "ASI will serve whoever builds it first" | #public-opinion, #ideology, #lobbying |
-| **public-cluster-indiff** | "AI is not a topic I think about" — low salience | #public-opinion, #election |
+| **public-cluster-accelerationist** | "I deserve to be emperor of the galaxy" / "ASI will serve whoever builds it first" | #public-opinion, #ideology, #lobbying |
+| **public-cluster-indifferent** | "AI is not a topic I think about" — low salience | #public-opinion, #election |
 | **journalist** | Investigative reporters — can be ally (exposing threats) or adversary (exposing agency) | #narrative, #leak, #declassification, #whistleblower |
 | **civil-liberties** | Organizations defending privacy/rights against agency surveillance | #surveillance, #protest, #legal-challenge |
 
@@ -132,8 +132,8 @@ Mechanisms, interaction points, and recurring situations. Each topic describes a
 | **#raid** | Physical enforcement action — seizing chips, shutting down labs | Consumes intelligence (reveals methods, adversaries adapt). (C-14) |
 | **#challenge-inspection** | Formal treaty mechanism — 24hr access, majority Council vote | Legal enforcement tool with political cost |
 | **#satellite** | Orbital surveillance — thermal/power signatures | Detection capability for undeclared facilities |
-| **#sigint** | Signals intelligence — network traffic, comms intercepts | Detection capability, shared with national agencies |
-| **#humint** | Human intelligence — informants, whistleblowers, embassy contacts | Often most valuable but most fragile |
+| **#signals-intelligence** | Signals intelligence — network traffic, comms intercepts | Detection capability, shared with national agencies |
+| **#human-intelligence** | Human intelligence — informants, whistleblowers, embassy contacts | Often most valuable but most fragile |
 | **#surveillance** | Broader monitoring of researchers, facilities, communications | Expansion creates political backlash. Contraction creates blind spots. |
 | **#false-positive** | Monitoring systems flagging non-threats | Wastes enforcement resources, erodes trust in monitoring tools |
 | **#whistleblower** | Insider reports of unauthorized activity | Critical enforcement channel — needs protection infrastructure |
@@ -215,34 +215,34 @@ Entity × topic combinations that produce non-obvious events. Organized by prima
 | isia-ai-tools × #false-positive | Surveillance AI flags 47 anomalies overnight. Triage problem. |
 | isia-ai-tools × #capability-leak | Research assistant discovers something dual-use without being told to |
 | isia-ai-tools × #ai-behavior | Monitoring system gives bizarre recommendation. Override or trust? |
-| isia-enforcement × #raid × natl-intel | Intel agency has own agenda — provides/withholds intel based on politics |
+| isia-enforcement × #raid × national-intelligence | Intel agency has own agenda — provides/withholds intel based on politics |
 | isia-safety-team × #dual-use × #publication | Agency's own research produces capability advance. Suppress or publish? |
-| isia-internal-sec × #mole × corp-lobby | Senior official passing enforcement schedules to former employer |
-| isia-internal-sec × #ideology × #leak | Employee leaks surveillance data out of sincere belief in transparency |
+| isia-internal-security × #mole × corporate-lobby | Senior official passing enforcement schedules to former employer |
+| isia-internal-security × #ideology × #leak | Employee leaks surveillance data out of sincere belief in transparency |
 | isia-enforcement × #training-run × isia-safety-team | Agency needs to train AI for enforcement — contradicts its own mandate |
-| isia-comms × #success-trap × #defund | 8 years of peace → "threat was exaggerated" → budget cut proposals |
-| isia-comms × #declassification × #narrative | Prove the threat is real by revealing near-misses, but burn intel methods |
+| isia-communications × #success-trap × #defund | 8 years of peace → "threat was exaggerated" → budget cut proposals |
+| isia-communications × #declassification × #narrative | Prove the threat is real by revealing near-misses, but burn intel methods |
 | isia-political × #budget × #election | New government demands leadership purge as condition for funding |
 
 ### National intelligence × ISIA
 
 | Intersection | Why interesting |
 |---|---|
-| natl-intel × #chip-monitoring × #foreign-attack | Foreign actor attacks US data center, disables ISIA monitoring for a week. NSA director doesn't take ASI seriously, but president insists on sharing intel. Possible unauthorized training run during the gap. |
-| natl-intel × #covert-program × isia-intel | National intel service running its own secret AI program. Do they share intel with ISIA or hide it? |
-| natl-intel × #humint × isia-enforcement | Whistleblower in a foreign intel service offers intel for asylum + $5M. Setup or genuine? |
-| natl-intel × #raid × #jurisdiction | ISIA wants to raid a facility but local intelligence service claims jurisdiction |
+| national-intelligence × #chip-monitoring × #foreign-attack | Foreign actor attacks US data center, disables ISIA monitoring for a week. NSA director doesn't take ASI seriously, but president insists on sharing intel. Possible unauthorized training run during the gap. |
+| national-intelligence × #covert-program × isia-intelligence | National intel service running its own secret AI program. Do they share intel with ISIA or hide it? |
+| national-intelligence × #human-intelligence × isia-enforcement | Whistleblower in a foreign intel service offers intel for asylum + $5M. Setup or genuine? |
+| national-intelligence × #raid × #jurisdiction | ISIA wants to raid a facility but local intelligence service claims jurisdiction |
 
 ### Chip supply chain
 
 | Intersection | Why interesting |
 |---|---|
-| chip-fab × #taiwan × #chip-supply | Taiwan Strait crisis suspends TSMC production. Supply chain chaos. |
-| chip-equip × #joint-venture × gov-non-treaty | ASML exploring deal with non-treaty consortium. Production capacity escapes monitoring. |
+| chip-fabricator × #taiwan × #chip-supply | Taiwan Strait crisis suspends TSMC production. Supply chain chaos. |
+| chip-equipment × #joint-venture × gov-non-treaty | ASML exploring deal with non-treaty consortium. Production capacity escapes monitoring. |
 | chip-design × #economic-pressure × #lobbying | NVIDIA lobbying for higher training thresholds. Real economic argument. |
-| smuggler × #black-market × natl-enforcement | Black market chip prices triple → demand from unauthorized actors rising faster than interdiction |
+| smuggler × #black-market × national-enforcement | Black market chip prices triple → demand from unauthorized actors rising faster than interdiction |
 | smuggler × #chip-supply × #raid | 2000 chips smuggled through shell companies across 5 countries. Seize chips or map the network? |
-| chip-fab × #chip-monitoring × #algorithmic-progress | Consumer GPUs now sufficient for dangerous training. Monitoring designed for datacenters, not living rooms. |
+| chip-fabricator × #chip-monitoring × #algorithmic-progress | Consumer GPUs now sufficient for dangerous training. Monitoring designed for datacenters, not living rooms. |
 
 ### Research ecosystem
 
@@ -262,13 +262,13 @@ Entity × topic combinations that produce non-obvious events. Organized by prima
 |---|---|
 | gov-treaty-major × #election × #withdrawal | Populist "AI freedom" candidate wins. Threatens to withdraw from treaty. |
 | gov-treaty-major × #budget × #defund | Finance ministers demand 40% budget cut after years of no incidents |
-| public-cluster-econ × #economic-pressure × #protest | 12M jobs lost to permitted AI automation. Protests blame the pause for "not enough" AND "too much." |
+| public-cluster-economic × #economic-pressure × #protest | 12M jobs lost to permitted AI automation. Protests blame the pause for "not enough" AND "too much." |
 | public-cluster-liberty × #surveillance × #protest | Civil liberties orgs demand arrest of overzealous enforcement officer |
 | public-cluster-skeptic × #success-trap × #election | "Nothing bad happened" → skeptic cluster grows → anti-pause candidates elected |
 | journalist × #leak × #narrative | Leaked documents expose corporate hypocrisy (publicly pro-pause, privately funding opponents) |
-| journalist × #declassification × isia-comms | Agency considers releasing near-miss intel to prove threat. Burns sources? |
+| journalist × #declassification × isia-communications | Agency considers releasing near-miss intel to prove threat. Burns sources? |
 | who × #exception × #training-run | WHO petitions for medical AI above threshold. 2M lives/year. Deny = political disaster. |
-| public-cluster-fear × #protest × isia-comms | Non-ASI AI accident → public panic → political momentum for stronger enforcement. Exploit or correct? |
+| public-cluster-fear × #protest × isia-communications | Non-ASI AI accident → public panic → political momentum for stronger enforcement. Exploit or correct? |
 
 ### International dynamics
 
@@ -296,7 +296,7 @@ Entity × topic combinations that produce non-obvious events. Organized by prima
 ## Events
 
 Grouped by primary entity cluster. Each event has:
-- **ID**: `#prefix--short-desc`
+- **ID**: `#prefix--short-description`
 - **Type**: crisis / preparation / report / consequence
 - **Entities**: which actors are involved
 - **Topics**: which mechanisms are at play
@@ -308,7 +308,7 @@ Grouped by primary entity cluster. Each event has:
 
 ### Compute monitoring & enforcement
 
-#### #mon--120day-audit
+#### #monitoring--120day-audit
 **Type:** crisis
 **Entities:** isia-enforcement, gov-treaty-minor
 **Topics:** #chip-monitoring, #challenge-inspection
@@ -321,9 +321,9 @@ Grouped by primary entity cluster. Each event has:
 **Refs:** → #treaty--review-conference (long-term treaty health)
 **Bars:** int ↓ or ↑ depending on choice, pol ↓ if forced inspections
 
-#### #mon--heat-sig-foreign
+#### #monitoring--heat-signature-foreign
 **Type:** crisis
-**Entities:** isia-enforcement, isia-intel, gov-treaty-major
+**Entities:** isia-enforcement, isia-intelligence, gov-treaty-major
 **Topics:** #chip-monitoring, #satellite, #challenge-inspection
 **Situation:** Satellite detects anomalous thermal output from undeclared facility in remote region. Consistent with mid-scale compute cluster.
 **Options:**
@@ -331,10 +331,10 @@ Grouped by primary entity cluster. Each event has:
 - Right: Covert intelligence team first (fast, legally questionable)
 - Down (greyed out if treaty health low): Joint operation with domestic enforcement agency
 **Teaches:** C-10 (monitoring full chip lifecycle), C-14 (cat-and-mouse), B-3 (compute-centric risk)
-**Refs:** → #mon--near-miss (if raid succeeds and finds something), → #treaty--diplo-incident (if covert op discovered)
+**Refs:** → #monitoring--near-miss (if raid succeeds and finds something), → #treaty--diplo-incident (if covert op discovered)
 **Bars:** int ↓ (enforcement reveals methods), pol ↓ if diplomatic fallout
 
-#### #mon--smuggle-ring
+#### #monitoring--smuggle-ring
 **Type:** consequence
 **Entities:** smuggler, isia-enforcement, interpol
 **Topics:** #smuggling, #chip-supply, #raid
@@ -343,20 +343,20 @@ Grouped by primary entity cluster. Each event has:
 - Left: Seize the chips — track logistics, raid warehouses
 - Right: Map the network — let some chips move while identifying the full organization
 **Teaches:** C-14 (catch this batch or prevent the next?), C-8 (attacker only needs to succeed once)
-**Refs:** → #mon--black-market-signal, #enforce--cat-mouse-adapt
+**Refs:** → #monitoring--black-market-signal, #enforcement--cat-mouse-adapt
 **Bars:** int ↓ (either way reveals methods)
 
-#### #mon--consumer-hw-threshold
+#### #monitoring--consumer-hw-threshold
 **Type:** report
 **Entities:** isia-safety-team, isia-enforcement
 **Topics:** #algorithmic-progress, #chip-monitoring, #threshold-drop
 **Situation:** Chief scientist briefing: algorithmic progress at ~3.5x 2022 baseline. 500 consumer GPUs (~$200k) could now run training that required 10,000 monitored chips two years ago. Enforcement threshold needs lowering.
 **Options:** None — briefing.
 **Teaches:** B-5 (shrinking lethal threshold), B-6a/b (uncontrollable algorithmic sources)
-**Refs:** → #era--threshold-cliff (escalation), #pol--threshold-debate
+**Refs:** → #era--threshold-cliff (escalation), #political--threshold-debate
 **Bars:** (shifts understanding, no immediate bar change)
 
-#### #mon--surveillance-expand
+#### #monitoring--surveillance-expand
 **Type:** preparation
 **Entities:** isia-enforcement, isia-political, public-cluster-liberty
 **Topics:** #surveillance, #chip-monitoring, #public-opinion
@@ -365,12 +365,12 @@ Grouped by primary entity cluster. Each event has:
 - Left: Approve — cover more chips, trigger political backlash
 - Right: Reject — maintain political support, leave consumer hardware blind spot
 **Teaches:** C-9 (expanding monitoring surface is bad strategy vs. shrinking attack surface)
-**Refs:** → #pol--civil-lib-lawsuit (if approved)
+**Refs:** → #political--civil-lib-lawsuit (if approved)
 **Bars:** int ↑ but pol ↓↓ if approved; stable if rejected
 
-#### #mon--asml-joint-venture
+#### #monitoring--asml-joint-venture
 **Type:** crisis
-**Entities:** chip-equip, gov-non-treaty, isia-political
+**Entities:** chip-equipment, gov-non-treaty, isia-political
 **Topics:** #chip-supply, #chokepoint, #treaty-negotiation
 **Situation:** ASML exploring joint venture with consortium including non-treaty nation. If completed, advanced chip production capacity escapes treaty monitoring.
 **Options:**
@@ -378,20 +378,20 @@ Grouped by primary entity cluster. Each event has:
 - Right: Offer ASML treaty-compliant alternative deal (expensive)
 - Down (greyed out if pol low): Invoke emergency powers to designate ASML as strategic asset
 **Teaches:** C-11 (supply chain chokepoints), G2 (why chip supply chain control matters)
-**Refs:** → #intl--chip-dependency (long-term)
+**Refs:** → #international--chip-dependency (long-term)
 **Bars:** pol ↓ if heavy-handed, int ↓ if deal goes through
 
-#### #mon--black-market-signal
+#### #monitoring--black-market-signal
 **Type:** report
-**Entities:** isia-intel, smuggler
+**Entities:** isia-intelligence, smuggler
 **Topics:** #black-market, #smuggling, #chip-supply
 **Situation:** Intel reports: black market H100-equivalent prices tripled this quarter. Demand from unauthorized actors outpacing interdiction. "We're winning battles but losing the war."
 **Options:** None — briefing.
 **Teaches:** C-14 (cat-and-mouse never ends), market signals as intelligence
-**Refs:** → #mon--smuggle-ring, → #enforce--cat-mouse-adapt
+**Refs:** → #monitoring--smuggle-ring, → #enforcement--cat-mouse-adapt
 **Bars:** (shifts understanding)
 
-#### #mon--near-miss
+#### #monitoring--near-miss
 **Type:** consequence
 **Entities:** isia-enforcement, rogue-lab
 **Topics:** #training-run, #raid, #declassification
@@ -400,14 +400,14 @@ Grouped by primary entity cluster. Each event has:
 - Left: Classify — protect sources, prevent panic
 - Right: Declassify sanitized version — demonstrate ongoing threat, justify budget
 **Teaches:** C-8 (attacker almost succeeded), E-52 (if classified, becomes another "nothing happened"), B-4 (nobody knows exact threshold)
-**Refs:** → #pol--success-trap (if classified), → #pol--budget-fight (if declassified)
+**Refs:** → #political--success-trap (if classified), → #political--budget-fight (if declassified)
 **Bars:** pol ↑ if declassified, int ↓ if declassified (reveals methods)
 
 ### National intelligence interactions
 
-#### #natl-intel--data-center-attack
+#### #national-intelligence--data-center-attack
 **Type:** crisis
-**Entities:** natl-intel, isia-enforcement, gov-treaty-major
+**Entities:** national-intelligence, isia-enforcement, gov-treaty-major
 **Topics:** #chip-monitoring, #foreign-attack, #covert-program
 **Situation:** Director of the NSA: "Six months ago a US data center was attacked by a foreign actor. We don't usually forward such reports, but the president insisted. ISIA compute monitoring tools were disabled for roughly one week. It's possible the foreign actor ran a training run." Surfaces because NSA director doesn't take ASI seriously enough to report promptly. Reaches you only because of political pressure.
 **Options:**
@@ -415,36 +415,36 @@ Grouped by primary entity cluster. Each event has:
 - Right: Accept the report at face value, focus on patching the monitoring gap (faster but you don't know what you missed)
 - Down (greyed out if int low): Cross-reference with satellite data from the attack window to assess whether a training run occurred
 **Teaches:** Intelligence agencies have their own agendas (C-59 applied to national level), monitoring gaps can be created by external attacks, the DG depends on cooperation from actors who may not share priorities
-**Refs:** → #natl-intel--alg-progress-leak (if training run occurred), → #mon--heat-sig-foreign (similar detection problem)
+**Refs:** → #national-intelligence--algorithmic-progress-leak (if training run occurred), → #monitoring--heat-signature-foreign (similar detection problem)
 **Bars:** int ↓ (monitoring was down), pol ↓ (confronting NSA is costly)
 
-#### #natl-intel--alg-progress-leak
+#### #national-intelligence--algorithmic-progress-leak
 **Type:** consequence
-**Entities:** natl-intel, rogue-state
+**Entities:** national-intelligence, rogue-state
 **Topics:** #algorithmic-progress, #training-run, #covert-program
 **Situation:** Follow-up from the data center attack: analysis suggests a foreign actor did complete a training run during the monitoring gap. Results unknown — but an intelligence-adjacent organization (possibly the national intelligence service itself) now has training data and checkpoint files that advance algorithmic knowledge. Not ASI-level, but the knowledge exists.
 **Options:**
 - Left: Confront the nation diplomatically — demand disclosure of what was trained (reveals you know about it)
 - Right: Monitor quietly — track whether the knowledge propagates (slower, but preserves intelligence advantage)
 **Teaches:** Algorithmic progress is irreversible (alg only goes up), intelligence agencies can be threat actors, some algorithmic advances come from unexpected sources
-**Refs:** → #natl-intel--data-center-attack
+**Refs:** → #national-intelligence--data-center-attack
 **Bars:** alg ↑ (knowledge was created), int ↓ if confrontation
 
-#### #natl-intel--defector-offer
+#### #national-intelligence--defector-offer
 **Type:** crisis
-**Entities:** natl-intel, isia-intel, rogue-state
-**Topics:** #humint, #covert-program, #whistleblower
+**Entities:** national-intelligence, isia-intelligence, rogue-state
+**Topics:** #human-intelligence, #covert-program, #whistleblower
 **Situation:** Anonymous contact inside a foreign intelligence service claims their government is secretly funding ASI research through a front company. Demands asylum + $5M. Intel division says: plausible but unverified. If genuine, biggest lead in years. If setup, you've been played.
 **Options:**
 - Left: Pay and grant asylum — potential intel worth the cost
 - Right: Demand verification first — proof before committing (contact may disappear)
 **Teaches:** Intelligence quality dimension, cost of uncertainty, HUMINT fragility
-**Refs:** → #mon--heat-sig-foreign (if intel leads to facility), → #pol--scandal (if it was a setup)
+**Refs:** → #monitoring--heat-signature-foreign (if intel leads to facility), → #political--scandal (if it was a setup)
 **Bars:** int ↑ if genuine, pol ↓↓ if setup
 
-#### #natl-intel--jurisdiction-clash
+#### #national-intelligence--jurisdiction-clash
 **Type:** crisis
-**Entities:** natl-intel, natl-enforcement, isia-enforcement
+**Entities:** national-intelligence, national-enforcement, isia-enforcement
 **Topics:** #raid, #jurisdiction, #chip-monitoring
 **Situation:** ISIA has confirmed an unauthorized compute cluster in a treaty nation. The national intelligence service claims the cluster is part of a classified domestic program and invokes national security to block ISIA inspection. Your legal team says the treaty technically overrides, but enforcement would require a political fight.
 **Options:**
@@ -458,7 +458,7 @@ Grouped by primary entity cluster. Each event has:
 
 #### #research--approval-dilemma
 **Type:** crisis
-**Entities:** isia-research-ctrl, researcher-safety, isia-safety-team
+**Entities:** isia-research-control, researcher-safety, isia-safety-team
 **Topics:** #research-approval, #dual-use, #experiment
 **Situation:** Leading alignment researcher proposes training at 5×10²³ FLOP — just below banned threshold. Could accelerate safety significantly. Research Controls flags: methodology could reveal capability advances.
 **Options:**
@@ -501,24 +501,24 @@ Grouped by primary entity cluster. Each event has:
 - Right: Restrict scope + add monitoring — keep some benefit, manage risk
 - Down (greyed out if saf low): Have safety team formally evaluate whether the output is actually dangerous
 **Teaches:** D-22 (smart enough to help = smart enough to be dangerous), C-59 (agency's AI tools not fully controlled), B-24 (dual-use)
-**Refs:** → #research--born-dangerous-pub (similar dynamic, external)
+**Refs:** → #research--born-dangerous-publication (similar dynamic, external)
 **Bars:** saf ↓ if shut down (lost tool), alg ↑ if output is real capability advance
 
-#### #research--born-dangerous-pub
+#### #research--born-dangerous-publication
 **Type:** crisis
-**Entities:** researcher-safety, isia-research-ctrl
+**Entities:** researcher-safety, isia-research-control
 **Topics:** #dual-use, #publication, #classification
 **Situation:** University researcher publishes safety paper on detecting deceptive alignment. The detection method implicitly teaches how to CREATE deceptive alignment more efficiently. Paper is already on arXiv.
 **Options:**
 - Left: Issue retroactive classification — precedent that safety papers can be classified post-publication (toxic, may not work)
 - Right: Accept the leak — knowledge is out, update enforcement thresholds for the new efficiency
 **Teaches:** B-24 (born dangerous), B-25c (inadvertent smuggling channel), B-7 (different research types need different enforcement)
-**Refs:** → #mon--consumer-hw-threshold (threshold drops), → #research--approval-dilemma (future approvals get harder)
+**Refs:** → #monitoring--consumer-hw-threshold (threshold drops), → #research--approval-dilemma (future approvals get harder)
 **Bars:** alg ↑ (threshold just dropped), pol ↓ if classification attempted
 
 #### #research--training-run-consequence
 **Type:** consequence
-**Entities:** isia-safety-team, isia-research-ctrl
+**Entities:** isia-safety-team, isia-research-control
 **Topics:** #experiment, #dual-use, #training-run
 **Situation:** Six months ago you approved a large safety training run. Results: significant safety progress. Also: the model developed unexpected capabilities outside the research design. Not dangerous alone, but advances state-of-art in a way that was supposed to be banned.
 **Options:**
@@ -542,9 +542,9 @@ Grouped by primary entity cluster. Each event has:
 
 ### Political economy
 
-#### #pol--election-year
+#### #political--election-year
 **Type:** crisis
-**Entities:** gov-treaty-major, public-cluster-skeptic, corp-lobby
+**Entities:** gov-treaty-major, public-cluster-skeptic, corporate-lobby
 **Topics:** #election, #public-opinion, #lobbying
 **Situation:** Three major treaty nations hold elections. Populist "AI freedom" candidates running in two — promising to revoke treaty commitments for AI-driven growth. Polling shows them competitive.
 **Options:**
@@ -554,9 +554,9 @@ Grouped by primary entity cluster. Each event has:
 **Refs:** → #treaty--withdrawal-threat (if anti-pause candidate wins)
 **Bars:** pol ↓ if neutral and they win; pol ↓↓ if campaign discovered
 
-#### #pol--success-trap
+#### #political--success-trap
 **Type:** crisis
-**Entities:** isia-comms, isia-political, gov-treaty-major
+**Entities:** isia-communications, isia-political, gov-treaty-major
 **Topics:** #success-trap, #defund, #budget
 **Situation:** Eight years since last serious incident. Senator coalition proposes 40% budget cut. "Eight years, zero incidents. The threat was exaggerated."
 **Options:**
@@ -564,68 +564,68 @@ Grouped by primary entity cluster. Each event has:
 - Right: Accept a smaller cut (15%) gracefully
 - Down (if int high): Declassify redacted summary of intercepted rogue attempts — prove threat is real, but reveal methods
 **Teaches:** E-52 (success = "threat was never real"), invisible success problem
-**Refs:** → #mon--near-miss (what you could declassify), → #pol--success-narrative (report that set this up)
+**Refs:** → #monitoring--near-miss (what you could declassify), → #political--success-narrative (report that set this up)
 **Bars:** int ↓ if declassified, pol ↓ if cut accepted
 
-#### #pol--success-narrative
+#### #political--success-narrative
 **Type:** report
-**Entities:** isia-comms
+**Entities:** isia-communications
 **Topics:** #success-trap, #public-opinion
 **Situation:** Polling data: 62% believe "the AI threat was exaggerated." Support dropped 15 points in two years. Strongest predictor: "nothing bad has happened." Comms director: "We're victims of our own success."
 **Options:** None — briefing.
 **Teaches:** E-52 (success indistinguishable from hoax), why quiet stretches are dangerous
-**Refs:** → #pol--success-trap (consequence)
+**Refs:** → #political--success-trap (consequence)
 **Bars:** (shifts understanding — stability is not safety)
 
-#### #pol--econ-boom-request
+#### #political--econ-boom-request
 **Type:** crisis
-**Entities:** gov-treaty-major, corp-lobby, isia-political
+**Entities:** gov-treaty-major, corporate-lobby, isia-political
 **Topics:** #economic-pressure, #exception, #training-run
 **Situation:** G7 finance ministers request raising training threshold from 1e22 to 1e23 FLOP — 10x increase. Current limit costs global economy ~$800B annually. They argue it's unnecessarily constraining.
 **Options:**
 - Left: Raise threshold — reduce pressure, increase risk
 - Right: Hold — preserve margin, intensify political conflict
 **Teaches:** E-32 (AI genuinely valuable), E-33 (economic arguments legitimate), E-34 (economic success → extinction path)
-**Refs:** → #mon--consumer-hw-threshold (threshold is already dropping)
+**Refs:** → #monitoring--consumer-hw-threshold (threshold is already dropping)
 **Bars:** pol ↑ if raised (goodwill), int ↓ (more compute to monitor), alg ↑ (if threshold raised)
 
-#### #pol--unemployment-crisis
+#### #political--unemployment-crisis
 **Type:** crisis
-**Entities:** public-cluster-econ, isia-comms, isia-political
+**Entities:** public-cluster-economic, isia-communications, isia-political
 **Topics:** #economic-pressure, #ai-diffusion, #public-opinion, #protest
 **Situation:** AI automation eliminated 12M jobs in treaty nations in two years. Protests spreading. Permitted deployments, below threshold. Protestors blame pause for "not enough" AND "too much" depending on cluster.
 **Options:**
 - Left: Propose additional AI restrictions — show agency cares, but constrain economy further
 - Right: Stay focused on ASI mandate — jobs are domestic policy, not agency's problem (mission focus, lose support)
 **Teaches:** E-56/57 (AI diffusion transforms landscape), E-50 (different clusters use different channels), E-35 (visible costs)
-**Refs:** → #pol--election-year (political consequences)
+**Refs:** → #political--election-year (political consequences)
 **Bars:** pol ↓ either way (lose support from different clusters)
 
-#### #pol--corp-lobbying
+#### #political--corporate-lobbying
 **Type:** crisis
-**Entities:** corp-lobby, ai-company, journalist
+**Entities:** corporate-lobby, ai-company, journalist
 **Topics:** #lobbying, #hypocrisy, #narrative
 **Situation:** Three largest AI companies formed lobbying alliance. Publicly support pause. Privately funding anti-enforcement candidates. Journalist contact has evidence but publishing burns the source.
 **Options:**
 - Left: Leak evidence to independent journalist — expose hypocrisy, burn intel source
 - Right: Confront companies privately — threaten to reveal unless they stop (they might call the bluff)
 **Teaches:** E-62 (corporate hypocrisy), E-51 (corporate interests structurally opposed to pause)
-**Refs:** → #pol--election-year (where lobbying money goes)
+**Refs:** → #political--election-year (where lobbying money goes)
 **Bars:** pol ↑ if exposed successfully, int ↓ if source burned
 
-#### #pol--medical-ai-request
+#### #political--medical-ai-request
 **Type:** preparation
-**Entities:** who, isia-research-ctrl, isia-political
+**Entities:** who, isia-research-control, isia-political
 **Topics:** #exception, #training-run, #economic-pressure
 **Situation:** WHO petitions for training run to create drug discovery AI. Could save 2M lives/year. Above current threshold but well below ASI danger zone. Chief scientist: risk is low but nonzero.
 **Options:**
 - Left: Approve — overwhelming humanitarian case (sets precedent for exceptions)
 - Right: Deny — maintain bright line (2M preventable deaths/year, severe political fallout)
 **Teaches:** E-32/33 (humanitarian/economic cost is real), bright-line erosion problem
-**Refs:** → #pol--econ-boom-request (similar pressure, different framing)
+**Refs:** → #political--econ-boom-request (similar pressure, different framing)
 **Bars:** pol ↓↓ if denied (2M deaths/year), int ↓ if approved (new system to monitor)
 
-#### #pol--protest-that-helps
+#### #political--protest-that-helps
 **Type:** consequence
 **Entities:** public-cluster-fear, isia-political
 **Topics:** #public-opinion, #narrative, #protest
@@ -634,34 +634,34 @@ Grouped by primary entity cluster. Each event has:
 - Left: Exploit the wave — push through enforcement measures while anger is high (effective but cynical, attaches mission to misunderstanding)
 - Right: Correct the narrative — explain accident was non-ASI (honest, wastes political opportunity)
 **Teaches:** E-53 (non-ASI harms shift opinion), E-58 (crises as opportunities), E-54 (incorrect conclusions from AI incidents)
-**Refs:** → #pol--election-year (political capital)
+**Refs:** → #political--election-year (political capital)
 **Bars:** pol ↑ if exploited, (no bar change if corrected, but preserves narrative integrity)
 
-#### #pol--ai-economy-report
+#### #political--ai-economy-report
 **Type:** report
 **Entities:** isia-political
 **Topics:** #ai-diffusion, #economic-pressure
 **Situation:** AI systems within treaty limits now contribute 18% of global GDP. Entire industries depend on them. Economic advisor: "If we tighten further, we threaten hundreds of millions of livelihoods."
 **Options:** None — briefing. Context for future decisions.
 **Teaches:** E-56 (AI diffusion transforms economy), E-32 (economic stakes keep growing)
-**Refs:** → #pol--econ-boom-request, → #pol--unemployment-crisis
+**Refs:** → #political--econ-boom-request, → #political--unemployment-crisis
 **Bars:** (shifts understanding — economic dependency deepens over time)
 
 ### Institutional integrity
 
-#### #inst--mole-corp
+#### #institutional--mole-corp
 **Type:** crisis
-**Entities:** isia-internal-sec, corp-lobby, rogue-insider
+**Entities:** isia-internal-security, corporate-lobby, rogue-insider
 **Topics:** #mole, #regulatory-capture, #leak
 **Situation:** Internal security discovers senior official passing enforcement schedules to a corporation they previously worked for. Corporation timed chip transfers around inspection windows.
 **Options:**
 - Left: Quietly remove + patch security (avoids scandal, doesn't deter)
 - Right: Prosecute publicly — send message (deters, but scandal damages credibility)
 **Teaches:** F-39 (regulatory capture), F-40 (internal ideological conflict)
-**Refs:** → #inst--true-believer (contrast — different type of internal problem)
+**Refs:** → #institutional--true-believer (contrast — different type of internal problem)
 **Bars:** int ↓ (security breach happened), pol ↓ if public scandal
 
-#### #inst--true-believer
+#### #institutional--true-believer
 **Type:** crisis
 **Entities:** rogue-insider, isia-enforcement, civil-liberties
 **Topics:** #ideology, #surveillance, #insider-threat
@@ -670,10 +670,10 @@ Grouped by primary entity cluster. Each event has:
 - Left: Arrest — uphold rule of law (demoralizing for enforcement team)
 - Right: Shield — argue within agency mandate (legally dubious, politically explosive)
 **Teaches:** F-40 (internal disagreement about methods), mission urgency vs. rule of law
-**Refs:** → #pol--civil-lib-lawsuit (if shielded)
+**Refs:** → #political--civil-lib-lawsuit (if shielded)
 **Bars:** pol ↓ either way (different constituencies upset)
 
-#### #inst--leadership-purge
+#### #institutional--leadership-purge
 **Type:** crisis
 **Entities:** gov-treaty-major, isia-political
 **Topics:** #leadership-purge, #budget, #ideology
@@ -682,10 +682,10 @@ Grouped by primary entity cluster. Each event has:
 - Left: Replace — maintain funding, set precedent that govs dictate staffing
 - Right: Refuse — protect independence, lose funding
 **Teaches:** F-37 (politicians can undermine agency), F-38 (political appointees), F-36 (institutional fragility)
-**Refs:** → #inst--china-hawk (another internal personnel crisis)
+**Refs:** → #institutional--china-hawk (another internal personnel crisis)
 **Bars:** int ↓ if replaced (lose competent staff), pol ↓ if refused (lose funding)
 
-#### #inst--china-hawk
+#### #institutional--china-hawk
 **Type:** crisis
 **Entities:** rogue-insider, gov-treaty-major, isia-political
 **Topics:** #insider-threat, #ideology, #treaty-negotiation
@@ -739,7 +739,7 @@ Grouped by primary entity cluster. Each event has:
 
 #### #treaty--withdrawal-threat
 **Type:** crisis
-**Entities:** gov-treaty-major, isia-enforcement, isia-intel
+**Entities:** gov-treaty-major, isia-enforcement, isia-intelligence
 **Topics:** #withdrawal, #chip-monitoring, #treaty-negotiation
 **Situation:** Major treaty nation files 12-month withdrawal notice. Must forfeit AI infrastructure, but intel suggests they're secretly moving chips to undeclared facilities before exit.
 **Options:**
@@ -747,20 +747,20 @@ Grouped by primary entity cluster. Each event has:
 - Right: Negotiate to prevent withdrawal — offer concessions
 - Down (greyed out if int low): Deploy covert monitoring of suspected chip transfers
 **Teaches:** Withdrawal problem (Article XV), E-49 (nations can exit), enforcement during political crisis
-**Refs:** → #intl--north-korea-pattern (precedent)
+**Refs:** → #international--north-korea-pattern (precedent)
 **Bars:** int ↓ if chips escape monitoring, pol ↓ if aggressive
 
-#### #intl--north-korea-pattern
+#### #international--north-korea-pattern
 **Type:** report
-**Entities:** gov-non-treaty, smuggler, isia-intel
+**Entities:** gov-non-treaty, smuggler, isia-intelligence
 **Topics:** #covert-program, #smuggling, #chip-supply
 **Situation:** Intelligence briefing: non-treaty nation acquiring chips through intermediary network for 3 years. 4,000 H100-equivalents estimated. Not enough for ASI yet, but the trend is clear. Same pattern as nuclear nonproliferation failures.
 **Options:** None — briefing.
 **Teaches:** Even with global cooperation, determined actors find ways. C-8 (attacker only needs to succeed once).
-**Refs:** → #intl--hostage-gambit (same type of actor)
+**Refs:** → #international--hostage-gambit (same type of actor)
 **Bars:** (shifts understanding — enforcement has inherent limits)
 
-#### #intl--hostage-gambit
+#### #international--hostage-gambit
 **Type:** crisis
 **Entities:** gov-non-treaty, isia-political, un-security-council
 **Topics:** #hostage-gambit, #chip-supply, #sanctions
@@ -772,59 +772,59 @@ Grouped by primary entity cluster. Each event has:
 **Refs:** → #treaty--withdrawal-threat (similar dynamics)
 **Bars:** pol ↓ if sanctions (costly), int ↓ if tech shared (they get stronger)
 
-#### #intl--taiwan-crisis
+#### #international--taiwan-crisis
 **Type:** crisis
-**Entities:** chip-fab, military, gov-treaty-major
+**Entities:** chip-fabricator, military, gov-treaty-major
 **Topics:** #taiwan, #chip-supply, #chokepoint
 **Situation:** Taiwan Strait tensions escalate. TSMC suspends production for two weeks. Global chip supply disrupted. Three non-treaty nations use disruption as cover to refuse scheduled audits.
 **Options:**
 - Left: Focus on audit refusals — enforce compliance during disruption (tone-deaf during geopolitical crisis)
 - Right: Focus on TSMC — stabilize chip production, prevent black market boom (neglects enforcement)
 **Teaches:** C-11 (supply chain chokepoints), E-49 (geopolitics introduces new threats), simultaneous crises
-**Refs:** → #mon--black-market-signal (black market consequence)
+**Refs:** → #monitoring--black-market-signal (black market consequence)
 **Bars:** int ↓ (monitoring disrupted), pol ↓ (no good option)
 
 ### Intelligence quality
 
-#### #intel--contradictory-reports
+#### #intelligence--contradictory-reports
 **Type:** crisis
-**Entities:** isia-intel
-**Topics:** #sigint, #satellite, #humint
+**Entities:** isia-intelligence
+**Topics:** #signals-intelligence, #satellite, #human-intelligence
 **Situation:** Morning briefing, three items partially contradict: satellite data suggests new facility in SE Asia, signals intelligence says region is clean, human source claims facility exists but is a semiconductor plant not a compute cluster. Resources to investigate one lead thoroughly or all three superficially.
 **Options:**
 - Left: Investigate satellite lead thoroughly (highest probability)
 - Right: Spread resources across all three (breadth over depth)
 **Teaches:** Imperfect reports are the norm. DG makes decisions with contradictory intelligence. Information quality is a strategic dimension.
-**Refs:** → #mon--heat-sig-foreign (what thorough investigation looks like)
+**Refs:** → #monitoring--heat-signature-foreign (what thorough investigation looks like)
 **Bars:** int ↓ (resources spent)
 
-#### #intel--rogue-lab-whistleblower
+#### #intelligence--rogue-lab-whistleblower
 **Type:** crisis (chain starter)
-**Entities:** rogue-lab, isia-enforcement, isia-intel
+**Entities:** rogue-lab, isia-enforcement, isia-intelligence
 **Topics:** #whistleblower, #training-run, #raid
 **Situation:** Whistleblower inside a private company claims employer running unauthorized training runs at night using undeclared chips in a legitimate datacenter. Credible but terrified.
 **Options:**
 - Left: Immediate raid — if true, every hour counts
 - Right: Gather more intelligence — verify before acting (slower, avoids false raid that could discredit agency)
 **Teaches:** B-3 (compute-centric risk), first-try problem, speed vs. certainty
-**Refs:** → #mon--near-miss (if raid succeeds)
+**Refs:** → #monitoring--near-miss (if raid succeeds)
 **Bars:** int ↓ (raid reveals methods), pol ↓ (if false alarm)
 
 ### Era transitions & endgame
 
 #### #era--generational-shift
 **Type:** report
-**Entities:** public-cluster-skeptic, isia-comms
+**Entities:** public-cluster-skeptic, isia-communications
 **Topics:** #generational-shift, #public-opinion, #election
 **Situation:** Political advisor: median voter in key nations was 12 when pause began. No memory of the crisis. ASI risk = "something old people worry about." Youth political movements overwhelmingly anti-pause.
 **Options:** None — briefing.
 **Teaches:** E-44 (generational turnover), E-45 (counter-signaling)
-**Refs:** → #pol--election-year (this shifts election dynamics)
+**Refs:** → #political--election-year (this shifts election dynamics)
 **Bars:** (shifts political landscape — future elections harder)
 
 #### #era--safety-looks-solved
 **Type:** crisis (era transition)
-**Entities:** researcher-safety, isia-comms, gov-treaty-major
+**Entities:** researcher-safety, isia-communications, gov-treaty-major
 **Topics:** #safety-looks-solved, #public-opinion, #treaty-negotiation
 **Situation:** Formal verification breakthrough for sub-ASI systems. Media: "alignment is solved." Chief scientist: "we solved the easy part." Three nations lobbying to relax treaty.
 **Options:**
@@ -853,7 +853,7 @@ Grouped by primary entity cluster. Each event has:
 **Situation:** Emergency briefing. Algorithmic progress at ~8x 2022 baseline. Lethal compute threshold dropped below what a well-funded university lab could assemble. Monitoring designed for datacenter-scale. Cannot monitor university-scale.
 **Options:** None — briefing. But everything just changed.
 **Teaches:** B-5/6 (threshold shrinks regardless), the fundamental time limit, enforcement designed for large actors can't handle small actors
-**Refs:** → #mon--consumer-hw-threshold (earlier warning), → #era--pivotal-moment (urgency)
+**Refs:** → #monitoring--consumer-hw-threshold (earlier warning), → #era--pivotal-moment (urgency)
 **Bars:** (game is now much harder — enforcement cards get worse options)
 
 #### #era--pivotal-moment
@@ -875,13 +875,13 @@ Grouped by primary entity cluster. Each event has:
 
 Entity × topic intersections not yet covered by events above:
 
-1. **chip-fab × #chip-monitoring × #algorithmic-progress** — What happens when chip fabs start making chips optimized for inference (not training)? Monitoring designed for training signatures may miss inference-based approaches.
+1. **chip-fabricator × #chip-monitoring × #algorithmic-progress** — What happens when chip fabs start making chips optimized for inference (not training)? Monitoring designed for training signatures may miss inference-based approaches.
 2. **military × #protective-action × rogue-state** — The escalation to military force. Airstrikes on AI hardware. Treaty Article XII.
 3. **researcher-upload × #uploading × isia-safety-team** — Upload research milestones. What happens when uploading looks achievable?
-4. **public-cluster-accel × #ideology × rogue-billionaire** — Ideologically motivated violation. "I deserve to be emperor of the galaxy." Different from state-backed or profit-motivated threats.
+4. **public-cluster-accelerationist × #ideology × rogue-billionaire** — Ideologically motivated violation. "I deserve to be emperor of the galaxy." Different from state-backed or profit-motivated threats.
 5. **ai-company × #model-weights × rogue-state** — Model weight theft. Frontier lab's weights exfiltrated by state intelligence. Can't un-copy weights.
 6. **isia-enforcement × #raid × rogue-billionaire** — Private island / underground bunker scenario. Jurisdictional nightmares.
 7. **public-cluster-liberty × #surveillance × #legal-challenge** — Constitutional challenge to ISIA surveillance powers. Courts may side with civil liberties.
 8. **gov-treaty-major × #economic-pressure × #sanctions** — Treaty nation threatening to sanction the AGENCY (not a violator) for being too aggressive.
-9. **isia-comms × #narrative × public-cluster-indiff** — How do you make low-salience people care about ASI risk? Communication strategy cards.
-10. **natl-enforcement × #raid × #jurisdiction** — Domestic enforcement agency refuses to carry out ISIA directive. Cops don't want to search houses for GPUs.
+9. **isia-communications × #narrative × public-cluster-indifferent** — How do you make low-salience people care about ASI risk? Communication strategy cards.
+10. **national-enforcement × #raid × #jurisdiction** — Domestic enforcement agency refuses to carry out ISIA directive. Cops don't want to search houses for GPUs.

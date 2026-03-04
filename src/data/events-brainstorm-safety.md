@@ -6,9 +6,9 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 
 ---
 
-#### #saf--airgap-large-experiment
+#### #safety--airgap-large-experiment
 **Type:** preparation
-**Entities:** isia-safety-team, isia-research-ctrl, isia-enforcement
+**Entities:** isia-safety-team, isia-research-control, isia-enforcement
 **Topics:** #safety-research, #experiment, #dual-use
 **Situation:** The Chief Scientist wants to run ISIA's largest safety experiment yet: training a model at 2x10^23 FLOP to test a corrigibility hypothesis. Before the DG can even consider the science, two preconditions must be met. First, the airgap: the experiment compute cluster must be physically and electronically isolated so that (a) the model can't reach the internet, and (b) algorithmic insights from the experiment can't leak into the broader ML community. ISIA's current airgap facility was built for experiments 10x smaller. Upgrading it costs $400M and takes 8 months. Second, intelligence: ISIA needs to be confident the experiment won't accidentally cross the lethal threshold. At current algorithmic progress (~3x 2022 efficiency), the safety team estimates the lethal threshold is somewhere above 10^25 FLOP — but that's a rough estimate with wide error bars. The experiment is 50x below the estimate, which sounds safe, but the estimate itself could be wrong by an order of magnitude. If int is high, ISIA has better models of the threshold. If int is low, the error bars are enormous. The DG must decide: invest in the preconditions first, or skip them and hope the current setup is good enough?
 **Options:**
@@ -21,9 +21,9 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 
 ---
 
-#### #saf--internal-monitoring-expansion
+#### #safety--internal-monitoring-expansion
 **Type:** preparation
-**Entities:** isia-safety-team, isia-internal-sec, isia-research-ctrl
+**Entities:** isia-safety-team, isia-internal-security, isia-research-control
 **Topics:** #safety-research, #experiment, #research-approval
 **Situation:** ISIA's safety department has grown from 40 researchers to 340 over three years. The Chief Scientist wants to expand further to 600 — she has identified genuinely promising research threads that need staffing. But internal security raises a red flag: at 340 people, the department already has monitoring gaps. Three incidents in the past year where junior researchers ran unauthorized small-scale experiments on their workstations (consumer GPUs, below any compute threshold, but each was an ML training run the department didn't sanction). None produced anything dangerous, but the pattern is clear: a fraction of researchers, immersed in the most fascinating technical problems of the century, will experiment without permission. At 340, internal security can investigate incidents after the fact. At 600, with the current monitoring budget, they can't even do that. The DG faces a question: is the safety department well-monitored enough to safely expand? If monitoring is strong and the department is well-positioned (high int), massive expansion is low-risk. If monitoring is weak (low int), every additional researcher is another potential source of unsanctioned capability progress.
 **Options:**
@@ -31,12 +31,12 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Freeze hiring until internal monitoring is upgraded — double the internal security budget for the safety department before adding anyone (slower growth, but the department you build is one you can actually control)
 - Down (greyed out if int < 50): Implement a tiered access system — new hires get theory-only workstations with no ML compute access until they've been individually vetted (requires intelligence infrastructure to run the vetting)
 **Teaches:** Precondition 2 (Jörn's dilemma: expansion is risky if you can't monitor your own department). D-21 (agency must manage research directly because no one else can be trusted — but can the agency trust itself?), D-23 (safety doesn't scale, but for a different reason here: scaling creates internal control problems, not just diminishing returns)
-**Refs:** → #research--stepping-on-toes (the diminishing-returns version of the growth problem), → #inst--mole (internal integrity theme)
+**Refs:** → #research--stepping-on-toes (the diminishing-returns version of the growth problem), → #institutional--mole (internal integrity theme)
 **Bars:** saf ↑ if expanded with good monitoring, alg ↑ if unsanctioned experiments leak, int ↓ if monitoring stretched thin
 
 ---
 
-#### #saf--funding-deal-pentagon
+#### #safety--funding-deal-pentagon
 **Type:** crisis
 **Entities:** isia-safety-team, gov-treaty-major, isia-political
 **Topics:** #safety-research, #dual-use, #lobbying
@@ -51,7 +51,7 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 
 ---
 
-#### #saf--funding-deal-techbro
+#### #safety--funding-deal-techbro
 **Type:** crisis
 **Entities:** isia-safety-team, ai-company, isia-political
 **Topics:** #safety-research, #lobbying, #dual-use
@@ -61,14 +61,14 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Decline everything — the intelligence assessment makes the risk too high, find funding elsewhere (principled, but $500M doesn't grow on trees and the safety research needs it)
 - Down (greyed out if int < 50): Accept both but place the recommended hires under enhanced monitoring for their first two years — requires intelligence resources to do properly
 **Teaches:** Precondition 3 (what deals for funding, at risk of losing independence). F-39 (regulatory capture, this time by a private actor). The difference between overt strings and covert influence — the most dangerous funding conditions are the ones that aren't written down.
-**Refs:** → #inst--revolving-door (industry capture theme), → #saf--internal-monitoring-expansion (monitoring capacity determines whether you can manage risk)
+**Refs:** → #institutional--revolving-door (industry capture theme), → #safety--internal-monitoring-expansion (monitoring capacity determines whether you can manage risk)
 **Bars:** saf ↑ if funding accepted, pol ↓ if donor offended, int ↓ if embedded personnel go unmonitored
 
 ---
 
-#### #saf--senior-time-allocation
+#### #safety--senior-time-allocation
 **Type:** report
-**Entities:** isia-safety-team, isia-comms, isia-political
+**Entities:** isia-safety-team, isia-communications, isia-political
 **Topics:** #safety-research, #public-opinion
 **Situation:** ISIA has 12 senior alignment researchers — people capable of generating genuinely new ideas, not just executing known approaches. They are the bottleneck for everything. The Chief Scientist presents the quarterly allocation problem: (A) Each senior researcher mentoring 5 juniors produces ~0.3 additional senior-equivalents per year — slow, but the only way to grow the pipeline. Right now 4 seniors are mentoring. (B) Three seniors are on the public-communication circuit: congressional testimony, media interviews, science documentaries. This is why public support for safety research funding hasn't collapsed — people trust these specific scientists. Pull them off and the narrative vacuum fills with "ISIA wastes billions on nothing." (C) Five seniors are doing actual research — generating the novel ideas that juniors then develop. This is where breakthroughs come from. The Chief Scientist wants to pull all 3 communication seniors back to research — she says the window for a corrigibility breakthrough is narrow and she needs every mind. The comms director says support for the safety budget will evaporate within two quarters without senior scientists explaining the work to Congress and the public. Time pressure matters: at current algorithmic progress (~4x), the threshold is visibly shrinking.
 **Options:**
@@ -81,7 +81,7 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 
 ---
 
-#### #saf--three-year-stall
+#### #safety--three-year-stall
 **Type:** consequence
 **Entities:** isia-safety-team, isia-political, media
 **Topics:** #safety-research, #public-opinion
@@ -96,9 +96,9 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 
 ---
 
-#### #saf--university-consortium-demand
+#### #safety--university-consortium-demand
 **Type:** crisis
-**Entities:** researcher-safety, isia-research-ctrl, isia-political
+**Entities:** researcher-safety, isia-research-control, isia-political
 **Topics:** #safety-research, #publication, #classification
 **Situation:** A consortium of 14 major universities — MIT, Oxford, Tsinghua, ETH Zurich, and others — publishes an open letter demanding that ISIA return alignment research to the academic community. Their argument: ISIA's centralized control over safety research has created a bureaucratic bottleneck (B-25a) that is actively slowing progress. They cite three specific cases where ISIA's classification system prevented publication of results that the authors argue were purely theoretical and posed no dual-use risk. The letter has 2,200 academic signatories. The consortium proposes a "federated model" where universities run their own alignment research programs under ISIA guidelines but without ISIA's pre-publication review. The Chief Scientist is torn: she agrees that ISIA's review process is too slow, but she's also seen the classified intelligence on how theoretical papers have been used to accelerate capability research (B-6a). The academics haven't seen that intelligence and don't know what they're asking to be exposed to.
 **Options:**
@@ -106,12 +106,12 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Refuse — maintain centralized control, accept the political cost and the possibility that you're genuinely slowing progress (universities may boycott ISIA collaborations entirely)
 - Down (greyed out if int < 40): Share declassified case studies showing how "purely theoretical" papers were used for capability advances — convince the academics that the threat is real without revealing sources and methods
 **Teaches:** Precondition 6 (Jörn's dilemma: universities wanting control back). D-21 (no external institution can be trusted with dual-use research — but centralizing it creates bureaucratic failure modes). B-6a (theoretical research drives algorithmic progress and cannot be controlled). B-25a (review bottleneck).
-**Refs:** → #research--born-dangerous-pub (the specific dual-use publication problem), → #research--approval-dilemma (the review bottleneck these academics are protesting)
+**Refs:** → #research--born-dangerous-publication (the specific dual-use publication problem), → #research--approval-dilemma (the review bottleneck these academics are protesting)
 **Bars:** pol ↓ if universities boycott, saf ↑ if federated model accelerates research, alg ↑ if freed publications drive algorithmic progress
 
 ---
 
-#### #saf--media-waste-story
+#### #safety--media-waste-story
 **Type:** crisis
 **Entities:** media, isia-safety-team, isia-political
 **Topics:** #safety-research, #public-opinion
@@ -121,28 +121,28 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Absorb the hit — refuse to declassify, accept the political damage, hope institutional support holds (protects classified research but may trigger funding cuts that actually end the program)
 - Down (greyed out if pol > 60): Have the DG testify in closed session to the congressional committees — classified briefing that satisfies oversight without public disclosure (requires enough political capital that Congress grants a closed session)
 **Teaches:** Precondition 6 (Jörn's dilemma: media selling "ISIA wastes money" stories). The classification trap: dual-use constraints mean your successes must be hidden while your failures are public. D-19 (safety research doesn't look like normal science — "null results" and expensive retreats look like waste to outsiders but may be essential).
-**Refs:** → #saf--three-year-stall (the underlying stagnation that makes the story plausible), → #research--born-dangerous-pub (why successes can't be published)
+**Refs:** → #safety--three-year-stall (the underlying stagnation that makes the story plausible), → #research--born-dangerous-publication (why successes can't be published)
 **Bars:** pol ↓↓ if story drives narrative unchallenged, alg ↑ if declassification reveals capability-relevant findings, saf ↓ if funding cut in response
 
 ---
 
-#### #saf--government-overpromise
+#### #safety--government-overpromise
 **Type:** consequence
-**Entities:** gov-treaty-major, isia-safety-team, isia-comms
+**Entities:** gov-treaty-major, isia-safety-team, isia-communications
 **Topics:** #safety-research, #public-opinion, #safety-looks-solved
 **Situation:** The German Chancellor, in a speech to the Bundestag, announces: "Thanks to ISIA's safety research program, we are now within five years of solving the alignment problem. The pause is working, and it will end in our lifetimes." The Chief Scientist is furious. Her actual assessment: the program has made real progress on sub-ASI alignment, but the core ASI problems are no closer to solution, and a five-year timeline is "somewhere between reckless optimism and outright fabrication." The Chancellor's office got the "five years" figure from an ISIA progress briefing that discussed a five-year timeline for ONE sub-problem, which got telephone-gamed into "five years to solve everything." The damage is immediate: six nations begin lobbying the treaty council to set a "sunset date" for the pause. Two AI companies announce "post-pause readiness programs." The public now has a countdown clock in their heads. When year five arrives and alignment is not solved, the credibility crash will be catastrophic. The DG must decide how aggressively to contradict a key political ally.
 **Options:**
 - Left: Public correction — the DG issues a statement directly contradicting the Chancellor's timeline, with the Chief Scientist explaining why no credible timeline exists (alienates Germany, the agency's third-largest funder, but prevents the five-year time bomb)
 - Right: Quiet diplomacy — work with the Chancellor's office to walk back the statement gradually without a public confrontation (less damaging to the relationship, but the "five years" meme is already spreading and may be impossible to retract)
 **Teaches:** Precondition 6 (Jörn's dilemma: government overpromising on research progress). D-17 (nobody knows the timeline — politicians who claim otherwise are creating a trap). The expectation management problem: once the public believes alignment is nearly solved, the pause becomes politically unsustainable.
-**Refs:** → #era--safety-looks-solved (the endgame version of this dynamic), → #saf--three-year-stall (what happens when the overpromised timeline fails)
+**Refs:** → #era--safety-looks-solved (the endgame version of this dynamic), → #safety--three-year-stall (what happens when the overpromised timeline fails)
 **Bars:** pol ↓ if Chancellor contradicted publicly, saf ↓ long-term if sunset date adopted (safety research rushed to meet artificial deadline), pol ↑ short-term from public optimism (but this is a trap)
 
 ---
 
-#### #saf--rogue-internal-experiment
+#### #safety--rogue-internal-experiment
 **Type:** crisis
-**Entities:** isia-safety-team, isia-internal-sec, isia-research-ctrl
+**Entities:** isia-safety-team, isia-internal-security, isia-research-control
 **Topics:** #experiment, #dual-use, #safety-research
 **Situation:** Internal security discovers that a team of four junior researchers in ISIA's safety department ran an unauthorized ML experiment. They cobbled together 200 consumer GPUs from a university partnership (below any compute monitoring threshold), trained a small model overnight, and produced a result they believe is "the most important alignment finding in three years." The team leader, when confronted, is defiant: "The classification review process takes 9 months. We'd still be waiting for approval to run this experiment. The alignment problem doesn't wait for bureaucracy." The unauthorized experiment itself was small enough to be safe. But the precedent is not: if 4 junior researchers can run unsanctioned experiments using university hardware, so can 40. And not all of them will be as careful or as lucky. This is exactly the internal monitoring failure that makes safety department expansion dangerous. The finding they produced is, by initial assessment, genuinely significant.
 **Options:**
@@ -150,12 +150,12 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Quietly incorporate the result and upgrade monitoring — thank them privately, tighten compute access controls, don't publicize the breach (preserves talent and the finding, but signals that unsanctioned experiments are tolerated if they work)
 - Down (greyed out if int > 60): Use this incident to justify the expanded internal monitoring the security team has been requesting — turn the breach into a mandate for better oversight (only works if intelligence is high enough to credibly claim the current system caught it)
 **Teaches:** Precondition 2 (Jörn's dilemma: ISIA's own bloated safety department doing unsanctioned experiments). The innovator's dilemma inside a bureaucracy: the same initiative that produces breakthroughs also produces uncontrolled risk. D-19 (safety research is desperate and weird — the best researchers may not follow rules).
-**Refs:** → #saf--internal-monitoring-expansion (the systemic version of this problem), → #research--approval-dilemma (the review bottleneck that motivated the breach)
+**Refs:** → #safety--internal-monitoring-expansion (the systemic version of this problem), → #research--approval-dilemma (the review bottleneck that motivated the breach)
 **Bars:** saf ↑ if finding is real, alg ↑ if experiment produced dual-use side-effects, int ↓ if breach signals monitoring weakness
 
 ---
 
-#### #saf--mentoring-pipeline-crisis
+#### #safety--mentoring-pipeline-crisis
 **Type:** report
 **Entities:** isia-safety-team, isia-political
 **Topics:** #safety-research
@@ -165,5 +165,5 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Maintain current allocation — 12 seniors is what you have, optimize their research output, hope for a breakthrough that changes the math (bet on the short game, but if the breakthrough doesn't come, the pipeline never grows)
 - Down (greyed out if saf > 60): Invest in "research amplification" tools — purpose-built AI assistants that let each senior researcher effectively supervise more juniors (if safety progress is high enough, the agency's own alignment work may have produced tools that help here — but these tools are themselves dual-use per D-22)
 **Teaches:** D-23 (safety doesn't scale by adding researchers), D-17 (unknown difficulty makes planning impossible), Precondition 4 (allocation of senior researcher time). The pipeline math: even optimistic scenarios require centuries unless something fundamental changes.
-**Refs:** → #saf--senior-time-allocation (the tactical version of this strategic problem), → #research--biotech-proposal (the radical alternative when the math doesn't work)
+**Refs:** → #safety--senior-time-allocation (the tactical version of this strategic problem), → #research--biotech-proposal (the radical alternative when the math doesn't work)
 **Bars:** saf ↓ short-term if mentoring increased (fewer seniors researching), saf ↑ long-term if pipeline grows, alg ↑ if AI tools for mentoring are dual-use

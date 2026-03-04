@@ -19,14 +19,14 @@ The deeper problem: the court challenge is legitimate. The agency IS conducting 
 - Right: Pre-emptively narrow the program before ruling — voluntarily restrict consumer monitoring to declared facilities only (preserves legitimacy, reopens consumer hardware blind spot)
 - Down (greyed out if pol low): Offer the court a classified national-security briefing on intercepted threats — unprecedented, may sway the judges, but sets precedent for judicial oversight of operations
 **Teaches:** The agency operates within legal systems that don't have a category for existential risk. Courts apply normal constitutional standards to abnormal situations. Civil liberties arguments against the agency are often legally correct — the question is whether legal correctness should yield to survival. (E-50, public-cluster-liberty)
-**Refs:** → #mon--surveillance-expand (what triggered this), coverage gap #7
+**Refs:** → #monitoring--surveillance-expand (what triggered this), coverage gap #7
 **Bars:** pol ↓ if fought aggressively, int ↓ if program narrowed
 
 ---
 
 #### #civil--deepfake-isia-director
 **Type:** crisis
-**Entities:** journalist, isia-comms, public-cluster-skeptic
+**Entities:** journalist, isia-communications, public-cluster-skeptic
 **Topics:** #narrative, #public-opinion, #ai-diffusion
 **Situation:** A deepfake video of the DG surfaces on social media — convincing footage of the player character saying "I know ASI isn't real but we need the funding." Tens of millions of views before takedown. The agency's AI detection tools confirm it's synthetic, but the damage is done: skeptic cluster sees it as confirmation, fear cluster worries the agency's been lying, indifferent cluster now pays attention for the wrong reasons.
 
@@ -36,14 +36,14 @@ The meta-problem: this is a non-ASI AI harm (E-53) that directly undermines the 
 - Right: Ignore it — responding amplifies it, trust the public to be skeptical of video in a deepfake era (principled, but the video keeps spreading)
 - Down (greyed out if int high): Trace the deepfake to its creator — if linked to a state actor or rogue lab, turn it into evidence of hostile intent
 **Teaches:** E-53 (non-ASI harms shift opinion), E-54 (incorrect conclusions from AI incidents). Deepfakes corrode the epistemic commons — they don't just create false beliefs, they destroy the ability to establish true ones. The agency's warnings about real threats become unfalsifiable in a world where all video is suspect.
-**Refs:** → #pol--success-narrative (eroding trust), → #pol--corp-lobbying (who benefits?)
+**Refs:** → #political--success-narrative (eroding trust), → #political--corporate-lobbying (who benefits?)
 **Bars:** pol ↓↓ (trust damaged regardless of response)
 
 ---
 
 #### #civil--labor-union-split
 **Type:** crisis
-**Entities:** public-cluster-econ, isia-political, corp-lobby
+**Entities:** public-cluster-economic, isia-political, corporate-lobby
 **Topics:** #economic-pressure, #public-opinion, #lobbying, #protest
 **Situation:** The International Federation of Metalworkers (28M members across treaty nations) is fracturing over the pause. The manufacturing wing wants the pause lifted — AI automation restrictions cost them bargaining leverage because non-treaty nations automate freely. The logistics wing wants the pause strengthened — autonomous systems already eliminated 4M of their jobs using sub-threshold AI, and they want tighter restrictions. Both wings are organizing politically, but in opposite directions.
 
@@ -52,14 +52,14 @@ The agency faces a union movement that simultaneously demands MORE and LESS regu
 - Left: Side with logistics wing — propose tighter sub-threshold restrictions (gains one labor faction, loses the other AND corporate political allies, constrains economy)
 - Right: Stay out of labor politics — reaffirm ASI-only mandate (both wings conclude the agency doesn't care about workers, econ cluster grows)
 **Teaches:** E-50 (different clusters use different channels — unions lobby AND protest), E-57 (lived experience shapes opinion more than expert arguments), E-31 (economic mechanisms operate differently on different people). Labor unions are political actors whose position on the pause depends entirely on how AI affects their specific industry.
-**Refs:** → #pol--unemployment-crisis (broader context), → #pol--election-year (unions influence elections)
+**Refs:** → #political--unemployment-crisis (broader context), → #political--election-year (unions influence elections)
 **Bars:** pol ↓ either way (lose support from one constituency)
 
 ---
 
 #### #civil--megachurch-sermon
 **Type:** consequence
-**Entities:** public-cluster-fear, public-cluster-skeptic, isia-comms
+**Entities:** public-cluster-fear, public-cluster-skeptic, isia-communications
 **Topics:** #public-opinion, #narrative
 **Situation:** Pastor Elijah Morrow of a 40,000-member megachurch in Houston delivers a viral sermon: "Building a mind greater than God's is the sin of Babel." The sermon gets 90M views. Within weeks, evangelical organizations across the US, Brazil, and Nigeria adopt anti-ASI positions — but framed entirely in religious terms. "AI is hubris." "Only God creates intelligence."
 
@@ -77,7 +77,7 @@ The agency's comms team sees opportunity and danger simultaneously. These new al
 
 #### #civil--ai-winter-narrative
 **Type:** report
-**Entities:** public-cluster-skeptic, journalist, isia-comms
+**Entities:** public-cluster-skeptic, journalist, isia-communications
 **Topics:** #narrative, #public-opinion, #success-trap
 **Situation:** A best-selling book by a former Stanford CS professor — "The Great Overreaction: How AI Hysteria Cost the World a Decade" — argues that ASI was always physically impossible and the pause was an expensive hoax driven by paranoid effective altruists and power-hungry bureaucrats. The book is well-written, persuasive to non-technical readers, and factually wrong in ways that require deep technical knowledge to rebut.
 
@@ -86,14 +86,14 @@ The book is burning through the skeptic and indifferent clusters. Six talk-show 
 Polling shift: "ASI threat was exaggerated" up 11 points in key demographics since publication.
 **Options:** None — briefing. But this shifts the political landscape: future budget fights and elections become harder.
 **Teaches:** E-48 (knowledge of AI risk unevenly distributed), E-52 (success indistinguishable from "threat was never real"), E-35 (abstract risk vs. visible cost). The agency's opponents aren't all corporate shills or ideologues — some are sincere, credentialed experts who are simply wrong about the technical question. Rebutting them requires communicating concepts that most people cannot evaluate.
-**Refs:** → #pol--success-trap (the book weaponizes the success problem), → #pol--success-narrative (shifting polls)
+**Refs:** → #political--success-trap (the book weaponizes the success problem), → #political--success-narrative (shifting polls)
 **Bars:** pol ↓ (political landscape shifts against agency)
 
 ---
 
 #### #civil--celebrity-endorsement-backfire
 **Type:** consequence
-**Entities:** public-cluster-indiff, public-cluster-liberty, isia-comms
+**Entities:** public-cluster-indifferent, public-cluster-liberty, isia-communications
 **Topics:** #public-opinion, #narrative
 **Situation:** A globally popular musician (300M social followers) makes the pause their personal cause — announces a "Pause World Tour," donates $50M to pro-pause advocacy, and records a music video depicting ASI apocalypse. The indifferent cluster is suddenly paying attention. Support for the pause jumps 9 points overnight.
 
@@ -104,14 +104,14 @@ The agency had no involvement with the celebrity. It neither sought nor endorsed
 - Left: Proactive distancing — issue statement that the agency's mission is independent of any individual (looks reactive, draws more attention to the link)
 - Right: Say nothing — let the news cycle move on (the association lingers)
 **Teaches:** E-43 (opinion clusters shift in response to events — including events totally unrelated to AI), E-50 (public opinion channels are unpredictable). The agency's political support depends on factors it cannot control and often cannot even anticipate. Celebrity association is a two-edged sword with no handle.
-**Refs:** → #pol--success-narrative (opinion tracking), → #pol--election-year (shifted support affects elections)
+**Refs:** → #political--success-narrative (opinion tracking), → #political--election-year (shifted support affects elections)
 **Bars:** pol ↓ (net negative after the scandal, despite the initial boost)
 
 ---
 
 #### #civil--protest-to-legislator-pipeline
 **Type:** crisis
-**Entities:** public-cluster-liberty, public-cluster-econ, gov-treaty-major
+**Entities:** public-cluster-liberty, public-cluster-economic, gov-treaty-major
 **Topics:** #protest, #public-opinion, #budget, #election
 **Situation:** Street protests against ISIA surveillance in Berlin, London, and Washington have been growing for months — mostly the liberty cluster, some econ cluster joining. Now the protests have crossed a threshold: three parliamentary caucuses in Europe and a bipartisan group in the US Senate have introduced coordinated legislation to strip the agency of domestic surveillance authority. The bills have real support — 40%+ approval in polls. Media framing: "the people vs. the surveillance state."
 
@@ -121,14 +121,14 @@ This is the mechanism E-50 describes: opinion cluster → protest → media → 
 - Right: Propose compromise — agency offers independent oversight board with civil-liberties mandate (loses some operational freedom, gains legitimacy)
 - Down (greyed out if int high): Declassify a recent surveillance-enabled interception to demonstrate operational necessity (burns methods, but shows concrete value)
 **Teaches:** E-50 (concrete channels from opinion to policy: protest → media → legislator → vote), public-cluster-liberty. Democratic accountability and existential risk management are genuinely in tension — this isn't a PR problem, it's a structural problem. The agency cannot survive without democratic legitimacy, and it cannot do its job within the constraints democracy imposes.
-**Refs:** → #civil--supreme-court-challenge (legal track of same conflict), → #mon--surveillance-expand (what triggered the backlash)
+**Refs:** → #civil--supreme-court-challenge (legal track of same conflict), → #monitoring--surveillance-expand (what triggered the backlash)
 **Bars:** int ↓ if surveillance stripped, pol ↓ if fought aggressively
 
 ---
 
 #### #civil--autonomous-vehicle-massacre
 **Type:** crisis
-**Entities:** public-cluster-fear, public-cluster-skeptic, isia-comms, journalist
+**Entities:** public-cluster-fear, public-cluster-skeptic, isia-communications, journalist
 **Topics:** #public-opinion, #narrative, #ai-diffusion
 **Situation:** An autonomous vehicle fleet in Seoul malfunctions catastrophically — 23 dead, 140 injured over 45 minutes before manual override is achieved. The AI system was operating well within treaty limits. Investigation shows a conventional software bug, not an AI capability issue. But the public doesn't parse this distinction.
 
@@ -142,14 +142,14 @@ All three reactions are based on the same incorrect inference: that this non-ASI
 - Left: Correct the record — press conference explaining this was a software bug, not an AI capability issue (honest, costs political opportunity, skeptics say "they're deflecting")
 - Right: Lean into the fear — "this shows why AI oversight matters" without specifying that this is unrelated to ASI (dishonest but politically useful, attaches mission to misunderstanding)
 **Teaches:** E-53 (non-ASI harms shift opinion in unpredictable directions), E-54 (incorrect conclusions from AI incidents require rare technical expertise to correct), E-35 (visible harm vs. invisible risk). The public forms opinions about AI based on what happens to them — not on risk assessments they can't evaluate. The agency must either accept being associated with all AI outcomes or risk irrelevance by insisting on distinctions nobody understands.
-**Refs:** → #pol--protest-that-helps (similar dynamic, different incident), → #pol--unemployment-crisis (AI harm creates political pressure)
+**Refs:** → #political--protest-that-helps (similar dynamic, different incident), → #political--unemployment-crisis (AI harm creates political pressure)
 **Bars:** pol ↑ if fear exploited (temporarily), pol ↓ if corrected (lose the moment)
 
 ---
 
 #### #civil--academic-freedom-revolt
 **Type:** crisis
-**Entities:** researcher-safety, researcher-capability, civil-liberties, isia-research-ctrl
+**Entities:** researcher-safety, researcher-capability, civil-liberties, isia-research-control
 **Topics:** #research-approval, #publication, #public-opinion, #narrative
 **Situation:** 1,200 university researchers across 40 countries sign an open letter: "The Right to Think: Against the Criminalization of Knowledge." They argue ISIA research restrictions violate academic freedom, that classification of safety research is counterproductive, and that the review process delays critical work by 6-18 months. Signatories include three Nobel laureates and the heads of six national science academies.
 
@@ -161,14 +161,14 @@ A prominent signatory goes on television: "The agency has made it illegal to und
 - Right: Reform the process — accelerate review timelines and narrow classification scope (operationally costly, but defuses legitimate criticism)
 - Down (greyed out if saf high): Invite letter organizers to co-design new review process (slow, but converts opponents into stakeholders)
 **Teaches:** B-25a (review bottleneck), B-7 (different research types need different enforcement). Academic freedom arguments against research restrictions are strong because they're partly right — the agency's restrictions DO slow safety research. The tension isn't "freedom vs. security" but "how much safety delay is worth how much security?"
-**Refs:** → #research--born-dangerous-pub (what happens when research is unrestricted), → #research--approval-dilemma (the review process being criticized)
+**Refs:** → #research--born-dangerous-publication (what happens when research is unrestricted), → #research--approval-dilemma (the review process being criticized)
 **Bars:** saf ↓ if restrictions maintained (research slowed by controversy), pol ↓ if restrictions maintained (lose academic community), alg ↑ if restrictions loosened (more gets published)
 
 ---
 
 #### #civil--low-salience-campaign
 **Type:** preparation
-**Entities:** isia-comms, public-cluster-indiff
+**Entities:** isia-communications, public-cluster-indifferent
 **Topics:** #public-opinion, #narrative
 **Situation:** Internal strategy meeting. Comms director presents data: 38% of the population in treaty nations is in the indifferent cluster — "AI is not a topic I think about." These people don't oppose the pause; they don't think about it at all. They vote on other issues. They're invisible in polls about AI because they skip those questions. But they VOTE, and politicians know their AI-indifferent constituents won't punish them for cutting the agency's budget.
 
@@ -182,14 +182,14 @@ The third option is genuinely reasonable: activating the indifferent cluster mig
 - Left: Launch personal-relevance campaign — $200M, 18-month rollout (expensive, uncertain, could backfire)
 - Right: Accept indifference — redirect comms budget to lobbying legislators directly (cheaper, faster, but the democratic foundation erodes quietly)
 **Teaches:** E-47 (political salience varies enormously), E-48 (knowledge of AI risk unevenly distributed), E-35 (communicating invisible risk is structurally hard). The indifferent cluster is the biggest reservoir of potential support AND potential opposition. Activating them is a gamble because the agency can't control what they'll conclude once they start paying attention.
-**Refs:** → #pol--success-narrative (the indifferent cluster grows when nothing happens), → #era--generational-shift (younger cohorts more likely to be indifferent)
+**Refs:** → #political--success-narrative (the indifferent cluster grows when nothing happens), → #era--generational-shift (younger cohorts more likely to be indifferent)
 **Bars:** pol ↑ if campaign works (uncertain), pol ↓ if campaign backfires or budget spent with no return
 
 ---
 
 #### #civil--deepfake-election-interference
 **Type:** crisis
-**Entities:** journalist, gov-treaty-major, public-cluster-skeptic, isia-comms
+**Entities:** journalist, gov-treaty-major, public-cluster-skeptic, isia-communications
 **Topics:** #ai-diffusion, #election, #narrative, #public-opinion
 **Situation:** Three weeks before a critical election in a major treaty nation, AI-generated deepfakes flood social media: fabricated recordings of the pro-pause candidate saying contradictory things, fake news articles from real outlet mastheads, synthetic phone calls to voters from "campaign volunteers" who don't exist. All produced by sub-threshold AI systems — perfectly legal under the treaty.
 
@@ -200,14 +200,14 @@ The devastating irony: the technology the treaty permits is being used to destro
 - Left: Deploy ISIA forensics team to assist the national election commission — provide deepfake detection tools (unprecedented intervention in domestic politics, but defends democratic integrity)
 - Right: Stay out of the election — the agency has no mandate to police domestic political speech (principled, but the election outcome determines whether the treaty survives)
 **Teaches:** E-53 (non-ASI AI harms), E-56 (AI diffusion creates new attack surfaces), E-42 (elections can reverse the pause). Sub-threshold AI is powerful enough to subvert democracy, and democracy is the mechanism that sustains the pause. The treaty's own permission structure creates the tools of its destruction.
-**Refs:** → #civil--deepfake-isia-director (similar technology, different target), → #pol--election-year (election stakes)
+**Refs:** → #civil--deepfake-isia-director (similar technology, different target), → #political--election-year (election stakes)
 **Bars:** pol ↓↓ if anti-pause candidate wins, pol ↓ if agency intervention discovered
 
 ---
 
 #### #civil--upload-milestone-panic
 **Type:** consequence
-**Entities:** researcher-safety, public-cluster-fear, public-cluster-skeptic, isia-comms
+**Entities:** researcher-safety, public-cluster-fear, public-cluster-skeptic, isia-communications
 **Topics:** #uploading, #public-opinion, #narrative, #ethics
 **Situation:** A university team in Zurich successfully uploads and runs a functional neural simulation of a mouse brain at 1:1 fidelity for 48 hours. The paper is on the cover of Nature. This is a genuine scientific milestone — and politically explosive.
 
