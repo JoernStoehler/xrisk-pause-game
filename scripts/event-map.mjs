@@ -831,18 +831,42 @@ function writeHtml(events, analysis) {
   });
 
   function resetHighlight() {
-    edgeElements.forEach(function(el) {
-      el.setAttribute('stroke', '#cbd5e1');
-      el.setAttribute('stroke-opacity', '0.3');
-      el.setAttribute('stroke-width', '0.6');
-    });
-    node.select('circle').attr('opacity', 0.9);
+    var q = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    if (q) {
+      // Restore search state instead of default
+      var matchingIds = new Set();
+      nodes.forEach(function(d) {
+        var match = d.label.toLowerCase().includes(q)
+          || d.id.toLowerCase().includes(q)
+          || (d.entities && d.entities.some(function(e) { return e.toLowerCase().includes(q); }))
+          || (d.topics && d.topics.some(function(t) { return t.toLowerCase().includes(q); }))
+          || (d.situation && d.situation.toLowerCase().includes(q));
+        if (match) matchingIds.add(d.id);
+      });
+      node.select('circle').attr('opacity', function(d) { return matchingIds.has(d.id) ? 1 : 0.05; });
+      edgeElements.forEach(function(el, idx) {
+        var e = edges[idx];
+        var sid = typeof e.source === 'object' ? e.source.id : e.source;
+        var tid = typeof e.target === 'object' ? e.target.id : e.target;
+        var connected = matchingIds.has(sid) || matchingIds.has(tid);
+        el.setAttribute('stroke', '#cbd5e1');
+        el.setAttribute('stroke-opacity', connected ? '0.5' : '0.05');
+        el.setAttribute('stroke-width', '0.6');
+      });
+    } else {
+      edgeElements.forEach(function(el) {
+        el.setAttribute('stroke', '#cbd5e1');
+        el.setAttribute('stroke-opacity', '0.3');
+        el.setAttribute('stroke-width', '0.6');
+      });
+      node.select('circle').attr('opacity', 0.9);
+    }
   }
 
   node.on('mouseenter', function(event, d) {
     if (isDragging) return;
 
-    // Tooltip always shows on hover, regardless of lock state
+    // Show tooltip on hover
     if (d.nodeType === 'entity') {
       tooltip.innerHTML =
         '<span class="tt-id">' + d.label + '</span>' +
