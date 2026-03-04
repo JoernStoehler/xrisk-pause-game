@@ -383,7 +383,15 @@
           else { el.setAttribute('x2', event.x); el.setAttribute('y2', event.y); }
         }
       })
-      .on('end', function() { isDragging = false; }));
+      .on('end', function() {
+        isDragging = false;
+        // Reset wasDragged after a tick so the click handler sees it, then clears it
+        setTimeout(function() { wasDragged = false; }, 0);
+        // Clean up tooltip/highlight in case cursor ended outside the node
+        tooltip.style.display = 'none';
+        highlightedNode = null;
+        resetHighlight();
+      }));
 
   // Circle for each node
   node.append('circle')
@@ -516,10 +524,13 @@
     });
   })
   .on('mousemove', function(event) {
+    var tw = tooltip.offsetWidth || 380;
+    var th = tooltip.offsetHeight || 200;
     var tx = event.pageX + 14;
     var ty = event.pageY + 14;
-    if (tx + 380 > W) tx = event.pageX - 394;
-    if (ty + 200 > H) ty = event.pageY - 200;
+    if (tx + tw > W) tx = event.pageX - tw - 14;
+    if (ty + th > H) ty = event.pageY - th - 14;
+    if (ty < 0) ty = 8;
     tooltip.style.left = tx + 'px';
     tooltip.style.top = ty + 'px';
   })
