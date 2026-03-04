@@ -628,7 +628,7 @@ function writeHtml(events, analysis) {
   <div id="controls">
     <button id="btn-reset">Reset Zoom</button>
     <button id="btn-labels" class="active">Labels</button>
-    <button id="btn-stubs">Hide Stubs</button>
+    <button id="btn-stubs" class="active">Stubs</button>
   </div>
 
   <div id="copy-toast">Copied!</div>
@@ -783,11 +783,15 @@ function writeHtml(events, analysis) {
       })
       .on('end', function() {
         isDragging = false;
+        // Only reset highlight if actual dragging occurred — a zero-movement
+        // click also fires drag start/end, and resetting would kill the hover
+        // highlight that's still active (hover → click → highlight vanishes bug).
+        if (wasDragged) {
+          tooltip.style.display = 'none';
+          resetHighlight();
+        }
         // Reset wasDragged after a tick so the click handler sees it, then clears it
         setTimeout(function() { wasDragged = false; }, 0);
-        // Clean up tooltip/highlight in case cursor ended outside the node
-        tooltip.style.display = 'none';
-            resetHighlight();
       }));
 
   // Circle for each node
@@ -986,8 +990,7 @@ function writeHtml(events, analysis) {
 
   document.getElementById('btn-stubs').addEventListener('click', function() {
     stubsHidden = !stubsHidden;
-    this.classList.toggle('active', stubsHidden);
-    this.textContent = stubsHidden ? 'Show Stubs' : 'Hide Stubs';
+    this.classList.toggle('active', !stubsHidden);
     node.style('display', function(d) {
       if (stubsHidden && stubNodeIds.has(d.id)) return 'none';
       return null;
