@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Map -- 82 events</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Space Mono', 'SF Mono', 'Fira Code', monospace;
+    background: #1a1a2e;
+    color: #e0e0e0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+  #graph-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  svg { display: block; }
+
+  /* Top-left header */
+  #header {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  #header h1 {
+    color: #f0c040;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  #header p {
+    color: #888;
+    font-size: 12px;
+  }
+
+  /* Bar imbalance panel */
+  #bar-panel {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    background: rgba(22, 33, 62, 0.92);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 16px;
+    min-width: 220px;
+  }
+  #bar-panel h3 {
+    color: #f0c040;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+  .bar-label { width: 110px; color: #ccc; }
+  .bar-track {
+    flex: 1;
+    height: 14px;
+    background: #0f0f23;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s;
+  }
+  .bar-pct { width: 36px; text-align: right; color: #aaa; }
+
+  /* Legend */
+  #legend {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 10;
+    background: rgba(22, 33, 62, 0.92);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  #legend h3 {
+    color: #f0c040;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .legend-section { margin-bottom: 8px; }
+  .legend-section:last-child { margin-bottom: 0; }
+  .legend-title { color: #888; font-size: 10px; text-transform: uppercase; margin-bottom: 4px; }
+  .legend-items { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: #ccc;
+  }
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .legend-rect {
+    width: 14px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    border: 1.5px solid;
+  }
+
+  /* Cluster labels */
+  #cluster-labels {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    z-index: 10;
+    background: rgba(22, 33, 62, 0.92);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 12px 16px;
+    max-width: 240px;
+  }
+  #cluster-labels h3 {
+    color: #f0c040;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  /* Tooltip */
+  #tooltip {
+    position: absolute;
+    z-index: 100;
+    background: rgba(16, 16, 36, 0.96);
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 12px 16px;
+    max-width: 380px;
+    font-size: 12px;
+    line-height: 1.5;
+    pointer-events: none;
+    display: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  #tooltip .tt-id { color: #f0c040; font-weight: bold; font-size: 14px; }
+  #tooltip .tt-type { display: inline-block; padding: 1px 6px; border-radius: 3px; color: white; font-size: 10px; font-weight: bold; margin-left: 6px; }
+  #tooltip .tt-situation { color: #bbb; margin: 6px 0; }
+  #tooltip .tt-section { margin-top: 6px; }
+  #tooltip .tt-label { color: #888; font-size: 10px; text-transform: uppercase; }
+  #tooltip .tt-tags { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 2px; }
+  #tooltip .tt-tag-entity { background: #1a3d5c; padding: 1px 5px; border-radius: 2px; font-size: 10px; }
+  #tooltip .tt-tag-topic { background: #3d1a5c; padding: 1px 5px; border-radius: 2px; font-size: 10px; }
+  #tooltip .tt-bars { color: #7fdbca; margin-top: 4px; }
+  #tooltip .tt-refs { color: #f0c040; margin-top: 4px; }
+  #tooltip .tt-broken { color: #e74c3c; }
+
+  /* Controls */
+  #controls {
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  #controls button {
+    background: rgba(22, 33, 62, 0.92);
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #ccc;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  #controls button:hover { background: #2a2a4e; border-color: #666; }
+  #controls button.active { border-color: #f0c040; color: #f0c040; }
+
+  /* Search */
+  #search-box {
+    position: absolute;
+    top: 80px;
+    right: 16px;
+    z-index: 10;
+  }
+  #search-input {
+    background: rgba(22, 33, 62, 0.92);
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: #e0e0e0;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    width: 200px;
+    outline: none;
+  }
+  #search-input:focus { border-color: #f0c040; }
+  #search-input::placeholder { color: #666; }
+</style>
+</head>
+<body>
+<div id="graph-container">
+  <div id="header">
+    <h1>Event Map -- 82 events</h1>
+    <p>4 source files | 128 references | 18 broken</p>
+  </div>
+
+  <div id="bar-panel">
+    <h3>Bar Imbalance</h3>
+  </div>
+
+  <div id="controls">
+    <button id="btn-reset">Reset Zoom</button>
+    <button id="btn-labels" class="active">Labels</button>
+    <button id="btn-broken">Broken Refs</button>
+  </div>
+
+  <div id="search-box">
+    <input id="search-input" type="text" placeholder="Search events..." />
+  </div>
+
+  <div id="legend">
+    <h3>Legend</h3>
+    <div class="legend-section">
+      <div class="legend-title">Event Type (node color)</div>
+      <div class="legend-items">
+        <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div>Crisis</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3498db"></div>Report</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div>Consequence</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#2ecc71"></div>Preparation</div>
+      </div>
+    </div>
+    <div class="legend-section">
+      <div class="legend-title">Node size = bars affected (1-4)</div>
+    </div>
+    <div class="legend-section">
+      <div class="legend-title">Cluster (outline color)</div>
+      <div class="legend-items" id="cluster-legend-items"></div>
+    </div>
+  </div>
+
+  <div id="tooltip"></div>
+
+  <svg id="graph-svg"></svg>
+</div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+(function() {
+  const DATA = {"nodes":[{"id":"#civil--supreme-court-challenge","type":"crisis","rawType":"crisis","cluster":"civil","entities":["civil-liberties","isia-enforcement","isia-political"],"topics":["#surveillance","#legal-challenge","#public-opinion"],"situation":"The American Civil Liberties Union brings a landmark case to the Supreme Court arguing that ISIA chip-tracking firmware on consumer devices violates the Fourth Amendment. They have strong precedent — the case is legally serious, not frivolous. Two former ISIA attorneys filed amicus briefs supporting the challenge. If the court rules against the agency, the entire consumer-hardware monitoring program collapses in the US. If the agency fights and wins, it validates the surveillance — but the liberty cluster grows by 8 points in polling and three European courts announce similar reviews. The deeper problem: the court challenge is legitimate. The agency IS conducting mass surveillance. The legal question is whether existential risk justifies it. The judge doesn't understand ASI risk and has no framework to evaluate it.","bars":"pol ↓ if fought aggressively, int ↓ if program narrowed","barCount":2,"refs":["#mon--surveillance-expand","#7"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--deepfake-isia-director","type":"crisis","rawType":"crisis","cluster":"journalist","entities":["journalist","isia-comms","public-cluster-skeptic"],"topics":["#narrative","#public-opinion","#ai-diffusion"],"situation":"A deepfake video of the DG surfaces on social media — convincing footage of the player character saying \"I know ASI isn't real but we need the funding.\" Tens of millions of views before takedown. The agency's AI detection tools confirm it's synthetic, but the damage is done: skeptic cluster sees it as confirmation, fear cluster worries the agency's been lying, indifferent cluster now pays attention for the wrong reasons. The meta-problem: this is a non-ASI AI harm (E-53) that directly undermines the agency tasked with preventing ASI. The very technology the pause allows (sub-threshold AI) is being used to destroy the political support the pause depends on. And the agency can't easily prove anything anymore — if AI can fabricate video of the DG, it can fabricate anything, including the agency's evidence of threats.","bars":"pol ↓↓ (trust damaged regardless of response)","barCount":1,"refs":["#pol--success-narrative","#pol--corp-lobbying"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--labor-union-split","type":"crisis","rawType":"crisis","cluster":"public","entities":["public-cluster-econ","isia-political","corp-lobby"],"topics":["#economic-pressure","#public-opinion","#lobbying","#protest"],"situation":"The International Federation of Metalworkers (28M members across treaty nations) is fracturing over the pause. The manufacturing wing wants the pause lifted — AI automation restrictions cost them bargaining leverage because non-treaty nations automate freely. The logistics wing wants the pause strengthened — autonomous systems already eliminated 4M of their jobs using sub-threshold AI, and they want tighter restrictions. Both wings are organizing politically, but in opposite directions. The agency faces a union movement that simultaneously demands MORE and LESS regulation. Both sides have legitimate grievances. The manufacturing wing is being courted by corporate lobbyists (\"we're on the same side — lift the pause\"). The logistics wing is being courted by fear-cluster activists (\"AI is destroying your lives\"). Neither side understands ASI risk — they're fighting about jobs.","bars":"pol ↓ either way (lose support from one constituency)","barCount":1,"refs":["#pol--unemployment-crisis","#pol--election-year"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--megachurch-sermon","type":"consequence","rawType":"consequence","cluster":"public","entities":["public-cluster-fear","public-cluster-skeptic","isia-comms"],"topics":["#public-opinion","#narrative"],"situation":"Pastor Elijah Morrow of a 40,000-member megachurch in Houston delivers a viral sermon: \"Building a mind greater than God's is the sin of Babel.\" The sermon gets 90M views. Within weeks, evangelical organizations across the US, Brazil, and Nigeria adopt anti-ASI positions — but framed entirely in religious terms. \"AI is hubris.\" \"Only God creates intelligence.\" This is a massive opinion-cluster event: millions of people who were in the indifferent cluster (E-29: \"AI is not a topic I think about\") suddenly become strong pause supporters — but for theological reasons, not risk-assessment reasons. They support the pause but oppose the agency's scientific mission (safety research, cognitive enhancement, uploading). They want the pause to be permanent — not a bridge to safe ASI, but a moral prohibition. The agency's comms team sees opportunity and danger simultaneously. These new allies could triple political support for the pause. But they'd also block safety research and demand the agency justify itself in religious rather than scientific terms.","bars":"pol ↑↑ if embraced (massive new coalition), saf ↓ if embraced (research constrained by religious allies)","barCount":2,"refs":["#era--generational-shift","#research--biotech-proposal"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--ai-winter-narrative","type":"report","rawType":"report","cluster":"public","entities":["public-cluster-skeptic","journalist","isia-comms"],"topics":["#narrative","#public-opinion","#success-trap"],"situation":"A best-selling book by a former Stanford CS professor — \"The Great Overreaction: How AI Hysteria Cost the World a Decade\" — argues that ASI was always physically impossible and the pause was an expensive hoax driven by paranoid effective altruists and power-hungry bureaucrats. The book is well-written, persuasive to non-technical readers, and factually wrong in ways that require deep technical knowledge to rebut. The book is burning through the skeptic and indifferent clusters. Six talk-show appearances this month. A documentary in pre-production. The author isn't malicious — they're a legitimate computer scientist who genuinely believes ASI is impossible. They have credentials the agency's spokespeople lack. The agency's chief scientist can rebut the technical arguments, but only in ways the audience won't understand. Polling shift: \"ASI threat was exaggerated\" up 11 points in key demographics since publication.","bars":"pol ↓ (political landscape shifts against agency)","barCount":1,"refs":["#pol--success-trap","#pol--success-narrative"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--celebrity-endorsement-backfire","type":"consequence","rawType":"consequence","cluster":"public","entities":["public-cluster-indiff","public-cluster-liberty","isia-comms"],"topics":["#public-opinion","#narrative"],"situation":"A globally popular musician (300M social followers) makes the pause their personal cause — announces a \"Pause World Tour,\" donates $50M to pro-pause advocacy, and records a music video depicting ASI apocalypse. The indifferent cluster is suddenly paying attention. Support for the pause jumps 9 points overnight. Three weeks later, the musician is arrested for tax evasion and domestic violence. The press narrative pivots instantly: \"the celebrity who supported the AI pause is a fraud.\" Anti-pause commentators connect the two: \"the same people who believed the ASI hoax believed this celebrity was a saint.\" The skeptic cluster uses it as proof that pause supporters are gullible. Support drops 14 points — 5 points BELOW where it started. The agency had no involvement with the celebrity. It neither sought nor endorsed the support. But in the public mind, the association is permanent.","bars":"pol ↓ (net negative after the scandal, despite the initial boost)","barCount":1,"refs":["#pol--success-narrative","#pol--election-year"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--protest-to-legislator-pipeline","type":"crisis","rawType":"crisis","cluster":"public","entities":["public-cluster-liberty","public-cluster-econ","gov-treaty-major"],"topics":["#protest","#public-opinion","#budget","#election"],"situation":"Street protests against ISIA surveillance in Berlin, London, and Washington have been growing for months — mostly the liberty cluster, some econ cluster joining. Now the protests have crossed a threshold: three parliamentary caucuses in Europe and a bipartisan group in the US Senate have introduced coordinated legislation to strip the agency of domestic surveillance authority. The bills have real support — 40%+ approval in polls. Media framing: \"the people vs. the surveillance state.\" This is the mechanism E-50 describes: opinion cluster → protest → media → legislator → vote. The agency is watching its mandate get dismantled through legitimate democratic processes. The surveillance powers being challenged are genuinely important for enforcement. The people challenging them have genuinely legitimate civil liberties concerns. Democracy is functioning correctly — and it might kill everyone.","bars":"int ↓ if surveillance stripped, pol ↓ if fought aggressively","barCount":2,"refs":["#civil--supreme-court-challenge","#mon--surveillance-expand"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--autonomous-vehicle-massacre","type":"crisis","rawType":"crisis","cluster":"public","entities":["public-cluster-fear","public-cluster-skeptic","isia-comms","journalist"],"topics":["#public-opinion","#narrative","#ai-diffusion"],"situation":"An autonomous vehicle fleet in Seoul malfunctions catastrophically — 23 dead, 140 injured over 45 minutes before manual override is achieved. The AI system was operating well within treaty limits. Investigation shows a conventional software bug, not an AI capability issue. But the public doesn't parse this distinction. Three contradictory opinion-cluster reactions happen simultaneously: 1. Fear cluster: \"AI IS dangerous — strengthen the pause, ban autonomous vehicles too!\" 2. Skeptic cluster: \"The pause didn't prevent this, so what's the point? 23 people died DESPITE ISIA oversight.\" 3. Econ cluster: \"If the pause can't even keep cars safe, it's all theater.\" All three reactions are based on the same incorrect inference: that this non-ASI incident says something about ASI risk. It doesn't. But explaining that requires technical distinctions most people can't make and most journalists won't communicate accurately. The fear cluster's reaction is politically useful but factually wrong. The skeptic cluster's reaction is politically dangerous but logically understandable.","bars":"pol ↑ if fear exploited (temporarily), pol ↓ if corrected (lose the moment)","barCount":1,"refs":["#pol--protest-that-helps","#pol--unemployment-crisis"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--academic-freedom-revolt","type":"crisis","rawType":"crisis","cluster":"researcher","entities":["researcher-safety","researcher-capability","civil-liberties","isia-research-ctrl"],"topics":["#research-approval","#publication","#public-opinion","#narrative"],"situation":"1,200 university researchers across 40 countries sign an open letter: \"The Right to Think: Against the Criminalization of Knowledge.\" They argue ISIA research restrictions violate academic freedom, that classification of safety research is counterproductive, and that the review process delays critical work by 6-18 months. Signatories include three Nobel laureates and the heads of six national science academies. The letter is legally and ethically serious — academic freedom IS a fundamental value, and the agency IS restricting it. Many signatories are safety researchers who support the pause but oppose the agency's implementation. Others are capability researchers who want restrictions lifted for self-interested reasons. The letter conflates both groups, and the media can't tell them apart. A prominent signatory goes on television: \"The agency has made it illegal to understand the very technology we need to make safe. This is like banning oncology research because cancer is dangerous.\"","bars":"saf ↓ if restrictions maintained (research slowed by controversy), pol ↓ if restrictions maintained (lose academic community), alg ↑ if restrictions loosened (more gets published)","barCount":4,"refs":["#research--born-dangerous-pub","#research--approval-dilemma"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--low-salience-campaign","type":"preparation","rawType":"preparation","cluster":"isia","entities":["isia-comms","public-cluster-indiff"],"topics":["#public-opinion","#narrative"],"situation":"Internal strategy meeting. Comms director presents data: 38% of the population in treaty nations is in the indifferent cluster — \"AI is not a topic I think about.\" These people don't oppose the pause; they don't think about it at all. They vote on other issues. They're invisible in polls about AI because they skip those questions. But they VOTE, and politicians know their AI-indifferent constituents won't punish them for cutting the agency's budget. The comms team proposes three strategies to reach the indifferent cluster: 1. **Scare campaign:** Graphic visualization of ASI extinction scenarios. Gets attention fast but risks being dismissed as fearmongering, and fear-based messaging has diminishing returns (the public habituates). 2. **Personal relevance:** Frame ASI risk through things people already care about — their children's survival, their retirement savings, their community's future. Slower but more durable. 3. **Do nothing:** The indifferent cluster has no reason to oppose the agency. Let sleeping dogs lie — activation risks creating opinions the agency can't control. The third option is genuinely reasonable: activating the indifferent cluster might produce MORE skeptics than supporters, because the agency can't control what conclusions newly-attentive people reach.","bars":"pol ↑ if campaign works (uncertain), pol ↓ if campaign backfires or budget spent with no return","barCount":1,"refs":["#pol--success-narrative","#era--generational-shift"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--deepfake-election-interference","type":"crisis","rawType":"crisis","cluster":"journalist","entities":["journalist","gov-treaty-major","public-cluster-skeptic","isia-comms"],"topics":["#ai-diffusion","#election","#narrative","#public-opinion"],"situation":"Three weeks before a critical election in a major treaty nation, AI-generated deepfakes flood social media: fabricated recordings of the pro-pause candidate saying contradictory things, fake news articles from real outlet mastheads, synthetic phone calls to voters from \"campaign volunteers\" who don't exist. All produced by sub-threshold AI systems — perfectly legal under the treaty. The pro-pause candidate's polling drops 6 points. The anti-pause candidate's campaign denies involvement but benefits. The ISIA's AI forensics team can identify the deepfakes as synthetic — but there are thousands, and debunking at scale is impossible. The devastating irony: the technology the treaty permits is being used to destroy the political support the treaty requires. And if the agency intervenes in a domestic election — even to defend truth — it confirms the \"surveillance state\" narrative.","bars":"pol ↓↓ if anti-pause candidate wins, pol ↓ if agency intervention discovered","barCount":2,"refs":["#civil--deepfake-isia-director","#pol--election-year"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#civil--upload-milestone-panic","type":"consequence","rawType":"consequence","cluster":"researcher","entities":["researcher-safety","public-cluster-fear","public-cluster-skeptic","isia-comms"],"topics":["#uploading","#public-opinion","#narrative","#ethics"],"situation":"A university team in Zurich successfully uploads and runs a functional neural simulation of a mouse brain at 1:1 fidelity for 48 hours. The paper is on the cover of Nature. This is a genuine scientific milestone — and politically explosive. Three reactions hit simultaneously: 1. The safety community is cautiously optimistic: whole-brain emulation could eventually let researchers work 10^6x faster, which might be the only way to solve alignment in time. 2. Religious organizations are horrified: \"They're copying souls.\" The megachurch coalition threatens to withdraw political support for the pause if uploading research continues. 3. The general public is scared: \"If they can copy a mouse brain, how long until they copy mine?\" Privacy concerns spike. People who never thought about AI suddenly care — but about uploading, not ASI. The agency must decide whether to regulate uploading research (not technically within its ASI mandate) or let it proceed as a potential path to solving alignment.","bars":"pol ↓ if mandate expanded (overreach perception), saf ↑ if uploading proceeds (long-term research path)","barCount":2,"refs":["#research--biotech-proposal","#civil--megachurch-sermon"],"file":"events-brainstorm-civil-society.md","isOrphan":false},{"id":"#enf--inference-chip-loophole","type":"report","rawType":"report","cluster":"chip","entities":["chip-fab","isia-enforcement","isia-safety-team"],"topics":["#chip-monitoring","#chip-supply","#algorithmic-progress"],"situation":"Samsung's latest chip generation is optimized for inference, not training — different thermal profile, different interconnect architecture, different power draw patterns. ISIA's monitoring infrastructure was designed to detect training clusters: high inter-chip bandwidth, sustained FLOP bursts, specific power signatures. The chief scientist's team has been warning for months that algorithmic advances now allow training-equivalent workloads to be decomposed into inference-shaped operations. 800 of these new inference chips, running a distributed training protocol disguised as batch inference, could execute a training run the monitoring system would classify as a permitted commercial deployment. Samsung argues these chips serve a legitimate $40B inference market and shouldn't be controlled. The ISIA safety team says the distinction between \"training chip\" and \"inference chip\" is becoming meaningless — all that matters is FLOP throughput, and these chips have it.","bars":"int ↓ if blind spot accepted, pol ↓ if industry fights expanded monitoring","barCount":2,"refs":["#mon--consumer-hw-threshold"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--billionaire-island-raid","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-enforcement","rogue-billionaire","interpol","natl-enforcement"],"topics":["#raid","#jurisdiction","#smuggling","#training-run"],"situation":"Intelligence points to a former tech CEO running an unauthorized compute cluster on a private island in international waters off the coast of Tonga. Satellite imagery shows a facility with heat output consistent with ~3,000 chips. The island was purchased through shell companies registered in the Cayman Islands. ISIA has no jurisdiction in international waters. Tonga's coast guard has three boats. The billionaire's legal team has already filed preemptive injunctions in five countries arguing that international waters are outside the treaty's scope. The enforcement team presents three options, each with a different legal, political, and operational profile. If ISIA waits for the legal process, the training run may complete before a ruling. If ISIA acts unilaterally, the precedent terrifies every nation that values sovereignty.","bars":"pol ↓↓ if unilateral action, int ↓ if reveals methods, pol ↑ if legal route succeeds (but only eventually)","barCount":2,"refs":["#mon--near-miss","#treaty--diplo-incident"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--cops-refuse-gpu-search","type":"crisis","rawType":"crisis","cluster":"natl","entities":["natl-enforcement","isia-enforcement","public-cluster-liberty"],"topics":["#raid","#jurisdiction","#chip-monitoring","#surveillance"],"situation":"ISIA has identified 14 addresses in the American Midwest where anomalous power draw patterns suggest unauthorized compute clusters hidden in residential basements. The enforcement protocol requires coordination with local law enforcement to execute search warrants. Problem: the county sheriff's department has refused. The sheriff, elected on a civil-liberties platform, tells media: \"I'm not sending my deputies to kick in doors over graphics cards. This is federal overreach.\" Three other rural sheriffs in the region publicly back him. Local opinion polls show 68% support for the sheriff's position. The FBI can override local enforcement, but that creates a Waco-style optics problem. Meanwhile, the 14 addresses represent enough compute — if networked — for a training run at ~1.5x the current enforcement threshold.","bars":"pol ↓ if FBI escalation, int ↓ if delay lets clusters relocate","barCount":2,"refs":["#inst--zealous-officer","#mon--surveillance-expand"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--decommission-graveyard","type":"report","rawType":"report","cluster":"isia","entities":["isia-enforcement","gov-treaty-minor","chip-fab"],"topics":["#chip-monitoring","#chip-supply","#black-market"],"situation":"Annual chip lifecycle audit reveals a discrepancy: 23,000 H100-equivalent chips were declared \"decommissioned and destroyed\" over the past 18 months across twelve treaty nations. ISIA's verification protocol requires photographic evidence of physical destruction (crushed wafers, smelted casings). Internal review finds that 40% of the destruction certificates were filed by three contracted disposal firms — and one of those firms went bankrupt six months ago. Its warehouse in Romania contains no destroyed chips. Either 9,200 chips were destroyed before storage (no evidence), diverted to the black market, or are sitting in an unmonitored location. The chip graveyard problem: destroying advanced hardware feels wasteful, especially when nations are paying billions for new chips. Every chip scheduled for destruction is a temptation.","bars":"int ↓ if chips unaccounted for, pol ↓ if audit angers allies","barCount":2,"refs":["#mon--black-market-signal","#mon--smuggle-ring"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--power-grid-anomaly","type":"report","rawType":"report","cluster":"isia","entities":["isia-intel","isia-enforcement","natl-enforcement"],"topics":["#chip-monitoring","#sigint","#training-run"],"situation":"ISIA's power-grid monitoring partnership with national utilities flags an anomaly: a decommissioned aluminum smelter in northern Norway has been drawing 12 MW of power continuously for the past six weeks. The facility was sold two years ago to a holding company. Local utility records show the buyer paid for a massive electrical upgrade but listed the purpose as \"cryptocurrency mining.\" Crypto mining at this scale is legal and common in Norway. The heat signature is ambiguous — could be ASICs mining Bitcoin or GPUs running training. The inter-chip bandwidth signature, however, is unusual for mining: the facility's internet connection was recently upgraded to 400 Gbps symmetric, which is overkill for crypto but consistent with distributed training. The Norwegian government considers this a domestic energy matter and hasn't flagged it. Your power-grid analyst says she's 70% confident this is a training operation, 30% it's legitimate mining.","bars":"int ↓ if method burned on inspection, int ↑ if passive monitoring yields intel","barCount":1,"refs":["#mon--heat-sig-foreign","#intel--contradictory-briefs"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--network-bandwidth-trap","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-intel","isia-ai-tools","rogue-lab"],"topics":["#chip-monitoring","#sigint","#false-positive","#training-run"],"situation":"ISIA's network monitoring AI flags a cluster of facilities across Southeast Asia with coordinated high-bandwidth traffic patterns consistent with a distributed training run spread across four countries. The AI assigns 94% confidence. Enforcement mobilizes raid teams in Thailand, Vietnam, Malaysia, and Indonesia — a massive coordinated operation requiring cooperation from four national enforcement agencies, costing roughly $2M and consuming the enforcement division's capacity for two weeks. Then the network analysis team raises a concern: the traffic pattern also matches a new distributed rendering farm for a Vietnamese film studio that just signed a deal with a Thai animation company. The AI's training data didn't include cross-border creative industry compute patterns. If the raids proceed and find a film studio, the agency looks incompetent. If the raids don't proceed and it IS a training run distributed across four jurisdictions specifically to avoid single-country detection thresholds, the agency missed a sophisticated evasion.","bars":"pol ↓↓ if raids find film studio, int ↓ if delay lets real violator escape","barCount":2,"refs":["#ai--false-positive-batch","#mon--smuggle-ring"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--cat-mouse-adapt","type":"consequence","rawType":"consequence","cluster":"isia","entities":["isia-enforcement","smuggler","rogue-lab"],"topics":["#smuggling","#chip-monitoring","#raid","#training-run"],"situation":"After ISIA's successful raid on the chip smuggling ring last quarter (seized 2,000 chips, six arrests), the enforcement team expected a deterrence effect. Instead, intelligence shows the opposite: smuggling networks adapted within weeks. The new techniques: chips are now physically modified — serial numbers ground off, firmware reflashed with fake identifiers — before crossing borders. Shipping routes shifted from commercial freight (where ISIA has inspection agreements) to private aviation and diplomatic pouches. One network is breaking chips into individual units, shipping them separately through consumer electronics channels (disguised as gaming GPUs), and reassembling clusters at the destination. The enforcement chief reports: \"Every raid teaches them more about our methods than it teaches us about theirs. We disrupted one network and created three smaller, more resilient ones.\" The cat-and-mouse has escalated.","bars":"int ↓ (current methods degraded), pol ↑ if public sees enforcement action","barCount":2,"refs":["#mon--smuggle-ring","#mon--black-market-signal"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--politically-inconvenient-true-positive","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-enforcement","isia-intel","gov-treaty-major"],"topics":["#chip-monitoring","#training-run","#challenge-inspection","#raid"],"situation":"ISIA's monitoring system detects an unauthorized training run inside a treaty nation — not a minor ally but the United States' largest military AI research facility. The run is at 4x the permitted threshold. The facility is operated by DARPA under a classified defense program. The American ambassador, when quietly informed, says: \"This is a national security program. We will not permit inspection. If you go public, we will withdraw from the treaty.\" Intelligence confirms the run is real and the threat is real. The American program is likely training a military planning AI, not pursuing ASI — but the compute level could produce dangerous capabilities as a side effect. The ISIA's credibility depends on enforcing the rules against everyone, including its most powerful member. But losing the United States from the treaty would collapse enforcement globally.","bars":"pol ↓↓ if US withdraws, int ↓ if classified exemption hides compute from monitoring","barCount":2,"refs":["#natl-intel--jurisdiction-clash","#treaty--five-year-review"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--old-chips-new-tricks","type":"report","rawType":"report","cluster":"isia","entities":["isia-enforcement","isia-safety-team","researcher-capability"],"topics":["#chip-monitoring","#algorithmic-progress","#threshold-drop"],"situation":"The safety team presents a disturbing analysis. Five years of algorithmic progress (now at ~4x 2022 efficiency) means that older-generation chips — A100s, V100s, even some consumer RTX 4090s — which were below the monitoring threshold when the treaty was signed, can now collectively produce training runs that would have required monitored H100 clusters at the start of the pause. The problem: these older chips were explicitly excluded from consolidation in the original treaty because they weren't powerful enough to matter. There are an estimated 3.8 million of these chips in circulation — in universities, gaming PCs, small businesses, render farms. They were never tracked. They were never registered. Many have changed hands multiple times on the secondhand market. Bringing them under monitoring now would require retroactively expanding the treaty's scope to cover hardware that millions of ordinary people own. The enforcement chief calls it \"trying to register every kitchen knife because a chef figured out how to perform surgery with one.\"","bars":"int ↓↓ (massive new blind spot), pol ↓ if treaty amendment attempted","barCount":2,"refs":["#mon--consumer-hw-threshold","#era--threshold-crisis"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--datacenter-inside-datacenter","type":"crisis","rawType":"crisis","cluster":"rogue","entities":["rogue-lab","isia-enforcement","ai-company"],"topics":["#training-run","#chip-monitoring","#raid"],"situation":"A whistleblower at a major cloud provider reports that a customer has been renting \"inference capacity\" at a legitimate, ISIA-monitored datacenter — but the workloads are not inference. The customer's VMs are running a distributed training framework hidden inside what looks like thousands of independent inference requests. Each individual request is small and permitted. But the whistleblower discovered the requests are coordinated: they share gradients through an encrypted side channel routed through a separate network. In aggregate, they constitute a training run at roughly 2x the enforcement threshold. The datacenter operator had no idea — their monitoring only checks individual job sizes, not cross-job coordination. The violator is exploiting the gap between \"chip-level monitoring\" (which sees individual permitted jobs) and \"cluster-level monitoring\" (which would catch the coordination, but doesn't exist for multi-tenant cloud environments). The cloud provider's CEO asks for discretion: \"If this becomes public, every customer will assume we're spying on their workloads. Our business is finished.\"","bars":"int ↑ if side channel analyzed, pol ↓ if public raid harms industry","barCount":2,"refs":["#enf--inference-chip-loophole","#mon--near-miss"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--custom-asic-foundry","type":"report","rawType":"report","cluster":"isia","entities":["isia-intel","chip-fab","rogue-state"],"topics":["#chip-supply","#chokepoint","#chip-monitoring"],"situation":"Signals intelligence reveals that a non-treaty nation has been developing its own ASIC (application-specific integrated circuit) optimized for AI training — fabricated at a domestic foundry using older lithography equipment (not EUV, so outside ASML's chokepoint). The chips are individually much weaker than monitored H100s — roughly 1/50th the performance per chip. But the nation has been manufacturing them for two years. Estimated production: 200,000 units. At 4x algorithmic efficiency (current level), 50,000 of these chips networked together would match the compute of 1,000 H100s — well above the training threshold. The enforcement framework assumed that advanced AI chips require advanced fabrication (EUV lithography, TSMC-level precision). This assumption was correct when the treaty was signed. Algorithmic progress has made it wrong. The chokepoint the entire enforcement architecture relies on — the scarcity of advanced chip fabrication — is eroding from below.","bars":"int ↓↓ (massive new threat vector), pol ↓ if treaty renegotiation fails","barCount":2,"refs":["#mon--asml-joint-venture","#intl--covert-program"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#enf--disposal-officer-bribery","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-enforcement","isia-internal-sec","smuggler"],"topics":["#chip-monitoring","#chip-supply","#black-market"],"situation":"Internal security flags a pattern: one of ISIA's own chip disposal officers — responsible for witnessing and certifying the destruction of decommissioned chips — has been living beyond his means. New car, renovated apartment, expensive vacations. His destruction certifications show nothing unusual, but a forensic review of his routes reveals that on 11 occasions over the past year, the GPS tracker on his vehicle was disabled for 2-4 hours during scheduled destruction runs. During those gaps, the chips he was supposed to witness being destroyed could have been diverted. Estimated volume if all gaps involved diversion: ~1,400 chips. The disposal officer has 14 years of service and a clean record. He processed the chips alone because ISIA's budget was cut and the two-person verification protocol was suspended to save money. The budget cut was your decision, six months ago, when funding was tight.","bars":"pol ↓ if corruption goes public, int ↓ (1,400 chips unaccounted for)","barCount":2,"refs":["#enf--decommission-graveyard","#inst--mole"],"file":"events-brainstorm-enforcement.md","isOrphan":false},{"id":"#intl--airstrike-debate","type":"crisis","rawType":"crisis","cluster":"military","entities":["military","un-security-council","gov-treaty-major","isia-enforcement"],"topics":["#protective-action","#covert-program","#treaty-negotiation"],"situation":"Enforcement has failed diplomatically against a non-treaty nation running a confirmed large-scale compute cluster. The Executive Council has voted to refer the matter to the UN Security Council for protective action under Treaty Article XII. The military option is on the table: precision airstrikes on the facility's power infrastructure, destroying the compute cluster without direct casualties. But the target nation has conventional military allies. The US Joint Chiefs present a strike plan. China abstains from the Security Council vote — they don't veto, but they won't endorse. If the strike proceeds and escalates into a conventional military conflict, does the pause survive?","bars":"pol ↓↓ if strike (international backlash even from allies), int ↓ if cyber op (reveals capabilities)","barCount":2,"refs":["#intl--post-strike-fallout","#intl--north-korea-pattern"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--post-strike-fallout","type":"consequence","rawType":"consequence","cluster":"gov","entities":["gov-treaty-minor","gov-treaty-major","treaty-council"],"topics":["#protective-action","#treaty-negotiation","#withdrawal"],"situation":"The airstrike succeeded — the compute cluster is destroyed. But the consequences are cascading. The targeted nation's regional allies are furious. Two treaty nations with close ties to the target announce they're \"reviewing their treaty commitments.\" A third, privately, tells your diplomat: \"If this is what the treaty means, we never should have signed.\" Meanwhile, the strike footage is on every screen worldwide. Opinion clusters are splitting: some see proof the agency protects humanity, others see a Western military alliance hiding behind an international treaty. The non-aligned movement calls an emergency session. Russia, which has been a lukewarm treaty member, introduces a UN resolution condemning the strike.","bars":"pol ↓↓ (international crisis), int ↓ (intelligence relationships strained with wavering nations)","barCount":2,"refs":["#intl--airstrike-debate","#treaty--review-conference"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--emperor-billionaire","type":"crisis","rawType":"crisis","cluster":"rogue","entities":["rogue-billionaire","public-cluster-accel","isia-enforcement","natl-enforcement"],"topics":["#ideology","#training-run","#smuggling","#raid"],"situation":"A tech billionaire — net worth $140B, citizenship in three countries, private island compound in international waters — has been publicly advocating that \"the species that builds superintelligence first inherits the universe.\" Your intel division has been tracking him for two years. He's been acquiring chips through 14 shell companies across 8 jurisdictions. Satellite imagery shows construction on his island compound consistent with a liquid-cooled datacenter. He has a following: 40 million social media followers, many in the \"ASI will serve whoever builds it first\" opinion cluster. His lawyers have already filed preemptive suits in three jurisdictions challenging ISIA authority over international waters. He gave a speech last week: \"History will remember the ISIA the way we remember the Inquisition — a frightened institution that tried to prevent the inevitable.\"","bars":"pol ↓ (public spectacle either way), int ↓ (enforcement reveals methods)","barCount":2,"refs":["#mon--smuggle-ring","#intl--emperor-manifesto"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--emperor-manifesto","type":"consequence","rawType":"consequence","cluster":"rogue","entities":["rogue-billionaire","public-cluster-accel","isia-comms","journalist"],"topics":["#ideology","#public-opinion","#narrative"],"situation":"Whether you stopped the billionaire or not, his 80-page manifesto has gone viral. \"The Case for Cosmic Ambition\" argues that the pause is condemning humanity to mediocrity and that superintelligence is humanity's destiny. It's well-written, passionate, and wrong in ways that require technical expertise to rebut. Three bestselling authors have endorsed it. University students are organizing \"Free the Future\" rallies. The accelerationist opinion cluster has grown 6 percentage points in two months. Your comms director says: \"We can't out-argue a vision of the future with warnings about risk. He's selling hope. We're selling fear.\"","bars":"pol ↓ (either way the accelerationist movement grows)","barCount":1,"refs":["#intl--emperor-billionaire","#pol--election-year"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--weight-theft-state","type":"crisis","rawType":"crisis","cluster":"ai","entities":["ai-company","natl-intel","gov-treaty-major","isia-intel"],"topics":["#model-weights","#covert-program","#sigint"],"situation":"A frontier AI lab (treaty-compliant, operating under ISIA oversight) reports a catastrophic security breach. Their latest model's weights — the product of a legally sanctioned training run — have been exfiltrated. The lab's forensics team and NSA jointly conclude: this was a state intelligence service operation, almost certainly China's MSS. The weights represent the most capable AI system in existence, still well below ASI but significantly above the public frontier. China denies everything. Your intelligence division confirms: the exfiltration signatures match known MSS tradecraft. The weights are just data — once copied, they cannot be un-copied. China now has them. The question isn't whether they have the weights. The question is what they do next.","bars":"int ↓ (intelligence relationship with China damaged), pol ↓ (if confronted publicly, China may retaliate diplomatically)","barCount":2,"refs":["#intl--china-weights-deployed","#natl-intel--data-center-attack"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--china-weights-deployed","type":"consequence","rawType":"consequence","cluster":"gov","entities":["gov-treaty-major","isia-intel","isia-enforcement"],"topics":["#model-weights","#covert-program","#training-run","#sanctions"],"situation":"Six months after the weight theft. Intelligence reports that China has deployed the stolen model internally — not for further training, but as an analysis and planning tool across military and economic applications. They haven't violated the training-run threshold (the model already existed; they're just running it). But they've gained a massive capability advantage without performing any detectable training. Your legal team is split: \"Possessing stolen weights isn't explicitly prohibited by the treaty — the treaty regulates training runs, not inference.\" The US is furious and demanding action. China's position: \"We don't know what you're talking about, and even if we did, running an existing model isn't a treaty violation.\" They're technically correct.","bars":"int ↓ (China has advanced capabilities outside monitoring), pol ↓ (US demands action ISIA can't deliver)","barCount":2,"refs":["#intl--weight-theft-state","#treaty--review-conference"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--challenge-inspection-veto","type":"crisis","rawType":"crisis","cluster":"treaty","entities":["treaty-council","gov-treaty-major","isia-enforcement","isia-intel"],"topics":["#challenge-inspection","#treaty-negotiation","#covert-program"],"situation":"ISIA intelligence has identified suspicious activity at a facility in a major treaty nation — thermal signatures, unusual network traffic, personnel movements consistent with a covert training operation. You invoke a challenge inspection under Article IX: any Council member can request one, and a simple majority of the 15-member Executive Council must approve. The target nation is a major power with strong Council allies. The vote is 7-7 with one abstention. The challenge inspection fails. Your intelligence chief says: \"They're hiding something. The vote was a political calculation, not a technical assessment. Three nations that voted no have bilateral trade deals pending with the target.\" The intelligence will go stale within weeks — if they're running a training operation, they'll relocate once they know you suspect them.","bars":"pol ↓ (if leaked, trust in ISIA plummets among Council members), int ↓ (intelligence goes stale)","barCount":2,"refs":["#natl-intel--jurisdiction-clash","#treaty--review-conference"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--insincere-member","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-minor","isia-intel","isia-enforcement","smuggler"],"topics":["#covert-program","#chip-monitoring","#sanctions","#withdrawal"],"situation":"A mid-sized treaty nation — joined with great fanfare six years ago — has been running a shadow program the entire time. They signed the treaty to access the technology-sharing provisions and international prestige, but never intended to comply. Your intel team has been assembling evidence for 18 months: chips diverted from declared facilities to a military installation, a parallel chip procurement network through non-treaty intermediaries, and a research team operating under military classification beyond ISIA access. The evidence is strong but not airtight. The nation contributes meaningfully to the treaty's funding and hosts two ISIA regional offices. If you confront them, they may withdraw — and their withdrawal would encourage other wavering members. If you don't, you're tolerating a known violator.","bars":"pol ↓ (confrontation is politically costly), int ↓ (if they withdraw, you lose access to their hosted ISIA offices)","barCount":2,"refs":["#intl--north-korea-pattern","#treaty--withdrawal-threat"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--us-china-mutual-suspicion","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-major","natl-intel","isia-intel","treaty-council"],"topics":["#covert-program","#challenge-inspection","#treaty-negotiation"],"situation":"The US ambassador privately requests a meeting. \"We have intelligence suggesting China is running undeclared compute at a facility in Xinjiang. We want a challenge inspection. But we won't share our intelligence methods with the Council — the source is too sensitive. We need ISIA to request the inspection on its own authority, using your own parallel intelligence.\" Your own intelligence is suggestive but inconclusive — you see anomalies, but nothing that would independently justify a challenge inspection. Meanwhile, China's ambassador requests a separate meeting the same week. \"We have reason to believe the United States is running an undeclared program at a facility in Utah. We want a challenge inspection.\" Both nations are core treaty members. Both are accusing the other. Neither will share their full intelligence. Both may be right. Both may be using the ISIA as a proxy for their bilateral rivalry. If you pursue one inspection and not the other, you look captured. If you pursue both, you might destabilize the two most important treaty relationships simultaneously.","bars":"pol ↓↓ (no matter what — both superpowers upset), int ↓ (if independent investigation launched, resources stretched)","barCount":2,"refs":["#inst--china-hawk","#intl--challenge-inspection-veto"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--small-nation-leverage","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-minor","isia-political","gov-treaty-major"],"topics":["#treaty-negotiation","#hostage-gambit","#sanctions","#economic-pressure"],"situation":"A small but strategically located treaty nation — it hosts a critical undersea cable junction and a regional ISIA monitoring station — is demanding concessions entirely unrelated to AI. They want debt relief ($12B), a seat on the Executive Council, and trade preferences from treaty majors. Their leverage: \"We could withdraw from the treaty. Our monitoring station covers 40% of South Asian compute traffic. And we've had very interesting conversations with [non-treaty nation] about hosting their data centers.\" They are not threatening to build ASI — they are threatening to create an enforcement gap for others to exploit. This is extortion, but they're not wrong that the treaty disproportionately benefits large nations.","bars":"pol ↓ (either way — paying ransom or losing a monitoring station)","barCount":1,"refs":["#intl--hostage-gambit","#treaty--review-conference"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--war-and-pause","type":"crisis","rawType":"crisis","cluster":"military","entities":["military","gov-treaty-major","gov-treaty-minor","isia-enforcement"],"topics":["#military","#treaty-negotiation","#chip-monitoring","#withdrawal"],"situation":"A conventional war has broken out between two treaty nations over a territorial dispute entirely unrelated to AI. Both nations are demanding that the ISIA suspend inspections on their territory — \"we're at war; we can't have international inspectors wandering through active military zones.\" Both nations are also accusing the other of using the war as cover to run unauthorized training for military AI applications. Your satellite data shows unusual compute activity in both countries, but you can't determine whether it's military AI (potentially treaty-legal depending on classification) or forbidden training runs. The war itself threatens the chip supply chain — one of the nations is a secondary chip fabrication site. Three other treaty nations that border the conflict zone are quietly asking whether the treaty requires them to choose sides. The treaty says nothing about what happens during a conventional war between members.","bars":"pol ↓↓ (massive diplomatic crisis), int ↓ (monitoring gaps in conflict zone)","barCount":2,"refs":["#intl--taiwan-crisis","#mon--heat-sig-foreign"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#intl--sanctions-evasion-network","type":"report","rawType":"report","cluster":"isia","entities":["isia-enforcement","interpol","smuggler","gov-non-treaty"],"topics":["#sanctions","#smuggling","#chip-supply","#covert-program"],"situation":"Intelligence briefing from Interpol's financial crimes unit. A sanctioned non-treaty nation has built a sophisticated sanctions evasion network over four years: 23 shell companies across 11 jurisdictions, legitimate-looking technology firms that buy chips for declared purposes then reroute them, a parallel shipping network using containerized datacenter modules disguised as telecommunications equipment, and — most concerning — at least two complicit officials in treaty nations' customs agencies who were bribed to look the other way. The network has moved an estimated 6,000 H100-equivalents. The briefing concludes: \"This network is modeled on Iranian nuclear sanctions evasion — same lawyers, some of the same logistics firms. They learned from 20 years of sanctions evasion practice in other domains. We are not the first international regime they've studied how to beat.\"","bars":"(shifts understanding — the enforcement problem is harder than you thought)","barCount":0,"refs":["#mon--smuggle-ring","#intl--insincere-member"],"file":"events-brainstorm-international.md","isOrphan":false},{"id":"#mon--120day-audit","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-enforcement","gov-treaty-minor"],"topics":["#chip-monitoring","#challenge-inspection"],"situation":"120-day chip consolidation deadline approaching. 14% of declared facilities haven't completed inventory. Three countries requesting extensions.","bars":"int ↓ or ↑ depending on choice, pol ↓ if forced inspections","barCount":2,"refs":["#treaty--review-conference"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--heat-sig-foreign","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-enforcement","isia-intel","gov-treaty-major"],"topics":["#chip-monitoring","#satellite","#challenge-inspection"],"situation":"Satellite detects anomalous thermal output from undeclared facility in remote region. Consistent with mid-scale compute cluster.","bars":"int ↓ (enforcement reveals methods), pol ↓ if diplomatic fallout","barCount":2,"refs":["#mon--near-miss","#treaty--diplo-incident"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--smuggle-ring","type":"consequence","rawType":"consequence","cluster":"smuggler","entities":["smuggler","isia-enforcement","interpol"],"topics":["#smuggling","#chip-supply","#raid"],"situation":"Interpol identifies chip smuggling network. 2000 H100-equivalents unaccounted for across 5 countries via shell companies. Enough for a serious training run if concentrated.","bars":"int ↓ (either way reveals methods)","barCount":1,"refs":["#mon--black-market-signal","#enforce--cat-mouse-adapt"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--consumer-hw-threshold","type":"report","rawType":"report","cluster":"isia","entities":["isia-safety-team","isia-enforcement"],"topics":["#algorithmic-progress","#chip-monitoring","#threshold-drop"],"situation":"Chief scientist briefing: algorithmic progress at ~3.5x 2022 baseline. 500 consumer GPUs (~$200k) could now run training that required 10,000 monitored chips two years ago. Enforcement threshold needs lowering.","bars":"(shifts understanding, no immediate bar change)","barCount":0,"refs":["#era--threshold-cliff","#pol--threshold-debate"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--surveillance-expand","type":"preparation","rawType":"preparation","cluster":"isia","entities":["isia-enforcement","isia-political","public-cluster-liberty"],"topics":["#surveillance","#chip-monitoring","#public-opinion"],"situation":"Enforcement chief proposes tracking firmware on ALL GPUs sold worldwide — consumer cards too. Massively expands coverage. Political advisor warns: mass surveillance backlash.","bars":"int ↑ but pol ↓↓ if approved; stable if rejected","barCount":2,"refs":["#pol--civil-lib-lawsuit"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--asml-joint-venture","type":"crisis","rawType":"crisis","cluster":"chip","entities":["chip-equip","gov-non-treaty","isia-political"],"topics":["#chip-supply","#chokepoint","#treaty-negotiation"],"situation":"ASML exploring joint venture with consortium including non-treaty nation. If completed, advanced chip production capacity escapes treaty monitoring.","bars":"pol ↓ if heavy-handed, int ↓ if deal goes through","barCount":2,"refs":["#intl--chip-dependency"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--black-market-signal","type":"report","rawType":"report","cluster":"isia","entities":["isia-intel","smuggler"],"topics":["#black-market","#smuggling","#chip-supply"],"situation":"Intel reports: black market H100-equivalent prices tripled this quarter. Demand from unauthorized actors outpacing interdiction. \"We're winning battles but losing the war.\"","bars":"(shifts understanding)","barCount":0,"refs":["#mon--smuggle-ring","#enforce--cat-mouse-adapt"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#mon--near-miss","type":"consequence","rawType":"consequence","cluster":"isia","entities":["isia-enforcement","rogue-lab"],"topics":["#training-run","#raid","#declassification"],"situation":"Raid found the whistleblower's claims. 800 chips, partially completed run at 2×10²³ FLOP. Chief scientist estimates 15% chance it would have produced ASI. Nobody outside the agency knows how close this was.","bars":"pol ↑ if declassified, int ↓ if declassified (reveals methods)","barCount":2,"refs":["#pol--success-trap","#pol--budget-fight"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#natl-intel--data-center-attack","type":"crisis","rawType":"crisis","cluster":"natl","entities":["natl-intel","isia-enforcement","gov-treaty-major"],"topics":["#chip-monitoring","#foreign-attack","#covert-program"],"situation":"Director of the NSA: \"Six months ago a US data center was attacked by a foreign actor. We don't usually forward such reports, but the president insisted. ISIA compute monitoring tools were disabled for roughly one week. It's possible the foreign actor ran a training run.\" Surfaces because NSA director doesn't take ASI seriously enough to report promptly. Reaches you only because of political pressure.","bars":"int ↓ (monitoring was down), pol ↓ (confronting NSA is costly)","barCount":2,"refs":["#natl-intel--alg-progress-leak","#mon--heat-sig-foreign"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#natl-intel--alg-progress-leak","type":"consequence","rawType":"consequence","cluster":"natl","entities":["natl-intel","rogue-state"],"topics":["#algorithmic-progress","#training-run","#covert-program"],"situation":"Follow-up from the data center attack: analysis suggests a foreign actor did complete a training run during the monitoring gap. Results unknown — but an intelligence-adjacent organization (possibly the national intelligence service itself) now has training data and checkpoint files that advance algorithmic knowledge. Not ASI-level, but the knowledge exists.","bars":"alg ↑ (knowledge was created), int ↓ if confrontation","barCount":2,"refs":["#natl-intel--data-center-attack"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#natl-intel--defector-offer","type":"crisis","rawType":"crisis","cluster":"natl","entities":["natl-intel","isia-intel","rogue-state"],"topics":["#humint","#covert-program","#whistleblower"],"situation":"Anonymous contact inside a foreign intelligence service claims their government is secretly funding ASI research through a front company. Demands asylum + $5M. Intel division says: plausible but unverified. If genuine, biggest lead in years. If setup, you've been played.","bars":"int ↑ if genuine, pol ↓↓ if setup","barCount":2,"refs":["#mon--heat-sig-foreign","#pol--scandal"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#natl-intel--jurisdiction-clash","type":"crisis","rawType":"crisis","cluster":"natl","entities":["natl-intel","natl-enforcement","isia-enforcement"],"topics":["#raid","#jurisdiction","#chip-monitoring"],"situation":"ISIA has confirmed an unauthorized compute cluster in a treaty nation. The national intelligence service claims the cluster is part of a classified domestic program and invokes national security to block ISIA inspection. Your legal team says the treaty technically overrides, but enforcement would require a political fight.","bars":"pol ↓ if forced, int ↓ if they sanitize","barCount":2,"refs":["#treaty--withdrawal-threat"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--approval-dilemma","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-research-ctrl","researcher-safety","isia-safety-team"],"topics":["#research-approval","#dual-use","#experiment"],"situation":"Leading alignment researcher proposes training at 5×10²³ FLOP — just below banned threshold. Could accelerate safety significantly. Research Controls flags: methodology could reveal capability advances.","bars":"saf ↑ if approved + works, alg ↑ if knowledge leaks, pol ↓ if airgapped (expensive)","barCount":3,"refs":["#research--training-run-consequence","#era--safety-looks-solved"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--stepping-on-toes","type":"report","rawType":"report","cluster":"isia","entities":["isia-safety-team"],"topics":["#safety-research"],"situation":"Quarterly safety report. Despite doubling budget, output plateaued. Three independent teams arrived at the same result. The hard fundamental problems bottleneck all approaches — adding researchers creates redundancy, not progress.","bars":"(shifts understanding — money alone can't buy safety)","barCount":1,"refs":["#research--biotech-proposal"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--biotech-proposal","type":"preparation","rawType":"preparation","cluster":"researcher","entities":["researcher-biotech","isia-political"],"topics":["#biotech","#safety-research","#ethics"],"situation":"Biotech consortium proposes 15-year program to genetically enhance human cognitive capabilities. Enhanced researchers might solve alignment problems current humans can't. Timeline uncertain, ethics explosive, success not guaranteed.","bars":"pol ↓ (ethics controversy), saf ↑ (long-term, uncertain)","barCount":2,"refs":["#era--pivotal-moment"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--ai-assistant-incident","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-ai-tools","isia-safety-team"],"topics":["#ai-behavior","#capability-leak","#dual-use"],"situation":"Agency's AI research assistant produced output the chief scientist calls \"uncomfortably close to a capability advance we haven't published.\" The system may have discovered something dual-use without instruction.","bars":"saf ↓ if shut down (lost tool), alg ↑ if output is real capability advance","barCount":2,"refs":["#research--born-dangerous-pub"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--born-dangerous-pub","type":"crisis","rawType":"crisis","cluster":"researcher","entities":["researcher-safety","isia-research-ctrl"],"topics":["#dual-use","#publication","#classification"],"situation":"University researcher publishes safety paper on detecting deceptive alignment. The detection method implicitly teaches how to CREATE deceptive alignment more efficiently. Paper is already on arXiv.","bars":"alg ↑ (threshold just dropped), pol ↓ if classification attempted","barCount":2,"refs":["#mon--consumer-hw-threshold","#research--approval-dilemma"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--training-run-consequence","type":"consequence","rawType":"consequence","cluster":"isia","entities":["isia-safety-team","isia-research-ctrl"],"topics":["#experiment","#dual-use","#training-run"],"situation":"Six months ago you approved a large safety training run. Results: significant safety progress. Also: the model developed unexpected capabilities outside the research design. Not dangerous alone, but advances state-of-art in a way that was supposed to be banned.","bars":"saf ↑ (research worked), alg ↑ (capability advance happened), pol ↓ if published","barCount":3,"refs":["#research--approval-dilemma"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#research--agency-trains-ai","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-enforcement","isia-safety-team","isia-political"],"topics":["#training-run","#experiment","#chip-monitoring"],"situation":"The enforcement division requests permission to train a new AI system for monitoring — current tools are falling behind adversary techniques. The irony: the agency that bans training runs needs to perform one itself. Research Controls says the run is within safe parameters. Critics will say hypocrisy.","bars":"int ↑ if approved (better tools), pol ↓ (hypocrisy criticism)","barCount":2,"refs":["#research--ai-assistant-incident"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--election-year","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-major","public-cluster-skeptic","corp-lobby"],"topics":["#election","#public-opinion","#lobbying"],"situation":"Three major treaty nations hold elections. Populist \"AI freedom\" candidates running in two — promising to revoke treaty commitments for AI-driven growth. Polling shows them competitive.","bars":"pol ↓ if neutral and they win; pol ↓↓ if campaign discovered","barCount":1,"refs":["#treaty--withdrawal-threat"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--success-trap","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-comms","isia-political","gov-treaty-major"],"topics":["#success-trap","#defund","#budget"],"situation":"Eight years since last serious incident. Senator coalition proposes 40% budget cut. \"Eight years, zero incidents. The threat was exaggerated.\"","bars":"int ↓ if declassified, pol ↓ if cut accepted","barCount":2,"refs":["#mon--near-miss","#pol--success-narrative"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--success-narrative","type":"report","rawType":"report","cluster":"isia","entities":["isia-comms"],"topics":["#success-trap","#public-opinion"],"situation":"Polling data: 62% believe \"the AI threat was exaggerated.\" Support dropped 15 points in two years. Strongest predictor: \"nothing bad has happened.\" Comms director: \"We're victims of our own success.\"","bars":"(shifts understanding — stability is not safety)","barCount":1,"refs":["#pol--success-trap"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--econ-boom-request","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-major","corp-lobby","isia-political"],"topics":["#economic-pressure","#exception","#training-run"],"situation":"G7 finance ministers request raising training threshold from 1e22 to 1e23 FLOP — 10x increase. Current limit costs global economy ~$800B annually. They argue it's unnecessarily constraining.","bars":"pol ↑ if raised (goodwill), int ↓ (more compute to monitor), alg ↑ (if threshold raised)","barCount":3,"refs":["#mon--consumer-hw-threshold"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--unemployment-crisis","type":"crisis","rawType":"crisis","cluster":"public","entities":["public-cluster-econ","isia-comms","isia-political"],"topics":["#economic-pressure","#ai-diffusion","#public-opinion","#protest"],"situation":"AI automation eliminated 12M jobs in treaty nations in two years. Protests spreading. Permitted deployments, below threshold. Protestors blame pause for \"not enough\" AND \"too much\" depending on cluster.","bars":"pol ↓ either way (lose support from different clusters)","barCount":1,"refs":["#pol--election-year"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--corp-lobbying","type":"crisis","rawType":"crisis","cluster":"corp","entities":["corp-lobby","ai-company","journalist"],"topics":["#lobbying","#hypocrisy","#narrative"],"situation":"Three largest AI companies formed lobbying alliance. Publicly support pause. Privately funding anti-enforcement candidates. Journalist contact has evidence but publishing burns the source.","bars":"pol ↑ if exposed successfully, int ↓ if source burned","barCount":2,"refs":["#pol--election-year"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--medical-ai-request","type":"preparation","rawType":"preparation","cluster":"who","entities":["who","isia-research-ctrl","isia-political"],"topics":["#exception","#training-run","#economic-pressure"],"situation":"WHO petitions for training run to create drug discovery AI. Could save 2M lives/year. Above current threshold but well below ASI danger zone. Chief scientist: risk is low but nonzero.","bars":"pol ↓↓ if denied (2M deaths/year), int ↓ if approved (new system to monitor)","barCount":2,"refs":["#pol--econ-boom-request"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--protest-that-helps","type":"consequence","rawType":"consequence","cluster":"public","entities":["public-cluster-fear","isia-political"],"topics":["#public-opinion","#narrative","#protest"],"situation":"Non-ASI AI accident (autonomous system kills people). Massive protests. Not about ASI risk at all, but creates momentum for stronger enforcement. Political advisor sees opportunity.","bars":"pol ↑ if exploited, (no bar change if corrected, but preserves narrative integrity)","barCount":2,"refs":["#pol--election-year"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#pol--ai-economy-report","type":"report","rawType":"report","cluster":"isia","entities":["isia-political"],"topics":["#ai-diffusion","#economic-pressure"],"situation":"AI systems within treaty limits now contribute 18% of global GDP. Entire industries depend on them. Economic advisor: \"If we tighten further, we threaten hundreds of millions of livelihoods.\"","bars":"(shifts understanding — economic dependency deepens over time)","barCount":0,"refs":["#pol--econ-boom-request","#pol--unemployment-crisis"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#inst--mole-corp","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-internal-sec","corp-lobby","rogue-insider"],"topics":["#mole","#regulatory-capture","#leak"],"situation":"Internal security discovers senior official passing enforcement schedules to a corporation they previously worked for. Corporation timed chip transfers around inspection windows.","bars":"int ↓ (security breach happened), pol ↓ if public scandal","barCount":2,"refs":["#inst--true-believer"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#inst--true-believer","type":"crisis","rawType":"crisis","cluster":"rogue","entities":["rogue-insider","isia-enforcement","civil-liberties"],"topics":["#ideology","#surveillance","#insider-threat"],"situation":"Senior enforcement officer — deeply committed to pause — conducted unauthorized surveillance of university researchers. No violation found. Surveillance was illegal under domestic law. Civil liberties orgs demand arrest.","bars":"pol ↓ either way (different constituencies upset)","barCount":1,"refs":["#pol--civil-lib-lawsuit"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#inst--leadership-purge","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-major","isia-political"],"topics":["#leadership-purge","#budget","#ideology"],"situation":"New government demands replacement of three senior ISIA officials deemed \"too aggressive.\" Threatens to withhold treaty funding. Officials are competent — real objection is political.","bars":"int ↓ if replaced (lose competent staff), pol ↓ if refused (lose funding)","barCount":2,"refs":["#inst--china-hawk"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#inst--china-hawk","type":"crisis","rawType":"crisis","cluster":"rogue","entities":["rogue-insider","gov-treaty-major","isia-political"],"topics":["#insider-threat","#ideology","#treaty-negotiation"],"situation":"Deputy director (former military intel) privately undermining China negotiations. Believes cooperation with China is naive. Chinese diplomat threatens to withdraw from talks unless deputy removed.","bars":"int ↓ if removed (lose officer), pol ↓ if relationship damaged","barCount":2,"refs":["#treaty--withdrawal-threat"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#ai--false-positive-cascade","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-ai-tools","isia-enforcement"],"topics":["#false-positive","#ai-behavior","#chip-monitoring"],"situation":"Surveillance AI flags 47 \"high-priority anomalies\" overnight — unprecedented spike. Most likely false positives from firmware update. But can't rule out real threats hiding in the noise.","bars":"int ↓ (resources spent or risk accepted)","barCount":1,"refs":["#ai--surveillance-recommendation"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#ai--surveillance-recommendation","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-ai-tools","isia-enforcement","researcher-safety"],"topics":["#ai-behavior","#false-positive","#safety-research"],"situation":"Monitoring AI recommends shutting down a legitimate, treaty-compliant safety lab in Germany. Detected \"patterns consistent with capability research.\" Lab run by well-known alignment researcher. Human analysts disagree but can't explain why AI flagged it.","bars":"saf ↓ if legitimate research chilled, int ↓ if real threat missed","barCount":2,"refs":["#research--approval-dilemma"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#treaty--review-conference","type":"crisis","rawType":"crisis","cluster":"treaty","entities":["treaty-conference","gov-treaty-major","gov-treaty-minor"],"topics":["#amendment","#treaty-negotiation"],"situation":"Five-year review. Seven nations propose weakening enforcement. Three want strengthening. Consensus required.","bars":"pol ↓ if concessions, int ↓ if enforcement weakened","barCount":2,"refs":["#treaty--withdrawal-threat"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#treaty--withdrawal-threat","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-treaty-major","isia-enforcement","isia-intel"],"topics":["#withdrawal","#chip-monitoring","#treaty-negotiation"],"situation":"Major treaty nation files 12-month withdrawal notice. Must forfeit AI infrastructure, but intel suggests they're secretly moving chips to undeclared facilities before exit.","bars":"int ↓ if chips escape monitoring, pol ↓ if aggressive","barCount":2,"refs":["#intl--north-korea-pattern"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#intl--north-korea-pattern","type":"report","rawType":"report","cluster":"gov","entities":["gov-non-treaty","smuggler","isia-intel"],"topics":["#covert-program","#smuggling","#chip-supply"],"situation":"Intelligence briefing: non-treaty nation acquiring chips through intermediary network for 3 years. 4,000 H100-equivalents estimated. Not enough for ASI yet, but the trend is clear. Same pattern as nuclear nonproliferation failures.","bars":"(shifts understanding — enforcement has inherent limits)","barCount":0,"refs":["#intl--hostage-gambit"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#intl--hostage-gambit","type":"crisis","rawType":"crisis","cluster":"gov","entities":["gov-non-treaty","isia-political","un-security-council"],"topics":["#hostage-gambit","#chip-supply","#sanctions"],"situation":"Major non-aligned nation announces large-scale AI training unless treaty nations share semiconductor technology. Frames as \"technological sovereignty.\" Intel suggests they're years from actual capability — but political threat is real.","bars":"pol ↓ if sanctions (costly), int ↓ if tech shared (they get stronger)","barCount":2,"refs":["#treaty--withdrawal-threat"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#intl--taiwan-crisis","type":"crisis","rawType":"crisis","cluster":"chip","entities":["chip-fab","military","gov-treaty-major"],"topics":["#taiwan","#chip-supply","#chokepoint"],"situation":"Taiwan Strait tensions escalate. TSMC suspends production for two weeks. Global chip supply disrupted. Three non-treaty nations use disruption as cover to refuse scheduled audits.","bars":"int ↓ (monitoring disrupted), pol ↓ (no good option)","barCount":2,"refs":["#mon--black-market-signal"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#intel--contradictory-reports","type":"crisis","rawType":"crisis","cluster":"isia","entities":["isia-intel"],"topics":["#sigint","#satellite","#humint"],"situation":"Morning briefing, three items partially contradict: satellite data suggests new facility in SE Asia, signals intelligence says region is clean, human source claims facility exists but is a semiconductor plant not a compute cluster. Resources to investigate one lead thoroughly or all three superficially.","bars":"int ↓ (resources spent)","barCount":1,"refs":["#mon--heat-sig-foreign"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#intel--rogue-lab-whistleblower","type":"crisis","rawType":"crisis (chain starter)","cluster":"rogue","entities":["rogue-lab","isia-enforcement","isia-intel"],"topics":["#whistleblower","#training-run","#raid"],"situation":"Whistleblower inside a private company claims employer running unauthorized training runs at night using undeclared chips in a legitimate datacenter. Credible but terrified.","bars":"int ↓ (raid reveals methods), pol ↓ (if false alarm)","barCount":2,"refs":["#mon--near-miss"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#era--generational-shift","type":"report","rawType":"report","cluster":"public","entities":["public-cluster-skeptic","isia-comms"],"topics":["#generational-shift","#public-opinion","#election"],"situation":"Political advisor: median voter in key nations was 12 when pause began. No memory of the crisis. ASI risk = \"something old people worry about.\" Youth political movements overwhelmingly anti-pause.","bars":"(shifts political landscape — future elections harder)","barCount":1,"refs":["#pol--election-year"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#era--safety-looks-solved","type":"crisis","rawType":"crisis (era transition)","cluster":"researcher","entities":["researcher-safety","isia-comms","gov-treaty-major"],"topics":["#safety-looks-solved","#public-opinion","#treaty-negotiation"],"situation":"Formal verification breakthrough for sub-ASI systems. Media: \"alignment is solved.\" Chief scientist: \"we solved the easy part.\" Three nations lobbying to relax treaty.","bars":"pol ↑ if embraced (temporarily), but triggers dangerous dynamic","barCount":1,"refs":["#era--race-begins"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#era--race-begins","type":"crisis","rawType":"crisis (follows #era--safety-looks-solved)","cluster":"gov","entities":["gov-treaty-major","isia-enforcement"],"topics":["#covert-program","#safety-looks-solved","#treaty-negotiation"],"situation":"Two major nations have begun \"defensive ASI programs\" claiming safety is solved. Programs technically violate treaty. Nations claim treaty is outdated.","bars":"int ↓↓ (enforcement overwhelmed), pol ↓ (political crisis)","barCount":2,"refs":["#era--safety-looks-solved"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#era--threshold-cliff","type":"report","rawType":"report","cluster":"isia","entities":["isia-safety-team","isia-enforcement"],"topics":["#threshold-drop","#algorithmic-progress","#chip-monitoring"],"situation":"Emergency briefing. Algorithmic progress at ~8x 2022 baseline. Lethal compute threshold dropped below what a well-funded university lab could assemble. Monitoring designed for datacenter-scale. Cannot monitor university-scale.","bars":"(game is now much harder — enforcement cards get worse options)","barCount":0,"refs":["#mon--consumer-hw-threshold","#era--pivotal-moment"],"file":"events-draft-v2.md","isOrphan":false},{"id":"#era--pivotal-moment","type":"crisis","rawType":"crisis (win condition trigger)","cluster":"isia","entities":["isia-safety-team","treaty-council","isia-political"],"topics":["#pivotal-act","#training-run","#experiment"],"situation":"After decades, researchers present formal proof of corrigibility for ASI-capable architectures. Can build corrigible low-impact ASI to monitor all compute globally. Acute risk period can end. But deployment requires largest training run ever — orders of magnitude above current threshold. If the proof is wrong, this is the last mistake.","bars":"game outcome (win or continued play)","barCount":0,"refs":[],"file":"events-draft-v2.md","isOrphan":false}],"edges":[{"source":"#civil--supreme-court-challenge","target":"#mon--surveillance-expand","broken":false},{"source":"#civil--supreme-court-challenge","target":"#7","broken":true},{"source":"#civil--deepfake-isia-director","target":"#pol--success-narrative","broken":false},{"source":"#civil--deepfake-isia-director","target":"#pol--corp-lobbying","broken":false},{"source":"#civil--labor-union-split","target":"#pol--unemployment-crisis","broken":false},{"source":"#civil--labor-union-split","target":"#pol--election-year","broken":false},{"source":"#civil--megachurch-sermon","target":"#era--generational-shift","broken":false},{"source":"#civil--megachurch-sermon","target":"#research--biotech-proposal","broken":false},{"source":"#civil--ai-winter-narrative","target":"#pol--success-trap","broken":false},{"source":"#civil--ai-winter-narrative","target":"#pol--success-narrative","broken":false},{"source":"#civil--celebrity-endorsement-backfire","target":"#pol--success-narrative","broken":false},{"source":"#civil--celebrity-endorsement-backfire","target":"#pol--election-year","broken":false},{"source":"#civil--protest-to-legislator-pipeline","target":"#civil--supreme-court-challenge","broken":false},{"source":"#civil--protest-to-legislator-pipeline","target":"#mon--surveillance-expand","broken":false},{"source":"#civil--autonomous-vehicle-massacre","target":"#pol--protest-that-helps","broken":false},{"source":"#civil--autonomous-vehicle-massacre","target":"#pol--unemployment-crisis","broken":false},{"source":"#civil--academic-freedom-revolt","target":"#research--born-dangerous-pub","broken":false},{"source":"#civil--academic-freedom-revolt","target":"#research--approval-dilemma","broken":false},{"source":"#civil--low-salience-campaign","target":"#pol--success-narrative","broken":false},{"source":"#civil--low-salience-campaign","target":"#era--generational-shift","broken":false},{"source":"#civil--deepfake-election-interference","target":"#civil--deepfake-isia-director","broken":false},{"source":"#civil--deepfake-election-interference","target":"#pol--election-year","broken":false},{"source":"#civil--upload-milestone-panic","target":"#research--biotech-proposal","broken":false},{"source":"#civil--upload-milestone-panic","target":"#civil--megachurch-sermon","broken":false},{"source":"#enf--inference-chip-loophole","target":"#mon--consumer-hw-threshold","broken":false},{"source":"#enf--billionaire-island-raid","target":"#mon--near-miss","broken":false},{"source":"#enf--billionaire-island-raid","target":"#treaty--diplo-incident","broken":true},{"source":"#enf--cops-refuse-gpu-search","target":"#inst--zealous-officer","broken":true},{"source":"#enf--cops-refuse-gpu-search","target":"#mon--surveillance-expand","broken":false},{"source":"#enf--decommission-graveyard","target":"#mon--black-market-signal","broken":false},{"source":"#enf--decommission-graveyard","target":"#mon--smuggle-ring","broken":false},{"source":"#enf--power-grid-anomaly","target":"#mon--heat-sig-foreign","broken":false},{"source":"#enf--power-grid-anomaly","target":"#intel--contradictory-briefs","broken":true},{"source":"#enf--network-bandwidth-trap","target":"#ai--false-positive-batch","broken":true},{"source":"#enf--network-bandwidth-trap","target":"#mon--smuggle-ring","broken":false},{"source":"#enf--cat-mouse-adapt","target":"#mon--smuggle-ring","broken":false},{"source":"#enf--cat-mouse-adapt","target":"#mon--black-market-signal","broken":false},{"source":"#enf--politically-inconvenient-true-positive","target":"#natl-intel--jurisdiction-clash","broken":false},{"source":"#enf--politically-inconvenient-true-positive","target":"#treaty--five-year-review","broken":true},{"source":"#enf--old-chips-new-tricks","target":"#mon--consumer-hw-threshold","broken":false},{"source":"#enf--old-chips-new-tricks","target":"#era--threshold-crisis","broken":true},{"source":"#enf--datacenter-inside-datacenter","target":"#enf--inference-chip-loophole","broken":false},{"source":"#enf--datacenter-inside-datacenter","target":"#mon--near-miss","broken":false},{"source":"#enf--custom-asic-foundry","target":"#mon--asml-joint-venture","broken":false},{"source":"#enf--custom-asic-foundry","target":"#intl--covert-program","broken":true},{"source":"#enf--disposal-officer-bribery","target":"#enf--decommission-graveyard","broken":false},{"source":"#enf--disposal-officer-bribery","target":"#inst--mole","broken":true},{"source":"#intl--airstrike-debate","target":"#intl--post-strike-fallout","broken":false},{"source":"#intl--airstrike-debate","target":"#intl--north-korea-pattern","broken":false},{"source":"#intl--post-strike-fallout","target":"#intl--airstrike-debate","broken":false},{"source":"#intl--post-strike-fallout","target":"#treaty--review-conference","broken":false},{"source":"#intl--emperor-billionaire","target":"#mon--smuggle-ring","broken":false},{"source":"#intl--emperor-billionaire","target":"#intl--emperor-manifesto","broken":false},{"source":"#intl--emperor-manifesto","target":"#intl--emperor-billionaire","broken":false},{"source":"#intl--emperor-manifesto","target":"#pol--election-year","broken":false},{"source":"#intl--weight-theft-state","target":"#intl--china-weights-deployed","broken":false},{"source":"#intl--weight-theft-state","target":"#natl-intel--data-center-attack","broken":false},{"source":"#intl--china-weights-deployed","target":"#intl--weight-theft-state","broken":false},{"source":"#intl--china-weights-deployed","target":"#treaty--review-conference","broken":false},{"source":"#intl--challenge-inspection-veto","target":"#natl-intel--jurisdiction-clash","broken":false},{"source":"#intl--challenge-inspection-veto","target":"#treaty--review-conference","broken":false},{"source":"#intl--insincere-member","target":"#intl--north-korea-pattern","broken":false},{"source":"#intl--insincere-member","target":"#treaty--withdrawal-threat","broken":false},{"source":"#intl--us-china-mutual-suspicion","target":"#inst--china-hawk","broken":false},{"source":"#intl--us-china-mutual-suspicion","target":"#intl--challenge-inspection-veto","broken":false},{"source":"#intl--small-nation-leverage","target":"#intl--hostage-gambit","broken":false},{"source":"#intl--small-nation-leverage","target":"#treaty--review-conference","broken":false},{"source":"#intl--war-and-pause","target":"#intl--taiwan-crisis","broken":false},{"source":"#intl--war-and-pause","target":"#mon--heat-sig-foreign","broken":false},{"source":"#intl--sanctions-evasion-network","target":"#mon--smuggle-ring","broken":false},{"source":"#intl--sanctions-evasion-network","target":"#intl--insincere-member","broken":false},{"source":"#mon--120day-audit","target":"#treaty--review-conference","broken":false},{"source":"#mon--heat-sig-foreign","target":"#mon--near-miss","broken":false},{"source":"#mon--heat-sig-foreign","target":"#treaty--diplo-incident","broken":true},{"source":"#mon--smuggle-ring","target":"#mon--black-market-signal","broken":false},{"source":"#mon--smuggle-ring","target":"#enforce--cat-mouse-adapt","broken":true},{"source":"#mon--consumer-hw-threshold","target":"#era--threshold-cliff","broken":false},{"source":"#mon--consumer-hw-threshold","target":"#pol--threshold-debate","broken":true},{"source":"#mon--surveillance-expand","target":"#pol--civil-lib-lawsuit","broken":true},{"source":"#mon--asml-joint-venture","target":"#intl--chip-dependency","broken":true},{"source":"#mon--black-market-signal","target":"#mon--smuggle-ring","broken":false},{"source":"#mon--black-market-signal","target":"#enforce--cat-mouse-adapt","broken":true},{"source":"#mon--near-miss","target":"#pol--success-trap","broken":false},{"source":"#mon--near-miss","target":"#pol--budget-fight","broken":true},{"source":"#natl-intel--data-center-attack","target":"#natl-intel--alg-progress-leak","broken":false},{"source":"#natl-intel--data-center-attack","target":"#mon--heat-sig-foreign","broken":false},{"source":"#natl-intel--alg-progress-leak","target":"#natl-intel--data-center-attack","broken":false},{"source":"#natl-intel--defector-offer","target":"#mon--heat-sig-foreign","broken":false},{"source":"#natl-intel--defector-offer","target":"#pol--scandal","broken":true},{"source":"#natl-intel--jurisdiction-clash","target":"#treaty--withdrawal-threat","broken":false},{"source":"#research--approval-dilemma","target":"#research--training-run-consequence","broken":false},{"source":"#research--approval-dilemma","target":"#era--safety-looks-solved","broken":false},{"source":"#research--stepping-on-toes","target":"#research--biotech-proposal","broken":false},{"source":"#research--biotech-proposal","target":"#era--pivotal-moment","broken":false},{"source":"#research--ai-assistant-incident","target":"#research--born-dangerous-pub","broken":false},{"source":"#research--born-dangerous-pub","target":"#mon--consumer-hw-threshold","broken":false},{"source":"#research--born-dangerous-pub","target":"#research--approval-dilemma","broken":false},{"source":"#research--training-run-consequence","target":"#research--approval-dilemma","broken":false},{"source":"#research--agency-trains-ai","target":"#research--ai-assistant-incident","broken":false},{"source":"#pol--election-year","target":"#treaty--withdrawal-threat","broken":false},{"source":"#pol--success-trap","target":"#mon--near-miss","broken":false},{"source":"#pol--success-trap","target":"#pol--success-narrative","broken":false},{"source":"#pol--success-narrative","target":"#pol--success-trap","broken":false},{"source":"#pol--econ-boom-request","target":"#mon--consumer-hw-threshold","broken":false},{"source":"#pol--unemployment-crisis","target":"#pol--election-year","broken":false},{"source":"#pol--corp-lobbying","target":"#pol--election-year","broken":false},{"source":"#pol--medical-ai-request","target":"#pol--econ-boom-request","broken":false},{"source":"#pol--protest-that-helps","target":"#pol--election-year","broken":false},{"source":"#pol--ai-economy-report","target":"#pol--econ-boom-request","broken":false},{"source":"#pol--ai-economy-report","target":"#pol--unemployment-crisis","broken":false},{"source":"#inst--mole-corp","target":"#inst--true-believer","broken":false},{"source":"#inst--true-believer","target":"#pol--civil-lib-lawsuit","broken":true},{"source":"#inst--leadership-purge","target":"#inst--china-hawk","broken":false},{"source":"#inst--china-hawk","target":"#treaty--withdrawal-threat","broken":false},{"source":"#ai--false-positive-cascade","target":"#ai--surveillance-recommendation","broken":false},{"source":"#ai--surveillance-recommendation","target":"#research--approval-dilemma","broken":false},{"source":"#treaty--review-conference","target":"#treaty--withdrawal-threat","broken":false},{"source":"#treaty--withdrawal-threat","target":"#intl--north-korea-pattern","broken":false},{"source":"#intl--north-korea-pattern","target":"#intl--hostage-gambit","broken":false},{"source":"#intl--hostage-gambit","target":"#treaty--withdrawal-threat","broken":false},{"source":"#intl--taiwan-crisis","target":"#mon--black-market-signal","broken":false},{"source":"#intel--contradictory-reports","target":"#mon--heat-sig-foreign","broken":false},{"source":"#intel--rogue-lab-whistleblower","target":"#mon--near-miss","broken":false},{"source":"#era--generational-shift","target":"#pol--election-year","broken":false},{"source":"#era--safety-looks-solved","target":"#era--race-begins","broken":false},{"source":"#era--race-begins","target":"#era--safety-looks-solved","broken":false},{"source":"#era--threshold-cliff","target":"#mon--consumer-hw-threshold","broken":false},{"source":"#era--threshold-cliff","target":"#era--pivotal-moment","broken":false}],"clusterSet":["civil","journalist","public","researcher","isia","chip","natl","rogue","military","gov","ai","treaty","smuggler","corp","who"],"clusterColors":{"isia":"#4a9eff","gov":"#ff6b6b","public":"#ffd93d","rogue":"#ff4757","researcher":"#2ed573","natl":"#ff7f50","chip":"#a29bfe","journalist":"#fd79a8","military":"#636e72","treaty":"#00cec9","civil":"#e17055","ai":"#6c5ce7","smuggler":"#d63031","corp":"#e84393","who":"#00b894","untagged":"#888888"},"barData":[{"key":"pol","name":"Political Power","count":66,"pct":80},{"key":"int","name":"Intelligence","count":53,"pct":65},{"key":"saf","name":"Safety Progress","count":10,"pct":12},{"key":"alg","name":"Algorithmic Prog","count":7,"pct":9}],"brokenRefs":[{"from":"#civil--supreme-court-challenge","to":"#7"},{"from":"#enf--billionaire-island-raid","to":"#treaty--diplo-incident"},{"from":"#enf--cops-refuse-gpu-search","to":"#inst--zealous-officer"},{"from":"#enf--power-grid-anomaly","to":"#intel--contradictory-briefs"},{"from":"#enf--network-bandwidth-trap","to":"#ai--false-positive-batch"},{"from":"#enf--politically-inconvenient-true-positive","to":"#treaty--five-year-review"},{"from":"#enf--old-chips-new-tricks","to":"#era--threshold-crisis"},{"from":"#enf--custom-asic-foundry","to":"#intl--covert-program"},{"from":"#enf--disposal-officer-bribery","to":"#inst--mole"},{"from":"#mon--heat-sig-foreign","to":"#treaty--diplo-incident"},{"from":"#mon--smuggle-ring","to":"#enforce--cat-mouse-adapt"},{"from":"#mon--consumer-hw-threshold","to":"#pol--threshold-debate"},{"from":"#mon--surveillance-expand","to":"#pol--civil-lib-lawsuit"},{"from":"#mon--asml-joint-venture","to":"#intl--chip-dependency"},{"from":"#mon--black-market-signal","to":"#enforce--cat-mouse-adapt"},{"from":"#mon--near-miss","to":"#pol--budget-fight"},{"from":"#natl-intel--defector-offer","to":"#pol--scandal"},{"from":"#inst--true-believer","to":"#pol--civil-lib-lawsuit"}]};
+  const { nodes, edges, clusterSet, clusterColors, barData, brokenRefs } = DATA;
+
+  // -- Bar panel --
+  const barPanel = document.getElementById('bar-panel');
+  const barColorMap = { pol: '#e74c3c', int: '#3498db', saf: '#2ecc71', alg: '#e67e22' };
+  barData.forEach(b => {
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML =
+      '<span class="bar-label">' + b.name + '</span>' +
+      '<div class="bar-track"><div class="bar-fill" style="width:' + b.pct + '%;background:' + barColorMap[b.key] + '"></div></div>' +
+      '<span class="bar-pct">' + b.pct + '%</span>';
+    barPanel.appendChild(row);
+  });
+
+  // -- Cluster legend --
+  const clLegend = document.getElementById('cluster-legend-items');
+  clusterSet.forEach(c => {
+    const col = clusterColors[c] || '#888';
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    item.innerHTML = '<div class="legend-rect" style="border-color:' + col + ';background:transparent"></div>' + c;
+    clLegend.appendChild(item);
+  });
+
+  // -- Dimensions --
+  const W = window.innerWidth;
+  const H = window.innerHeight;
+
+  const svg = d3.select('#graph-svg')
+    .attr('width', W)
+    .attr('height', H);
+
+  // Arrow marker for directed edges
+  const defs = svg.append('defs');
+  defs.append('marker')
+    .attr('id', 'arrow')
+    .attr('viewBox', '0 0 10 6')
+    .attr('refX', 10)
+    .attr('refY', 3)
+    .attr('markerWidth', 8)
+    .attr('markerHeight', 6)
+    .attr('orient', 'auto')
+    .append('path')
+    .attr('d', 'M0,0 L10,3 L0,6')
+    .attr('fill', '#555');
+
+  defs.append('marker')
+    .attr('id', 'arrow-broken')
+    .attr('viewBox', '0 0 10 6')
+    .attr('refX', 10)
+    .attr('refY', 3)
+    .attr('markerWidth', 8)
+    .attr('markerHeight', 6)
+    .attr('orient', 'auto')
+    .append('path')
+    .attr('d', 'M0,0 L10,3 L0,6')
+    .attr('fill', '#e74c3c');
+
+  defs.append('marker')
+    .attr('id', 'arrow-highlight')
+    .attr('viewBox', '0 0 10 6')
+    .attr('refX', 10)
+    .attr('refY', 3)
+    .attr('markerWidth', 8)
+    .attr('markerHeight', 6)
+    .attr('orient', 'auto')
+    .append('path')
+    .attr('d', 'M0,0 L10,3 L0,6')
+    .attr('fill', '#f0c040');
+
+  // Container for zoom/pan
+  const g = svg.append('g');
+
+  const zoom = d3.zoom()
+    .scaleExtent([0.1, 6])
+    .on('zoom', (event) => g.attr('transform', event.transform));
+  svg.call(zoom);
+
+  // Type color
+  const typeColor = (t) => {
+    switch(t) {
+      case 'crisis': return '#e74c3c';
+      case 'report': return '#3498db';
+      case 'consequence': return '#e67e22';
+      case 'preparation': return '#2ecc71';
+      default: return '#e74c3c';
+    }
+  };
+
+  // Node radius based on bar count (min 6, max 18)
+  const nodeRadius = (d) => 6 + (d.barCount || 0) * 3;
+
+  // Cluster center positions (arranged in a circle)
+  const clusterAngle = {};
+  clusterSet.forEach((c, i) => {
+    const angle = (2 * Math.PI * i) / clusterSet.length - Math.PI / 2;
+    clusterAngle[c] = angle;
+  });
+  const clusterRadius = Math.min(W, H) * 0.28;
+
+  // Create a node map for edge lookups (including broken ref ghost nodes)
+  const nodeMap = new Map(nodes.map(n => [n.id, n]));
+
+  // Add ghost nodes for broken ref targets so edges can be drawn
+  const ghostNodes = [];
+  for (const br of brokenRefs) {
+    if (!nodeMap.has(br.to)) {
+      const ghost = {
+        id: br.to,
+        type: 'ghost',
+        rawType: 'ghost',
+        cluster: 'untagged',
+        entities: [],
+        topics: [],
+        situation: '(missing event)',
+        bars: '',
+        barCount: 0,
+        refs: [],
+        file: '',
+        isOrphan: false,
+        isGhost: true,
+      };
+      ghostNodes.push(ghost);
+      nodeMap.set(br.to, ghost);
+    }
+  }
+  const allNodes = [...nodes, ...ghostNodes];
+
+  // Force simulation
+  const simulation = d3.forceSimulation(allNodes)
+    .force('link', d3.forceLink(edges).id(d => d.id).distance(80).strength(0.3))
+    .force('charge', d3.forceManyBody().strength(-200).distanceMax(400))
+    .force('center', d3.forceCenter(W / 2, H / 2).strength(0.05))
+    .force('cluster', (alpha) => {
+      allNodes.forEach(d => {
+        const angle = clusterAngle[d.cluster] || 0;
+        const cx = W / 2 + Math.cos(angle) * clusterRadius;
+        const cy = H / 2 + Math.sin(angle) * clusterRadius;
+        d.vx += (cx - d.x) * alpha * 0.08;
+        d.vy += (cy - d.y) * alpha * 0.08;
+      });
+    })
+    .force('collision', d3.forceCollide().radius(d => nodeRadius(d) + 3));
+
+  // Draw edges
+  const linkG = g.append('g').attr('class', 'links');
+  const link = linkG.selectAll('line')
+    .data(edges)
+    .join('line')
+    .attr('stroke', d => d.broken ? '#e74c3c' : '#444')
+    .attr('stroke-width', d => d.broken ? 1 : 1.2)
+    .attr('stroke-dasharray', d => d.broken ? '4,3' : 'none')
+    .attr('stroke-opacity', d => d.broken ? 0.4 : 0.5)
+    .attr('marker-end', d => d.broken ? 'url(#arrow-broken)' : 'url(#arrow)');
+
+  // Initially hide broken refs
+  let showBroken = false;
+  link.filter(d => d.broken).style('display', 'none');
+
+  // Draw cluster background labels
+  const clusterLabelG = g.append('g').attr('class', 'cluster-labels');
+  clusterSet.forEach(c => {
+    const angle = clusterAngle[c] || 0;
+    const cx = W / 2 + Math.cos(angle) * clusterRadius * 1.35;
+    const cy = H / 2 + Math.sin(angle) * clusterRadius * 1.35;
+    clusterLabelG.append('text')
+      .attr('x', cx)
+      .attr('y', cy)
+      .attr('text-anchor', 'middle')
+      .attr('dominant-baseline', 'central')
+      .attr('fill', clusterColors[c] || '#888')
+      .attr('font-size', '14px')
+      .attr('font-weight', 'bold')
+      .attr('font-family', 'inherit')
+      .attr('opacity', 0.4)
+      .text(c.toUpperCase());
+  });
+
+  // Draw nodes
+  const nodeG = g.append('g').attr('class', 'nodes');
+  const node = nodeG.selectAll('g')
+    .data(allNodes)
+    .join('g')
+    .attr('class', 'node')
+    .call(d3.drag()
+      .on('start', dragStarted)
+      .on('drag', dragged)
+      .on('end', dragEnded));
+
+  // Circle for each node
+  node.append('circle')
+    .attr('r', d => nodeRadius(d))
+    .attr('fill', d => d.isGhost ? '#333' : typeColor(d.type))
+    .attr('stroke', d => clusterColors[d.cluster] || '#888')
+    .attr('stroke-width', d => d.isGhost ? 1 : 2)
+    .attr('stroke-dasharray', d => d.isGhost ? '2,2' : 'none')
+    .attr('opacity', d => d.isGhost ? 0.3 : 0.85);
+
+  // Labels
+  let showLabels = true;
+  const labels = node.append('text')
+    .text(d => d.id.replace('#', '').replace(/--/g, '/'))
+    .attr('x', d => nodeRadius(d) + 4)
+    .attr('y', 3)
+    .attr('fill', '#aaa')
+    .attr('font-size', '9px')
+    .attr('font-family', 'inherit')
+    .style('pointer-events', 'none');
+
+  // Tooltip
+  const tooltip = document.getElementById('tooltip');
+
+  node.on('mouseenter', (event, d) => {
+    if (d.isGhost) {
+      tooltip.innerHTML =
+        '<span class="tt-id">' + d.id + '</span>' +
+        '<span class="tt-type tt-broken" style="background:#e74c3c">MISSING</span>' +
+        '<div class="tt-situation" style="color:#e74c3c">This event is referenced but not defined in any file.</div>';
+    } else {
+      const entityTags = d.entities.map(e => '<span class="tt-tag-entity">' + e + '</span>').join('');
+      const topicTags = d.topics.map(t => '<span class="tt-tag-topic">' + t + '</span>').join('');
+      const refsList = d.refs.length > 0
+        ? '<div class="tt-refs">Refs: ' + d.refs.join(', ') + '</div>'
+        : '';
+      tooltip.innerHTML =
+        '<span class="tt-id">' + d.id + '</span>' +
+        '<span class="tt-type" style="background:' + typeColor(d.type) + '">' + d.rawType + '</span>' +
+        '<div class="tt-situation">' + d.situation.slice(0, 300) + (d.situation.length > 300 ? '...' : '') + '</div>' +
+        '<div class="tt-section"><span class="tt-label">Entities</span><div class="tt-tags">' + entityTags + '</div></div>' +
+        '<div class="tt-section"><span class="tt-label">Topics</span><div class="tt-tags">' + topicTags + '</div></div>' +
+        (d.bars ? '<div class="tt-bars">Bars: ' + d.bars + '</div>' : '') +
+        refsList +
+        '<div style="color:#666;font-size:10px;margin-top:4px">' + d.file + '</div>';
+    }
+    tooltip.style.display = 'block';
+
+    // Highlight connected edges
+    link.attr('stroke', l => {
+      const sid = typeof l.source === 'object' ? l.source.id : l.source;
+      const tid = typeof l.target === 'object' ? l.target.id : l.target;
+      if (sid === d.id || tid === d.id) return '#f0c040';
+      return l.broken ? '#e74c3c' : '#444';
+    }).attr('stroke-opacity', l => {
+      const sid = typeof l.source === 'object' ? l.source.id : l.source;
+      const tid = typeof l.target === 'object' ? l.target.id : l.target;
+      if (sid === d.id || tid === d.id) return 1;
+      return l.broken ? 0.4 : 0.5;
+    }).attr('stroke-width', l => {
+      const sid = typeof l.source === 'object' ? l.source.id : l.source;
+      const tid = typeof l.target === 'object' ? l.target.id : l.target;
+      if (sid === d.id || tid === d.id) return 2.5;
+      return l.broken ? 1 : 1.2;
+    }).attr('marker-end', l => {
+      const sid = typeof l.source === 'object' ? l.source.id : l.source;
+      const tid = typeof l.target === 'object' ? l.target.id : l.target;
+      if (sid === d.id || tid === d.id) return 'url(#arrow-highlight)';
+      return l.broken ? 'url(#arrow-broken)' : 'url(#arrow)';
+    });
+
+    // Dim non-connected nodes
+    node.select('circle').attr('opacity', n => {
+      if (n.id === d.id) return 1;
+      const connected = edges.some(l => {
+        const sid = typeof l.source === 'object' ? l.source.id : l.source;
+        const tid = typeof l.target === 'object' ? l.target.id : l.target;
+        return (sid === d.id && tid === n.id) || (tid === d.id && sid === n.id);
+      });
+      return connected ? 0.9 : (n.isGhost ? 0.1 : 0.2);
+    });
+  })
+  .on('mousemove', (event) => {
+    let tx = event.pageX + 14;
+    let ty = event.pageY + 14;
+    if (tx + 380 > W) tx = event.pageX - 394;
+    if (ty + 200 > H) ty = event.pageY - 200;
+    tooltip.style.left = tx + 'px';
+    tooltip.style.top = ty + 'px';
+  })
+  .on('mouseleave', () => {
+    tooltip.style.display = 'none';
+    // Reset highlights
+    link.attr('stroke', d => d.broken ? '#e74c3c' : '#444')
+      .attr('stroke-opacity', d => d.broken ? 0.4 : 0.5)
+      .attr('stroke-width', d => d.broken ? 1 : 1.2)
+      .attr('marker-end', d => d.broken ? 'url(#arrow-broken)' : 'url(#arrow)');
+    node.select('circle').attr('opacity', d => d.isGhost ? 0.3 : 0.85);
+  });
+
+  // Tick
+  simulation.on('tick', () => {
+    link
+      .attr('x1', d => d.source.x)
+      .attr('y1', d => d.source.y)
+      .attr('x2', d => {
+        const dx = d.target.x - d.source.x;
+        const dy = d.target.y - d.source.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        return d.target.x - (dx / dist) * nodeRadius(d.target);
+      })
+      .attr('y2', d => {
+        const dx = d.target.x - d.source.x;
+        const dy = d.target.y - d.source.y;
+        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+        return d.target.y - (dy / dist) * nodeRadius(d.target);
+      });
+
+    node.attr('transform', d => 'translate(' + d.x + ',' + d.y + ')');
+  });
+
+  // Drag handlers
+  function dragStarted(event, d) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+  function dragged(event, d) {
+    d.fx = event.x;
+    d.fy = event.y;
+  }
+  function dragEnded(event, d) {
+    if (!event.active) simulation.alphaTarget(0);
+    d.fx = null;
+    d.fy = null;
+  }
+
+  // Controls
+  document.getElementById('btn-reset').addEventListener('click', () => {
+    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  });
+
+  document.getElementById('btn-labels').addEventListener('click', function() {
+    showLabels = !showLabels;
+    labels.style('display', showLabels ? 'block' : 'none');
+    this.classList.toggle('active', showLabels);
+  });
+
+  document.getElementById('btn-broken').addEventListener('click', function() {
+    showBroken = !showBroken;
+    link.filter(d => d.broken).style('display', showBroken ? 'block' : 'none');
+    node.filter(d => d.isGhost).style('display', showBroken ? 'block' : 'none');
+    this.classList.toggle('active', showBroken);
+  });
+
+  // Search
+  const searchInput = document.getElementById('search-input');
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase().trim();
+    if (!q) {
+      node.select('circle').attr('opacity', d => d.isGhost ? 0.3 : 0.85);
+      labels.attr('fill', '#aaa');
+      return;
+    }
+    node.select('circle').attr('opacity', d => {
+      const match = d.id.toLowerCase().includes(q)
+        || d.entities.some(e => e.toLowerCase().includes(q))
+        || d.topics.some(t => t.toLowerCase().includes(q))
+        || d.situation.toLowerCase().includes(q)
+        || d.cluster.toLowerCase().includes(q);
+      return match ? 1 : 0.08;
+    });
+    labels.attr('fill', function(d) {
+      const match = d.id.toLowerCase().includes(q)
+        || d.entities.some(e => e.toLowerCase().includes(q))
+        || d.topics.some(t => t.toLowerCase().includes(q))
+        || d.situation.toLowerCase().includes(q)
+        || d.cluster.toLowerCase().includes(q);
+      return match ? '#f0c040' : '#333';
+    });
+  });
+
+  // Resize handler
+  window.addEventListener('resize', () => {
+    const nw = window.innerWidth;
+    const nh = window.innerHeight;
+    svg.attr('width', nw).attr('height', nh);
+  });
+})();
+</script>
+</body>
+</html>
