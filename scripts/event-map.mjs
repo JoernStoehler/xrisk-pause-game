@@ -535,7 +535,7 @@ function writeHtml(events, analysis) {
   /* Controls */
   #controls {
     position: absolute;
-    top: 80px;
+    top: 116px;
     left: 16px;
     z-index: 10;
     display: flex;
@@ -558,8 +558,8 @@ function writeHtml(events, analysis) {
   /* Search */
   #search-box {
     position: absolute;
-    top: 16px;
-    right: 280px;
+    top: 80px;
+    left: 16px;
     z-index: 10;
   }
   #search-input {
@@ -966,7 +966,7 @@ function writeHtml(events, analysis) {
 
   document.getElementById('btn-labels').addEventListener('click', function() {
     showLabels = !showLabels;
-    labels.style('display', showLabels ? 'block' : 'none');
+    labels.style('display', showLabels ? null : 'none');
     this.classList.toggle('active', showLabels);
   });
 
@@ -997,7 +997,7 @@ function writeHtml(events, analysis) {
     });
     labels.style('display', function(d) {
       if (stubsHidden && stubNodeIds.has(d.id)) return 'none';
-      return showLabels ? 'block' : 'none';
+      return showLabels ? null : 'none';
     });
     edgeElements.forEach(function(el, idx) {
       if (stubsHidden && stubEdgeIndices.has(idx)) {
