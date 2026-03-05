@@ -12,7 +12,7 @@ Compiled from IABIED, MIRI, Anthropic, Cotra, Gwern, AI-2027, and policy/public-
 
 **Domestic enforcement agencies**: Each party must create or empower a domestic agency — trained police, GPU search teams, chip factory inspectors, penalties up to death penalty precedent from the Atomic Energy Act. (Source: `iabied-treaty.md`, Article IX)
 
-**Research Controls Division** (within ISIA): Classifies Restricted Research as "Controlled" or "Banned." Modeled on the NNSA's "born secret" doctrine — certain AI research results are "born dangerous." (Source: `iabied-treaty.md`, Article VIII)
+**Research Controls Division** (within ISIA): Classifies Restricted Research as "Controlled" or "Banned." Modeled on the NNSA's "born secret" doctrine — certain AI research is inherently dual-use. (Source: `iabied-treaty.md`, Article VIII)
 
 **Information Consolidation Division** (within ISIA): Receives intelligence from national technical means, whistleblowers, challenge inspections. Operates under intelligence community compartmentalization rules. (Source: `iabied-treaty.md`, Article X)
 

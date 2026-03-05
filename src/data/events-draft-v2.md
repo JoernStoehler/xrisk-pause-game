@@ -118,7 +118,7 @@ Mechanisms, interaction points, and recurring situations. Each topic describes a
 | **#safety-research** | Work toward solving the alignment problem | The only long-term survival path. The pause buys time for this. (D-17) |
 | **#dual-use** | Research that advances both safety AND capabilities | The fundamental tension — studying how to make AI safe reveals how to make it more powerful. (B-24) |
 | **#publication** | Papers/results entering the public domain | Once published, can't be un-published. Advances algorithmic progress irreversibly. |
-| **#classification** | Deciding what research to allow, classify, or ban | Single decision point with three failure modes: bottleneck, judgment errors, smuggling channel. (B-25) |
+| **#classification** | Deciding what research to allow, classify, or ban | Single decision point with three failure modes: bottleneck, judgment errors, disguised capability work. (B-25) |
 | **#research-approval** | ISIA reviewing specific research proposals | Rich card source — approve vs. deny both carry real risks. |
 | **#algorithmic-progress** | Accumulated capability knowledge from all sources | Shrinks the lethal threshold every year. Partially uncontrollable. (B-5, B-6) |
 | **#experiment** | Large-scale training experiments for safety purposes | Even permitted training is dangerous — might accidentally cross threshold. (B-26) |
@@ -501,10 +501,10 @@ Grouped by primary entity cluster. Each event has:
 - Right: Restrict scope + add monitoring — keep some benefit, manage risk
 - Down (greyed out if saf low): Have safety team formally evaluate whether the output is actually dangerous
 **Teaches:** D-22 (smart enough to help = smart enough to be dangerous), C-59 (agency's AI tools not fully controlled), B-24 (dual-use)
-**Refs:** → #research--born-dangerous-publication (similar dynamic, external)
+**Refs:** → #research--dual-use-publication (similar dynamic, external)
 **Bars:** saf ↓ if shut down (lost tool), alg ↑ if output is real capability advance
 
-#### #research--born-dangerous-publication
+#### #research--dual-use-publication
 **Type:** crisis
 **Entities:** researcher-safety, isia-research-control
 **Topics:** #dual-use, #publication, #classification
@@ -512,7 +512,7 @@ Grouped by primary entity cluster. Each event has:
 **Options:**
 - Left: Issue retroactive classification — precedent that safety papers can be classified post-publication (toxic, may not work)
 - Right: Accept the leak — knowledge is out, update enforcement thresholds for the new efficiency
-**Teaches:** B-24 (born dangerous), B-25c (inadvertent smuggling channel), B-7 (different research types need different enforcement)
+**Teaches:** B-24 (dual-use research), B-25c (classification failure — disguised capability work), B-7 (different research types need different enforcement)
 **Refs:** → #monitoring--consumer-hw-threshold (threshold drops), → #research--approval-dilemma (future approvals get harder)
 **Bars:** alg ↑ (threshold just dropped), pol ↓ if classification attempted
 

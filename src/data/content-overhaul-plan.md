@@ -128,14 +128,14 @@ Source key: **[IABIED]** = treaty + book + resources ch13, **[MIRI]** = corrigib
 - (7) Because each source of algorithmic progress works differently, each needs a different enforcement strategy. You can ban large training runs by monitoring chips. You cannot ban theoretical insights by monitoring anything. Treating "AI research" as a single thing to regulate is a design error.
   [IABIED] — treaty Article VIII (research controls)
 
-- (24) Some safety research also advances capabilities (dual-use knowledge). The IABIED treaty calls this the "born dangerous" doctrine: studying how to make AI safe can reveal how to make it more powerful. This creates a fundamental tension — the agency needs to encourage safety research (see group D) while preventing that research from shrinking the lethal threshold. There is no clean way to separate the two.
-  [IABIED] — "born dangerous" doctrine; [Anthropic] — alignment faking research revealed capability patterns
+- (24) Some safety research also advances capabilities (dual-use knowledge). Studying how to make AI safe can reveal how to make it more powerful. The IABIED treaty addresses this through Restricted Research classification (Art. VIII) — research that advances AI capabilities or undermines verification is classified as either Controlled or Banned. This creates a fundamental tension — the agency needs to encourage safety research (see group D) while preventing that research from shrinking the lethal threshold. There is no clean way to separate the two.
+  [IABIED] — treaty Article VIII (Restricted Research); [Anthropic] — alignment faking research revealed capability patterns
 
 - (25) Someone at the agency must decide which research to allow and which to ban. This single decision point creates three distinct failure modes:
 
   (a) **Bottleneck** — the review process is inherently slow (evaluating whether a research proposal is dual-use requires deep expertise), which delays legitimate safety work.
   (b) **Judgment errors** — reviewers will sometimes approve dangerous research or block critical safety work. These mistakes compound over decades.
-  (c) **Smuggling channel** — researchers can disguise banned capability work as approved safety work. The reviewers must catch this, but the researchers understand their own work better than the reviewers do.
+  (c) **Disguised capability work** — researchers can disguise banned capability work as approved safety work. The reviewers must catch this, but the researchers understand their own work better than the reviewers do.
 
   For game design: this is a rich source of cards. The player (as agency director) faces research approval decisions where both "approve" and "deny" carry real risks.
   [IABIED] — Research Controls Division

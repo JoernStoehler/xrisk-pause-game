@@ -161,7 +161,7 @@ A prominent signatory goes on television: "The agency has made it illegal to und
 - Right: Reform the process — accelerate review timelines and narrow classification scope (operationally costly, but defuses legitimate criticism)
 - Down (greyed out if saf high): Invite letter organizers to co-design new review process (slow, but converts opponents into stakeholders)
 **Teaches:** B-25a (review bottleneck), B-7 (different research types need different enforcement). Academic freedom arguments against research restrictions are strong because they're partly right — the agency's restrictions DO slow safety research. The tension isn't "freedom vs. security" but "how much safety delay is worth how much security?"
-**Refs:** → #research--born-dangerous-publication (what happens when research is unrestricted), → #research--approval-dilemma (the review process being criticized)
+**Refs:** → #research--dual-use-publication (what happens when research is unrestricted), → #research--approval-dilemma (the review process being criticized)
 **Bars:** saf ↓ if restrictions maintained (research slowed by controversy), pol ↓ if restrictions maintained (lose academic community), alg ↑ if restrictions loosened (more gets published)
 
 ---

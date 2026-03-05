@@ -118,13 +118,13 @@ Initial breadth-first sketches for review. Each event is one paragraph describin
 **Depends on:** safety progress, enforcement capacity
 **Affects:** safety progress, algorithmic progress
 
-### E11. The "Born Dangerous" Publication
+### E11. The Dual-Use Publication
 **Type:** crisis
 **Situation:** A researcher at a university in a treaty nation publishes a paper that inadvertently reveals a significant optimization for training efficiency. The paper is about safety — specifically, how to detect deceptive alignment — but the detection method implicitly teaches how to create deceptive alignment more efficiently. The paper is already on arXiv.
 **Options:**
 - Left: Issue a retroactive classification order — set the precedent that safety papers can be classified after publication (politically toxic, may not work since the paper is already public)
 - Right: Accept the leak — the knowledge is out, focus on updating enforcement thresholds to account for the new efficiency
-**Teaches:** B-24 (born dangerous doctrine), B-25c (researchers can inadvertently create smuggling channels), B-7 (different research types need different enforcement)
+**Teaches:** B-24 (dual-use research), B-25c (classification failure — disguised capability work), B-7 (different research types need different enforcement)
 **Depends on:** algorithmic progress, mandate
 **Affects:** algorithmic progress (the threshold just dropped), political support (if classification attempted)
 

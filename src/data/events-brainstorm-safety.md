@@ -106,7 +106,7 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Refuse — maintain centralized control, accept the political cost and the possibility that you're genuinely slowing progress (universities may boycott ISIA collaborations entirely)
 - Down (greyed out if int < 40): Share declassified case studies showing how "purely theoretical" papers were used for capability advances — convince the academics that the threat is real without revealing sources and methods
 **Teaches:** Precondition 6 (Jörn's dilemma: universities wanting control back). D-21 (no external institution can be trusted with dual-use research — but centralizing it creates bureaucratic failure modes). B-6a (theoretical research drives algorithmic progress and cannot be controlled). B-25a (review bottleneck).
-**Refs:** → #research--born-dangerous-publication (the specific dual-use publication problem), → #research--approval-dilemma (the review bottleneck these academics are protesting)
+**Refs:** → #research--dual-use-publication (the specific dual-use publication problem), → #research--approval-dilemma (the review bottleneck these academics are protesting)
 **Bars:** pol ↓ if universities boycott, saf ↑ if federated model accelerates research, alg ↑ if freed publications drive algorithmic progress
 
 ---
@@ -121,7 +121,7 @@ Key constraint from Jörn: a sane DG will "fund any promising idea whatsoever" �
 - Right: Absorb the hit — refuse to declassify, accept the political damage, hope institutional support holds (protects classified research but may trigger funding cuts that actually end the program)
 - Down (greyed out if pol > 60): Have the DG testify in closed session to the congressional committees — classified briefing that satisfies oversight without public disclosure (requires enough political capital that Congress grants a closed session)
 **Teaches:** Precondition 6 (Jörn's dilemma: media selling "ISIA wastes money" stories). The classification trap: dual-use constraints mean your successes must be hidden while your failures are public. D-19 (safety research doesn't look like normal science — "null results" and expensive retreats look like waste to outsiders but may be essential).
-**Refs:** → #safety--three-year-stall (the underlying stagnation that makes the story plausible), → #research--born-dangerous-publication (why successes can't be published)
+**Refs:** → #safety--three-year-stall (the underlying stagnation that makes the story plausible), → #research--dual-use-publication (why successes can't be published)
 **Bars:** pol ↓↓ if story drives narrative unchallenged, alg ↑ if declassification reveals capability-relevant findings, saf ↓ if funding cut in response
 
 ---
