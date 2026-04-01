@@ -33,6 +33,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     trash-cli \
     && rm -rf /var/lib/apt/lists/*
 
+# Gitleaks — pre-commit secret scanner (prevents hardcoded API keys)
+RUN set -eux; \
+    curl -fsSL https://github.com/gitleaks/gitleaks/releases/download/v8.24.0/gitleaks_8.24.0_linux_x64.tar.gz \
+    | tar xz -C /usr/local/bin gitleaks; \
+    gitleaks version
+
 # VS Code tunnel CLI (bake into image to avoid slow postCreate download)
 RUN set -eux; \
     tmpdir="$(mktemp -d)"; \

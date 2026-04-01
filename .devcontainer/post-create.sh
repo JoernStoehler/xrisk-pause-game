@@ -27,6 +27,9 @@ if command -v gh >/dev/null 2>&1; then
   gh auth setup-git || true
 fi
 
+# Use repo-local git hooks (gitleaks pre-commit secret scanner)
+git config core.hooksPath .githooks
+
 # Install Claude Code CLI
 curl -fsSL https://claude.ai/install.sh | bash
 

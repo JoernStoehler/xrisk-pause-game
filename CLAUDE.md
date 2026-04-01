@@ -160,6 +160,7 @@ src/
 - `npm run check` passes (typecheck + lint + build + unit tests; E2E via `npm run test:e2e`)
 - Tech stack: Vite + React + TypeScript, Tailwind CSS, Playwright, Cloudflare Pages
 - `.env` at repo root has Cloudflare credentials (account ID, API token) and service keys
+- **Never hardcode secrets in source files.** Always read from `process.env`. A previous agent hardcoded a fal.ai API key in a script, it leaked publicly, and someone ran up the bill. This is the #1 thing to never do.
 - **When an env var is missing:** `source .env` first. Never ask the user for secrets.
 - **Never read `.jsonl` transcript logs directly** — they are large and will crash agent context. Grep with narrow search terms is fine for recovering specific past context.
 - **Worktree limitations:** There is no `ExitWorktree` tool. If the worktree directory is deleted while CWD points at it, the shell breaks permanently. Don't promise worktree cleanup at end of session.

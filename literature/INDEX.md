@@ -10,7 +10,9 @@
 | ai-frontiers-h20-exports.md | Exporting H20 Chips to China Undermines America's AI Edge | Jason Hausenloy | 2025 | No |
 | ai-incident-database-2024-2025.md | AI Incident Database: Notable Incidents 2024-2025 | Various (AIAAIC, public reports) | 2024-2025 | No |
 | ai-investment-bubble-2024-2025.md | AI Investment and Stock Market Signals 2024-2025 | Various (financial reports, analyst commentary) | 2024-2025 | No |
+| ai-progress-without-frontier-compute.md | AI Progress Without Frontier Compute: What Algorithmic Advancement Looks Like Under Training Restrictions | Research synthesis (multiple sources) | 2025-2026 | No |
 | aisi-frontier-trends-2025.md | Frontier AI Trends Report | UK AI Security Institute (AISI) | 2025 | No |
+| algorithmic-efficiency-trends.md | Algorithmic Efficiency Trends in AI: A Research Synthesis | Synthesis of Epoch AI, Stanford HAI, MIT FutureTech, and other sources | 2024-2026 | No |
 | altman-intelligence-age.md | The Intelligence Age | Sam Altman | 2024 | No |
 | anthropic-alignment-faking.md | Alignment Faking in Large Language Models | Ryan Greenblatt, Carson Denison, Benjamin Wright, et al. | 2024 | No |
 | anthropic-alignment-increasingly-solvable.md | Alignment is Not Solved But Increasingly Looks Solvable | Jan Leike | 2026 | No |
@@ -28,6 +30,7 @@
 | cepr-revolving-doors.md | Revolving Doors and Regulatory Capture | Thomas Wollmann and Haris Tabakovic | 2018 | No |
 | cnas-chip-smuggling.md | Countering AI Chip Smuggling Has Become a National Security Priority | Erich Grunewald, Tim Fist | 2025 | No |
 | cnas-sanctions-by-the-numbers-2024.md | Sanctions by the Numbers: 2024 Year in Review | Eleanor Hume, Kyle Rutter | 2025 | No |
+| compute-requirements-trends.md | Compute Requirements for Frontier AI: Trends, Thresholds, and the Consumer Gap | Research synthesis (multiple sources) | 2025 | No |
 | cnas-secure-governable-chips-2024.md | Secure, Governable Chips: Using On-Chip Mechanisms to Manage National Security Risks from AI & Advanced Computing | Onni Aarne, Tim Fist, Caleb Withers | 2024 | No |
 | controlai-moratorium-failure-modes-2025.md | Perfect Implementation Isn't Enough: Four Ways an ASI Moratorium Could Fail | Damin Curtis | 2025 | No |
 | controlai-narrow-path-2025.md | A Narrow Path: How to Secure Our Future | Andrea Miotti, Tolga Bilge, Dave Kasten, James Newport (ControlAI) | 2025 | No |
@@ -95,6 +98,7 @@
 | sastry-heim-compute-governance-2024.md | Computing Power and the Governance of Artificial Intelligence | Girish Sastry, Lennart Heim, Haydn Belfield, et al. | 2024 | No |
 | sb1047-analysis.md | California SB 1047 Analysis | Various (Carnegie Endowment, Brookings, legal analyses) | 2024 | No |
 | slovic-psychic-numbing-2007.md | "If I look at the mass I will never act": Psychic numbing and genocide | Paul Slovic | 2007 | Yes |
+| theory-vs-scale-in-ai-progress.md | Theory vs. Scale in AI Progress: How Much Algorithmic Innovation Requires Large-Scale Experiments? | Research synthesis (multiple sources) | 2025-2026 | No |
 | us-ai-executive-orders.md | US Executive Orders on AI | The White House / US Government | 2023-2025 | No |
 | wasil-verification-methods-ai-agreements-2024.md | Verification Methods for International AI Agreements | Akash R. Wasil, Tom Reed, Jack William Miller, Peter Barnett | 2024 | No |
 | yudkowsky-agi-ruin-lethalities.md | AGI Ruin: A List of Lethalities | Eliezer Yudkowsky | 2022 | No |
