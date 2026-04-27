@@ -1,10 +1,12 @@
-# Literature — Agent Instructions
+# Literature
 
 ## Purpose
 
 Pre-downloaded, cleaned reference materials for agent consumption. Avoids fragile web searches and repetitive formatting cleanup during project sessions.
 
-**This is shared, read-only context** — not code, not a dependency. Projects reference specific files/sections in their own `CLAUDE.md`.
+**This is shared, read-only context**: not code, not a dependency. Project
+instructions reference specific files or sections from `AGENTS.md`, skills, or
+design notes.
 
 ---
 
@@ -12,12 +14,12 @@ Pre-downloaded, cleaned reference materials for agent consumption. Avoids fragil
 
 ```
 literature/
-  CLAUDE.md        # You are here
+  README.md        # You are here
   INDEX.md         # One-line summary of each resource
   .gitignore       # Ignores decrypted copies of encrypted files
   <slug>.md        # Public resource, committed as-is
   <slug>.md.enc    # Encrypted resource (copyrighted), committed
-  <slug>.md        # Decrypted copy, gitignored (created by session hook)
+  <slug>.md        # Decrypted copy, gitignored
 ```
 
 **File naming:** `kebab-case-slug.md`. Descriptive but short. Examples:
@@ -58,19 +60,17 @@ Then the content as clean markdown:
 
 ## How to Add New Literature
 
-The entire pipeline — download, convert, clean up, encrypt — is simple enough for a single Sonnet or Haiku `Task()` subagent. Don't use Opus for this.
+When adding literature, prefer a bounded source-ingestion task:
+- Source: URL or precise source description.
+- Slug: kebab-case filename stem.
+- Copyrighted: yes/no.
+- Required output: converted source file, `INDEX.md` update, and
+  encryption/gitignore update when copyrighted.
 
-### Invoking the subagent
-
-```
-Task(subagent_type="general-purpose", model="sonnet",
-  prompt="""Read literature/CLAUDE.md for format requirements, then add a new resource:
-  - Source: <URL or description>
-  - Slug: <slug>
-  - Copyrighted: yes/no
-  Download, convert, clean up, add frontmatter, update INDEX.md.
-  If copyrighted, encrypt and add to .gitignore.""")
-```
+If Jörn explicitly authorizes subagents, delegate this as a worker task with
+`literature/` as the write scope. The parent session remains responsible for
+relevance, source quality, copyright/encryption handling, and whether
+downstream claims cite the added source.
 
 ### Conversion recipes (for the subagent to follow)
 
@@ -113,7 +113,7 @@ After mechanical conversion, clean up the output:
 ### Encryption (copyrighted material)
 
 Uses `age` with a keypair (not passphrase mode):
-- **`LITERATURE_KEY`** env var: the age secret key (`AGE-SECRET-KEY-...`), set in CC Web secrets
+- **`LITERATURE_KEY`** env var: the age secret key (`AGE-SECRET-KEY-...`)
 - **`literature/age-recipient.txt`**: the corresponding public key (`age1...`), committed to repo
 
 ```bash
@@ -128,15 +128,23 @@ age -r $(cat literature/age-recipient.txt) -o literature/<slug>.md.enc literatur
 
 Then add `<slug>.md` to `literature/.gitignore` and set `encrypted: true` in the frontmatter of the `.enc` source.
 
-### Decryption (handled by session-start hook)
+### Decryption
 
-The `.claude/hooks/session-start.sh` hook automatically sources `.env` and decrypts all `.enc` files in `literature/` at session start. Decrypted `.md` files should already exist by the time you read them — just use `Read` directly. If a decrypted file is missing, the hook failed; source `.env` yourself and decrypt manually rather than asking the user for keys.
+If decrypted `.md` files are missing and `LITERATURE_KEY` is available in the
+environment, run:
+
+```bash
+bash scripts/decrypt-literature.sh
+```
+
+The script also sources `.env` when present, so local devcontainer sessions
+usually do not need a separate export.
 
 ---
 
 ## How Projects Reference Literature
 
-In a project's `CLAUDE.md`:
+In `AGENTS.md`, a skill, or a design note:
 
 ```markdown
 ## Reference Literature

@@ -3,7 +3,7 @@
 
 set -euo pipefail
 
-echo "Local devcontainer post-create..."
+echo "[post-create] Local devcontainer post-create..."
 
 # Ensure user directories exist
 sudo mkdir -p \
@@ -15,11 +15,21 @@ sudo chown -R "${USER}:${USER}" \
   "${HOME}/.local" \
   "${HOME}/.cache"
 
-# Configure npm paths
+# Configure npm paths and install global packages
 if command -v npm >/dev/null 2>&1; then
   mkdir -p "${HOME}/.local/bin" "${HOME}/.cache/npm"
   npm config set prefix "${HOME}/.local"
   npm config set cache "${HOME}/.cache/npm"
+  npm install -g @openai/codex
+fi
+
+# Codex: idempotently seed project trust so repo-level .codex/config.toml,
+# .codex/agents/, and .agents/skills/ load in this checkout.
+mkdir -p /home/vscode/.codex
+CODEX_USER_CONFIG=/home/vscode/.codex/config.toml
+touch "$CODEX_USER_CONFIG"
+if ! grep -qF 'projects."/workspaces/xrisk-pause-game"' "$CODEX_USER_CONFIG"; then
+  printf '\n[projects."/workspaces/xrisk-pause-game"]\ntrust_level = "trusted"\n' >> "$CODEX_USER_CONFIG"
 fi
 
 # Configure git credentials via GitHub CLI
@@ -30,19 +40,16 @@ fi
 # Use repo-local git hooks (gitleaks pre-commit secret scanner)
 git config core.hooksPath .githooks
 
-# Install Claude Code CLI
-curl -fsSL https://claude.ai/install.sh | bash
-
 # Install Playwright browser binary (system deps already in image)
 npx -y playwright install chromium
 
 # Verify tools
-echo "code-tunnel: $(code-tunnel --version 2>/dev/null || echo 'not found')"
-echo "node: $(node -v 2>/dev/null || echo 'not found')"
-echo "npm: $(npm -v 2>/dev/null || echo 'not found')"
+echo "[post-create] code-tunnel: $(code-tunnel --version 2>/dev/null || echo 'not found')"
+echo "[post-create] codex: $(codex --version 2>/dev/null || echo 'not found')"
+echo "[post-create] node: $(node -v 2>/dev/null || echo 'not found')"
+echo "[post-create] npm: $(npm -v 2>/dev/null || echo 'not found')"
 
-# tmux config for Claude Code TUI compatibility
-# Based on https://github.com/sethdford/tmux-claude-code
+# tmux config for terminal agent sessions
 cat > ~/.tmux.conf << 'TMUXCONF'
 set -g mouse on
 set -g status off
@@ -50,7 +57,6 @@ set -g set-titles on
 set -g set-titles-string "[#S] #{pane_title}"
 set -g @scroll-down-exit-copy-mode off
 
-# Claude Code fixes
 set -g allow-passthrough on
 set -sg escape-time 0
 set -g extended-keys always
@@ -85,4 +91,4 @@ fi
 # Run warmup cache in background
 nohup .devcontainer/warmup-cache.sh >> "${HOME}/.cache/warmup.log" 2>&1 &
 
-echo "Local post-create complete."
+echo "[post-create] Local post-create complete."

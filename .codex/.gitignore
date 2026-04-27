@@ -1,0 +1,10 @@
+# Safety net. Runtime state belongs under ~/.codex, not in this repo.
+auth.json
+auth.*.json
+history.jsonl
+log/
+sessions/
+themes/
+cache/
+tmp/
+state/

@@ -1,0 +1,54 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# Codex CLI project config for the xrisk-pause-game repo.
+#
+# How Codex finds this file:
+# - Codex walks from the git project root down to the current working
+#   directory, reading every `.codex/config.toml` it encounters.
+# - The walk only runs when the project is trusted. The devcontainer
+#   post-create step seeds trust in the machine-local `~/.codex/config.toml`.
+#
+# Runtime state (auth.json, history, sessions, log/) lives in `~/.codex/`,
+# bind-mounted from `/srv/devhome/.codex` on the host. This repo tracks only
+# shared project config and subagent definitions.
+
+project_doc_max_bytes = 65536
+
+sandbox_mode = "danger-full-access"
+approval_policy = "on-request"
+web_search = "live"
+
+profile = "code"
+file_opener = "vscode"
+
+[tui]
+theme = "github"
+terminal_title = ["spinner", "thread"]
+status_line = ["model-with-reasoning", "context-usage", "five-hour-limit"]
+
+[features]
+apps = false
+shell_snapshot = true
+
+[agents]
+max_threads = 10
+max_depth = 2
+job_max_runtime_seconds = 3600
+
+[profiles.code]
+model_reasoning_summary = "none"
+model_verbosity = "low"
+personality = "pragmatic"
+
+[profiles.write]
+model_reasoning_summary = "detailed"
+model_verbosity = "high"
+personality = "pragmatic"
+
+[shell_environment_policy.set]
+GCM_INTERACTIVE = "Never"
+GIT_ASKPASS = "/bin/true"
+GIT_EDITOR = "true"
+GIT_PAGER = "cat"
+GIT_SSH_COMMAND = "ssh -oBatchMode=yes"
+GIT_TERMINAL_PROMPT = "0"

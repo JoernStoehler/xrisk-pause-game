@@ -15,8 +15,7 @@
     "cli": "tsx src/cli.ts",
     "cards": "tsx scripts/export-cards.ts",
     "screenshot": "npx tsx e2e/screenshot.ts",
-    "check": "npm run typecheck && npm run lint && npm run build && npm test",
-    "setup:ccweb": "npx playwright install --with-deps chromium 2>/dev/null; npm install"
+    "check": "npm run typecheck && npm run lint && npm run build && npm test"
   },
   "dependencies": {
     "@fal-ai/client": "^1.9.3",
