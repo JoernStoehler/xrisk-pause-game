@@ -1,86 +1,61 @@
 ---
 name: research-topic
-description: "Research a topic from expert literature and compress it into game-ready pause-game design material. Use when the domain model, card concepts, or card text need new source-grounded mechanisms, scenarios, or card ideas."
+description: "Use when turning expert literature, current sources, or design questions into source-grounded pause-game mechanisms, scenarios, card concepts, or domain-model updates."
 ---
 
-# Research Topic Pipeline
+# Research Topic
 
-Four-step process for turning a knowledge gap into card-ready design material.
-Each step produces a distinct artifact. Do not skip steps or combine artifacts.
+## Purpose
 
-## When to Use
+Produce game-usable design material that is grounded in sources and compatible
+with the current pause-game model. The usual output is a short synthesis,
+scenario mechanism list, or proposed additions to `design/card-concepts.md`.
 
-Use this when game content needs real-world expertise that is not already
-captured well enough in `literature/`, `design/domain-model.md`, or
-`design/card-concepts.md`.
+## Inputs To Check
 
-## Step 1: Guided Literature Search
+- `TASKS.md` for the current content gap and escalation marker.
+- `design/domain-model.md` for the settled model and resource mapping.
+- `design/card-concepts.md` for existing concepts and duplicates.
+- `design/geopolitics-synthesis.md` and `design/research/*.md` when working on
+  enforcement, corruption, sanctions, arms control, or geopolitics.
+- `literature/INDEX.md`, `literature/REFERENCES.md`, and relevant
+  `literature/*` files for source notes.
+- `design/iabied-vocabulary.md` when using treaty or book terminology.
 
-**Goal:** Find and download expert-written source documents relevant to the
-topic.
-**Output:** Files in `literature/`.
+## Workflow
 
-Rules:
+1. Define the research question in game terms: which mechanism, scenario, card
+   family, or model gap is being filled.
+2. Gather sources narrowly. Prefer primary sources, expert reports, or existing
+   repo literature notes. For current-world facts, browse and record the
+   concrete source/date.
+3. Extract mechanisms, not summaries. A useful mechanism names actors,
+   incentives, constraints, observable signals, failure modes, and timescale.
+4. Map each mechanism to game levers: resources, hidden state, `poolWeight`
+   conditions, history chains, card tags, or design-document changes.
+5. Separate source-backed facts from game extrapolations.
+6. Check against existing concepts before proposing new ones.
 
-- Search for specific known documents, not general summaries.
-- Download actual source text and preserve title, authors, date, and URL.
-- Prioritize freely available full-text documents.
-- Filter for relevance during search; avoid downloading a broad pile and
-  sorting it later.
-- Agent-downloaded text is acceptable in `literature/`; agent-written
-  summaries are not.
-- Verify coverage from multiple angles and flag gaps.
+## Output Shape
 
-## Step 2: Expert Model Extraction
+Prefer concise structured output:
 
-**Goal:** Compress the source documents into transferable mechanisms and
-patterns.
-**Output:** `design/<topic>-synthesis.md`
+- research question
+- sources checked
+- mechanism list with source anchors
+- game mapping for each mechanism
+- proposed card concepts or domain-model edits
+- uncertainties and Jörn-only decisions
 
-Rules:
+Do not add large prose literature reviews unless asked. If writing directly to
+repo files, keep citations or source pointers close to the mechanism they
+support.
 
-- Every claim cites a specific source file and ideally a passage or section.
-- Extract mechanisms, not just examples.
-- Flag disagreement or weak evidence honestly.
-- Exclude mechanisms unsupported by the sources.
-- Keep it under 3000 words.
-- Number items so Jörn can reference them unambiguously.
+## Stop Conditions
 
-## Step 3: ISIA Scenario Specialization
+Stop for Jörn review before:
 
-**Goal:** Translate generic mechanisms into concrete pause-enforcement
-scenarios.
-**Output:** new or updated scenario material in `design/`
-
-Rules:
-
-- For each mechanism from step 2, describe how it plays out for a global AI
-  pause agency over multi-year enforcement.
-- Include the player-facing tension and tradeoffs.
-- Identify which game state it affects: resource bars, hidden state, or card
-  pool dynamics.
-- Note timescale in game terms.
-- Reference the synthesis document for sourcing instead of repeating citations
-  inline.
-- Write for an agent who knows the mechanics but not the external field.
-
-## Step 4: Card-Writing Reference
-
-**Goal:** Produce material a card-writing agent can directly use.
-**Output:** new or updated idea lines in `design/card-concepts.md` or another
-agreed design artifact
-
-Rules:
-
-- Each idea line should be a concrete scenario with a player choice implied.
-- Mark new ideas clearly so Jörn can review them before implementation.
-- Note which step-3 mechanism each idea derives from.
-- Do not write TypeScript cards yet unless Jörn explicitly asks for that.
-
-## Anti-Patterns
-
-- Writing the conclusion first, then finding literature to support it.
-- Agent summaries masquerading as literature.
-- Skipping the scenario layer between source extraction and card concepts.
-- Giant unread literature dumps.
-- Combining all four steps into one mixed artifact.
+- changing the core domain model or resource mapping;
+- encoding contested real-world claims without adequate source support;
+- adding card concepts that change the game's thesis or political model;
+- treating agent-written research as validated expert judgment.

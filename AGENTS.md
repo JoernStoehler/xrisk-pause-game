@@ -1,159 +1,73 @@
-# AGENTS.md
+# xrisk-pause-game
 
 ## Project
 
-Reigns-clone card-swipe game. You are the Director-General of the ISIA
-(International Superintelligence Agency), trying to enforce a global AI pause.
-Engine and tooling are in solid shape; content and some presentation surfaces
-are still draft or placeholder.
+This is a serious Reigns-style mobile web game about directing an international
+AI pause agency. The core thesis is that a pause is not quiet waiting: it is a
+fragile crisis-management race to keep capability progress contained while
+safety work catches up.
 
-**Live:** https://global-pause.pages.dev
-**Audience:** People who do not yet appreciate how a serious global AI pause
-might work or fail.
-**Core thesis:** Without a serious pause we are dead. A serious pause is
-possible. It requires concrete mechanisms and tradeoffs that players should be
-able to articulate afterward.
-**Owner:** Jörn Stöhler: x-risk domain expertise, project direction, and
-deployed-result review. Jörn does not write code.
-
-## Current Layout
-
-- `src/engine/`: pure TypeScript game engine with no React dependency.
-  - `types.ts`: `GameState`, `Card`, `Resources`, `ChoiceSpec`.
-  - `state.ts`: `newGame`, `applyChoice`, `checkDeath`.
-  - `cards.ts`: weighted card pool and anti-repeat draw logic.
-  - `rng.ts`: seeded PRNG.
-  - `useGame.ts`: React bridge, actions, and localStorage.
-- `src/data/`: card, death, and tutorial content.
-  - `src/data/cards/`: card files and registry.
-  - `src/data/deaths.ts`: death messages.
-  - `src/data/tutorial.ts`: tutorial cards.
-- `src/components/`: React UI components.
-- `src/hooks/`: swipe logic.
-- `src/assets/portraits/`: speaker portraits.
-- `e2e/`: Playwright smoke and drag tests.
-- `scripts/`: portrait generation, card export, and literature helpers.
-- `design/`: game design notes, domain model, review docs, and card exports.
-- `literature/`: source documents for grounded content.
-- `.agents/skills/`: Codex skills for project workflows and conventions.
-- `.codex/agents/`: Codex subagent definitions.
-- `.codex/worktrees/`: repo-local Codex worktrees for isolated sessions.
-- `.devcontainer/`: local devcontainer setup.
+Jörn is the domain owner. Ask before changing the game's thesis, political
+model, terminology, card concepts, or major UX direction. Current content is
+draft quality unless `TASKS.md` says otherwise.
 
 ## Instruction Sources
 
-Required project instructions live in this root map or in discoverable skills.
-Do not add nested `AGENTS.md` files as required instruction maps; root-launched
-Codex sessions will not reliably load them.
+- Read `TASKS.md` at session start. It is the current state and priority file.
+- Use skills for specialized work. In particular, load `write-cards` before
+  editing `src/data/cards/**`, `research-topic` before creating source-grounded
+  design material, and `harness-engineering` before changing this harness.
+- Do not depend on nested instruction files for required behavior.
 
-Use skills for detailed reusable procedures. Skill descriptions are the routing
-source of truth.
+## Repository Map
 
-## Architecture
+- `src/engine/`: pure TypeScript game state, card resolution, RNG, tutorial
+  logic, and tests.
+- `src/data/cards/`: card declarations registered by side-effect imports in
+  `src/data/cards/index.ts`.
+- `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio hooks,
+  and Tailwind v4 theme CSS.
+- `design/`: domain model, card concepts, generated card export, map reviews,
+  and research/design notes.
+- `literature/`: source notes and encrypted source-derived material. Run
+  `scripts/decrypt-literature.sh` when encrypted literature is needed.
+- `.agents/skills/`: Codex skills for project-specific workflows.
+- `.codex/`: repo Codex config and subagent roles.
+- `.devcontainer/`: local Docker setup for Codex sessions and VS Code tunnel.
 
-- Engine is pure TypeScript with zero React dependency. `types.ts`, `state.ts`,
-  `cards.ts`, and `rng.ts` are used by both the React UI and CLI tools.
-- Cards are declarative. Each card has `poolWeight: (state) => number`. The
-  engine evaluates all cards each turn, filters by positive weight and
-  anti-repeat rules, picks by weighted random draw, and resolves an
-  `ActiveCard` for the UI.
-- Current resource keys are `pol`, `int`, `saf`, and `alg`.
-- Swipe uses Pointer Events. CSS transforms are applied through refs during
-  drag to avoid rerendering on pointer movement.
+## Current Architecture Facts
 
-## Product State
+- The app is React 19 + Vite + TypeScript.
+- The engine uses four visible resources: `pol`, `int`, `saf`, and `alg`.
+- Cards are static `Card` objects with dynamic fields and `poolWeight(state)`.
+- Hidden state is a numeric key-value map used for cross-card interactions.
+- `npm run cards` regenerates `design/cards-export.md` and
+  `public/cards-map.html` from the TypeScript card pool.
+- The devcontainer is the primary environment. It bind-mounts Codex and GitHub
+  auth from `/srv/devhome/` and persists VS Code tunnel state in the
+  `xrisk-pause-game-vscode` Docker volume at `~/.vscode`.
 
-Settled and safe to build on:
-- engine, swipe UX, layout system, card map tool, portrait generation script.
+## Work Rules
 
-Draft or placeholder:
-- most card text, death messages, tutorial content, portraits, title/death
-  screen polish, history-chain coverage, and some balance assumptions.
+- Preserve unrelated user changes. Check `git status --short --branch` before
+  broad edits and do not reset or checkout files unless explicitly asked.
+- Keep changes scoped to the requested surface. This repo is mid-content
+  overhaul; avoid polishing placeholder content unless that is the task.
+- Prefer observable validation over prose claims. If a file says a command,
+  path, count, or generated artifact exists, verify it.
+- Use `rg` and direct file reads for repo inspection. Use `apply_patch` for
+  manual edits.
+- For current-world claims, check sources instead of relying on memory.
 
-`TASKS.md` is the current task tracker and maturity map. Read it before
-planning feature or content work.
-
-## Decision Authority
-
-|  | Cheap to verify | Expensive to verify |
-|---|---|---|
-| **Easy rollback** | Act freely | Act, then Jörn verifies |
-| **Hard rollback** | Discuss first | Discuss first |
-
-Engineering and web experience design decisions belong to agents. Content
-accuracy, game design, x-risk communication, taste, and scope belong to Jörn.
-
-Jörn is often on mobile, so keep questions rare, concrete, and numbered when a
-decision is genuinely needed.
-
-## Working Style
-
-- Verify claims before making them. Read code before saying what it does.
-- If Jörn asks what a file says, answer from the file.
-- Push back when a better approach or hidden risk matters.
-- Ask Jörn only for content judgment, game-design judgment, taste,
-  external-world actions, or irreversible choices.
-- Do not ask "should I proceed" when the next step is a normal reversible
-  engineering action.
-- Quote or summarize important command output because Jörn does not see tool
-  output.
-
-## Git
-
-- Use local `main` as the base unless Jörn names a different base.
-- Agents may commit without asking. Ask about merge approval, not commit
-  permission.
-- Before merging a separate branch to `main`, report what changed, what was
-  verified, and what needs Jörn review.
-- Destructive operations such as force-push, branch deletion on `main`,
-  `git reset --hard`, and checkout-based reverts require explicit approval.
-- `npm run check` should pass before committing code changes.
-- Push to `main` when Jörn wants the deployed result reviewed.
-
-## Worktrees
-
-- Work only in the assigned cwd. Treat the tool default cwd as untrusted until
-  it matches the assigned cwd.
-- Create a worktree when Jörn asks for isolated edits or when parallel sessions
-  may edit overlapping tracked files.
-- Use local `main` unless Jörn names a different base:
-  `git worktree add -b <branch> .codex/worktrees/<branch> main`
-- Every subagent prompt must name the required cwd.
-- After merge, remove a worktree with
-  `git worktree remove .codex/worktrees/<branch>` and delete the branch with
-  `git branch -d <branch>`.
-
-## Environment
-
-Local devcontainer on Jörn's Ubuntu desktop. `npm install` on first run.
-Playwright browsers are pre-installed.
-
-- `.env` at repo root has Cloudflare credentials and service keys. Source it
-  when needed. Never ask for secrets.
-- Never hardcode secrets in source files. Always read them from the
-  environment.
-- If encrypted literature is needed and decrypted `.md` files are missing, run
-  `bash scripts/decrypt-literature.sh`.
-- Raw localhost does not work in Jörn's setup; use VS Code port forwarding
-  through the devcontainer/tunnel.
-- Never read `.jsonl` transcript logs directly.
-- Tech stack: Vite, React 19, TypeScript, Tailwind CSS 4, Playwright,
-  Cloudflare Pages.
-
-## QA
-
-- `#qa` hash on live site: portrait gallery, card overview, death messages.
-- Visual QA: 390x844 viewport, clear localStorage first.
-- After UI changes to `SwipeCard`, `useSwipe`, `ResourceIcons`, or
-  `GameScreen`, run `e2e/drag.spec.ts`, verify the `SwipeCard` key changes with
-  `activeCard`, and do a mobile visual check.
-
-## Quick Commands
+## Commands
 
 ```bash
-npm run check          # typecheck + lint + build + unit tests
-npm run dev            # dev server
-npm run test:e2e       # Playwright E2E
-npm run cards          # export design/cards-export.md + public/cards-map.html
-npm run cli auto 20    # random-play 20 turns
+npm run dev
+npm run check
+npm run test:e2e
+npm run cli auto 20
+npm run cards
+bash scripts/decrypt-literature.sh
+.devcontainer/host-devcontainer-rebuild.sh
+.devcontainer/host-vscode-tunnel.sh
 ```

@@ -1,216 +1,84 @@
 ---
 name: write-cards
-description: "Rules and reference for creating or modifying pause-game cards in `src/data/cards/**`, including card text, tags, deltas, pool weights, hidden state, and source-grounded content checks. Use before editing card files or card-writing design guidance."
+description: "Use before creating, editing, reviewing, or rebalancing pause-game cards in `src/data/cards/**`, `design/card-concepts.md`, or generated card review artifacts. Covers Card syntax, tags, source checks, hidden state, pool weights, and card QA."
 ---
 
-# Card Writing Guide
+# Write Cards
 
-Read before creating or modifying cards:
+## Start Here
 
-1. **This file** — content rules, tone, balance, card categories
-2. **`src/data/cards/examples.ts`** — annotated examples of every card pattern
-3. **`src/engine/types.ts`** — `CardScript`, `PoolEntry`, `GameState` type definitions
+Read only the files needed for the requested card work:
 
-Jörn reviews card output on the QA page (`#qa`) and via `npm run cli cards`,
-not this file. Edit this file only when cards keep coming out wrong in the same
-repeated way.
+- `TASKS.md` for current maturity and blockers.
+- `src/engine/types.ts` for the live `Card`, `ChoiceSpec`, resource, hidden
+  state, and history types.
+- `src/data/cards/examples.ts` for supported card patterns.
+- `src/data/cards/index.ts` for the current card module registry.
+- `design/domain-model.md` for the settled game model.
+- `design/card-concepts.md` for intended card ideas, duplicate notes, and topic
+  grouping.
+- `design/iabied-vocabulary.md` when using IABIED terms or checking whether a
+  term is fabricated or misattributed.
+
+## Card Shape
+
+- Cards are `Card` objects registered with `register(...)` in a file under
+  `src/data/cards/`.
+- Required fields: `id`, `speaker`, `text`, `left`, `right`, and
+  `poolWeight`.
+- Optional fields: `down`, `color`, `tags`, `idea`, dynamic text/labels,
+  `hiddenEffects`, and choice `enabled`.
+- Effects use the four resource keys from `src/engine/types.ts`: `pol`, `int`,
+  `saf`, `alg`.
+- Hidden state is numeric. Use clear snake_case keys and check existing reads
+  and writes before adding a new key.
+- New files must be imported from `src/data/cards/index.ts`; otherwise their
+  cards are not in the pool.
+
+## Writing Rules
+
+- Use `design/card-concepts.md` as the concept backlog when implementing new
+  content. Preserve card IDs listed there unless there is a concrete reason to
+  rename them.
+- Put the primary content tag first. Reuse existing tag wording from nearby
+  cards or `design/card-concepts.md` unless introducing a genuinely new topic.
+- Keep each choice legible as a director-level decision. The player should see
+  the tradeoff before resource previews confirm it.
+- Prefer specific institutional mechanisms over generic drama: inspections,
+  chip accounting, treaty votes, public legitimacy, smuggling, capture,
+  safety bottlenecks, and algorithmic threshold movement.
+- Use degraded variants, history chains, or hidden state when the same event
+  should depend on previous choices or current institutional strength.
+- Use crisis cards as high-weight resource-extreme stabilizers, not as routine
+  flavor.
+- Keep `saf` and `alg` monotone unless the engine/design model changes.
 
 ## Source Integrity
 
-When cards rely on specific literature claims:
+- Do not invent treaty terms, IABIED vocabulary, citations, or historical
+  analogies. If a card names a source-backed mechanism, check the relevant
+  `literature/` or `design/research/` file.
+- When using IABIED language, check `design/iabied-vocabulary.md`. Avoid terms
+  listed there as fabricated or misattributed.
+- If a claim is based on current events or current policy, verify it with
+  current sources before encoding it into card text or design notes.
+- Distinguish game extrapolation from source fact in comments or design notes.
+  Card text can be fictional, but the underlying mechanism should be traceable.
 
-- verify unusual terminology against `literature/` before presenting it as
-  source language;
-- treat `design/iabied-vocabulary.md` as the current cache of verified IABIED
-  terms and known past fabrications;
-- if a scenario depends on a specific mechanism or historical claim, cite it in
-  the relevant design doc before turning it into card prose;
-- do not invent "authoritative-sounding" labels and attach them to IABIED,
-  MIRI, treaty text, or other sources.
+## Review
 
-## The Game's Core Thesis
+- Run `npm run cards` after card edits and inspect the changed sections in
+  `design/cards-export.md`.
+- Use `public/cards-map.html` or `design/cards-export.md` to check duplicates,
+  isolated tags, hidden-state chains, and repeated speakers.
+- For balancing work, follow the balance process in `TASKS.md` and run CLI
+  simulations before tuning deltas or weights.
+- Minimum validation after TypeScript card edits:
 
-You are the Director-General of the ISIA (International Superintelligence &
-Intelligence Agency), enforcing an international treaty banning ASI
-development. The game teaches: **enforcement of a global AI pause is
-structurally hard**. The player learns this by dying repeatedly from different
-failure modes.
-
-The core message: "With a pause we can survive superintelligence... if nothing
-goes wrong and a lot goes right."
-
-The structural hardness comes from four tensions that cannot all be resolved
-simultaneously:
-
-1. **Monitoring vs. sovereignty** — Preventing ASI requires intrusive
-   verification. This looks authoritarian and drives nations to leave the
-   treaty.
-2. **Verification vs. trust** — Relying on good faith means nations cheat.
-   Heavy verification signals distrust and erodes the coalition.
-3. **Research suppression vs. innovation** — Banning dangerous AI research also
-   blocks beneficial uses. Nations view this as economic sabotage and
-   competitive disadvantage.
-4. **Enforcement vs. backlash** — Sanctioning violators requires political
-   power. Accumulating that power makes ISIA itself the threat.
-
-Every card should sit inside one or more of these tensions.
-
-## The Treaty
-
-Key mechanisms from the treaty (see `literature/iabied-treaty.md` for full
-text):
-
-- **Compute caps**: Training runs above FLOP thresholds are prohibited. Small
-  training (~1e22 FLOP on 16 H100s) is permitted.
-- **Centralized chip infrastructure**: All AI chip clusters above threshold
-  size must be in monitored facilities ("declared CCCs").
-- **On-site verification**: ISIA inspectors, tamper-proof cameras, and
-  chip-use monitoring at every declared CCC.
-- **Supply chain tracking**: ISIA monitors fabrication, assembly, testing, and
-  installation of AI chips.
-- **Non-party restrictions**: Nations that do not sign are denied AI chip
-  sales, cloud access, and frontier model APIs.
-- **Restricted research**: Bans precursor ASI research.
-- **Research verification**: Domestic enforcement agencies plus ISIA auditors
-  embedded in high-risk organizations.
-
-## Resources
-
-| Key | Name | At 0 | At 100 | Meaning |
-|---|---|---|---|---|
-| `pol` | Political Power | Voted out | Hubris / capture / crash | Mandate, budget, authority, public support |
-| `int` | Intelligence | Gone dark | Panopticon | Monitoring, surveillance, information quality |
-| `saf` | Safety Progress | Running out of time | The cure kills | Alignment research advancement |
-| `alg` | Algorithmic Progress | Should not deplete | Consumer hardware sufficient | Capability knowledge, shrinking lethal threshold |
-
-All start at 50. `saf` and `alg` are monotone in the expert model, though the
-engine still treats them as ordinary 0-100 bars.
-
-## Card Syntax
-
-Cards use a registry pattern. Each file imports `register` and calls it with
-one or more `Card` objects. No exports needed.
-
-```typescript
-import { register } from "./registry";
-
-register({
-  id: "kebab-case-id",
-  tags: ["topic-a", "topic-b"],
-  speaker: "Role Title",
-  text: "1-2 sentences...",
-  left: { label: "Action phrase", effects: { pol: 5, int: -8 } },
-  right: { label: "Action phrase", effects: { pol: -5, int: 8 } },
-  poolWeight: () => 1.5,
-});
+```bash
+npm run typecheck
+npm run cards
+npm run cli auto 20
 ```
 
-To add a new card:
-
-1. Create a `.ts` file in `src/data/cards/`.
-2. Import `register` and call it.
-3. Add a side-effect import in `index.ts`.
-
-Use `hiddenEffects` to modify `state.hidden` when the card needs latent state.
-
-## Tags
-
-Every card should have `tags: string[]` with 1-3 content-topic tags that
-describe what the card is about, not how it works mechanically.
-
-Good tags:
-- `"intelligence-agencies"`
-- `"compute-monitoring"`
-- `"chip-production"`
-- `"civil-liberties"`
-- `"treaty-compliance"`
-- `"alignment-research"`
-
-Bad tags:
-- `"crisis"`
-- `"3-choice"`
-- `"turn-gated"`
-- `"incident"`
-
-Tags drive the card map visualization. Prefer descriptive kebab-case and reuse
-existing tags when they express a real content relationship.
-
-## Text Guidelines
-
-- **50-100 words.** The card is small.
-- **Present tense, concrete scenario.**
-- **Speaker is briefing you, not narrating a report.**
-- **No exposition.** The text presents the situation; effects teach the lesson.
-- **Both choices must feel defensible.**
-
-## Delta Guidelines
-
-- Touch 2-3 resources per choice.
-- Deltas usually range from `±3` to `±15`.
-- No safe options. Every choice should cost something.
-
-## Weight Guidelines
-
-- Always-on routine cards: weight 1-2
-- State-gated incidents: weight 1-2
-- History-triggered chains: weight 3 when triggered
-- Crisis cards: weight 5, gated on resource extremes
-- Late-game escalation: weight 1.5-2.5, gated on turn count
-
-## Card Categories
-
-### Routine
-
-Bread-and-butter cards. Budget decisions, PR, hiring, diplomatic meetings.
-
-### Incident
-
-Enforcement events such as rogue labs, chip smuggling, and whistleblowers.
-
-### Political
-
-Treaty negotiations, hearings, coalition management.
-
-### History-triggered
-
-Consequences of earlier choices. These should eventually become a major source
-of narrative texture.
-
-### Crisis
-
-Thermostat cards that appear near resource extremes and offer recovery at steep
-cost elsewhere.
-
-### Late-game
-
-Escalation cards for later turns: capability jumps, distributed training, novel
-attack vectors.
-
-### Filler
-
-Low-stakes flavor cards. Keep deltas small.
-
-## Patterns
-
-### Degraded Variants
-
-Use dynamic fields when the same event should read differently at different
-resource levels. This is especially useful for teaching that low intelligence
-makes every later choice worse.
-
-### History Chains
-
-Use `poolWeight` checks against `state.history` for immediate follow-ups and
-delayed consequences. Prefer asymmetric consequences: the left and right choice
-on the parent card should often lead to different future cards.
-
-## Review Checks
-
-Before calling a card batch done:
-
-- verify any specialized source terminology;
-- scan for obviously one-sided or fake choices;
-- scan for tags that describe mechanics instead of subject matter;
-- check that new history chains actually trigger from real card IDs;
-- regenerate `npm run cards` if the batch changes card topology enough that
-  Jörn will review through the export or card map.
+- For broader card changes, run `npm run check`.
