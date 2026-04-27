@@ -29,7 +29,12 @@ container rebuilds:
 | `/srv/devhome/.cache/npm` | `~/.cache/npm` | npm cache |
 | `/srv/devhome/.cache/ms-playwright` | `~/.cache/ms-playwright` | Playwright browser cache |
 | `/srv/devhome/.bash_history_dir` | `~/.bash_history_dir` | shell history |
-| `/srv/devhome/.vscode-cli` | `~/.vscode-cli` | VS Code tunnel auth and CLI state |
+
+VS Code tunnel state uses a Docker named volume:
+
+| Volume | Container path | Purpose |
+|--------|----------------|---------|
+| `xrisk-pause-game-vscode` | `~/.vscode` | VS Code tunnel auth and CLI state |
 
 ## Verification
 

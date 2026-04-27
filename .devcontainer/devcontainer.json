@@ -29,7 +29,8 @@
     "TERM": "xterm-256color",
     "LANG": "en_US.UTF-8",
     "HISTFILE": "/home/vscode/.bash_history_dir/.bash_history",
-    // Store VS Code tunnel auth in ~/.vscode-cli instead of system keychain
+    // Store VS Code tunnel auth in files instead of system keychain
+    // (persisted via the xrisk-pause-game-vscode Docker volume).
     "VSCODE_CLI_USE_FILE_KEYCHAIN": "1"
   },
   // Bind mounts: Jörn's specific host paths for cache persistence.
@@ -39,6 +40,6 @@
     "source=/srv/devhome/.cache/npm,target=/home/vscode/.cache/npm,type=bind,consistency=cached",
     "source=/srv/devhome/.cache/ms-playwright,target=/home/vscode/.cache/ms-playwright,type=bind,consistency=cached",
     "source=/srv/devhome/.bash_history_dir,target=/home/vscode/.bash_history_dir,type=bind,consistency=cached",
-    "source=/srv/devhome/.vscode-cli,target=/home/vscode/.vscode-cli,type=bind,consistency=cached"
+    "source=xrisk-pause-game-vscode,target=/home/vscode/.vscode,type=volume"
   ]
 }
