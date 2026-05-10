@@ -153,7 +153,6 @@ project without reading obsolete routes or unrelated process lore.
   conflict-resolution work
 - `$project-quality`: repo-wide quality objectives, navigation, clarity,
   verification, and tracking; copied from `msc-math` and needs Jörn review
-- `$typescript`: TypeScript, React, CLI, scripts, tests, and code comments
 - `$post-mortem`: session reflection and lessons learned
 - `$research-topic`: pause-game source-grounded research workflow; currently
   TODO for Jörn
