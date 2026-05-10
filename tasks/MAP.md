@@ -1,14 +1,14 @@
 <!--
 Purpose: agent-facing task map for xrisk-pause-game.
-Context: this is the navigation layer for current mini-roadmaps under tasks/.
-It is not a complete history of old task rows.
+Context: this is the simple session-start map/cache for grouped task
+definitions under tasks/. It is not a complete history of old task rows.
 -->
 
 # Tasks Map
 
 ## Status
 
-- State: harness migration draft.
+- State: harness migration draft; canonical session-start state map.
 - Last updated: 2026-05-10.
 - Project phase: content overhaul and harness simplification.
 - Current harness branch: `harness/msc-math-port`.
@@ -18,8 +18,8 @@ It is not a complete history of old task rows.
 | Surface | Role |
 | --- | --- |
 | `AGENTS.md` | root instruction map |
-| `tasks/MAP.md` | roadmap and routing surface for humans and agents |
-| `tasks/*.md` | topic mini-roadmaps and cached decision context |
+| `tasks/MAP.md` | simple roadmap/cache and routing surface for humans and agents |
+| `tasks/*.md` | grouped task definitions and cached decision context |
 | `design/domain-model.md` | domain model and resource mapping |
 | `design/card-concepts.md` | card idea inventory |
 | `design/cards-export.md` | generated card review export |
@@ -29,7 +29,8 @@ It is not a complete history of old task rows.
 | `.github/workflows/deploy.yml`, `wrangler.toml` | Cloudflare Pages deployment |
 
 The old `TASKS.md` mega-tracker should be deleted after migration. Use this map
-and topic bundles instead.
+and grouped task bundles instead. Do not add a parallel `ROADMAP.md`; keep
+session-start state here and topic detail in `tasks/<group>.md`.
 
 ## Current Priority Map
 
@@ -37,6 +38,7 @@ and topic bundles instead.
 | --- | --- | --- |
 | Content | source-grounded domain/content overhaul, card quality, balance process | `tasks/content.md` |
 | App | engine, UI, gameplay, playability, app validation | `tasks/app.md` |
+| Deploy | Cloudflare Pages deployment, release checks, post-deploy outcome tracking | `tasks/deploy.md` |
 | Harness | agent setup, skills, task routing, Codex/devcontainer process | `tasks/harness.md` |
 
 ## Authority Boundaries

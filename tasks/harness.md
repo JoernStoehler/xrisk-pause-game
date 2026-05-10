@@ -16,6 +16,8 @@
   user/runtime settings belong in `~/.codex/config.toml`.
 - [Jörn] Skill bodies require Jörn approval before they become final durable
   instruction material.
+- [Jörn] `AGENTS.md` also requires Jörn approval before it becomes final
+  durable instruction material.
 - [Jörn] If an agent cannot converge on a skill direction after three review
   rounds with concrete alternatives, stop and ask Jörn to choose or write it.
 
@@ -26,13 +28,15 @@
 - [active] Delete irrelevant copied math/Rust/thesis/cluster skills.
 - [active] Keep `research-topic` and `write-cards` as explicit TODO
   placeholders for Jörn.
-- [active] Fix small review findings before merge: `AGENTS.md` session-start
+- [active] Keep `project-quality` as a separate skill, but collect variants for
+  Jörn instead of editing the skill body in this pass.
+- [done] Fix small review findings before merge: `AGENTS.md` session-start
   map instruction, deployment/tooling map entries, `toc.sh` fenced code
   handling, and `.codex/.gitignore` wording.
 - [future] Decide whether this repo needs Codex web setup scripts analogous to
   `msc-math`.
-- [future] Decide whether `project-quality` should remain a skill or collapse
-  into `harness-engineering` plus task conventions.
+- [cut] Do not keep `scripts/codex-worktree.sh`; use raw `git worktree`
+  commands until a helper is reviewed separately.
 
 ## Agent Cache
 

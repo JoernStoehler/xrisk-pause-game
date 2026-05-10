@@ -68,7 +68,6 @@ independently, but expert-grounded content is draft until Jörn approves it.
 |-- scripts/
 |   |-- export-cards.ts
 |   |-- decrypt-literature.sh
-|   |-- codex-worktree.sh
 |   `-- toc.sh
 |-- .github/workflows/deploy.yml
 |-- wrangler.toml
@@ -134,7 +133,8 @@ content for quick navigation. They are not authoritative sources.
 Final summaries should list review passes performed, including review
 subagents used or intentionally not used. Ask Jörn before merging harness
 changes that alter `AGENTS.md`, skill bodies, task-routing structure, or
-authority boundaries.
+authority boundaries. `AGENTS.md` and skill bodies require Jörn approval before
+they become final durable instruction material.
 
 ## Commands
 
@@ -158,5 +158,4 @@ bash scripts/decrypt-literature.sh
 npm run dev
 .devcontainer/host-devcontainer-rebuild.sh
 .devcontainer/host-vscode-tunnel.sh
-scripts/codex-worktree.sh <name> [branch]
 ```

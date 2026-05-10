@@ -158,11 +158,11 @@ project without reading obsolete routes or unrelated process lore.
   TODO for Jörn
 - `$write-cards`: pause-game card workflow; currently TODO for Jörn
 
-### Skill Change Policy
-- Skill edits are high-risk durable instruction changes.
-- Agents may draft, copy, trim, or propose skill changes in worktrees, but Jörn
-  must approve skill bodies before they are treated as final durable
-  instructions.
+### Durable Instruction Change Policy
+- `AGENTS.md` and skill edits are high-risk durable instruction changes.
+- Agents may draft, copy, trim, or propose `AGENTS.md` and skill changes in
+  worktrees, but Jörn must approve them before they are treated as final
+  durable instructions.
 - If an agent cannot converge on a skill direction after three review rounds,
   each with three concrete alternatives or a clear reason fewer alternatives
   exist, stop and ask Jörn to choose or write the skill.
