@@ -61,12 +61,12 @@ boundary is cleared.
 
 | Component | Status | Notes |
 | --- | --- | --- |
-| Engine | Mostly settled | Pure TypeScript state, card resolution, RNG, tutorial logic, and tests. |
+| Engine | Mostly settled | Pure TypeScript state, session transitions, card resolution, RNG, and tests. |
 | Swipe/drag UX | Mostly settled | Tuned on real devices and E2E tested. |
 | Resource system | Draft | Four visible resources: `pol`, `int`, `saf`, `alg`; mechanics may change with content overhaul. |
 | Layout/theme | Mostly settled | Tailwind v4 theme CSS in `src/index.css`; safe to retheme within current UX direction. |
 | Screens | Draft | Title, game, death, and tutorial screens exist but content/layout may change. |
-| Card content | Draft | Existing card text is agent-written and needs expert review/rewrite. |
+| Card content | Draft | Existing card text is agent-written and needs expert review/rewrite. Card files export explicit arrays through `src/data/cards/groups.ts`. |
 | Death messages | Placeholder | Expected to change with the content overhaul. |
 | Tutorial | Placeholder | Scripted Deputy Director cards, not final designed content. |
 | Portraits | Placeholder | Prior review found bad and borderline portrait styles. |
@@ -75,7 +75,7 @@ boundary is cleared.
 | Card concepts | Mostly settled draft | Concepts need Jörn approval before final implementation. |
 | Achievements / collection | Not started | Deferred until after content overhaul. |
 | Playtesting / outcomes | Not started | Needs objective definitions and quality gates before broader public loops. |
-| Harness/environment | In migration | See `tasks/harness.md`. |
+| Harness/environment | Mostly settled | See `tasks/harness.md`; keep maps current when structure changes. |
 
 ## Validation Map
 

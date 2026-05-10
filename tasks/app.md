@@ -12,6 +12,8 @@
 - Desktop can stay phone-app-like unless a specific desktop use case becomes
   important.
 - Add features only when the consumer is known enough to justify them.
+- Keep `src/engine/` pure: no React, browser APIs, or direct content-message
+  lookup. Browser orchestration belongs in `src/app/`.
 
 ## Work Map
 
@@ -19,6 +21,8 @@
   proceeds.
 - [active] Make validation choice match the touched surface; `npm run check`
   passing does not mean engine/card/UI behavior is fully covered.
+- [active] Keep app, CLI, and future playtest tooling on shared engine/session
+  transitions instead of duplicating game-flow logic.
 - [future] Rebalance after content pass.
 - [future] Rework title/death screen polish after content and takeaway message
   are clearer.
@@ -31,10 +35,11 @@
 ## Agent Cache
 
 - `npm run check` covers typecheck, lint, build, and unit tests.
-- Current Vitest coverage is a small engine/share-text suite. Engine behavior
-  changes should add focused tests for affected contracts, such as hidden
-  state, disabled/down choices, draw eligibility, anti-repeat fallback,
-  death/victory, RNG, or save compatibility.
+- Current Vitest coverage includes fixture-based engine/session tests, card
+  registry validation, and share-text tests. Engine behavior changes should add
+  focused tests for affected contracts, such as hidden state, disabled/down
+  choices, draw eligibility, anti-repeat fallback, death/victory, RNG, or save
+  compatibility.
 - `npm run test:e2e` covers mobile-first title/tutorial/drag/keyboard/death
   flows through Playwright. It does not cover broad desktop layout, deployed
   preview behavior, share/clipboard behavior, audio/mute persistence, or the
