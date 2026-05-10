@@ -46,6 +46,10 @@
 - Current `design/cards-export.md` includes source files, tags, hidden effects,
   and dynamic-enabled markers, but still omits pool weights, source comments,
   and source line references.
+- Static 2-or-3 choices are the intended direction, but this is not yet a
+  passing invariant: `src/data/cards/content.test.ts` keeps an expected-failing
+  guard until existing dynamic `enabled` options are migrated or deliberately
+  retained.
 - Use `npm run cli auto 20` or a larger batch for balance-sensitive content
   changes.
 - Current CLI autoplay samples available left/right/down choices, so it is a
