@@ -26,6 +26,9 @@
 - [active] Delete irrelevant copied math/Rust/thesis/cluster skills.
 - [active] Keep `research-topic` and `write-cards` as explicit TODO
   placeholders for Jörn.
+- [active] Fix small review findings before merge: `AGENTS.md` session-start
+  map instruction, deployment/tooling map entries, `toc.sh` fenced code
+  handling, and `.codex/.gitignore` wording.
 - [future] Decide whether this repo needs Codex web setup scripts analogous to
   `msc-math`.
 - [future] Decide whether `project-quality` should remain a skill or collapse

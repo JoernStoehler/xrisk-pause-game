@@ -70,6 +70,10 @@ independently, but expert-grounded content is draft until Jörn approves it.
 |   |-- decrypt-literature.sh
 |   |-- codex-worktree.sh
 |   `-- toc.sh
+|-- .github/workflows/deploy.yml
+|-- wrangler.toml
+|-- vite.config.ts
+|-- playwright.config.ts
 |-- .agents/skills/<skill>/
 |   |-- SKILL.md
 |   |-- agents/openai.yaml
@@ -89,7 +93,10 @@ independently, but expert-grounded content is draft until Jörn approves it.
 
 - `AGENTS.md`: root instruction map. This repo does not use nested
   `AGENTS.md`.
+- `tasks/MAP.md`: session-start roadmap and routing surface. Read it before
+  broad edits or when current priority/maturity matters.
 - `package.json`: Vite, React, TypeScript, test, CLI, and card-export commands.
+- `vite.config.ts`, `playwright.config.ts`: app/test framework configuration.
 - `src/engine/`: pure TypeScript game state, RNG, card resolution, tutorial
   logic, and tests.
 - `src/data/cards/`: card declarations. Current implementation uses
@@ -106,6 +113,7 @@ independently, but expert-grounded content is draft until Jörn approves it.
 - `.codex/agents/`: optional repo-local subagent templates. Empty by default.
 - `.codex/worktrees/`: isolated worktrees for independent agent sessions.
 - `.devcontainer/`: local devcontainer with documentation.
+- `.github/workflows/deploy.yml`, `wrangler.toml`: Cloudflare Pages deployment.
 - `/tmp/`: scratch space for disposable clones, prompt drafts, and temporary
   reports; not durable project state.
 

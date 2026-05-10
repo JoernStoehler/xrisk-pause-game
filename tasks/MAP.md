@@ -25,6 +25,8 @@ It is not a complete history of old task rows.
 | `design/cards-export.md` | generated card review export |
 | `public/cards-map.html` | generated card graph |
 | `literature/INDEX.md` and `literature/*` | source-note navigation and source-derived material |
+| `package.json`, `vite.config.ts`, `playwright.config.ts` | app/test framework configuration |
+| `.github/workflows/deploy.yml`, `wrangler.toml` | Cloudflare Pages deployment |
 
 The old `TASKS.md` mega-tracker should be deleted after migration. Use this map
 and topic bundles instead.
@@ -86,3 +88,13 @@ bash scripts/decrypt-literature.sh
 .devcontainer/host-devcontainer-rebuild.sh
 .devcontainer/host-vscode-tunnel.sh
 ```
+
+Validation meanings:
+
+- `npm run check`: typecheck, lint, build, and current Vitest unit tests.
+- `npm run test:e2e`: Playwright mobile-flow coverage, not broad visual
+  coverage.
+- `npm run cli auto 20`: quick left/right autoplay smoke check, not a full
+  balance proof.
+- `npm run cards`: generated card review artifacts; inspect diffs after card
+  changes.

@@ -22,7 +22,11 @@ for FILE in "$@"; do
     fi
 
     awk '
-/^#{1,3} / {
+/^```/ {
+    in_fence = !in_fence
+    next
+}
+!in_fence && /^#{1,3} / {
     if (NR > 1 && start > 0) {
         printf "%4d-%4d  %s\n", start, NR-1, title
     }
