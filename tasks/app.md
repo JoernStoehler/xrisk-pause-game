@@ -36,10 +36,10 @@
 
 - `npm run check` covers typecheck, lint, build, and unit tests.
 - Current Vitest coverage includes fixture-based engine/session tests, card
-  registry validation, and share-text tests. Engine behavior changes should add
-  focused tests for affected contracts, such as hidden state, disabled/down
-  choices, draw eligibility, anti-repeat fallback, death/victory, RNG, or save
-  compatibility.
+  registry validation, CLI command integration tests, and share-text tests.
+  Engine behavior changes should add focused tests for affected contracts, such
+  as hidden state, disabled/down choices, draw eligibility, anti-repeat
+  fallback, death/victory, RNG, or save compatibility.
 - `npm run test:e2e` covers mobile-first title/tutorial/drag/keyboard/death
   flows through Playwright. It does not cover broad desktop layout, deployed
   preview behavior, share/clipboard behavior, audio/mute persistence, or the

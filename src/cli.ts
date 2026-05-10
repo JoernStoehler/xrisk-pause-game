@@ -23,7 +23,7 @@ import {
 } from "./engine/session";
 import type { GameState } from "./engine/types";
 
-const STATE_FILE = "/tmp/pause-cli-state.json";
+const STATE_FILE = process.env.PAUSE_CLI_STATE_FILE ?? "/tmp/pause-cli-state.json";
 const SESSION_CONTENT: SessionContent = {
   cards: ALL_CARDS,
   deathMessage: getDeathMessage,
