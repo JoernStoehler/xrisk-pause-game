@@ -1,73 +1,168 @@
-# xrisk-pause-game
+# AGENTS.md
 
 ## Project
 
-This is a serious Reigns-style mobile web game about directing an international
-AI pause agency. The core thesis is that a pause is not quiet waiting: it is a
-fragile crisis-management race to keep capability progress contained while
-safety work catches up.
+Master thesis by Jörn Stöhler, University of Augsburg.
+Advisor: Kai Cieliebak. Second advisor: Elizabeth Gaar.
+Deadline: End of May 2026.
+Topic: Probing Viterbo's Conjecture.
 
-Jörn is the domain owner. Ask before changing the game's thesis, political
-model, terminology, card concepts, or major UX direction. Current content is
-draft quality unless `TASKS.md` says otherwise.
+Planned deliverables:
+1. A printed-quality LaTeX thesis: `thesis/build/main.pdf`
+2. Durable Rust crates for symplectic geometry and exact arithmetic: `crates/`
+3. A reproducible experiment pipeline: `experiments/`
 
-## Instruction Sources
+## Files
 
-- Read `TASKS.md` at session start. It is the current state and priority file.
-- Use skills for specialized work. In particular, load `write-cards` before
-  editing `src/data/cards/**`, `research-topic` before creating source-grounded
-  design material, and `harness-engineering` before changing this harness.
-- Do not depend on nested instruction files for required behavior.
+```text
+.
+|-- AGENTS.md
+|-- Cargo.toml
+|-- thesis/
+|   |-- main.tex
+|   |-- *.tex
+|   |-- bibliography.bib
+|   |-- build/main.pdf
+|-- crates/
+|   |-- MAP.md
+|   |-- symplectic/
+|   |   |-- README.md
+|   |   |-- Cargo.toml
+|   |   |-- src/**/*.rs
+|   |   |-- benches/*.rs
+|   |   `-- tests/*.rs
+|   `-- algebraic-numbers/
+|       |-- README.md
+|       |-- DEVELOPMENT.md
+|       |-- Cargo.toml
+|       |-- examples/*.rs
+|       |-- src/*.rs
+|       `-- tests/*.rs
+|-- formal/
+|   |-- main.tex
+|   |-- preamble.tex
+|   |-- bibliography.bib
+|   `-- *.tex
+|-- experiments/
+|   |-- MAP.md
+|   |-- figure_config.py
+|   |-- <topic>/Cargo.toml
+|   |-- <topic>/src/**/*.rs
+|   |-- <topic>/<experiment>/
+|   |   |-- *.rs
+|   |   |-- *.py
+|   |   |-- *.jsonl
+|   |   `-- figures/
+|   `-- verification/sage/
+|-- research/
+|   |-- INDEX.md
+|   |-- *.md
+|   `-- sys-landscape-datascience/
+|-- papers/<abbreviationYear>/
+|-- tasks/
+|   |-- MAP.md
+|   |-- README.md
+|   |-- submit-thesis/
+|   |   |-- *.md
+|   |   `-- *.pdf
+|   |-- references/*.md
+|   |-- submit-thesis.md
+|   |-- verify-thesis-done.md
+|   `-- <group>.md
+|-- .agents/skills/<skill>/
+|   |-- SKILL.md
+|   |-- agents/openai.yaml
+|   |-- references/*.md
+|   `-- scripts/
+|-- .codex/
+|   |-- agents/<agent>.toml
+|   |-- config.toml
+|   `-- worktrees/
+|-- .devcontainer/
+|   |-- README.md
+|   |-- codex-cloud.md
+|   |-- devcontainer.json
+|   |-- Dockerfile
+|   `-- *.sh
+|-- scripts/
+|   |-- codex-worktree.sh
+|   `-- toc.sh
+`-- /tmp/  (outside repo)
+```
 
-## Repository Map
+- `AGENTS.md`: root instruction map. This repo does not use nested `AGENTS.md`.
+- `Cargo.toml`, `**/Cargo.toml`: Rust workspace and package manifests.
+- `**/README.md`: consumer-facing entry point for normal use.
+- `**/DEVELOPMENT.md`: maintainer-facing notes for changing internals.
+- `thesis/`: publishable thesis. Self-contained, assets and text are copied
+  deliberately instead of linking to `experiments/`, `formal/`, etc.
+- `crates/`: internal Rust crates with stable code shared across experiments.
+- `formal/`: formalization and proofs for development, not for publication.
+- `experiments/`: Rust/Python experiment packages. Execution code, data,
+  reports, and figures are next to their producer.
+- `research/`: notes with ideas, design, interpretations for development.
+- `papers/<abbreviationYear>/`: raw sources of cited papers.
+- `tasks/`: durable task tracking, current steering, submission/admin source
+  files, and final thesis-done checks.
+- `.agents/skills/`: repo-local skill surface.
+- `.codex/agents/`: repo-local subagent templates (optional).
+- Harness files (`AGENTS.md`, `.agents/skills/**`, `.codex/agents/**`) are
+  frozen unless Jörn explicitly asks for a harness edit.
+- `.codex/worktrees/`: isolated worktrees for independent agent sessions.
+- `.devcontainer/`: local devcontainer with documentation.
+- `scripts/`: small repo helper commands.
+- `/tmp/`: scratch space for subagent prompts, iterative drafts, and
+  disposable chat artifacts; not durable project state.
 
-- `src/engine/`: pure TypeScript game state, card resolution, RNG, tutorial
-  logic, and tests.
-- `src/data/cards/`: card declarations registered by side-effect imports in
-  `src/data/cards/index.ts`.
-- `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio hooks,
-  and Tailwind v4 theme CSS.
-- `design/`: domain model, card concepts, generated card export, map reviews,
-  and research/design notes.
-- `literature/`: source notes and encrypted source-derived material. Run
-  `scripts/decrypt-literature.sh` when encrypted literature is needed.
-- `.agents/skills/`: Codex skills for project-specific workflows.
-- `.codex/`: repo Codex config and subagent roles.
-- `.devcontainer/`: local Docker setup for Codex sessions and VS Code tunnel.
+## Map Files
 
-## Current Architecture Facts
+The `MAP.md` files are navigation caches. They index, summarize and
+structure the folder content for quick navigation.
+They are not authoritative sources, and can be regenerated via subagent.
 
-- The app is React 19 + Vite + TypeScript.
-- The engine uses four visible resources: `pol`, `int`, `saf`, and `alg`.
-- Cards are static `Card` objects with dynamic fields and `poolWeight(state)`.
-- Hidden state is a numeric key-value map used for cross-card interactions.
-- `npm run cards` regenerates `design/cards-export.md` and
-  `public/cards-map.html` from the TypeScript card pool.
-- The devcontainer is the primary environment. It bind-mounts Codex and GitHub
-  auth from `/srv/devhome/` and persists VS Code tunnel state in the
-  `xrisk-pause-game-vscode` Docker volume at `~/.vscode`.
+- `tasks/MAP.md`: dependency map of upcoming tasks and current status.
+- `research/INDEX.md`: research questions and current status.
+- `crates/<crate>/MAP.md`: api and architecture.
+- `experiments/MAP.md`: tree of experiments and current status.
+- `thesis/MAP.md`: chapter structure and current status.
 
-## Work Rules
+## Review
 
-- Preserve unrelated user changes. Check `git status --short --branch` before
-  broad edits and do not reset or checkout files unless explicitly asked.
-- Keep changes scoped to the requested surface. This repo is mid-content
-  overhaul; avoid polishing placeholder content unless that is the task.
-- Prefer observable validation over prose claims. If a file says a command,
-  path, count, or generated artifact exists, verify it.
-- Use `rg` and direct file reads for repo inspection. Use `apply_patch` for
-  manual edits.
-- For current-world claims, check sources instead of relying on memory.
+Final summaries should list review passes performed, including review subagents
+used or intentionally not used.
 
 ## Commands
 
+Supported environments:
+- Local devcontainer at `/workspaces/msc-math`: full baseline environment with
+  Rust, Python, TeX Live, and `gh`. See `.devcontainer/README.md`.
+- Codex web environment: lower-complexity environment for web sessions. See
+  `.devcontainer/codex-cloud.md`; TeX is intentionally out of scope there.
+
+Quick commands:
+
 ```bash
-npm run dev
-npm run check
-npm run test:e2e
-npm run cli auto 20
-npm run cards
-bash scripts/decrypt-literature.sh
-.devcontainer/host-devcontainer-rebuild.sh
-.devcontainer/host-vscode-tunnel.sh
+# Harness and maps
+git diff --check
+bash scripts/toc.sh AGENTS.md MAP_OR_TASK_FILE.md
+
+# Rust crates
+cargo test -p symplectic --release --lib
+cargo clippy -p symplectic --lib -- -D warnings
+cargo test -p symplectic --release -- --ignored
+cargo test -p algebraic-numbers --release
+cargo clippy -p algebraic-numbers --all-targets -- -D warnings
+
+# Rust workspace and experiments
+cargo build --workspace --release
+cargo check -p PACKAGE_NAME
+cargo build -p PACKAGE_NAME --release
+
+# Thesis
+cd thesis/ && latexmk && ./check-build.sh
+perl -ne 'if (/\\newlabel\{LABEL_NAME\}\{\{([^}]*)\}\{([^}]*)\}/) { print "number=$1 page=$2\n" }' thesis/build/main.aux
+
+# Formal math
+cd formal/ && latexmk
+rg -n -A 10 -F '\label{LABEL_NAME}' formal/*.tex
 ```
