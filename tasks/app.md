@@ -25,12 +25,12 @@
   transitions instead of duplicating game-flow logic.
 - [active] Support static 2-or-3 choice cards end-to-end. Do not model
   unlockable choices as dynamic options; use separate locked/unlocked cards.
+- [active] Keep CLI smoke output useful for balance/playtest triage without
+  treating autoplay as player behavior.
 - [future] Rebalance after content pass.
 - [future] Rework title/death screen polish after content and takeaway message
   are clearer.
 - [future] Revisit achievements/card collection after content overhaul.
-- [future] Add CLI support for down-choice sampling before using CLI balance
-  runs to evaluate three-choice cards.
 - [cut] Do not add settings until tutorial skip, accessibility, or another real
   configuration need appears.
 

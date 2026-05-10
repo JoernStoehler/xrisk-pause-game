@@ -61,6 +61,57 @@ describe("drawNextCard", () => {
     expect(withCard.activeCard?.templateId).toBe("d");
   });
 
+  it("falls back to recent cards when the anti-repeat window excludes the whole pool", () => {
+    const cards = ["a", "b", "c"].map((id) => card({ id }));
+    const state: GameState = {
+      ...newGame(42),
+      history: [
+        { turn: 0, cardId: "a", choice: "left" },
+        { turn: 1, cardId: "b", choice: "left" },
+        { turn: 2, cardId: "c", choice: "left" },
+      ],
+    };
+
+    const withCard = drawNextCard(state, cards);
+    expect(["a", "b", "c"]).toContain(withCard.activeCard?.templateId);
+  });
+
+  it("advances RNG state deterministically when drawing from weighted cards", () => {
+    const cards = [
+      card({ id: "a", poolWeight: () => 1 }),
+      card({ id: "b", poolWeight: () => 10 }),
+    ];
+
+    const first = drawNextCard(newGame(42), cards);
+    const second = drawNextCard(newGame(42), cards);
+
+    expect(first.rngState).not.toBe(42);
+    expect(second.rngState).toBe(first.rngState);
+    expect(second.activeCard?.templateId).toBe(first.activeCard?.templateId);
+  });
+
+  it("resolves dynamic down choices and previews from the current state", () => {
+    const threeChoiceCard = card({
+      down: {
+        label: (state) => `Spend intel at ${state.resources.int}`,
+        effects: { int: -12 },
+        enabled: (state) => state.resources.int >= 40,
+      },
+    });
+
+    const enabled = drawFixture(newGame(42), [threeChoiceCard]);
+    expect(enabled.activeCard?.down.disabled).toBe(false);
+    expect(enabled.activeCard?.down.label).toBe("Spend intel at 50");
+    expect(enabled.activeCard?.down.previews).toEqual([
+      { resource: "int", direction: "down", size: "large" },
+    ]);
+
+    const lowIntel = newGame(42);
+    lowIntel.resources.int = 39;
+    const disabled = drawFixture(lowIntel, [threeChoiceCard]);
+    expect(disabled.activeCard?.down.disabled).toBe(true);
+  });
+
   it("fails closed when no cards are eligible", () => {
     const withCard = drawNextCard(newGame(42), [card({ poolWeight: () => 0 })]);
     expect(withCard.phase).toBe("dead");

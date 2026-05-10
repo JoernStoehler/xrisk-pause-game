@@ -4,15 +4,18 @@
 - State: future
 - Last updated: 2026-05-10
 - Source surfaces: `src/`, `design/`, `tasks/content.md`, `tasks/app.md`,
-  `tasks/deploy.md`, playtest notes once created
-- Refresh when: content pass stabilizes, public testing loop starts, or Jörn
-  defines learning/outcome quality gates
+  `tasks/deploy.md`, observed playtest notes once created
+- Refresh when: an actual playtest session produces findings worth routing, or
+  Jörn defines learning/outcome quality gates
 
 ## Steering Cache
 
 - The project goal is months-later public understanding, not deploy success.
 - Playtesting should test both game feel and whether players learn the intended
   claims about a workable global AI pause treaty.
+- Playtest first, then record the observed process and findings. Do not design
+  a rubric in advance unless Jörn asks for one, and do not imply future
+  playtests will follow the same process.
 - Known high-level learning objectives:
   - players understand that a pause is an active crisis-management race;
   - players better recognize blatant misunderstandings or false claims about
@@ -22,17 +25,14 @@
 
 ## Work Map
 
-- [future] Define playtest quality gates before broad public testing. Candidate
-  gate types: completion/retention, confusion points, misunderstood terms,
-  remembered takeaways, perceived realism, fun/friction, and false-belief
-  correction.
-- [future] Define lightweight feedback capture: structured questions, free-text
-  prompts, run summaries, and whether to collect screenshots or card histories.
-- [future] Decide which playtest cohorts matter first: Jörn/expert review,
-  AI-safety-literate players, general public, mobile-first casual users, or
-  skeptics of pause feasibility.
-- [future] Connect post-deploy feedback loops to content/app tasks so learning
-  failures become concrete card, UI, tutorial, or domain-model work.
+- [next] Run playtests before adding process design. After a session, record
+  what was actually observed: build/version, player context if known, session
+  shape, confusion points, remembered takeaways, fun/friction, bugs, and any
+  screenshots or card histories that were actually collected.
+- [next] Route observed findings back to concrete work: content/source issues,
+  app/UX bugs, deploy/release-loop issues, or harness/task-map issues.
+- [future] Once repeated findings exist, propose lightweight capture formats or
+  quality gates for Jörn review. Keep proposals separate from observed facts.
 
 ## Agent Cache
 
@@ -44,6 +44,8 @@
   issues.
 - Do not infer success from a clean deploy, a passing test suite, or isolated
   positive comments. Look for repeated understanding or confusion patterns.
+- Label playtest notes as observed from a specific session unless Jörn has
+  approved them as a general testing method.
 
 ## Pruned / Stale
 
