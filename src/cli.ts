@@ -12,12 +12,16 @@
  */
 
 import { readFileSync, writeFileSync } from "node:fs";
-import { newGame, applyChoice, checkDeath } from "./engine/state";
-import { drawNextCard } from "./engine/cards";
 import { ALL_CARDS } from "./data/cards";
+import { getDeathMessage } from "./data/deaths";
 import { random } from "./engine/rng";
+import { chooseInSession, startSession, type SessionContent } from "./engine/session";
 
 const STATE_FILE = "/tmp/pause-cli-state.json";
+const SESSION_CONTENT: SessionContent = {
+  cards: ALL_CARDS,
+  deathMessage: getDeathMessage,
+};
 
 function load(): GameState | null {
   try {
@@ -86,17 +90,11 @@ function printDeath(state: GameState): void {
 }
 
 function initGame(): GameState {
-  const s = newGame();
-  return drawNextCard(s, ALL_CARDS);
+  return startSession(SESSION_CONTENT);
 }
 
 function step(state: GameState, choice: "left" | "right"): GameState {
-  const s = applyChoice(state, choice);
-  const death = checkDeath(s);
-  if (death) {
-    return { ...s, phase: "dead", death };
-  }
-  return drawNextCard(s, ALL_CARDS);
+  return chooseInSession(state, choice, SESSION_CONTENT);
 }
 
 // --- Main ---

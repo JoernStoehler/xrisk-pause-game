@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { newGame, applyChoice, checkDeath } from "./state";
+import { newGame, applyChoice, checkDeathCause } from "./state";
 import { drawNextCard } from "./cards";
 import { ALL_CARDS } from "../data/cards";
 
@@ -50,7 +50,7 @@ describe("applyChoice + checkDeath", () => {
   it("detects death at 0", () => {
     const state = newGame(42);
     state.resources.pol = 0;
-    const death = checkDeath(state);
+    const death = checkDeathCause(state);
     expect(death).not.toBeNull();
     expect(death!.resource).toBe("pol");
     expect(death!.extreme).toBe("depleted");
@@ -59,7 +59,7 @@ describe("applyChoice + checkDeath", () => {
   it("detects death at 100", () => {
     const state = newGame(42);
     state.resources.alg = 100;
-    const death = checkDeath(state);
+    const death = checkDeathCause(state);
     expect(death).not.toBeNull();
     expect(death!.resource).toBe("alg");
     expect(death!.extreme).toBe("overloaded");
@@ -67,6 +67,6 @@ describe("applyChoice + checkDeath", () => {
 
   it("returns null when alive", () => {
     const state = newGame(42);
-    expect(checkDeath(state)).toBeNull();
+    expect(checkDeathCause(state)).toBeNull();
   });
 });

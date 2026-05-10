@@ -101,6 +101,8 @@ export interface DeathInfo {
   message: string;
 }
 
+export type DeathCause = Omit<DeathInfo, "message">;
+
 export type GamePhase = "title" | "tutorial" | "playing" | "dead" | "victory";
 
 export interface TutorialCard {

@@ -1,10 +1,9 @@
 import type {
   ChoiceDirection,
-  DeathInfo,
+  DeathCause,
   GameState,
 } from "./types";
 import { RESOURCE_KEYS } from "./types";
-import { DEATH_MESSAGES } from "../data/deaths";
 
 export function newGame(seed?: number): GameState {
   return {
@@ -44,23 +43,19 @@ export function applyChoice(
   };
 }
 
-export function checkDeath(state: GameState): DeathInfo | null {
+export function checkDeathCause(state: GameState): DeathCause | null {
   for (const key of RESOURCE_KEYS) {
     const value = state.resources[key];
     if (value <= 0) {
-      const msgs = DEATH_MESSAGES[key]?.depleted;
       return {
         resource: key,
         extreme: "depleted",
-        message: msgs?.[state.turn % msgs.length] ?? `${key} depleted.`,
       };
     }
     if (value >= 100) {
-      const msgs = DEATH_MESSAGES[key]?.overloaded;
       return {
         resource: key,
         extreme: "overloaded",
-        message: msgs?.[state.turn % msgs.length] ?? `${key} overloaded.`,
       };
     }
   }
