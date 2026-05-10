@@ -5,19 +5,19 @@
 # slash command, no `codex worktree` subcommand). Parallel Codex sessions
 # therefore need a shell helper that (1) creates a git worktree, (2) seeds a
 # trust entry in ~/.codex/config.toml so Codex will load that worktree's
-# .codex/config.toml and project skills, and (3) starts Codex there.
+# repo-local agents and project skills, and (3) starts Codex there.
 #
 # Creates Codex worktrees under .codex/worktrees/<name>.
 #
 # Usage:
 #   scripts/codex-worktree.sh <name> [branch]
 #     <name>   required — directory under .codex/worktrees/
-#     [branch] optional — branch to check out; defaults to <name>
+#     [branch] optional — local branch to check out or create; defaults to <name>
 #
-# Example: scripts/codex-worktree.sh lemma-cleanup
-#   → git worktree add .codex/worktrees/lemma-cleanup lemma-cleanup
-#   → appends trust entry for /workspaces/msc-math/.codex/worktrees/lemma-cleanup
-#   → cd there, exec codex
+# Example: scripts/codex-worktree.sh harness-cleanup
+#   -> git worktree add .codex/worktrees/harness-cleanup harness-cleanup
+#   -> appends trust entry for the new worktree path
+#   -> cd there, exec codex
 
 set -euo pipefail
 
@@ -34,7 +34,11 @@ WORKTREE_REL=".codex/worktrees/${NAME}"
 WORKTREE_ABS="${REPO_ROOT}/${WORKTREE_REL}"
 
 if [[ ! -d "$WORKTREE_ABS" ]]; then
-  (cd "$REPO_ROOT" && git worktree add "$WORKTREE_REL" "$BRANCH")
+  if git -C "$REPO_ROOT" show-ref --verify --quiet "refs/heads/${BRANCH}"; then
+    git -C "$REPO_ROOT" worktree add "$WORKTREE_REL" "$BRANCH"
+  else
+    git -C "$REPO_ROOT" worktree add -b "$BRANCH" "$WORKTREE_REL" HEAD
+  fi
 fi
 
 CODEX_USER_CONFIG="${CODEX_HOME:-$HOME/.codex}/config.toml"

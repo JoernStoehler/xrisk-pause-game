@@ -8,7 +8,7 @@
   // - Playwright + Chromium for E2E tests
   //
   // Prerequisites on host:
-  // - /srv/devhome/ directories exist (shared with msc-math devcontainer)
+  // - /srv/devhome/ directories exist
   // - /srv/devhome/.cache/npm/ and /srv/devhome/.cache/ms-playwright/ exist
   // - devcontainer CLI: npm i -g @devcontainers/cli
   //

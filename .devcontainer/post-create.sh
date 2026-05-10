@@ -26,8 +26,9 @@ if command -v npm >/dev/null 2>&1; then
   npm install -g @openai/codex
 fi
 
-# Codex: idempotently seed project trust so repo-level .codex/config.toml,
-# .codex/agents/, and .agents/skills/ load in this checkout.
+# Codex: idempotently seed project trust so repo-level .codex/agents/ and
+# .agents/skills/ load in this checkout. Runtime/model/sandbox settings belong
+# in the machine-local ~/.codex/config.toml, not in this repo.
 mkdir -p /home/vscode/.codex
 CODEX_USER_CONFIG=/home/vscode/.codex/config.toml
 touch "$CODEX_USER_CONFIG"

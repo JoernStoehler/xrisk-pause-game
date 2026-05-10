@@ -2,167 +2,153 @@
 
 ## Project
 
-Master thesis by Jörn Stöhler, University of Augsburg.
-Advisor: Kai Cieliebak. Second advisor: Elizabeth Gaar.
-Deadline: End of May 2026.
-Topic: Probing Viterbo's Conjecture.
+Serious Reigns-style mobile web game about directing an international AI pause
+agency. The core thesis is that a pause is not quiet waiting: it is a fragile
+crisis-management race to keep capability progress contained while safety work
+catches up.
 
-Planned deliverables:
-1. A printed-quality LaTeX thesis: `thesis/build/main.pdf`
-2. Durable Rust crates for symplectic geometry and exact arithmetic: `crates/`
-3. A reproducible experiment pipeline: `experiments/`
+Success means that, after months of play, more people understand that a global
+AI pause treaty could work and can better recognize blatant misunderstandings
+or false claims about what such a treaty needs under different threat models.
+Fun, realism, and political/scientific detail are instrumental to that public
+understanding goal.
+
+Jörn is the domain owner. Ask before changing the game's thesis, political
+model, player-facing terminology, card concepts, major UX direction, final
+feature set, or expert predictions. Agents may draft, implement, test,
+refactor, refresh generated artifacts, and propose wording or UI details
+independently, but expert-grounded content is draft until Jörn approves it.
 
 ## Files
 
 ```text
 .
 |-- AGENTS.md
-|-- Cargo.toml
-|-- thesis/
-|   |-- main.tex
-|   |-- *.tex
-|   |-- bibliography.bib
-|   |-- build/main.pdf
-|-- crates/
-|   |-- MAP.md
-|   |-- symplectic/
-|   |   |-- README.md
-|   |   |-- Cargo.toml
-|   |   |-- src/**/*.rs
-|   |   |-- benches/*.rs
-|   |   `-- tests/*.rs
-|   `-- algebraic-numbers/
-|       |-- README.md
-|       |-- DEVELOPMENT.md
-|       |-- Cargo.toml
-|       |-- examples/*.rs
-|       |-- src/*.rs
-|       `-- tests/*.rs
-|-- formal/
-|   |-- main.tex
-|   |-- preamble.tex
-|   |-- bibliography.bib
-|   `-- *.tex
-|-- experiments/
-|   |-- MAP.md
-|   |-- figure_config.py
-|   |-- <topic>/Cargo.toml
-|   |-- <topic>/src/**/*.rs
-|   |-- <topic>/<experiment>/
-|   |   |-- *.rs
-|   |   |-- *.py
-|   |   |-- *.jsonl
-|   |   `-- figures/
-|   `-- verification/sage/
-|-- research/
+|-- package.json
+|-- src/
+|   |-- App.tsx
+|   |-- main.tsx
+|   |-- engine/
+|   |   |-- types.ts
+|   |   |-- state.ts
+|   |   |-- cards.ts
+|   |   |-- useGame.ts
+|   |   `-- *.test.ts
+|   |-- data/
+|   |   |-- cards/
+|   |   |   |-- index.ts
+|   |   |   |-- registry.ts
+|   |   |   `-- *.ts
+|   |   |-- deaths.ts
+|   |   `-- tutorial.ts
+|   |-- components/
+|   |-- hooks/
+|   `-- index.css
+|-- design/
+|   |-- domain-model.md
+|   |-- card-concepts.md
+|   |-- cards-export.md
+|   |-- geopolitics-synthesis.md
+|   |-- research/*.md
+|   `-- *.md
+|-- literature/
 |   |-- INDEX.md
+|   |-- REFERENCES.md
 |   |-- *.md
-|   `-- sys-landscape-datascience/
-|-- papers/<abbreviationYear>/
+|   |-- *.txt
+|   `-- *.enc
 |-- tasks/
-|   |-- MAP.md
 |   |-- README.md
-|   |-- submit-thesis/
-|   |   |-- *.md
-|   |   `-- *.pdf
-|   |-- references/*.md
-|   |-- submit-thesis.md
-|   |-- verify-thesis-done.md
+|   |-- MAP.md
 |   `-- <group>.md
+|-- public/
+|   |-- cards-map.html
+|   `-- static assets
+|-- e2e/
+|-- scripts/
+|   |-- export-cards.ts
+|   |-- decrypt-literature.sh
+|   |-- codex-worktree.sh
+|   `-- toc.sh
 |-- .agents/skills/<skill>/
 |   |-- SKILL.md
 |   |-- agents/openai.yaml
 |   |-- references/*.md
 |   `-- scripts/
 |-- .codex/
-|   |-- agents/<agent>.toml
-|   |-- config.toml
+|   |-- .gitignore
+|   |-- agents/.gitkeep
 |   `-- worktrees/
 |-- .devcontainer/
 |   |-- README.md
-|   |-- codex-cloud.md
 |   |-- devcontainer.json
 |   |-- Dockerfile
 |   `-- *.sh
-|-- scripts/
-|   |-- codex-worktree.sh
-|   `-- toc.sh
 `-- /tmp/  (outside repo)
 ```
 
-- `AGENTS.md`: root instruction map. This repo does not use nested `AGENTS.md`.
-- `Cargo.toml`, `**/Cargo.toml`: Rust workspace and package manifests.
-- `**/README.md`: consumer-facing entry point for normal use.
-- `**/DEVELOPMENT.md`: maintainer-facing notes for changing internals.
-- `thesis/`: publishable thesis. Self-contained, assets and text are copied
-  deliberately instead of linking to `experiments/`, `formal/`, etc.
-- `crates/`: internal Rust crates with stable code shared across experiments.
-- `formal/`: formalization and proofs for development, not for publication.
-- `experiments/`: Rust/Python experiment packages. Execution code, data,
-  reports, and figures are next to their producer.
-- `research/`: notes with ideas, design, interpretations for development.
-- `papers/<abbreviationYear>/`: raw sources of cited papers.
-- `tasks/`: durable task tracking, current steering, submission/admin source
-  files, and final thesis-done checks.
-- `.agents/skills/`: repo-local skill surface.
-- `.codex/agents/`: repo-local subagent templates (optional).
-- Harness files (`AGENTS.md`, `.agents/skills/**`, `.codex/agents/**`) are
-  frozen unless Jörn explicitly asks for a harness edit.
+- `AGENTS.md`: root instruction map. This repo does not use nested
+  `AGENTS.md`.
+- `package.json`: Vite, React, TypeScript, test, CLI, and card-export commands.
+- `src/engine/`: pure TypeScript game state, RNG, card resolution, tutorial
+  logic, and tests.
+- `src/data/cards/`: card declarations. Current implementation uses
+  side-effect registration through `src/data/cards/index.ts`.
+- `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio
+  hooks, and Tailwind v4 theme CSS.
+- `design/`: domain model, card concepts, generated review exports, map
+  reviews, and research/design notes.
+- `literature/`: source notes and encrypted source-derived material. Run
+  `scripts/decrypt-literature.sh` only when encrypted literature is needed.
+- `tasks/`: current steering, topic task bundles, and harness migration notes.
+- `.agents/skills/`: repo-local skill surface. Skill bodies require Jörn
+  approval before they are treated as final durable instruction material.
+- `.codex/agents/`: optional repo-local subagent templates. Empty by default.
 - `.codex/worktrees/`: isolated worktrees for independent agent sessions.
 - `.devcontainer/`: local devcontainer with documentation.
-- `scripts/`: small repo helper commands.
-- `/tmp/`: scratch space for subagent prompts, iterative drafts, and
-  disposable chat artifacts; not durable project state.
+- `/tmp/`: scratch space for disposable clones, prompt drafts, and temporary
+  reports; not durable project state.
 
 ## Map Files
 
-The `MAP.md` files are navigation caches. They index, summarize and
-structure the folder content for quick navigation.
-They are not authoritative sources, and can be regenerated via subagent.
+Map files are navigation caches. They index, summarize, and structure folder
+content for quick navigation. They are not authoritative sources.
 
-- `tasks/MAP.md`: dependency map of upcoming tasks and current status.
-- `research/INDEX.md`: research questions and current status.
-- `crates/<crate>/MAP.md`: api and architecture.
-- `experiments/MAP.md`: tree of experiments and current status.
-- `thesis/MAP.md`: chapter structure and current status.
+- `tasks/MAP.md`: current roadmap, priority map, and task routing surface.
+- `tasks/README.md`: conventions for task bundles under `tasks/`.
+- `literature/INDEX.md`: source-note navigation.
+- `design/cards-export.md`: generated card review export; refresh with
+  `npm run cards`.
+- `public/cards-map.html`: generated card graph; refresh with `npm run cards`.
 
 ## Review
 
-Final summaries should list review passes performed, including review subagents
-used or intentionally not used.
+Final summaries should list review passes performed, including review
+subagents used or intentionally not used. Ask Jörn before merging harness
+changes that alter `AGENTS.md`, skill bodies, task-routing structure, or
+authority boundaries.
 
 ## Commands
 
-Supported environments:
-- Local devcontainer at `/workspaces/msc-math`: full baseline environment with
-  Rust, Python, TeX Live, and `gh`. See `.devcontainer/README.md`.
-- Codex web environment: lower-complexity environment for web sessions. See
-  `.devcontainer/codex-cloud.md`; TeX is intentionally out of scope there.
-
-Quick commands:
-
 ```bash
-# Harness and maps
+# Harness and navigation
 git diff --check
-bash scripts/toc.sh AGENTS.md MAP_OR_TASK_FILE.md
+bash scripts/toc.sh AGENTS.md tasks/MAP.md
 
-# Rust crates
-cargo test -p symplectic --release --lib
-cargo clippy -p symplectic --lib -- -D warnings
-cargo test -p symplectic --release -- --ignored
-cargo test -p algebraic-numbers --release
-cargo clippy -p algebraic-numbers --all-targets -- -D warnings
+# App and engine
+npm run check
+npm run test:e2e
+npm run cli auto 20
 
-# Rust workspace and experiments
-cargo build --workspace --release
-cargo check -p PACKAGE_NAME
-cargo build -p PACKAGE_NAME --release
+# Cards and generated review surfaces
+npm run cards
 
-# Thesis
-cd thesis/ && latexmk && ./check-build.sh
-perl -ne 'if (/\\newlabel\{LABEL_NAME\}\{\{([^}]*)\}\{([^}]*)\}/) { print "number=$1 page=$2\n" }' thesis/build/main.aux
+# Literature
+bash scripts/decrypt-literature.sh
 
-# Formal math
-cd formal/ && latexmk
-rg -n -A 10 -F '\label{LABEL_NAME}' formal/*.tex
+# Local environment
+npm run dev
+.devcontainer/host-devcontainer-rebuild.sh
+.devcontainer/host-vscode-tunnel.sh
+scripts/codex-worktree.sh <name> [branch]
 ```

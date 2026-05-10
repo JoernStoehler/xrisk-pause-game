@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-lc"]
 # -----------------------------------------------------------------------------
 # Local devcontainer image for xrisk-pause-game (Jörn's Ubuntu desktop)
 #
-# Design goals (same as msc-math):
+# Design goals:
 # - Keep the image simple and close to standard devcontainer patterns (KISS).
 # - Heavyweight dependencies in earlier layers for caching.
 # - More frequently tweaked tools after base deps.
