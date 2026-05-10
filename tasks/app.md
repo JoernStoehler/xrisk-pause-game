@@ -3,7 +3,7 @@
 ## Status
 - State: active
 - Last updated: 2026-05-10
-- Source surfaces: `src/`, `e2e/`, `package.json`
+- Source surfaces: `src/`, `e2e/`, `scripts/cli.test.ts`, `package.json`
 - Refresh when: engine, UI flow, input handling, or app validation changes
 
 ## Steering Cache
@@ -25,6 +25,9 @@
   transitions instead of duplicating game-flow logic.
 - [active] Support static 2-or-3 choice cards end-to-end. Do not model
   unlockable choices as dynamic options; use separate locked/unlocked cards.
+  This is a target contract, not fully enforced yet: `content.test.ts` keeps an
+  expected-failing guard while existing authored cards still use dynamic
+  `enabled` options.
 - [active] Keep CLI smoke output useful for balance/playtest triage without
   treating autoplay as player behavior.
 - [future] Rebalance after content pass.
@@ -38,10 +41,11 @@
 
 - `npm run check` covers typecheck, lint, build, and unit tests.
 - Current Vitest coverage includes fixture-based engine/session tests, card
-  registry validation, CLI command integration tests, and share-text tests.
-  Engine behavior changes should add focused tests for affected contracts, such
-  as hidden state, disabled/down choices, draw eligibility, anti-repeat
-  fallback, death/victory, RNG, or save compatibility.
+  registry validation, CLI command integration tests, app storage/rehydration
+  tests, and share-text tests. Engine behavior changes should add focused
+  tests for affected contracts, such as hidden state, disabled/down choices,
+  draw eligibility, anti-repeat fallback, death/victory, RNG, or save
+  compatibility.
 - `npm run test:e2e` covers mobile-first title/tutorial/drag/keyboard/death
   flows through Playwright. It does not cover broad desktop layout, deployed
   preview behavior, share/clipboard behavior, audio/mute persistence, or the
