@@ -29,8 +29,11 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
   });
 
   useImperativeHandle(ref, () => ({
-    commit: commitProgrammatic,
-  }), [commitProgrammatic]);
+    commit: (direction) => {
+      if (card[direction].disabled) return;
+      commitProgrammatic(direction);
+    },
+  }), [card, commitProgrammatic]);
 
   // Play card flip sound on mount (new card appearing)
   useEffect(() => {

@@ -72,3 +72,17 @@ test("enabled down choices have a visible game affordance", async ({ page }) => 
     "Cross-reference satellite data",
   );
 });
+
+test("disabled down choices do not animate the card away from keyboard input", async ({ page }) => {
+  await loadSavedCard(page, "budget-review");
+
+  await expect(page.getByTestId("label-down")).toHaveCount(0);
+  await page.keyboard.press("ArrowDown");
+  await page.waitForTimeout(600);
+
+  const portraitStillVisible = await page.locator("[data-testid=swipe-card] img").evaluate((img) => {
+    const box = img.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom > 0;
+  });
+  expect(portraitStillVisible).toBe(true);
+});

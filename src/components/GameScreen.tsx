@@ -35,12 +35,12 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
         cardRef.current?.commit("right");
       } else if (e.key === "ArrowDown" || e.key === "s" || e.key === "S") {
         e.preventDefault();
-        cardRef.current?.commit("down");
+        if (!state.activeCard?.down.disabled) cardRef.current?.commit("down");
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, []);
+  }, [state.activeCard?.down.disabled]);
 
   if (!state.activeCard) return null;
 
