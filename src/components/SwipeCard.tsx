@@ -1,16 +1,16 @@
 import { forwardRef, useEffect, useImperativeHandle } from "react";
-import type { ActiveCard } from "../engine/types";
+import type { ActiveCard, ChoiceDirection } from "../engine/types";
 import { useSwipe, type TiltDirection } from "../hooks/useSwipe";
 import { audio } from "../hooks/useAudio";
 import { SpeakerPortrait } from "./SpeakerPortrait";
 
 export interface SwipeCardHandle {
-  commit: (direction: "left" | "right") => void;
+  commit: (direction: ChoiceDirection) => void;
 }
 
 interface SwipeCardProps {
   card: ActiveCard;
-  onChoice: (choice: "left" | "right") => void;
+  onChoice: (choice: ChoiceDirection) => void;
   onTiltChange: (direction: TiltDirection) => void;
 }
 
@@ -45,9 +45,9 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
   return (
     <div className="flex flex-col items-center flex-1 relative justify-start pt-4 px-2 overflow-hidden" data-testid="swipe-card" role="region" aria-label={`${card.speaker} presents a decision`}>
       <div className="w-full flex flex-col">
-        {/* Fixed text area — does NOT tilt */}
-        <div className="bg-tan px-5 py-3 h-[112px] flex items-center justify-center rounded-t-lg">
-          <p className="text-text-dark text-sm leading-relaxed text-center">
+        {/* Text area does NOT tilt; it grows for long cards instead of clipping. */}
+        <div className="bg-tan px-5 py-3 min-h-[112px] flex items-center justify-center rounded-t-lg">
+          <p className="text-text-dark text-sm leading-snug text-center">
             {card.text}
           </p>
         </div>
@@ -100,6 +100,17 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
             {card.right.label}
           </span>
         </div>
+        {!card.down.disabled && (
+          <button
+            type="button"
+            className="bg-tan px-4 pb-3 text-center text-text-muted text-sm font-bold leading-tight rounded-b-lg cursor-pointer"
+            style={tiltDirection === "down" ? { color: `color-mix(in srgb, var(--color-text-muted), var(--color-text-dark) ${swipeProgress * 100}%)` } : undefined}
+            data-testid="label-down"
+            onClick={() => commitProgrammatic("down")}
+          >
+            ↓ {card.down.label}
+          </button>
+        )}
       </div>
     </div>
   );

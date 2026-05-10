@@ -42,6 +42,19 @@ describe("cli", () => {
     expect(left.stdout).toContain("Pool:");
   });
 
+  it("accepts down commands without corrupting saved state", () => {
+    const stateFile = makeStateFile();
+
+    const reset = runCli(stateFile, "reset");
+    expect(reset.status).toBe(0);
+
+    const down = runCli(stateFile, "down");
+    expect(down.status).toBe(0);
+    expect(down.stderr).toBe("");
+    expect(down.stdout).toContain("Turn");
+    expect(down.stdout).toContain("Pool:");
+  });
+
   it("reports missing saved state for choice commands", () => {
     const stateFile = makeStateFile();
 
@@ -58,7 +71,3 @@ describe("cli", () => {
     expect(auto.stdout).toContain("Auto-playing 2 turns");
   });
 });
-
-// REGRESSION BREADCRUMB: cards may have static 2-or-3 choice structures, but CLI
-// command handling only supports left/right. Add down input before using CLI auto
-// runs for three-choice balance conclusions.
