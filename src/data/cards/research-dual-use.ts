@@ -68,7 +68,9 @@ export const researchDualUseCards: Card[] = [
       effects: { saf: 3, alg: 5, pol: -8 },
     },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "training-run-consequence")) return 0;
+      // Search newest-first so an old expired approval does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "approval-dilemma" && h.choice === "left",
       );
       if (!trigger) return 0;

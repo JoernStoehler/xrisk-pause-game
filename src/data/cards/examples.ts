@@ -83,7 +83,8 @@ const _chain: Card = {
   left: { label: "Issue public apology", effects: { pol: -5, int: -3 } },
   right: { label: "Classify the incident", effects: { pol: -8, int: 3 } },
   poolWeight: (state: GameState) => {
-    const trigger = state.history.find(
+    // Search newest-first so an old expired trigger does not hide a newer one.
+    const trigger = [...state.history].reverse().find(
       (h) => h.cardId === "heat-signature" && h.choice === "left",
     );
     if (!trigger) return 0;

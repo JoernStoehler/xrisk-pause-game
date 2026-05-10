@@ -58,7 +58,9 @@ export const militaryEscalationCards: Card[] = [
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "post-strike-fallout")) return 0;
+      // Search newest-first so an old expired strike does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "airstrike-debate" && h.choice === "left",
       );
       if (!trigger) return 0;

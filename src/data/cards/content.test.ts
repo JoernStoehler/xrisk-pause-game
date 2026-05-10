@@ -12,6 +12,11 @@ const cardModules = import.meta.glob("./*.ts", { eager: true }) as Record<
   string,
   Record<string, unknown>
 >;
+const cardModuleSources = import.meta.glob("./*.ts", {
+  eager: true,
+  query: "?raw",
+  import: "default",
+}) as Record<string, string>;
 const cardModuleEntries = Object.entries(cardModules).filter(
   ([path]) =>
     !path.endsWith(".test.ts") &&
@@ -122,6 +127,13 @@ describe("card content registry", () => {
 
     const eligible = ALL_CARDS.filter((card) => card.poolWeight(state) > 0);
     expect(eligible.length).toBeGreaterThan(0);
+  });
+
+  it("does not use oldest-first history lookups in authored card modules", () => {
+    for (const [path, source] of Object.entries(cardModuleSources)) {
+      if (path.endsWith(".test.ts")) continue;
+      expect(source.includes("state.history.find("), path).toBe(false);
+    }
   });
 
   it("history follow-ups use the latest matching trigger, not the oldest expired trigger", () => {
