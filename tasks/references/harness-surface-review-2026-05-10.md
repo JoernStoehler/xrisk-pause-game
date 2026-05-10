@@ -72,6 +72,8 @@ Review-triggered follow-up commit:
 
 Jörn feedback incorporated after the review:
 
+- `AGENTS.md`, `tasks/MAP.md`, `project-quality`, and the current `tasks/*.md`
+  structure are approved.
 - `tasks/MAP.md` fully replaces `ROADMAP.md`.
 - `research-topic` and `write-cards` stay as bare TODO placeholders for now.
 - deployment has its own `tasks/deploy.md` because deploy is not project end;

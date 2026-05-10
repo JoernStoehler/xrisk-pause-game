@@ -18,6 +18,11 @@
   instruction material.
 - [Jörn] `AGENTS.md` also requires Jörn approval before it becomes final
   durable instruction material.
+- [Jörn] `AGENTS.md`, `tasks/MAP.md`, `project-quality`, and current
+  `tasks/*.md` structure approved on 2026-05-10.
+- [Jörn] Merge with `write-cards` and `research-topic` as TODO placeholders;
+  add real bodies later after successful card/research work creates insights
+  worth capturing.
 - [Jörn] If an agent cannot converge on a skill direction after three review
   rounds with concrete alternatives, stop and ask Jörn to choose or write it.
 
