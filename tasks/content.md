@@ -36,8 +36,9 @@
 
 ## Agent Cache
 
-- `npm run cards` refreshes `design/cards-export.md` and
-  `public/cards-map.html`.
+- `npm run cards` refreshes `design/cards-export.md` and ignored
+  `public/cards-map.html`. The deploy job also runs it before build so the
+  ignored map is included in deployed assets.
 - New card files should export a `Card[]` array and be added to
   `src/data/cards/groups.ts`.
 - After `npm run cards`, inspect generated diffs for card count, grouping,

@@ -17,8 +17,9 @@
 - GitHub Actions deploys on pushes to `main` only after a `validate` job passes
   on Node 22: `npm ci`, `npm run check`, Playwright Chromium install,
   `npm run test:e2e`, `npm run cards`, and a dirty check for
-  `design/cards-export.md`. The deploy job then rebuilds and runs
-  `pages deploy dist --project-name=global-pause`.
+  `design/cards-export.md`. The deploy job then rebuilds generated card
+  artifacts so ignored `public/cards-map.html` is present in `dist`, runs
+  `npm run build`, and runs `pages deploy dist --project-name=global-pause`.
 
 ## Work Map
 

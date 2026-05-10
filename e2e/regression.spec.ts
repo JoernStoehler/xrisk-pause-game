@@ -71,6 +71,17 @@ test("enabled down choices have a visible game affordance", async ({ page }) => 
   await expect(page.getByTestId("label-down")).toContainText(
     "Cross-reference satellite data",
   );
+  await page.getByTestId("label-down").click();
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const raw = localStorage.getItem("global-pause-state");
+        if (!raw) return null;
+        const saved = JSON.parse(raw);
+        return saved.state.history.at(-1);
+      }),
+    )
+    .toEqual({ turn: 12, cardId: "data-center-attack", choice: "down" });
 });
 
 test("disabled down choices do not animate the card away from keyboard input", async ({ page }) => {
