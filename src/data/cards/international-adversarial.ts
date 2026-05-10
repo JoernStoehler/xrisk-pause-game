@@ -18,10 +18,10 @@
 // Dynamic: 30 years of political noise; enforcement capability consumed
 // Category: crisis (late-game, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const internationalAdversarialCards: Card[] = [
   {
     id: "china-hawk",
     tags: ["international-diplomacy", "institutional-integrity"],
@@ -73,7 +73,7 @@ register(
     right: {
       label: "Suspend inspections, rely on satellites",
       effects: { pol: -3, int: -8 },
-      hiddenEffects: { missed_threats: 1, treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1, [HIDDEN.treatyErosion]: 1 },
     },
     down: {
       label: "Broker ceasefire for inspection access",
@@ -86,4 +86,4 @@ register(
       return 2;
     },
   },
-);
+];

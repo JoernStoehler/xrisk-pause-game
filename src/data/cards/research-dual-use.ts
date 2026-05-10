@@ -29,10 +29,10 @@
 // Dynamic: cure = disease; dual-use knowledge
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const researchDualUseCards: Card[] = [
   {
     id: "approval-dilemma",
     tags: ["dual-use-research", "alignment-research"],
@@ -61,7 +61,7 @@ register(
     left: {
       label: "Suppress the capability findings",
       effects: { saf: 5, pol: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     right: {
       label: "Publish and classify honestly",
@@ -116,4 +116,4 @@ register(
       return 1.5;
     },
   },
-);
+];

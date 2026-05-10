@@ -4,10 +4,10 @@
 // Dynamic: the pause was always temporary — this is what it was for
 // Category: special (win condition trigger, saf-gated + turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const winConditionCards: Card[] = [
   {
     id: "pivotal-moment",
     tags: ["alignment-research", "international-diplomacy"],
@@ -25,7 +25,7 @@ register(
     down: {
       label: "International conference",
       effects: { pol: 5, saf: 3 },
-      enabled: (state: GameState) => !((state.hidden.treaty_erosion ?? 0) > 3),
+      enabled: (state: GameState) => !((state.hidden[HIDDEN.treatyErosion] ?? 0) > 3),
     },
     color: "#22c55e",
     // Only fire once
@@ -36,4 +36,4 @@ register(
       return 10;
     },
   },
-);
+];

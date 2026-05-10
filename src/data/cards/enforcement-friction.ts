@@ -31,10 +31,10 @@
 // Dynamic: political support IS the pause; can't enforce against your backers
 // Category: crisis (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const enforcementFrictionCards: Card[] = [
   {
     id: "jurisdiction-clash",
     tags: ["enforcement-operations", "treaty-compliance"],
@@ -48,7 +48,7 @@ register(
     right: {
       label: "Joint inspection with national observers",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -72,7 +72,7 @@ register(
     down: {
       label: "Joint op with domestic enforcement",
       effects: { pol: -3, int: 3 },
-      enabled: (state: GameState) => !((state.hidden.treaty_erosion ?? 0) > 2),
+      enabled: (state: GameState) => !((state.hidden[HIDDEN.treatyErosion] ?? 0) > 2),
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 4) return 0;
@@ -88,7 +88,7 @@ register(
     left: {
       label: "Federal agents instead",
       effects: { pol: -12, int: 5 },
-      hiddenEffects: { civil_liberties_pressure: 2 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 2 },
     },
     right: {
       label: "Drop residential enforcement",
@@ -110,12 +110,12 @@ register(
     left: {
       label: "Leak intelligence to force public pressure",
       effects: { pol: -10, int: -8 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Work back-channels for second vote in 30 days",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     down: {
       label: "Deploy covert technical monitoring",
@@ -141,7 +141,7 @@ register(
     right: {
       label: "Negotiate quietly",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { treaty_erosion: 2 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 2 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -149,4 +149,4 @@ register(
     },
     color: "#ef4444",
   },
-);
+];

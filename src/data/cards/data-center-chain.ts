@@ -11,10 +11,10 @@
 // Dynamic: the lethal threshold keeps shrinking; enforcement can't control all sources
 // Category: history-triggered (consequence of data-center-attack)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const dataCenterChainCards: Card[] = [
   {
     id: "data-center-attack",
     tags: ["intelligence-agencies", "compute-monitoring"],
@@ -28,7 +28,7 @@ register(
     right: {
       label: "Accept report, patch the monitoring gap",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     down: {
       label: "Cross-reference satellite data from that window",
@@ -64,4 +64,4 @@ register(
       return 8;
     },
   },
-);
+];

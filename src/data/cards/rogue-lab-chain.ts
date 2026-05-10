@@ -10,10 +10,10 @@
 // Dynamic: you can't demonstrate prevented catastrophes
 // Category: consequence (follows rogue-lab-whistleblower left choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const rogueLabChainCards: Card[] = [
   {
     id: "rogue-lab-whistleblower",
     tags: ["whistleblowers", "rogue-actors"],
@@ -23,7 +23,7 @@ register(
     left: {
       label: "Immediate raid",
       effects: { int: -8, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 10 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 10 },
     },
     right: {
       label: "Gather more intelligence first",
@@ -40,7 +40,7 @@ register(
     left: {
       label: "Classify — protect sources",
       effects: { int: 5, pol: -5 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     right: {
       label: "Declassify sanitized version",
@@ -56,4 +56,4 @@ register(
       return 10;
     },
   },
-);
+];

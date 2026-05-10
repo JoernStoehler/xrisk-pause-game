@@ -12,10 +12,10 @@
 // Dynamic: 30 years of political noise; opinion clusters shift
 // Category: history-triggered (consequence of emperor-billionaire)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const accelerationistOppositionCards: Card[] = [
   {
     id: "emperor-billionaire",
     tags: ["rogue-actors", "enforcement-operations"],
@@ -25,7 +25,7 @@ register(
     left: {
       label: "Naval interdiction",
       effects: { pol: -12, int: 5 },
-      hiddenEffects: { enforcement_visibility: 2 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 2 },
     },
     right: {
       label: "Build legal case first",
@@ -51,12 +51,12 @@ register(
     left: {
       label: "Public scientific rebuttal",
       effects: { pol: -5, saf: -3 },
-      hiddenEffects: { narrative_damage: -1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: -1 },
     },
     right: {
       label: "Don't dignify it with a response",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       const trigger = state.history.find(
@@ -68,4 +68,4 @@ register(
       return 8;
     },
   },
-);
+];

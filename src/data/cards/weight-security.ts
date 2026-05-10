@@ -20,10 +20,10 @@
 // Dynamic: enforcement can only control one of four sources of progress
 // Category: history-triggered (consequence of weight-theft-state)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const weightSecurityCards: Card[] = [
   {
     id: "weight-theft",
     tags: ["intelligence-agencies", "rogue-actors"],
@@ -37,7 +37,7 @@ register(
     right: {
       label: "Back-channel diplomacy",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     down: {
       label: "Present classified evidence",
@@ -63,7 +63,7 @@ register(
     right: {
       label: "Back-channel diplomacy — negotiate monitoring",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     down: {
       label: "Present classified evidence at emergency session",
@@ -89,7 +89,7 @@ register(
     right: {
       label: "Accept the gap — focus on what we control",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       const trigger = state.history.find(
@@ -101,4 +101,4 @@ register(
       return 8;
     },
   },
-);
+];

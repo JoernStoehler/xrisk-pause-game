@@ -38,10 +38,10 @@
 // Dynamic: major power dynamics; the agency is a pawn in great-power competition
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const internationalCoalitionCards: Card[] = [
   {
     id: "withdrawal-threat",
     tags: ["international-diplomacy", "treaty-compliance"],
@@ -51,7 +51,7 @@ register(
     left: {
       label: "Offer special terms",
       effects: { pol: -5, int: -5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Invoke non-party sanctions",
@@ -75,7 +75,7 @@ register(
     right: {
       label: "Accept minor weakening",
       effects: { pol: 5, int: -8 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 10) return 0;
@@ -95,12 +95,12 @@ register(
     right: {
       label: "Go public — present evidence to Council",
       effects: { pol: -10, int: -5 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     down: {
       label: "Amnesty deal — they admit overreach, accept inspections",
       effects: { pol: -3, int: 3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
       enabled: (state: GameState) => !(state.resources.pol > 60),
     },
     color: "#ef4444",
@@ -122,7 +122,7 @@ register(
     right: {
       label: "Negotiate — the station is critical",
       effects: { pol: -5, int: 3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;
@@ -173,4 +173,4 @@ register(
       return 2.5;
     },
   },
-);
+];

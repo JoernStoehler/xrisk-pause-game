@@ -7,10 +7,10 @@
 //   enforcement vs. backlash; political support IS the pause
 // Category: crisis chain (late-game, int-gated → history-triggered consequence)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const militaryEscalationCards: Card[] = [
   // --- airstrike-debate ---
   {
     id: "airstrike-debate",
@@ -29,7 +29,7 @@ register(
     down: {
       label: "Cyber operation",
       effects: { int: -8, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 2 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 2 },
       enabled: (state: GameState) => state.resources.int >= 50,
     },
     color: "#ef4444",
@@ -54,7 +54,7 @@ register(
     right: {
       label: "Express regret, propose review of procedures",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { enforcement_visibility: -1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: -1 },
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {
@@ -67,4 +67,4 @@ register(
       return 10;
     },
   },
-);
+];

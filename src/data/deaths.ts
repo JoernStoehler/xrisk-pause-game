@@ -1,6 +1,6 @@
 // Draft death messages — causal autopsies that teach specific dynamics.
 // One message per bar × extreme for now. Will expand after card content settles.
-import type { ResourceKey } from "../engine/types";
+import type { DeathCause, ResourceKey } from "../engine/types";
 
 export const DEATH_MESSAGES: Record<
   ResourceKey,
@@ -41,3 +41,8 @@ export const DEATH_MESSAGES: Record<
     ],
   },
 };
+
+export function getDeathMessage(cause: DeathCause, turn: number): string {
+  const messages = DEATH_MESSAGES[cause.resource]?.[cause.extreme];
+  return messages?.[turn % messages.length] ?? `${cause.resource} ${cause.extreme}.`;
+}

@@ -17,10 +17,9 @@
 // Dynamic: research suppression vs. innovation; economic cost is real
 // Category: political (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const corporateResponseCards: Card[] = [
   {
     id: "compliant-defection",
     tags: ["economic-pressure", "treaty-compliance"],
@@ -84,4 +83,4 @@ register(
       return 1.5;
     },
   },
-);
+];

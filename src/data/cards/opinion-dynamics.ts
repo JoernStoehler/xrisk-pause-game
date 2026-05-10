@@ -32,10 +32,10 @@
 // Dynamic: political support comes with strings; opinion shifts are chaotic
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const opinionDynamicsCards: Card[] = [
   {
     id: "low-salience-campaign",
     tags: ["media-narrative", "political-support"],
@@ -49,7 +49,7 @@ register(
     right: {
       label: "Let sleeping dogs lie",
       effects: { pol: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -65,7 +65,7 @@ register(
     left: {
       label: "Youth outreach campaign",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     right: {
       label: "Focus on institutional allies",
@@ -123,7 +123,7 @@ register(
     left: {
       label: "Embrace the endorsement",
       effects: { pol: 8, saf: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     right: {
       label: "Distance — correct misconceptions",
@@ -134,4 +134,4 @@ register(
       return 1.5;
     },
   },
-);
+];

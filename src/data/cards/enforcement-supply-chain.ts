@@ -37,10 +37,10 @@
 // Dynamic: time is always against you; alg progress is partly uncontrollable
 // Category: late-game (alg-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const enforcementSupplyChainCards: Card[] = [
   {
     id: "chip-audit-deadline",
     tags: ["chip-supply-chain", "treaty-compliance"],
@@ -54,7 +54,7 @@ register(
     right: {
       label: "Grant 30-day extensions",
       effects: { pol: 3, int: -5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 4) return 0;
@@ -70,7 +70,7 @@ register(
     left: {
       label: "Lockdown and audit",
       effects: { int: 5, pol: -5 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Track the gap quietly",
@@ -94,7 +94,7 @@ register(
     right: {
       label: "Negotiate monitoring conditions",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -133,7 +133,7 @@ register(
     right: {
       label: "Focus on frontier — accept the gap",
       effects: { alg: 5, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.resources.alg < 50) return 0;
@@ -160,4 +160,4 @@ register(
     },
     color: "#ef4444",
   },
-);
+];

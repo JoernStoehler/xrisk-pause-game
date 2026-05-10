@@ -32,10 +32,10 @@
 // Dynamic: enforcement can only control one of four sources of progress
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const intelligenceNetworksCards: Card[] = [
   {
     id: "black-market-signal",
     tags: ["chip-supply-chain", "enforcement-operations"],
@@ -64,12 +64,12 @@ register(
     left: {
       label: "Investigate in person",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "File and wait for convergence",
       effects: { int: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 3) return 0;
@@ -85,7 +85,7 @@ register(
     left: {
       label: "Targeted interdiction",
       effects: { int: -5, pol: -5 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Diplomatic containment",
@@ -109,7 +109,7 @@ register(
     right: {
       label: "Target the network nodes",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -141,4 +141,4 @@ register(
       return 2;
     },
   },
-);
+];

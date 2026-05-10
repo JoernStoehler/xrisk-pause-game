@@ -39,10 +39,10 @@
 // Dynamic: enforcement capability is consumed by enforcement actions
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const enforcementCostsCards: Card[] = [
   {
     id: "cat-mouse-adapt",
     tags: ["chip-supply-chain", "enforcement-operations"],
@@ -71,12 +71,12 @@ register(
     left: {
       label: "Seize now — raid the warehouses",
       effects: { int: -5, pol: 3 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Map the network — let chips move",
       effects: { int: -3, pol: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 4) return 0;
@@ -96,7 +96,7 @@ register(
     right: {
       label: "Delay — investigate the film studio explanation",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     down: {
       label: "Run second-opinion analysis with updated baselines",
@@ -117,12 +117,12 @@ register(
     left: {
       label: "Inspect anyway",
       effects: { int: 3, pol: -8 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Trust the partnership",
       effects: { pol: 3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.resources.int < 30) return 0;
@@ -142,7 +142,7 @@ register(
     right: {
       label: "Demand verification first",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 5) return 0;
@@ -158,7 +158,7 @@ register(
     left: {
       label: "Raid the facility",
       effects: { int: -8, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 2 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 2 },
     },
     right: {
       label: "Diplomatic pressure",
@@ -169,4 +169,4 @@ register(
       return 1.5;
     },
   },
-);
+];

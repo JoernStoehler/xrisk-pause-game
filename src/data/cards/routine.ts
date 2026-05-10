@@ -1,9 +1,10 @@
 // STUB — placeholder cards so the game runs while real cards are being written.
 // Will be replaced by individual card script files.
 
-import { register } from "./registry";
 
-register(
+import type { Card } from "../../engine/types";
+
+export const routineCards: Card[] = [
   {
     id: "budget-review",
     tags: ["institutional-integrity", "political-support"],
@@ -34,4 +35,4 @@ register(
     right: { label: "Intelligence briefings", effects: { int: 3 } },
     poolWeight: () => 1.5,
   },
-);
+];

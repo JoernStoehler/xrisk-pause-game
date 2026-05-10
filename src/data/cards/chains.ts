@@ -1,9 +1,8 @@
 // STUB — placeholder cards so the game runs while real cards are being written.
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const chainsCards: Card[] = [
   {
     id: "whistleblower-fallout",
     tags: ["whistleblowers", "enforcement-operations"],
@@ -36,4 +35,4 @@ register(
       return 3;
     },
   },
-);
+];

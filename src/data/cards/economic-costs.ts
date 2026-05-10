@@ -45,10 +45,10 @@
 // Dynamic: economic cost of pause is real and legitimate; opinion clusters diverge
 // Category: political (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const economicCostsCards: Card[] = [
   {
     id: "ai-economy-report",
     tags: ["economic-pressure", "treaty-compliance"],
@@ -62,7 +62,7 @@ register(
     right: {
       label: "Commission review of threshold adequacy",
       effects: { pol: -3, saf: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -97,12 +97,12 @@ register(
     left: {
       label: "Propose sector-specific thresholds",
       effects: { pol: -5, alg: 5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Stay out of economic policy",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -122,7 +122,7 @@ register(
     right: {
       label: "Accept the cost — focus on messaging",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;
@@ -161,7 +161,7 @@ register(
     right: {
       label: "Stay out of labor politics",
       effects: { pol: -6, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;
@@ -187,4 +187,4 @@ register(
       return 1.5;
     },
   },
-);
+];

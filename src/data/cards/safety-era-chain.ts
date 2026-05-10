@@ -11,10 +11,10 @@
 // Dynamic: race dynamic after safety looks solved; political confidence diverges from reality
 // Category: crisis (follows safety-looks-solved)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const safetyEraChainCards: Card[] = [
   {
     id: "safety-looks-solved",
     tags: ["alignment-research", "political-support"],
@@ -24,7 +24,7 @@ register(
     left: {
       label: "Embrace the narrative",
       effects: { pol: 12, saf: -5 },
-      hiddenEffects: { narrative_damage: 2 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 2 },
     },
     right: {
       label: "Correct the record",
@@ -51,7 +51,7 @@ register(
     right: {
       label: "Negotiate new terms",
       effects: { pol: -5, alg: 10 },
-      hiddenEffects: { treaty_erosion: 2 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 2 },
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {
@@ -64,4 +64,4 @@ register(
       return 8;
     },
   },
-);
+];

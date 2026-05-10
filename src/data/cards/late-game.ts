@@ -1,9 +1,9 @@
 // STUB — placeholder cards so the game runs while real cards are being written.
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const lateGameCards: Card[] = [
   {
     id: "capability-jump",
     tags: ["algorithmic-progress", "dual-use-research"],
@@ -23,7 +23,7 @@ register(
     idea: "decentralized lab network trains collectively above threshold",
     speaker: "Deputy Director",
     text: "We've discovered a decentralized network of small labs, each individually below compute thresholds but collectively training something massive.",
-    left: { label: "Coordinate raids", effects: { int: 10, pol: -8 }, hiddenEffects: { enforcement_visibility: 2 } },
+    left: { label: "Coordinate raids", effects: { int: 10, pol: -8 }, hiddenEffects: { [HIDDEN.enforcementVisibility]: 2 } },
     right: { label: "Propose treaty amendment", effects: { pol: 5, int: -3 } },
     poolWeight: (state: GameState) => {
       if (state.turn < 15) return 0;
@@ -43,4 +43,4 @@ register(
       return 2;
     },
   },
-);
+];

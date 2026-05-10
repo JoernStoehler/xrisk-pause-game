@@ -22,8 +22,8 @@
   notes to card concepts and implementation.
 - [active] Add or restore a usable card/research workflow before large-scale
   content edits; current skills are honest TODO placeholders.
-- [active] Add card corpus validation tests or generated checks before relying
-  on the 144-card draft corpus for balance/content conclusions.
+- [active] Extend card corpus validation when new content invariants become
+  important for balance/content conclusions.
 - [blocked] Implement geopolitics cards only after Jörn approves the relevant
   concepts and mechanism framing.
 - [future] Portrait regeneration waits until card content stabilizes.
@@ -34,9 +34,10 @@
 
 - `npm run cards` refreshes `design/cards-export.md` and
   `public/cards-map.html`.
-- New card files require side-effect imports in `src/data/cards/index.ts`.
+- New card files should export a `Card[]` array and be added to
+  `src/data/cards/groups.ts`.
 - After `npm run cards`, inspect generated diffs for card count, grouping,
-  `unknown.ts`, hidden-state/history/tag graph edges, and review-text quality.
+  hidden-state/history/tag graph edges, and review-text quality.
 - Current `design/cards-export.md` omits useful review metadata such as tags,
   hidden effects, pool weights, gating, source comments, and source line
   references.

@@ -18,10 +18,10 @@
 // Dynamic: institutions rot from within; the cure and the disease
 // Category: crisis (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const institutionalCaptureCards: Card[] = [
   {
     id: "corporate-lobbying",
     tags: ["corporate-lobbying", "political-support"],
@@ -54,7 +54,7 @@ register(
     right: {
       label: "Approve with enhanced monitoring conditions",
       effects: { pol: -3, int: 5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -74,7 +74,7 @@ register(
     right: {
       label: "Negotiate — transfer research to ISIA oversight",
       effects: { pol: -5, saf: 5, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;
@@ -82,4 +82,4 @@ register(
     },
     color: "#ef4444",
   },
-);
+];

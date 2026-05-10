@@ -25,10 +25,10 @@
 // Dynamic: you can't demonstrate prevented catastrophes
 // Category: political (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const subAsiHarmsCards: Card[] = [
   {
     id: "autonomous-vehicle-massacre",
     tags: ["sub-asi-incidents", "media-narrative"],
@@ -61,12 +61,12 @@ register(
     right: {
       label: "Ignore — responding amplifies",
       effects: { pol: -8, int: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     down: {
       label: "Trace the source",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { narrative_damage: -1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: -1 },
       enabled: (state: GameState) => !(state.resources.int < 60),
     },
     poolWeight: (state: GameState) => {
@@ -87,7 +87,7 @@ register(
     right: {
       label: "Not our jurisdiction",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -107,11 +107,11 @@ register(
     right: {
       label: "Ignore — engaging legitimizes the argument",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
       return 1.5;
     },
   },
-);
+];

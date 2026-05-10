@@ -1,7 +1,7 @@
-# Card Review — 144 cards, 38 files
-Generated 2026-03-10
+# Card Review — 144 cards, 38 groups
+Generated 2026-05-10
 
-## routine.ts
+## Routine placeholders (routine)
 
 **budget-review** — *quarterly budget transparency vs operational secrecy*
 Deputy Director: Quarterly budget review. Member states are asking where their money goes. Do we publish a full transparency report or keep operational details classified?
@@ -18,34 +18,29 @@ Deputy Director: Quiet day at ISIA. Your deputy suggests using the downtime for 
 ← Staff morale day: pol+3
 → Intelligence briefings: int+3
 
-## incidents.ts
+## Incidents (incidents)
 
 **rogue-lab-normal** — *detect illegal data center via heat signature near Shenzhen*
 Deputy Director: Thermal anomaly near Shenzhen industrial zone. Signature consistent with an undeclared compute cluster running prohibited training.
 ← Send inspectors: pol-3 int+8
 → Flag for next quarter: pol-5 int-3
-Maybe randomize the zone for variety? Cheap thing to do.
-Also: there should be an immediate follow up report card when sending inspectors - either a report that they found a rogue lab, or that they found a different explanation for the heat signature.
 
 **rogue-lab-degraded** — *detect illegal compute via rumors when intel is low*
 Deputy Director: There are... rumors of unauthorized compute usage somewhere in East Asia. We can't pin it down with our current intelligence.
 ← Expensive investigation: pol-5 int+5
 → Ignore the rumors: pol-3 int-6
-Badly written, "..." is not the style an advisor would use. Maybe "We have an unverified tip about a training run somewhere in East Asia. A lengthy investigation would be required." or sth like that?
 
 **chip-smuggling** — *detect illegal chip sale via border agents, hidden in networking equipment*
 Deputy Director: Border agents intercepted a container with 48 H100 GPUs hidden inside networking equipment. Trail leads to a shell company.
 ← Full investigation: pol+4 int+6
 → Seize and move on: int-4 pol+3
-As usual: an immediate follow up card wraps this event up.
 
 **whistleblower** — *lab researcher claims prohibited capability evaluations, wants protection*
 Deputy Director: A researcher at a major lab claims they've been running prohibited capability evaluations in secret. They want protection.
 ← Protect and investigate: int+8 pol-5
 → Too risky, decline: pol-8 int-5
-No direct follow up needed here, since no direct event happens. But maybe this increases the chance of some intervention cards in companies - tbh it is fine to just increase int+8 and then naturally the rate of lab-related events will go up.
 
-## political.ts
+## Political placeholders (political)
 
 **treaty-threat** — *major signatory threatens withdrawal over enforcement posture*
 Deputy Director: A major signatory is threatening to withdraw from the treaty. They say enforcement is too aggressive. Or maybe not aggressive enough.
@@ -57,7 +52,7 @@ Deputy Director: The US Senate wants you to testify about ISIA effectiveness. Th
 ← Show strength: pol+10 int-5
 → Ask for patience: pol+5 int-3
 
-## chains.ts
+## Chain placeholders (chains)
 
 **whistleblower-fallout** — *follow-up: lab sues ISIA after whistleblower-triggered investigation*
 Deputy Director: The lab you investigated after the whistleblower tip is suing ISIA for overreach. This could set a dangerous precedent.
@@ -69,7 +64,7 @@ Deputy Director: Someone leaked that you declined to protect a whistleblower. Th
 ← Deny everything: pol-8 int+3
 → Full transparency: pol-3 int-5
 
-## crisis.ts
+## Crisis placeholders (crisis)
 
 **pol-crisis-low** — *crisis: political support cratering, need dramatic gesture*
 Deputy Director: Public approval is cratering. Protests outside ISIA headquarters. We need a dramatic gesture to restore confidence.
@@ -91,7 +86,7 @@ Deputy Director: Multiple delegations accuse you of empire-building. They want o
 ← Accept oversight: pol-15 int+5
 → Resist reforms: pol+5 int-8
 
-## late-game.ts
+## Late game placeholders (late-game)
 
 **capability-jump** — *published paper halves compute requirements, shrinking lethal threshold*
 Deputy Director: A research lab just published a paper that effectively halves compute requirements for frontier models. The algorithmic threshold just shrank.
@@ -108,7 +103,7 @@ Deputy Director: Safety researchers report a potential breakthrough — but vali
 ← Authorize controlled test: saf+10 alg+8 pol-5
 → Too dangerous: pol+5 saf-3
 
-## enforcement-detection.ts
+## Enforcement detection (enforcement-detection)
 
 **thermal-anomaly** — *detect illegal data center via heat signature*
 Intelligence Analyst: Satellite imagery shows a thermal anomaly near Shenzhen — consistent with an undeclared compute cluster. Power draw analysis suggests prohibited-scale training. We have a 72-hour window before they can reconfigure.
@@ -132,7 +127,7 @@ Intelligence Analyst: Whistleblower at a cloud provider: a customer renting 'inf
 → Work with provider quietly: int+5 pol-3
 ↓ Crack the gradient protocol: int+8 saf+3
 
-## enforcement-supply-chain.ts
+## Enforcement supply chain (enforcement-supply-chain)
 
 **chip-audit-deadline** — *chip consolidation deadline approaching, 14% of facilities behind schedule*
 Enforcement Chief: 120-day chip consolidation deadline approaching. 14% of declared facilities haven't completed inventory. Three countries requesting extensions — they say logistics, we suspect concealment in at least one case. Grant extensions and you set a precedent. Enforce strictly and you punish genuine logistical problems.
@@ -164,7 +159,7 @@ Chief Scientist: Algorithmic progress has reached 3.5x the 2022 baseline. At cur
 ← Consumer device restrictions: pol-12 int+5
 → Focus on software controls: int-5 alg+5
 
-## enforcement-costs.ts
+## Enforcement costs (enforcement-costs)
 
 **cat-mouse-adapt** — *smuggling networks adapt after raid, splitting into smaller resilient cells*
 Enforcement Chief: After last quarter's raid on the chip smuggling ring — 2,000 chips seized, six arrests — we expected deterrence. Instead, networks adapted within weeks. Chips now arrive with serial numbers ground off, firmware reflashed with fake IDs. Routes shifted from commercial freight to private aviation and diplomatic pouches. One network breaks chips into individual units, ships through consumer electronics channels disguised as gaming GPUs, reassembles at destination. We disrupted one network and created three smaller, more resilient ones.
@@ -197,7 +192,7 @@ Enforcement Chief: Former tech CEO bought a private island and built an undergro
 ← Raid the facility: int-8 pol-3
 → Diplomatic pressure: pol-5 int-3
 
-## enforcement-friction.ts
+## Enforcement friction (enforcement-friction)
 
 **jurisdiction-clash** — *treaty nation blocks inspection by invoking national security*
 Enforcement Chief: We've confirmed an unauthorized compute cluster in a treaty nation. Their national intelligence service claims it's a classified domestic program and invokes national security to block our inspection. Our legal team says the treaty technically overrides domestic classification, but enforcement would require a political fight with a major ally. The longer we wait, the more time they have to relocate or sanitize the facility.
@@ -226,7 +221,7 @@ Intelligence Analyst: Our monitoring detected an unauthorized training run insid
 ← Issue formal violation notice: pol-15 int+5
 → Negotiate quietly: pol-3 int-5
 
-## enforcement-integrity.ts
+## Enforcement integrity (enforcement-integrity)
 
 **disposal-bribery** — *chip disposal officer bribed, diverting chips from destruction*
 Deputy Director: Internal security flagged a chip disposal officer living beyond his means. His GPS tracker was disabled for 2-4 hours on eleven destruction runs this year — estimated 1,400 chips that could have been diverted instead of destroyed. He has 14 years of clean service. He processed chips alone because the two-person verification protocol was suspended six months ago to save money. That budget cut was your decision.
@@ -248,7 +243,7 @@ Legal Counsel: Senior enforcement officer — deeply committed to the pause — 
 ← Arrest and prosecute: pol+3 int-8
 → Internal discipline only: pol-8 int+3
 
-## enforcement-monitoring.ts
+## Enforcement monitoring (enforcement-monitoring)
 
 **decommission-graveyard** — *chip disposal audit finds 9,200 chips unaccounted for from bankrupt contractor*
 Customs Liaison: Annual chip lifecycle audit found a discrepancy: 23,000 chips declared 'decommissioned and destroyed' over 18 months. 40% of destruction certificates came from three disposal firms — and one went bankrupt six months ago. Its warehouse in Romania contains no destroyed chips. Either 9,200 chips were destroyed before storage with no evidence, diverted to the black market, or sitting somewhere unmonitored. Every chip scheduled for destruction is a temptation.
@@ -279,7 +274,7 @@ Chief Scientist: Samsung's latest inference-optimized chips have different therm
 → Maintain training-focused monitoring: int-5 pol-3
 ↓ Mandate firmware reporting on Samsung chips: int+5 pol-5
 
-## enforcement-ai-paradox.ts
+## Enforcement AI paradox (enforcement-ai-paradox)
 
 **agency-trains-ai** — *agency that bans training runs needs to perform one for monitoring AI*
 Chief Scientist: Enforcement needs a new monitoring AI — current tools are falling behind adversary techniques. The irony: the agency that bans training runs needs to perform one itself. Research Controls says the run is technically within threshold. The optics are devastating if it leaks.
@@ -298,7 +293,7 @@ Chief Scientist: Our analysis AI — the one evaluating intercepted research —
 → Continue with monitoring: alg+5 int+3
 ↓ Formal capability evaluation: saf+5 int-3
 
-## intelligence-networks.ts
+## Intelligence networks (intelligence-networks)
 
 **black-market-signal** — *black market chip prices tripled, demand outpacing interdiction*
 Customs Liaison: Black market H100-equivalent prices tripled this quarter. Demand from unauthorized actors is outpacing our interdiction capacity. We're seizing more chips than ever and it's not enough. The enforcement chief's assessment: 'We're winning battles but losing the war on supply chain control.'
@@ -326,7 +321,7 @@ Intelligence Analyst: We've discovered a grey market for AI capabilities that te
 → Target brokers via financial regulators: pol-3 int-5 alg+5
 ↓ Infiltrate broker network via front companies: int-5 pol-3
 
-## weight-security.ts
+## Weight security (weight-security)
 
 **weight-theft** — *frontier model weights stolen by state intelligence, can't un-copy data*
 Intelligence Analyst: A frontier lab reports catastrophic breach — their latest model's weights exfiltrated. NSA assessment: state intelligence operation, likely China. Weights from a legal training run, now in the hands of a government with no transparency obligations. You can't un-copy data.
@@ -345,7 +340,7 @@ Intelligence Analyst: Six months after the weight theft. China has deployed the 
 ← Push for treaty amendment on weight possession: pol-8 int-3
 → Accept the gap — focus on what we control: pol-3 int-5
 
-## data-center-chain.ts
+## Data center chain (data-center-chain)
 
 **data-center-attack** — *NSA delayed reporting a foreign attack on monitored data center*
 Intelligence Analyst: The NSA director just forwarded a report — six months late. A US data center was attacked by a foreign actor. Our compute monitoring tools were disabled for roughly one week. It's possible a training run occurred during the gap. The NSA sat on this for months because they don't take ASI seriously enough to report promptly. It reached us only because the president's office intervened. We have no idea what happened during that week.
@@ -358,7 +353,7 @@ Intelligence Analyst: Follow-up on the data center attack. Analysis suggests the
 ← Confront the nation — demand disclosure: pol-8 int-5
 → Monitor quietly — track if knowledge propagates: pol-3 int-3 alg+5
 
-## rogue-lab-chain.ts
+## Rogue lab chain (rogue-lab-chain)
 
 **rogue-lab-whistleblower** — *whistleblower reports secret training at Nexus Computing, raid or verify*
 Enforcement Chief: Whistleblower inside Nexus Computing claims they're running unauthorized training at night using undeclared chips hidden in a legitimate datacenter. She's credible — senior engineer, no grudge, terrified of retaliation. But if we raid and she's wrong, we've burned inspection methods and credibility on a false alarm.
@@ -370,7 +365,7 @@ Chief Scientist: The raid found it. 800 undeclared chips, partially completed ru
 ← Classify — protect sources: int+5 pol-5
 → Declassify sanitized version: pol+8 int-10
 
-## international-coalition.ts
+## International coalition (international-coalition)
 
 **withdrawal-threat** — *India files treaty withdrawal notice citing asymmetric enforcement*
 Diplomatic Attaché: India has filed a 12-month withdrawal notice from the treaty. Their stated reason: 'asymmetric enforcement.' Three other nations are watching — if India leaves cleanly, they'll follow. India's compute infrastructure is growing fast. In 12 months they'll be outside our jurisdiction entirely.
@@ -404,7 +399,7 @@ Diplomatic Attaché: US ambassador wants a challenge inspection of a Chinese fac
 → Pursue neither — demand own intel: pol-5 int-5
 ↓ Deploy independent surveillance: int+8 pol-8
 
-## international-adversarial.ts
+## International adversarial (international-adversarial)
 
 **china-hawk** — *deputy director privately undermining China negotiations from conviction*
 Deputy Director: Our deputy director — former military intelligence — has been privately undermining China negotiations. He believes cooperation with China is naive. The Chinese diplomat threatens to withdraw from talks unless he's removed. The deputy is competent, experienced, and may be right about China.
@@ -422,7 +417,7 @@ Diplomatic Attaché: Conventional war between two treaty nations over a territor
 → Suspend inspections, rely on satellites: pol-3 int-8
 ↓ Broker ceasefire for inspection access: pol-5 int-3
 
-## military-escalation.ts
+## Military escalation (military-escalation)
 
 **airstrike-debate** — *military strike on confirmed compute cluster in non-treaty state*
 NATO Liaison: Diplomacy failed against a confirmed large-scale compute cluster in a non-treaty state. The Security Council referred it for protective action. The US Joint Chiefs have a strike plan — precision airstrikes on the facility's power infrastructure. China abstains. If it escalates into conventional conflict, does the pause survive?
@@ -435,7 +430,7 @@ Diplomatic Attaché: The airstrike succeeded — the compute cluster is destroye
 ← Double down — this is what Article XII is for: pol-12 int-5
 → Express regret, propose review of procedures: pol-5 int-3
 
-## research-dual-use.ts
+## Research dual-use (research-dual-use)
 
 **approval-dilemma** — *safety training run near threshold would also reveal capability advances*
 Chief Scientist: Leading alignment researcher proposes training at 5×10²³ FLOP — just below the banned threshold. Could accelerate safety by years. But Research Controls flags: the methodology could reveal capability advances. We can't separate the safety insight from the capability one. Approve and you get both. Deny and you get neither.
@@ -457,7 +452,7 @@ Chief Scientist: University researcher published a paper on detecting deceptive 
 ← Retroactive classification: pol-10 saf+3
 → Accept — update thresholds: alg+8 saf+3
 
-## research-scaling.ts
+## Research scaling (research-scaling)
 
 **stepping-on-toes** — *doubling budget didn't help, fundamental problems bottleneck all approaches*
 Chief Scientist: Quarterly safety report. Despite doubling the budget, output plateaued. Three independent teams arrived at the same result — the hard fundamental problems bottleneck all approaches. Adding researchers just creates redundancy. We can't buy our way out of this.
@@ -476,7 +471,7 @@ Chief Scientist: Annual workforce report. Five years in, we have 12 senior align
 → Optimize current seniors' output: saf-3 pol-3
 ↓ Build AI research-amplification tools: saf+5 alg+5 int-3
 
-## research-safety-progress.ts
+## Research safety progress (research-safety-progress)
 
 **safety-stall** — *three years with no meaningful alignment progress, fundamental problems remain open*
 Chief Scientist: Third consecutive annual review with no meaningful progress on formal verification of alignment. The fundamental problems remain open. Our best researchers say 'we don't even know what we don't know.' Meanwhile, the algorithmic threshold keeps shrinking. We're in a race we might not be able to win.
@@ -499,7 +494,7 @@ Chief Scientist: I want to run our largest safety experiment yet — training a 
 → Run in existing facility: saf+8 alg+5 int-3
 ↓ Staged protocol — start small: saf+5 pol-3 int-5
 
-## safety-era-chain.ts
+## Safety era chain (safety-era-chain)
 
 **safety-looks-solved** — *sub-ASI alignment breakthrough mistaken for full solution, pressure to relax treaty*
 Chief Scientist: Formal verification breakthrough for sub-ASI systems. Every major outlet: 'Alignment is solved.' My assessment: we solved the easy part. Sub-ASI alignment and ASI alignment are categorically different problems. But three nations are already lobbying to relax the treaty based on the headlines.
@@ -511,7 +506,7 @@ Diplomatic Attaché: Two major nations have begun 'defensive ASI programs' — c
 ← Enforce the treaty: pol-15 int-8
 → Negotiate new terms: pol-5 alg+10
 
-## institutional-internal.ts
+## Institutional internal (institutional-internal)
 
 **internal-dissent** — *senior inspectors refuse raid order, believe ISIA became surveillance state*
 Deputy Director: Three senior inspectors refused to execute a raid order. They believe we've become 'the thing we were meant to prevent — an unaccountable surveillance state.' They're not wrong about the surveillance part. They're filing a formal complaint and talking to press contacts.
@@ -544,7 +539,7 @@ Intelligence Analyst: Surveillance AI flagged 47 high-priority anomalies overnig
 ← Investigate all 47: int-8 pol-3
 → Triage — top 10 only: int-3
 
-## institutional-leadership.ts
+## Institutional leadership (institutional-leadership)
 
 **leadership-purge** — *government demands replacement of competent officials with political appointees*
 Deputy Director: New government demands replacement of three senior ISIA officials deemed 'too aggressive.' Threatens to withhold treaty funding. The officials are competent — the real objection is political. Lose them and we lose decades of institutional knowledge. Keep them and we lose a major funder.
@@ -579,7 +574,7 @@ Chief Scientist: A billionaire former lab CEO offers a $500M endowment for our s
 → Decline everything: saf-5 pol-3 int+3
 ↓ Accept but monitor his hires: saf+8 int-5
 
-## institutional-capture.ts
+## Institutional capture (institutional-capture)
 
 **corporate-lobbying** — *AI companies publicly support pause while secretly funding opposition*
 Intelligence Analyst: Three largest AI companies formed a lobbying alliance. They publicly support the pause. A journalist contact has evidence they're privately funding anti-enforcement candidates. Publishing burns the source.
@@ -596,7 +591,7 @@ Investigative Journalist: Three-part series in the Financial Times: 'The Pause P
 ← Prosecute aggressively — seize and classify: pol+5 int-5 saf-5
 → Negotiate — transfer research to ISIA oversight: pol-5 saf+5 int-3
 
-## economic-costs.ts
+## Economic costs (economic-costs)
 
 **ai-economy-report** — *sub-threshold AI now 18% of GDP, tightening restrictions threatens economy*
 Political Advisor: New economic data: AI systems operating within treaty limits now contribute 18% of global GDP. Entire industries depend on them — logistics, finance, manufacturing, healthcare. If we tighten the threshold further, we threaten hundreds of millions of livelihoods. The economy didn't just adapt to the pause — it grew around it. Sub-threshold AI became load-bearing infrastructure. Any future restrictions are no longer about preventing growth. They're about tearing out foundations.
@@ -633,7 +628,7 @@ Political Advisor: Sub-threshold AI automation eliminated 12 million jobs in tre
 ← Propose sub-threshold restrictions: pol-8 alg-3
 → Stay focused on ASI mandate: pol-5
 
-## corporate-response.ts
+## Corporate response (corporate-response)
 
 **compliant-defection** — *poster-child compliant company relocates to non-treaty nation over costs*
 Finance Director: Helios Systems — the poster child of compliance — is relocating to Vietnam. Their CEO's letter: '$6B spent on compliance. Competitors in non-treaty nations spent zero. Our board answers to shareholders, not to you.' If Helios defects, other compliant companies follow within months.
@@ -651,7 +646,7 @@ Chief Scientist: Novartis researchers need 2x the compute threshold for a cancer
 ← Grant medical exemption: pol+5 alg+5 int-5
 → Maintain threshold — no exceptions: pol-10 saf+3
 
-## innovation-suppression.ts
+## Innovation suppression (innovation-suppression)
 
 **medical-ai-request** — *WHO requests above-threshold training for drug-discovery AI, 2M lives/year*
 Diplomatic Attaché: The WHO petitions for a training run to create a drug-discovery AI. Above current threshold but well below the ASI danger zone. Chief Scientist rates the risk as low but nonzero. Projected impact: 2 million lives saved per year. The humanitarian case is overwhelming. But every exception erodes the bright line. Last month three companies cited the WHO's request in their own threshold-exception applications. If we approve, the line moves. If we deny, we own 2 million preventable deaths annually.
@@ -680,7 +675,7 @@ Chief Scientist: Fourteen universities — MIT, Oxford, Tsinghua, ETH Zurich —
 → Refuse — maintain centralized control: pol-8 saf-3
 ↓ Share declassified case studies: pol+3 int-5 alg+3
 
-## political-support.ts
+## Political support (political-support)
 
 **election-year** — *elections in treaty nations with 'AI freedom' candidates running*
 Political Advisor: Three major treaty nations hold elections this cycle. 'AI freedom' candidates are running in two of them — promising to revoke treaty commitments for AI-driven economic growth. Polling shows them competitive. We could stay neutral or quietly run risk-information campaigns.
@@ -702,7 +697,7 @@ Investigative Journalist: My new book argues the ASI threat was manufactured to 
 ← Declassify threat data: pol+3 int-10
 → Let the book run its course: pol-8
 
-## opinion-dynamics.ts
+## Opinion dynamics (opinion-dynamics)
 
 **low-salience-campaign** — *38% of population indifferent to AI, awareness campaign risks creating skeptics*
 Communications Director: 38% of treaty-nation populations are in the indifferent cluster — AI is not a topic they think about. They vote on other issues. Politicians know their AI-indifferent constituents won't punish them for cutting our budget. I have two proposals: a $200M personal-relevance campaign framing ASI risk through things people already care about — their children, their savings. Or we do nothing. The indifferent cluster has no reason to oppose us. But activating them might produce more skeptics than supporters.
@@ -729,7 +724,7 @@ Communications Director: A globally popular musician — 300M followers — made
 ← Embrace the endorsement: pol+8 saf-3
 → Distance — correct misconceptions: pol-5 saf+3
 
-## opposition-legal.ts
+## Opposition legal (opposition-legal)
 
 **protest-to-legislator** — *street protests escalate to legislation stripping surveillance authority*
 Political Advisor: Street protests against ISIA surveillance in Berlin, London, and Washington crossed a threshold. Three European parliamentary caucuses and a bipartisan US Senate group introduced coordinated legislation to strip our domestic surveillance authority. 40% poll approval. The surveillance powers being challenged are genuinely important for enforcement. The people challenging them have genuinely legitimate civil liberties concerns. Democracy is functioning correctly — and it might kill everyone.
@@ -753,7 +748,7 @@ Deputy Director: Three council members tabled a no-confidence motion. Publicly: 
 → Resign — name your deputy: pol-3 saf-5
 ↓ Leak their corporate ties: pol+5 int-8
 
-## accelerationist-opposition.ts
+## Accelerationist opposition (accelerationist-opposition)
 
 **emperor-billionaire** — *ideological billionaire building ASI on private island, daring ISIA to stop him*
 Enforcement Chief: Tech billionaire — $140B net worth, three citizenships, private island in international waters. Publicly says 'the species that builds ASI first inherits the universe.' Intel tracked him acquiring 4,000 chips through shell companies. His island compound has its own power plant. He's not hiding — he's daring us.
@@ -766,7 +761,7 @@ Communications Director: Whether we stopped him or not, the billionaire's 80-pag
 ← Public scientific rebuttal: pol-5 saf-3
 → Don't dignify it with a response: pol-8
 
-## government-political.ts
+## Government political (government-political)
 
 **government-overpromise** — *politician publicly overpromises alignment timeline, creating sunset pressure*
 Political Advisor: The German Chancellor announced to the Bundestag: 'Thanks to ISIA, we are within five years of solving alignment.' Your Chief Scientist is furious — her actual assessment is that core ASI problems are no closer to solution. The Chancellor's office telephone-gamed a sub-problem timeline into 'five years to solve everything.' Six nations are now lobbying for a sunset date on the pause. Two AI companies announced 'post-pause readiness programs.' The public has a countdown clock in their heads.
@@ -789,7 +784,7 @@ Investigative Journalist: My outlet is running 'Inside the Black Hole: How ISIA 
 → Absorb the hit — refuse to declassify: pol-10 saf-3
 ↓ Closed congressional briefing: pol-3 int-3
 
-## sub-asi-harms.ts
+## Sub-ASI harms (sub-asi-harms)
 
 **autonomous-vehicle-massacre** — *sub-threshold AI causes mass casualty, public blames ISIA regardless*
 Communications Director: Self-driving fleet malfunction in São Paulo — 23 dead in a coordinated failure. The AI was sub-threshold, fully legal under the treaty. Public reaction splits: half want stricter AI controls (good for the pause), half blame the pause for 'not preventing this.' Both sides are angry at ISIA.
@@ -812,7 +807,7 @@ Communications Director: A best-selling book by a former Stanford CS professor �
 ← Public scientific rebuttal campaign: pol-5 saf-3
 → Ignore — engaging legitimizes the argument: pol-8
 
-## algorithmic-threat.ts
+## Algorithmic threat (algorithmic-threat)
 
 **algorithmic-shortcut** — *university papers reduce training requirements 40%, lethal threshold drops*
 Chief Scientist: Three independent university groups published papers this quarter that collectively reduce frontier training requirements by 40%. All used small-scale experiments under the compute threshold — perfectly legal. The lethal compute threshold just dropped significantly. Our chip-tracking enforcement was designed for last year's numbers. The research community is celebrating openly — they see this as proof the compute cap doesn't slow real progress.
@@ -829,7 +824,7 @@ Chief Scientist: Emergency briefing. Algorithmic progress at roughly 8x the 2022
 ← Emergency compute restriction — universities too: pol-12 int-5 saf-3
 → Shift to algorithmic monitoring instead: pol-5 int-8 alg+5
 
-## win-condition.ts
+## Win condition (win-condition)
 
 **pivotal-moment** — *win condition: formal proof of corrigibility, approve deployment of safe ASI*
 Chief Scientist: After decades, researchers present a formal proof of corrigibility for ASI-capable architectures. We can build a corrigible, low-impact ASI to monitor all compute globally. The acute risk period can end. But deployment requires the largest training run ever — orders of magnitude above the threshold. If the proof is wrong, this is the last mistake anyone makes.

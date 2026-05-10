@@ -36,10 +36,10 @@
 // Dynamic: surveillance AI hiccups; can't investigate everything
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const institutionalInternalCards: Card[] = [
   {
     id: "internal-dissent",
     tags: ["institutional-integrity", "civil-liberties"],
@@ -106,12 +106,12 @@ register(
     left: {
       label: "Acknowledge the overreach",
       effects: { pol: -5, int: -8 },
-      hiddenEffects: { civil_liberties_pressure: -1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: -1 },
     },
     right: {
       label: "Prosecute the analyst",
       effects: { pol: -8, int: 3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -155,11 +155,11 @@ register(
     right: {
       label: "Triage — top 10 only",
       effects: { int: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 5) return 0;
       return 1.5;
     },
   },
-);
+];

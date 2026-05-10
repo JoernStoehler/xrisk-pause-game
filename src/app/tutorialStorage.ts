@@ -12,6 +12,6 @@ export function markTutorialCompleted(): void {
   try {
     localStorage.setItem(TUTORIAL_KEY, "1");
   } catch {
-    // localStorage unavailable — ignore
+    // localStorage unavailable; ignore.
   }
 }

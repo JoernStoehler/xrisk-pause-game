@@ -17,10 +17,10 @@
 // Dynamic: agency's own AI tools behave unexpectedly; fundamental contradiction
 // Category: crisis (turn-gated, int-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const enforcementAiParadoxCards: Card[] = [
   {
     id: "agency-trains-ai",
     tags: ["compute-monitoring", "dual-use-research"],
@@ -34,7 +34,7 @@ register(
     right: {
       label: "Use existing tools",
       effects: { int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -54,7 +54,7 @@ register(
     right: {
       label: "Retrain the guardrails",
       effects: { int: -3, saf: -3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     down: {
       label: "Audit the AI's reasoning",
@@ -93,4 +93,4 @@ register(
       return 2;
     },
   },
-);
+];

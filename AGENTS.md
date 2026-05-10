@@ -28,16 +28,21 @@ independently, but expert-grounded content is draft until Jörn approves it.
 |-- src/
 |   |-- App.tsx
 |   |-- main.tsx
+|   |-- app/
+|   |   |-- useGame.ts
+|   |   |-- storage.ts
+|   |   `-- tutorialStorage.ts
 |   |-- engine/
 |   |   |-- types.ts
 |   |   |-- state.ts
 |   |   |-- cards.ts
-|   |   |-- useGame.ts
+|   |   |-- session.ts
 |   |   `-- *.test.ts
 |   |-- data/
 |   |   |-- cards/
 |   |   |   |-- index.ts
-|   |   |   |-- registry.ts
+|   |   |   |-- groups.ts
+|   |   |   |-- hidden.ts
 |   |   |   `-- *.ts
 |   |   |-- deaths.ts
 |   |   `-- tutorial.ts
@@ -96,10 +101,13 @@ independently, but expert-grounded content is draft until Jörn approves it.
   broad edits or when current priority/maturity matters.
 - `package.json`: Vite, React, TypeScript, test, CLI, and card-export commands.
 - `vite.config.ts`, `playwright.config.ts`: app/test framework configuration.
-- `src/engine/`: pure TypeScript game state, RNG, card resolution, tutorial
-  logic, and tests.
-- `src/data/cards/`: card declarations. Current implementation uses
-  side-effect registration through `src/data/cards/index.ts`.
+- `src/app/`: React game hook, browser storage, and tutorial-completion
+  persistence.
+- `src/engine/`: pure TypeScript game state, session transitions, RNG, card
+  resolution, and tests.
+- `src/data/cards/`: card declarations. Card modules export explicit arrays;
+  `groups.ts` is the canonical grouped card map, and `hidden.ts` names hidden
+  state keys with stable storage strings.
 - `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio
   hooks, and Tailwind v4 theme CSS.
 - `design/`: domain model, card concepts, generated review exports, map

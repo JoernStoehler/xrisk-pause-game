@@ -18,10 +18,10 @@
 // Dynamic: the lethal threshold keeps shrinking; safety doesn't scale
 // Category: report (late-game, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const researchScalingCards: Card[] = [
   {
     id: "stepping-on-toes",
     tags: ["alignment-research"],
@@ -59,7 +59,7 @@ register(
     down: {
       label: "Reassign mentoring seniors instead",
       effects: { saf: 5, pol: -3 },
-      hiddenEffects: { mentoring_cut: 1 },
+      hiddenEffects: { [HIDDEN.mentoringCut]: 1 },
       enabled: (state: GameState) => !(state.resources.pol > 60),
     },
     poolWeight: (state: GameState) => {
@@ -76,7 +76,7 @@ register(
     left: {
       label: "Double mentoring allocation",
       effects: { saf: -5, pol: -3 },
-      hiddenEffects: { mentoring_cut: -1 },
+      hiddenEffects: { [HIDDEN.mentoringCut]: -1 },
     },
     right: {
       label: "Optimize current seniors' output",
@@ -92,4 +92,4 @@ register(
       return 2;
     },
   },
-);
+];

@@ -32,10 +32,10 @@
 // Dynamic: research suppression vs. innovation; the cure and the disease
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const innovationSuppressionCards: Card[] = [
   {
     id: "medical-ai-request",
     tags: ["economic-pressure", "treaty-compliance"],
@@ -45,7 +45,7 @@ register(
     left: {
       label: "Approve the exception",
       effects: { pol: 5, alg: 5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Deny — maintain the bright line",
@@ -65,7 +65,7 @@ register(
     left: {
       label: "Approve the exception",
       effects: { pol: 8, alg: 8, saf: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Deny — bright line exists for this",
@@ -144,4 +144,4 @@ register(
       return 2;
     },
   },
-);
+];

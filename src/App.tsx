@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useGame } from "./engine/useGame";
+import { useGame } from "./app/useGame";
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { TitleScreen } from "./components/TitleScreen";
 import { GameScreen } from "./components/GameScreen";

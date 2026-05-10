@@ -20,10 +20,10 @@
 // Dynamic: the lethal threshold keeps shrinking; enforcement designed for today fails
 // Category: late-game (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const algorithmicThreatCards: Card[] = [
   {
     id: "algorithmic-shortcut",
     tags: ["algorithmic-progress", "compute-monitoring"],
@@ -56,7 +56,7 @@ register(
     right: {
       label: "Stay silent — not our mandate",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -83,4 +83,4 @@ register(
       return 2.5;
     },
   },
-);
+];

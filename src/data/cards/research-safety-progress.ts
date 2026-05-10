@@ -26,10 +26,9 @@
 // Dynamic: the cure and the disease are the same substance
 // Category: incident (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const researchSafetyProgressCards: Card[] = [
   {
     id: "safety-stall",
     tags: ["alignment-research"],
@@ -112,4 +111,4 @@ register(
       return 2;
     },
   },
-);
+];

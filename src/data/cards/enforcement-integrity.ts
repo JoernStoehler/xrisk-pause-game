@@ -24,10 +24,10 @@
 // Dynamic: institutional integrity vs. mission urgency
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const enforcementIntegrityCards: Card[] = [
   {
     id: "disposal-bribery",
     tags: ["chip-supply-chain", "institutional-integrity"],
@@ -41,7 +41,7 @@ register(
     right: {
       label: "Quiet removal — restore protocols",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 5) return 0;
@@ -80,7 +80,7 @@ register(
     right: {
       label: "Targeted patch — fix known blind spots",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {
@@ -101,11 +101,11 @@ register(
     right: {
       label: "Internal discipline only",
       effects: { pol: -8, int: 3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 5) return 0;
       return 1.5;
     },
   },
-);
+];

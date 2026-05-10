@@ -23,10 +23,10 @@
 // Dynamic: success looks like "the threat was never real"
 // Category: political (turn-gated, appears when things are going well)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
-register(
+export const politicalSupportCards: Card[] = [
   {
     id: "election-year",
     tags: ["political-support", "treaty-compliance"],
@@ -40,7 +40,7 @@ register(
     right: {
       label: "Quiet information campaign",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     // Appears every ~8 turns after turn 6
     poolWeight: (state: GameState) => {
@@ -58,7 +58,7 @@ register(
     left: {
       label: "Campaign for the pause",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     right: {
       label: "Stay above politics",
@@ -103,7 +103,7 @@ register(
     right: {
       label: "Let the book run its course",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     // Only appears when things are going relatively well
     poolWeight: (state: GameState) => {
@@ -112,4 +112,4 @@ register(
       return 2;
     },
   },
-);
+];
