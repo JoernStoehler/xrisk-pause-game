@@ -59,6 +59,6 @@ describe("cli", () => {
   });
 });
 
-// REGRESSION BREADCRUMB: card data has enabled `down` choices, while CLI command
-// handling only supports left/right. Add an executable regression after deciding
-// whether down choices should be implemented or converted back to two-choice cards.
+// REGRESSION BREADCRUMB: cards may have static 2-or-3 choice structures, but CLI
+// command handling only supports left/right. Add down input before using CLI auto
+// runs for three-choice balance conclusions.

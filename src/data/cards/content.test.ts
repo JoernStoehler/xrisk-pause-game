@@ -91,6 +91,23 @@ describe("card content registry", () => {
     }
   });
 
+  it.fails("uses static choices rather than dynamic locked/unlocked options", () => {
+    for (const card of ALL_CARDS) {
+      const choices = [
+        ["left", card.left],
+        ["right", card.right],
+        ["down", card.down],
+      ].filter((entry): entry is [string, ChoiceSpec] => entry[1] !== undefined);
+
+      for (const [direction, choice] of choices) {
+        expect(
+          Object.hasOwn(choice, "enabled"),
+          `${card.id}.${direction} should be represented by a separate card variant, not an enabled callback`,
+        ).toBe(false);
+      }
+    }
+  });
+
   it("has at least one card eligible from a fresh game", () => {
     const state = {
       phase: "playing" as const,

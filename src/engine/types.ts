@@ -42,7 +42,10 @@ export interface ChoiceSpec {
   effects: Effects;
   /** Changes to hidden state variables. */
   hiddenEffects?: Record<string, number>;
-  /** When false (or returns false), UX refuses swipe. Default true. */
+  /**
+   * Transitional legacy hook. Authored cards should prefer static 2-or-3 choice
+   * structures and separate locked/unlocked card variants over dynamic options.
+   */
   enabled?: Dynamic<boolean>;
 }
 

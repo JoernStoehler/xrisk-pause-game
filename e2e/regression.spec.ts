@@ -60,9 +60,11 @@ test("long card text fits inside the card text area", async ({ page }) => {
 });
 
 test.skip("enabled down choices have a visible game affordance", async () => {
-  // Decision pending: implement down-choice UI/CLI or convert down cards to two choices.
+  // Product decision: cards may be static 2-or-3 choice structures. Future UI
+  // should expose down choices directly; locked/unlocked variants belong in
+  // separate cards, not dynamic option availability.
 });
 
 // REGRESSION BREADCRUMB: card data has enabled `down` choices, while the mobile
 // UI currently exposes only left/right. Replace the skipped test above with an
-// executable regression once the product direction is settled.
+// executable regression when the down-choice interaction is implemented.

@@ -24,6 +24,10 @@
   content edits; current skills are honest TODO placeholders.
 - [active] Extend card corpus validation when new content invariants become
   important for balance/content conclusions.
+- [active] Cards may be static 2-or-3 choice structures. Prefer binary choices
+  where they preserve the decision, but keep genuine three-way decisions instead
+  of squeezing them into two options. Locked/unlocked alternatives should be
+  separate cards, not dynamic option availability.
 - [blocked] Implement geopolitics cards only after Jörn approves the relevant
   concepts and mechanism framing.
 - [future] Portrait regeneration waits until card content stabilizes.
