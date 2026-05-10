@@ -8,10 +8,9 @@ definitions under tasks/. It is not a complete history of old task rows.
 
 ## Status
 
-- State: harness migration draft; canonical session-start state map.
+- State: canonical session-start map/cache.
 - Last updated: 2026-05-10.
 - Project phase: content overhaul and harness simplification.
-- Current harness branch: `harness/msc-math-port`.
 
 ## Source Surfaces
 
@@ -39,6 +38,7 @@ session-start state here and topic detail in `tasks/<group>.md`.
 | Content | source-grounded domain/content overhaul, card quality, balance process | `tasks/content.md` |
 | App | engine, UI, gameplay, playability, app validation | `tasks/app.md` |
 | Deploy | Cloudflare Pages deployment, release checks, post-deploy outcome tracking | `tasks/deploy.md` |
+| Playtesting | player feedback loops, learning objectives, and quality gates | `tasks/playtesting.md` |
 | Harness | agent setup, skills, task routing, Codex/devcontainer process | `tasks/harness.md` |
 
 ## Authority Boundaries
@@ -74,6 +74,7 @@ boundary is cleared.
 | Domain model | Mostly settled draft | Geopolitics additions still need Jörn validation. |
 | Card concepts | Mostly settled draft | Concepts need Jörn approval before final implementation. |
 | Achievements / collection | Not started | Deferred until after content overhaul. |
+| Playtesting / outcomes | Not started | Needs objective definitions and quality gates before broader public loops. |
 | Harness/environment | In migration | See `tasks/harness.md`. |
 
 ## Validation Map

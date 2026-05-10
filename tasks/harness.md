@@ -10,9 +10,9 @@
 
 ## Steering Cache
 
-- [active] Port the cleaner `msc-math` harness shape, not the thesis/math
+- [done] Port the cleaner `msc-math` harness shape, not the thesis/math
   content.
-- [active] Repo-local `.codex/config.toml` was a stub and should stay deleted;
+- [done] Repo-local `.codex/config.toml` was a stub and should stay deleted;
   user/runtime settings belong in `~/.codex/config.toml`.
 - [Jörn] Skill bodies require Jörn approval before they become final durable
   instruction material.
@@ -24,11 +24,11 @@
 ## Work Map
 
 - [done] Copy `msc-math` harness skeleton in an isolated worktree.
-- [active] Adapt `AGENTS.md`, `tasks/`, and copied generic skills to this repo.
-- [active] Delete irrelevant copied math/Rust/thesis/cluster skills.
-- [active] Keep `research-topic` and `write-cards` as explicit TODO
+- [done] Adapt `AGENTS.md`, `tasks/`, and copied generic skills to this repo.
+- [done] Delete irrelevant copied math/Rust/thesis/cluster skills.
+- [done] Keep `research-topic` and `write-cards` as explicit TODO
   placeholders for Jörn.
-- [active] Keep `project-quality` as a separate skill, but collect variants for
+- [done] Keep `project-quality` as a separate skill, but collect variants for
   Jörn instead of editing the skill body in this pass.
 - [done] Fix small review findings before merge: `AGENTS.md` session-start
   map instruction, deployment/tooling map entries, `toc.sh` fenced code

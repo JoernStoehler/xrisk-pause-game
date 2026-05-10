@@ -48,6 +48,8 @@ Primary files:
 - `tasks/deploy.md`: Cloudflare Pages deployment and post-deploy outcome
   tracking.
 - `tasks/harness.md`: harness/process migration.
+- `tasks/playtesting.md`: player feedback loops, learning objectives, and
+  quality gates.
 - `.agents/skills/harness-engineering/SKILL.md`: generic harness principles
   plus this repo's structure and skill-change policy.
 - `.agents/skills/project-quality/SKILL.md`: copied/adapted generic quality
@@ -74,6 +76,8 @@ Jörn feedback incorporated after the review:
 - `research-topic` and `write-cards` stay as bare TODO placeholders for now.
 - deployment has its own `tasks/deploy.md` because deploy is not project end;
   the project cares about months-later public-understanding outcomes.
+- playtesting has its own `tasks/playtesting.md` because known objectives and
+  quality gates need a durable home before broader public feedback loops.
 - `project-quality` remains a separate skill, but this artifact proposes
   variants instead of editing the skill body directly.
 - `scripts/codex-worktree.sh` is deleted because the copied helper is broken.
@@ -286,6 +290,7 @@ Decisions already made in the branch:
 - Keep `project-quality`, `git-worktrees-merge`, and `post-mortem`.
 - Keep `research-topic` and `write-cards` as bare TODO placeholders.
 - Add `tasks/deploy.md`.
+- Add `tasks/playtesting.md`.
 - Delete `scripts/codex-worktree.sh`.
 
 Open decisions:
@@ -309,6 +314,8 @@ Small patches that appear worth doing before merge:
 7. DONE: Clean `.codex/.gitignore` wording after deleting `.codex/config.toml`.
 8. DONE: Add `tasks/deploy.md`.
 9. DONE: Delete broken `scripts/codex-worktree.sh`.
+10. DONE: Add `tasks/playtesting.md` for feedback loops, learning objectives,
+    and quality gates.
 
 Patches I would defer:
 

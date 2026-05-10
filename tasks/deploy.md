@@ -22,8 +22,8 @@
 - [active] Keep deployment discoverable as its own surface because release
   mechanics, public feedback loops, and game-outcome tracking are distinct from
   app implementation.
-- [future] Define post-deploy outcome/feedback tracking once the public testing
-  loop is clearer.
+- [future] Coordinate with `tasks/playtesting.md` before treating a public
+  deploy as ready for broader feedback loops.
 - [future] Add deploy dry-run or preview guidance if deployment changes become
   frequent or risky.
 
