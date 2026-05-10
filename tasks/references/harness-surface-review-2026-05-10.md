@@ -78,8 +78,9 @@ Jörn feedback incorporated after the review:
   the project cares about months-later public-understanding outcomes.
 - playtesting has its own `tasks/playtesting.md` because known objectives and
   quality gates need a durable home before broader public feedback loops.
-- `project-quality` remains a separate skill, but this artifact proposes
-  variants instead of editing the skill body directly.
+- `project-quality` remains a separate skill. Jörn approved the B+C direction:
+  public-understanding frame plus operational checks, with feedback loops used
+  as observable symptoms/handles rather than the whole reasoning process.
 - `scripts/codex-worktree.sh` is deleted because the copied helper is broken.
 - `AGENTS.md` and skill bodies require Jörn approval before becoming final
   durable instruction material.
@@ -288,6 +289,8 @@ Decisions already made in the branch:
 - Add `scripts/toc.sh`.
 - Delete irrelevant copied `msc-math` skills.
 - Keep `project-quality`, `git-worktrees-merge`, and `post-mortem`.
+- Rewrite `project-quality` around public understanding, game/teaching feedback
+  loops, and surface-specific completeness checks.
 - Keep `research-topic` and `write-cards` as bare TODO placeholders.
 - Add `tasks/deploy.md`.
 - Add `tasks/playtesting.md`.
@@ -295,7 +298,6 @@ Decisions already made in the branch:
 
 Open decisions:
 
-- Which `project-quality` variant Jörn wants.
 - When Jörn wants to replace the `write-cards` and `research-topic` TODO
   placeholders with settled bodies.
 
@@ -325,78 +327,31 @@ Patches I would defer:
   review.
 - Refactoring app/card architecture in this harness branch.
 
-## Project Quality Skill Variants For Jörn
+## Project Quality Skill Decision
 
-Jörn chose to keep `project-quality` as a separate skill, but asked for
-proposals rather than direct edits. The key shift from `msc-math`: we care less
-about mathematical correctness and more about fast feedback loops for whether
-the game teaches the intended concepts, remains playable, and routes expert
-review efficiently.
+Jörn chose to keep `project-quality` as a separate skill. The selected direction
+combines Variant B as the frame and Variant C as operational checks.
 
-### Variant A: Feedback Loops First
+Key shift from `msc-math`: the quality model is not mathematical correctness.
+It is whether the repo helps agents produce a playable game that teaches the
+intended claims and creates fast feedback loops from players, Jörn, tests,
+generated artifacts, deployment, and future agents back into concrete
+improvements.
 
-Core idea: `project-quality` primarily teaches agents to improve feedback
-loops.
+Jörn caveat: named feedback loops are observables/symptoms/handles, not the
+whole reasoning process. Agents still need to reason about expected value,
+correctness, taste, timing, and future maintenance.
 
-Likely sections:
+The implemented skill has:
 
-- **Player Understanding Feedback**: prefer changes that make misconceptions,
-  confusion, and teaching failures observable.
-- **Expert Review Feedback**: make Jörn-review surfaces compact, grouped, and
-  source-grounded.
-- **Playability Feedback**: use CLI runs, E2E flows, screenshots, and generated
-  card maps to catch regressions before prose claims.
-- **Agent Feedback**: when an agent gets lost, add maps, checklists, generated
-  summaries, or tests at the point of confusion.
-
-Best if the next phase is lots of playtest/content iteration.
-
-Risk: may under-emphasize source integrity unless `research-topic` and
-`write-cards` are filled soon.
-
-### Variant B: Public-Understanding Quality Model
-
-Core idea: all quality language backchains from the public-understanding goal.
-
-Likely sections:
-
-- **Truthfulness**: separate real-world source claims, game extrapolation, and
-  approved expert judgment.
-- **Teachability**: prefer designs where the player can infer why a pause is a
-  hard crisis-management race.
-- **Playability**: fun and friction matter because they control whether people
-  experience enough months of play.
-- **Maintainability For Agents**: maps, grouped tasks, and generated artifacts
-  are only useful insofar as they accelerate better game iterations.
-
-Best if `project-quality` should be a high-level north-star skill.
-
-Risk: can become too abstract unless paired with concrete checklists elsewhere.
-
-### Variant C: Operational Quality Checklist
-
-Core idea: keep the skill very concrete and execution-oriented.
-
-Likely sections:
-
-- **When Editing Code**: add focused tests for changed contracts; run the
-  smallest relevant validation.
-- **When Editing Cards**: regenerate exports, inspect grouping/counts, check
-  hidden-state interactions and balance runs.
-- **When Editing Design/Research**: mark source fact vs inference vs game
-  extrapolation vs Jörn-approved claim.
-- **When Editing Harness**: update maps, remove stale routes, validate grep
-  checks.
-- **When Releasing**: distinguish deploy success from player-understanding
-  outcomes.
-
-Best if fresh agents need fewer abstractions and more reliable local behavior.
-
-Risk: overlaps more with task files and domain skills.
-
-My current preference: Variant B as the skill's framing plus a short checklist
-from Variant C. Variant A should influence `tasks/deploy.md` and future
-playtest/outcome tracking.
+- a public-understanding frame;
+- common feedback loop categories;
+- quality objectives for truthfulness, teachability, playability,
+  maintainability, and tracking;
+- completeness checks for code/engine, cards/content, design/research,
+  UI/playability, harness/tasks, deploy/playtesting;
+- a bias toward small durable improvements when verification or onboarding is
+  hard.
 
 ## Resolved Questions From Jörn
 

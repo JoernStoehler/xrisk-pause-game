@@ -1,62 +1,106 @@
 ---
 name: project-quality
-description: Use when Codex writes, edits, reviews, or delegates work where repo-wide quality objectives, navigation, clarity, verification, tracking, or onboarding maintainability matter.
+description: Use when Codex writes, edits, reviews, or delegates work where repo-wide quality objectives, feedback loops, navigation, verification, tracking, or onboarding maintainability matter.
 ---
 
 # Project Quality
 
-## Status
+## Frame
 
-Copied and adapted from `msc-math`. Jörn should review this before treating it
-as a settled durable instruction surface.
+Quality in this repo means the project gets better at producing a serious,
+playable game that teaches the intended claims about AI pause governance.
+Realism, fun, maintainability, tests, maps, and generated artifacts are
+instrumental to that goal.
 
-## Long-Term Quality Objectives
+The useful default question is:
 
-The project is worked on by many agents over a long time. Fresh agents should
-be able to find the relevant local truth, understand the current state, make a
-bounded change, and verify it without reconstructing chat history.
+> What observable feedback loop improves, and how does that help the game teach
+> the intended thing?
 
-- **Verifiability**: Distinguish source facts, agent inference, game
-  extrapolation, current implementation state, aspirations, and Jörn-approved
-  claims. Link important claims to source files or commands when the source is
-  not obvious.
-- **Reproducibility**: Generated card exports, maps, builds, simulations, and
-  review artifacts should be reproducible from tracked source truth.
-- **Navigability**: Use descriptive file names, predictable terminology, and
-  explicit links. Keep frequently co-needed knowledge colocated.
-- **Clarity**: Write plainly for future agents. Prefer concrete local
-  readability over clever abstractions. Duplication is acceptable when it makes
-  a file easier to understand in one pass.
+That question is a symptom/handle, not a substitute for judgment. Agents still
+need to reason about expected value, correctness, taste, timing, and future
+maintenance. But naming the feedback loop usually prevents vague "quality"
+claims and helps future agents check whether the change paid off.
+
+Common feedback loops:
+
+- **Player understanding**: confusion, remembered takeaways, false-belief
+  correction, and whether players understand pause as active crisis management.
+- **Playability**: friction, pacing, readability, mobile flow, card variety,
+  and whether players keep playing long enough to see the relevant tradeoffs.
+- **Jörn/expert review**: compact review packets, grouped decisions, source
+  traceability, and clear approval boundaries.
+- **Automated validation**: unit tests, E2E flows, CLI simulations, generated
+  card exports, screenshots, and deploy/build checks.
+- **Future-agent onboarding**: maps, task bundles, generated summaries,
+  explicit contracts, and removal of stale routes.
+
+## Quality Objectives
+
+- **Public understanding**: Backchain from the goal that more people understand
+  that a global AI pause treaty could work and can recognize blatant
+  misunderstandings or false claims about what such a treaty needs.
+- **Truthfulness**: Separate source fact, agent inference, game extrapolation,
+  current implementation state, aspiration, and Jörn-approved claim.
+- **Teachability**: Prefer designs where players can infer the intended
+  takeaway from play, not from out-of-game explanation.
+- **Playability**: Fun and friction matter because they determine whether
+  players experience enough months of play to encounter the core tradeoffs.
+- **Agent maintainability**: Prefer explicit maps, local readability,
+  checkable claims, boring structure, and useful duplication over abstractions
+  that require fresh agents to reconstruct context.
 - **Tracking**: Keep current task state in `tasks/`, not in chat. Delete stale
   tracker detail once git history is enough.
 
-## Conventions
+## Completeness Checks
 
-All conventions serve the public-understanding goal of the game, long-term
-agent maintainability, and short-term task success.
+Use the relevant checks for the surface being changed. These are prompts for
+thinking, not a mandatory checklist for every task.
 
-**Navigation and Exploration**
-- use long descriptive names for files and folders
-- use predictable code symbols and keywords; grep to quickly find definitions
-  and uses
-- cross-reference other files, avoid unstable line numbers
+**Code and Engine**
+- Did the changed behavior get focused tests, not just a broad `npm run check`?
+- Are hidden state, disabled/down choices, draw eligibility, anti-repeat,
+  death/victory, RNG, or save compatibility affected?
+- Is the implementation concrete and locally readable enough for a fresh agent?
 
-**Clarity**
-- write plainly, don't use metaphors or analogies
-- focus on information transfer to future agents
-- use standard terminology
-- use audience-appropriate terms in player-facing text
-- be specific, neither over- nor under-inclusive
-- break down sentences that entangle multiple concerns
-- avoid vague terms
-- don't abstract prematurely
+**Cards and Content**
+- Are source facts, game extrapolations, and Jörn-approved claims separated?
+- Did `npm run cards` run after TypeScript card edits?
+- Did the generated diffs make card count, grouping, hidden-state edges, and
+  repeated concepts easier to review?
+- Does the change improve player understanding rather than only adding detail?
 
-**Verification and Tracking**
-- link claims to their source of truth, except where obvious
-- record enough arguments and intermediate steps for future agents to check
-  whether a reasoning result still follows
-- explicitly track epistemic status when content claims depend on contested or
-  current-world evidence
-- track task states, Jörn decisions, and results of expensive checks so future
-  agents can avoid redoing unchanged work
-- move unnecessary claims into the git history i.e. delete them, since they are expensive to verify
+**Design and Research**
+- Is the source of truth clear: design doc, literature note, generated export,
+  task bundle, or code?
+- Are uncertainty and approval status explicit where they matter?
+- Is the result easy for Jörn to review without reconstructing the full chat?
+
+**UI and Playability**
+- Does the change preserve mobile-first usability?
+- If visual/flow behavior changed, was it checked with E2E, screenshots, or a
+  local run as appropriate?
+- Does the interaction help players understand decisions and tradeoffs faster?
+
+**Harness and Tasks**
+- Did maps/task bundles change when routes, priorities, or validation changed?
+- Were stale instruction paths removed instead of preserved in parallel?
+- If a skill or `AGENTS.md` changed, is it clearly Jörn-approved before final
+  merge?
+
+**Deploy and Playtesting**
+- Is deploy success distinguished from project success?
+- Does the change improve or preserve later public feedback loops?
+- Are playtest findings routed back to content, app, deploy, or harness tasks?
+
+## When To Improve The Repo
+
+If a quality gap slowed the task or made verification hard, prefer a small
+durable improvement over a chat explanation. Examples:
+
+- add or update a task-map row;
+- add a focused test;
+- enrich a generated review artifact;
+- record a Jörn decision in the relevant task bundle;
+- remove a stale route;
+- make a repeated review question explicit.
