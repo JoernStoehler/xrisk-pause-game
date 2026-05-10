@@ -42,13 +42,13 @@
   `src/data/cards/groups.ts`.
 - After `npm run cards`, inspect generated diffs for card count, grouping,
   hidden-state/history/tag graph edges, and review-text quality.
-- Current `design/cards-export.md` omits useful review metadata such as tags,
-  hidden effects, pool weights, gating, source comments, and source line
-  references.
+- Current `design/cards-export.md` includes source files, tags, hidden effects,
+  and dynamic-enabled markers, but still omits pool weights, source comments,
+  and source line references.
 - Use `npm run cli auto 20` or a larger batch for balance-sensitive content
   changes.
-- Current CLI autoplay samples only left/right choices, so down-choice content
-  is under-tested by balance runs.
+- Current CLI autoplay samples available left/right/down choices, so it is a
+  smoke path rather than a controlled balance proof.
 - If one resource death dominates more than about 40 percent of deaths, inspect
   all sources and sinks for that resource before tuning isolated deltas.
 

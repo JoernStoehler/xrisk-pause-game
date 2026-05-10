@@ -3,14 +3,29 @@
  * Captures all key game states: title, game, swipe-right, swipe-left.
  *
  * Usage: npx tsx e2e/screenshot.ts
- * Requires: dev server running on http://localhost:5173
+ * Requires: dev server running on PLAYWRIGHT_BASE_URL or http://127.0.0.1:5173
  */
 
 import fs from "node:fs";
 import { chromium } from "@playwright/test";
 
-const BASE_URL = "http://localhost:5173";
+const BASE_URL =
+  process.env.PLAYWRIGHT_BASE_URL ??
+  `http://127.0.0.1:${process.env.PLAYWRIGHT_PORT ?? 5173}`;
 const VIEWPORT = { width: 390, height: 844 };
+const SAVED_STATE = {
+  v: 4,
+  state: {
+    phase: "playing",
+    resources: { pol: 50, int: 50, saf: 50, alg: 50 },
+    hidden: {},
+    turn: 12,
+    activeCard: { templateId: "data-center-attack" },
+    rngState: 1,
+    death: null,
+    history: [],
+  },
+};
 
 function makeTimestampDir(): string {
   const now = new Date();
@@ -57,9 +72,14 @@ async function main() {
     await page.screenshot({ path: `${dir}/01-title.png` });
     console.log(`✓ ${dir}/01-title.png — Title screen`);
 
-    // 2. Game screen (click Take Office, wait for card animation)
-    await page.click("text=Take Office");
-    await page.waitForTimeout(800);
+    // 2. Deterministic game screen
+    await page.evaluate((state) => {
+      localStorage.clear();
+      localStorage.setItem("global-pause-tutorial-done", "1");
+      localStorage.setItem("global-pause-state", JSON.stringify(state));
+    }, SAVED_STATE);
+    await page.reload();
+    await page.locator("[data-testid=swipe-card]").waitFor();
     await page.screenshot({ path: `${dir}/02-game.png` });
     console.log(`✓ ${dir}/02-game.png — Game screen (neutral, no swipe)`);
 

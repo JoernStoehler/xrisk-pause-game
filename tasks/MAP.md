@@ -97,7 +97,7 @@ Validation meanings:
 - `npm run check`: typecheck, lint, build, and current Vitest unit tests.
 - `npm run test:e2e`: Playwright mobile-flow coverage, not broad visual
   coverage.
-- `npm run cli auto 20`: quick left/right autoplay smoke check, not a full
-  balance proof.
+- `npm run cli auto 20`: quick autoplay smoke check over available choices, not
+  a full balance proof.
 - `npm run cards`: generated card review artifacts; inspect diffs after card
   changes.
