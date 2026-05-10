@@ -297,4 +297,4 @@ These IABIED citations are already covered:
 **Next Steps:**
 - Manual download of PDFs via wget/curl
 - Use of pandoc for PDF-to-markdown conversion
-- Manual extraction and formatting per literature/CLAUDE.md spec
+- Manual extraction and formatting per current literature instructions

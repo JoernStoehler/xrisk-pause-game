@@ -876,7 +876,7 @@ Honest limitations:
 Cards, death messages, character details — grounded in the dynamics from Step 1 and game elements from Step 2.
 
 **Existing resources:**
-- Card-writing guide: `.claude/skills/write-cards/SKILL.md`
+- Card-writing guide: `.agents/skills/write-cards/SKILL.md`
 - Literature findings: `design/literature-findings.md`
 - Domain model: `design/domain-model.md`
 
