@@ -124,7 +124,7 @@ describe("card content registry", () => {
     expect(eligible.length).toBeGreaterThan(0);
   });
 
-  it.fails("history follow-ups use the latest matching trigger, not the oldest expired trigger", () => {
+  it("history follow-ups use the latest matching trigger, not the oldest expired trigger", () => {
     const followUp = dataCenterChainCards.find(
       (card) => card.id === "algorithmic-progress-leak",
     );
@@ -147,7 +147,7 @@ describe("card content registry", () => {
     expect(followUp!.poolWeight(state)).toBeGreaterThan(0);
   });
 
-  it.fails("placeholder whistleblower follow-ups do not repeat after they fire once", () => {
+  it("placeholder whistleblower follow-ups do not repeat after they fire once", () => {
     const followUp = chainsCards.find((card) => card.id === "whistleblower-fallout");
     expect(followUp).toBeDefined();
 

@@ -12,7 +12,9 @@ export const chainsCards: Card[] = [
     left: { label: "Fight in court", effects: { pol: -8, int: 5 } },
     right: { label: "Settle quietly", effects: { pol: -5, int: -3 } },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "whistleblower-fallout")) return 0;
+      // Search newest-first so an old expired tip does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "whistleblower" && h.choice === "left",
       );
       if (!trigger || state.turn - trigger.turn > 10) return 0;
@@ -28,7 +30,9 @@ export const chainsCards: Card[] = [
     left: { label: "Deny everything", effects: { pol: -8, int: 3 } },
     right: { label: "Full transparency", effects: { pol: -3, int: -5 } },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "coverup-leak")) return 0;
+      // Search newest-first so an old expired tip does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "whistleblower" && h.choice === "right",
       );
       if (!trigger || state.turn - trigger.turn > 10) return 0;

@@ -126,7 +126,7 @@ describe("chooseInSession", () => {
     expect(next.death?.message).toBe("pol:depleted:1");
   });
 
-  it.fails("does not advance or redraw when the chosen option is disabled", () => {
+  it("does not advance or redraw when the chosen option is disabled", () => {
     const state = drawFixture(newGame(42), [card()]);
 
     const next = chooseInSession(state, "down", {
