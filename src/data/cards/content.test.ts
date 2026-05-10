@@ -2,6 +2,8 @@ import { describe, expect, it } from "vitest";
 import { CARD_GROUPS, ALL_CARDS } from ".";
 import type { ChoiceSpec } from "../../engine/types";
 import { RESOURCE_KEYS } from "../../engine/types";
+import { chainsCards } from "./chains";
+import { dataCenterChainCards } from "./data-center-chain";
 import { HIDDEN } from "./hidden";
 
 const resourceKeys = new Set<string>(RESOURCE_KEYS);
@@ -103,5 +105,49 @@ describe("card content registry", () => {
 
     const eligible = ALL_CARDS.filter((card) => card.poolWeight(state) > 0);
     expect(eligible.length).toBeGreaterThan(0);
+  });
+
+  it.fails("history follow-ups use the latest matching trigger, not the oldest expired trigger", () => {
+    const followUp = dataCenterChainCards.find(
+      (card) => card.id === "algorithmic-progress-leak",
+    );
+    expect(followUp).toBeDefined();
+
+    const state = {
+      phase: "playing" as const,
+      resources: { pol: 50, int: 50, saf: 50, alg: 50 },
+      hidden: {},
+      turn: 21,
+      activeCard: null,
+      rngState: 1,
+      death: null,
+      history: [
+        { turn: 0, cardId: "data-center-attack", choice: "left" as const },
+        { turn: 18, cardId: "data-center-attack", choice: "right" as const },
+      ],
+    };
+
+    expect(followUp!.poolWeight(state)).toBeGreaterThan(0);
+  });
+
+  it.fails("placeholder whistleblower follow-ups do not repeat after they fire once", () => {
+    const followUp = chainsCards.find((card) => card.id === "whistleblower-fallout");
+    expect(followUp).toBeDefined();
+
+    const state = {
+      phase: "playing" as const,
+      resources: { pol: 50, int: 50, saf: 50, alg: 50 },
+      hidden: {},
+      turn: 6,
+      activeCard: null,
+      rngState: 1,
+      death: null,
+      history: [
+        { turn: 0, cardId: "whistleblower", choice: "left" as const },
+        { turn: 3, cardId: "whistleblower-fallout", choice: "right" as const },
+      ],
+    };
+
+    expect(followUp!.poolWeight(state)).toBe(0);
   });
 });

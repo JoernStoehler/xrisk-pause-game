@@ -125,6 +125,22 @@ describe("chooseInSession", () => {
     expect(next.phase).toBe("dead");
     expect(next.death?.message).toBe("pol:depleted:1");
   });
+
+  it.fails("does not advance or redraw when the chosen option is disabled", () => {
+    const state = drawFixture(newGame(42), [card()]);
+
+    const next = chooseInSession(state, "down", {
+      cards: [card()],
+      deathMessage: (cause, turn) => `${cause.resource}:${cause.extreme}:${turn}`,
+    });
+
+    expect(next).toBe(state);
+  });
+
+  // REGRESSION BREADCRUMB: `GamePhase` includes "victory" and
+  // `pivotal-moment` is labeled as the win condition, but no settled behavior
+  // says whether to implement victory or cut/defer it. Add an executable test
+  // after that decision is made.
 });
 
 describe("rehydrateActiveCard", () => {
