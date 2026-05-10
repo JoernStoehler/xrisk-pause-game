@@ -37,6 +37,7 @@
 // Category: incident (turn-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const institutionalInternalCards: Card[] = [
   {
@@ -105,12 +106,12 @@ export const institutionalInternalCards: Card[] = [
     left: {
       label: "Acknowledge the overreach",
       effects: { pol: -5, int: -8 },
-      hiddenEffects: { civil_liberties_pressure: -1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: -1 },
     },
     right: {
       label: "Prosecute the analyst",
       effects: { pol: -8, int: 3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -154,7 +155,7 @@ export const institutionalInternalCards: Card[] = [
     right: {
       label: "Triage — top 10 only",
       effects: { int: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 5) return 0;

@@ -18,6 +18,7 @@
 // Category: crisis (turn-gated, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const enforcementDetectionCards: Card[] = [
   // --- thermal-anomaly (normal variant) ---
@@ -30,7 +31,7 @@ export const enforcementDetectionCards: Card[] = [
     left: {
       label: "Deploy inspectors",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Flag for monitoring",
@@ -48,12 +49,12 @@ export const enforcementDetectionCards: Card[] = [
     left: {
       label: "Expensive investigation",
       effects: { int: -8, pol: -5 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Ignore the rumors",
       effects: { int: -5, pol: -2 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => state.resources.int < 45 ? 1.5 : 0,
   },
@@ -67,7 +68,7 @@ export const enforcementDetectionCards: Card[] = [
     left: {
       label: "Challenge inspection",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 2 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 2 },
     },
     right: {
       label: "Continue passive monitoring",
@@ -90,7 +91,7 @@ export const enforcementDetectionCards: Card[] = [
     left: {
       label: "Raid the customer's VMs",
       effects: { int: 3, pol: -8 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Work with provider quietly",

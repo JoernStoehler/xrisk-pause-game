@@ -8,6 +8,7 @@
 // Category: crisis chain (late-game, int-gated → history-triggered consequence)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const militaryEscalationCards: Card[] = [
   // --- airstrike-debate ---
@@ -28,7 +29,7 @@ export const militaryEscalationCards: Card[] = [
     down: {
       label: "Cyber operation",
       effects: { int: -8, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 2 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 2 },
       enabled: (state: GameState) => state.resources.int >= 50,
     },
     color: "#ef4444",
@@ -53,7 +54,7 @@ export const militaryEscalationCards: Card[] = [
     right: {
       label: "Express regret, propose review of procedures",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { enforcement_visibility: -1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: -1 },
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {

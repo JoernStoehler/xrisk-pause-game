@@ -40,6 +40,7 @@
 // Category: crisis (turn-gated, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const institutionalLeadershipCards: Card[] = [
   {
@@ -74,7 +75,7 @@ export const institutionalLeadershipCards: Card[] = [
     right: {
       label: "Formalize the split — give enforcement autonomy",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;

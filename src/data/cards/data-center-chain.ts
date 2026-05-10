@@ -12,6 +12,7 @@
 // Category: history-triggered (consequence of data-center-attack)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const dataCenterChainCards: Card[] = [
   {
@@ -27,7 +28,7 @@ export const dataCenterChainCards: Card[] = [
     right: {
       label: "Accept report, patch the monitoring gap",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     down: {
       label: "Cross-reference satellite data from that window",

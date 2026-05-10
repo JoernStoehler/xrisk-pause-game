@@ -21,6 +21,7 @@
 // Category: late-game (turn-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const algorithmicThreatCards: Card[] = [
   {
@@ -55,7 +56,7 @@ export const algorithmicThreatCards: Card[] = [
     right: {
       label: "Stay silent — not our mandate",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;

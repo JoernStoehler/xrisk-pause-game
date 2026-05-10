@@ -30,6 +30,7 @@
 // Category: incident (turn-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const researchDualUseCards: Card[] = [
   {
@@ -60,7 +61,7 @@ export const researchDualUseCards: Card[] = [
     left: {
       label: "Suppress the capability findings",
       effects: { saf: 5, pol: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     right: {
       label: "Publish and classify honestly",

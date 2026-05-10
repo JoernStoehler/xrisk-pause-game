@@ -33,6 +33,7 @@
 // Category: crisis (turn-gated, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const intelligenceNetworksCards: Card[] = [
   {
@@ -63,12 +64,12 @@ export const intelligenceNetworksCards: Card[] = [
     left: {
       label: "Investigate in person",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "File and wait for convergence",
       effects: { int: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 3) return 0;
@@ -84,7 +85,7 @@ export const intelligenceNetworksCards: Card[] = [
     left: {
       label: "Targeted interdiction",
       effects: { int: -5, pol: -5 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     right: {
       label: "Diplomatic containment",
@@ -108,7 +109,7 @@ export const intelligenceNetworksCards: Card[] = [
     right: {
       label: "Target the network nodes",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 1 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;

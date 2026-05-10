@@ -33,6 +33,7 @@
 // Category: crisis (turn-gated, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const innovationSuppressionCards: Card[] = [
   {
@@ -44,7 +45,7 @@ export const innovationSuppressionCards: Card[] = [
     left: {
       label: "Approve the exception",
       effects: { pol: 5, alg: 5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Deny — maintain the bright line",
@@ -64,7 +65,7 @@ export const innovationSuppressionCards: Card[] = [
     left: {
       label: "Approve the exception",
       effects: { pol: 8, alg: 8, saf: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Deny — bright line exists for this",

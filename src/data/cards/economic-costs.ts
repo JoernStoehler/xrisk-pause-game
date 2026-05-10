@@ -46,6 +46,7 @@
 // Category: political (turn-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const economicCostsCards: Card[] = [
   {
@@ -61,7 +62,7 @@ export const economicCostsCards: Card[] = [
     right: {
       label: "Commission review of threshold adequacy",
       effects: { pol: -3, saf: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -96,12 +97,12 @@ export const economicCostsCards: Card[] = [
     left: {
       label: "Propose sector-specific thresholds",
       effects: { pol: -5, alg: 5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     right: {
       label: "Stay out of economic policy",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -121,7 +122,7 @@ export const economicCostsCards: Card[] = [
     right: {
       label: "Accept the cost — focus on messaging",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;
@@ -160,7 +161,7 @@ export const economicCostsCards: Card[] = [
     right: {
       label: "Stay out of labor politics",
       effects: { pol: -6, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;

@@ -24,6 +24,7 @@
 // Category: crisis (pol-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const oppositionLegalCards: Card[] = [
   {
@@ -35,7 +36,7 @@ export const oppositionLegalCards: Card[] = [
     left: {
       label: "Lobby against the bills",
       effects: { pol: -8, int: 3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     right: {
       label: "Propose independent oversight board",
@@ -48,7 +49,7 @@ export const oppositionLegalCards: Card[] = [
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
-      if ((state.hidden.civil_liberties_pressure ?? 0) < 1) return 0;
+      if ((state.hidden[HIDDEN.civilLibertiesPressure] ?? 0) < 1) return 0;
       return 2;
     },
   },
@@ -61,7 +62,7 @@ export const oppositionLegalCards: Card[] = [
     left: {
       label: "Exploit the momentum",
       effects: { pol: 8, int: 5 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     right: {
       label: "Correct the narrative",
@@ -81,7 +82,7 @@ export const oppositionLegalCards: Card[] = [
     left: {
       label: "Fight the case",
       effects: { pol: -8, int: -3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     right: {
       label: "Narrow the program preemptively",

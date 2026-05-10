@@ -19,6 +19,7 @@
 // Category: crisis (late-game, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const internationalAdversarialCards: Card[] = [
   {
@@ -72,7 +73,7 @@ export const internationalAdversarialCards: Card[] = [
     right: {
       label: "Suspend inspections, rely on satellites",
       effects: { pol: -3, int: -8 },
-      hiddenEffects: { missed_threats: 1, treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1, [HIDDEN.treatyErosion]: 1 },
     },
     down: {
       label: "Broker ceasefire for inspection access",

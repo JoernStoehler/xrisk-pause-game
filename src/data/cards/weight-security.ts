@@ -21,6 +21,7 @@
 // Category: history-triggered (consequence of weight-theft-state)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const weightSecurityCards: Card[] = [
   {
@@ -36,7 +37,7 @@ export const weightSecurityCards: Card[] = [
     right: {
       label: "Back-channel diplomacy",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     down: {
       label: "Present classified evidence",
@@ -62,7 +63,7 @@ export const weightSecurityCards: Card[] = [
     right: {
       label: "Back-channel diplomacy — negotiate monitoring",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     down: {
       label: "Present classified evidence at emergency session",
@@ -88,7 +89,7 @@ export const weightSecurityCards: Card[] = [
     right: {
       label: "Accept the gap — focus on what we control",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       const trigger = state.history.find(

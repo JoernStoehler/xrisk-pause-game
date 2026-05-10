@@ -12,6 +12,7 @@
 // Category: crisis (follows safety-looks-solved)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const safetyEraChainCards: Card[] = [
   {
@@ -23,7 +24,7 @@ export const safetyEraChainCards: Card[] = [
     left: {
       label: "Embrace the narrative",
       effects: { pol: 12, saf: -5 },
-      hiddenEffects: { narrative_damage: 2 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 2 },
     },
     right: {
       label: "Correct the record",
@@ -50,7 +51,7 @@ export const safetyEraChainCards: Card[] = [
     right: {
       label: "Negotiate new terms",
       effects: { pol: -5, alg: 10 },
-      hiddenEffects: { treaty_erosion: 2 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 2 },
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {

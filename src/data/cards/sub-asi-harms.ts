@@ -26,6 +26,7 @@
 // Category: political (turn-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const subAsiHarmsCards: Card[] = [
   {
@@ -60,12 +61,12 @@ export const subAsiHarmsCards: Card[] = [
     right: {
       label: "Ignore — responding amplifies",
       effects: { pol: -8, int: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     down: {
       label: "Trace the source",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { narrative_damage: -1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: -1 },
       enabled: (state: GameState) => !(state.resources.int < 60),
     },
     poolWeight: (state: GameState) => {
@@ -86,7 +87,7 @@ export const subAsiHarmsCards: Card[] = [
     right: {
       label: "Not our jurisdiction",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 6) return 0;
@@ -106,7 +107,7 @@ export const subAsiHarmsCards: Card[] = [
     right: {
       label: "Ignore — engaging legitimizes the argument",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;

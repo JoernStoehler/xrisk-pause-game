@@ -33,6 +33,7 @@
 // Category: incident (turn-gated, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const enforcementMonitoringCards: Card[] = [
   {
@@ -48,7 +49,7 @@ export const enforcementMonitoringCards: Card[] = [
     right: {
       label: "Tighten future protocols — ISIA-witnessed destruction",
       effects: { int: -3, pol: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     down: {
       label: "Check black market prices for supply spike",
@@ -69,12 +70,12 @@ export const enforcementMonitoringCards: Card[] = [
     left: {
       label: "Approve — cover all GPUs",
       effects: { int: 8, pol: -12 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     right: {
       label: "Reject — maintain political support",
       effects: { pol: -3, int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 5) return 0;
@@ -144,7 +145,7 @@ export const enforcementMonitoringCards: Card[] = [
     right: {
       label: "Maintain training-focused monitoring",
       effects: { int: -5, pol: -3 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     down: {
       label: "Mandate firmware reporting on Samsung chips",

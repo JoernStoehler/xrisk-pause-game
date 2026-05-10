@@ -11,6 +11,7 @@
 // Category: consequence (follows rogue-lab-whistleblower left choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const rogueLabChainCards: Card[] = [
   {
@@ -22,7 +23,7 @@ export const rogueLabChainCards: Card[] = [
     left: {
       label: "Immediate raid",
       effects: { int: -8, pol: -3 },
-      hiddenEffects: { enforcement_visibility: 10 },
+      hiddenEffects: { [HIDDEN.enforcementVisibility]: 10 },
     },
     right: {
       label: "Gather more intelligence first",
@@ -39,7 +40,7 @@ export const rogueLabChainCards: Card[] = [
     left: {
       label: "Classify — protect sources",
       effects: { int: 5, pol: -5 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     right: {
       label: "Declassify sanitized version",

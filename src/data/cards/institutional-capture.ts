@@ -19,6 +19,7 @@
 // Category: crisis (turn-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const institutionalCaptureCards: Card[] = [
   {
@@ -53,7 +54,7 @@ export const institutionalCaptureCards: Card[] = [
     right: {
       label: "Approve with enhanced monitoring conditions",
       effects: { pol: -3, int: 5 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -73,7 +74,7 @@ export const institutionalCaptureCards: Card[] = [
     right: {
       label: "Negotiate — transfer research to ISIA oversight",
       effects: { pol: -5, saf: 5, int: -3 },
-      hiddenEffects: { treaty_erosion: 1 },
+      hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 7) return 0;

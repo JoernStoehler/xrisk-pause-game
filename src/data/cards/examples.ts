@@ -8,6 +8,7 @@
  */
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 // ─── ROUTINE CARD ───────────────────────────────────────────────────
 // Always in the pool. Constant poolWeight. Touch 2-3 resources per choice.
@@ -105,7 +106,7 @@ const _threeChoice: Card = {
     label: "Counter-propose",
     effects: { saf: 5, pol: -1 },
     // Gate on hidden state — only available if we have diplomatic infrastructure
-    enabled: (state: GameState) => (state.hidden.diplomatic_infrastructure ?? 0) >= 1,
+    enabled: (state: GameState) => (state.hidden[HIDDEN.diplomaticInfrastructure] ?? 0) >= 1,
   },
   poolWeight: () => 1.5,
 };

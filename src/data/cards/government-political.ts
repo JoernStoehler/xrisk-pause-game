@@ -26,6 +26,7 @@
 // Category: crisis (turn-gated, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const governmentPoliticalCards: Card[] = [
   {
@@ -41,7 +42,7 @@ export const governmentPoliticalCards: Card[] = [
     right: {
       label: "Quiet diplomacy — walk it back gradually",
       effects: { pol: -3, saf: -5 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -57,7 +58,7 @@ export const governmentPoliticalCards: Card[] = [
     left: {
       label: "Accept the deal",
       effects: { saf: 8, pol: -5, alg: 3 },
-      hiddenEffects: { military_dependency: 1 },
+      hiddenEffects: { [HIDDEN.militaryDependency]: 1 },
     },
     right: {
       label: "Decline — too many strings",
@@ -100,7 +101,7 @@ export const governmentPoliticalCards: Card[] = [
     right: {
       label: "Absorb the hit — refuse to declassify",
       effects: { pol: -10, saf: -3 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     down: {
       label: "Closed congressional briefing",

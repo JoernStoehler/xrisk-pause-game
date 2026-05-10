@@ -24,6 +24,7 @@
 // Category: political (turn-gated, appears when things are going well)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const politicalSupportCards: Card[] = [
   {
@@ -39,7 +40,7 @@ export const politicalSupportCards: Card[] = [
     right: {
       label: "Quiet information campaign",
       effects: { pol: -3, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     // Appears every ~8 turns after turn 6
     poolWeight: (state: GameState) => {
@@ -57,7 +58,7 @@ export const politicalSupportCards: Card[] = [
     left: {
       label: "Campaign for the pause",
       effects: { pol: -5, int: -3 },
-      hiddenEffects: { politicization: 1 },
+      hiddenEffects: { [HIDDEN.politicization]: 1 },
     },
     right: {
       label: "Stay above politics",
@@ -102,7 +103,7 @@ export const politicalSupportCards: Card[] = [
     right: {
       label: "Let the book run its course",
       effects: { pol: -8 },
-      hiddenEffects: { narrative_damage: 1 },
+      hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     // Only appears when things are going relatively well
     poolWeight: (state: GameState) => {

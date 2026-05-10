@@ -18,6 +18,7 @@
 // Category: crisis (turn-gated, int-gated)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const enforcementAiParadoxCards: Card[] = [
   {
@@ -33,7 +34,7 @@ export const enforcementAiParadoxCards: Card[] = [
     right: {
       label: "Use existing tools",
       effects: { int: -5 },
-      hiddenEffects: { missed_threats: 1 },
+      hiddenEffects: { [HIDDEN.missedThreats]: 1 },
     },
     poolWeight: (state: GameState) => {
       if (state.turn < 8) return 0;
@@ -53,7 +54,7 @@ export const enforcementAiParadoxCards: Card[] = [
     right: {
       label: "Retrain the guardrails",
       effects: { int: -3, saf: -3 },
-      hiddenEffects: { civil_liberties_pressure: 1 },
+      hiddenEffects: { [HIDDEN.civilLibertiesPressure]: 1 },
     },
     down: {
       label: "Audit the AI's reasoning",

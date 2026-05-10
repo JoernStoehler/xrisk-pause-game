@@ -19,6 +19,7 @@
 // Category: report (late-game, 3-choice)
 
 import type { Card, GameState } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 export const researchScalingCards: Card[] = [
   {
@@ -58,7 +59,7 @@ export const researchScalingCards: Card[] = [
     down: {
       label: "Reassign mentoring seniors instead",
       effects: { saf: 5, pol: -3 },
-      hiddenEffects: { mentoring_cut: 1 },
+      hiddenEffects: { [HIDDEN.mentoringCut]: 1 },
       enabled: (state: GameState) => !(state.resources.pol > 60),
     },
     poolWeight: (state: GameState) => {
@@ -75,7 +76,7 @@ export const researchScalingCards: Card[] = [
     left: {
       label: "Double mentoring allocation",
       effects: { saf: -5, pol: -3 },
-      hiddenEffects: { mentoring_cut: -1 },
+      hiddenEffects: { [HIDDEN.mentoringCut]: -1 },
     },
     right: {
       label: "Optimize current seniors' output",
