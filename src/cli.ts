@@ -15,7 +15,13 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { ALL_CARDS } from "./data/cards";
 import { getDeathMessage } from "./data/deaths";
 import { random } from "./engine/rng";
-import { chooseInSession, startSession, type SessionContent } from "./engine/session";
+import {
+  chooseInSession,
+  rehydrateActiveCard,
+  startSession,
+  type SessionContent,
+} from "./engine/session";
+import type { GameState } from "./engine/types";
 
 const STATE_FILE = "/tmp/pause-cli-state.json";
 const SESSION_CONTENT: SessionContent = {
@@ -25,7 +31,8 @@ const SESSION_CONTENT: SessionContent = {
 
 function load(): GameState | null {
   try {
-    return JSON.parse(readFileSync(STATE_FILE, "utf-8")) as GameState;
+    const state = JSON.parse(readFileSync(STATE_FILE, "utf-8")) as GameState;
+    return rehydrateActiveCard(state, ALL_CARDS);
   } catch {
     return null;
   }

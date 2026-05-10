@@ -44,10 +44,11 @@ export function rehydrateActiveCard(
   state: GameState,
   cards: readonly Card[],
 ): GameState {
-  if (!state.activeCard) return state;
+  if (state.phase !== "playing") return state;
+  if (!state.activeCard) return drawNextCard(state, cards);
 
   const card = cards.find((candidate) => candidate.id === state.activeCard!.templateId);
-  if (!card) return { ...state, activeCard: null };
+  if (!card) return drawNextCard({ ...state, activeCard: null }, cards);
 
   const redrawn = drawNextCard(
     { ...state, activeCard: null },

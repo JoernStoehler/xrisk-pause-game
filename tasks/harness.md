@@ -33,8 +33,7 @@
 - [done] Delete irrelevant copied math/Rust/thesis/cluster skills.
 - [done] Keep `research-topic` and `write-cards` as explicit TODO
   placeholders for Jörn.
-- [done] Keep `project-quality` as a separate skill, but collect variants for
-  Jörn instead of editing the skill body in this pass.
+- [done] Keep `project-quality` as a separate skill.
 - [done] Fix small review findings before merge: `AGENTS.md` session-start
   map instruction, deployment/tooling map entries, `toc.sh` fenced code
   handling, and `.codex/.gitignore` wording.
@@ -45,14 +44,17 @@
 
 ## Agent Cache
 
-- Worktree path for current migration:
-  `.codex/worktrees/harness-msc-math`.
+- No harness migration worktree is currently active.
 - Validation for harness-only changes:
 
 ```bash
 git diff --check
-rg -n "TASKS.md|ROADMAP.md|msc-math|formal|Rust|thesis|LICCA|\\.claude|CLAUDE.md|reviewer.toml|simplification-scout|\\.codex/config.toml" AGENTS.md tasks .agents .codex .devcontainer scripts
+bash scripts/toc.sh AGENTS.md tasks/MAP.md tasks/harness.md
 ```
+
+Use targeted stale-route scans for the surface being changed. Search active
+maps/instructions first; historical references under `tasks/references/` may
+intentionally mention deleted routes.
 
 ## Pruned / Stale
 

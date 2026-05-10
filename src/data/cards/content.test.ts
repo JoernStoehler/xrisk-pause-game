@@ -2,8 +2,19 @@ import { describe, expect, it } from "vitest";
 import { CARD_GROUPS, ALL_CARDS } from ".";
 import type { ChoiceSpec } from "../../engine/types";
 import { RESOURCE_KEYS } from "../../engine/types";
+import { HIDDEN } from "./hidden";
 
 const resourceKeys = new Set<string>(RESOURCE_KEYS);
+const hiddenKeys = new Set<string>(Object.values(HIDDEN));
+const cardModules = import.meta.glob("./*.ts", { eager: true }) as Record<
+  string,
+  Record<string, unknown>
+>;
+const cardModuleEntries = Object.entries(cardModules).filter(
+  ([path]) =>
+    !path.endsWith(".test.ts") &&
+    !["./examples.ts", "./groups.ts", "./hidden.ts", "./index.ts"].includes(path),
+);
 
 describe("card content registry", () => {
   it("has explicit non-empty groups and one canonical card list", () => {
@@ -17,6 +28,22 @@ describe("card content registry", () => {
       expect(group.id).toMatch(/^[a-z0-9-]+$/);
       expect(group.label.trim()).not.toBe("");
       expect(group.cards.length, group.id).toBeGreaterThan(0);
+    }
+  });
+
+  it("includes every card module export in the explicit groups", () => {
+    const groupedArrays = new Set<readonly unknown[]>(
+      CARD_GROUPS.map((group) => group.cards),
+    );
+
+    for (const [path, module] of cardModuleEntries) {
+      const cardArrayExports = Object.entries(module).filter(
+        ([name, value]) => name.endsWith("Cards") && Array.isArray(value),
+      );
+
+      expect(cardArrayExports.length, path).toBe(1);
+      const [, cards] = cardArrayExports[0];
+      expect(groupedArrays.has(cards as readonly unknown[]), path).toBe(true);
     }
   });
 
@@ -44,6 +71,19 @@ describe("card content registry", () => {
       for (const choice of choices) {
         for (const key of Object.keys(choice.effects)) {
           expect(resourceKeys.has(key), `${card.id} effect ${key}`).toBe(true);
+        }
+      }
+    }
+  });
+
+  it("only declares hidden effects for named hidden keys", () => {
+    for (const card of ALL_CARDS) {
+      const choices = [card.left, card.right, card.down].filter(
+        (choice): choice is ChoiceSpec => choice !== undefined,
+      );
+      for (const choice of choices) {
+        for (const key of Object.keys(choice.hiddenEffects ?? {})) {
+          expect(hiddenKeys.has(key), `${card.id} hidden effect ${key}`).toBe(true);
         }
       }
     }

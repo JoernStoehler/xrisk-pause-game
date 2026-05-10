@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { chooseInSession } from "./session";
+import { chooseInSession, rehydrateActiveCard } from "./session";
 import { newGame, applyChoice, checkDeathCause } from "./state";
 import { drawNextCard } from "./cards";
 import type { Card, GameState } from "./types";
@@ -124,5 +124,27 @@ describe("chooseInSession", () => {
 
     expect(next.phase).toBe("dead");
     expect(next.death?.message).toBe("pol:depleted:1");
+  });
+});
+
+describe("rehydrateActiveCard", () => {
+  it("restores choice functions on a serialized active card", () => {
+    const original = drawFixture(newGame(42), [card()]);
+    const serialized = JSON.parse(JSON.stringify(original)) as GameState;
+
+    const rehydrated = rehydrateActiveCard(serialized, [card()]);
+    const next = applyChoice(rehydrated, "left");
+
+    expect(next.turn).toBe(1);
+    expect(next.resources.pol).toBe(55);
+    expect(next.hidden.fixture_signal).toBe(1);
+  });
+
+  it("draws a replacement instead of leaving a playing state without a card", () => {
+    const state = drawFixture(newGame(42), [card({ id: "removed-card" })]);
+    const rehydrated = rehydrateActiveCard(state, [card({ id: "replacement-card" })]);
+
+    expect(rehydrated.phase).toBe("playing");
+    expect(rehydrated.activeCard?.templateId).toBe("replacement-card");
   });
 });
