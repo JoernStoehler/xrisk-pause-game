@@ -56,6 +56,7 @@ interface ResourceIconsProps {
   tiltDirection: TiltDirection;
   leftPreviews: ChoicePreview[];
   rightPreviews: ChoicePreview[];
+  downPreviews: ChoicePreview[];
   /** Tutorial highlight: gentle brightness pulse on all icons */
   highlight?: boolean;
 }
@@ -65,6 +66,7 @@ export function ResourceIcons({
   tiltDirection,
   leftPreviews,
   rightPreviews,
+  downPreviews,
   highlight,
 }: ResourceIconsProps) {
   const activePreviews =
@@ -72,6 +74,8 @@ export function ResourceIcons({
       ? leftPreviews
       : tiltDirection === "right"
         ? rightPreviews
+        : tiltDirection === "down"
+          ? downPreviews
         : [];
 
   const previewMap = new Map<ResourceKey, ChoicePreview>();

@@ -17,7 +17,7 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
   // Reset tilt immediately on commit so preview indicators don't briefly
   // flash the new card's previews before the new SwipeCard mounts
   const handleChoice = useCallback(
-    (choice: "left" | "right") => {
+    (choice: ChoiceDirection) => {
       setTiltDirection("center");
       onChoice(choice);
     },
@@ -33,11 +33,14 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
       } else if (e.key === "ArrowRight" || e.key === "d" || e.key === "D") {
         e.preventDefault();
         cardRef.current?.commit("right");
+      } else if (e.key === "ArrowDown" || e.key === "s" || e.key === "S") {
+        e.preventDefault();
+        if (!state.activeCard?.down.disabled) cardRef.current?.commit("down");
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, []);
+  }, [state.activeCard?.down.disabled]);
 
   if (!state.activeCard) return null;
 
@@ -49,6 +52,7 @@ export function GameScreen({ state, onChoice }: GameScreenProps) {
         tiltDirection={tiltDirection}
         leftPreviews={state.activeCard.left.previews}
         rightPreviews={state.activeCard.right.previews}
+        downPreviews={state.activeCard.down.previews}
       />
 
       {/* Tan middle zone — card area */}

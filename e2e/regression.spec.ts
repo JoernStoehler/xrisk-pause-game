@@ -28,19 +28,24 @@ async function loadSavedCard(page: import("@playwright/test").Page, templateId: 
 }
 
 test("QA reference page is scrollable", async ({ page }) => {
-  test.fail(true, "Known regression: global overflow hidden makes #qa unscrollable.");
-
   await page.goto("/#qa");
+  await expect(page.getByRole("heading", { name: "QA Reference" })).toBeVisible();
+  await expect
+    .poll(() =>
+      page.evaluate(() => document.documentElement.scrollHeight > window.innerHeight),
+    )
+    .toBe(true);
+
   const before = await page.evaluate(() => window.scrollY);
+  await page.mouse.move(200, 400);
   await page.mouse.wheel(0, 900);
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(before);
   const after = await page.evaluate(() => window.scrollY);
 
   expect(after).toBeGreaterThan(before);
 });
 
 test("long card text fits inside the card text area", async ({ page }) => {
-  test.fail(true, "Known regression: long card text overflows the fixed text area.");
-
   await loadSavedCard(page, "biotech-proposal");
 
   const overflows = await page.locator("[data-testid=swipe-card] p").evaluate((text) => {
@@ -59,12 +64,36 @@ test("long card text fits inside the card text area", async ({ page }) => {
   expect(overflows).toBe(false);
 });
 
-test.skip("enabled down choices have a visible game affordance", async () => {
-  // Product decision: cards may be static 2-or-3 choice structures. Future UI
-  // should expose down choices directly; locked/unlocked variants belong in
-  // separate cards, not dynamic option availability.
+test("enabled down choices have a visible game affordance", async ({ page }) => {
+  await loadSavedCard(page, "data-center-attack");
+
+  await expect(page.getByTestId("label-down")).toBeVisible();
+  await expect(page.getByTestId("label-down")).toContainText(
+    "Cross-reference satellite data",
+  );
+  await page.getByTestId("label-down").click();
+  await expect
+    .poll(() =>
+      page.evaluate(() => {
+        const raw = localStorage.getItem("global-pause-state");
+        if (!raw) return null;
+        const saved = JSON.parse(raw);
+        return saved.state.history.at(-1);
+      }),
+    )
+    .toEqual({ turn: 12, cardId: "data-center-attack", choice: "down" });
 });
 
-// REGRESSION BREADCRUMB: card data has enabled `down` choices, while the mobile
-// UI currently exposes only left/right. Replace the skipped test above with an
-// executable regression when the down-choice interaction is implemented.
+test("disabled down choices do not animate the card away from keyboard input", async ({ page }) => {
+  await loadSavedCard(page, "budget-review");
+
+  await expect(page.getByTestId("label-down")).toHaveCount(0);
+  await page.keyboard.press("ArrowDown");
+  await page.waitForTimeout(600);
+
+  const portraitStillVisible = await page.locator("[data-testid=swipe-card] img").evaluate((img) => {
+    const box = img.getBoundingClientRect();
+    return box.top < window.innerHeight && box.bottom > 0;
+  });
+  expect(portraitStillVisible).toBe(true);
+});

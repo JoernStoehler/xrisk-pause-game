@@ -74,6 +74,7 @@ export function TutorialScreen({ tutorialIndex, onAdvance, onSkip }: TutorialScr
         tiltDirection={tiltDirection}
         leftPreviews={[]}
         rightPreviews={[]}
+        downPreviews={[]}
         highlight={tutorial.highlightResources}
       />
 

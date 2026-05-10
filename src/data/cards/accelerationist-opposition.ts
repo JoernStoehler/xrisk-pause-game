@@ -59,7 +59,9 @@ export const accelerationistOppositionCards: Card[] = [
       hiddenEffects: { [HIDDEN.narrativeDamage]: 1 },
     },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "emperor-manifesto")) return 0;
+      // Search newest-first so an old expired incident does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "emperor-billionaire",
       );
       if (!trigger) return 0;

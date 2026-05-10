@@ -14,8 +14,12 @@
   downstream public understanding and feedback over months, not by a successful
   Pages upload.
 - The current deploy target is Cloudflare Pages project `global-pause`.
-- GitHub Actions deploys on pushes to `main` using Node 22, `npm install`,
-  `npm run build`, and `pages deploy dist --project-name=global-pause`.
+- GitHub Actions deploys on pushes to `main` only after a `validate` job passes
+  on Node 22: `npm ci`, `npm run check`, Playwright Chromium install,
+  `npm run test:e2e`, `npm run cards`, and a dirty check for
+  `design/cards-export.md`. The deploy job then rebuilds generated card
+  artifacts so ignored `public/cards-map.html` is present in `dist`, runs
+  `npm run build`, and runs `pages deploy dist --project-name=global-pause`.
 
 ## Work Map
 
@@ -32,9 +36,9 @@
 - For build/deploy/tooling changes, inspect `.github/workflows/deploy.yml`,
   `wrangler.toml`, `package.json`, and `vite.config.ts`.
 - Run at least `npm run build` before changing deployment behavior.
-- App checks such as `npm run check` and `npm run test:e2e` validate local
-  behavior, not Cloudflare secrets, Pages project settings, or post-deploy
-  public accessibility.
+- App checks such as `npm run check`, `npm run test:e2e`, and `npm run cards`
+  validate local behavior and generated review freshness, not Cloudflare
+  secrets, Pages project settings, or post-deploy public accessibility.
 - Do not change deploy credentials, GitHub secrets, Cloudflare project settings,
   or production routing without Jörn approval.
 

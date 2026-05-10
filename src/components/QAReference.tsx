@@ -3,6 +3,7 @@
  * Shows numbered portraits and card content for feedback.
  */
 
+import { useEffect } from "react";
 import { SpeakerPortrait } from "./SpeakerPortrait";
 import { ALL_CARDS } from "../data/cards";
 import { DEATH_MESSAGES } from "../data/deaths";
@@ -71,6 +72,29 @@ function EffectBadges({ effects }: { effects: Partial<Record<ResourceKey, number
 }
 
 export function QAReference() {
+  useEffect(() => {
+    const html = document.documentElement;
+    const body = document.body;
+    const previous = {
+      htmlOverflow: html.style.overflow,
+      htmlHeight: html.style.height,
+      bodyOverflow: body.style.overflow,
+      bodyHeight: body.style.height,
+    };
+
+    html.style.overflow = "auto";
+    html.style.height = "auto";
+    body.style.overflow = "auto";
+    body.style.height = "auto";
+
+    return () => {
+      html.style.overflow = previous.htmlOverflow;
+      html.style.height = previous.htmlHeight;
+      body.style.overflow = previous.bodyOverflow;
+      body.style.height = previous.bodyHeight;
+    };
+  }, []);
+
   return (
     <div className="min-h-dvh bg-neutral-900 text-neutral-200 p-4 font-mono text-sm max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-1">QA Reference</h1>

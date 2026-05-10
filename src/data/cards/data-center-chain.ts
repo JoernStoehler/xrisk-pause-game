@@ -55,7 +55,8 @@ export const dataCenterChainCards: Card[] = [
       effects: { pol: -3, int: -3, alg: 5 },
     },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      // Search newest-first so an old expired attack does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "data-center-attack",
       );
       if (!trigger) return 0;

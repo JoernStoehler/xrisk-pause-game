@@ -55,7 +55,9 @@ export const safetyEraChainCards: Card[] = [
     },
     color: "#ef4444",
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "race-begins")) return 0;
+      // Search newest-first so an old expired breakthrough does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "safety-looks-solved",
       );
       if (!trigger) return 0;

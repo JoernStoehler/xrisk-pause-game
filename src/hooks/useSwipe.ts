@@ -1,10 +1,11 @@
 import { useCallback, useRef, useState } from "react";
+import type { ChoiceDirection } from "../engine/types";
 import { audio } from "./useAudio";
 
-export type TiltDirection = "left" | "right" | "center";
+export type TiltDirection = ChoiceDirection | "center";
 
 interface UseSwipeOptions {
-  onSwipe: (direction: "left" | "right") => void;
+  onSwipe: (direction: ChoiceDirection) => void;
   commitThreshold?: number;
   velocityThreshold?: number;
 }
@@ -37,10 +38,10 @@ export function useSwipe({
   const [swipeProgress, setSwipeProgress] = useState(0);
 
   const updateTransform = useCallback(
-    (x: number, transition: false | "spring" | "fly") => {
+    (x: number, transition: false | "spring" | "fly", y = 0) => {
       if (!cardRef.current) return;
       const rotation = x * 0.08;
-      cardRef.current.style.transform = `translateX(${x}px) rotate(${rotation}deg)`;
+      cardRef.current.style.transform = `translate(${x}px, ${y}px) rotate(${rotation}deg)`;
       cardRef.current.style.transition =
         transition === "spring" ? SPRING_BACK
         : transition === "fly" ? FLY_OFF
@@ -142,11 +143,15 @@ export function useSwipe({
 
   /** Trigger a full commit programmatically (for keyboard controls). */
   const commitProgrammatic = useCallback(
-    (direction: "left" | "right") => {
+    (direction: ChoiceDirection) => {
       if (isExiting) return;
       setIsExiting(true);
-      const flyTo = direction === "left" ? -window.innerWidth : window.innerWidth;
-      updateTransform(flyTo, "fly");
+      const flyToX =
+        direction === "left" ? -window.innerWidth
+        : direction === "right" ? window.innerWidth
+        : 0;
+      const flyToY = direction === "down" ? window.innerHeight : 0;
+      updateTransform(flyToX, "fly", flyToY);
       audio.play("whoosh");
       currentTiltRef.current = direction;
       setTiltDirection(direction);

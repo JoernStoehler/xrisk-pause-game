@@ -47,7 +47,9 @@ export const rogueLabChainCards: Card[] = [
       effects: { pol: 8, int: -10 },
     },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "near-miss")) return 0;
+      // Search newest-first so an old expired raid does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "rogue-lab-whistleblower" && h.choice === "left",
       );
       if (!trigger) return 0;

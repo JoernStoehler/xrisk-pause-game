@@ -6,6 +6,7 @@
  *   npx tsx src/cli.ts show         # Print current card + resources
  *   npx tsx src/cli.ts left         # Swipe left, show result + next card
  *   npx tsx src/cli.ts right        # Swipe right, show result + next card
+ *   npx tsx src/cli.ts down         # Use a visible third option, if present
  *   npx tsx src/cli.ts state        # Full state dump (pool, history)
  *   npx tsx src/cli.ts reset        # New game
  *   npx tsx src/cli.ts auto <N>     # Random-play N turns, print summary
@@ -21,7 +22,7 @@ import {
   startSession,
   type SessionContent,
 } from "./engine/session";
-import type { GameState } from "./engine/types";
+import type { ChoiceDirection, GameState } from "./engine/types";
 
 const STATE_FILE = process.env.PAUSE_CLI_STATE_FILE ?? "/tmp/pause-cli-state.json";
 const SESSION_CONTENT: SessionContent = {
@@ -100,7 +101,7 @@ function initGame(): GameState {
   return startSession(SESSION_CONTENT);
 }
 
-function step(state: GameState, choice: "left" | "right"): GameState {
+function step(state: GameState, choice: ChoiceDirection): GameState {
   return chooseInSession(state, choice, SESSION_CONTENT);
 }
 
@@ -124,7 +125,7 @@ if (cmd === "reset" || cmd === "new") {
   } else {
     printCard(s);
   }
-} else if (cmd === "left" || cmd === "right") {
+} else if (cmd === "left" || cmd === "right" || cmd === "down") {
   let s = load();
   if (!s || s.phase === "dead" || !s.activeCard) {
     console.log("No active game. Run 'reset' to start a new game.");
@@ -174,9 +175,13 @@ if (cmd === "reset" || cmd === "new") {
   const coinRng = { rngState: s.rngState ^ 0x12345678 };
   for (let i = 0; i < turns; i++) {
     if (s.phase === "dead" || !s.activeCard) break;
-    const choice = random(coinRng) < 0.5 ? "left" as const : "right" as const;
+    const availableChoices: ChoiceDirection[] = ["left", "right"];
+    if (!s.activeCard.down.disabled) availableChoices.push("down");
+    const choice = availableChoices[
+      Math.floor(random(coinRng) * availableChoices.length)
+    ];
     const card = s.activeCard;
-    const choiceOption = choice === "left" ? card.left : card.right;
+    const choiceOption = card[choice];
     console.log(
       `Turn ${s.turn}: ${card.speaker} → ${choice} "${choiceOption.label}"`,
     );
@@ -192,7 +197,7 @@ if (cmd === "reset" || cmd === "new") {
   }
 } else {
   console.log(
-    "Usage: npx tsx src/cli.ts [show|left|right|state|reset|auto <N>]",
+    "Usage: npx tsx src/cli.ts [show|left|right|down|state|reset|auto <N>]",
   );
   process.exit(1);
 }

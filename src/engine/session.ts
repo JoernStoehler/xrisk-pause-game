@@ -22,6 +22,8 @@ export function chooseInSession(
   content: SessionContent,
 ): GameState {
   const applied = applyChoice(state, choice);
+  if (applied === state) return state;
+
   const deathCause = checkDeathCause(applied);
   if (deathCause) {
     return {

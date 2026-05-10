@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -42,6 +42,33 @@ describe("cli", () => {
     expect(left.stdout).toContain("Pool:");
   });
 
+  it("commits an enabled down command to history", () => {
+    const stateFile = makeStateFile();
+    writeFileSync(stateFile, JSON.stringify({
+      phase: "playing",
+      resources: { pol: 50, int: 50, saf: 50, alg: 50 },
+      hidden: {},
+      turn: 12,
+      activeCard: { templateId: "data-center-attack" },
+      rngState: 1,
+      death: null,
+      history: [],
+    }));
+
+    const down = runCli(stateFile, "down");
+    expect(down.status).toBe(0);
+    expect(down.stderr).toBe("");
+    expect(down.stdout).toContain("Turn 13");
+    expect(down.stdout).toContain("Pool:");
+
+    const saved = JSON.parse(readFileSync(stateFile, "utf-8"));
+    expect(saved.history.at(-1)).toEqual({
+      turn: 12,
+      cardId: "data-center-attack",
+      choice: "down",
+    });
+  });
+
   it("reports missing saved state for choice commands", () => {
     const stateFile = makeStateFile();
 
@@ -58,7 +85,3 @@ describe("cli", () => {
     expect(auto.stdout).toContain("Auto-playing 2 turns");
   });
 });
-
-// REGRESSION BREADCRUMB: cards may have static 2-or-3 choice structures, but CLI
-// command handling only supports left/right. Add down input before using CLI auto
-// runs for three-choice balance conclusions.

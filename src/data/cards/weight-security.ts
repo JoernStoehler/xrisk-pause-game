@@ -92,7 +92,9 @@ export const weightSecurityCards: Card[] = [
       hiddenEffects: { [HIDDEN.treatyErosion]: 1 },
     },
     poolWeight: (state: GameState) => {
-      const trigger = state.history.find(
+      if (state.history.some((h) => h.cardId === "china-weights-deployed")) return 0;
+      // Search newest-first so an old expired theft does not hide a newer one.
+      const trigger = [...state.history].reverse().find(
         (h) => h.cardId === "weight-theft-state",
       );
       if (!trigger) return 0;
