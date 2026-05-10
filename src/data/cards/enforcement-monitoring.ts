@@ -32,10 +32,9 @@
 // Dynamic: enforcement can only control one of four sources of progress
 // Category: incident (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementMonitoringCards: Card[] = [
   {
     id: "decommission-graveyard",
     tags: ["chip-supply-chain", "enforcement-operations"],
@@ -157,4 +156,4 @@ register(
       return 2;
     },
   },
-);
+];

@@ -25,10 +25,9 @@
 // Dynamic: you can't demonstrate prevented catastrophes
 // Category: political (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const subAsiHarmsCards: Card[] = [
   {
     id: "autonomous-vehicle-massacre",
     tags: ["sub-asi-incidents", "media-narrative"],
@@ -114,4 +113,4 @@ register(
       return 1.5;
     },
   },
-);
+];

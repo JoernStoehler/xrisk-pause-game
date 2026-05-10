@@ -45,10 +45,9 @@
 // Dynamic: economic cost of pause is real and legitimate; opinion clusters diverge
 // Category: political (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const economicCostsCards: Card[] = [
   {
     id: "ai-economy-report",
     tags: ["economic-pressure", "treaty-compliance"],
@@ -187,4 +186,4 @@ register(
       return 1.5;
     },
   },
-);
+];

@@ -32,10 +32,9 @@
 // Dynamic: political support comes with strings; opinion shifts are chaotic
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const opinionDynamicsCards: Card[] = [
   {
     id: "low-salience-campaign",
     tags: ["media-narrative", "political-support"],
@@ -134,4 +133,4 @@ register(
       return 1.5;
     },
   },
-);
+];

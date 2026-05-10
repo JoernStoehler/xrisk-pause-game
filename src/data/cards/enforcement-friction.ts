@@ -31,10 +31,9 @@
 // Dynamic: political support IS the pause; can't enforce against your backers
 // Category: crisis (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementFrictionCards: Card[] = [
   {
     id: "jurisdiction-clash",
     tags: ["enforcement-operations", "treaty-compliance"],
@@ -149,4 +148,4 @@ register(
     },
     color: "#ef4444",
   },
-);
+];

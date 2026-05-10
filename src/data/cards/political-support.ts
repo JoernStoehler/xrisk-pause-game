@@ -23,10 +23,9 @@
 // Dynamic: success looks like "the threat was never real"
 // Category: political (turn-gated, appears when things are going well)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const politicalSupportCards: Card[] = [
   {
     id: "election-year",
     tags: ["political-support", "treaty-compliance"],
@@ -112,4 +111,4 @@ register(
       return 2;
     },
   },
-);
+];

@@ -29,10 +29,9 @@
 // Dynamic: cure = disease; dual-use knowledge
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const researchDualUseCards: Card[] = [
   {
     id: "approval-dilemma",
     tags: ["dual-use-research", "alignment-research"],
@@ -116,4 +115,4 @@ register(
       return 1.5;
     },
   },
-);
+];

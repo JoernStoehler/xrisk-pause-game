@@ -11,10 +11,9 @@
 // Dynamic: the lethal threshold keeps shrinking; enforcement can't control all sources
 // Category: history-triggered (consequence of data-center-attack)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const dataCenterChainCards: Card[] = [
   {
     id: "data-center-attack",
     tags: ["intelligence-agencies", "compute-monitoring"],
@@ -64,4 +63,4 @@ register(
       return 8;
     },
   },
-);
+];

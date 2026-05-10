@@ -39,10 +39,9 @@
 // Dynamic: institutions rot from within; independence vs. resources
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const institutionalLeadershipCards: Card[] = [
   {
     id: "leadership-purge",
     tags: ["institutional-integrity", "political-support"],
@@ -174,4 +173,4 @@ register(
       return 2;
     },
   },
-);
+];

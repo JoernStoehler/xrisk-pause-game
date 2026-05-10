@@ -4,7 +4,7 @@
  * Shows every card pattern using the declarative Card type.
  * Copy-paste and modify to create new cards.
  *
- * Real cards: import { register } from "./registry"; then call register(card1, card2, ...).
+ * Real cards: export an array from the relevant card module and add it to groups.ts.
  */
 
 import type { Card, GameState } from "../../engine/types";

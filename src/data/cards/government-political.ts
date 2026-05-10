@@ -25,10 +25,9 @@
 // Dynamic: you can't demonstrate prevented catastrophes
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const governmentPoliticalCards: Card[] = [
   {
     id: "government-overpromise",
     tags: ["political-support", "alignment-research"],
@@ -114,4 +113,4 @@ register(
       return 2;
     },
   },
-);
+];

@@ -37,10 +37,9 @@
 // Dynamic: time is always against you; alg progress is partly uncontrollable
 // Category: late-game (alg-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementSupplyChainCards: Card[] = [
   {
     id: "chip-audit-deadline",
     tags: ["chip-supply-chain", "treaty-compliance"],
@@ -160,4 +159,4 @@ register(
     },
     color: "#ef4444",
   },
-);
+];

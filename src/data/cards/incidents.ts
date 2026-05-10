@@ -1,9 +1,8 @@
 // STUB — placeholder cards so the game runs while real cards are being written.
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const incidentsCards: Card[] = [
   {
     id: "rogue-lab-normal",
     tags: ["rogue-actors", "compute-monitoring"],
@@ -62,4 +61,4 @@ register(
     right: { label: "Too risky, decline", effects: { pol: -8, int: -5 } },
     poolWeight: () => 1,
   },
-);
+];

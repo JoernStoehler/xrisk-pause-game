@@ -32,10 +32,9 @@
 // Dynamic: enforcement can only control one of four sources of progress
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const intelligenceNetworksCards: Card[] = [
   {
     id: "black-market-signal",
     tags: ["chip-supply-chain", "enforcement-operations"],
@@ -141,4 +140,4 @@ register(
       return 2;
     },
   },
-);
+];

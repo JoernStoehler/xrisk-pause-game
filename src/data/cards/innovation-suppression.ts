@@ -32,10 +32,9 @@
 // Dynamic: research suppression vs. innovation; the cure and the disease
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const innovationSuppressionCards: Card[] = [
   {
     id: "medical-ai-request",
     tags: ["economic-pressure", "treaty-compliance"],
@@ -144,4 +143,4 @@ register(
       return 2;
     },
   },
-);
+];

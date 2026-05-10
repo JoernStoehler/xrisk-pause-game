@@ -10,10 +10,9 @@
 // Dynamic: you can't demonstrate prevented catastrophes
 // Category: consequence (follows rogue-lab-whistleblower left choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const rogueLabChainCards: Card[] = [
   {
     id: "rogue-lab-whistleblower",
     tags: ["whistleblowers", "rogue-actors"],
@@ -56,4 +55,4 @@ register(
       return 10;
     },
   },
-);
+];

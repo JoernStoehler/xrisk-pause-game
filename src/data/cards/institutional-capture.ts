@@ -18,10 +18,9 @@
 // Dynamic: institutions rot from within; the cure and the disease
 // Category: crisis (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const institutionalCaptureCards: Card[] = [
   {
     id: "corporate-lobbying",
     tags: ["corporate-lobbying", "political-support"],
@@ -82,4 +81,4 @@ register(
     },
     color: "#ef4444",
   },
-);
+];

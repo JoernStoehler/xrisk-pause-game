@@ -20,10 +20,9 @@
 // Dynamic: enforcement can only control one of four sources of progress
 // Category: history-triggered (consequence of weight-theft-state)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const weightSecurityCards: Card[] = [
   {
     id: "weight-theft",
     tags: ["intelligence-agencies", "rogue-actors"],
@@ -101,4 +100,4 @@ register(
       return 8;
     },
   },
-);
+];

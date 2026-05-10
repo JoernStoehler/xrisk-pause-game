@@ -17,10 +17,9 @@
 // Dynamic: attack surface includes things you're protecting; cat-and-mouse
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementDetectionCards: Card[] = [
   // --- thermal-anomaly (normal variant) ---
   {
     id: "thermal-anomaly",
@@ -104,4 +103,4 @@ register(
     },
     poolWeight: (state: GameState) => state.turn < 6 ? 0 : 2,
   },
-);
+];

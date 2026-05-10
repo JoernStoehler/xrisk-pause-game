@@ -18,10 +18,9 @@
 // Dynamic: the lethal threshold keeps shrinking; safety doesn't scale
 // Category: report (late-game, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const researchScalingCards: Card[] = [
   {
     id: "stepping-on-toes",
     tags: ["alignment-research"],
@@ -92,4 +91,4 @@ register(
       return 2;
     },
   },
-);
+];

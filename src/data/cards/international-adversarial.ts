@@ -18,10 +18,9 @@
 // Dynamic: 30 years of political noise; enforcement capability consumed
 // Category: crisis (late-game, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const internationalAdversarialCards: Card[] = [
   {
     id: "china-hawk",
     tags: ["international-diplomacy", "institutional-integrity"],
@@ -86,4 +85,4 @@ register(
       return 2;
     },
   },
-);
+];

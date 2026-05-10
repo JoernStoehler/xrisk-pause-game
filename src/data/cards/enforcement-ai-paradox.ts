@@ -17,10 +17,9 @@
 // Dynamic: agency's own AI tools behave unexpectedly; fundamental contradiction
 // Category: crisis (turn-gated, int-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementAiParadoxCards: Card[] = [
   {
     id: "agency-trains-ai",
     tags: ["compute-monitoring", "dual-use-research"],
@@ -93,4 +92,4 @@ register(
       return 2;
     },
   },
-);
+];

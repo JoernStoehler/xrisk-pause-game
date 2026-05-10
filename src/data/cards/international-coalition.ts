@@ -38,10 +38,9 @@
 // Dynamic: major power dynamics; the agency is a pawn in great-power competition
 // Category: crisis (turn-gated, 3-choice)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const internationalCoalitionCards: Card[] = [
   {
     id: "withdrawal-threat",
     tags: ["international-diplomacy", "treaty-compliance"],
@@ -173,4 +172,4 @@ register(
       return 2.5;
     },
   },
-);
+];

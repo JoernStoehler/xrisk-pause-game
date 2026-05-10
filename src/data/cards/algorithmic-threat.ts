@@ -20,10 +20,9 @@
 // Dynamic: the lethal threshold keeps shrinking; enforcement designed for today fails
 // Category: late-game (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const algorithmicThreatCards: Card[] = [
   {
     id: "algorithmic-shortcut",
     tags: ["algorithmic-progress", "compute-monitoring"],
@@ -83,4 +82,4 @@ register(
       return 2.5;
     },
   },
-);
+];

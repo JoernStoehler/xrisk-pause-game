@@ -7,10 +7,9 @@
 //   enforcement vs. backlash; political support IS the pause
 // Category: crisis chain (late-game, int-gated → history-triggered consequence)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const militaryEscalationCards: Card[] = [
   // --- airstrike-debate ---
   {
     id: "airstrike-debate",
@@ -67,4 +66,4 @@ register(
       return 10;
     },
   },
-);
+];

@@ -1,9 +1,8 @@
 // STUB — placeholder cards so the game runs while real cards are being written.
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const lateGameCards: Card[] = [
   {
     id: "capability-jump",
     tags: ["algorithmic-progress", "dual-use-research"],
@@ -43,4 +42,4 @@ register(
       return 2;
     },
   },
-);
+];

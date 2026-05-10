@@ -12,10 +12,9 @@
 // Dynamic: 30 years of political noise; opinion clusters shift
 // Category: history-triggered (consequence of emperor-billionaire)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const accelerationistOppositionCards: Card[] = [
   {
     id: "emperor-billionaire",
     tags: ["rogue-actors", "enforcement-operations"],
@@ -68,4 +67,4 @@ register(
       return 8;
     },
   },
-);
+];

@@ -11,10 +11,9 @@
 // Dynamic: race dynamic after safety looks solved; political confidence diverges from reality
 // Category: crisis (follows safety-looks-solved)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const safetyEraChainCards: Card[] = [
   {
     id: "safety-looks-solved",
     tags: ["alignment-research", "political-support"],
@@ -64,4 +63,4 @@ register(
       return 8;
     },
   },
-);
+];

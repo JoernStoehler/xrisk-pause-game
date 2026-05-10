@@ -23,10 +23,9 @@
 // Dynamic: far easier to destroy an institution than build one
 // Category: crisis (pol-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const oppositionLegalCards: Card[] = [
   {
     id: "protest-to-legislator",
     tags: ["civil-liberties", "political-support"],
@@ -122,4 +121,4 @@ register(
       return 5;
     },
   },
-);
+];

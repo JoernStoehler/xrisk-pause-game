@@ -36,10 +36,9 @@
 // Dynamic: surveillance AI hiccups; can't investigate everything
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const institutionalInternalCards: Card[] = [
   {
     id: "internal-dissent",
     tags: ["institutional-integrity", "civil-liberties"],
@@ -162,4 +161,4 @@ register(
       return 1.5;
     },
   },
-);
+];

@@ -39,10 +39,9 @@
 // Dynamic: enforcement capability is consumed by enforcement actions
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementCostsCards: Card[] = [
   {
     id: "cat-mouse-adapt",
     tags: ["chip-supply-chain", "enforcement-operations"],
@@ -169,4 +168,4 @@ register(
       return 1.5;
     },
   },
-);
+];

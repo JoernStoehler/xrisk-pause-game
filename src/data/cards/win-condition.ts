@@ -4,10 +4,9 @@
 // Dynamic: the pause was always temporary — this is what it was for
 // Category: special (win condition trigger, saf-gated + turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const winConditionCards: Card[] = [
   {
     id: "pivotal-moment",
     tags: ["alignment-research", "international-diplomacy"],
@@ -36,4 +35,4 @@ register(
       return 10;
     },
   },
-);
+];

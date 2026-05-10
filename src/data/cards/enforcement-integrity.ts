@@ -24,10 +24,9 @@
 // Dynamic: institutional integrity vs. mission urgency
 // Category: incident (turn-gated)
 
-import { register } from "./registry";
-import type { GameState } from "../../engine/types";
+import type { Card, GameState } from "../../engine/types";
 
-register(
+export const enforcementIntegrityCards: Card[] = [
   {
     id: "disposal-bribery",
     tags: ["chip-supply-chain", "institutional-integrity"],
@@ -108,4 +107,4 @@ register(
       return 1.5;
     },
   },
-);
+];
