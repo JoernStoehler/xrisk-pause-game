@@ -2,7 +2,7 @@
  * Export card data for review and visualization.
  *
  * Outputs:
- *   design/cards-export.md  — flat review file grouped by source file
+ *   design/cards-export.md  — flat review file grouped by explicit card group
  *   public/cards-map.html   — D3 force graph (served by Vite at /cards-map.html)
  *
  * Usage: npm run cards
@@ -13,15 +13,20 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import type { GameState } from "../src/engine/types";
 import { newGame } from "../src/engine/state";
-import { ALL_CARDS } from "../src/data/cards";
+import { ALL_CARDS, CARD_GROUPS } from "../src/data/cards";
+import { HIDDEN } from "../src/data/cards/hidden";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = join(repoRoot, "design");
 const cardsDir = join(repoRoot, "src/data/cards");
+const hiddenByCodeName: Record<string, string> = HIDDEN;
 
 // Build card-id → source-file mapping
 const cardFiles = readdirSync(cardsDir).filter(
-  (f) => f.endsWith(".ts") && !["index.ts", "registry.ts", "examples.ts"].includes(f),
+  (f) =>
+    f.endsWith(".ts") &&
+    !f.endsWith(".test.ts") &&
+    !["index.ts", "groups.ts", "hidden.ts", "examples.ts"].includes(f),
 );
 const idToFile: Record<string, string> = {};
 for (const file of cardFiles) {
@@ -31,12 +36,11 @@ for (const file of cardFiles) {
   }
 }
 
-// Group cards by source file
-const groups = new Map<string, typeof ALL_CARDS[number][]>();
-for (const card of ALL_CARDS) {
-  const file = idToFile[card.id] ?? "unknown.ts";
-  if (!groups.has(file)) groups.set(file, []);
-  groups.get(file)!.push(card);
+const idToGroup: Record<string, string> = {};
+for (const group of CARD_GROUPS) {
+  for (const card of group.cards) {
+    idToGroup[card.id] = group.id;
+  }
 }
 
 const base = newGame(1);
@@ -48,14 +52,14 @@ const fmtFx = (fx: Partial<Record<string, number>>) =>
 
 // --- Generate .md review file ---
 const md: string[] = [];
-md.push(`# Card Review — ${ALL_CARDS.length} cards, ${groups.size} files`);
+md.push(`# Card Review — ${ALL_CARDS.length} cards, ${CARD_GROUPS.length} groups`);
 md.push(`Generated ${new Date().toISOString().slice(0, 10)}`);
 md.push("");
 
-for (const [file, cards] of groups) {
-  md.push(`## ${file}`);
+for (const group of CARD_GROUPS) {
+  md.push(`## ${group.label} (${group.id})`);
   md.push("");
-  for (const card of cards) {
+  for (const card of group.cards) {
     const idea = card.idea ? ` — *${card.idea}*` : "";
     md.push(`**${card.id}**${idea}`);
     md.push(`${res(card.speaker)}: ${res(card.text)}`);
@@ -84,11 +88,10 @@ const cardTags: { card: string; tag: string }[] = [];
 
 // Add card nodes
 for (const card of ALL_CARDS) {
-  const file = idToFile[card.id] ?? "unknown.ts";
   gNodes.push({
     id: card.id,
     type: "card",
-    file: file.replace(".ts", ""),
+    file: idToGroup[card.id] ?? "unknown",
     speaker: res(card.speaker),
     text: res(card.text),
     effects: `← ${fmtFx(card.left.effects)}  → ${fmtFx(card.right.effects)}`,
@@ -119,7 +122,6 @@ for (const file of cardFiles) {
     }
   }
 
-  // Hidden state writes: hiddenEffects: { key: value }
   const defPositions = posMatches.filter((p) => p.kind === "def");
   const findOwner = (pos: number) => {
     let owner = "";
@@ -130,23 +132,25 @@ for (const file of cardFiles) {
     return owner;
   };
 
-  for (const m of content.matchAll(/hiddenEffects:\s*\{([^}]+)\}/g)) {
+  for (const m of content.matchAll(/state\.hidden\[HIDDEN\.(\w+)\]/g)) {
     const owner = findOwner(m.index!);
-    if (!owner) continue;
-    for (const p of m[1].matchAll(/(\w+):/g)) {
-      hiddenWrites.push({ card: owner, key: p[1] });
-    }
+    const key = hiddenByCodeName[m[1]];
+    if (owner && key) hiddenReads.push({ card: owner, key });
   }
-
   for (const m of content.matchAll(/state\.hidden\.(\w+)/g)) {
     const owner = findOwner(m.index!);
     if (owner) hiddenReads.push({ card: owner, key: m[1] });
   }
-  for (const m of content.matchAll(/state\.hidden\[["'](\w+)["']\]/g)) {
-    const owner = findOwner(m.index!);
-    if (owner) hiddenReads.push({ card: owner, key: m[1] });
-  }
 
+}
+
+for (const card of ALL_CARDS) {
+  for (const choice of [card.left, card.right, card.down]) {
+    if (!choice?.hiddenEffects) continue;
+    for (const [key, value] of Object.entries(choice.hiddenEffects)) {
+      if (value !== 0) hiddenWrites.push({ card: card.id, key });
+    }
+  }
 }
 
 // Build hidden state hub nodes and edges
@@ -195,8 +199,8 @@ const uniqueEdges = gEdges.filter((e) => {
   return true;
 });
 
-// File groups for coloring
-const fileGroups = [...new Set(Object.values(idToFile).map((f) => f.replace(".ts", "")))];
+// Card groups for coloring
+const fileGroups = CARD_GROUPS.map((group) => group.id);
 
 const graphData = JSON.stringify({ nodes: gNodes, edges: uniqueEdges, fileGroups });
 
@@ -267,7 +271,7 @@ svg#graph { display: block; background: #ffffff; }
 </div>
 <div id="search-box"><input id="search-input" placeholder="Search cards..." /></div>
 <div id="legend" class="panel">
-  <div class="legend-row"><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#f97316" stroke="#c2410c" stroke-width="1"/></svg> Card (color = file, size = degree)</div>
+  <div class="legend-row"><svg width="14" height="14"><circle cx="7" cy="7" r="5" fill="#f97316" stroke="#c2410c" stroke-width="1"/></svg> Card (color = group, size = degree)</div>
   <div class="legend-row"><svg width="14" height="14"><rect x="2" y="2" width="10" height="10" rx="2" fill="#0d9488" stroke="#0f766e" stroke-width="1"/></svg> State variable</div>
   <div class="legend-row"><svg width="14" height="14"><polygon points="7,1 13,7 7,13 1,7" fill="#8b5cf6" stroke="#6d28d9" stroke-width="1"/></svg> Developer tag</div>
   <div class="legend-row" style="margin-top:8px;color:#9ca3af;font-size:10px">Click: select · Shift+click: multi · Ctrl+C: copy · Drag: move</div>
