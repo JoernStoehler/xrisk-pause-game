@@ -1,73 +1,161 @@
-# xrisk-pause-game
+# AGENTS.md
 
 ## Project
 
-This is a serious Reigns-style mobile web game about directing an international
-AI pause agency. The core thesis is that a pause is not quiet waiting: it is a
-fragile crisis-management race to keep capability progress contained while
-safety work catches up.
+Serious Reigns-style mobile web game about directing an international AI pause
+agency. The core thesis is that a pause is not quiet waiting: it is a fragile
+crisis-management race to keep capability progress contained while safety work
+catches up.
+
+Success means that, after months of play, more people understand that a global
+AI pause treaty could work and can better recognize blatant misunderstandings
+or false claims about what such a treaty needs under different threat models.
+Fun, realism, and political/scientific detail are instrumental to that public
+understanding goal.
 
 Jörn is the domain owner. Ask before changing the game's thesis, political
-model, terminology, card concepts, or major UX direction. Current content is
-draft quality unless `TASKS.md` says otherwise.
+model, player-facing terminology, card concepts, major UX direction, final
+feature set, or expert predictions. Agents may draft, implement, test,
+refactor, refresh generated artifacts, and propose wording or UI details
+independently, but expert-grounded content is draft until Jörn approves it.
 
-## Instruction Sources
+## Files
 
-- Read `TASKS.md` at session start. It is the current state and priority file.
-- Use skills for specialized work. In particular, load `write-cards` before
-  editing `src/data/cards/**`, `research-topic` before creating source-grounded
-  design material, and `harness-engineering` before changing this harness.
-- Do not depend on nested instruction files for required behavior.
+```text
+.
+|-- AGENTS.md
+|-- package.json
+|-- src/
+|   |-- App.tsx
+|   |-- main.tsx
+|   |-- engine/
+|   |   |-- types.ts
+|   |   |-- state.ts
+|   |   |-- cards.ts
+|   |   |-- useGame.ts
+|   |   `-- *.test.ts
+|   |-- data/
+|   |   |-- cards/
+|   |   |   |-- index.ts
+|   |   |   |-- registry.ts
+|   |   |   `-- *.ts
+|   |   |-- deaths.ts
+|   |   `-- tutorial.ts
+|   |-- components/
+|   |-- hooks/
+|   `-- index.css
+|-- design/
+|   |-- domain-model.md
+|   |-- card-concepts.md
+|   |-- cards-export.md
+|   |-- geopolitics-synthesis.md
+|   |-- research/*.md
+|   `-- *.md
+|-- literature/
+|   |-- INDEX.md
+|   |-- REFERENCES.md
+|   |-- *.md
+|   |-- *.txt
+|   `-- *.enc
+|-- tasks/
+|   |-- README.md
+|   |-- MAP.md
+|   `-- <group>.md
+|-- public/
+|   |-- cards-map.html
+|   `-- static assets
+|-- e2e/
+|-- scripts/
+|   |-- export-cards.ts
+|   |-- decrypt-literature.sh
+|   `-- toc.sh
+|-- .github/workflows/deploy.yml
+|-- wrangler.toml
+|-- vite.config.ts
+|-- playwright.config.ts
+|-- .agents/skills/<skill>/
+|   |-- SKILL.md
+|   |-- agents/openai.yaml
+|   |-- references/*.md
+|   `-- scripts/
+|-- .codex/
+|   |-- .gitignore
+|   |-- agents/.gitkeep
+|   `-- worktrees/
+|-- .devcontainer/
+|   |-- README.md
+|   |-- devcontainer.json
+|   |-- Dockerfile
+|   `-- *.sh
+`-- /tmp/  (outside repo)
+```
 
-## Repository Map
-
-- `src/engine/`: pure TypeScript game state, card resolution, RNG, tutorial
+- `AGENTS.md`: root instruction map. This repo does not use nested
+  `AGENTS.md`.
+- `tasks/MAP.md`: session-start roadmap and routing surface. Read it before
+  broad edits or when current priority/maturity matters.
+- `package.json`: Vite, React, TypeScript, test, CLI, and card-export commands.
+- `vite.config.ts`, `playwright.config.ts`: app/test framework configuration.
+- `src/engine/`: pure TypeScript game state, RNG, card resolution, tutorial
   logic, and tests.
-- `src/data/cards/`: card declarations registered by side-effect imports in
-  `src/data/cards/index.ts`.
-- `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio hooks,
-  and Tailwind v4 theme CSS.
-- `design/`: domain model, card concepts, generated card export, map reviews,
-  and research/design notes.
+- `src/data/cards/`: card declarations. Current implementation uses
+  side-effect registration through `src/data/cards/index.ts`.
+- `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio
+  hooks, and Tailwind v4 theme CSS.
+- `design/`: domain model, card concepts, generated review exports, map
+  reviews, and research/design notes.
 - `literature/`: source notes and encrypted source-derived material. Run
-  `scripts/decrypt-literature.sh` when encrypted literature is needed.
-- `.agents/skills/`: Codex skills for project-specific workflows.
-- `.codex/`: repo Codex config and subagent roles.
-- `.devcontainer/`: local Docker setup for Codex sessions and VS Code tunnel.
+  `scripts/decrypt-literature.sh` only when encrypted literature is needed.
+- `tasks/`: current steering, topic task bundles, and harness migration notes.
+- `.agents/skills/`: repo-local skill surface. Skill bodies require Jörn
+  approval before they are treated as final durable instruction material.
+- `.codex/agents/`: optional repo-local subagent templates. Empty by default.
+- `.codex/worktrees/`: isolated worktrees for independent agent sessions.
+- `.devcontainer/`: local devcontainer with documentation.
+- `.github/workflows/deploy.yml`, `wrangler.toml`: Cloudflare Pages deployment.
+- `/tmp/`: scratch space for disposable clones, prompt drafts, and temporary
+  reports; not durable project state.
 
-## Current Architecture Facts
+## Map Files
 
-- The app is React 19 + Vite + TypeScript.
-- The engine uses four visible resources: `pol`, `int`, `saf`, and `alg`.
-- Cards are static `Card` objects with dynamic fields and `poolWeight(state)`.
-- Hidden state is a numeric key-value map used for cross-card interactions.
-- `npm run cards` regenerates `design/cards-export.md` and
-  `public/cards-map.html` from the TypeScript card pool.
-- The devcontainer is the primary environment. It bind-mounts Codex and GitHub
-  auth from `/srv/devhome/` and persists VS Code tunnel state in the
-  `xrisk-pause-game-vscode` Docker volume at `~/.vscode`.
+Map files are navigation caches. They index, summarize, and structure folder
+content for quick navigation. They are not authoritative sources.
 
-## Work Rules
+- `tasks/MAP.md`: current roadmap, priority map, and task routing surface.
+- `tasks/README.md`: conventions for task bundles under `tasks/`.
+- `literature/INDEX.md`: source-note navigation.
+- `design/cards-export.md`: generated card review export; refresh with
+  `npm run cards`.
+- `public/cards-map.html`: generated card graph; refresh with `npm run cards`.
 
-- Preserve unrelated user changes. Check `git status --short --branch` before
-  broad edits and do not reset or checkout files unless explicitly asked.
-- Keep changes scoped to the requested surface. This repo is mid-content
-  overhaul; avoid polishing placeholder content unless that is the task.
-- Prefer observable validation over prose claims. If a file says a command,
-  path, count, or generated artifact exists, verify it.
-- Use `rg` and direct file reads for repo inspection. Use `apply_patch` for
-  manual edits.
-- For current-world claims, check sources instead of relying on memory.
+## Review
+
+Final summaries should list review passes performed, including review
+subagents used or intentionally not used. Ask Jörn before merging harness
+changes that alter `AGENTS.md`, skill bodies, task-routing structure, or
+authority boundaries. `AGENTS.md` and skill bodies require Jörn approval before
+they become final durable instruction material.
 
 ## Commands
 
 ```bash
-npm run dev
+# Harness and navigation
+git diff --check
+bash scripts/toc.sh AGENTS.md tasks/MAP.md
+
+# App and engine
 npm run check
 npm run test:e2e
 npm run cli auto 20
+
+# Cards and generated review surfaces
 npm run cards
+
+# Literature
 bash scripts/decrypt-literature.sh
+
+# Local environment
+npm run dev
 .devcontainer/host-devcontainer-rebuild.sh
 .devcontainer/host-vscode-tunnel.sh
 ```
