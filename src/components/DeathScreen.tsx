@@ -1,8 +1,11 @@
-import { useCallback, useEffect } from "react";
-import type { DeathInfo, HistoryEntry, ResourceKey } from "../engine/types";
+import { useCallback, useEffect, useRef, useState } from "react";
+import type { DeathInfo, GameState, HistoryEntry, ResourceKey } from "../engine/types";
 import { audio } from "../hooks/useAudio";
 import { ShareButton } from "./ShareButton";
+import { generatePlaytestExport } from "./playtestExport";
 import { generateShareText } from "./shareText";
+
+type DeadGameState = GameState & { phase: "dead"; death: DeathInfo };
 
 /** Small SVG icons matching ResourceIcons style */
 function DeathResourceIcon({ resource }: { resource: ResourceKey }) {
@@ -41,6 +44,7 @@ interface DeathScreenProps {
   death: DeathInfo;
   turnsSurvived: number;
   history: HistoryEntry[];
+  playtestExportState?: DeadGameState;
   onRestart: () => void;
 }
 
@@ -48,6 +52,7 @@ export function DeathScreen({
   death,
   turnsSurvived,
   history,
+  playtestExportState,
   onRestart,
 }: DeathScreenProps) {
   const handleRestart = useCallback(() => {
@@ -100,8 +105,9 @@ export function DeathScreen({
         {generateShareText(death, turnsSurvived, history)}
       </div>
 
-      <div className="flex gap-4">
+      <div className={playtestExportState ? "flex w-full max-w-sm flex-col gap-3" : "flex gap-4"}>
         <ShareButton death={death} turn={turnsSurvived} history={history} />
+        {playtestExportState && <CopyRunLogButton state={playtestExportState} />}
         <button
           className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-tan-light active:bg-tan-light transition-colors min-h-[44px] cursor-pointer"
           onClick={handleRestart}
@@ -112,5 +118,53 @@ export function DeathScreen({
         </button>
       </div>
     </div>
+  );
+}
+
+function CopyRunLogButton({ state }: { state: DeadGameState }) {
+  const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
+  const resetTimer = useRef<number | null>(null);
+
+  const scheduleStatusReset = () => {
+    if (resetTimer.current !== null) window.clearTimeout(resetTimer.current);
+    resetTimer.current = window.setTimeout(() => {
+      setStatus("idle");
+      resetTimer.current = null;
+    }, 2000);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (resetTimer.current !== null) window.clearTimeout(resetTimer.current);
+    };
+  }, []);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(generatePlaytestExport(state));
+      setStatus("copied");
+      scheduleStatusReset();
+    } catch {
+      setStatus("failed");
+      scheduleStatusReset();
+    }
+  };
+
+  const label =
+    status === "copied"
+      ? "Run Log Copied"
+      : status === "failed"
+        ? "Copy Failed"
+        : "Copy Run Log";
+
+  return (
+    <button
+      className="px-8 py-4 bg-transparent border-2 border-tan text-tan rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-tan/10 active:bg-tan/20 transition-colors min-h-[44px] cursor-pointer"
+      onClick={handleCopy}
+      data-testid="copy-run-log-button"
+      aria-label={label}
+    >
+      {label}
+    </button>
   );
 }
