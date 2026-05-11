@@ -46,7 +46,7 @@ export default function App() {
         death={state.death}
         turnsSurvived={state.turn}
         history={state.history}
-        playtestExportState={isPlaytestMode ? state : undefined}
+        deathRunExportState={isPlaytestMode ? state : undefined}
         onRestart={restart}
       />
     );

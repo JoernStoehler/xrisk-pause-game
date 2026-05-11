@@ -50,6 +50,9 @@
   flows through Playwright. It does not cover broad desktop layout, deployed
   preview behavior, share/clipboard behavior, audio/mute persistence, or the
   generated card-map page.
+- `npx playwright test e2e/mobile-regression.spec.ts` runs the cheap
+  mobile-regression layout pass on Mobile Chrome and Chromium-backed
+  Safari-like device profiles.
 - `npm run cards` is required after TypeScript card edits.
 - For build/deploy/tooling changes, inspect `package.json`, `vite.config.ts`,
   `playwright.config.ts`, `wrangler.toml`, and `.github/workflows/deploy.yml`;

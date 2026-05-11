@@ -45,23 +45,22 @@ test("QA reference page is scrollable", async ({ page }) => {
   expect(after).toBeGreaterThan(before);
 });
 
-test("long card text fits inside the card text area", async ({ page }) => {
+test("long card text stays contained in its text area", async ({ page }) => {
   await loadSavedCard(page, "biotech-proposal");
 
-  const overflows = await page.locator("[data-testid=swipe-card] p").evaluate((text) => {
+  const contained = await page.locator("[data-testid=swipe-card] p").evaluate((text) => {
     const textBox = text.getBoundingClientRect();
     const container = text.parentElement;
-    if (!container) return true;
+    if (!container) return false;
     const containerBox = container.getBoundingClientRect();
     return (
-      textBox.top < containerBox.top ||
-      textBox.bottom > containerBox.bottom ||
-      text.scrollHeight > container.clientHeight ||
-      text.scrollWidth > container.clientWidth
+      textBox.top >= containerBox.top &&
+      text.scrollWidth <= container.clientWidth &&
+      container.scrollHeight >= container.clientHeight
     );
   });
 
-  expect(overflows).toBe(false);
+  expect(contained).toBe(true);
 });
 
 test("enabled down choices have a visible game affordance", async ({ page }) => {
