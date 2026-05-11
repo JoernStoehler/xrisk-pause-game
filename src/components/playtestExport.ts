@@ -6,48 +6,40 @@ import type {
   Resources,
 } from "../engine/types";
 
-const PLAYTEST_EXPORT_SCHEMA = "global-pause-playtest-run-v1";
+const DEATH_RUN_EXPORT_SCHEMA = "global-pause-playtest-death-run-v1";
 
-interface PlaytestRunExport {
-  schema: typeof PLAYTEST_EXPORT_SCHEMA;
+export type DeathRunExportState = GameState & { phase: "dead"; death: DeathInfo };
+
+interface DeathRunExport {
+  schema: typeof DEATH_RUN_EXPORT_SCHEMA;
   generatedAt: string;
-  phase: GameState["phase"];
-  outcome: "dead" | "victory" | "in-progress" | "not-started";
+  phase: "dead";
   turnCount: number;
   resources: Resources;
   hidden: HiddenState;
-  death: DeathInfo | null;
+  death: DeathInfo;
   history: HistoryEntry[];
-  activeCardId: string | null;
   rngState: number;
   limitations: string[];
-}
-
-function getOutcome(phase: GameState["phase"]): PlaytestRunExport["outcome"] {
-  if (phase === "dead" || phase === "victory") return phase;
-  if (phase === "playing") return "in-progress";
-  return "not-started";
 }
 
 function copyHistory(history: readonly HistoryEntry[]): HistoryEntry[] {
   return history.map(({ turn, cardId, choice }) => ({ turn, cardId, choice }));
 }
 
-export function buildPlaytestExport(
-  state: GameState,
+export function buildDeathRunExport(
+  state: DeathRunExportState,
   generatedAt: Date = new Date(),
-): PlaytestRunExport {
+): DeathRunExport {
   return {
-    schema: PLAYTEST_EXPORT_SCHEMA,
+    schema: DEATH_RUN_EXPORT_SCHEMA,
     generatedAt: generatedAt.toISOString(),
     phase: state.phase,
-    outcome: getOutcome(state.phase),
     turnCount: state.turn,
     resources: { ...state.resources },
     hidden: { ...state.hidden },
-    death: state.death ? { ...state.death } : null,
+    death: { ...state.death },
     history: copyHistory(state.history),
-    activeCardId: state.activeCard?.templateId ?? null,
     rngState: state.rngState,
     limitations: [
       "initialSeed is not currently tracked; current rngState is exported instead.",
@@ -55,9 +47,9 @@ export function buildPlaytestExport(
   };
 }
 
-export function generatePlaytestExport(
-  state: GameState,
+export function generateDeathRunExport(
+  state: DeathRunExportState,
   generatedAt: Date = new Date(),
 ): string {
-  return JSON.stringify(buildPlaytestExport(state, generatedAt), null, 2);
+  return JSON.stringify(buildDeathRunExport(state, generatedAt), null, 2);
 }
