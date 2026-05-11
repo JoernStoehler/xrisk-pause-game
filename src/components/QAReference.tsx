@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import { SpeakerPortrait } from "./SpeakerPortrait";
+import { SPEAKER_PORTRAIT_NAMES } from "./speakerPortraitRegistry";
 import { ALL_CARDS } from "../data/cards";
 import { DEATH_MESSAGES } from "../data/deaths";
 import { newGame } from "../engine/state";
@@ -19,31 +20,6 @@ const RESOURCE_LABELS: Record<ResourceKey, string> = {
 };
 
 const LARGE_THRESHOLD = 10;
-
-/** All unique speakers in portrait-import order */
-const SPEAKERS = [
-  "Chief Financial Officer",
-  "Communications Director",
-  "Head of Human Resources",
-  "Political Advisor",
-  "Press Secretary",
-  "Intelligence Analyst",
-  "Junior Analyst",
-  "Customs Liaison",
-  "Anonymous Source",
-  "Diplomatic Attaché",
-  "Legal Counsel",
-  "Civil Liberties Advocate",
-  "UN Secretary-General",
-  "Ethics Watchdog",
-  "Finance Director",
-  "Enforcement Chief",
-  "Investigative Journalist",
-  "NATO Liaison",
-  "Chief Scientist",
-  "Deputy Director",
-  "Executive Assistant",
-];
 
 /** Resolve a Dynamic value for display using a default state. */
 function res<T>(value: Dynamic<T>, state: GameState): T {
@@ -103,7 +79,7 @@ export function QAReference() {
       {/* --- PORTRAITS --- */}
       <h2 className="text-xl font-bold mb-3 border-b border-neutral-700 pb-1">Portraits</h2>
       <div className="grid grid-cols-3 sm:grid-cols-4 gap-3 mb-10">
-        {SPEAKERS.map((speaker, i) => (
+        {SPEAKER_PORTRAIT_NAMES.map((speaker, i) => (
           <div key={speaker} className="text-center">
             <div className="relative">
               <span className="absolute top-1 left-1 bg-black/70 text-white text-xs px-1.5 py-0.5 rounded font-bold z-10">
@@ -185,7 +161,7 @@ export function QAReference() {
       </div>
 
       <p className="text-neutral-500 text-xs text-center pb-4">
-        Ref format: P1-P{SPEAKERS.length} for portraits, C1-C{ALL_CARDS.length} for cards
+        Ref format: P1-P{SPEAKER_PORTRAIT_NAMES.length} for portraits, C1-C{ALL_CARDS.length} for cards
       </p>
     </div>
   );
