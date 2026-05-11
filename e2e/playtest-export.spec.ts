@@ -72,7 +72,7 @@ test("playtest mode shows run-log export and copies parseable JSON", async ({ pa
   };
 
   expect(copied).toMatchObject({
-    schema: "global-pause-playtest-run-v1",
+    schema: "global-pause-playtest-death-run-v1",
     phase: "dead",
     turnCount: 2,
     hidden: { pressure: 2 },

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { DeathInfo, GameState, HistoryEntry, ResourceKey } from "../engine/types";
 import { audio } from "../hooks/useAudio";
 import { ShareButton } from "./ShareButton";
-import { generatePlaytestExport } from "./playtestExport";
+import { generateDeathRunExport } from "./playtestExport";
 import { generateShareText } from "./shareText";
 
 type DeadGameState = GameState & { phase: "dead"; death: DeathInfo };
@@ -44,7 +44,7 @@ interface DeathScreenProps {
   death: DeathInfo;
   turnsSurvived: number;
   history: HistoryEntry[];
-  playtestExportState?: DeadGameState;
+  deathRunExportState?: DeadGameState;
   onRestart: () => void;
 }
 
@@ -52,7 +52,7 @@ export function DeathScreen({
   death,
   turnsSurvived,
   history,
-  playtestExportState,
+  deathRunExportState,
   onRestart,
 }: DeathScreenProps) {
   const handleRestart = useCallback(() => {
@@ -105,9 +105,9 @@ export function DeathScreen({
         {generateShareText(death, turnsSurvived, history)}
       </div>
 
-      <div className={playtestExportState ? "flex w-full max-w-sm flex-col gap-3" : "flex gap-4"}>
+      <div className={deathRunExportState ? "flex w-full max-w-sm flex-col gap-3" : "flex gap-4"}>
         <ShareButton death={death} turn={turnsSurvived} history={history} />
-        {playtestExportState && <CopyRunLogButton state={playtestExportState} />}
+        {deathRunExportState && <CopyRunLogButton state={deathRunExportState} />}
         <button
           className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-tan-light active:bg-tan-light transition-colors min-h-[44px] cursor-pointer"
           onClick={handleRestart}
@@ -141,7 +141,7 @@ function CopyRunLogButton({ state }: { state: DeadGameState }) {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(generatePlaytestExport(state));
+      await navigator.clipboard.writeText(generateDeathRunExport(state));
       setStatus("copied");
       scheduleStatusReset();
     } catch {
