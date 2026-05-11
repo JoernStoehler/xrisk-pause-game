@@ -2,7 +2,7 @@
 
 ## Status
 - State: active
-- Last updated: 2026-05-10
+- Last updated: 2026-05-11
 - Source surfaces: `.github/workflows/deploy.yml`, `wrangler.toml`,
   `package.json`, `vite.config.ts`, `dist/`, Cloudflare Pages
 - Refresh when: build output, deploy workflow, Cloudflare config, package
@@ -48,6 +48,10 @@
   `https://global-pause.pages.dev/cards-map.html`. Wrangler prints
   commit-specific Pages URLs during deploy; use those for commit-level smoke
   checks when needed.
+- `#qa` and `?playtest=1` are intentionally reachable public-by-URL internal
+  review surfaces. They are acceptable for controlled review/playtest links,
+  but should be gated, removed, or explicitly accepted before broader public
+  launch where spoilers or copied hidden-state logs would matter.
 - Do not change deploy credentials, GitHub secrets, Cloudflare project settings,
   or production routing without Jörn approval.
 

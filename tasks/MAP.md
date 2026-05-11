@@ -9,7 +9,7 @@ definitions under tasks/. It is not a complete history of old task rows.
 ## Status
 
 - State: canonical session-start map/cache.
-- Last updated: 2026-05-10.
+- Last updated: 2026-05-11.
 - Project phase: handoff after non-content architecture, test, and deploy
   cleanup; content overhaul and observed playtesting remain next.
 
@@ -99,8 +99,8 @@ Validation meanings:
 
 - `npm run check`: typecheck, lint, build, and current Vitest unit tests,
   including engine/session/card/CLI/storage/share-text coverage.
-- `npm run test:e2e`: Playwright mobile-flow coverage, not broad visual
-  coverage.
+- `npm run test:e2e`: Playwright flow coverage plus targeted mobile regression
+  checks, not broad visual coverage.
 - `npm run cli auto 20`: quick autoplay smoke check over available choices, not
   a full balance proof.
 - `npm run cards`: generated card review artifacts; inspect diffs after card
