@@ -6,10 +6,18 @@ import { GameScreen } from "./components/GameScreen";
 import { DeathScreen } from "./components/DeathScreen";
 import { TutorialScreen } from "./components/TutorialScreen";
 import { QAReference } from "./components/QAReference";
+import type { DeathInfo, GameState } from "./engine/types";
+
+type DeadGameState = GameState & { phase: "dead"; death: DeathInfo };
+
+function isDeadGameState(state: GameState): state is DeadGameState {
+  return state.phase === "dead" && state.death !== null;
+}
 
 export default function App() {
   const { state, startGame, choose, restart, tutorialIndex, advanceTutorial, skipTutorial } = useGame();
   const [hash, setHash] = useState(window.location.hash);
+  const isPlaytestMode = new URLSearchParams(window.location.search).get("playtest") === "1";
 
   useEffect(() => {
     const onHash = () => setHash(window.location.hash);
@@ -32,12 +40,13 @@ export default function App() {
         onSkip={skipTutorial}
       />
     );
-  } else if (state.phase === "dead" && state.death) {
+  } else if (isDeadGameState(state)) {
     screen = (
       <DeathScreen
         death={state.death}
         turnsSurvived={state.turn}
         history={state.history}
+        playtestExportState={isPlaytestMode ? state : undefined}
         onRestart={restart}
       />
     );
