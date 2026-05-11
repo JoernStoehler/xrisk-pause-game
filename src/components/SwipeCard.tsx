@@ -46,17 +46,23 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
   }, [tiltDirection, onTiltChange]);
 
   return (
-    <div className="flex flex-col items-center flex-1 relative justify-start pt-4 px-2 overflow-hidden" data-testid="swipe-card" role="region" aria-label={`${card.speaker} presents a decision`}>
-      <div className="w-full flex flex-col">
-        {/* Text area does NOT tilt; it grows for long cards instead of clipping. */}
-        <div className="bg-tan px-5 py-3 min-h-[112px] flex items-center justify-center rounded-t-lg">
-          <p className="text-text-dark text-sm leading-snug text-center">
+    <div className="flex flex-col items-center flex-1 min-h-0 relative justify-start pt-1 px-2 overflow-hidden" data-testid="swipe-card" role="region" aria-label={`${card.speaker} presents a decision`}>
+      <div className="w-full h-full min-h-0 flex flex-col">
+        {/* Text area does NOT tilt; it scrolls when long copy would bury choices. */}
+        <div
+          className="bg-tan px-5 py-2 min-h-[96px] flex items-start justify-center rounded-t-lg overflow-y-auto shrink-0"
+          style={{ maxHeight: "24dvh" }}
+        >
+          <p className="text-text-dark text-[13px] leading-snug text-center">
             {card.text}
           </p>
         </div>
 
         {/* Portrait area — constrained width, centered */}
-        <div className="max-w-[280px] w-full mx-auto relative" style={{ perspective: "800px" }}>
+        <div
+          className="w-full mx-auto relative shrink-0"
+          style={{ maxWidth: "clamp(152px, 24dvh, 280px)", perspective: "800px" }}
+        >
           {/* Card back — behind portrait, visible when portrait tilts */}
           <div className="absolute inset-0 rounded-lg bg-[#1A3D2E] flex flex-col items-center justify-center gap-12">
             <FleurDeLis />
@@ -78,7 +84,7 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
         </div>
 
         {/* Fixed speaker name — does NOT tilt */}
-        <div className="bg-tan px-4 py-2.5 text-center">
+        <div className="bg-tan px-4 py-2 text-center shrink-0">
           <span className="text-text-dark text-base font-bold">
             {card.speaker}
           </span>
@@ -87,7 +93,7 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
         {/* Choice labels — below speaker name, darken proportional to swipe.
            Uses color-mix to interpolate muted→dark. Don't use opacity — the
            label starts at opacity 1, so any multiplier dims it first. */}
-        <div className="bg-tan px-4 py-2 flex justify-between rounded-b-lg">
+        <div className="bg-tan px-4 py-1.5 flex justify-between rounded-b-lg shrink-0">
           <span
             className="swipe-label text-text-muted text-sm font-bold select-none leading-tight text-left"
             style={tiltDirection === "left" ? { color: `color-mix(in srgb, var(--color-text-muted), var(--color-text-dark) ${swipeProgress * 100}%)` } : undefined}
@@ -106,7 +112,7 @@ export const SwipeCard = forwardRef<SwipeCardHandle, SwipeCardProps>(
         {!card.down.disabled && (
           <button
             type="button"
-            className="bg-tan px-4 pb-3 text-center text-text-muted text-sm font-bold leading-tight rounded-b-lg cursor-pointer"
+            className="bg-tan px-4 py-2 text-center text-text-muted text-sm font-bold leading-tight rounded-b-lg cursor-pointer min-h-[44px] shrink-0"
             style={tiltDirection === "down" ? { color: `color-mix(in srgb, var(--color-text-muted), var(--color-text-dark) ${swipeProgress * 100}%)` } : undefined}
             data-testid="label-down"
             onClick={() => commitProgrammatic("down")}
