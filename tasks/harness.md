@@ -2,7 +2,7 @@
 
 ## Status
 - State: active
-- Last updated: 2026-05-10
+- Last updated: 2026-05-14
 - Source surfaces: `AGENTS.md`, `.agents/skills/`, `.codex/`, `.devcontainer/`,
   `tasks/`, `scripts/`
 - Refresh when: harness structure, skills, task routing, or devcontainer
@@ -33,18 +33,25 @@
 - [done] Delete irrelevant copied math/Rust/thesis/cluster skills.
 - [done] Keep `research-topic` and `write-cards` as explicit TODO
   placeholders for Jörn.
+- [done] Record Codex web backup-environment outcomes in
+  `.devcontainer/codex-web.md`; it is an empirical pass/fail note, not a setup
+  guarantee.
 - [done] Keep `project-quality` as a separate skill.
 - [done] Fix small review findings before merge: `AGENTS.md` session-start
   map instruction, deployment/tooling map entries, `toc.sh` fenced code
   handling, and `.codex/.gitignore` wording.
-- [future] Decide whether this repo needs Codex web setup scripts analogous to
-  `msc-math`.
+- [future] Decide whether the Codex web backup environment needs actual setup
+  scripts; current evidence says browser binaries, Node 22+ for Wrangler, and
+  `age` are missing there.
 - [cut] Do not keep `scripts/codex-worktree.sh`; use raw `git worktree`
   commands until a helper is reviewed separately.
 
 ## Agent Cache
 
 - No harness migration worktree is currently active.
+- The local devcontainer is the primary environment. Its README and helper
+  scripts now document persisted npm/Playwright caches and Playwright version
+  alignment checks.
 - Validation for harness-only changes:
 
 ```bash

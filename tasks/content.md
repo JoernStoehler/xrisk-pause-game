@@ -2,7 +2,7 @@
 
 ## Status
 - State: active
-- Last updated: 2026-05-10
+- Last updated: 2026-05-14
 - Source surfaces: `design/`, `literature/`, `src/data/cards/`
 - Refresh when: card concepts, domain model, or generated card exports change
 
@@ -13,11 +13,15 @@
 - [Jörn] Expert-grounded content is draft until Jörn approves it.
 - [active] The geopolitical model needed strengthening around corruption,
   institutional capture, and adversary influence.
+- [Jörn] Current bottleneck is expert-model extraction. Broad card review,
+  rewrites, and new expert-grounded mechanisms should wait until Jörn marks the
+  extracted proposal ready for integration review.
 
 ## Work Map
 
-- [active] Review and revise card text by related card groups, not only
-  isolated cards.
+- [blocked] Review and revise card text by related card groups after the
+  expert-model proposal is ready; doing broad card review before then is likely
+  wasteful.
 - [active] Keep source-grounded mechanisms traceable from design/literature
   notes to card concepts and implementation.
 - [active] Add or restore a usable card/research workflow before large-scale
@@ -43,9 +47,10 @@
   `src/data/cards/groups.ts`.
 - After `npm run cards`, inspect generated diffs for card count, grouping,
   hidden-state/history/tag graph edges, and review-text quality.
-- Current `design/cards-export.md` includes source files, tags, hidden effects,
-  and dynamic-enabled markers, but still omits pool weights, source comments,
-  and source line references.
+- Current `design/cards-export.md` includes source files and line numbers,
+  group/tag/speaker summaries, initial pool weights, hidden read/write aids,
+  dynamic-enabled markers, and per-card review text. These are lightweight
+  review aids, not semantic proof.
 - Static 2-or-3 choices are the intended direction, but this is not yet a
   passing invariant: `src/data/cards/content.test.ts` keeps an expected-failing
   guard until existing dynamic `enabled` options are migrated or deliberately

@@ -2,7 +2,7 @@
 
 ## Status
 - State: active
-- Last updated: 2026-05-10
+- Last updated: 2026-05-14
 - Source surfaces: `src/`, `e2e/`, `scripts/cli.test.ts`, `package.json`
 - Refresh when: engine, UI flow, input handling, or app validation changes
 
@@ -42,10 +42,10 @@
 - `npm run check` covers typecheck, lint, build, and unit tests.
 - Current Vitest coverage includes fixture-based engine/session tests, card
   registry validation, CLI command integration tests, app storage/rehydration
-  tests, and share-text tests. Engine behavior changes should add focused
-  tests for affected contracts, such as hidden state, disabled/down choices,
-  draw eligibility, anti-repeat fallback, death/victory, RNG, or save
-  compatibility.
+  tests, share-text tests, playtest export tests, and speaker portrait coverage
+  tests. Engine behavior changes should add focused tests for affected
+  contracts, such as hidden state, disabled/down choices, draw eligibility,
+  anti-repeat fallback, death/victory, RNG, or save compatibility.
 - `npm run test:e2e` covers mobile-first title/tutorial/drag/keyboard/death
   flows through Playwright. It does not cover broad desktop layout, deployed
   preview behavior, share/clipboard behavior, audio/mute persistence, or the
@@ -53,6 +53,9 @@
 - `npx playwright test e2e/mobile-regression.spec.ts` runs the cheap
   mobile-regression layout pass on Mobile Chrome and Chromium-backed
   Safari-like device profiles.
+- `?playtest=1` exposes a death-screen run-log export for controlled
+  playtests. Keep it aligned with the actual death-run UI rather than expanding
+  it into hypothetical live-run export paths without a known consumer.
 - `npm run cards` is required after TypeScript card edits.
 - For build/deploy/tooling changes, inspect `package.json`, `vite.config.ts`,
   `playwright.config.ts`, `wrangler.toml`, and `.github/workflows/deploy.yml`;

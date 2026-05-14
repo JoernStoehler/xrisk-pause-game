@@ -2,7 +2,7 @@
 
 ## Status
 - State: active
-- Last updated: 2026-05-11
+- Last updated: 2026-05-14
 - Source surfaces: `.github/workflows/deploy.yml`, `wrangler.toml`,
   `package.json`, `vite.config.ts`, `dist/`, Cloudflare Pages
 - Refresh when: build output, deploy workflow, Cloudflare config, package
@@ -31,6 +31,9 @@
 - [done] 2026-05-10 post-change deploy verification: GitHub Actions validate
   and deploy jobs passed after switching to Node 24-native actions and direct
   `npx wrangler`; stable app and `cards-map` URLs returned 200.
+- [done] 2026-05-11 integration deploy verification: GitHub Actions validate
+  and deploy jobs passed for the integrated review/mobile/playtest/portrait
+  changes; stable app and `cards-map` URLs returned 200.
 - [future] Coordinate with `tasks/playtesting.md` before treating a public
   deploy as ready for broader feedback loops.
 - [future] Add deploy dry-run or preview guidance if deployment changes become

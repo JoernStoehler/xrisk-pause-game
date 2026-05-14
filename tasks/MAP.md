@@ -9,9 +9,9 @@ definitions under tasks/. It is not a complete history of old task rows.
 ## Status
 
 - State: canonical session-start map/cache.
-- Last updated: 2026-05-11.
-- Project phase: handoff after non-content architecture, test, and deploy
-  cleanup; content overhaul and observed playtesting remain next.
+- Last updated: 2026-05-14.
+- Project phase: post-integration maintenance while Jörn works on expert-model
+  extraction; broad content/card changes should wait for that proposal.
 
 ## Source Surfaces
 
@@ -36,7 +36,7 @@ state here and topic detail in `tasks/<group>.md`.
 
 | Bundle | Current role | Start here |
 | --- | --- | --- |
-| Content | source-grounded domain/content overhaul, card quality, balance process | `tasks/content.md` |
+| Content | expert-model integration, source-grounded overhaul, card quality | `tasks/content.md` |
 | App | engine, UI, gameplay, playability, app validation | `tasks/app.md` |
 | Deploy | Cloudflare Pages deployment, release checks, post-deploy outcome tracking | `tasks/deploy.md` |
 | Playtesting | player feedback loops, learning objectives, and quality gates | `tasks/playtesting.md` |
@@ -70,7 +70,7 @@ boundary is cleared.
 | Card content | Draft | Existing card text is agent-written and needs expert review/rewrite. Card files export explicit arrays through `src/data/cards/groups.ts`. |
 | Death messages | Placeholder | Expected to change with the content overhaul. |
 | Tutorial | Placeholder | Scripted Deputy Director cards, not final designed content. |
-| Portraits | Placeholder | Prior review found bad and borderline portrait styles. |
+| Portraits | Placeholder, guarded | Coverage tests ensure current speakers have mapped assets; regeneration still waits for content stability. |
 | Card map tool | Settled | `npm run cards` regenerates review artifacts. |
 | Deploy workflow | Settled | Pushes to `main` run validation, regenerate card artifacts, build, and deploy to Cloudflare Pages. |
 | Domain model | Mostly settled draft | Geopolitics additions still need Jörn validation. |
