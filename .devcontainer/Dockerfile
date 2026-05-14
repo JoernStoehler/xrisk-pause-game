@@ -1,5 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
+ARG GITLEAKS_VERSION=8.30.1
+ARG PLAYWRIGHT_VERSION=1.60.0
+
 ENV DEBIAN_FRONTEND=noninteractive
 
 SHELL ["/bin/bash", "-lc"]
@@ -35,7 +38,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # Gitleaks — pre-commit secret scanner (prevents hardcoded API keys)
 RUN set -eux; \
-    curl -fsSL https://github.com/gitleaks/gitleaks/releases/download/v8.24.0/gitleaks_8.24.0_linux_x64.tar.gz \
+    curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
     | tar xz -C /usr/local/bin gitleaks; \
     gitleaks version
 
@@ -56,7 +59,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
 
 # Playwright system dependencies for Chromium.
 # Uses the playwright CLI to install the correct system packages for this OS.
-RUN npx -y playwright install-deps chromium
+RUN npx -y "playwright@${PLAYWRIGHT_VERSION}" install-deps chromium
 
 # Switch to dev user (browser binaries installed as vscode, not root)
 USER vscode
@@ -65,6 +68,6 @@ ENV PATH="$HOME/.local/bin:$PATH"
 
 # Playwright browser binaries (pinned to project version).
 # install-deps above handles system libs; this downloads the actual browser.
-RUN npx -y playwright@1.56.1 install chromium
+RUN npx -y "playwright@${PLAYWRIGHT_VERSION}" install chromium
 
 WORKDIR /workspaces/xrisk-pause-game

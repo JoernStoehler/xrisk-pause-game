@@ -9,7 +9,7 @@ the container.
 From the host:
 
 ```bash
-.devcontainer/host-devcontainer-rebuild.sh
+.devcontainer/host-devcontainer-rebuild.sh --refresh-tools
 .devcontainer/host-vscode-tunnel.sh
 ```
 
@@ -35,6 +35,43 @@ VS Code tunnel state uses a Docker named volume:
 | Volume | Container path | Purpose |
 |--------|----------------|---------|
 | `xrisk-pause-game-vscode` | `~/.vscode` | VS Code tunnel auth and CLI state |
+
+Use `--refresh-tools` when the goal is to update downloaded image tools such as
+the VS Code tunnel CLI. It maps to `devcontainer build --no-cache`, so the
+download layer is not reused from Docker cache.
+
+## Maintenance Objective
+
+Devcontainer maintenance should keep the host-launched VS Code tunnel,
+agent CLI tools, Node/Playwright test environment, and persisted caches usable
+after a rebuild without changing project behavior.
+
+Prefer durable Dockerfile or script changes over manually patching the running
+container. Manual changes inside the running container are only useful when they
+verify the current session or unblock validation before the next rebuild.
+
+## Quality Gates
+
+For devcontainer or VS Code tunnel maintenance, check the relevant gates before
+handing off:
+
+```bash
+bash -n .devcontainer/host-devcontainer-rebuild.sh .devcontainer/host-vscode-tunnel.sh .devcontainer/post-create.sh .devcontainer/warmup-cache.sh
+git diff --check
+code-tunnel --version
+gitleaks version
+node -v
+npm -v
+npm ls @playwright/test playwright playwright-core
+./node_modules/.bin/playwright --version
+./node_modules/.bin/playwright install --dry-run chromium
+npm run check
+npm run test:e2e
+```
+
+When Playwright changes, the npm package version, Dockerfile
+`PLAYWRIGHT_VERSION`, and downloaded Chromium revision should match the same
+Playwright release.
 
 ## Verification
 

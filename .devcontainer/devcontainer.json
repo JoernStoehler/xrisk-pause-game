@@ -13,7 +13,7 @@
   // - devcontainer CLI: npm i -g @devcontainers/cli
   //
   // Usage from host:
-  //   .devcontainer/host-devcontainer-rebuild.sh
+  //   .devcontainer/host-devcontainer-rebuild.sh --refresh-tools
   //   .devcontainer/host-vscode-tunnel.sh
   "name": "xrisk-pause-game-local",
   "dockerFile": "Dockerfile",

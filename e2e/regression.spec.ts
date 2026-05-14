@@ -37,8 +37,7 @@ test("QA reference page is scrollable", async ({ page }) => {
     .toBe(true);
 
   const before = await page.evaluate(() => window.scrollY);
-  await page.mouse.move(200, 400);
-  await page.mouse.wheel(0, 900);
+  await page.keyboard.press("PageDown");
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(before);
   const after = await page.evaluate(() => window.scrollY);
 

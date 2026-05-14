@@ -5,10 +5,15 @@ set -euo pipefail
 
 if [[ ${1:-} == "--help" || ${1:-} == "-h" ]]; then
   cat <<'EOF'
-Usage: .devcontainer/host-devcontainer-rebuild.sh [devcontainer build args...]
+Usage: .devcontainer/host-devcontainer-rebuild.sh [--refresh-tools] [devcontainer build args...]
 
 Rebuild the devcontainer image and recreate the container.
 Run from the host machine (not inside the container).
+
+Options:
+  --refresh-tools  Build with --no-cache so downloaded tools such as the
+                   VS Code tunnel CLI are fetched fresh instead of reused from
+                   Docker cache.
 
 Additional arguments are passed to `devcontainer build`.
 
@@ -20,6 +25,18 @@ fi
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CONFIG_FILE="${REPO_ROOT}/.devcontainer/devcontainer.json"
+BUILD_ARGS=()
+
+for arg in "$@"; do
+  case "$arg" in
+    --refresh-tools)
+      BUILD_ARGS+=("--no-cache")
+      ;;
+    *)
+      BUILD_ARGS+=("$arg")
+      ;;
+  esac
+done
 
 if ! command -v devcontainer >/dev/null 2>&1; then
   echo "devcontainer CLI not found. Install with 'npm i -g @devcontainers/cli' or via VS Code Dev Containers extension." >&2
@@ -27,7 +44,7 @@ if ! command -v devcontainer >/dev/null 2>&1; then
 fi
 
 echo "Building devcontainer image for ${REPO_ROOT}..."
-devcontainer build --workspace-folder "${REPO_ROOT}" --config "${CONFIG_FILE}" "$@"
+devcontainer build --workspace-folder "${REPO_ROOT}" --config "${CONFIG_FILE}" "${BUILD_ARGS[@]}"
 
 echo "Starting devcontainer (replacing existing container if present)..."
 devcontainer up --workspace-folder "${REPO_ROOT}" --config "${CONFIG_FILE}" --remove-existing-container
