@@ -24,6 +24,9 @@ independently, but expert-grounded content is draft until Jörn approves it.
 ```text
 .
 |-- AGENTS.md
+|-- ARCHITECTURE.md
+|-- PROGRESS.md
+|-- DEPLOY.md
 |-- package.json
 |-- src/
 |   |-- App.tsx
@@ -62,10 +65,6 @@ independently, but expert-grounded content is draft until Jörn approves it.
 |   |-- *.md
 |   |-- *.txt
 |   `-- *.enc
-|-- tasks/
-|   |-- README.md
-|   |-- MAP.md
-|   `-- <group>.md
 |-- public/
 |   |-- cards-map.html
 |   `-- static assets
@@ -85,8 +84,8 @@ independently, but expert-grounded content is draft until Jörn approves it.
 |   `-- scripts/
 |-- .codex/
 |   |-- .gitignore
-|   |-- agents/.gitkeep
-|   `-- worktrees/
+|   `-- agents/.gitkeep
+|-- .worktrees/
 |-- .devcontainer/
 |   |-- README.md
 |   |-- devcontainer.json
@@ -97,8 +96,12 @@ independently, but expert-grounded content is draft until Jörn approves it.
 
 - `AGENTS.md`: root instruction map. This repo does not use nested
   `AGENTS.md`.
-- `tasks/MAP.md`: session-start roadmap and routing surface. Read it before
-  broad edits or when current priority/maturity matters.
+- `ARCHITECTURE.md`: current implementation map, available features, known
+  placeholders, generated artifacts, and validation map.
+- `PROGRESS.md`: current work state, blockers, planned/deferred work, and
+  Jörn-needed decisions.
+- `DEPLOY.md`: Cloudflare Pages deployment, release checks, public URLs, and
+  deploy approval boundaries.
 - `package.json`: Vite, React, TypeScript, test, CLI, and card-export commands.
 - `vite.config.ts`, `playwright.config.ts`: app/test framework configuration.
 - `src/app/`: React game hook, browser storage, and tutorial-completion
@@ -114,11 +117,10 @@ independently, but expert-grounded content is draft until Jörn approves it.
   reviews, and research/design notes.
 - `literature/`: source notes and encrypted source-derived material. Run
   `scripts/decrypt-literature.sh` only when encrypted literature is needed.
-- `tasks/`: current steering, topic task bundles, and harness migration notes.
 - `.agents/skills/`: repo-local skill surface. Skill bodies require Jörn
   approval before they are treated as final durable instruction material.
 - `.codex/agents/`: optional repo-local subagent templates. Empty by default.
-- `.codex/worktrees/`: isolated worktrees for independent agent sessions.
+- `.worktrees/`: isolated worktrees for independent agent sessions.
 - `.devcontainer/`: local devcontainer with documentation.
 - `.github/workflows/deploy.yml`, `wrangler.toml`: Cloudflare Pages deployment.
 - `/tmp/`: scratch space for disposable clones, prompt drafts, and temporary
@@ -129,8 +131,11 @@ independently, but expert-grounded content is draft until Jörn approves it.
 Map files are navigation caches. They index, summarize, and structure folder
 content for quick navigation. They are not authoritative sources.
 
-- `tasks/MAP.md`: current roadmap, priority map, and task routing surface.
-- `tasks/README.md`: conventions for task bundles under `tasks/`.
+- `ARCHITECTURE.md`: current repo architecture, implementation state, and
+  available feature map.
+- `PROGRESS.md`: current work state, blockers, planned/deferred work, and
+  approval-sensitive items.
+- `DEPLOY.md`: deployment and release map.
 - `literature/INDEX.md`: source-note navigation.
 - `design/cards-export.md`: generated card review export; refresh with
   `npm run cards`.
@@ -149,7 +154,7 @@ they become final durable instruction material.
 ```bash
 # Harness and navigation
 git diff --check
-bash scripts/toc.sh AGENTS.md tasks/MAP.md
+bash scripts/toc.sh AGENTS.md ARCHITECTURE.md PROGRESS.md DEPLOY.md
 
 # App and engine
 npm run check

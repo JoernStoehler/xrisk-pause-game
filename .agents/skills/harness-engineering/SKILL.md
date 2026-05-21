@@ -133,10 +133,13 @@ project without reading obsolete routes or unrelated process lore.
 - root map only; do not turn it into a task tracker, style guide, or design doc
 - no nested `AGENTS.md`
 
-### `tasks/`
-- `tasks/MAP.md`: current roadmap, priority map, and task routing surface
-- `tasks/README.md`: conventions for task bundle files
-- `tasks/<group>.md`: topic-specific work state and cached decision context
+### Root Map Files
+- `ARCHITECTURE.md`: current implementation map, available features, known
+  placeholders, generated artifacts, and validation map
+- `PROGRESS.md`: current work state, blockers, planned/deferred work, and
+  Jörn-needed decisions
+- `DEPLOY.md`: Cloudflare Pages deployment, release checks, public URLs, and
+  deploy approval boundaries
 
 ### `.codex/`
 - no repo-local `.codex/config.toml` stub; user/runtime settings belong in
@@ -144,7 +147,7 @@ project without reading obsolete routes or unrelated process lore.
 - `.codex/.gitignore` is only a safety net against accidental runtime state
 - `.codex/agents/.gitkeep` preserves the optional subagent-template extension
   point without carrying generic role TOMLs
-- `.codex/worktrees/` is ignored scratch space for isolated agent branches
+- `.worktrees/` is ignored scratch space for isolated agent branches
 
 ### Skills
 - `$harness-engineering`: use for edits to `AGENTS.md`, `.agents/skills/**`,

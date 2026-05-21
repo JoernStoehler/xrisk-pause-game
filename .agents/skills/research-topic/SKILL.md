@@ -13,7 +13,8 @@ settled research/content instruction surface.
 
 Until then, agents using this skill should:
 
-- read `AGENTS.md`, `tasks/MAP.md`, and the relevant `tasks/*.md` bundle;
+- read `AGENTS.md`, `ARCHITECTURE.md`, `PROGRESS.md`, and relevant design or
+  literature files;
 - use current sources for current-world claims;
 - separate source facts, agent inference, game extrapolation, and
   Jörn-approved claims;

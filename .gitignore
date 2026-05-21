@@ -36,5 +36,5 @@ public/cards-map.html
 scratch/
 .Trash-*/
 
-# Local nested agent worktrees
-.codex/worktrees/
+# Local agent worktrees
+.worktrees/

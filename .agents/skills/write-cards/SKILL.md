@@ -13,7 +13,8 @@ as a settled content instruction surface.
 
 Until then, agents using this skill should:
 
-- read `AGENTS.md`, `tasks/MAP.md`, and the relevant content task bundle;
+- read `AGENTS.md`, `ARCHITECTURE.md`, `PROGRESS.md`, and relevant design
+  files;
 - inspect `src/engine/types.ts`, `src/data/cards/examples.ts`, and nearby card
   files before editing;
 - run `npm run cards` after TypeScript card edits;

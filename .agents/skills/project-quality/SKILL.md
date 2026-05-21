@@ -32,8 +32,8 @@ Common feedback loops:
   traceability, and clear approval boundaries.
 - **Automated validation**: unit tests, E2E flows, CLI simulations, generated
   card exports, screenshots, and deploy/build checks.
-- **Future-agent onboarding**: maps, task bundles, generated summaries,
-  explicit contracts, and removal of stale routes.
+- **Future-agent onboarding**: maps, generated summaries, explicit contracts,
+  and removal of stale routes.
 
 ## Quality Objectives
 
@@ -49,8 +49,9 @@ Common feedback loops:
 - **Agent maintainability**: Prefer explicit maps, local readability,
   checkable claims, boring structure, and useful duplication over abstractions
   that require fresh agents to reconstruct context.
-- **Tracking**: Keep current task state in `tasks/`, not in chat. Delete stale
-  tracker detail once git history is enough.
+- **Tracking**: Keep current implementation state in `ARCHITECTURE.md`, current
+  work state in `PROGRESS.md`, and release operations in `DEPLOY.md`, not in
+  chat. Delete stale tracker detail once git history is enough.
 
 ## Completeness Checks
 
@@ -72,7 +73,7 @@ thinking, not a mandatory checklist for every task.
 
 **Design and Research**
 - Is the source of truth clear: design doc, literature note, generated export,
-  task bundle, or code?
+  map file, or code?
 - Are uncertainty and approval status explicit where they matter?
 - Is the result easy for Jörn to review without reconstructing the full chat?
 
@@ -82,8 +83,8 @@ thinking, not a mandatory checklist for every task.
   local run as appropriate?
 - Does the interaction help players understand decisions and tradeoffs faster?
 
-**Harness and Tasks**
-- Did maps/task bundles change when routes, priorities, or validation changed?
+**Harness and Maps**
+- Did maps change when routes, priorities, or validation changed?
 - Were stale instruction paths removed instead of preserved in parallel?
 - If a skill or `AGENTS.md` changed, is it clearly Jörn-approved before final
   merge?
@@ -91,16 +92,17 @@ thinking, not a mandatory checklist for every task.
 **Deploy and Playtesting**
 - Is deploy success distinguished from project success?
 - Does the change improve or preserve later public feedback loops?
-- Are playtest findings routed back to content, app, deploy, or harness tasks?
+- Are playtest findings routed back to content, app, deploy, or harness/map
+  work?
 
 ## When To Improve The Repo
 
 If a quality gap slowed the task or made verification hard, prefer a small
 durable improvement over a chat explanation. Examples:
 
-- add or update a task-map row;
+- add or update `ARCHITECTURE.md`, `PROGRESS.md`, or `DEPLOY.md`;
 - add a focused test;
 - enrich a generated review artifact;
-- record a Jörn decision in the relevant task bundle;
+- record a Jörn decision in the relevant map, design, or source file;
 - remove a stale route;
 - make a repeated review question explicit.
