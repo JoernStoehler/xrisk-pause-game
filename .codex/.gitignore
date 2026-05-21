@@ -1,6 +1,7 @@
 # Safety net. Runtime state (auth.json, history.jsonl, log/, sessions/)
 # should never land here: Codex reads and writes runtime state under
-# ~/.codex (bind-mounted from /srv/devhome/.codex), not in this repo dir.
+# ~/.codex (bind-mounted from /srv/devhome/xrisk-pause-game/.codex), not in
+# this repo dir.
 # This repo tracks repo-local project skills and optional subagent templates,
 # but no repo-local Codex runtime config stub.
 # If any runtime-state file nevertheless appears here, this .gitignore keeps

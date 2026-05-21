@@ -1,45 +1,20 @@
 {
-  // Local devcontainer for xrisk-pause-game (Jörn's Ubuntu desktop).
-  // PRIMARY ENVIRONMENT.
-  //
-  // Features:
-  // - Bind mounts for cache persistence (npm, Playwright browsers)
-  // - Bind mounts for OAuth/runtime persistence (gh, codex)
-  // - Playwright + Chromium for E2E tests
-  //
-  // Prerequisites on host:
-  // - /srv/devhome/ directories exist
-  // - /srv/devhome/.cache/npm/ and /srv/devhome/.cache/ms-playwright/ exist
-  // - devcontainer CLI: npm i -g @devcontainers/cli
-  //
-  // Usage from host:
-  //   .devcontainer/host-devcontainer-rebuild.sh --refresh-tools
-  //   .devcontainer/host-vscode-tunnel.sh
-  "name": "xrisk-pause-game-local",
+  "name": "xrisk-pause-game",
   "dockerFile": "Dockerfile",
   "workspaceFolder": "/workspaces/xrisk-pause-game",
   "updateRemoteUserUID": true,
   "features": {},
-  // Memory limit: 10GB RAM + 2GB swap max. Protects host from runaway processes.
-  // --cap-add=SYS_ADMIN: needed for perf, strace, and other profiling tools.
-  "runArgs": ["--memory=10g", "--memory-swap=12g", "--cap-add=SYS_ADMIN"],
+  "runArgs": ["--memory=8g", "--memory-swap=10g"],
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "containerEnv": {
-    "DEVCONTAINER_ENV": "local",
     "TERM": "xterm-256color",
     "LANG": "en_US.UTF-8",
-    "HISTFILE": "/home/vscode/.bash_history_dir/.bash_history",
-    // Store VS Code tunnel auth in files instead of system keychain
-    // (persisted via the xrisk-pause-game-vscode Docker volume).
+    "DEVCONTAINER_ENV": "local",
     "VSCODE_CLI_USE_FILE_KEYCHAIN": "1"
   },
-  // Bind mounts: Jörn's specific host paths for cache persistence.
   "mounts": [
-    "source=/srv/devhome/.codex,target=/home/vscode/.codex,type=bind,consistency=cached",
+    "source=/srv/devhome/xrisk-pause-game/.codex,target=/home/vscode/.codex,type=bind,consistency=cached",
     "source=/srv/devhome/.config/gh,target=/home/vscode/.config/gh,type=bind,consistency=cached",
-    "source=/srv/devhome/.cache/npm,target=/home/vscode/.cache/npm,type=bind,consistency=cached",
-    "source=/srv/devhome/.cache/ms-playwright,target=/home/vscode/.cache/ms-playwright,type=bind,consistency=cached",
-    "source=/srv/devhome/.bash_history_dir,target=/home/vscode/.bash_history_dir,type=bind,consistency=cached",
     "source=xrisk-pause-game-vscode,target=/home/vscode/.vscode,type=volume"
   ]
 }

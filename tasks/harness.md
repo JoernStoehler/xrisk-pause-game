@@ -2,7 +2,7 @@
 
 ## Status
 - State: active
-- Last updated: 2026-05-14
+- Last updated: 2026-05-19
 - Source surfaces: `AGENTS.md`, `.agents/skills/`, `.codex/`, `.devcontainer/`,
   `tasks/`, `scripts/`
 - Refresh when: harness structure, skills, task routing, or devcontainer
@@ -36,6 +36,9 @@
 - [done] Record Codex web backup-environment outcomes in
   `.devcontainer/codex-web.md`; it is an empirical pass/fail note, not a setup
   guarantee.
+- [done] Make the local devcontainer use repo-specific Codex runtime state at
+  `/srv/devhome/xrisk-pause-game/.codex` instead of sharing
+  `/srv/devhome/.codex`.
 - [done] Keep `project-quality` as a separate skill.
 - [done] Fix small review findings before merge: `AGENTS.md` session-start
   map instruction, deployment/tooling map entries, `toc.sh` fenced code
@@ -49,9 +52,9 @@
 ## Agent Cache
 
 - No harness migration worktree is currently active.
-- The local devcontainer is the primary environment. Its README and helper
-  scripts now document persisted npm/Playwright caches and Playwright version
-  alignment checks.
+- The local devcontainer is the primary environment. It uses a repo-specific
+  mounted Codex home, a shared GitHub CLI auth mount, a VS Code tunnel volume,
+  and no npm/Playwright/bash-history cache mounts.
 - Validation for harness-only changes:
 
 ```bash
