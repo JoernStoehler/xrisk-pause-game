@@ -19,6 +19,25 @@ feature set, or expert predictions. Agents may draft, implement, test,
 refactor, refresh generated artifacts, and propose wording or UI details
 independently, but expert-grounded content is draft until Jörn approves it.
 
+## Implicit Objectives
+Unless stated otherwise:
+- Agents must contextualize their work, including task scope and review criteria, as instrumental for project success.
+- Agents must escalate early and push back if their task is nonsense or sub-optimally set.
+- Agents must minimize the amount of time Jörn has to spend (this is the one bottleneck for the project timeline)
+- Concretely, agents should not ask questions they know the answer to, make requests they can carry out, end a turn without good reason, split a questionnaire into multiple messages, ask questions that Jörn cannot cheaply answer, withhold/skip gathering information that Jörn has to rederive on his own time then.
+- Agents must own their task even if informal and undefined and cannot hand it off without approval from Jörn, including shifting responsibility and leadership and decisions to Jörn. Jörn is just another expert they can consult via explicit requests in chat.
+- Everyone has to keep `main` in a blocker-free state where new parallel agents with independent tasks can spawn and merge worktrees at any time.
+
+## Chat Rules
+
+When interacting with Jörn in chat:
+- Use no new terminology.
+- Number/label everything so Jörn can reference it without ambiguity.
+- Write plain. Use zero metaphors and zero analogies.
+- Use progressive disclosure.
+- Do not iterate artifacts in chat. Iterate artifacts in scratch, then copy the
+  current artifact to chat or link the scratch path.
+
 ## Files
 
 ```text
@@ -117,14 +136,16 @@ independently, but expert-grounded content is draft until Jörn approves it.
   reviews, and research/design notes.
 - `literature/`: source notes and encrypted source-derived material. Run
   `scripts/decrypt-literature.sh` only when encrypted literature is needed.
-- `.agents/skills/`: repo-local skill surface. Skill bodies require Jörn
-  approval before they are treated as final durable instruction material.
+- `.agents/skills/`: repo-local skill surface.
 - `.codex/agents/`: optional repo-local subagent templates. Empty by default.
+- Harness files (`AGENTS.md`, `.agents/skills/**`, `.codex/agents/**`) are
+  frozen unless Jörn explicitly asks for a harness edit.
 - `.worktrees/`: isolated worktrees for independent agent sessions.
 - `.devcontainer/`: local devcontainer with documentation.
 - `.github/workflows/deploy.yml`, `wrangler.toml`: Cloudflare Pages deployment.
-- `/tmp/`: scratch space for disposable clones, prompt drafts, and temporary
-  reports; not durable project state.
+- `/tmp/`: scratch space for subagent prompts, iterative drafts, disposable
+  chat artifacts, disposable clones, and temporary reports; not durable project
+  state.
 
 ## Map Files
 
