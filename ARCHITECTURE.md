@@ -57,6 +57,8 @@ authored cards still use dynamic `enabled` options.
 
 - `design/domain-model.md` is the conceptual domain model underneath card
   content.
+- `design/EXPERT_MODEL.md` is the single retained recovered source-of-truth
+  file for Jörn's expert model from the deleted extraction session.
 - `design/card-concepts.md` is the card idea inventory.
 - `design/geopolitics-synthesis.md` and `design/research/*.md` contain
   source-grounded design/research synthesis.

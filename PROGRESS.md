@@ -18,15 +18,17 @@ submodules. The labels are for clarity, not a task-management schema.
 
 ## Current Phase
 
-- `[active]` Post-integration maintenance while Jörn works on expert-model
-  extraction.
+- `[active]` Post-integration maintenance with recovered expert-model material
+  consolidated in `design/EXPERT_MODEL.md`.
 - `[blocked]` Broad content/card review, rewrites, and new expert-grounded
-  mechanisms should wait until Jörn marks the extracted proposal ready for
+  mechanisms should wait until Jörn marks the expert-model sheet ready for
   integration review.
 
 ## Content
 
 - `[needs Jörn]` Expert-grounded content is draft until Jörn approves it.
+- `[active]` Treat `design/EXPERT_MODEL.md` as the single recovered source of
+  truth for Jörn's expert model until Jörn replaces or approves it.
 - `[active]` Preserve traceability from design/literature notes to card concepts
   and implementation.
 - `[active]` Keep static two-or-three-choice cards as the intended content
