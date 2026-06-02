@@ -231,8 +231,14 @@ superintelligence.
 
 ### Sufficiency
 
-- `SUF-F01`: The central issue is not whether a measure is directionally good;
-  it is whether the measure is sufficient before points of no return.
+Context: this section is about proposals such as audits, labels, licensing,
+voluntary thresholds, model evaluations, and emergency powers. The issue is not
+that these are always useless; the issue is that they may leave the path to ASI
+open while making people feel that the risk is handled.
+
+- `SUF-F01`: A weak measure can be directionally helpful and still fail the
+  survival problem. The key question is whether it blocks extinction-relevant
+  capability progress before a point where later action no longer works.
 - `SUF-F02`: "Tighten later" fails if the warning signal comes after capability
   progress, deployment, theft, or institutional lock-in has removed recovery
   options.
