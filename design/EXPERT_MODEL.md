@@ -86,7 +86,11 @@ The readable extraction below uses these recovered sections:
 
 ## Extracted Expert View
 
-### 1. Survival Feasibility
+The section lengths below are intentionally uneven. Longer sections mean the
+recovered answer contains more game-relevant structure or more risk of future
+misuse. Short sections mean the recovered answer is currently only a note.
+
+### 1. Survival Feasibility And Sufficiency
 
 Jörn's view is not "survival is easy if people try." It is closer to:
 
@@ -98,10 +102,6 @@ Jörn's view is not "survival is easy if people try." It is closer to:
    understand that difficult action is needed to avoid personal death.
 5. If those conditions hold, humanity may survive and reach a good
    post-singularity future.
-
-Source: setup answers in `10:30`.
-
-### 2. Sufficiency
 
 Recognizing risk is not enough. Many actions do not affect existential risk.
 Some actions are harmful. Few actions are helpful. Fewer are sufficient.
@@ -116,9 +116,11 @@ Jörn described this as moving survival from "close to zero" to "close to zero
 but higher" by themselves, and then to "maybe we actually survive this" when the
 later strong measures happen.
 
-Source: `BROAD` item 1 and `SUF`.
-
-### 3. Points Of No Return
+Survival will not look like progress during preliminary measures. It will look
+like preliminary steps enabling later steps, and then those later strong steps
+actually happening. This is important because the game should not reward
+"progress-looking" governance if it does not enable the later actions that block
+ASI-relevant progress.
 
 A point of no return can happen before extinction. Examples from Jörn:
 
@@ -128,10 +130,6 @@ A point of no return can happen before extinction. Examples from Jörn:
 3. A later time can arrive when standard economic incentives no longer matter
    because some actors have stronger motives and can take actions that
    unknowingly kill everyone.
-
-Source: `BROAD` item 1.
-
-### 4. Generic Regulation
 
 Existing or proposed governance can be useful and still insufficient. A visible
 process is not the same as a causal blocker.
@@ -148,9 +146,9 @@ Jörn was less sure about a broad claim that fake hope "often" comes from visibl
 governance substituting for an actual blocker. He treated it as one possible
 discourse failure among many, and too abstract without more detail.
 
-Source: `SUF`.
+Source: setup answers in `10:30`; `BROAD` item 1; `SUF`.
 
-### 5. China And Treaty Feasibility
+### 2. Treaty Feasibility And Enforcement
 
 The proposal is not unilateral U.S. slowdown. The proposal is a global treaty or
 everyone dies.
@@ -165,10 +163,6 @@ Jörn affirmed these points:
 
 Jörn also said China has repeatedly asked about a treaty, sometimes with a focus
 on existential risk rather than vague AI risk.
-
-Source: `BROAD` item 3 and `CHN`.
-
-### 6. Treaty Mechanisms
 
 Jörn said verification, monitoring, chip controls, inspections, intelligence
 sharing, and credible enforcement are basically all necessary. If one is
@@ -186,10 +180,6 @@ Concrete enforcement mechanisms can include:
 Jörn noted that nuclear first strikes are very high on the escalation ladder and
 usually not better than alternatives.
 
-Source: `CHN`.
-
-### 7. China-Blame Politics
-
 Jörn described a strong Washington-connected lobby that tries to blame China for
 racing to AI. He said China luckily seems not to have a mirrored lobby.
 
@@ -197,9 +187,13 @@ He also gave an example of early precursor detection: intelligence about
 anti-treaty sentiment among military officials can be passed to decision-makers
 before it becomes unilateral superintelligence development.
 
-Source: `CHN`.
+Design implication: treaty failure should often be represented as a delayed
+mechanism failure or institutional precursor, not as an immediate "China cheats"
+event. The player should need several institutions to keep working at once.
 
-### 8. Compute Tracking
+Source: `BROAD` item 3 and `CHN`.
+
+### 3. Compute Control
 
 Jörn's broad answer says tracking chips is only the start. Tracking tells you
 who can build superintelligence. It does not restrict what GPUs are used for.
@@ -213,13 +207,18 @@ Useful compute control may involve:
 5. Chip supply-chain control or regulation.
 6. Reducing smuggling.
 
+The important distinction is ability versus use. A registry of chips or data
+centers can tell the agency where dangerous work could happen, but it does not
+answer what those chips are doing. This means "we counted the chips" should not
+be treated as the same as containment.
+
 The recovered `CMP` prompt asked for more detail on tracking, consolidation,
 chip-use verification, supply-chain control, smuggling, and threshold updates.
 No Jörn answer to that exact prompt was recovered.
 
 Source: `BROAD` item 5 and unanswered `CMP`.
 
-### 9. Capability Research And Model Access
+### 4. Capability Research And Model Access
 
 "Modern frontier models aid capability research" should not be left vague.
 Jörn split it into three kinds of aid:
@@ -231,14 +230,15 @@ Jörn split it into three kinds of aid:
 3. Non-human-purchasable labor: synthetic data, self-distillation, or use of
    inference and internals at scales humans cannot realistically provide.
 
+This matters because the danger is not only large training runs. Capability
+progress can also come from research work made faster, cheaper, or possible by
+model access. A treaty that bans frontier training but allows enough capability
+research may still allow the danger level to rise during a long pause.
+
 ChatGPT is not dangerous in most applications, but carve-outs may be hard to
 write without creating extinction risk. Jörn is unsure where the practical
 boundary should be and how much effort should go into separating dangerous from
 harmless research.
-
-Source: `BROAD` item 2 and `CAP-1`.
-
-### 10. Open Source And Open Weights
 
 Jörn's answer does not treat "open source" as the core issue. The core issue is
 whether AI systems help research into building superintelligence.
@@ -251,9 +251,9 @@ research ideas will work is hard.
 superintelligence does not care whether its weights are downloadable by
 citizens or running in a company-owned data center.
 
-Source: `BROAD` item 6.
+Source: `BROAD` items 2 and 6; `CAP-1`.
 
-### 11. Research Controls
+### 5. Research Controls
 
 The treaty does not propose restricting private thought. It restricts speech,
 sharing results, and use of resources such as compute.
@@ -267,9 +267,12 @@ horizon is not worth that.
 Jörn compared resource restriction to uranium: owning private property does not
 mean being allowed to build or detonate atomic weapons.
 
-Source: `CAP-2`.
-
-### 12. Small-Group Research Uncertainty
+This section has high misuse risk. "The treaty restricts speech" should not be
+rounded into "the treaty bans thinking." "The treaty does not restrict private
+thought" should not be rounded into "research ideas cannot be controlled, so
+research controls are pointless." The recovered answer points to a middle: the
+treaty restricts sharing results and using resources before it tries anything
+like thought control.
 
 Jörn thinks the game can encode uncertainty about small-group research with
 hidden latents randomized at game start.
@@ -289,7 +292,7 @@ costs.
 
 Source: `CAP-1` and `CAP-2`.
 
-### 13. Safety-Labeled Research
+### 6. Safety-Labeled Research
 
 Safety-labeled research should not automatically get a free pass.
 
@@ -300,7 +303,7 @@ learned they need to keep up appearances.
 
 Source: `CAP-2`.
 
-### 14. Freedom, Backlash, And Evasion
+### 7. Freedom, Backlash, And Evasion
 
 Jörn's frame is not generic "freedom vs safety." All treaties that are not about
 dissolving restrictions are restrictions on freedom in the libertarian sense.
@@ -319,10 +322,20 @@ Jörn distinguished backlash from evasive remnants:
 
 He did not yet have a preferred word or list for this distinction.
 
+This distinction is probably game-relevant. If restrictions are made stronger,
+some opposition may grow because people dislike the restrictions. Other activity
+may simply move around while becoming smaller and less effective. Those are not
+the same dynamic and should not be collapsed into one "backlash" meter without
+care.
+
 Source: `CAP-2`.
 
-### 15. Near-Term Harms And X-Risk
+### 8. Other Public-Discourse Notes
 
+These are lower-resolution notes from the broad 15-part answer. They are kept
+short because the recovered session did not pursue them in follow-up.
+
+**Near-term harms and x-risk.**
 Jörn does not think attention is a simple bottleneck between near-term harms and
 existential risk. He mostly expects synergy from talking about strong regulation
 at all.
@@ -332,10 +345,7 @@ bounded in impact, because people only keep jobs or other benefits until they
 die. Jörn thinks many people making "x-risk is a distraction" arguments do not
 believe the existential risk is real.
 
-Source: `BROAD` item 7.
-
-### 16. Labs And Safety Teams
-
+**Labs and safety teams.**
 Jörn rejects the claim that labs "know the tech best" in the relevant sense.
 They know how to build more capable models and control them to a limited
 degree. Controlling something smarter than you, with death as the failure mode
@@ -345,10 +355,7 @@ Jörn says lab plans have repeatedly been wrong, ignore the threat model, say
 problems will be solved later, and have made basically zero progress in the
 last 20 years.
 
-Source: `BROAD` item 8.
-
-### 17. Treaties Are Not Automatically Fake
-
+**Treaties are not automatically fake.**
 Jörn pointed to past nuclear and bioweapon treaties as counterexamples to the
 claim that treaties never work. He also noted that military leaders have an
 interest in not dying personally.
@@ -359,10 +366,7 @@ controllable, or believing racing to ASI is the best available path.
 Jörn wants better odds than "if we are lucky," but treats luck as part of the
 situation. Enforcement through mutual monitoring is possible in principle.
 
-Source: `BROAD` item 9.
-
-### 18. Duration
-
+**Duration.**
 Jörn guesses the treaty needs at least 20 years. If humanity is lucky, less. If
 unlucky, more.
 
@@ -373,10 +377,7 @@ can end safely.
 Jörn is not enthusiastic about six-month pauses or about doing nothing useful
 for 20 years and then ending the ban in the same bad position.
 
-Source: `BROAD` items 11 and 15.
-
-### 19. Progress Is Not Safely Incremental
-
+**Progress is not safely incremental.**
 Jörn says the METR graph is not incremental; even if taken at face value, it
 accelerates rapidly. He also warned against taking such a graph at face value
 for unpredictable technologies.
@@ -386,10 +387,7 @@ detect them shortly after release. Prompt hacking remains unsolved, and training
 capabilities selectively remains unsolved because generalization is useful
 across domains.
 
-Source: `BROAD` item 12.
-
-### 20. Civil Liberties And Democracy
-
+**Civil liberties and democracy.**
 Jörn treats long-term power balance and preservation of democracy as real
 issues. He does not think they can easily be entangled with the treaty now.
 China would not sign a treaty that infringes on its political model, and nobody
@@ -400,9 +398,9 @@ Research bans have existed before and have not necessarily escalated. Compute
 monitoring for AI-ready chips is different from monitoring all private compute
 use.
 
-Source: `BROAD` item 14.
+Source: `BROAD` items 7, 8, 9, 11, 12, 14, and 15.
 
-### 21. Public Discourse
+### 9. Public Discourse And Audience
 
 The game should start from existing public discourse, not from an empty space.
 Players may already think AI is risky or should be regulated. The harder target
