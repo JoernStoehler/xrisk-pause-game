@@ -43,7 +43,16 @@ Recoverable expert model:
 Not recovered: the deleted live extraction session, named `/tmp` scratch files,
 and named raw session logs from 2026-05-11 in this environment.
 
-## Interview Sheet
+## How This File Was Written
+
+1. The interview notes preserve the shape of recovered Q/A exchanges.
+2. The claim index deduplicates and normalizes those answers into reference
+   notes. It is not a separate fact collection.
+3. `*-N*` labels mean extracted notes from recovered answers.
+4. `CMP-D*` labels mean draft continuation points that have not yet been
+   answered by Jörn.
+
+## Recovered Interview Notes
 
 ### Q01. Is generic AI regulation enough?
 
@@ -227,106 +236,107 @@ Six-month pauses, or doing nothing useful for 20 years, are not the target. The
 point of a long pause is to make survival work possible before ending the ban on
 superintelligence.
 
-## Fact Sheet
+## Extracted Claim Index
 
 ### Sufficiency
 
-Context: this section is about proposals such as audits, labels, licensing,
-voluntary thresholds, model evaluations, and emergency powers. The issue is not
-that these are always useless; the issue is that they may leave the path to ASI
-open while making people feel that the risk is handled.
+Recovered question context: the sufficiency follow-up was about proposals such
+as audits, labels, licensing, voluntary thresholds, model evaluations, and
+emergency powers. The issue is not that these are always useless; the issue is
+that they may leave the path to ASI open while making people feel that the risk
+is handled.
 
-- `SUF-F01`: A weak measure can be directionally helpful and still fail the
+- `SUF-N01`: A weak measure can be directionally helpful and still fail the
   survival problem. The key question is whether it blocks extinction-relevant
   capability progress before a point where later action no longer works.
-- `SUF-F02`: "Tighten later" fails if the warning signal comes after capability
+- `SUF-N02`: "Tighten later" fails if the warning signal comes after capability
   progress, deployment, theft, or institutional lock-in has removed recovery
   options.
-- `SUF-F03`: Weak measures can be worse than nothing if they create public
+- `SUF-N03`: Weak measures can be worse than nothing if they create public
   comfort while leaving the core path to ASI open.
-- `SUF-F04`: "Guarantee-like" means not relying on predictably false
+- `SUF-N04`: "Guarantee-like" means not relying on predictably false
   assumptions. It does not mean mathematical proof.
-- `SUF-F05`: Preparatory measures alone may move survival from close to zero to
+- `SUF-N05`: Preparatory measures alone may move survival from close to zero to
   close to zero but higher. Their value is in enabling later strong measures.
-- `SUF-F06`: Survival progress may look like preliminary steps enabling later
+- `SUF-N06`: Survival progress may look like preliminary steps enabling later
   steps, and then those later steps actually happening.
 
 ### China And Treaty Feasibility
 
-- `CHN-F01`: Unilateral U.S. slowdown is not the proposal.
-- `CHN-F02`: China and the U.S. share the core interest of not going extinct.
-- `CHN-F03`: Mistrust and cheating risk are real treaty-design problems, not
+- `CHN-N01`: Unilateral U.S. slowdown is not the proposal.
+- `CHN-N02`: China and the U.S. share the core interest of not going extinct.
+- `CHN-N03`: Mistrust and cheating risk are real treaty-design problems, not
   treaty-impossibility proofs.
-- `CHN-F04`: Verification, monitoring, chip controls, inspections, intelligence
+- `CHN-N04`: Verification, monitoring, chip controls, inspections, intelligence
   sharing, and enforcement mechanisms are basically all necessary.
-- `CHN-F05`: If one necessary mechanism is missing, the game should show a
+- `CHN-N05`: If one necessary mechanism is missing, the game should show a
   realistic delayed failure mode.
-- `CHN-F06`: Enforcement can include public intelligence, financial incentives,
+- `CHN-N06`: Enforcement can include public intelligence, financial incentives,
   sanctions, hacking, and traditional military intervention on an escalation
   ladder.
-- `CHN-F07`: A Washington-connected lobby tries to blame China for racing to AI;
+- `CHN-N07`: A Washington-connected lobby tries to blame China for racing to AI;
   Jörn has not seen a mirrored Chinese lobby.
-- `CHN-F08`: Precursor steps to unilateral superintelligence and extinction can
+- `CHN-N08`: Precursor steps to unilateral superintelligence and extinction can
   be detected at very early political and institutional stages.
 
 ### Capability Research And Safety-Labeled Work
 
-- `CAP-F01`: "Modern frontier models aid capability research" should be split
+- `CAP-N01`: "Modern frontier models aid capability research" should be split
   into several mechanisms.
-- `CAP-F02`: Models can provide labor for capability research: idea generation,
+- `CAP-N02`: Models can provide labor for capability research: idea generation,
   experiment coding, and routine experimental judgment.
-- `CAP-F03`: Large models can be test subjects for interpretability,
+- `CAP-N03`: Large models can be test subjects for interpretability,
   training-technique experiments, and diagnosis of bottlenecks.
-- `CAP-F04`: Models can provide non-human-purchasable labor such as synthetic
+- `CAP-N04`: Models can provide non-human-purchasable labor such as synthetic
   training data or use of inference and internals at scales humans would not
   realistically produce.
-- `CAP-F05`: The danger level of small-group research over a long pause is
+- `CAP-N05`: The danger level of small-group research over a long pause is
   uncertain.
-- `CAP-F06`: The game can encode that uncertainty with hidden latents randomized
+- `CAP-N06`: The game can encode that uncertainty with hidden latents randomized
   at run start.
-- `CAP-F07`: Small-research-group danger is correlated across cases such as
+- `CAP-N07`: Small-research-group danger is correlated across cases such as
   small models, small compute, and moderate researcher time.
-- `CAP-F08`: Pivoting after evidence is possible but limited. Waiting for a
+- `CAP-N08`: Pivoting after evidence is possible but limited. Waiting for a
   second breakthrough before surveillance is already precarious.
-- `CAP-F09`: Early surveillance costs political capital by violating previous
+- `CAP-N09`: Early surveillance costs political capital by violating previous
   freedoms, but may gain political capital if the public wants researchers
   constrained or hates AI.
-- `CAP-F10`: Safety-labeled research is a weak signal. Some work labeled safety
+- `CAP-N10`: Safety-labeled research is a weak signal. Some work labeled safety
   is not actually useful.
-- `CAP-F11`: Too-narrow restriction has a direct failure mode: capability
+- `CAP-N11`: Too-narrow restriction has a direct failure mode: capability
   progress still happens, then everyone dies.
 
 ### Research Controls And Freedom
 
-- `CIV-F01`: The treaty does not propose restricting private thought.
-- `CIV-F02`: The treaty restricts speech or sharing of results and resource use
+- `CIV-N01`: The treaty does not propose restricting private thought.
+- `CIV-N02`: The treaty restricts speech or sharing of results and resource use
   such as compute.
-- `CIV-F03`: Private-thought restriction is not proposed because the downsides,
+- `CIV-N03`: Private-thought restriction is not proposed because the downsides,
   including totalitarianism and thought-reading, appear to outweigh the upside.
-- `CIV-F04`: Speech restrictions have precedent in nuclear-weapons contexts.
-- `CIV-F05`: Compute restrictions are analogous to not being allowed to build or
+- `CIV-N04`: Speech restrictions have precedent in nuclear-weapons contexts.
+- `CIV-N05`: Compute restrictions are analogous to not being allowed to build or
   detonate atomic weapons even if private ownership of uranium atoms is allowed.
-- `CIV-F06`: All treaties restrict freedom in a libertarian sense, but the AI
+- `CIV-N06`: All treaties restrict freedom in a libertarian sense, but the AI
   pause trade is unusually favorable if one economically valuable line of
   compute use is restricted in exchange for massively reducing everyone-dies
   risk.
-- `CIV-F07`: Unrelated political fights should be kept independent from the
+- `CIV-N07`: Unrelated political fights should be kept independent from the
   treaty where possible, because attaching them can create pressure against the
   treaty and cause collapse.
 
 ### Backlash And Evasion
 
-- `EVS-F01`: Backlash and evasive remnants are different.
-- `EVS-F02`: Backlash grows as restrictions push harder.
-- `EVS-F03`: Evasive actions change but shrink under stronger enforcement.
-- `EVS-F04`: Black markets are not backlash.
-- `EVS-F05`: White markets can be worse than black markets when they leave more
+- `EVS-N01`: Backlash and evasive remnants are different.
+- `EVS-N02`: Backlash grows as restrictions push harder.
+- `EVS-N03`: Evasive actions change but shrink under stronger enforcement.
+- `EVS-N04`: Black markets are not backlash.
+- `EVS-N05`: White markets can be worse than black markets when they leave more
   compute unmonitored.
 
 ### Compute Control And Verification
 
-Source status: mostly draft from `design/expert-model-next-question.md`, not yet
-answered by Jörn as `CMP-*`.
+Source status: draft continuation question recovered from the obsolete worktree,
+not yet answered by Jörn as `CMP-*`.
 
 - `CMP-D01`: Perfect verification is probably the wrong standard; the relevant
   standard is reducing extinction-relevant capability progress enough under
@@ -365,8 +375,6 @@ answered by Jörn as `CMP-*`.
 9. Ask what wrong inference the game should avoid.
 
 ## Next Interview Question
-
-Use `design/expert-model-next-question.md`.
 
 Current planned question: `CMP-Q01`, compute control and verification.
 
