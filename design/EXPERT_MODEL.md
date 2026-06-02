@@ -1,42 +1,163 @@
 # Expert Model
 
-Status: recovered source file. This is the single retained file for what could
-be recovered about Jörn's expert model from the deleted extraction session and
-its obsolete worktree.
+Status: recovered source file. This is the single retained repo file for what
+could be recovered about Jörn's expert model from the deleted extraction
+session and its obsolete worktree.
+
+Main source:
+
+1. Restored Codex session log:
+   `/home/vscode/.codex/sessions/2026/05/11/rollout-2026-05-11T10-30-40-019e1696-c6d9-74e1-9f5a-6fbcc90b75e8.jsonl`
+2. Related restored Codex session log:
+   `/home/vscode/.codex/sessions/2026/05/11/rollout-2026-05-11T10-02-46-019e167d-3c6d-7130-8787-60de3e4f4859.jsonl`
+3. Recovered worktree branch:
+   `stream/expert-model-extraction-recovered`
 
 This file is intentionally low-loss:
 
-1. It keeps recovered raw Jörn answers first.
-2. It keeps only minimal context notes around those answers.
-3. It does not try to turn the answers into a complete model.
+1. It keeps exact recovered prompts when available.
+2. It keeps raw Jörn answers first.
+3. It keeps agent extraction short and labelled as draft.
 4. It does not treat agent summaries as authoritative.
-5. It is expected to be incomplete and should expand as new expert questions
-   come up during game development.
-
-Not recovered:
-
-1. The deleted live extraction session.
-2. The full raw questionnaire/interview prompts for several answered sections.
-3. The named `/tmp/expert-model-*` scratch files.
-4. The named raw session logs from 2026-05-11 in this environment.
+5. It is incomplete and should expand as new expert questions come up during
+   game development.
 
 ## How To Use This File
 
-1. Use the blockquoted text as source material.
-2. Treat typos, shorthand, and casual phrasing as raw chat, not player-facing
-   wording.
-3. Treat context notes as recovery notes, not expert claims.
-4. Add new expert answers here as future dated interview sections.
-5. Put agent interpretation in clearly marked "Agent note" sections only when
-   needed.
+1. Treat `Raw Jörn answer` blocks as source material.
+2. Treat `Agent extraction` blocks as draft notes to check against the raw
+   transcript.
+3. Do not use this as approved player-facing wording.
+4. Preserve uncertainty, explicit quantities, and casual caveats.
+5. Add future expert answers with exact prompts where possible.
+
+## Agent Extraction Index
+
+Status: draft. This section is a reading aid only. The raw prompt and answer
+sections below are the source.
+
+1. `SUF-01`: Most AI-risk actions are not sufficient. Some are harmful. A
+   measure matters only if it actually blocks the route to everyone dying
+   before a point of no return.
+2. `SUF-02`: Weak measures can be useful if they make strong measures more
+   likely. They are fake progress if they replace strong measures or create
+   comfort while the route to ASI stays open.
+3. `TRT-01`: Unilateral U.S. slowdown is not the proposal. The proposal is a
+   global treaty or everyone dies.
+4. `TRT-02`: China and the U.S. share the core interest of not going extinct.
+   Mistrust and cheating risk are treaty-design problems, not proof that a
+   treaty cannot work.
+5. `TRT-03`: Verification, monitoring, chip controls, inspections, intelligence
+   sharing, and concrete enforcement mechanisms are basically all necessary.
+   Missing one should cause a realistic delayed failure mode, not instant
+   collapse or no visible effect.
+6. `TRT-04`: Enforcement can include public discussion of public intelligence,
+   positive and negative financial incentives, sanctions, hacking, and
+   traditional military intervention on an escalation ladder.
+7. `CAP-01`: "Modern frontier models aid capability research" should be split:
+   labor aid, test-subject aid, and non-human-purchasable labor such as
+   synthetic data or internal/inference use at huge scale.
+8. `CAP-02`: Safety-labeled research is not automatically safe or useful.
+   Some research called safety research can advance capabilities or reveal
+   capability bottlenecks.
+9. `CAP-03`: The treaty does not restrict private thought. It restricts speech
+   and sharing of results, and it restricts use of resources such as compute.
+10. `CAP-04`: Small-group research is uncertain. It may be harmless in some
+   possible worlds and enough to kill everyone in others. Waiting for evidence
+   can leave too little time; restricting early can hide whether the restriction
+   was necessary.
+11. `CAP-05`: Backlash should be distinguished from evasive remnants. Backlash
+   grows when restrictions get harder. Evasive action changes shape but shrinks
+   under stronger enforcement.
+12. `CMP-01`: Tracking chips only tells you who can do dangerous work. It does
+   not itself restrict what the chips are used for.
+13. `DUR-01`: Jörn guesses the treaty needs at least 20 years, maybe less if
+   lucky, maybe more if unlucky. Six-month pauses or doing nothing useful for
+   20 years are not the proposal.
 
 ## 2026-05-11: Broad Public-Discourse Response
 
-Recovery context: Codex produced fake composite public-discourse quotes about
-AI pause, AI risk, regulation, treaties, open source, near-term harms, lab
-safety, and fatalism. The exact fake quotes are not recovered here. Jörn replied
-with the following expert-model response, explicitly not optimized for
-rhetoric.
+Source status: restored session log. The prompt and answer below are recovered.
+
+### Prompt
+
+Codex gave fake composite quotes, not real quotes and not attributed to anyone:
+
+1. **Generic Regulation**
+   "AI is obviously risky, so the government should pass some rules. Maybe
+   require labels, audits, and fines when companies mess up."
+
+2. **Pause Means Ban Everything**
+   "These pause people want to shut down all AI research and make ChatGPT
+   illegal because they watched too many sci-fi movies."
+
+3. **China Wins**
+   "If the U.S. slows down, China won't. Then we've just handed
+   superintelligence to an authoritarian rival."
+
+4. **Existing Governance Is Enough**
+   "We already have AI safety institutes, the EU AI Act, voluntary lab
+   commitments, and international summits. Why are people acting like nothing
+   is being done?"
+
+5. **Compute Controls Are Magic / Impossible**
+   "Just track the GPUs. You can't build frontier AI without massive data
+   centers, so this is easy."
+
+   Or:
+
+   "You can't control compute. Chips get smuggled, algorithms get better, and
+   people can train models anywhere."
+
+6. **Open Source**
+   "Open source is safer because everyone can inspect it. The real danger is a
+   few corporations and governments hoarding AI."
+
+   Or:
+
+   "Open weights are insane. Once a dangerous model is released, no treaty can
+   unreleased it."
+
+7. **Near-Term Harms Crowd Out X-Risk**
+   "People are already losing jobs, getting scammed, and seeing deepfakes ruin
+   lives. Talking about robot apocalypse is a distraction from actual harms."
+
+8. **Labs Will Handle Safety**
+   "The big labs have safety teams, evals, red-teamers, and responsible scaling
+   policies. They know the tech best, so let them manage the risk."
+
+9. **Treaties Are Fake**
+   "Countries violate treaties whenever it matters. A global AI treaty would
+   just create paperwork while secret military labs keep racing."
+
+10. **Tribal Labels Replace Mechanisms**
+    "Doomers want to freeze progress forever. E/acc people want to kill
+    everyone for vibes. Decels hate technology. This is just culture war."
+
+11. **Positive But Underspecified Pause Support**
+    "I basically agree we should pause before superintelligence, but I don't
+    understand what exactly gets paused, who enforces it, or how long it lasts."
+
+12. **Misplaced Comfort From Slowness**
+    "AI progress looks incremental. We'll see problems coming, patch them, and
+    adapt like we always do with new technologies."
+
+13. **Misplaced Comfort From Human Usefulness**
+    "Even if AI gets very smart, it will need humans around. We're its users,
+    trainers, customers, and maybe its moral reference point."
+
+14. **Surveillance-State Suspicion**
+    "A global AI agency monitoring chips and researchers sounds like a
+    permanent surveillance regime with existential-risk branding."
+
+15. **Fatalism**
+    "If superintelligence is really possible, someone will build it eventually.
+    A pause just delays the inevitable."
+
+Codex asked which quotes felt like real discourse targets, which felt like
+strawmen, and what quote was missing.
+
+### Raw Jörn Answer
 
 > I can quickly state my expert model's response, not optimized for rhetorics tbc.
 > 1. risk=>do anything all is insufficient, most actions have no effect, many are harmful few are helpful even fewer are sufficient (it's easier to break guarantees on safety than add them when a threat exists). concretely for this proposal: after an extinction event, fines and audits and labels are insufficient. technically, this already is relevant after a point-of-no-return (e.g.: if we assume no strong action is taken, then there's a ponr where no non-strong actions suffice anymore; e.g. eventually the ponr is passed where only pulling the plug on the seed superintelligence suffices and mere attempts to add more safety measures do not, eventually there's a ponr where standard economic incentives do not suffice bc actors who are motivated more strongly exist and have the option to take actions that (unknowingly) kill everyone
@@ -55,12 +176,54 @@ rhetoric.
 > 14. it's not clear that this is more restrictive than current regimes arleady are, and while long-term power balance / preservation of democracy is an issue to target, it's one that one cannot easily entangle with a treaty right now since then say China would refuse to sign a treaty that infringes upon its style of governance. there's nobody who'll believe your bluff that you'd rather cause extinction than accept a treaty that leaves china's political model out of the treaty. whether this means democracy fails long-term, freedoms are restricted, etc is open. research bans have existed in the past and have not escalated, and its at highly likely nobody can turn a ban on ai capability research into more than that. compute monitoring for ai-ready chips is also different from minotiring all private compute use, although latter would be useful to prevent research that accumulates over 50y into sth dangerous
 > 15. the trick is that in that time (20y) you can figure out how to not die from superintelligence. i'm not enthusiastic about 6mo pauses or about doing nothing useful for 20y and then ending the ban while being in just the same bad spot as before.
 
-## 2026-05-11: China / Treaty Feasibility Follow-Up
+## 2026-05-11: China / Treaty Feasibility
 
-Recovery context: Codex asked about fake China/treaty-feasibility discourse
-claims, then listed "what I think I already know" bullets and candidate response
-components. The full prompt is not recovered here. Jörn first requested globally
-unique labels for future points, then replied.
+Source status: restored session log. The prompt and answer below are recovered.
+
+### Prompt
+
+Fake discourse claim:
+
+> "A global AI treaty sounds nice, but China would never accept real
+> inspections. And even if they signed, they'd cheat in military labs. So the
+> only rational move is for the U.S. to stay ahead."
+
+> "Sure, China also doesn't want extinction, but great powers still defect under
+> uncertainty. If each side thinks the other might secretly train ASI, the
+> treaty collapses unless one side has overwhelming enforcement power."
+
+What Codex thought it already knew:
+
+1. Unilateral U.S. slowdown is not the proposal under discussion.
+2. China and the U.S. share the core interest of not going extinct.
+3. Mistrust and cheating risk are real treaty-design problems, not reasons to
+   assume treaty impossibility.
+4. The game should avoid both "China will inevitably defect" and "everyone
+   rationally cooperates once they understand x-risk."
+5. Verification, monitoring, chip controls, inspections, intelligence sharing,
+   and credible enforcement are the likely mechanism layer.
+6. Domestic hawks and cheating scares should create pressure without making
+   collapse feel inevitable.
+
+Candidate expert response components:
+
+1. `A`: The public claim is false when it treats unilateral slowdown as the only
+   alternative to racing.
+2. `B`: The public claim tracks a real crux: mutual assurance. A treaty only
+   works if parties can get enough evidence that others are constrained too.
+3. `C`: The right lesson is not "trust China," but "replace trust with monitored
+   reciprocal constraint, plus enforcement and shared survival interest."
+4. `D`: The game should make arms-race logic feel locally tempting but globally
+   self-defeating: each side's attempt to get security by racing increases
+   everyone's death risk.
+5. `E`: The game should also show that treaty breakdown can come from domestic
+   political incentives, embarrassment, prestige, military secrecy, or
+   institutional inertia, not only deliberate bad-faith cheating.
+
+Question: which components are right, wrong, or missing? What wrong player
+inference should the game most avoid here?
+
+### Raw Jörn Answer
 
 > Nit: can you label [globally] uniquely your points so i can refernece them without copy-past (awkward in the GUI) ?
 >
@@ -84,11 +247,57 @@ unique labels for future points, then replied.
 
 ## 2026-05-11: Capability Research / Dual-Use Safety Work
 
-Recovery context: Codex asked about fake discourse claims that research ideas
-cannot be banned and that dual-use safety research creates a contradiction for
-pause. Codex repeated several `CAP-K*` context points and proposed `CAP-R*`
-response components. The full prompt is not recovered here. Jörn interrupted the
-format as too redundant and answered.
+Source status: restored session log. The prompt and answer below are recovered.
+
+### Prompt
+
+Fake discourse claims:
+
+> "A pause treaty can ban giant training runs, but banning research ideas is
+> impossible and authoritarian. Researchers can still publish math,
+> architectures, interpretability results, efficiency tricks, and synthetic-data
+> methods. You can't inspect someone's thoughts."
+
+> "If safety research is dual-use, then a pause treaty either blocks the safety
+> work needed to survive or permits enough research that capabilities keep
+> advancing. That sounds like a contradiction."
+
+What Codex thought it already knew:
+
+1. `CAP-K01` Modern frontier models can genuinely aid capability research.
+2. `CAP-K02` Capability-relevant insight can accumulate over a long pause.
+3. `CAP-K03` Safety research can be dual-use; interpretability on large models
+   can generate capability-relevant insights.
+4. `CAP-K04` You are uncertain about where to set the Schelling point and how
+   much to invest in discriminating dangerous from harmless research.
+5. `CAP-K05` A blanket ban on ML research, especially research classes that
+   historically produced insights, may be useful, but this is not the same as
+   "all AI use is dangerous."
+6. `CAP-K06` The game should not teach comforting carve-outs if those carve-outs
+   would likely break the safety guarantee.
+
+Candidate expert response components:
+
+1. `CAP-R01` The objection is right that "research ideas" are harder to control
+   than giant training runs, but wrong if it infers impossibility or futility.
+2. `CAP-R02` The core issue is not inspecting thoughts; it is controlling
+   institutions, compute access, publication, model access, and incentive
+   gradients around research that predictably advances capability.
+3. `CAP-R03` Dual-use safety work is a real contradiction-like pressure, not a
+   gotcha. A survival regime may need to restrict some safety-relevant work
+   because the capability downside dominates.
+4. `CAP-R04` The player should learn that "do more safety research" is not
+   automatically safe if the research produces tools, insights, or models that
+   shorten the path to ASI.
+5. `CAP-R05` The game should represent classification/approval of research as
+   slow, politically painful, and error-prone, but still necessary.
+6. `CAP-R06` The dangerous wrong lesson is either "ban all thinking and science
+   forever" or "safety-labeled research is automatically allowed."
+
+Question: which `CAP-R*` components are right/wrong/missing, how would you mix
+them, and what wrong player inference should the game most avoid here?
+
+### Raw Jörn Answer
 
 > Thx! Here's my quick response:
 >
@@ -104,9 +313,44 @@ format as too redundant and answered.
 
 ## 2026-05-11: Research Controls Under Uncertainty
 
-Recovery context: Codex asked a shorter `CAP-Q02` prompt about whether research
-controls are "banning science," with candidate crux components `CAP-C01`
-through `CAP-C06`. The full prompt is not recovered here. Jörn replied.
+Source status: restored session log. The prompt and answer below are recovered.
+
+### Prompt
+
+Fake discourse pressure:
+
+> "You can ban massive training runs, but you can't ban algorithmic insight.
+> Small university groups, hobbyists, safety researchers, and open-source people
+> can still find ideas. If you crack down on that, you're not pausing dangerous
+> AI, you're banning science."
+
+Candidate mechanism/crux components:
+
+1. `CAP-C01` The hard part is not "inspect thoughts"; it is restricting the
+   channels by which research becomes capability progress: model access,
+   compute access, publication, lab permissions, researcher institutions, and
+   experiment infrastructure.
+2. `CAP-C02` Small-group research should maybe be modeled as a hidden-latent
+   hazard: in some runs it is mostly harmless; in others, small groups
+   accumulate enough insight that delayed reaction loses.
+3. `CAP-C03` The central tradeoff is not "freedom vs safety" in a generic
+   sense; it is "early broad restriction without knowing whether it was needed"
+   vs "waiting for evidence and possibly learning too late."
+4. `CAP-C04` Safety-labeled research should not get a free pass. Some safety
+   work should happen only inside controlled facilities or under restricted
+   access because the same experiments reveal capability bottlenecks.
+5. `CAP-C05` Over-broad restriction has its own failure mode: political
+   backlash, loss of useful safety work, black markets, and pressure to soften
+   the treaty before the danger is gone.
+6. `CAP-C06` Too-narrow restriction has a different failure mode: the official
+   frontier is paused, but distributed low-compute research keeps raising the
+   capability frontier until the compute thresholds stop being protective.
+
+Question: which `CAP-C*` are right, wrong, or missing? What is the cleanest
+direct crux here: what needs to be restricted, what uncertainty matters, and
+what delayed failure mode should not be rounded away?
+
+### Raw Jörn Answer
 
 > c01 is a non-answer / bad for discourse bc of "hard part". that's just plain irrelevant. omit the claim that it matters what the "hard part" is and it becomes true: the treaty restricts resources besides private thoughts first, and the discussion wrt restricting private thoughts luckily looks like the downsides (totalitarianism, requires inventing thought-reading first) outweigh the upsides (even less progress on capabilities over a 20y horizon and thus less risk of literally everybody dying). the treaty does not propose to restric tprivate thought, it restricts however speech (just like was done for nuclear weapons) such as sharing results and it restricts the use of resources such as compute (even if say chips are still treated like private property; just liek peopel can own uranium atoms but are not allowed to build and then own atomic weapons, much less denotate nuclear weapons they "own" in a city).
 >
@@ -123,10 +367,38 @@ through `CAP-C06`. The full prompt is not recovered here. Jörn replied.
 
 ## 2026-05-11: Sufficiency / Fake Hope
 
-Recovery context: Codex asked about weaker governance measures such as audits,
-licensing, voluntary safety thresholds, model evaluations, and emergency
-shutdown powers, using candidate crux components `SUF-C01` through `SUF-C06`.
-The full prompt is not recovered here. Jörn replied.
+Source status: restored session log. The prompt and answer below are recovered.
+
+### Prompt
+
+Fake discourse pressure:
+
+> "We don't need an extreme treaty. Let's start with audits, licensing,
+> voluntary safety thresholds, model evaluations, and emergency shutdown powers.
+> If things get scarier, governments can always tighten the rules later."
+
+Candidate crux components:
+
+1. `SUF-C01` The issue is not whether these measures are directionally good; it
+   is whether they are sufficient before points of no return.
+2. `SUF-C02` "Tighten later" fails if the warning signal arrives after
+   capability progress, deployment, theft, or institutional lock-in has already
+   removed the option to recover.
+3. `SUF-C03` Weak measures can be worse than nothing if they create political
+   comfort while leaving the core path to ASI open.
+4. `SUF-C04` The relevant standard is guarantee-like containment of ASI-enabling
+   activity, not ordinary regulatory improvement.
+5. `SUF-C05` There are probably useful preparatory measures short of full
+   treaty, but they should be judged by whether they make strong action more
+   feasible, not by whether they look like progress.
+6. `SUF-C06` Fake hope often comes from substituting a visible governance
+   process for an actual causal blocker.
+
+Question: which `SUF-C*` are right/wrong/missing? What is the cleanest direct
+way to distinguish useful preparatory step from fake hope that leaves everyone
+dead?
+
+### Raw Jörn Answer
 
 > right: 1, 2, 3
 >
@@ -135,69 +407,40 @@ The full prompt is not recovered here. Jörn replied.
 >
 > weird: 6 - i am not sure about frequencies. to me this is just one way that discourse fails / derails / moves too slowly, among many. it's also to abstract to know for sure whether you mean sth that's true or sth that's false or sth that's not-even-false
 
-## Recovered Draft Next Question: Compute Control And Verification
+## 2026-05-11: Compute Tracking Is Not Enough
 
-Status: draft prompt recovered from the obsolete worktree. This is not an
-answered expert section. Keep it only as possible continuation scaffolding.
+Source status: restored session log. This prompt was recovered. No Jörn answer
+to this exact prompt was recovered.
 
-Fake public-discourse quote:
+### Prompt
 
-> "A global AI pause sounds impossible to verify. Chips are tiny, labs can hide
-> work, governments can cheat, and once the treaty exists the agency becomes a
-> permanent surveillance bureaucracy. Either compute controls are symbolic, or
-> they require total surveillance."
+Fake discourse pressure:
 
-What Codex thought was already known:
+> "If the dangerous stuff needs massive compute, just track the GPUs.
+> Datacenters are visible, chips are scarce, and governments already control
+> exports. This is mostly a logistics problem."
 
-- `CHN-M01`: Verification, monitoring, chip controls, inspections,
-  intelligence sharing, and concrete enforcement mechanisms are basically all
-  necessary.
-- `CHN-M02`: Missing one necessary mechanism should create realistic delayed
-  failure, not instant collapse or no effect.
-- `CHN-M03`: Enforcement can include public discussion of public intelligence,
-  positive and negative financial incentives, sanctions, hacking, and
-  traditional military intervention on an escalation ladder.
-- `CAP-C01`: The treaty does not restrict private thought; it restricts
-  speech/sharing of results and resource use such as compute.
-- `CAP-C08`: Backlash is different from evasive remnants. Backlash grows as
-  restrictions push harder; evasive actions change but shrink under stronger
-  enforcement.
+Direct candidate mechanisms/cruxes:
 
-Candidate response components:
+1. `CMP-C01` Tracking only identifies who has the ability to do dangerous work;
+   it does not itself restrict use.
+2. `CMP-C02` Consolidation matters because scattered ownership creates too many
+   sites, incentives, and verification surfaces.
+3. `CMP-C03` Chip-use verification matters because "the chips are in an
+   approved building" is not enough; the question is what workload is actually
+   running.
+4. `CMP-C04` Supply-chain control matters because new unmonitored chips can
+   undermine all downstream monitoring.
+5. `CMP-C05` Smuggling/evasion should usually be shown as delayed leakage, not
+   instant treaty failure and not harmless noise.
+6. `CMP-C06` Thresholds have to move over time because algorithmic progress
+   makes less compute dangerous.
+7. `CMP-C07` A too-simple compute model creates fake confidence: "we counted the
+   chips, therefore we are safe."
 
-- `CMP-C01`: "Impossible to verify perfectly" is the wrong standard. The
-  relevant standard is whether verification and enforcement reduce
-  extinction-relevant capability progress enough, soon enough, under realistic
-  cheating pressure.
-- `CMP-C02`: Tracking chip ownership is not enough. The treaty needs
-  restrictions on chip use, training runs, model access, research sharing, and
-  the institutional power to investigate suspicious activity.
-- `CMP-C03`: Compute control is powerful because advanced AI training depends
-  on scarce, specialized chips and visible supply chains, but this bottleneck
-  weakens if the regime ignores smuggling, hidden clusters, older chips, or
-  algorithmic progress.
-- `CMP-C04`: Verification should probably combine several imperfect sources:
-  hardware registries, chip-design changes, data-center inspections,
-  electricity and networking anomalies, export controls, intelligence work, and
-  whistleblower channels.
-- `CMP-C05`: The player should face false positives and false negatives.
-  Treating every anomaly as cheating burns legitimacy and cooperation; ignoring
-  anomalies lets capability progress continue.
-- `CMP-C06`: The game should avoid both "compute control solves everything" and
-  "some cheating makes the treaty pointless." The interesting region is
-  partial control that can succeed only if multiple institutions keep working.
-- `CMP-C07`: Civil-liberties risk is real, but it should be compared against
-  the specific monitoring needed for AI-ready chips and capability research,
-  not rounded into "monitor all private life."
-- `CMP-C08`: A weak treaty can be dangerous if it creates public comfort while
-  leaving enough unmonitored compute and research channels for ASI-relevant
-  progress.
-
-Question for Jörn:
-
-Which `CMP-C*` components are right, wrong, too vague, or missing the main
-crux? What wrong player inference should the game most avoid when it represents
-compute verification?
+Question: what is right/wrong/missing here? What concrete failure mode should
+be shown if the game has tracking but lacks one of consolidation, chip-use
+verification, supply-chain control, or threshold updates?
 
 ## Future Expert Interviews
 
