@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "anthropic.claude-code",
         "miguelsolorio.symbols",
         "github.github-vscode-theme",
         "openai.chatgpt"
