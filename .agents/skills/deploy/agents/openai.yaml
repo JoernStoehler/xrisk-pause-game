@@ -1,0 +1,4 @@
+interface:
+  display_name: "Deploy"
+  short_description: "Deployment and preview workflow guidance"
+  default_prompt: "Use the deploy skill to inspect or update this repo deploy workflow."

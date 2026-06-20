@@ -45,9 +45,10 @@ The current GitHub Actions deploy path runs on pushes to `main`. Branch or
 commit Cloudflare preview deployment is possible future deploy work, but it is
 not configured as a repo-documented workflow yet.
 
-Add preview guidance when preview links become useful for worktree or branch
-review. Do not change deploy credentials, GitHub secrets, Cloudflare project
-settings, or production routing without Jörn approval.
+Use the `deploy` skill when adding preview workflow guidance. Update this file
+only for the resulting current deploy state, release checks, public URLs, or
+approval boundaries. Do not change deploy credentials, GitHub secrets,
+Cloudflare project settings, or production routing without Jörn approval.
 
 ## Public Internal Surfaces
 
