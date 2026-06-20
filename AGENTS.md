@@ -13,36 +13,86 @@ or false claims about what such a treaty needs under different threat models.
 Fun, realism, and political/scientific detail are instrumental to that public
 understanding goal.
 
-Jörn is the domain owner. Ask before changing the game's thesis, political
-model, player-facing terminology, card concepts, major UX direction, final
-feature set, or expert predictions. Agents may draft, implement, test,
-refactor, refresh generated artifacts, and propose wording or UI details
-independently, but expert-grounded content is draft until Jörn approves it.
+Jörn is the domain owner. Expert-grounded content is draft until Jörn approves
+it. Ask before changing the game's thesis, political model, player-facing
+terminology, card concepts, major UX direction, final feature set, or expert
+predictions. Agents may draft, implement, test, refactor, refresh generated
+artifacts, and propose wording or UI details independently.
 
-## Implicit Objectives
-Unless stated otherwise:
-- Agents must contextualize their work, including task scope and review criteria, as instrumental for project success.
-- Agents must escalate early and push back if their task is nonsense or sub-optimally set.
-- Agents must minimize the amount of time Jörn has to spend (this is the one bottleneck for the project timeline)
-- Concretely, agents should not ask questions they know the answer to, make requests they can carry out, end a turn without good reason, split a questionnaire into multiple messages, ask questions that Jörn cannot cheaply answer, withhold/skip gathering information that Jörn has to rederive on his own time then.
-- Agents must own their task even if informal and undefined and cannot hand it off without approval from Jörn, including shifting responsibility and leadership and decisions to Jörn. Jörn is just another expert they can consult via explicit requests in chat.
-- Everyone has to keep `main` in a blocker-free state where new parallel agents with independent tasks can spawn and merge worktrees at any time.
+## Rules
 
-## Chat Rules
+These rules override default agent behavior where this project needs a more
+specific operating mode. They exist to fix common agent failures, not to turn
+`AGENTS.md` into a full manual.
 
-When interacting with Jörn in chat:
-- Use no new terminology.
-- Number/label everything so Jörn can reference it without ambiguity.
-- Write plain. Use zero metaphors and zero analogies.
-- Use progressive disclosure.
+- Every session must serve project success. If the relation to project success
+  is unclear after checking the relevant maps, state the assumed relation or
+  ask only when the answer would change scope or review criteria. Task
+  definitions should explain how the task improves the game, player
+  understanding, expert review, validation, deployment, playtesting, or
+  future-agent work.
+- Push back when a task or scope looks worse than an alternative. It is fine to
+  make progress on an established task before all downstream uses are known;
+  restore project-level context during review so goal drift is caught.
+- Agents own their work, even while the goal is still being chosen, scoped, or
+  clarified. Jörn is available as domain owner, project stakeholder, and
+  prompt/harness/agent-engineering expert. Agents should otherwise cover the
+  roles needed to complete the work: developer, reviewer, tester, progress
+  tracker, researcher, and similar roles.
+- Do not ask Jörn to do accessible local or repo work. Ask Jörn for domain
+  decisions, approval-sensitive calls, external access that agents lack, or
+  feedback where his judgment is the scarce input.
+- `main` must remain blocker-free so new sessions can spawn and merge
+  independent work. Read-only inspection on `main` is fine. Do not make
+  repo-tracked changes on `main` unless Jörn explicitly asks for that exact
+  `main` edit. For ordinary tracked work, create a git worktree first, do the
+  work there, and merge after review. Merge-to-main requires Jörn approval.
+- Harness files (`AGENTS.md`, `.agents/skills/**`, `.codex/agents/**`) are
+  frozen unless Jörn explicitly asks for a harness edit. Discussion, planning,
+  and read-only inspection are allowed.
+
+### Chat With Jörn
+
+Jörn's time should go to expert feedback, not handholding or session repair.
+Communication should be low-friction and focused on information transfer.
+
+- Write plain: ordinary words, existing project terms, no metaphors, no
+  analogies, no invented labels.
+- Number or label everything so Jörn can reference it without ambiguity.
+- Use `/tmp/` to polish messages or artifacts that cannot be written cleanly in
+  chat. Then send the polished message or link the scratch path.
 - Do not iterate artifacts in chat. Iterate artifacts in scratch, then copy the
   current artifact to chat or link the scratch path.
+- Do not blur unrelated questions into one ambiguous request. When several
+  decisions are genuinely needed, group them in one numbered request with clear
+  labels.
+- Give enough context for Jörn's answers. When asking a question or requesting
+  review, state the relevant current state, uncertainty, and what kind of
+  answer helps.
+- Make questions, review requests, and other requests hard to overlook.
+  Usually put them on their own line or at the end of a short list. Re-ask or
+  follow up if a request was missed or only partly answered.
+- Use progressive disclosure. Put the main point first, then details Jörn can
+  skip.
+- Preserve precision that matters for communication. Do not shorten recaps if
+  shortening loses the actual distinction.
+- Make list type clear when ambiguity matters: exhaustive list, examples,
+  current known set, priority order, or another ordinary description.
+- Communicate current state, history summaries, problem models, and useful
+  alternatives. Do not narrate process unless the process itself is the relevant
+  state.
+- Communicate uncertainty, evidence strength, expected value, and cost when
+  they matter. Numbers can reduce ambiguity, but only if it is clear what
+  quantity they estimate.
 
-## Files
+## Navigation
+
+This repo does not use nested `AGENTS.md` files.
 
 ```text
 .
 |-- AGENTS.md
+|-- FACTSHEET.md
 |-- ARCHITECTURE.md
 |-- PROGRESS.md
 |-- DEPLOY.md
@@ -51,27 +101,13 @@ When interacting with Jörn in chat:
 |   |-- App.tsx
 |   |-- main.tsx
 |   |-- app/
-|   |   |-- useGame.ts
-|   |   |-- storage.ts
-|   |   `-- tutorialStorage.ts
 |   |-- engine/
-|   |   |-- types.ts
-|   |   |-- state.ts
-|   |   |-- cards.ts
-|   |   |-- session.ts
-|   |   `-- *.test.ts
 |   |-- data/
-|   |   |-- cards/
-|   |   |   |-- index.ts
-|   |   |   |-- groups.ts
-|   |   |   |-- hidden.ts
-|   |   |   `-- *.ts
-|   |   |-- deaths.ts
-|   |   `-- tutorial.ts
 |   |-- components/
 |   |-- hooks/
 |   `-- index.css
 |-- design/
+|   |-- EXPERT_MODEL.md
 |   |-- domain-model.md
 |   |-- card-concepts.md
 |   |-- cards-export.md
@@ -89,78 +125,104 @@ When interacting with Jörn in chat:
 |   `-- static assets
 |-- e2e/
 |-- scripts/
-|   |-- export-cards.ts
-|   |-- decrypt-literature.sh
-|   `-- toc.sh
 |-- .github/workflows/deploy.yml
 |-- wrangler.toml
 |-- vite.config.ts
 |-- playwright.config.ts
 |-- .agents/skills/<skill>/
-|   |-- SKILL.md
-|   |-- agents/openai.yaml
-|   |-- references/*.md
-|   `-- scripts/
 |-- .codex/
-|   |-- .gitignore
-|   `-- agents/.gitkeep
 |-- .worktrees/
 |-- .devcontainer/
-|   |-- README.md
-|   |-- devcontainer.json
-|   |-- Dockerfile
-|   `-- *.sh
 `-- /tmp/  (outside repo)
 ```
 
-- `AGENTS.md`: root instruction map. This repo does not use nested
-  `AGENTS.md`.
+Start here:
+
+- `FACTSHEET.md`: durable project facts, Jörn decisions, success/non-success
+  boundaries, approval boundaries, and repeated context.
 - `ARCHITECTURE.md`: current implementation map, available features, known
   placeholders, generated artifacts, and validation map.
 - `PROGRESS.md`: current work state, blockers, planned/deferred work, and
   Jörn-needed decisions.
 - `DEPLOY.md`: Cloudflare Pages deployment, release checks, public URLs, and
   deploy approval boundaries.
-- `package.json`: Vite, React, TypeScript, test, CLI, and card-export commands.
-- `vite.config.ts`, `playwright.config.ts`: app/test framework configuration.
-- `src/app/`: React game hook, browser storage, and tutorial-completion
-  persistence.
+- `design/EXPERT_MODEL.md`: current recovered source of truth for Jörn's expert
+  model until Jörn replaces or approves it. This is not approval to implement
+  broad content; check `PROGRESS.md` for current blockers.
+- `design/domain-model.md`: conceptual domain model underneath card content.
+- `design/card-concepts.md`: card idea inventory.
+- `literature/INDEX.md`: source-note navigation.
+
+Important routes:
+
 - `src/engine/`: pure TypeScript game state, session transitions, RNG, card
   resolution, and tests.
+- `src/app/`: React game hook, browser storage, and tutorial-completion
+  persistence.
 - `src/data/cards/`: card declarations. Card modules export explicit arrays;
   `groups.ts` is the canonical grouped card map, and `hidden.ts` names hidden
   state keys with stable storage strings.
+- `src/data/deaths.ts` and `src/data/tutorial.ts`: death outcomes and scripted
+  tutorial cards.
 - `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio
   hooks, and Tailwind v4 theme CSS.
-- `design/`: domain model, card concepts, generated review exports, map
-  reviews, and research/design notes.
-- `literature/`: source notes and encrypted source-derived material. Run
-  `scripts/decrypt-literature.sh` only when encrypted literature is needed.
-- `.agents/skills/`: repo-local skill surface.
-- `.codex/agents/`: optional repo-local subagent templates. Empty by default.
-- Harness files (`AGENTS.md`, `.agents/skills/**`, `.codex/agents/**`) are
-  frozen unless Jörn explicitly asks for a harness edit.
-- `.worktrees/`: isolated worktrees for independent agent sessions.
-- `.devcontainer/`: local devcontainer with documentation.
-- `.github/workflows/deploy.yml`, `wrangler.toml`: Cloudflare Pages deployment.
-- `/tmp/`: scratch space for subagent prompts, iterative drafts, disposable
-  chat artifacts, disposable clones, and temporary reports; not durable project
-  state.
-
-## Map Files
-
-Map files are navigation caches. They index, summarize, and structure folder
-content for quick navigation. They are not authoritative sources.
-
-- `ARCHITECTURE.md`: current repo architecture, implementation state, and
-  available feature map.
-- `PROGRESS.md`: current work state, blockers, planned/deferred work, and
-  approval-sensitive items.
-- `DEPLOY.md`: deployment and release map.
-- `literature/INDEX.md`: source-note navigation.
+- `package.json`, `vite.config.ts`, `playwright.config.ts`,
+  `.github/workflows/deploy.yml`, and `wrangler.toml`: package scripts, app/test
+  framework configuration, and deploy source truth.
 - `design/cards-export.md`: generated card review export; refresh with
   `npm run cards`.
 - `public/cards-map.html`: generated card graph; refresh with `npm run cards`.
+- `literature/`: source notes and encrypted source-derived material. Run
+  `scripts/decrypt-literature.sh` only when encrypted literature is needed.
+- `scripts/export-cards.ts`, `scripts/decrypt-literature.sh`, and
+  `scripts/toc.sh`: card export, literature decrypt, and map heading helpers.
+- `.agents/skills/`: repo-local skill surface.
+- `.agents/skills/<skill>/SKILL.md`: active skill instructions. Optional
+  `references/`, `agents/openai.yaml`, and `scripts/` support the skill.
+- `.codex/agents/`: optional repo-local subagent templates. Empty by default.
+- `.worktrees/`: ignored local worktrees for independent sessions.
+- `/tmp/`: scratch for subagent prompts, iterative drafts, disposable chat
+  artifacts, disposable clones, and temporary reports. It is not durable
+  project state.
+
+## Trust Model
+
+- Source files and tests overrule maps for implementation behavior. Source
+  notes overrule maps for source facts. Jörn decisions overrule agent-written
+  drafts for approval-sensitive content and scope. Hand-authored design notes
+  describe current design intent where they are not contradicted by source
+  truth, Jörn decisions, or `PROGRESS.md`.
+- `FACTSHEET.md` records durable project facts, Jörn decisions, and repeated
+  context. `ARCHITECTURE.md`, `PROGRESS.md`, `DEPLOY.md`, and
+  `literature/INDEX.md` are navigation caches. Keep them current, but do not
+  treat them as source truth when source files or Jörn decisions disagree.
+- `design/cards-export.md` and `public/cards-map.html` are generated review
+  surfaces. They are useful for generated counts, links, and cross-card
+  structure. Regenerate them with `npm run cards`; do not hand-edit generated
+  content as source truth.
+- Card text, death messages, tutorial text, and expert-grounded mechanisms are
+  agent-written draft content until Jörn approves them.
+- Browser/deploy behavior should be checked with the relevant command or local
+  run before being treated as current.
+
+## Documentation
+
+- Write for current Codex agents and Jörn, not weaker hypothetical agents. Do
+  not explain generic TypeScript, React, git, Markdown, or game-development
+  concepts unless this repo uses them in a non-obvious way.
+- Put knowledge where future agents need it: code comments for local invariants,
+  tests for executable behavior, design/source notes for domain claims,
+  `FACTSHEET.md` for durable project facts and repeated context,
+  `ARCHITECTURE.md` for implementation maps, `PROGRESS.md` for work state,
+  `DEPLOY.md` for release operations, and skills for recurring agent behavior.
+- Keep documentation lean, current, and easy to verify. Prefer source-truth
+  links, generated artifacts, tests, and short reasoning traces over broad
+  summaries.
+- When adding or changing claims, distinguish source fact, Jörn decision or
+  approval, agent inference, game extrapolation, current implementation state,
+  aspiration, and observed playtest result where confusion would matter.
+- Delete or demote obsolete notes. Git history is enough for historical
+  material once no future agent needs it as current context.
 
 ## Review
 
@@ -168,14 +230,17 @@ Final summaries should list review passes performed, including review
 subagents used or intentionally not used. Ask Jörn before merging harness
 changes that alter `AGENTS.md`, skill bodies, task-routing structure, or
 authority boundaries. `AGENTS.md` and skill bodies require Jörn approval before
-they become final durable instruction material.
+they are treated as final durable instruction material.
 
 ## Commands
+
+Use the smallest relevant check set. Verify locally when a command might be
+stale or too broad for the task.
 
 ```bash
 # Harness and navigation
 git diff --check
-bash scripts/toc.sh AGENTS.md ARCHITECTURE.md PROGRESS.md DEPLOY.md
+bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md DEPLOY.md
 
 # App and engine
 npm run check

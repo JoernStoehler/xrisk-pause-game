@@ -72,6 +72,9 @@ submodules. The labels are for clarity, not a task-management schema.
 - `[active]` Keep deployment discoverable as a distinct surface because release
   mechanics, public feedback loops, and game-outcome tracking are distinct from
   app implementation.
+- `[active]` Current GitHub Actions deploy is main-only. Branch/commit
+  Cloudflare preview deployment is possible future deploy work if worktree-first
+  development makes preview links important.
 - `[planned]` Coordinate with playtesting before treating a public deploy as
   ready for broader feedback loops.
 - `[idea]` Add deploy dry-run or preview guidance if deployment changes become
@@ -81,12 +84,22 @@ submodules. The labels are for clarity, not a task-management schema.
 
 - `[active]` Keep `AGENTS.md` as the root instruction map, not a tracker or
   design doc.
-- `[active]` Keep current implementation state in `ARCHITECTURE.md`, current
-  work state here, and deploy operations in `DEPLOY.md`.
+- `[active]` Keep durable project facts and repeated context in `FACTSHEET.md`,
+  current implementation state in `ARCHITECTURE.md`, current work state here,
+  and deploy operations in `DEPLOY.md`.
+- `[active]` Use `skill-writing` and `gpt-55-prompting` for skill, prompt, and
+  other agent-facing instruction changes. The old broad `harness-engineering`
+  skill has been removed.
+- `[active]` Use `plan-first` only when Jörn invokes it or explicitly asks to
+  plan before implementation.
+- `[active]` Use `stalled-session-recovery` when chat repair overhead blocks
+  useful work.
+- `[active]` Use `goal-tool` before creating, updating, checkpointing, or
+  completing `/goal`.
+- `[active]` Ordinary tracked work should happen in git worktrees, not directly
+  on `main`, so independent parallel sessions stay mergeable.
 - `[needs Jörn]` `AGENTS.md` and skill bodies require Jörn approval before they
   are treated as final durable instruction material.
-- `[needs Jörn]` `write-cards` and `research-topic` remain TODO placeholder
-  skills until Jörn writes or approves real durable workflows.
 - `[idea]` Decide later whether the Codex web backup environment needs actual
   setup scripts; current evidence says browser binaries, Node 22+ for Wrangler,
   and `age` are missing there.

@@ -53,6 +53,27 @@ Common feedback loops:
   work state in `PROGRESS.md`, and release operations in `DEPLOY.md`, not in
   chat. Delete stale tracker detail once git history is enough.
 
+## Checkable Claims
+
+Use this when adding or changing claims in design notes, map files, generated
+review artifacts, card concepts, source notes, comments, or task/progress
+tracking.
+
+- Say what kind of claim it is when confusion would matter: source fact, Jörn
+  decision or approval, agent inference, game extrapolation, current
+  implementation state, aspiration, or observed playtest result.
+- Link non-obvious claims to their source of truth, or state that source truth
+  is missing. Prefer nearby file paths, generated artifacts, literature notes,
+  tests, or Jörn decisions over chat memory.
+- Record enough reasoning for a future agent to check the claim without
+  rereading the whole session. Do this when the claim affects content, player
+  takeaway, validation, release confidence, or future task routing.
+- Distinguish observation from interpretation. For example, keep a playtest
+  quote, a card-export count, or a test result separate from what it implies for
+  design.
+- Delete stale or unnecessary claims instead of preserving parallel summaries.
+  Git history is cheaper than forcing future agents to re-verify obsolete text.
+
 ## Completeness Checks
 
 Use the relevant checks for the surface being changed. These are prompts for
@@ -65,7 +86,8 @@ thinking, not a mandatory checklist for every task.
 - Is the implementation concrete and locally readable enough for a fresh agent?
 
 **Cards and Content**
-- Are source facts, game extrapolations, and Jörn-approved claims separated?
+- Are source facts, agent inferences, game extrapolations, aspirations, and
+  Jörn-approved claims separated?
 - Did `npm run cards` run after TypeScript card edits?
 - Did the generated diffs make card count, grouping, hidden-state edges, and
   repeated concepts easier to review?
@@ -74,7 +96,9 @@ thinking, not a mandatory checklist for every task.
 **Design and Research**
 - Is the source of truth clear: design doc, literature note, generated export,
   map file, or code?
-- Are uncertainty and approval status explicit where they matter?
+- Are uncertainty, evidence strength, and approval status explicit where they
+  matter?
+- Can a future agent check the main claims without reconstructing the chat?
 - Is the result easy for Jörn to review without reconstructing the full chat?
 
 **UI and Playability**

@@ -1,9 +1,9 @@
----
-name: harness-engineering
-description: Use when Codex edits, reviews, or proposes changes to repo-local harness material such as `AGENTS.md`, `.agents/skills/*/SKILL.md`, `.codex/agents/*.toml`. Not needed for reading and using harness material. Not needed for editing other files.
----
+# Harness Engineering Notes
 
-# Harness Engineering
+Status: archived reference notes moved from the former live
+`harness-engineering` skill. This file is not an active skill and should not be
+loaded by default. Use the live `skill-writing` skill first; read this file
+only when a concrete skill-writing preflight or review is still unclear.
 
 For projects that make use of massive numbers of AI agents, a lot of tradeoffs shift away from standard projects, towards ensuring that agents can work more effectively, with less human oversight or instruction. Harness Engineering is the new name for picking conventions, writing material, and refactoring projects to be more useable by agents.
 This skill conveys a bunch of instrumental objectives that increase agent autonomy across long chains of agents, and breaks them into heuristics that can be applied to the repository without having to first observe agent behavior over a long time to assess the ground-truth agent success/effectiveness in the project.
@@ -124,52 +124,62 @@ A few ideas and suggestions that in the past improved agent effectiveness:
 
 ## This Repository
 
-This repo ports the `msc-math` harness shape, not the `msc-math` project
-content. Keep the local harness small enough that fresh agents can enter the
-project without reading obsolete routes or unrelated process lore.
+Here's an overview of what the harness looks like in `msc-math`. Note that there is heavy overlap between these concrete files and `$harness-engineering`, since
+latter is too complex to be loaded for everyday use.
 
 ### AGENTS.md
-- sections: Project, Files, Map Files, Review, Commands
-- root map only; do not turn it into a task tracker, style guide, or design doc
-- no nested `AGENTS.md`
+- sections: Project, Files, Map Files, Commands
+- Map Files are files that merely index / summarize other files, as a more detailed intermediate layer
 
-### Root Map Files
-- `ARCHITECTURE.md`: current implementation map, available features, known
-  placeholders, generated artifacts, and validation map
-- `PROGRESS.md`: current work state, blockers, planned/deferred work, and
-  Jörn-needed decisions
-- `DEPLOY.md`: Cloudflare Pages deployment, release checks, public URLs, and
-  deploy approval boundaries
+### $harness-engineering
+- This file was written by Jörn.
+- Except for typo-corrections, it should never be touched by agents.
+- It is only needed when editing the harness, not for using it
 
-### `.codex/`
-- no repo-local `.codex/config.toml` stub; user/runtime settings belong in
-  `~/.codex/config.toml`
-- `.codex/.gitignore` is only a safety net against accidental runtime state
-- `.codex/agents/.gitkeep` preserves the optional subagent-template extension
-  point without carrying generic role TOMLs
-- `.worktrees/` is ignored scratch space for isolated agent branches
+### $skill-creator
+- Built-in, not all that great but reinforces good practices
 
-### Skills
-- `$harness-engineering`: use for edits to `AGENTS.md`, `.agents/skills/**`,
-  `.codex/agents/**`, task-routing structure, and harness process docs
-- `$git-worktrees-merge`: use for worktree, branch, checkpoint, merge, and
-  conflict-resolution work
-- `$project-quality`: repo-wide quality objectives, navigation, clarity,
-  verification, and tracking; copied from `msc-math` and needs Jörn review
-- `$typescript`: TypeScript, React, CLI, script, test, and TypeScript comment
-  conventions
-- `$post-mortem`: session reflection and lessons learned
-- `$research-topic`: pause-game source-grounded research workflow; currently
-  TODO for Jörn
-- `$write-cards`: pause-game card workflow; currently TODO for Jörn
+### $chat-advanced
+- the basic chat flows between agent and Jörn work okay
+- this is for more ambitious flows, e.g. scoping the task, information transfer to Jörn, salvaging something from a failed attempt
 
-### Durable Instruction Change Policy
-- `AGENTS.md` and skill edits are high-risk durable instruction changes.
-- Agents may draft, copy, trim, or propose `AGENTS.md` and skill changes in
-  worktrees, but Jörn must approve them before they are treated as final
-  durable instructions.
-- If an agent cannot converge on a skill direction after three review rounds,
-  each with three concrete alternatives or a clear reason fewer alternatives
-  exist, stop and ask Jörn to choose or write the skill.
-- Placeholder skills should say TODO plainly instead of pretending to encode
-  settled workflows.
+### $formal-math
+- mainly about how to make the mathematical content of msc-math more correct, checkable, Jörn-reviewable, and maintainable concretely
+- fleshes out the generic instrumental objectives from the "Files as Sources of Knowledge" section
+
+### $rust
+- again, fleshes out the generic instrumental objectives for rust code, tests, comments
+- the most complicated pattern here is that we want code-math correspondence, i.e. code follows conceptually elegant mathematical definitions, and mathematical definitions enable readable code
+- basic guidance for the api boundary between `crates/` and `experiments/`
+
+### $post-mortem
+- reflection after a session to learn how to improve the harness over time
+- Jörn accumulates examples and directional feedback, so the workflow only indirectly edits the harness
+
+### $research-experiments-data
+- again, fleshes out the generic instrumental objectives for research experiments
+- has reference files with even more specific architecture and execution patterns for research experiments
+
+### $thesis
+- again, fleshes out the generic instrumental objectives for writing thesis content
+- since the thesis is the one artifact in the repo that is actually read by humans, and that leaves the internal project repository, tradeoffs are again different
+- basically, standard knowledge of how to write a good thesis becomes relevant, and writers optimize for the real+imaginary audience of thesis advisors+master students
+
+### $tasks
+- unique instrumental goals for project management, including maintaining the durable task tracking system, and writing good task descriptions for other agents
+- main focus is on reinforcing prompting for gpt-5.5 , which differs from prompt engineering for older models, since gpt 5.5 mainly just needs the objective and no help
+
+### `tasks/<group>.md`
+- the task tracking system
+
+### $plan-implement-review
+- orchestration pattern that helps gpt-5.5 resolve contradictions and opposing pressures in the right direction
+- counteracts reward-hacking (concrete example: tests must fail on bad code in order for test success to even be an instrumental objective)
+- balances the benefits and costs of pivoting to better paths and propagating learnings
+- highlights a few useful patterns, such as ephemeral feasibility spikes, babble-and-prune
+
+### $subagent-prompts
+- a specialized version of $harness-engineering for writing ephemeral instruction packets for subagents
+
+### $map-file-regenerate
+- brief workflow/checklist for all the different map files (see `AGENTS.md`) to keep them from going stale
