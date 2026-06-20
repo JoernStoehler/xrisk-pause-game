@@ -118,5 +118,5 @@ After TypeScript card edits, run `npm run cards` and inspect generated diffs.
 - `npm run cli auto 20`: quick autoplay smoke check, not a balance proof.
 - `npm run cards`: generated card review artifacts.
 - `git diff --check`: whitespace/conflict-marker hygiene.
-- `bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md
-  DEPLOY.md`: navigation heading check after map-doc edits.
+- `bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md`:
+  navigation heading check after map-doc edits.

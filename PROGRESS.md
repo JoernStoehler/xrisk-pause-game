@@ -69,9 +69,9 @@ submodules. The labels are for clarity, not a task-management schema.
 
 ## Deploy And Release
 
-- `[active]` Keep deployment discoverable as a distinct surface because release
-  mechanics, public feedback loops, and game-outcome tracking are distinct from
-  app implementation.
+- `[active]` Keep deployment discoverable through the `deploy` skill because
+  release mechanics, public feedback loops, and game-outcome tracking are
+  distinct from app implementation.
 - `[active]` Current GitHub Actions deploy is main-only. Branch/commit
   Cloudflare preview deployment is possible future deploy work if worktree-first
   development makes preview links important.
@@ -86,7 +86,7 @@ submodules. The labels are for clarity, not a task-management schema.
   design doc.
 - `[active]` Keep durable project facts and repeated context in `FACTSHEET.md`,
   current implementation state in `ARCHITECTURE.md`, current work state here,
-  and deploy operations in `DEPLOY.md`.
+  and deploy operations in `.agents/skills/deploy/SKILL.md`.
 - `[active]` Use `skill-writing` and `gpt-55-prompting` for skill, prompt, and
   other agent-facing instruction changes. The old broad `harness-engineering`
   skill has been removed.

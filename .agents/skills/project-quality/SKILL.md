@@ -50,8 +50,9 @@ Common feedback loops:
   checkable claims, boring structure, and useful duplication over abstractions
   that require fresh agents to reconstruct context.
 - **Tracking**: Keep current implementation state in `ARCHITECTURE.md`, current
-  work state in `PROGRESS.md`, and release operations in `DEPLOY.md`, not in
-  chat. Delete stale tracker detail once git history is enough.
+  work state in `PROGRESS.md`, and deploy operations in the `deploy` skill and
+  deploy source files, not in chat. Delete stale tracker detail once git
+  history is enough.
 
 ## Checkable Claims
 
@@ -124,7 +125,8 @@ thinking, not a mandatory checklist for every task.
 If a quality gap slowed the task or made verification hard, prefer a small
 durable improvement over a chat explanation. Examples:
 
-- add or update `ARCHITECTURE.md`, `PROGRESS.md`, or `DEPLOY.md`;
+- add or update `ARCHITECTURE.md`, `PROGRESS.md`, `FACTSHEET.md`, or a relevant
+  skill;
 - add a focused test;
 - enrich a generated review artifact;
 - record a Jörn decision in the relevant map, design, or source file;

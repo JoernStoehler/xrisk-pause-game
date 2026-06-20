@@ -5,20 +5,32 @@ description: Use when Codex inspects, diagnoses, documents, or changes this repo
 
 # Deploy
 
-Use this skill for deployment surfaces, not for ordinary app changes that only
-need local validation.
+Use this skill when the task is "I need to know or do something about
+deployment." Do not use it for ordinary app, engine, card, or UI changes that
+only need local validation.
 
 Start from source truth:
 
-- `DEPLOY.md`: release and public-availability map.
-- `.github/workflows/deploy.yml`: current GitHub Actions deploy workflow.
+- `.github/workflows/deploy.yml`: current GitHub Actions deploy workflow and
+  source of the CI/deploy steps.
 - `wrangler.toml`: Cloudflare Pages project/output config.
 - `package.json`: build, check, test, and card-export commands.
 - `AGENTS.md` and `FACTSHEET.md`: project-success and approval boundaries.
 
-Keep `DEPLOY.md` short. Put recurring deploy workflow guidance in this skill;
-update `DEPLOY.md` only for current deploy state, public URLs, release checks,
-approval boundaries, and important operator-facing facts.
+Do not recreate a root deploy map. Mechanically discoverable facts belong in
+source files. Deploy-specific task facts and workflow guidance belong here.
+
+## Current Facts
+
+- Cloudflare Pages project: `global-pause`.
+- Stable app URL: `https://global-pause.pages.dev/`.
+- Stable card map URL: `https://global-pause.pages.dev/cards-map.html`.
+- The current GitHub Actions deploy path runs on pushes to `main`.
+- Branch or commit Cloudflare preview deployment is not configured as a
+  repo-documented workflow yet.
+- `#qa` is intentionally reachable by URL for internal review.
+- `?playtest=1` is intentionally reachable by URL for controlled playtest
+  exports.
 
 ## Boundaries
 
@@ -37,8 +49,8 @@ approval boundaries, and important operator-facing facts.
 ## Workflow
 
 - For deploy failures, inspect the exact failing job or command first. Compare
-  it with `DEPLOY.md`, `.github/workflows/deploy.yml`, `wrangler.toml`, and
-  `package.json` before editing.
+  it with `.github/workflows/deploy.yml`, `wrangler.toml`, and `package.json`
+  before editing.
 - For deploy workflow changes, run the smallest relevant local checks. At
   minimum, inspect deploy source files and run `npm run build`; add
   `npm run check`, `npm run test:e2e`, and `npm run cards` when app behavior,
@@ -47,8 +59,8 @@ approval boundaries, and important operator-facing facts.
   behavior before writing commands. Prefer local `npx wrangler pages deploy
   --help` and current official Cloudflare docs over remembered syntax.
 - For branch or commit preview deploys, make the workflow explicit in source
-  files and keep production `main` deployment separate. Record the resulting
-  current state in `DEPLOY.md` after the workflow exists.
+  files and keep production `main` deployment separate. Update this skill after
+  the workflow exists.
 - For release notes or review packets, distinguish local validation, GitHub
   Actions validation, Cloudflare deployment success, and actual public
   post-deploy accessibility.

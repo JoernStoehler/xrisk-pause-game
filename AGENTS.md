@@ -95,7 +95,6 @@ This repo does not use nested `AGENTS.md` files.
 |-- FACTSHEET.md
 |-- ARCHITECTURE.md
 |-- PROGRESS.md
-|-- DEPLOY.md
 |-- package.json
 |-- src/
 |   |-- App.tsx
@@ -144,8 +143,6 @@ Start here:
   placeholders, generated artifacts, and validation map.
 - `PROGRESS.md`: current work state, blockers, planned/deferred work, and
   Jörn-needed decisions.
-- `DEPLOY.md`: Cloudflare Pages deployment, release checks, public URLs, and
-  deploy approval boundaries.
 - `design/EXPERT_MODEL.md`: current recovered source of truth for Jörn's expert
   model until Jörn replaces or approves it. This is not approval to implement
   broad content; check `PROGRESS.md` for current blockers.
@@ -169,6 +166,7 @@ Important routes:
 - `package.json`, `vite.config.ts`, `playwright.config.ts`,
   `.github/workflows/deploy.yml`, and `wrangler.toml`: package scripts, app/test
   framework configuration, and deploy source truth.
+- `.agents/skills/deploy/SKILL.md`: deployment and release workflow guidance.
 - `design/cards-export.md`: generated card review export; refresh with
   `npm run cards`.
 - `public/cards-map.html`: generated card graph; refresh with `npm run cards`.
@@ -193,9 +191,9 @@ Important routes:
   describe current design intent where they are not contradicted by source
   truth, Jörn decisions, or `PROGRESS.md`.
 - `FACTSHEET.md` records durable project facts, Jörn decisions, and repeated
-  context. `ARCHITECTURE.md`, `PROGRESS.md`, `DEPLOY.md`, and
-  `literature/INDEX.md` are navigation caches. Keep them current, but do not
-  treat them as source truth when source files or Jörn decisions disagree.
+  context. `ARCHITECTURE.md`, `PROGRESS.md`, and `literature/INDEX.md` are
+  navigation caches. Keep them current, but do not treat them as source truth
+  when source files or Jörn decisions disagree.
 - `design/cards-export.md` and `public/cards-map.html` are generated review
   surfaces. They are useful for generated counts, links, and cross-card
   structure. Regenerate them with `npm run cards`; do not hand-edit generated
@@ -214,7 +212,7 @@ Important routes:
   tests for executable behavior, design/source notes for domain claims,
   `FACTSHEET.md` for durable project facts and repeated context,
   `ARCHITECTURE.md` for implementation maps, `PROGRESS.md` for work state,
-  `DEPLOY.md` for release operations, and skills for recurring agent behavior.
+  and skills for recurring agent behavior and deploy operations.
 - Keep documentation lean, current, and easy to verify. Prefer source-truth
   links, generated artifacts, tests, and short reasoning traces over broad
   summaries.
@@ -240,7 +238,7 @@ stale or too broad for the task.
 ```bash
 # Harness and navigation
 git diff --check
-bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md DEPLOY.md
+bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md
 
 # App and engine
 npm run check

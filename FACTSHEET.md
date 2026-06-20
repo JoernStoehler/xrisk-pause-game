@@ -82,16 +82,3 @@ update this file when the fact is durable.
   bugs, deploy/release-loop issues, or harness/map issues.
 - Once repeated findings exist, propose lightweight capture formats or quality
   gates for Jörn review.
-
-## Deploy And Public Surfaces
-
-- Deployment is a distinct surface because release mechanics, public feedback
-  loops, and game-outcome tracking are distinct from app implementation.
-- Stable app URL: `https://global-pause.pages.dev/`.
-- Stable card map URL: `https://global-pause.pages.dev/cards-map.html`.
-- `#qa` is intentionally reachable by URL for internal review.
-- `?playtest=1` is intentionally reachable by URL for controlled playtest
-  exports.
-- Public internal surfaces should be gated, removed, or explicitly accepted
-  before a broader public launch where spoilers or copied hidden-state logs
-  would matter.
