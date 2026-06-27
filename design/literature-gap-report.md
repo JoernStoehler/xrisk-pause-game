@@ -66,7 +66,7 @@ The game needs quantitative anchors for "the clock is ticking" — how fast does
 - Frontier training compute growing ~4-5x/year (AISI trends report, already had)
 - EU threshold 1e25 FLOP, US 1e26 FLOP — but these erode (Heim thresholds)
 
-**Remaining gap:** INTELLECT-1 (open distributed training demo) — download may still be pending. Also: no formal model of threshold erosion rates combining algorithmic + hardware progress. May need to derive this ourselves from the Epoch data.
+**Remaining gap:** no formal model of threshold erosion rates combining algorithmic + hardware progress. INTELLECT-1 is already available in `literature/intellect1-decentralized-training-2024.md` and summarized in `literature/compute-requirements-trends.md`; future work may need to derive a combined erosion model from Epoch/compute-governance/distributed-training sources.
 
 ### 3. Public Opinion Dynamics (D4) — FILLED (prior session)
 
