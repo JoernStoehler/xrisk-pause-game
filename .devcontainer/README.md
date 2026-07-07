@@ -43,13 +43,26 @@ Prefer durable Dockerfile or script changes over manually patching the running
 container. Manual changes inside the running container are only useful when they
 verify the current session or unblock validation before the next rebuild.
 
+For a VS Code tunnel CLI update without rebuilding or recreating the container,
+run from the host:
+
+```bash
+bash .devcontainer/host-update-vscode-tunnel.sh
+```
+
+The script discovers the existing devcontainer by its Docker label, copies the
+latest stable VS Code CLI to `/usr/local/bin/code-tunnel`, and verifies the
+installed binary by copying it back out. It works for stopped containers. If a
+tunnel process is already running, restart that tunnel process after the update;
+the container itself is not started, stopped, rebuilt, or recreated.
+
 ## Quality Gates
 
 For devcontainer or VS Code tunnel maintenance, check the relevant gates before
 handing off:
 
 ```bash
-bash -n .devcontainer/host-devcontainer-rebuild.sh .devcontainer/host-vscode-tunnel.sh .devcontainer/post-create.sh
+bash -n .devcontainer/host-devcontainer-rebuild.sh .devcontainer/host-update-vscode-tunnel.sh .devcontainer/host-vscode-tunnel.sh .devcontainer/post-create.sh
 git diff --check
 code-tunnel --version
 gitleaks version
