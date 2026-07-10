@@ -18,8 +18,11 @@ submodules. The labels are for clarity, not a task-management schema.
 
 ## Current Phase
 
-- `[active]` Post-integration maintenance with recovered expert-model material
-  consolidated in `design/EXPERT_MODEL.md`.
+- `[active]` Architecture cleanup has shifted the game loop to explicit
+  aggregate state, append-only history, card-owned monthly rates/reducers, pure
+  pool building, and deterministic continuous-time hazard draw.
+- `[active]` The current cards are dummy scaffolding for the card-loop
+  architecture, not the approved expert model.
 - `[blocked]` Broad content/card review, rewrites, and new expert-grounded
   mechanisms should wait until Jörn marks the expert-model sheet ready for
   integration review.
@@ -27,19 +30,21 @@ submodules. The labels are for clarity, not a task-management schema.
 ## Content
 
 - `[needs Jörn]` Expert-grounded content is draft until Jörn approves it.
-- `[active]` Treat `design/EXPERT_MODEL.md` as the single recovered source of
-  truth for Jörn's expert model until Jörn replaces or approves it.
-- `[active]` Preserve traceability from design/literature notes to card concepts
-  and implementation.
-- `[active]` Keep static two-or-three-choice cards as the intended content
-  direction; migrate or deliberately retain existing dynamic `enabled` options
-  later.
-- `[blocked]` Implement geopolitics cards only after Jörn approves the relevant
-  concepts and mechanism framing.
+- `[active]` Treat `docs/expert-context.md` as the compact context surface for
+  future expert-model/content work. It is not approval for broad content
+  implementation.
+- `[active]` Preserve traceability from literature/source notes and
+  Jörn-provided context to implementation.
+- `[active]` Use `src/content/cards/` as the current code-owned card surface.
+  Cards should usually own their own `rate` and `reduce` functions.
+- `[active]` Keep the global state schema explicit in `src/engine/state.ts`.
+  Prefer direct `state.foo.bar` access over indirection when writing card logic.
+- `[planned]` Replace dummy cards with expert-grounded cards after Jörn approves
+  the relevant concepts and mechanism framing.
 - `[planned]` Rebalance after the content pass.
 - `[planned]` Regenerate portraits after card content stabilizes.
-- `[idea]` Add more history-triggered chains and degraded variants after card
-  content stabilizes.
+- `[idea]` Deterministic card emitters may replace static card definitions if
+  future content needs state-templated card variants.
 
 ## App And Playability
 
@@ -47,7 +52,7 @@ submodules. The labels are for clarity, not a task-management schema.
   overhaul proceeds.
 - `[active]` Match validation to touched surface; `npm run check` alone does not
   prove engine/card/UI behavior is fully covered.
-- `[active]` Keep app, CLI, and future playtest tooling on shared
+- `[active]` Keep app, Playwright, and future playtest tooling on shared
   engine/session transitions.
 - `[planned]` Rework title/death screen polish after content and takeaway
   message are clearer.

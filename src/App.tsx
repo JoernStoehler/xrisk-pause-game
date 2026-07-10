@@ -6,7 +6,8 @@ import { GameScreen } from "./components/GameScreen";
 import { DeathScreen } from "./components/DeathScreen";
 import { TutorialScreen } from "./components/TutorialScreen";
 import { QAReference } from "./components/QAReference";
-import type { DeathInfo, GameState } from "./engine/types";
+import type { GameState } from "./engine/session";
+import type { DeathInfo } from "./engine/state";
 
 type DeadGameState = GameState & { phase: "dead"; death: DeathInfo };
 
@@ -42,12 +43,13 @@ export default function App() {
     );
   } else if (isDeadGameState(state)) {
     screen = (
-      <DeathScreen
-        death={state.death}
-        turnsSurvived={state.turn}
-        history={state.history}
-        deathRunExportState={isPlaytestMode ? state : undefined}
-        onRestart={restart}
+        <DeathScreen
+          death={state.death}
+          decisionsSurvived={state.world.decisionCount}
+          elapsedMonths={state.world.elapsedMonths}
+          history={state.history}
+          deathRunExportState={isPlaytestMode ? state : undefined}
+          onRestart={restart}
       />
     );
   } else {

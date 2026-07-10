@@ -3,16 +3,28 @@ import { test, expect } from "@playwright/test";
 test.use({ viewport: { width: 390, height: 844 } });
 
 const savedCardState = (templateId: string) => ({
-  v: 4,
+  v: 6,
   state: {
     phase: "playing",
-    resources: { pol: 50, int: 50, saf: 50, alg: 50 },
-    hidden: {},
-    turn: 12,
+    world: {
+      elapsedMonths: 12,
+      decisionCount: 4,
+      resources: { political: 50, intelligence: 50, safety: 50, algorithmic: 50 },
+      treaty: { erosion: 0, legitimacy: 50, usChinaWar: false },
+      enforcement: { visibility: 0, missedThreats: 0, sourceProtection: 60 },
+      publicOpinion: {
+        legitimacy: 50,
+        fatigue: { elapsedMonths: 12, value: 20, changePerMonth: 2 },
+      },
+      research: { mentoringCapacity: 50, containment: 35 },
+    },
     activeCard: { templateId },
     rngState: 1,
     death: null,
-    history: [],
+    history: [
+      { type: "gameStarted", seed: 1 },
+      { type: "cardDrawn", elapsedMonths: 12, deltaMonths: 1, cardId: templateId, rngStateBefore: 1, rngStateAfter: 1, totalRate: 1 },
+    ],
   },
 });
 
@@ -45,7 +57,7 @@ test("QA reference page is scrollable", async ({ page }) => {
 });
 
 test("long card text stays contained in its text area", async ({ page }) => {
-  await loadSavedCard(page, "biotech-proposal");
+  await loadSavedCard(page, "war-inspection-crisis");
 
   const contained = await page.locator("[data-testid=swipe-card] p").evaluate((text) => {
     const textBox = text.getBoundingClientRect();
@@ -63,11 +75,11 @@ test("long card text stays contained in its text area", async ({ page }) => {
 });
 
 test("enabled down choices have a visible game affordance", async ({ page }) => {
-  await loadSavedCard(page, "data-center-attack");
+  await loadSavedCard(page, "daily-briefing");
 
   await expect(page.getByTestId("label-down")).toBeVisible();
   await expect(page.getByTestId("label-down")).toContainText(
-    "Cross-reference satellite data",
+    "Protect research time",
   );
   await page.getByTestId("label-down").click();
   await expect
@@ -76,14 +88,16 @@ test("enabled down choices have a visible game affordance", async ({ page }) => 
         const raw = localStorage.getItem("global-pause-state");
         if (!raw) return null;
         const saved = JSON.parse(raw);
-        return saved.state.history.at(-1);
+        return saved.state.history
+          .filter((entry: { type?: string }) => entry.type === "choiceCommitted")
+          .at(-1);
       }),
     )
-    .toEqual({ turn: 12, cardId: "data-center-attack", choice: "down" });
+    .toEqual({ type: "choiceCommitted", elapsedMonths: 12, decisionIndex: 4, cardId: "daily-briefing", choice: "down" });
 });
 
 test("disabled down choices do not animate the card away from keyboard input", async ({ page }) => {
-  await loadSavedCard(page, "budget-review");
+  await loadSavedCard(page, "budget-turf-war");
 
   await expect(page.getByTestId("label-down")).toHaveCount(0);
   await page.keyboard.press("ArrowDown");

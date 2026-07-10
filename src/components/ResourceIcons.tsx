@@ -1,5 +1,5 @@
-import type { ChoicePreview, ResourceKey, Resources } from "../engine/types";
-import { RESOURCE_KEYS } from "../engine/types";
+import type { ChoicePreview } from "../engine/card";
+import { RESOURCE_KEYS, type ResourceKey, type Resources } from "../engine/state";
 import type { TiltDirection } from "../hooks/useSwipe";
 
 function PolIcon() {
@@ -45,10 +45,10 @@ function AlgIcon() {
 }
 
 const ICON_COMPONENTS: Record<ResourceKey, () => React.JSX.Element> = {
-  pol: PolIcon,
-  int: IntIcon,
-  saf: SafIcon,
-  alg: AlgIcon,
+  political: PolIcon,
+  intelligence: IntIcon,
+  safety: SafIcon,
+  algorithmic: AlgIcon,
 };
 
 interface ResourceIconsProps {

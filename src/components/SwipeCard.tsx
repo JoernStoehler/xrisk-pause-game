@@ -1,5 +1,6 @@
 import { forwardRef, useEffect, useImperativeHandle } from "react";
-import type { ActiveCard, ChoiceDirection } from "../engine/types";
+import type { ActiveCard } from "../engine/card";
+import type { ChoiceDirection } from "../engine/history";
 import { useSwipe, type TiltDirection } from "../hooks/useSwipe";
 import { audio } from "../hooks/useAudio";
 import { SpeakerPortrait } from "./SpeakerPortrait";

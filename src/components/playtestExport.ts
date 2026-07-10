@@ -1,12 +1,8 @@
-import type {
-  DeathInfo,
-  GameState,
-  HiddenState,
-  HistoryEntry,
-  Resources,
-} from "../engine/types";
+import type { HistoryEntry } from "../engine/history";
+import type { GameState } from "../engine/session";
+import { cloneState, type DeathInfo, type Resources, type State } from "../engine/state";
 
-const DEATH_RUN_EXPORT_SCHEMA = "global-pause-playtest-death-run-v1";
+const DEATH_RUN_EXPORT_SCHEMA = "global-pause-playtest-death-run-v2";
 
 export type DeathRunExportState = GameState & { phase: "dead"; death: DeathInfo };
 
@@ -14,9 +10,9 @@ interface DeathRunExport {
   schema: typeof DEATH_RUN_EXPORT_SCHEMA;
   generatedAt: string;
   phase: "dead";
-  turnCount: number;
+  decisionCount: number;
   resources: Resources;
-  hidden: HiddenState;
+  world: State;
   death: DeathInfo;
   history: HistoryEntry[];
   rngState: number;
@@ -24,7 +20,7 @@ interface DeathRunExport {
 }
 
 function copyHistory(history: readonly HistoryEntry[]): HistoryEntry[] {
-  return history.map(({ turn, cardId, choice }) => ({ turn, cardId, choice }));
+  return history.map((entry) => ({ ...entry }));
 }
 
 export function buildDeathRunExport(
@@ -35,14 +31,14 @@ export function buildDeathRunExport(
     schema: DEATH_RUN_EXPORT_SCHEMA,
     generatedAt: generatedAt.toISOString(),
     phase: state.phase,
-    turnCount: state.turn,
-    resources: { ...state.resources },
-    hidden: { ...state.hidden },
+    decisionCount: state.world.decisionCount,
+    resources: { ...state.world.resources },
+    world: cloneState(state.world),
     death: { ...state.death },
     history: copyHistory(state.history),
     rngState: state.rngState,
     limitations: [
-      "initialSeed is not currently tracked; current rngState is exported instead.",
+      "Card definitions are code and are not embedded in this export.",
     ],
   };
 }

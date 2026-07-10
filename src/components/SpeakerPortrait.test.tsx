@@ -1,8 +1,8 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
-import { ALL_CARDS } from "../data/cards";
-import { TUTORIAL_CARDS } from "../data/tutorial";
-import type { Dynamic } from "../engine/types";
+import { ALL_CARDS } from "../content/cards";
+import { TUTORIAL_CARDS } from "../content/tutorial";
+import type { DynamicText } from "../engine/card";
 import {
   PORTRAIT_IMAGES,
   SPEAKER_PORTRAIT_NAMES,
@@ -18,7 +18,7 @@ const portraitAssetUrls = Object.values(
   }) as Record<string, string>,
 );
 
-function staticSpeaker(speaker: Dynamic<string>, id: string): string {
+function staticSpeaker(speaker: DynamicText, id: string): string {
   expect(typeof speaker, `${id} uses a dynamic speaker that this audit cannot verify`).toBe(
     "string",
   );

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { ActiveCard, GameState } from "../engine/types";
+import type { ActiveCard } from "../engine/card";
 import type { TiltDirection } from "../hooks/useSwipe";
-import { TUTORIAL_CARDS } from "../data/tutorial";
+import { TUTORIAL_CARDS } from "../content/tutorial";
 import { ResourceIcons } from "./ResourceIcons";
 import { SwipeCard, type SwipeCardHandle } from "./SwipeCard";
 
@@ -23,19 +23,16 @@ export function TutorialScreen({ tutorialIndex, onAdvance, onSkip }: TutorialScr
     text: tutorial.text,
     left: {
       label: tutorial.leftLabel,
-      apply: (s: GameState) => s,
       previews: [],
       disabled: false,
     },
     right: {
       label: tutorial.rightLabel,
-      apply: (s: GameState) => s,
       previews: [],
       disabled: false,
     },
     down: {
       label: "",
-      apply: (s: GameState) => s,
       previews: [],
       disabled: true,
     },
@@ -64,7 +61,7 @@ export function TutorialScreen({ tutorialIndex, onAdvance, onSkip }: TutorialScr
     return () => window.removeEventListener("keydown", handler);
   }, [onSkip]);
 
-  const resources = { pol: 50, int: 50, saf: 50, alg: 50 };
+  const resources = { political: 50, intelligence: 50, safety: 50, algorithmic: 50 };
 
   return (
     <div className="flex flex-col h-full" data-testid="tutorial-screen" role="main">

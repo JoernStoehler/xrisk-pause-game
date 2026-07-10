@@ -2,37 +2,62 @@ import { expect, type Locator, type Page, test } from "@playwright/test";
 
 const viewportTolerance = 8;
 
+const worldState = (
+  elapsedMonths: number,
+  decisionCount = 0,
+  resources = { political: 50, intelligence: 50, safety: 50, algorithmic: 50 },
+) => ({
+  elapsedMonths,
+  decisionCount,
+  resources,
+  treaty: { erosion: 0, legitimacy: 50, usChinaWar: false },
+  enforcement: { visibility: 0, missedThreats: 0, sourceProtection: 60 },
+  publicOpinion: {
+    legitimacy: 50,
+    fatigue: { elapsedMonths, value: 20, changePerMonth: 2 },
+  },
+  research: { mentoringCapacity: 50, containment: 35 },
+});
+
 const savedPlayingState = (templateId: string) => ({
-  v: 4,
+  v: 6,
   state: {
     phase: "playing",
-    resources: { pol: 50, int: 50, saf: 50, alg: 50 },
-    hidden: {},
-    turn: 12,
+    world: worldState(12, 4),
     activeCard: { templateId },
     rngState: 1,
     death: null,
-    history: [],
+    history: [
+      { type: "gameStarted", seed: 1 },
+      { type: "cardDrawn", elapsedMonths: 12, deltaMonths: 1, cardId: templateId, rngStateBefore: 1, rngStateAfter: 1, totalRate: 1 },
+    ],
   },
 });
 
 const deadSavedState = {
-  v: 4,
+  v: 6,
   state: {
     phase: "dead",
-    resources: { pol: 0, int: 42, saf: 61, alg: 77 },
-    hidden: { pressure: 2 },
-    turn: 2,
+    world: worldState(2, 2, { political: 0, intelligence: 42, safety: 61, algorithmic: 77 }),
     activeCard: null,
     rngState: 123456,
     death: {
-      resource: "pol",
+      resource: "political",
       extreme: "depleted",
       message: "Political authority collapsed.",
     },
     history: [
-      { turn: 0, cardId: "opening-brief", choice: "left" },
-      { turn: 1, cardId: "treaty-threat", choice: "right" },
+      { type: "gameStarted", seed: 42 },
+      {
+        type: "cardDrawn",
+        elapsedMonths: 1,
+        deltaMonths: 1,
+        cardId: "daily-briefing",
+        rngStateBefore: 42,
+        rngStateAfter: 123,
+        totalRate: 1,
+      },
+      { type: "choiceCommitted", elapsedMonths: 1, decisionIndex: 0, cardId: "daily-briefing", choice: "left" },
     ],
   },
 };
@@ -123,7 +148,7 @@ test("title screen keeps the start control usable on mobile", async ({ page }) =
 });
 
 test("seeded game screen fits controls and records a choice", async ({ page }) => {
-  await loadSavedRun(page, savedPlayingState("data-center-attack"));
+  await loadSavedRun(page, savedPlayingState("daily-briefing"));
 
   await expect(page.getByTestId("game-screen")).toBeVisible();
   await expectNoHorizontalOverflow(page);
@@ -141,12 +166,14 @@ test("seeded game screen fits controls and records a choice", async ({ page }) =
         const raw = localStorage.getItem("global-pause-state");
         if (!raw) return null;
         const saved = JSON.parse(raw) as {
-          state?: { history?: Array<{ cardId: string; choice: string; turn: number }> };
+          state?: { history?: Array<{ type?: string; cardId?: string; choice?: string; elapsedMonths?: number; decisionIndex?: number }> };
         };
-        return saved.state?.history?.at(-1) ?? null;
+        return saved.state?.history
+          ?.filter((entry) => entry.type === "choiceCommitted")
+          .at(-1) ?? null;
       }),
     )
-    .toEqual({ turn: 12, cardId: "data-center-attack", choice: "down" });
+    .toEqual({ type: "choiceCommitted", elapsedMonths: 12, decisionIndex: 4, cardId: "daily-briefing", choice: "down" });
 });
 
 test("dead state keeps public controls reachable on mobile", async ({ page }) => {

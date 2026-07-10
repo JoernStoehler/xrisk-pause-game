@@ -17,7 +17,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - run: npm run cards
-      - run: git diff --exit-code design/cards-export.md
+      - run: git diff --exit-code docs/cards-export.md
 
   deploy:
     needs: validate
