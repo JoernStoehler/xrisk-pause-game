@@ -6,27 +6,28 @@
 import { useEffect } from "react";
 import { SpeakerPortrait } from "./SpeakerPortrait";
 import { SPEAKER_PORTRAIT_NAMES } from "./speakerPortraitRegistry";
-import { ALL_CARDS } from "../data/cards";
-import { DEATH_MESSAGES } from "../data/deaths";
-import { newGame } from "../engine/state";
-import type { Card, Dynamic, GameState, ResourceKey } from "../engine/types";
-import { RESOURCE_KEYS } from "../engine/types";
+import { ALL_CARDS } from "../content/cards";
+import { DEATH_MESSAGES } from "../content/deaths";
+import type { CardDefinition, DynamicText } from "../engine/card";
+import type { History } from "../engine/history";
+import { initialState, RESOURCE_KEYS, type ResourceKey, type State } from "../engine/state";
 
 const RESOURCE_LABELS: Record<ResourceKey, string> = {
-  pol: "Political",
-  int: "Intelligence",
-  saf: "Safety",
-  alg: "Algorithmic",
+  political: "Political",
+  intelligence: "Intelligence",
+  safety: "Safety",
+  algorithmic: "Algorithmic",
 };
 
 const LARGE_THRESHOLD = 10;
 
 /** Resolve a Dynamic value for display using a default state. */
-function res<T>(value: Dynamic<T>, state: GameState): T {
-  return typeof value === "function" ? (value as (s: GameState) => T)(state) : value;
+function res(value: DynamicText, state: State, history: History): string {
+  return typeof value === "function" ? value(state, history) : value;
 }
 
-const QA_STATE = newGame(1);
+const QA_STATE = initialState();
+const QA_HISTORY: History = [{ type: "gameStarted", seed: 1 }];
 
 function EffectBadges({ effects }: { effects: Partial<Record<ResourceKey, number>> }) {
   const entries = Object.entries(effects).filter(([, v]) => v !== 0) as [ResourceKey, number][];
@@ -97,32 +98,32 @@ export function QAReference() {
       {/* --- CARDS --- */}
       <h2 className="text-xl font-bold mb-3 border-b border-neutral-700 pb-1">Cards ({ALL_CARDS.length})</h2>
       <div className="space-y-4 mb-10">
-        {ALL_CARDS.map((card: Card, i: number) => (
+        {ALL_CARDS.map((card: CardDefinition, i: number) => (
           <div key={card.id} className="bg-neutral-800 rounded p-3">
             <div className="flex items-start gap-2 mb-2">
               <span className="bg-amber-700 text-white text-xs px-1.5 py-0.5 rounded font-bold shrink-0">
                 C{i + 1}
               </span>
               <div>
-                <span className="font-bold text-amber-300">{res(card.speaker, QA_STATE)}</span>
+                <span className="font-bold text-amber-300">{res(card.speaker, QA_STATE, QA_HISTORY)}</span>
                 <span className="text-neutral-500 ml-2 text-xs">({card.id})</span>
               </div>
             </div>
-            <p className="text-neutral-300 mb-2 leading-relaxed">{res(card.text, QA_STATE)}</p>
+            <p className="text-neutral-300 mb-2 leading-relaxed">{res(card.text, QA_STATE, QA_HISTORY)}</p>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <div className="bg-neutral-700/50 rounded p-2">
-                <div className="text-blue-300 font-bold mb-1">← {res(card.left.label, QA_STATE)}</div>
-                <EffectBadges effects={card.left.effects} />
+                <div className="text-blue-300 font-bold mb-1">← {res(card.choices.left.label, QA_STATE, QA_HISTORY)}</div>
+                <EffectBadges effects={card.choices.left.effects ?? {}} />
               </div>
               <div className="bg-neutral-700/50 rounded p-2">
-                <div className="text-orange-300 font-bold mb-1">{res(card.right.label, QA_STATE)} →</div>
-                <EffectBadges effects={card.right.effects} />
+                <div className="text-orange-300 font-bold mb-1">{res(card.choices.right.label, QA_STATE, QA_HISTORY)} →</div>
+                <EffectBadges effects={card.choices.right.effects ?? {}} />
               </div>
             </div>
-            {card.down && (
+            {card.choices.down && (
               <div className="mt-2 bg-neutral-700/50 rounded p-2 text-xs">
-                <div className="text-purple-300 font-bold mb-1">↓ {res(card.down.label, QA_STATE)}</div>
-                <EffectBadges effects={card.down.effects} />
+                <div className="text-purple-300 font-bold mb-1">↓ {res(card.choices.down.label, QA_STATE, QA_HISTORY)}</div>
+                <EffectBadges effects={card.choices.down.effects ?? {}} />
               </div>
             )}
           </div>

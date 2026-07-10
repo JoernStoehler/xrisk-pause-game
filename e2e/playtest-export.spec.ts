@@ -4,23 +4,43 @@ test.use({ viewport: { width: 390, height: 844 } });
 
 type ClipboardWindow = Window & { __copiedText?: string };
 
+const deadWorld = {
+  elapsedMonths: 2,
+  decisionCount: 2,
+  resources: { political: 0, intelligence: 42, safety: 61, algorithmic: 77 },
+  treaty: { erosion: 0, legitimacy: 50, usChinaWar: false },
+  enforcement: { visibility: 0, missedThreats: 0, sourceProtection: 60 },
+  publicOpinion: {
+    legitimacy: 50,
+    fatigue: { elapsedMonths: 2, value: 20, changePerMonth: 2 },
+  },
+  research: { mentoringCapacity: 50, containment: 35 },
+};
+
 const deadSavedState = {
-  v: 4,
+  v: 6,
   state: {
     phase: "dead",
-    resources: { pol: 0, int: 42, saf: 61, alg: 77 },
-    hidden: { pressure: 2 },
-    turn: 2,
+    world: deadWorld,
     activeCard: null,
     rngState: 123456,
     death: {
-      resource: "pol",
+      resource: "political",
       extreme: "depleted",
       message: "Political authority collapsed.",
     },
     history: [
-      { turn: 0, cardId: "opening-brief", choice: "left" },
-      { turn: 1, cardId: "treaty-threat", choice: "right" },
+      { type: "gameStarted", seed: 42 },
+      {
+        type: "cardDrawn",
+        elapsedMonths: 1,
+        deltaMonths: 1,
+        cardId: "daily-briefing",
+        rngStateBefore: 42,
+        rngStateAfter: 123,
+        totalRate: 1,
+      },
+      { type: "choiceCommitted", elapsedMonths: 1, decisionIndex: 0, cardId: "daily-briefing", choice: "left" },
     ],
   },
 };
@@ -66,16 +86,18 @@ test("playtest mode shows run-log export and copies parseable JSON", async ({ pa
   const copied = JSON.parse(copiedText) as {
     schema?: string;
     phase?: string;
-    turnCount?: number;
-    hidden?: Record<string, number>;
+    decisionCount?: number;
+    world?: { resources?: Record<string, number> };
     history?: unknown[];
   };
 
   expect(copied).toMatchObject({
-    schema: "global-pause-playtest-death-run-v1",
+    schema: "global-pause-playtest-death-run-v2",
     phase: "dead",
-    turnCount: 2,
-    hidden: { pressure: 2 },
+    decisionCount: 2,
+    world: {
+      resources: { political: 0, intelligence: 42, safety: 61, algorithmic: 77 },
+    },
   });
-  expect(copied.history).toHaveLength(2);
+  expect(copied.history).toHaveLength(3);
 });

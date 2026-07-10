@@ -47,29 +47,37 @@ update this file when the fact is durable.
 
 ## Current Content State
 
-- `design/EXPERT_MODEL.md` is the current recovered source of truth for Jörn's
-  expert model until Jörn replaces or approves it.
+- `docs/expert-context.md` is the current compact, epistemically labeled
+  context surface for future expert-model/content work.
 - That file is not approval to implement broad content. Check `PROGRESS.md` for
   current blockers before broad content/card review, rewrites, or new
   expert-grounded mechanisms.
-- Preserve traceability from literature and design notes to card concepts and
-  implementation.
+- The current `src/content/cards/` corpus is dummy architecture scaffolding, not
+  expert-grounded approved content.
+- Preserve traceability from literature/source notes, Jörn-provided context,
+  and implementation.
 - Current card text, death messages, tutorial text, and expert-grounded
   mechanisms are agent-written draft content until Jörn approves them.
 - Portrait regeneration should wait until card content stabilizes.
 
 ## Current Design Decisions
 
-- The intended content direction is static two-or-three-choice cards. Prefer
-  binary choices where they preserve the decision, but keep genuine three-way
-  decisions.
-- Locked or unlocked alternatives should usually be represented as separate
-  cards, not dynamic option availability.
-- Existing authored cards still use some dynamic `enabled` options, and
-  `src/data/cards/content.test.ts` keeps an expected-failing guard for this.
+- The card loop is built around explicit aggregate `State`, append-only
+  `History`, card-owned `rate(state, history)` functions, card-owned
+  `reduce(state, history, choice)` functions, pure pool construction, and
+  deterministic continuous-time hazard draw.
+- The current stochastic model assumes cards represent visible active
+  processes with monthly rates. The sampler draws both elapsed time and event
+  identity from the total rate. Background dynamics should be represented as
+  cards, explicit state curves/functions, discovery cards, or another
+  deliberate model extension.
+- The global state schema is centralized in `src/engine/state.ts`; card logic
+  should prefer direct, grep-friendly `state.foo.bar` access.
+- Card definitions currently live in `src/content/cards/`; each module can own
+  a topic or small group of related cards.
 - The app is mobile-first. Desktop can remain phone-app-like unless a concrete
   desktop workflow becomes important.
-- App, CLI, and future playtest tooling should stay on shared
+- App, Playwright, and future playtest tooling should stay on shared
   `src/engine/session.ts` transitions instead of duplicating game-flow logic.
 
 ## Playtesting

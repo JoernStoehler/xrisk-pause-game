@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { DeathInfo, GameState, HistoryEntry, ResourceKey } from "../engine/types";
+import type { HistoryEntry } from "../engine/history";
+import type { GameState } from "../engine/session";
+import type { DeathInfo, ResourceKey } from "../engine/state";
 import { audio } from "../hooks/useAudio";
 import { ShareButton } from "./ShareButton";
 import { generateDeathRunExport } from "./playtestExport";
@@ -10,25 +12,25 @@ type DeadGameState = GameState & { phase: "dead"; death: DeathInfo };
 /** Small SVG icons matching ResourceIcons style */
 function DeathResourceIcon({ resource }: { resource: ResourceKey }) {
   const icons: Record<ResourceKey, React.JSX.Element> = {
-    pol: (
+    political: (
       <svg width="48" height="48" viewBox="0 0 36 36" fill="#D4C8A0">
         <path d="M18 4 L30 10 L30 20 Q30 30 18 34 Q6 30 6 20 L6 10 Z" />
       </svg>
     ),
-    int: (
+    intelligence: (
       <svg width="48" height="48" viewBox="0 0 36 36" fill="#D4C8A0">
         <path d="M4 18 Q18 6 32 18 Q18 30 4 18 Z" />
         <circle cx="18" cy="18" r="5" fill="#2A1F0F" />
         <circle cx="18" cy="18" r="2" fill="#D4C8A0" />
       </svg>
     ),
-    saf: (
+    safety: (
       <svg width="48" height="48" viewBox="0 0 36 36" fill="#D4C8A0">
         <circle cx="18" cy="18" r="14" fillOpacity="0.3" />
         <path d="M10 18 L16 24 L26 12" stroke="#D4C8A0" strokeWidth="3" fill="none" />
       </svg>
     ),
-    alg: (
+    algorithmic: (
       <svg width="48" height="48" viewBox="0 0 36 36" fill="#D4C8A0">
         <rect x="6" y="24" width="5" height="8" />
         <rect x="13" y="18" width="5" height="14" />
@@ -42,7 +44,8 @@ function DeathResourceIcon({ resource }: { resource: ResourceKey }) {
 
 interface DeathScreenProps {
   death: DeathInfo;
-  turnsSurvived: number;
+  decisionsSurvived: number;
+  elapsedMonths: number;
   history: HistoryEntry[];
   deathRunExportState?: DeadGameState;
   onRestart: () => void;
@@ -50,7 +53,8 @@ interface DeathScreenProps {
 
 export function DeathScreen({
   death,
-  turnsSurvived,
+  decisionsSurvived,
+  elapsedMonths,
   history,
   deathRunExportState,
   onRestart,
@@ -97,16 +101,16 @@ export function DeathScreen({
       </p>
 
       <div className="text-text-muted text-xs font-bold mb-6">
-        Survived {turnsSurvived} {turnsSurvived === 1 ? "decision" : "decisions"}
+        Survived {decisionsSurvived} {decisionsSurvived === 1 ? "decision" : "decisions"}
       </div>
 
       {/* Share text preview — player reads their "story" before deciding to share */}
       <div className="max-w-sm mb-6 px-4 py-3 border-l-2 border-text-muted/30 text-text-muted text-xs leading-relaxed text-left italic whitespace-pre-line">
-        {generateShareText(death, turnsSurvived, history)}
+        {generateShareText(death, elapsedMonths, history)}
       </div>
 
       <div className={deathRunExportState ? "flex w-full max-w-sm flex-col gap-3" : "flex gap-4"}>
-        <ShareButton death={death} turn={turnsSurvived} history={history} />
+        <ShareButton death={death} elapsedMonths={elapsedMonths} history={history} />
         {deathRunExportState && <CopyRunLogButton state={deathRunExportState} />}
         <button
           className="px-8 py-4 bg-tan text-text-dark rounded-lg font-bold uppercase tracking-wider text-sm hover:bg-tan-light active:bg-tan-light transition-colors min-h-[44px] cursor-pointer"

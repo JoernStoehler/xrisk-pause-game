@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import type { ChoiceDirection } from "../engine/types";
+import type { ChoiceDirection } from "../engine/history";
 import { audio } from "./useAudio";
 
 export type TiltDirection = ChoiceDirection | "center";

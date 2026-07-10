@@ -14,16 +14,36 @@ const BASE_URL =
   `http://127.0.0.1:${process.env.PLAYWRIGHT_PORT ?? 5173}`;
 const VIEWPORT = { width: 390, height: 844 };
 const SAVED_STATE = {
-  v: 4,
+  v: 6,
   state: {
     phase: "playing",
-    resources: { pol: 50, int: 50, saf: 50, alg: 50 },
-    hidden: {},
-    turn: 12,
-    activeCard: { templateId: "data-center-attack" },
+    world: {
+      elapsedMonths: 12,
+      decisionCount: 4,
+      resources: { political: 50, intelligence: 50, safety: 50, algorithmic: 50 },
+      treaty: { erosion: 0, legitimacy: 50, usChinaWar: false },
+      enforcement: { visibility: 0, missedThreats: 0, sourceProtection: 60 },
+      publicOpinion: {
+        legitimacy: 50,
+        fatigue: { elapsedMonths: 12, value: 20, changePerMonth: 2 },
+      },
+      research: { mentoringCapacity: 50, containment: 35 },
+    },
+    activeCard: { templateId: "daily-briefing" },
     rngState: 1,
     death: null,
-    history: [],
+    history: [
+      { type: "gameStarted", seed: 1 },
+      {
+        type: "cardDrawn",
+        elapsedMonths: 12,
+        deltaMonths: 1,
+        cardId: "daily-briefing",
+        rngStateBefore: 1,
+        rngStateAfter: 1,
+        totalRate: 1,
+      },
+    ],
   },
 };
 

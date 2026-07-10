@@ -12,7 +12,6 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "cli": "tsx src/cli.ts",
     "cards": "tsx scripts/export-cards.ts",
     "screenshot": "npx tsx e2e/screenshot.ts",
     "check": "npm run typecheck && npm run lint && npm run build && npm test"

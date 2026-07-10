@@ -6,11 +6,11 @@ look; source files remain authoritative.
 ## App Shape
 
 - `src/main.tsx` mounts the React app.
-- `src/App.tsx` routes among title, tutorial, game, death, victory, and QA
-  surfaces.
+- `src/App.tsx` routes among title, tutorial, game, death, and QA surfaces.
 - `src/app/useGame.ts` owns browser-facing game orchestration and calls the pure
-  engine/session layer.
-- `src/app/storage.ts` persists resumable runs in browser storage.
+  session layer.
+- `src/app/storage.ts` persists resumable runs in browser storage. Storage
+  version 6 stores `GameState.world` plus event history.
 - `src/app/tutorialStorage.ts` persists tutorial completion.
 - `src/components/` contains screens, cards, portraits, share/playtest export,
   QA reference UI, resource icons, and shared controls.
@@ -24,62 +24,99 @@ desktop workflow becomes important.
 
 - `src/engine/` is pure TypeScript: no React, browser storage, DOM, or direct
   content-message lookup.
-- `src/engine/types.ts` defines game state, resources, cards, choices, hidden
-  state, and session concepts.
-- `src/engine/state.ts` applies card choices, resource changes, hidden-state
-  changes, death checks, and victory checks.
-- `src/engine/cards.ts` handles card registry and draw eligibility.
-- `src/engine/session.ts` owns session transitions used by app and CLI flows.
+- `src/engine/state.ts` owns the explicit aggregate `State` schema, elapsed
+  simulation months, decision count, resource keys, initial state, state
+  cloning, resource effects, functional time-curve helpers, and death checks.
+- `src/engine/history.ts` owns the append-only event log types:
+  `gameStarted`, `cardDrawn`, and `choiceCommitted`.
+- `src/engine/card.ts` owns `CardDefinition`, active-card resolution, choice
+  previews, and tutorial-card display types.
+- `src/engine/pool.ts` is the pure pool builder:
+  `buildPool(cards, state, history)`.
+- `src/engine/draw.ts` owns continuous-time hazard selection:
+  `pickCard(rngState, pool)` and `drawNextCard(...)`.
+- `src/engine/reduce.ts` owns the small card-choice reducer boundary:
+  `applyCardChoice(card, state, history, choice)`.
+- `src/engine/session.ts` owns app session transitions:
+  start, choose, restart, and rehydrate.
 - `src/engine/rng.ts` provides deterministic RNG support.
 
-Keep app, CLI, and playtest tooling on shared engine/session transitions rather
-than duplicating game-flow logic.
+The intended core loop is:
 
-## Content Data
+1. Use the aggregate `State`, append-only `History`, and registered cards to
+   build a rate pool.
+2. Use the deterministic RNG state and pool to sample an exponential wait from
+   the total monthly rate and then pick one active card with probability
+   `rate / totalRate`.
+3. Advance `State.elapsedMonths`, append a `cardDrawn` event, show the card,
+   append a `choiceCommitted` event, call that card's reducer, increment
+   `State.decisionCount`, check death, and draw the next card.
 
-- `src/data/cards/` contains TypeScript card declarations.
-- Card modules export explicit `Card[]` arrays.
-- `src/data/cards/groups.ts` is the canonical grouped card map.
-- `src/data/cards/hidden.ts` names hidden state keys with stable storage
-  strings.
-- `src/data/cards/index.ts` exposes the card registry.
-- `src/data/deaths.ts` contains death outcomes.
-- `src/data/tutorial.ts` contains scripted tutorial cards.
+Cards own both their process rate and their state transition. Rates are in
+events per month. This is the current simple realization of mostly independent
+Poisson/exponential visible event processes. Slower background dynamics should
+be represented as explicit state functions, curves, discovery cards, or a later
+deliberate hidden-process extension.
 
-Current intended direction: cards may be static two-or-three-choice structures.
-Prefer binary choices where they preserve the decision, but keep genuine
-three-way decisions. Locked/unlocked alternatives should be separate cards, not
-dynamic option availability. This is not fully enforced yet:
-`src/data/cards/content.test.ts` keeps an expected-failing guard while existing
-authored cards still use dynamic `enabled` options.
+Rate functions are evaluated when the next-card pool is built and then treated
+as constant until that card is drawn. A card whose rate becomes positive after a
+time threshold will become eligible at the next visible draw boundary, not at an
+invisible mid-wait instant. If real content needs state-changing offscreen
+events before the director sees them, that is a trigger to revisit a process or
+hidden-event scheduler.
 
-## Design And Sources
+## Content
 
-- `design/domain-model.md` is the conceptual domain model underneath card
-  content.
-- `design/EXPERT_MODEL.md` is the single retained recovered source-of-truth
-  file for Jörn's expert model from the deleted extraction session.
-- `design/card-concepts.md` is the card idea inventory.
-- `design/geopolitics-synthesis.md` and `design/research/*.md` contain
-  source-grounded design/research synthesis.
-- `design/cards-export.md` is generated by `npm run cards` for card review.
+- `src/content/cards/` contains current card definitions.
+- Card modules export explicit `CardDefinition[]` arrays. Each card has static
+  or deterministic display text, a `rate(state, history)` function, and a
+  `reduce(state, history, choice)` function.
+- `src/content/cards/index.ts` is the canonical grouped card registry.
+- `src/content/deaths.ts` contains death outcome messages.
+- `src/content/tutorial.ts` contains scripted tutorial cards.
+
+The current card corpus is intentionally dummy scaffolding for the architecture
+rewrite. It demonstrates state reads, state writes, history-triggered follow-up
+cards, cross-topic effects, and functional state curves. It is not the approved
+expert model and should be replaced or expanded through Jörn-reviewed content
+work.
+
+## Docs And Sources
+
+- `docs/architecture.md` records current architecture reasoning, alternatives,
+  decisive reasons, and update triggers for engine, UI, and deployment.
+- `docs/expert-context.md` records compact, epistemically labeled project and
+  expert-context notes for future content work. It is not approval for broad
+  content implementation.
+- `docs/quality.md` defines the shared quality model for developers and
+  reviewers.
+- `docs/development.md` applies the quality model to planning and implementing
+  changes.
+- `docs/review.md` defines automated checks, manual review workflows, blind
+  spots, and early exits for behavior, UI, code quality, writing/content,
+  deployment, and performance.
+- `docs/cards-export.md` is generated by `npm run cards` for card review.
 - `literature/INDEX.md` and `literature/*` contain source-note navigation and
   source-derived material.
 - Encrypted literature is opened only when needed with
   `scripts/decrypt-literature.sh`.
 
-Content pipeline: literature and current sources -> domain model -> card
-concepts -> TypeScript card declarations -> generated card review artifacts ->
-playtesting.
+Content pipeline: literature/source notes and Jörn-provided context ->
+epistemically labeled docs -> TypeScript card definitions -> generated card
+review artifacts -> playtesting.
 
 ## Generated Artifacts
 
-- `npm run cards` regenerates `design/cards-export.md` and
+- `npm run cards` regenerates `docs/cards-export.md` and
   `public/cards-map.html`.
-- `design/cards-export.md` includes card file/line references, group/tag/speaker
-  summaries, hidden read/write aids, dynamic-enabled markers, and review text.
-- `public/cards-map.html` is ignored but included in deploy output because the
-  deploy workflow regenerates card artifacts before build.
+- `docs/cards-export.md` includes group/tag/speaker summaries, initial card
+  rates, card file/line references, choices, and lightweight state read/write
+  aids.
+- `public/cards-map.html` is a static card/state reference map with embedded
+  graph JSON.
+- `scripts/export-cards.ts` uses simple source-pattern scans for review aids.
+  Treat generated state references as navigation hints, not complete semantic
+  analysis.
 
 After TypeScript card edits, run `npm run cards` and inspect generated diffs.
 
@@ -88,34 +125,36 @@ After TypeScript card edits, run `npm run cards` and inspect generated diffs.
 - Mobile-first Reigns-style card loop with swipe, keyboard, and button choices.
 - Browser save persistence for resumable runs.
 - Tutorial flow with persisted completion.
-- Death and victory screens.
+- Death screen.
 - Share text generation.
 - Speaker portraits with registry coverage tests.
 - Mute/audio control.
 - `?playtest=1` death-screen run-log export for controlled playtests.
 - `#qa` QA reference surface for internal review.
-- CLI autoplay smoke path through `npm run cli auto 20`.
-- Generated card review export and card graph.
+- Playwright browser smoke paths for start, swipe, death, mobile, and playtest
+  export flows.
+- Generated card review export and card/state map.
 - Playwright E2E coverage for title/tutorial/drag/keyboard/death and targeted
   mobile regressions.
 
 ## Current Placeholders
 
-- Card text is agent-written draft content and needs expert review/rewrite.
+- The current card corpus is dummy architecture scaffolding, not expert-grounded
+  content.
 - Death messages are placeholders expected to change with content overhaul.
-- Tutorial content is scripted Deputy Director cards, not final designed
+- Tutorial content is scripted Deputy Director scaffolding, not final designed
   content.
 - Portraits are guarded by coverage tests but regeneration should wait for
   content stability.
 - Achievements and card collection are not started.
 - No durable playtest corpus exists yet.
+- Victory behavior is not implemented.
 
 ## Validation Map
 
 - `npm run check`: typecheck, lint, build, and current Vitest tests.
 - `npm run test:e2e`: Playwright flow coverage and targeted mobile regression
   checks.
-- `npm run cli auto 20`: quick autoplay smoke check, not a balance proof.
 - `npm run cards`: generated card review artifacts.
 - `git diff --check`: whitespace/conflict-marker hygiene.
 - `bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md`:

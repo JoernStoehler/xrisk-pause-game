@@ -1,18 +1,19 @@
 import { useState } from "react";
-import type { DeathInfo, HistoryEntry } from "../engine/types";
+import type { HistoryEntry } from "../engine/history";
+import type { DeathInfo } from "../engine/state";
 import { generateShareText } from "./shareText";
 
 interface ShareButtonProps {
   death: DeathInfo;
-  turn: number;
+  elapsedMonths: number;
   history: HistoryEntry[];
 }
 
-export function ShareButton({ death, turn, history }: ShareButtonProps) {
+export function ShareButton({ death, elapsedMonths, history }: ShareButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleShare = async () => {
-    const text = generateShareText(death, turn, history);
+    const text = generateShareText(death, elapsedMonths, history);
 
     if (navigator.share) {
       try {

@@ -8,25 +8,20 @@ test.beforeEach(async ({ page }) => {
   await page.reload();
 });
 
-test("first play shows 3 tutorial cards then starts game", async ({ page }) => {
+test("first play shows tutorial cards then starts game", async ({ page }) => {
   await page.click("text=Take Office");
 
-  // Tutorial card 1: welcome
-  await expect(page.getByText("Welcome, Director-General")).toBeVisible();
+  // Tutorial card 1: proposal framing
+  await expect(page.getByText("Cards are proposals from advisors")).toBeVisible();
   await expect(page.getByText("Skip Tutorial")).toBeVisible();
 
   // Swipe to advance (keyboard)
   await page.keyboard.press("ArrowRight");
   await page.waitForTimeout(600);
 
-  // Tutorial card 2: resources (highlights should be active)
-  await expect(page.getByText("four pillars")).toBeVisible();
+  // Tutorial card 2: placeholder resources (highlights should be active)
+  await expect(page.getByText("visible bars are still placeholder state variables")).toBeVisible();
   await page.keyboard.press("ArrowLeft");
-  await page.waitForTimeout(600);
-
-  // Tutorial card 3: mechanics
-  await expect(page.getByText("Swipe the portrait")).toBeVisible();
-  await page.keyboard.press("ArrowRight");
   await page.waitForTimeout(600);
 
   // Now in real game — year display and real card visible
@@ -37,7 +32,7 @@ test("first play shows 3 tutorial cards then starts game", async ({ page }) => {
 test("skip tutorial persists across sessions", async ({ page }) => {
   // Complete tutorial first
   await page.click("text=Take Office");
-  await expect(page.getByText("Welcome, Director-General")).toBeVisible();
+  await expect(page.getByText("Cards are proposals from advisors")).toBeVisible();
 
   // Skip it
   await page.click("text=Skip Tutorial");

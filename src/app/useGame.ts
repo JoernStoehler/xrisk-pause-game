@@ -1,15 +1,16 @@
 import { useCallback, useState } from "react";
-import { ALL_CARDS } from "../data/cards";
-import { getDeathMessage } from "../data/deaths";
-import { TUTORIAL_CARDS } from "../data/tutorial";
+import { ALL_CARDS } from "../content/cards";
+import { getDeathMessage } from "../content/deaths";
+import { TUTORIAL_CARDS } from "../content/tutorial";
 import {
   chooseInSession,
+  newGame,
   restartSession,
   startSession,
   type SessionContent,
 } from "../engine/session";
-import { newGame } from "../engine/state";
-import type { ChoiceDirection, GameState } from "../engine/types";
+import type { ChoiceDirection } from "../engine/history";
+import type { GameState } from "../engine/session";
 import { loadState, saveState } from "./storage";
 import { isTutorialCompleted, markTutorialCompleted } from "./tutorialStorage";
 

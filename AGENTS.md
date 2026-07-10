@@ -101,18 +101,18 @@ This repo does not use nested `AGENTS.md` files.
 |   |-- main.tsx
 |   |-- app/
 |   |-- engine/
-|   |-- data/
+|   |-- content/
 |   |-- components/
 |   |-- hooks/
 |   `-- index.css
-|-- design/
-|   |-- EXPERT_MODEL.md
-|   |-- domain-model.md
-|   |-- card-concepts.md
-|   |-- cards-export.md
-|   |-- geopolitics-synthesis.md
-|   |-- research/*.md
-|   `-- *.md
+|-- docs/
+|   |-- README.md
+|   |-- architecture.md
+|   |-- expert-context.md
+|   |-- quality.md
+|   |-- development.md
+|   |-- review.md
+|   `-- cards-export.md
 |-- literature/
 |   |-- INDEX.md
 |   |-- REFERENCES.md
@@ -143,11 +143,17 @@ Start here:
   placeholders, generated artifacts, and validation map.
 - `PROGRESS.md`: current work state, blockers, planned/deferred work, and
   Jörn-needed decisions.
-- `design/EXPERT_MODEL.md`: current recovered source of truth for Jörn's expert
-  model until Jörn replaces or approves it. This is not approval to implement
-  broad content; check `PROGRESS.md` for current blockers.
-- `design/domain-model.md`: conceptual domain model underneath card content.
-- `design/card-concepts.md`: card idea inventory.
+- `docs/README.md`: role/maintenance map for the docs in `docs/`.
+- `docs/quality.md`: shared quality target for developers and reviewers.
+- `docs/development.md`: developer-agent guidance for planning and
+  implementing changes toward the quality target.
+- `docs/review.md`: automated checks, manual review workflows, blind spots,
+  and early exits.
+- `docs/architecture.md`: current architecture reasoning, alternatives,
+  rejected options, and pivot triggers.
+- `docs/expert-context.md`: compact epistemically labeled project/domain
+  context for future content work. This is not approval to implement broad
+  content; check `PROGRESS.md` for current blockers.
 - `literature/INDEX.md`: source-note navigation.
 
 Important routes:
@@ -156,18 +162,17 @@ Important routes:
   resolution, and tests.
 - `src/app/`: React game hook, browser storage, and tutorial-completion
   persistence.
-- `src/data/cards/`: card declarations. Card modules export explicit arrays;
-  `groups.ts` is the canonical grouped card map, and `hidden.ts` names hidden
-  state keys with stable storage strings.
-- `src/data/deaths.ts` and `src/data/tutorial.ts`: death outcomes and scripted
-  tutorial cards.
+- `src/content/cards/`: current card declarations. Card modules export explicit
+  arrays; `index.ts` is the canonical grouped card registry.
+- `src/content/deaths.ts` and `src/content/tutorial.ts`: death outcomes and
+  scripted tutorial cards.
 - `src/components/`, `src/hooks/`, `src/index.css`: React UI, swipe/audio
   hooks, and Tailwind v4 theme CSS.
 - `package.json`, `vite.config.ts`, `playwright.config.ts`,
   `.github/workflows/deploy.yml`, and `wrangler.toml`: package scripts, app/test
   framework configuration, and deploy source truth.
 - `.agents/skills/deploy/SKILL.md`: deployment and release workflow guidance.
-- `design/cards-export.md`: generated card review export; refresh with
+- `docs/cards-export.md`: generated card review export; refresh with
   `npm run cards`.
 - `public/cards-map.html`: generated card graph; refresh with `npm run cards`.
 - `literature/`: source notes and encrypted source-derived material. Run
@@ -187,14 +192,14 @@ Important routes:
 
 - Source files and tests overrule maps for implementation behavior. Source
   notes overrule maps for source facts. Jörn decisions overrule agent-written
-  drafts for approval-sensitive content and scope. Hand-authored design notes
-  describe current design intent where they are not contradicted by source
-  truth, Jörn decisions, or `PROGRESS.md`.
+  drafts for approval-sensitive content and scope. Agent-authored docs describe
+  current reasoning where they are not contradicted by source truth, Jörn
+  decisions, or `PROGRESS.md`.
 - `FACTSHEET.md` records durable project facts, Jörn decisions, and repeated
   context. `ARCHITECTURE.md`, `PROGRESS.md`, and `literature/INDEX.md` are
   navigation caches. Keep them current, but do not treat them as source truth
   when source files or Jörn decisions disagree.
-- `design/cards-export.md` and `public/cards-map.html` are generated review
+- `docs/cards-export.md` and `public/cards-map.html` are generated review
   surfaces. They are useful for generated counts, links, and cross-card
   structure. Regenerate them with `npm run cards`; do not hand-edit generated
   content as source truth.
@@ -209,10 +214,12 @@ Important routes:
   not explain generic TypeScript, React, git, Markdown, or game-development
   concepts unless this repo uses them in a non-obvious way.
 - Put knowledge where future agents need it: code comments for local invariants,
-  tests for executable behavior, design/source notes for domain claims,
-  `FACTSHEET.md` for durable project facts and repeated context,
-  `ARCHITECTURE.md` for implementation maps, `PROGRESS.md` for work state,
-  and skills for recurring agent behavior and deploy operations.
+  tests for executable behavior, `docs/quality.md` for quality definitions,
+  `docs/development.md` for developer guidance, `docs/review.md` for checks and
+  review workflows, `docs/expert-context.md` and source notes for domain
+  context, `FACTSHEET.md` for durable project facts and repeated context,
+  `ARCHITECTURE.md` for implementation maps, `PROGRESS.md` for work state, and
+  skills for recurring agent behavior and deploy operations.
 - Keep documentation lean, current, and easy to verify. Prefer source-truth
   links, generated artifacts, tests, and short reasoning traces over broad
   summaries.
@@ -243,7 +250,6 @@ bash scripts/toc.sh AGENTS.md FACTSHEET.md ARCHITECTURE.md PROGRESS.md
 # App and engine
 npm run check
 npm run test:e2e
-npm run cli auto 20
 
 # Cards and generated review surfaces
 npm run cards

@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
-import type { DeathInfo, HistoryEntry } from "../engine/types";
+import type { HistoryEntry } from "../engine/history";
+import type { DeathInfo } from "../engine/state";
 import { generateShareText } from "./shareText";
 
 function makeDeath(resource: DeathInfo["resource"], extreme: DeathInfo["extreme"]): DeathInfo {
@@ -9,14 +10,14 @@ function makeDeath(resource: DeathInfo["resource"], extreme: DeathInfo["extreme"
 describe("generateShareText", () => {
   it("includes failure phrase for each resource × extreme", () => {
     const cases: [DeathInfo["resource"], DeathInfo["extreme"], string][] = [
-      ["pol", "depleted", "Political support collapsed"],
-      ["pol", "overloaded", "Unchecked institutional power"],
-      ["int", "depleted", "I was flying blind"],
-      ["int", "overloaded", "Total surveillance drove threats underground"],
-      ["saf", "depleted", "lethal threshold shrank"],
-      ["saf", "overloaded", "Safety research produced"],
-      ["alg", "depleted", "Algorithmic stagnation"],
-      ["alg", "overloaded", "Consumer hardware became sufficient"],
+      ["political", "depleted", "Political support collapsed"],
+      ["political", "overloaded", "Unchecked institutional power"],
+      ["intelligence", "depleted", "I was flying blind"],
+      ["intelligence", "overloaded", "Total surveillance drove threats underground"],
+      ["safety", "depleted", "lethal threshold shrank"],
+      ["safety", "overloaded", "Safety research produced"],
+      ["algorithmic", "depleted", "Algorithmic stagnation"],
+      ["algorithmic", "overloaded", "Consumer hardware became sufficient"],
     ];
     for (const [resource, extreme, phrase] of cases) {
       const text = generateShareText(makeDeath(resource, extreme), 10, []);
@@ -24,39 +25,41 @@ describe("generateShareText", () => {
     }
   });
 
-  it("uses year-based time framing", () => {
-    expect(generateShareText(makeDeath("pol", "depleted"), 5, [])).toContain("in my first year");
-    expect(generateShareText(makeDeath("pol", "depleted"), 12, [])).toContain("after a year in office");
-    expect(generateShareText(makeDeath("pol", "depleted"), 36, [])).toContain("after 3 years in office");
+  it("uses elapsed-month time framing", () => {
+    expect(generateShareText(makeDeath("political", "depleted"), 0.5, [])).toContain("in my first month");
+    expect(generateShareText(makeDeath("political", "depleted"), 5, [])).toContain("after 5 months in office");
+    expect(generateShareText(makeDeath("political", "depleted"), 12, [])).toContain("after a year in office");
+    expect(generateShareText(makeDeath("political", "depleted"), 36, [])).toContain("after 3 years in office");
   });
 
   it("includes notable card mention when present in history", () => {
     const history: HistoryEntry[] = [
-      { turn: 0, cardId: "some-card", choice: "left" },
-      { turn: 1, cardId: "whistleblower", choice: "right" },
+      { type: "gameStarted", seed: 42 },
+      { type: "choiceCommitted", elapsedMonths: 0, decisionIndex: 0, cardId: "some-card", choice: "left" },
+      { type: "choiceCommitted", elapsedMonths: 1, decisionIndex: 1, cardId: "thermal-anomaly", choice: "right" },
     ];
-    const text = generateShareText(makeDeath("pol", "depleted"), 10, history);
-    expect(text).toContain("A whistleblower came to me for protection");
+    const text = generateShareText(makeDeath("political", "depleted"), 10, history);
+    expect(text).toContain("Satellite imagery forced an inspection call");
   });
 
   it("uses first notable card only", () => {
     const history: HistoryEntry[] = [
-      { turn: 0, cardId: "whistleblower", choice: "left" },
-      { turn: 1, cardId: "treaty-threat", choice: "right" },
+      { type: "choiceCommitted", elapsedMonths: 0, decisionIndex: 0, cardId: "thermal-anomaly", choice: "left" },
+      { type: "choiceCommitted", elapsedMonths: 1, decisionIndex: 1, cardId: "public-fatigue", choice: "right" },
     ];
-    const text = generateShareText(makeDeath("pol", "depleted"), 10, history);
-    expect(text).toContain("whistleblower");
-    expect(text).not.toContain("threatened to leave");
+    const text = generateShareText(makeDeath("political", "depleted"), 10, history);
+    expect(text).toContain("Satellite imagery");
+    expect(text).not.toContain("Public fatigue");
   });
 
   it("omits notable line when no notable cards in history", () => {
-    const text = generateShareText(makeDeath("int", "overloaded"), 24, []);
+    const text = generateShareText(makeDeath("intelligence", "overloaded"), 24, []);
     // Should go straight from "AI pause." to the failure phrase
     expect(text).toMatch(/AI pause\. Total surveillance/);
   });
 
   it("always ends with the game URL", () => {
-    const text = generateShareText(makeDeath("pol", "depleted"), 5, []);
+    const text = generateShareText(makeDeath("political", "depleted"), 5, []);
     expect(text).toContain("global-pause.pages.dev");
   });
 });
