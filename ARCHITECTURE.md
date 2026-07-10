@@ -88,6 +88,11 @@ work.
 - `docs/expert-context.md` records compact, epistemically labeled project and
   expert-context notes for future content work. It is not approval for broad
   content implementation.
+- `docs/expert-model-chat-excerpts.md` preserves recovered raw Jörn chat
+  excerpts for exact wording checks.
+- `docs/expert-model-recovered.md` preserves recovered expert-model synthesis;
+  check it against raw excerpts before treating a point as Jörn-provided
+  context.
 - `docs/quality.md` defines the shared quality model for developers and
   reviewers.
 - `docs/development.md` applies the quality model to planning and implementing

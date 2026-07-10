@@ -107,6 +107,10 @@ These should not be silently resolved as implementation facts:
 - Use `FACTSHEET.md` for durable project facts and approval boundaries.
 - Use `ARCHITECTURE.md` and `docs/architecture.md` for current implementation
   and architecture reasoning.
+- Use `docs/expert-model-chat-excerpts.md` for recovered raw Jörn wording from
+  the 2026-05-11 expert-model extraction stream.
+- Use `docs/expert-model-recovered.md` for recovered synthesis, then check
+  against raw excerpts before treating a point as Jörn-provided context.
 - Use `docs/review.md` for validation and review workflows.
 - Use `literature/INDEX.md` and source notes for source-derived claims.
 - Ask Jörn before changing the game's thesis, political model,

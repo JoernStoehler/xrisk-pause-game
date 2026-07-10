@@ -49,6 +49,10 @@ update this file when the fact is durable.
 
 - `docs/expert-context.md` is the current compact, epistemically labeled
   context surface for future expert-model/content work.
+- `docs/expert-model-chat-excerpts.md` and
+  `docs/expert-model-recovered.md` preserve a recovered 2026-05-11 expert-model
+  extraction stream. They are useful source/context surfaces, not approval for
+  player-facing content.
 - That file is not approval to implement broad content. Check `PROGRESS.md` for
   current blockers before broad content/card review, rewrites, or new
   expert-grounded mechanisms.

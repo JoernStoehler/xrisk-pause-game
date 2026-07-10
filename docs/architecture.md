@@ -155,6 +155,43 @@ Trigger a new architecture review if:
 - playtests show visible discovery cards make fog of war misleading;
 - exact deadline/cancellation logic becomes common.
 
+### Daily Timestep Spike Evidence
+
+Status: salvaged result from discarded branch `codebase-cleanup-daily-spike`.
+The spike code itself was not merged.
+
+The spike tested a boring daily process loop with:
+
+- `process.step(context)` called once per simulated day;
+- logged non-visible `worldEvent` emissions that can update state;
+- visible advisor events/cards with choices;
+- history entries for day jumps, world events, visible events, and choices.
+
+What worked:
+
+- delayed follow-ups were local to one process;
+- interruption/cancellation by player choice stayed local;
+- non-visible state changes were explicit and logged;
+- later visible events could depend on earlier non-visible world events;
+- debug history explained why a visible event appeared.
+
+Costs/design issues:
+
+- process order matters for same-day emissions and state updates;
+- non-emissions are not explained unless optional debug tracing exists;
+- multiple visible events on one day need a queue or deterministic tie-break;
+- visible choice effects still need a single-source-of-truth rule;
+- production should reuse the explicit `State` and `History` shape, not the
+  spike-local state.
+
+Current interpretation:
+
+- keep the visible-card hazard deck while content stays mostly visible and
+  follow-ups fit local rate functions;
+- pivot toward daily/process scheduling if hidden world events, exact deadlines,
+  cancellation/interruption, or quiet periods become common enough that card
+  rates repeat scheduler logic.
+
 ## State And History
 
 State is centralized in `src/engine/state.ts` to keep direct

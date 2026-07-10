@@ -24,8 +24,8 @@ submodules. The labels are for clarity, not a task-management schema.
 - `[active]` The current cards are dummy scaffolding for the card-loop
   architecture, not the approved expert model.
 - `[blocked]` Broad content/card review, rewrites, and new expert-grounded
-  mechanisms should wait until Jörn marks the expert-model sheet ready for
-  integration review.
+  mechanisms should wait until Jörn marks the recovered expert-model material
+  ready for integration review.
 
 ## Content
 
@@ -33,6 +33,8 @@ submodules. The labels are for clarity, not a task-management schema.
 - `[active]` Treat `docs/expert-context.md` as the compact context surface for
   future expert-model/content work. It is not approval for broad content
   implementation.
+- `[active]` Treat `docs/expert-model-chat-excerpts.md` as recovered raw Jörn
+  wording and `docs/expert-model-recovered.md` as fallible recovered synthesis.
 - `[active]` Preserve traceability from literature/source notes and
   Jörn-provided context to implementation.
 - `[active]` Use `src/content/cards/` as the current code-owned card surface.
