@@ -109,6 +109,8 @@ This repo does not use nested `AGENTS.md` files.
 |   |-- README.md
 |   |-- architecture.md
 |   |-- expert-context.md
+|   |-- expert-model-chat-excerpts.md
+|   |-- expert-model-recovered.md
 |   |-- quality.md
 |   |-- development.md
 |   |-- review.md
@@ -154,6 +156,11 @@ Start here:
 - `docs/expert-context.md`: compact epistemically labeled project/domain
   context for future content work. This is not approval to implement broad
   content; check `PROGRESS.md` for current blockers.
+- `docs/expert-model-chat-excerpts.md`: recovered raw Jörn chat excerpts for
+  exact wording checks.
+- `docs/expert-model-recovered.md`: recovered expert-model synthesis; useful
+  for content planning but fallible until checked against raw excerpts and
+  Jörn.
 - `literature/INDEX.md`: source-note navigation.
 
 Important routes:

@@ -180,6 +180,23 @@ Check:
 6. Do labels fit mobile controls?
 7. Does the player have enough context to infer the tradeoff?
 
+Claim provenance rule:
+
+- Mark claim-heavy cards with enough nearby provenance that a reviewer can tell
+  source fact, Jörn-provided context, agent inference, game extrapolation,
+  fictional anchor, current implementation, and placeholder text apart.
+- Treat old `// Source:` comments and generated card flags as origin hints or
+  triage, not proof that a player-facing claim is sourced.
+- Prefer deleting over-specific numbers to preserving unsupported precision.
+
+Claim-heavy examples:
+
+- numeric thresholds, costs, death tolls, timelines, or rates;
+- named countries, institutions, companies, people, or incidents;
+- claims about what a treaty needs;
+- claims about how actors predictably behave;
+- claims about what causes extinction or prevents it.
+
 Exit early if:
 
 - only engine/internal code changed and generated card text is unchanged.
