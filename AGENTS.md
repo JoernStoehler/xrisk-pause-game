@@ -16,6 +16,14 @@ Fun, realism, and political and scientific detail serve that public-understandin
 
 - Delegate independently bounded work when it enables parallelism or keeps task-internal context out of the coordinating thread. Give each agent the context, ownership, concurrent-work constraints, expected handoff, and validation criteria needed to work independently; subagents may delegate under the same condition.
 - Give concurrent workers non-overlapping write ownership. Coordinators integrate and validate returned work; unresolved needs move through the parent, and the root involves Jörn only when his domain input or approval remains necessary after accessible work.
+- For multi-stream work, the root maintains a concise, source-linked priority and decision ledger. It owns target selection, dependency order, integration, validation, and the decision to continue, pivot, preserve, or abandon each branch; do not replace these responsibilities with a pile of subagent reports.
+- Give reviewers the current model of product success and the dimensions they own. For UI work, review mobile comprehension and information density separately from visual craft such as palette, typography, imagery, composition, and perceived production value.
+
+## Autonomy and communication
+
+- Continue until the assigned outcome is complete, explicitly paused, locally blocked, or waiting for Jörn is worth his attention cost. Ask Jörn for genuine domain, taste, or strategic cruxes—not accessible repository work or routine implementation choices.
+- Keep chat concise and decision-oriented. Put long or still-unreviewed synthesis in a reviewable file; when asking Jörn for review, provide the artifact, the evidence or uncertainty that matters, and the concrete decision or feedback needed.
+- Make it clear whether work is continuing asynchronously or waiting on Jörn. Final handoffs must be self-contained and cheap to resume without rereading the transcript.
 
 ## Trust and claim status
 
