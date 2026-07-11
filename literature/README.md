@@ -2,7 +2,9 @@
 
 ## Purpose
 
-Pre-downloaded, cleaned reference materials for agent consumption. Avoids fragile web searches and repetitive formatting cleanup during project sessions.
+Pre-downloaded reference materials and project research aids. They reduce repeated
+retrieval and formatting work, but their presence here is not evidence that a source,
+conversion, summary, or synthesis is accurate or suitable for a particular claim.
 
 **This is shared, read-only context**: not code, not a dependency. Project
 instructions reference specific files or sections from `AGENTS.md`, skills, or
@@ -17,23 +19,22 @@ literature/
   README.md        # You are here
   INDEX.md         # One-line summary of each resource
   .gitignore       # Ignores decrypted copies of encrypted files
-  <slug>.md        # Public resource, committed as-is
+  <slug>.md        # Tracked source conversion or research aid
+  <slug>.txt       # Tracked source text or excerpt
   <slug>.md.enc    # Encrypted resource (copyrighted), committed
-  <slug>.md        # Decrypted copy, gitignored
+  <slug>.md        # Optional local decrypted copy, gitignored
 ```
 
-**File naming:** `kebab-case-slug.md`. Descriptive but short. Examples:
-- `iabied-book.md` — "Introduction to AI Safety" book
-- `carlsmith-scheming-report.md` — Joe Carlsmith's scheming report
-- `aisi-international-framework.md` — AISI international framework paper
+**File naming:** descriptive, short kebab-case slugs, normally with `.md` or
+`.txt`; encrypted Markdown uses `.md.enc` in git.
 
-**No nesting.** Flat directory. ~90 files and growing, but the flat structure still works fine with INDEX.md as the navigation layer.
+**No nesting.** The flat directory uses INDEX.md as its navigation layer.
 
 ---
 
 ## File Format
 
-Every `.md` file starts with YAML frontmatter:
+New converted `.md` files should start with YAML frontmatter:
 
 ```yaml
 ---
@@ -54,7 +55,12 @@ Then the content as clean markdown:
 - No complex tables — simplify to plain text or lists if needed
 - Preserve the intellectual structure, not the visual layout
 
-**Transcription errors:** Automated conversion (pandoc, marker, etc.) frequently mangles mathematical formulas, tables, and special formatting. These files may contain transcription errors in those areas. Do not trust formulas or table layouts from these files as exact — verify against the original source if precision matters. The prose/arguments are reliable; the precise notation may not be.
+**Evidence status:** Converted files can contain OCR, transcription, omission,
+formatting, or metadata errors, including in prose. Project-written analyses,
+reference lists, and multi-source syntheses are discovery and research aids, not
+presumptively reliable evidence. Before relying on a claim, distinguish the original
+source from project synthesis and verify material wording, figures, tables, citations,
+and context against the original source when accuracy matters.
 
 ---
 
@@ -126,12 +132,16 @@ age-keygen -o /tmp/age-key.txt 2>&1 | grep -oP 'age1\S+' > literature/age-recipi
 age -r $(cat literature/age-recipient.txt) -o literature/<slug>.md.enc literature/<slug>.md
 ```
 
-Then add `<slug>.md` to `literature/.gitignore` and set `encrypted: true` in the frontmatter of the `.enc` source.
+Then add `<slug>.md` to `literature/.gitignore` and set `encrypted: true` in the
+plaintext frontmatter before encryption. Git stores only `<slug>.md.enc`; the encrypted
+file is not readable Markdown and has no inspectable frontmatter until decrypted.
 
 ### Decryption
 
-If decrypted `.md` files are missing and `LITERATURE_KEY` is available in the
-environment, run:
+Encrypted index entries use the logical plaintext `.md` filename for navigation and
+mark it `Yes`. In a normal checkout that path may not exist: the tracked counterpart is
+`<slug>.md.enc`. If `LITERATURE_KEY` is available, create the local ignored plaintext
+copies with:
 
 ```bash
 bash scripts/decrypt-literature.sh

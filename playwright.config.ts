@@ -36,7 +36,7 @@ export default defineConfig({
       },
     },
     {
-      name: "mobile-safari-like",
+      name: "iphone-chromium",
       use: {
         ...devices["iPhone 13"],
         browserName: "chromium",
@@ -44,7 +44,7 @@ export default defineConfig({
     },
   ],
   webServer: process.env.PLAYWRIGHT_BASE_URL ? undefined : {
-    command: `npm run dev -- --host 127.0.0.1 --port ${port}`,
+    command: `npm run build && npm run preview -- --host 127.0.0.1 --port ${port}`,
     url: localBaseURL,
     reuseExistingServer: false,
   },

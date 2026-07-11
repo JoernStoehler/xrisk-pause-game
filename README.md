@@ -69,7 +69,7 @@ or playability transform—are recorded.
 9. [Pruning protocol](docs/review/pathway-pruning-and-representation.md)
 10. [Fast disagreement interface](docs/review/expert-disagreement-elicitation-interface.md)
 
-The detailed first-year register and canonical game `model.yaml` are reference
+The detailed first-year register and high-level game `model.yaml` are reference
 artifacts; they are not the recommended first reading pass.
 
 ## Run and verify the internal vertical slice
@@ -82,5 +82,7 @@ npm run dev
 ```
 
 `npm run build` creates the ignored static bundle under `dist/`. See
-`PROGRESS.md` for current gates and
-`docs/migration/retained-old-material.md` for migration provenance.
+[`docs/CURRENT_GAPS.md`](docs/CURRENT_GAPS.md) for the present development
+boundaries. The retired baseline remains available at commit
+`0c5262c34c423cc62b68124d30d002b4886b879f`; later migration records remain in
+Git history.

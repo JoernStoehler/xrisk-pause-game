@@ -8,17 +8,14 @@ Fun, realism, and political and scientific detail serve that public-understandin
 
 ## Authority
 
-- Jörn is the domain owner. He also has prompt, harness, and agent-engineering expertise available when relevant. Expert-grounded content remains draft until he approves it.
+- Jörn owns domain approval; expert-grounded content remains draft until he approves it.
 - Keep `main` available for independent work. Make tracked changes in a worktree unless Jörn asks for an exact edit on `main`. Merge to `main` only after Jörn approves.
-- Ask before changing production routing, credentials, Cloudflare project settings, or other external state not already authorized by the task.
 - Changes to this file or repo-local skills require Jörn review before merge.
 
 ## Coordination
 
-- Delegation is useful when bounded work can proceed independently or when its internal context is substantially larger than the result its parent needs to integrate. Subagents may delegate further when the same condition holds. Avoid concurrent write ownership that requires agents to reconcile the same files or decisions.
-- A delegation should identify why the work matters and where it sits in the current workflow; its ownership and relevant concurrent work; the required context or repository sources; the expected deliverable and next consumer; and the acceptance, validation, and handoff conditions. Fork conversation history when it is materially required; otherwise provide bounded context and let the receiving agent retrieve supporting context from the repository.
-- Agents resolve what they can within their scope through accessible work. Unresolved questions and blockers, together with recommendations that require coordination, return through the coordinating parent. Each coordinating agent passes upward the evidence, work already performed, recommendation, and specific missing input. The root involves Jörn when his approval, domain judgment, unavailable external access, or review of an already-developed artifact is the remaining scarce input.
-- Coordinating agents remain responsible for integrating and validating returned work. Workstream boundaries and agent lifetimes are temporary; revise them when the work becomes differently coupled.
+- Delegate independently bounded work when it enables parallelism or keeps task-internal context out of the coordinating thread. Give each agent the context, ownership, concurrent-work constraints, expected handoff, and validation criteria needed to work independently; subagents may delegate under the same condition.
+- Give concurrent workers non-overlapping write ownership. Coordinators integrate and validate returned work; unresolved needs move through the parent, and the root involves Jörn only when his domain input or approval remains necessary after accessible work.
 
 ## Trust and claim status
 
@@ -41,12 +38,3 @@ git diff --check
 ```
 
 For model changes, add a focused deterministic test. For UI changes, render and inspect desktop and mobile layouts. For deployment work, read `.agents/skills/deploy/SKILL.md`.
-
-For Cloudflare token authentication, check presence without printing the value, then query the Pages project:
-
-```bash
-test -n "${CLOUDFLARE_API_TOKEN:-}"
-npx wrangler pages project list
-```
-
-An environment-provided API token is already an authentication method. Do not run `wrangler login` unless deliberately replacing token authentication with OAuth. The main checkout's ignored `.env` is Wrangler's local credential source; untracked files do not appear in git worktrees. For a nested `.worktrees/<name>` worktree, verify `.env` is ignored and link it to `../../.env` without reading or copying its contents.

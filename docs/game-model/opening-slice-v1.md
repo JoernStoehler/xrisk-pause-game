@@ -1,7 +1,7 @@
 # Executable opening slice v1
 
-Status: dependency-free TypeScript diagnostic kernel; structurally testable;
-uncalibrated; not yet a playable game.
+Status: playable internal opening slice; structurally tested; uncalibrated; not
+release-ready.
 
 ## Boundary
 
@@ -18,32 +18,15 @@ contains:
 - hosted inference request, declared/true purpose, classification,
   authorization, execution and artifact stages;
 - capability artifact creation as nonterminal technical state;
-- dangerous-run start, internal RSI boundary, takeover and extinction as
-  separate timestamped transitions; and
+- dangerous-run start and internal RSI as separate timestamped transitions;
+  takeover currently produces the terminal extinction state in the same
+  transition; and
 - hidden truth, information objects, DG-visible events and retrospective trace
   material.
 
-It deliberately excludes full politics, public opinion, treaty accession,
-consolidation rollout, safety exit, macroeconomics, detailed research and a
-playable card layer.
-
-## Code map
-
-| File | Contract |
-| --- | --- |
-| `src/model/types.ts` | Canonical types and provenance roles. |
-| `src/model/random.ts` | Stable named diagnostic draws; no sequential RNG stream. |
-| `src/model/scheduler.ts` | Timestamped event queue with structural tie-breaking. |
-| `src/model/world.ts` | One persistent hidden diagnostic world per run. |
-| `src/model/fixtures.ts` | Opening premises and values labeled by role. |
-| `src/model/control.ts` | Compute/memory/topology coverage classification. |
-| `src/model/conduct.ts` | Explicit deterrence versus residual-gambler diagnostic. |
-| `src/model/engine.ts` | Opening transitions and causal trace production. |
-| `src/diagnostic.ts` | Human-readable paired cold/broad diagnostic output. |
-| `test/*.test.ts` | Architecture and counterfactual conformance checks. |
-
-The model core has no Node-specific dependency and can move into a browser
-worker. The diagnostic entrypoint and tests use Node.
+It deliberately excludes complete political operation, public opinion, treaty
+accession, consolidation rollout, safety exit, macroeconomics, detailed
+research, authored progression, and a calibrated game distribution.
 
 ## Timestamped control race
 
@@ -64,9 +47,10 @@ scheduled independently:
 ```
 
 Starting a run is not terminal. Crossing the hidden internal RSI boundary is
-also represented separately from takeover and extinction. An interruption
-before that boundary cancels later route events but does not disclose the
-cancelled deadline to the player.
+represented separately from takeover. In the present slice, takeover and the
+terminal extinction state occur in the same transition. An interruption before
+the RSI boundary cancels later route events but does not disclose the cancelled
+deadline to the player.
 
 ## Resource coverage
 
@@ -135,7 +119,8 @@ Run with `npm test`. Run a paired diagnostic with `npm run diagnostic -- SEED`.
 1. Truth, evidence, actor receipt and player display are different objects.
 2. Timestamped events, not cards or turns, resolve technical/control races.
 3. Random draws use stable causal keys.
-4. Cards will emit typed actions; they will not mutate model state directly.
+4. Cards emit typed actions, but the current reducer still maps some choices
+   directly into fixture truth; institutional mediation is an expansion gate.
 5. Legal text, implementation and factual control stay separate.
 6. Hardware, weights, inference sessions and parameter-changing workloads stay
    separate.

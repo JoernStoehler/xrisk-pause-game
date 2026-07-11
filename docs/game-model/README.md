@@ -24,9 +24,10 @@ It is not a source of truth about AI or politics. In particular, labels such as
 
 ## Files
 
-- [`model.yaml`](model.yaml) is the canonical architectural inventory: entities,
-  state, actions, transitions, observations, hypothesis families, and terminal
-  processes.
+- [`model.yaml`](model.yaml) is the high-level intended architectural inventory:
+  entities, state, actions, transitions, observations, hypothesis families, and
+  terminal processes. Source and tests remain authoritative for implemented
+  behavior.
 - [`causal-atlas.md`](causal-atlas.md) explains the modules and feedback loops in
   readable diagrams.
 - [`trace-semantics.md`](trace-semantics.md) specifies what a run record must say
@@ -34,9 +35,8 @@ It is not a source of truth about AI or politics. In particular, labels such as
   Director-General.
 - [`pruning-ledger.md`](pruning-ledger.md) records what is compressed or omitted
   and why.
-- [`implementation-map.md`](implementation-map.md) proposes code boundaries and
-  conformance checks. Its references to prior code are reconstructed from the
-  surviving project record, not verified against source.
+- [`implementation-map.md`](implementation-map.md) records the current
+  engine/UI boundary, structural invariants, and expansion boundaries.
 - [`opening-slice-v1.md`](opening-slice-v1.md) documents the new executable
   kernel, its test coverage, diagnostic fixtures and remaining gate.
 - [`vertical-slice-ui.md`](vertical-slice-ui.md) documents the first playable
