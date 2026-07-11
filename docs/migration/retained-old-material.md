@@ -15,6 +15,7 @@ The handoff archive was `xrisk-pause-game-codex-handoff-2026-07-11.zip`. Its pre
 | `.gitignore`, `.vscode/extensions.json` | Generic workspace hygiene and editor support |
 | `playwright.config.ts` | Reusable desktop/mobile browser harness, with old game tests replaced and local/remote base-URL support |
 | `source/jorn-review-2026-05-11-raw-excerpts.md` | Direct older Jörn wording that the packet atlas did not fully preserve |
+| `literature/`, `scripts/decrypt-literature.sh` | Downloaded and indexed external research context, kept independent of the retired game architecture |
 
 No Cloudflare credential value was copied into the migration. The ignored main-checkout `.env` remains the local Wrangler credential source; the migration worktree uses an ignored symlink to it because git worktrees do not inherit untracked files. The validation-only GitHub workflow no longer references deployment secrets.
 
@@ -23,7 +24,6 @@ No Cloudflare credential value was copied into the migration. The ignored main-c
 - old React UI, monthly hazard/card engine, dummy cards, portraits, and their tests;
 - old maps, generated card exports, and game-specific scripts;
 - old package/tooling dependencies that existed only for that architecture;
-- the old literature tree, which remains recoverable from the recorded commit and was not copied wholesale into the new source hierarchy;
 - GPT-5.5 prompting, planning, recovery, goal, quality, TypeScript, and skill-writing compensations;
 - `dist/`, because it is reproducible build output; and
 - the dated `.devcontainer/codex-web.md` report about a different backup environment.

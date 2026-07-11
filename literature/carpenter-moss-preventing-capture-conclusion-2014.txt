@@ -1,0 +1,622 @@
+# Preventing Regulatory Capture: Special Interest Influence and How to Limit It — Conclusion
+
+- **Authors:** Daniel Carpenter & David A. Moss (editors)
+- **Published:** Cambridge University Press, 2014
+- **Source URL:** https://tobinproject.org/sites/default/files/assets/Conclusion%20from%20Preventing%20Regulatory%20Capture.pdf
+- **Access:** Freely available PDF from the Tobin Project
+
+---
+
+Conclusion
+A Focus on Evidence and Prevention
+David A. Moss and Daniel Carpenter
+
+Capture varies in both degree and kind, across regulations and agencies.
+This simple statement is as important as it is obvious, ultimately setting the
+stage for a new focus on the prevention of regulatory capture.
+In tackling this variation head on, the study of capture is turning a corner.
+An early focus on models of regulatory decision making is increasingly
+giving way to fine-grained empirical work on special interest influence in
+the regulatory process. To be sure, weakness on the evidentiary front has
+long been an open secret in the field. Already in 1974 Richard Posner
+observed that “empirical research [on capture] has not been systematic.”1
+As late as 2006, Ernesto Dal Bó declared in a review essay that “empirical
+evidence on the causes and consequences of regulatory capture is scarce.”2
+Although Dal Bó’s observation is still broadly correct today, it is becoming
+ever less so. A more detailed picture of the phenomenon is beginning
+to emerge, and many students of capture – including the authors of this
+volume – are rethinking their approach, asking not just what causes capture
+and what problems it creates, but what accounts for its relative strength or
+weakness in real-world situations.
+The essential variance of regulatory capture cries out for explanation, and
+it points to capture prevention as an empirical topic every bit as important
+as capture itself. One reason is that the older, more extreme diagnoses no
+longer have compelling evidence behind them. The latest empirical work is
+revealing a portrait far more nuanced than the stark black and white sketches
+of earlier times (covered in Sections I and II of this volume). Capture,
+we learn, is neither absolute nor uni-dimensional. The old rendition of
+1
+
+Richard A. Posner, “Theories of Economic Regulation,” Bell Journal of Economics and
+Management Science 5 (2) (Autumn 1974): 353.
+2
+Ernesto Dal Bó, “Regulatory Capture: A Review,” Oxford Review of Economic Policy 22 (2)
+(2006): 220.
+
+451
+
+452
+
+David A. Moss and Daniel Carpenter
+
+capture – in which powerful incumbent firms inevitably buy (or otherwise
+influence) regulators to build barriers to entry in their industries, and
+always eviscerate the public interest in the bargain – continues to enchant
+many onlookers in both academic and policy circles, but is increasingly
+difficult to reconcile with the world as it is. Particularly with the rise of
+health, safety, and environmental regulation, industry-specific regulators
+have become far less common, and industry pressure to reduce the scope of
+regulation (corrosive capture) is probably now considerably more common
+than industry efforts to expand it. Entry barriers are by no means the only
+goal of industry interests when it comes to regulation, and most likely not the
+principal one. In some cases, influence over regulators may still be explicitly
+purchased, but such illegal activity is likely more the exception than the
+rule in the United States. Implicit quid pro quos are almost certainly more
+typical, whether through campaign contributions or the revolving door, and
+industry may find even implicit deals unnecessary when broader influence
+can be exercised, indirectly, through cultural capture.
+Simply put, regulatory capture is not an all-or-nothing affair. The old
+Stiglerian notion of a fully captured regulator is most likely a rarity, if it
+exists at all. In fact, in recent years, the most searching analyses have cast
+doubt on some of the most celebrated cases of Stiglerian capture. Much of
+the evidence used in the older literature – including selective examination
+of the historical record and simple correlations between measures of special
+interest and regulatory outcomes – no longer suffices for rigorous analysis
+or understanding.
+In a world where capture varies, it seems very likely that some regulatory
+systems and agencies have done a better job than others at resisting it. Put
+differently, the prospect of preventing or limiting capture becomes a distinct
+possibility and creates an exciting new frontier in social scientific research
+(as explored in Sections III and IV of our volume). Such research can and
+should begin with the relative successes of the past, for the prevention of
+capture actually has deep roots in regulatory practice. In Molière’s classic
+comedy The Bourgeois Gentleman, the central character Monsieur Jourdain is delighted to discover that he has been speaking prose all of his life,
+and without knowing it. Countless scholars and policymakers, it turns out,
+have been living in a similar state of blissful ignorance of an unrecognized
+capacity. Preventing capture is something our regulatory system has been
+doing all along, at least to a degree, without almost anyone recognizing
+it. In fact, this may be the most important finding to arise from this volume. Many regulatory bodies have developed surprisingly strong immune
+systems, apparently capable of keeping the worst forms of capture at bay.
+
+Conclusion
+
+453
+
+Our regulatory system has thus been speaking prose – and perhaps even a
+little poetry – without us knowing it. Past claims of capture, meanwhile,
+have often been greatly exaggerated, as if no regulatory defense mechanisms
+existed at all.
+Yet these defense mechanisms are widespread. Some, ranging from judicial review to the role of the media in informing the public and holding
+policymakers accountable, are built deeply into the institutions of American
+democracy. Others, such as the rules of administrative procedure (particularly the public notice and comment period), are the products of congressional action, whereas still others, such as standardized cost-benefit analysis
+run through the Office of Information and Regulatory Affairs (OIRA),
+hail from the executive branch. A quick list of some additional captureprevention strategies at the agency level, which emerged across the chapters
+of this volume, include:
+r Involvement of subnational officials in federal notice and comment
+
+(Yackee, Chapter 11);
+
+r Creation of consumer empowerment programs tied to regulators
+
+(Schwarcz, Chapter 13)
+
+r Cultivation of diverse and independent experts (Kwak, Cuéllar,
+
+McCarty, Chapters 4, 12, and 5, respectively)
+
+r Institutionalization of “devil’s advocates” within agencies (Kwak,
+
+Chapter 4)
+
+r Expanded review by OIRA to include agency inaction as well as action
+
+(Livermore/Revesz, Chapter 15)
+We review all of these strategies, as well as a number of others, in greater
+detail in the pages that follow. The point here is simply that there are
+many capture-prevention mechanisms already at work – and many others,
+including those proposed in this volume, that merit careful attention. To a
+significant extent, therefore, capture appears to be a treatable condition.
+Until fairly recently, however, one rather radical treatment – deregulation – was the remedy of choice. Many saw it as the only remedy. If capture
+was absolute and deeply destructive of the public interest, then eliminating
+the offending regulation seemed like the appropriate response. Yet as we
+have seen throughout this volume, capture is almost always a matter of
+degree. While the presence of undue special interest influence in the policymaking process means that the resulting regulation will be suboptimal
+from a public interest perspective, it does not imply that the regulation
+will necessarily harm the public interest, on net. We stress this point by
+distinguishing between strong and weak capture; the former is associated
+
+454
+
+David A. Moss and Daniel Carpenter
+
+with regulation that actually harms the public interest, whereas the latter
+produces regulation that is less public serving than it could be, but not
+harmful, on net. Although most – and perhaps all – regulatory systems are
+subject to some undue influence and are thus weakly captured, only strong
+capture – which we suspect is far less common – creates a situation in which
+outright elimination of the regulatory regime is justified.
+Because we define weak versus strong capture relative to the net benefit
+of the captured regulation (a binary distinction that has obvious policy
+relevance), this distinction does not perfectly track the degree to which
+undue influence bends regulation from the public interest – that is, whether
+capture is pervasive or limited in an empirical sense.3 As we previewed in
+our Introduction, capture can in theory be empirically pervasive but still
+weak if the social benefits of the captured regulation continue to outweigh
+its costs, and it can also be empirically limited but strong if the captured
+regulation ends up harming the public interest overall. In practice, however,
+these two dimensions of capture – strong/weak and pervasive/limited – are
+likely to be linked, and a finding of pervasive capture may be suggestive of
+strong capture, and limited of weak, even if the association is clearly far
+from perfect. What we can say, based on our review of both the literature
+and the empirical studies in this volume, is the following: although capture
+can (and does) take a range of forms, credible evidence of strong and/or
+pervasive capture is difficult to find, and we suspect that cases of both are
+quite rare.
+It is worth pausing here and reflecting on the implications of even this
+minimal conclusion. If, as we claim (and as many of our chapters have
+plausibly suggested), most agencies and regulations suffer at most only from
+weak capture, then like Molière’s Monsieur Jourdain, policymakers must
+have been doing something right (or avoiding doing something wrong)
+all along. To the extent that strong capture exists, the policy implications
+3
+
+The distinction between strong/weak and pervasive/limited can be represented in terms
+of variables in a simple linear welfare equation. Suppose that we can observe the benefits
+of a regulation B, its costs K, and the reduction in benefits (or addition to costs) due to
+capture, C. For the purposes of the sketch here, we can assume all these variables to be
+continuous and non-negatively valued ( 0). When capture is more empirically pervasive,
+C will correspondingly take larger values, and C will take lower values when capture is
+limited. Yet whether capture is strong or weak depends on how much capture disrupts the
+net welfare delivered by the regulation. A policy is considered desirable if B − K  η, where
+η is a cutoff value ( 0) that settles the choice between favoring a regulatory policy or
+something else. Yet strong capture would, by definition, reverse the inequality, such that B −
+K − C < η, with the critical “cutoff ” value between weak and strong capture being simply
+Cʹ = B − (η + K). When C is so pervasive as to be above this level, capture is strong; when
+C is sufficiently limited to rest below this level, it is weak.
+
+Conclusion
+
+455
+
+are obvious: either resolve the capture problem or remove the regulation.4
+However, if weak capture is the reigning pattern, then the range of suitable
+reforms should extend far beyond simple deregulation, and – importantly –
+any reforms undertaken must account for the fact that the present structure
+has resisted capture, at least to a degree and potentially rather robustly.
+The empirical turn in capture research that has brought us to this point
+has thus opened the door to new thinking on the prevention of capture
+and how this might be accomplished. At the same time, it has invited new
+perspectives on capture itself, and how it functions in practice, and it is to
+those new perspectives that we now turn.
+NEW PERSPECTIVES ON REGULATORY CAPTURE
+
+As William Novak suggests in his historical essay in this volume, special
+interest influence has been a perennial problem of American democracy. It
+has literally always been with us, and each attempt to address one manifestation of the problem has inevitably created others, whether in the form of
+legislative corruption or regulatory capture or private coercion. More often
+than not, it has been a story of two steps forward and one step back. The
+independent regulatory commission played a significant role in reducing
+the impact of legislative corruption, but also became subject to special interest influence itself. The “discovery” of capture in the early 1970s, in other
+words, did not represent the identification of a dangerous new ailment of
+American democracy, which had the potential to be cured, but rather the
+rediscovery of a chronic disease that was far from fatal but still required
+ongoing management to limit its adverse effects.
+Given this history, it should be no surprise that capture itself has continued to evolve. As Daniel Carpenter suggests in Chapter 7 on the Food
+and Drug Administration, for example, corrosive or deregulatory capture,
+in which firms seek to avoid regulation or press for its elimination, may
+4
+
+We remind the reader here that resolving the problem could involve a kind of “blow it
+up and start over again” solution, as the Department of Interior did with the Minerals
+Management Service after the Deepwater Horizon tragedy, or as France has recently done
+with its national medical products regulator (replacing the Agence française de sécurité
+sanitaire des produits de santé with a new regulator) in the wake of the Mediator scandal
+there. Martine Lochouarn, “France Launches New Drug Regulatory Agency,” Lancet 379
+(9832) (June 9, 2012): 2136, accessed December 21, 2012, http://www.thelancet.com/
+journals/lancet/article/PIIS0140–6736%2812%2960927–1/fulltext. The key is that in the
+case of strong corrosive capture, the solution may require the abandonment of an existing
+regulatory structure followed by its replacement with one that is expected to be more
+effective.
+
+456
+
+David A. Moss and Daniel Carpenter
+
+today be even more common than the more traditional notion of capture, in which incumbent firms actively pursue regulatory barriers to entry.
+Mariano-Florentino Cuéllar reinforces this observation in Chapter 12, noting how frequently business interests find themselves fighting regulation –
+trying to prevent or dismantle it – rather than trying to build it. Richard
+Posner takes a similar observation still further, arguing in Chapter 2 that
+because regulation has changed so fundamentally since the 1970s, particularly as a result of the movement for deregulation and the rise of nonindustry-specific regulation, the term capture is itself no longer meaningful
+or relevant. Today, he suggests, firms regularly aim to weaken regulation to
+reduce the costs of compliance, rather than to grab hold of regulation (i.e.,
+capture it) as an anticompetitive weapon. Although we agree with Judge
+Posner about the changes in the regulatory landscape – with corrosive capture largely replacing entry-barrier capture over the past several decades –
+we favor a broader definition of capture and therefore find the term still
+relevant.
+Another variation on the traditional conception of capture is cultural
+capture, which James Kwak unpacks in Chapter 4. Here, as Kwak explains,
+the problem is not that regulators are lured into favoring special interests
+at the expense of the public interest, intentionally and knowingly, but rather
+that they are so persuaded by the special interests’ worldview that they come
+to believe they can best serve the public interest by advancing the agenda
+of the special interests. Although this reflects corruption of a very different
+sort, if it can be called corruption at all, it is nonetheless a potentially
+powerful way in which special interests undercut the public interest and is
+thus highly deserving of further attention.
+Luigi Zingales in Chapter 6 comes at a similar problem in a different
+way by focusing on academic economists and whether they are themselves
+subject to capture by special interests. If so, then reliance on their ostensibly
+neutral expertise could again end up shaping regulatory decisions in ways
+that mimic more traditional capture, even in cases in which the regulators remain entirely uncorrupted. Zingales’s analysis gestures to a broader
+mechanism of regulatory capture – indirect capture of regulatory agencies
+by means of the capture of the professions on which those agencies rely for
+information, expertise, and even appointments. For this reason, Zingales’s
+inquiry points to fundamental connections between conflict of interest, on
+the one hand, and regulatory capture, on the other.5
+5
+
+Lawrence Lessig, “Democracy after Citizens’ United,” Boston Review; Dennis F. Thompson,
+“Understanding Financial Conflicts of Interest,” New England Journal of Medicine 329 (8)
+(August 19, 1993): 573–576.
+
+Conclusion
+
+457
+
+A NEW EMPIRICAL APPROACH TO DIAGNOSING CAPTURE
+
+The studies in this volume are theoretically informed – they ask questions
+about the existence of weak versus strong capture, they ask about the kind of
+capture at work (anticompetitive versus corrosive), and they invoke mechanisms such as quid-pro-quo capture and cultural capture. Yet what most
+distinguishes them from an earlier generation of capture scholarship is
+their deep empirical focus. We will return to the issue of prevention in the
+next section, but first we review the new empirical approach to diagnosing
+capture.
+While some degree of capture may well be inevitable, several chapters
+in Sections III and IV of the volume suggest that claims about the extent
+and effects of special interest influence in the regulatory process are often
+overstated. Because regulatory decisions will always favor one interest or
+another, it is all too easy to conclude – without much evidence – that
+the party that benefits must have captured the regulation. Indeed, several
+chapters show that initial inferences about regulatory capture can prove
+mistaken or exaggerated when assessed forthrightly against the historical
+record. David Moss and Jonathan B.L. Decker examine in Chapter 8 a case
+that has been regarded as a classic historical example of capture – the broadcast spectrum restrictions of the Federal Radio Commission (FRC) – and
+show that the evidence for capture of the FRC in this episode from 1927 is
+essentially zero. The FRC’s refusal to expand the broadcast spectrum in 1927
+is commonly attributed to the quiet influence of incumbent broadcasters
+seeking to restrict the space available to their competitors. However, not
+only is there no evidence of broadcasters having tried to exert inappropriate
+influence in this case, but such an effort would hardly have been necessary
+given that every major interest group, from listeners to manufacturers, supported the FRC’s decision as a way of keeping costs down and maximizing
+the quality of existing radio broadcasts. Christopher Carrigan, meanwhile,
+examines in Chapter 10 the Minerals Management Service (MMS), which
+is widely regarded along with financial agencies as emblematic of capture
+today. He shows that although special interest influence did buffet the MMS,
+a pro-industry influence also came from voters and elected legislators who
+wired the agency with potentially incompatible aims. And in a methodologically sophisticated analysis of responses to mining accidents, Sanford
+Gordon and Catherine Hafer show in Chapter 9 that at the Mine Safety and
+Health Administration, political appointees made a measurable impact on
+regulator actions over and above the influence of industry. Even accounting
+
+458
+
+David A. Moss and Daniel Carpenter
+
+for strategic behavior, Gordon and Hafer demonstrate that changes in political leadership and the public salience of mine safety combine to shape
+enforcement in ways that transcend the interests and influence of the industry. To understand how regulation of mine safety works, they persuasively
+show that more sophisticated analysis is required.
+A key insight regarding the tendency to overdiagnose capture also comes
+from Nolan McCarty’s analysis in Chapter 5 of policy complexity. In complex regulatory settings, McCarty shows, politics and decision making may
+seem to favor industry even when regulators are pursuing the public interest, because of their need to obtain specialized information from business.
+McCarty argues that although certain complex situations force regulators
+to rely on industry in ways that industry can use to its favor, such results
+may in some cases be best for the public relative to the alternatives of banning the activities or not regulating them at all.6 Combined with previous
+research showing that industry and large-firm advantages can occur in regulation without capture,7 McCarty’s theoretical contribution suggests that
+an inference of capture cannot be premised only on agency design or on
+observed industry or firm advantages, particularly in a context of regulatory
+complexity. Analysts must also examine the process by which the politics of
+attempted capture translates into regulatory results.
+STRATEGIES AND MECHANISMS FOR PREVENTING CAPTURE
+
+All of these insights – and many others from this volume and beyond –
+reinforce our belief that close empirical work will continue to foster a
+richer, more nuanced, and more expansive understanding of regulation
+and regulatory capture. Such work is especially important from a policy
+6
+
+It is worth keeping in mind that, as with all general models, McCarty’s analysis focuses
+upon a certain kind of complexity. Not every complex situation creates these constraints,
+and there are cases – such as in American pharmaceutical regulation – where the informational benefits of regulation overcome these problems. See, for example, Daniel Carpenter,
+“Reputation, Information and Confidence – The Political Economy of Pharmaceutical
+Regulation,” in Daniel Farber and Anne Joseph O’Connell, eds., Public Choice and Public
+Law (Northampton, MA: Edward Elgar, 2009). As a consequence, it is important not to
+view complexity as an inescapable “institutions trap” from which society – in all cases –
+can escape only by resorting to the extremes of outright bans on the one hand or no
+regulation (laissez-faire) on the other.
+7
+Carpenter, “Protection without Capture: Product Approval by a Politically Responsive,
+Learning Regulator,” American Political Science Review 98 (4) (2004): 513–31. A similar
+conclusion is reached in a game-theoretic model applied to “approval regulation” contexts
+such as licensing and permitting, or the review of new drugs and medical devices at the
+FDA; Carpenter and Michael M. Ting, “Regulatory Errors with Endogenous Agendas,”
+American Journal of Political Science 51 (4) (October 2007): 835–53.
+
+Conclusion
+
+459
+
+standpoint because it allows for new possibilities in the critical area of
+prevention. The fact that some agencies appear more or less captured than
+others – a fact that Mariano-Florentino Cuéllar highlights in Chapter 12 –
+is fundamental to this project. Variation across agencies provides both a
+compelling reason to believe that capture can potentially be prevented and,
+at the same time, a source of strategies, ideas, and proposals for prevention.
+Today, deregulation (or lack of regulation) is often seen as the best antidote to regulatory capture. Sometimes this may be right. But there is a
+danger of throwing the baby out with the bathwater. The more we understand the nature of special interest influence over regulation, the more we
+should be able to devise a spectrum of remedies to reduce the scope of
+regulatory capture – remedies including, but not limited to, deregulation.
+Although research on strategies for preventing capture remains at an
+early stage, there have been some notable contributions over the past several
+decades, which we review here in combination with contributions from this
+volume.
+Dividing Power. In the 1990s, a number of scholars began to focus on
+the division of power across multiple regulators (or, more specifically, the
+division of responsibility for oversight of a particular industry across multiple regulators) as a means of preventing capture. One prominent argument
+was that competition among regulators could reduce the likelihood of collusion between individual regulators and a regulated industry by driving
+up the costs. As the game theorists Jean-Jacques Laffont and David Martimort explained, “Separation of regulators divides the information at their
+disposal and thus limits their discretion in engaging in socially wasteful
+activities. . . . As a result, the transaction costs of collusive activities increase
+and preventing collusion becomes easier. . . . The separation of regulators
+may be an optimal organizational response to the threat of capture.”8 The
+political scientist Terry Moe has observed, meanwhile, that the “American
+separation of powers system virtually guarantees that the losers, opposing
+interest groups, will have enough power to participate in some fashion as
+well.”9
+Although these are powerful arguments, here too the essays in our volume
+can render a more nuanced understanding, one that has policy relevance
+and that also lays the groundwork for further research. McCarty’s analysis
+8
+
+Jean-Jacques Laffont and David Martimort, “Separation of Regulators against Collusive
+Behavior,” RAND Journal of Economics 30 (2) (Summer 1999): 233, 257.
+9
+Terry M. Moe, “The Politics of Structural Choice: Toward a Theory of Public Bureaucracy,”
+in Oliver E. Williamson, ed., Organization Theory: From Chester Barnard to the Present and
+Beyond, expanded ed. (New York: Oxford University Press, 1995), 147.
+
+460
+
+David A. Moss and Daniel Carpenter
+
+in Chapter 5 suggests that in highly complex industries – with finance as the
+exemplar – the problem is sometimes not that a monopoly on information
+leads self-interested regulators to collude, but that ambiguous information
+and a lack of expertise combine to prevent even the most benevolent regulator from creating policies that advance public welfare. If McCarty is right,
+it seems unlikely that dividing that information among multiple regulatory
+agencies would address the underlying problem. Indeed, such division may
+even exacerbate it by decreasing capacity and therefore increasing the agencies’ dependence on industry insiders. As with other cases of “observational
+equivalence” among capture theories (and between capture and noncapture theories), casual analysts might find it difficult to determine whether a
+Laffont-Tirole collusion model or a McCarty capture-by-complexity model
+is at work in a particular case. Yet the two mechanisms would likely call for
+very different policy responses. This underscores once more the importance
+of carefully diagnosing the causes of capture, and evaluating alternatives,
+before advocating reform.
+Administrative Procedure. In 1987, Mathew McCubbins, Roger Noll,
+and Barry Weingast hypothesized that administrative procedure was introduced and employed with strategic ends in mind, precisely so that elected
+lawmakers could control unelected bureaucrats and, in turn, prevent
+“agency officials [from allowing] the bureau to be ‘captured’ by selling
+out to an external group.”10
+More recently, in a 2008 volume based on a series of case studies, Steven
+Croley refocused attention on administrative procedure as a powerful device
+for preventing capture, but suggested an almost opposite logic from McCubbins, Noll, and Weingast. Instead of subjecting regulators to greater
+oversight and control by legislators, administrative procedure (according to
+Croley) effectively gives regulators greater autonomy from legislators and
+ends up leveling the playing field across interests, weak and strong, by requiring greater openness (public notice) and broader input (public comment).
+“[W]hile it is true that notice-and-comment rulemaking enables regulated
+interest groups and Congress to monitor agencies more easily,” Croley
+wrote, “the rulemaking process also allows other types of groups – publicinterest law firms, the media, the public, government watchdog groups –
+to keep abreast of agency action more easily as well. Relative to these
+groups, Congress and regulated parties would certainly have a comparative
+10
+
+Mathew D. McCubbins, Roger G. Noll, and Barry R. Weingast, “Administrative Procedures
+as Instruments of Political Control,” Journal of Law, Economics, & Organization 3 (2)
+(Autumn 1987): 247.
+
+Conclusion
+
+461
+
+advantage at monitoring agencies, if agency rulemaking processes were not
+standardized.”11
+Media Coverage and Journalistic Scrutiny. In recent years, the media
+has also been held up as a potential bulwark against capture, including legislative capture – again on the basis of detailed empirical work. Moss and
+Mary Oey showed that in each of three major cases in which weak interests prevailed over better organized ones, significant legislative movement
+followed the appearance of relevant horror stories in the press, which presumably alerted the public to an underlying problem. In 1980, for example,
+Superfund was enacted over the vehement objections of the chemical industry after revelations about Love Canal exploded in the national media.12
+Alexander Dyck, Moss, and Zingales, meanwhile, showed that lawmakers
+during the Progressive period were more likely to alter their normal voting
+patterns after a piece of muckraking journalism appeared on the issue in
+question. More generally, they argued that “profit-maximizing media firms
+can play an important role in reducing the power vested interests have on
+policymaking. . . . By informing voters, media help make elected representatives more sensitive to the interests of their constituencies and less prone
+to being captured by special interests.”13
+Chapters in this volume extend this logic by pointing to the importance
+of public debate and media coverage in plausibly reducing or preventing capture. The various regulatory initiatives covered by Cuéllar had the
+property of being intensively followed by general media interests and by
+consumer and health specialists. Gordon and Hafer find that mine safety
+regulators are more aggressive in the aftermath of highly publicized disasters. And both Cuéllar and Carpenter point to the legitimacy of existing
+regulatory arrangements (the reputations and acknowledged expertise of an
+implementing agency), which means in part that the media organizations
+responsible for shaping an agency’s reputation can affect administrative
+behavior.14
+11
+
+Steven P. Croley, Regulation and Public Interests: The Possibility of Good Regulatory Government (Princeton: Princeton University Press, 2008), 143–44. An earlier empirical demonstration of this pluralist outcome appears in Steven Balla, “Administrative Procedures and
+Political Control of the Bureaucracy,” American Political Science Review 92 (1998): 663–73.
+12
+David Moss and Mary Oey, “The Paranoid Style in the Study of American Politics,” in
+Government and Markets: Toward a New Theory of Regulation, eds. Edward Balleisen and
+David Moss (Cambridge: Cambridge University Press, 2010).
+13
+Alexander Dyck, David A. Moss, and Luigi Zingales, “Media versus Special Interests”
+(NBER Working Paper Series, No. 14360, September 2008), 31.
+14
+There is growing evidence for a more general association between media coverage and
+agency behavior; Daniel Carpenter, “Groups, the Media, Agency Waiting Costs and FDA
+Drug Approval,” American Journal of Political Science 46 (3) (July 2002): 490–505; Sanford
+
+462
+
+David A. Moss and Daniel Carpenter
+
+Consumer Empowerment and the Promise of Diffuse Interests. Daniel
+Schwarcz focuses in Chapter 13 on the potential for consumer empowerment in regulatory processes, whether through dedicated governmental
+entities designed to reflect consumer interests or through formal empowerment of independent groups representing consumer interests, and how this
+too might constitute a valuable counterweight to concentrated industrial
+interests in some circumstances. Schwarz’s analysis of consumer empowerment programs suggests particular conditions for their effectiveness, including a unity of purpose and focus among consumer representatives, and a
+combination of legitimacy and expertise among consumer organizations.
+An especially striking claim about diffuse interests, including consumers,
+comes from the political scientist Gunnar Trumbull, who argues that diffuse
+interests typically exercise a great deal of influence and ultimately play a powerful role in preventing capture by concentrated interests. This represents
+a sharp departure from traditional capture theory, which portrays diffuse
+interests as inevitably too weak to stand up to those concentrated interests.
+As Trumbull shows – once again through a series of detailed case studies,
+particularly involving consumer groups – diffuse interests are actually far
+more capable of organizing than is commonly believed. He argues further
+that these diffuse interests prove influential because of their considerable
+legitimacy.15 If so, then an important challenge in contemplating how best
+to prevent capture will involve determining the conditions under which
+diffuse interests are (and are not) able to organize effectively, because they
+apparently stand as a strong potential counterweight to narrower interests,
+including industrial lobbies.
+Diverse and Independent Expertise. Several of the studies in this volume invoke the issue of expertise and the opportunities for reducing the
+risk of capture by diversifying the sources of expertise in regulatory decision making. In her close study of rulemaking at the U.S. Department of
+Transportation, for example, Susan Webb Yackee stresses in Chapter 11 the
+importance of engaging with a diversity of interests and experts, beyond
+the regulated industry itself. In particular, she emphasizes (as a result of her
+empirical analysis) the highly constructive role of subnational officials in the
+public comment period, which “may provide a foil to business interests and
+thus may deter agency capture.” Similarly, in Chapter 4 on cultural capture,
+James Kwak highlights the potential value of academic advisory boards that
+Gordon, “Politicizing Agency Spending: Lessons from a Bush-Era Scandal,” American
+Political Science Review 105 (4) (November 2011): 717–34.
+15
+Gunnar Trumbull, Strength in Numbers: The Political Power of Weak Interests (Cambridge,
+MA: Harvard University Press, 2012).
+
+Conclusion
+
+463
+
+some agencies convene to review data and methodologies. According to
+Kwak, “the external academic community might do a better job of ensuring that agencies consider a diversity of relevant opinion and research.”
+Looking across regulators, Mariano-Florentino Cuéllar examines in Chapter 12 three public health agencies (U.S. Department of Agriculture, Food
+and Drug Administration, and Centers for Disease Control and Prevention)
+and asks why they have been able to achieve at least a degree of independence
+from the industries they regulate, especially as compared with an agency
+such as the Bureau of Alcohol, Tobacco, Firearms and Explosives, which
+has been far less independent relative to gun dealers. With respect to expertise, Cuéllar observes that the more independent agencies had succeeded in
+developing their own “scientific expertise and technical competence,” which
+heightened agency legitimacy and autonomy. Along much the same lines,
+McCarty suggests in Chapter 5 that “Government agencies that regulate
+complex domains need to develop career paths and educational opportunities for . . . key personnel that are more autonomous from the regulated
+industry.”
+Diverse Viewpoints and Interests. Even beyond the question of expertise, several authors stress the value of exposing the rulemaking process to
+diverse perspectives and ideas. Cuéllar, for example, highlights the importance of regulators forging linkages and alliances with a broad range of
+interests and authorities, which diversify information sources and empower
+and insulate the agencies vis-à-vis any particular interest. And Kwak recommends a variety of strategies for injecting greater diversity into the process,
+including “[n]egotiated rulemaking, in which competing interest groups are
+invited to the agency’s table to negotiate proposed rules,” efforts to “increase
+the set of backgrounds from which regulators are drawn, thereby requiring a diversity of viewpoints,” and even the institutionalization of “independent ‘devil’s advocates’ within agencies to represent contrarian viewpoints.”
+Judicial Review of Regulatory Decisions. Elizabeth Magill, meanwhile,
+highlights in Chapter 14 the power of judicial review to invalidate captured
+decisions after the fact. Although recognizing that this mechanism is far
+from perfect (because it only kicks in after a regulation is in place, and
+because a party with standing has to take the initiative before any review
+can occur), she nonetheless sees it as an important mechanism for limiting
+capture and calls for its expansion. In particular, judicial review helps to level
+the playing field, allowing weak as well as strong to be heard, and is often
+effective in detecting cases in which the logical or evidentiary foundation
+for a particular regulatory action is weak. In most cases, moreover, judges
+
+464
+
+David A. Moss and Daniel Carpenter
+
+(as compared to regulators) may be less liable to being captured themselves,
+because of lifetime tenure and greater independence from political actors.
+Executive Review of Regulations Based on Cost-Benefit Analysis.
+Michael Livermore and Richard Revesz remind us in Chapter 15 that the
+Office of Information and Regulatory Affairs (OIRA) inside the Office of
+Management and Budget already plays an important role in limiting capture. This is not because the office is an extension of the president (as is
+commonly argued), but rather principally, in their view, because OIRA creates an additional external check on agency behavior and decisions through
+standardized cost-benefit analysis. Livermore and Revesz suggest that OIRA
+is itself quite difficult to capture, because it is a “general institution” rather
+than a “single-issue” institution, and that it reduces the risk of regulatory
+capture by increasing the diversity of agency perspectives represented in the
+rulemaking process. These authors propose that OIRA encourage agencies
+to conduct vigorous retrospective review, a process that can dramatically
+expand the investments that firms must make to successfully capture a regulation. Given their assessment of its effectiveness, Livermore and Revesz
+call for an expanded role for OIRA – including more robust OIRA review
+of agency inaction – to further limit possibilities for regulatory capture in
+all of its forms.16
+LOOKING AHEAD
+
+Although the proposals outlined in these pages are by no means exhaustive,
+they do provide an indication of the types of remedies that may be most
+promising in combating regulatory capture going forward. The empirical
+work on which they are based, moreover, suggests that many institutional
+protections against special interest influence are already in place and that
+at least in some cases these mechanisms may be considerably more effective than is commonly assumed, particularly against conventional forms of
+capture.
+Ultimately, we believe that the increasingly empirical approach to capture
+that has been taking hold in recent years – and that we hope is exemplified
+in this volume – promises not only a more realistic picture of the problem,
+but also the possibility of more finely tuned remedies. Ideally, this shift
+toward the empirical in the study of capture presages a new orientation
+16
+
+President Obama’s first director of OIRA, Cass Sunstein (now at Harvard Law School), has
+offered similar general arguments about the promise of cost-benefit analysis to avoid both
+particularistic and populist errors, although his focus has not been placed on capture per
+se; see Sunstein, “Empirically Informed Regulation,” University of Chicago Law Review 78
+(2011): 1349.
+
+Conclusion
+
+465
+
+toward government failure more generally, focused not just on whether
+failures exist, but also on how they play out in practice and how (and under
+what conditions) they can be prevented or minimized.17 Surely, there would
+be little satisfaction with cardiologists if they could tell us only that heart
+failure exists, without having much to say about how to prevent it or limit its
+effects, short of killing the patient. Political economists should face the same
+challenge vis-à-vis government failure: they should feel the need to identify
+a range of preventive measures and remedies and the conditions under
+which each would be most effective. With respect to capture in particular,
+deregulation may be a valuable remedy in some cases, but it can hardly be
+the right remedy in all cases. A deeper and more detailed understanding of
+capture is required, and it is our hope that this volume constitutes at least a
+helpful step in the right direction.
+
+17
+
+See especially David Moss, “Reversing the Null: Regulation, Deregulation, and the Power
+of Ideas,” in Gerald Rosenfeld, Jay W. Lorsch, and Rakesh Khurana, eds., Challenges to
+Business in the Twenty-First Century (Cambridge, MA: American Academy of Arts and
+Sciences, 2011), 35–49.
+
+

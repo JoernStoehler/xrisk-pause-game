@@ -1,0 +1,709 @@
+Title: A.Q. Khan Nuclear Smuggling Network
+Author: Molly MacCalman (START Center, University of Maryland)
+Source: Journal of Strategic Security, Volume 9, No. 1, Spring 2016, pp. 104-118
+Date: 2016
+URL: https://digitalcommons.usf.edu/cgi/viewcontent.cgi?article=1506&context=jss
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+Type: Peer-reviewed academic article (full text, extracted from PDF)
+
+Description: Academic analysis of the Khan nuclear smuggling network, covering Khans
+role in Pakistans weapons program, the networks structure and operations, and the
+proliferation of nuclear technology to Libya, Iran, and North Korea.
+
+--- FULL TEXT BELOW ---
+
+Journal of Strategic Security
+Volume 9
+Number 1 Volume 9, No. 1, Special Issue
+Spring 2016: Designing Danger: Complex
+Engineering by Violent Non-State Actors
+
+Article 9
+
+A.Q. Khan Nuclear Smuggling Network
+Molly MacCalman
+START Center, University of Maryland, molly.maccalman@gmail.com
+
+Follow this and additional works at: https://digitalcommons.usf.edu/jss
+
+pp. 104-118
+Recommended Citation
+
+MacCalman, Molly. "A.Q. Khan Nuclear Smuggling Network." Journal of
+Strategic Security 9, no. 1 (2016) : 104-118.
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+Available at: https://digitalcommons.usf.edu/jss/vol9/iss1/9
+This article is brought to you for free and open access by the Open Access Journals at Digital
+Commons @ University of South Florida. It has been accepted for inclusion in Journal of Strategic
+Security by an authorized editor of Digital Commons @ University of South Florida.
+
+A.Q. Khan Nuclear Smuggling Network
+Abstract
+
+Abdul Qadeer Khan, widely viewed as the father of Pakistan’s nuclear weapons program,
+was arrested on January 31, 2004 for his key role in the black market sale of nuclear
+technology and equipment to Iran, North Korea, Libya, and possibly others. A.Q. Khan’s
+nuclear smuggling network prospered throughout the 1980s and 1990s and was linked to
+middlemen and businesses in over 20 countries. The network offered buyers a menu of
+both technical expertise and materials with prices ranging from millions to hundreds of
+millions of dollars. The Khan network was ultimately exposed largely due to years of
+intelligence gathering by the United States and the United Kingdom. However, very few of
+the network’s members have been successfully prosecuted and the demand for nuclear
+material by both state and non-state actors continues. The exposure of Khan’s network
+confirmed that a non-state actor could procure and sell a turnkey nuclear weapons
+program to willing buyers.
+
+Disclaimer
+Editor’s Note: This article forms part of a series of related case studies collected in this
+Special Issue and should be viewed in the context of the broader phenomenon of complex
+engineering by violent non-state actors. Readers are advised to consult the introductory
+and concluding papers for a full explanation and comparative analysis of the cases.
+
+Acknowledgements
+
+This work was supported by Sandia National Laboratories, Contract
+#1525332. Any opinions, findings, conclusions and recommendations in this
+issue are those of the authors and do not necessarily reflect views of Sandia
+National Laboratories or the U.S. Department of Energy.
+
+This article is available in Journal of Strategic Security: https://digitalcommons.usf.edu/jss/vol9/iss1/9
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+Introduction
+Abdul Qadeer Khan, widely viewed as the father of Pakistan’s nuclear
+weapons program, was arrested on January 31, 2004 for his key role in the
+black market sale of nuclear technology and equipment to Iran, North Korea,
+Libya, and possibly others. A.Q. Khan’s nuclear smuggling network
+prospered for nearly two decades (see Appendix A) and was linked to
+middlemen and businesses in over 20 countries.1
+Khan found that the key to subverting Western intelligence agencies was to
+buy component parts directly from suppliers through middlemen. His
+success was also the byproduct of commercial greed and the strategic
+importance of Pakistan after the 1979 Soviet invasion of Afghanistan. The
+A.Q. Khan network offered buyers a menu of both technical expertise and
+materials with prices ranging from millions to hundreds of millions of
+dollars.2
+The Khan network was ultimately uncovered largely due to years of
+intelligence gathering by the United States and United Kingdom. In 2003,
+the network was exposed following a joint US-UK-Germany-Italy operation
+interdicted the BBC China, a German-registered vessel, bound for Libya with
+components for 1,000 centrifuges supplied by the Khan network.3 However,
+very few of the network’s members have been successfully prosecuted and the
+demand for nuclear material by both state and non-state actors continues.
+The exposure of Khan’s network confirmed that a non-state actor could
+procure and sell a turnkey nuclear weapons program to willing buyers.
+Furthermore, it illustrates on a broader level the complexities of illicit supply
+chains and how violent non-state actors engaging in complex engineering
+tasks may be able to procure the expertise and equipment needed to succeed
+in their unlawful endeavors.
+
+Establishment of the Network
+Khan began his career as a nuclear smuggler in the 1970s, while working as a
+metallurgist for the European Uranium Enrichment Centrifuge Corporation
+
+1 The International Institute for Strategic Studies, Nuclear Black Markets: Pakistan, A.Q.
+
+Khan and the rise of proliferation networks: A net assessment (United Kingdom:
+Hastings Print, 2007), 7.
+2 Ibid., 69.
+3 Ibid., 69 and 139.
+
+104
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+(URENCO), a Netherlands-based uranium enrichment consortium.4 At
+URENCO, Khan gained crucial knowledge of centrifuge operations through
+his work translating designs of advanced G-1 and G-2 centrifuges from
+German to Dutch.5 Khan was able to learn not only how the centrifuges
+worked but also who supplied the component parts.6
+In September 1974, just months after India’s first nuclear weapons test, Khan
+wrote a letter to Pakistani Prime Minister Zulfiqar Ali Bhutto, volunteering
+his services to help Pakistan develop fissile material for a nuclear weapon.7
+Khan began supplying Pakistan with specifications and blueprints obtained
+from URENCO. By December 1975, Khan had begun to raise suspicions at
+URENCO and returned to Pakistan.8 URENCO officials have admitted that
+Khan stole the designs for almost every centrifuge on the drawing board.9
+Upon his return to Pakistan, Khan began working for the Pakistani Atomic
+Energy Commission (PAEC). However, he quickly expressed dissatisfaction
+with the slow pace of the program headed by Munir Ahmad Khan. In
+response, Prime Minister Bhutto created the Engineering Research
+Laboratories (ERL) in July 1976, an independent entity under A.Q. Khan’s
+leadership, which allowed A.Q. Khan to take control of the centrifuge
+project.10 By 1981, Khan announced the plant was “producing substantial
+quantities of uranium.”11 In recognition of his success, the plant was renamed
+Khan Research Laboratories (KRL) in May 1981.12 In the mid-1980s, as A.Q.
+Khan began work on a second-generation centrifuge design, designated the P2,13 he was left with a surplus inventory of P-1 centrifuges and related
+components. At the same time, other countries with nuclear weapons
+
+4 URENCO is an international consortium founded in 1971 that consisted of UK,
+
+Germany, and the Netherlands; Corera, Gordon, Shopping for Bombs: Nuclear
+Proliferation, Global Insecurity, and the Rise and Fall of the A.Q. Khan Network (New
+York, NY: Oxford University Press, 2006), 7; Charles Feurguson, “On the Loose: The
+Market for Nuclear Weapons,” Harvard International Review (Winter 2006): 40.
+5 The International Institute for Strategic Studies, Nuclear Black Markets, 17; and
+Ferguson, “On the Loose,” 52.
+6 Corera, Shopping for Bombs, 7.
+7 Ibid.; and The International Institute for Strategic Studies, Nuclear Black Markets, 17.
+8 The International Institute for Strategic Studies, Nuclear Black Markets, 18.
+9 Mark Hibbs, “Using Catch-all Rule, the Hague Blocked 20 Experts Since 1996,” Nuclear
+Fuel (March 15, 2004); quoted in Corera, Shopping for Bombs, 15.
+10 The International Institute for Strategic Studies, Nuclear Black Markets, 18.
+11 Corera, Shopping for Bombs, 41.
+12 Ibid.
+13 The P-2 design had a rotor design made of maraging steel, which enabled it to spin at
+twice the speed of P-1 centrifuges and to enrich uranium more than twice as efficiently.
+The International Institute for Strategic Studies, Nuclear Black Markets, 66.
+
+105
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+ambitions learned of Pakistan’s efforts and reportedly enlisted its assistance.14
+In 1987, Khan took his first step towards nuclear technology proliferation,
+offering Iran a disassembled sample of a P-1 centrifuge, drawings,
+descriptions, and specifications for production; drawings, specifications, and
+calculations for a complete plant; materials for 2,000 centrifuge machines;
+and auxiliary vacuum and electric drive equipment.15 Iran reportedly closed
+the deal for three million dollars in Dubai in 1987. Iran did not purchase
+everything on the list, opting instead to procure some of the items themselves
+from the supplier list Khan had provided.16
+By the early 1990s, Pakistan’s KRL was openly marketing nuclear technology,
+including one sales brochure with a drawing of a mushroom cloud (Figure 1).
+
+Figure 1: KRL Brochure distributed at 2000 Karachi arms fair (left) and KRL Brochure (right)
+Source: The International Institute for Strategic Studies. 2007. Nuclear Black Markets: Pakistan, A.Q. Khan
+and the rise of proliferation networks: A net assessment. United Kingdom: Hastings Print, 82.
+
+14 Ibid., 67.
+15 Ibid., 69.
+
+16 Linzer, Dafna, “Iran was Offered Nuclear Parts,” Washington Post, February 27, 2005,
+
+available at: http://www.washingtonpost.com/wp-dyn/articles/A563912005Feb26.html; quoted in The International Institute for Strategic Studies, Nuclear
+Black Markets, 69.
+
+106
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+Moreover, according to a May 2003 Congressional Research Service report, in
+2000 the Pakistani government advertised nuclear gear for export including
+gas centrifuges that, it noted, “would be useful in a nuclear weapons
+program.”17 Based on this and other evidence discussed below, many analysts
+are skeptical of the Pakistani government’s claim that they had little
+knowledge of Khan’s nuclear proliferation activities.
+A.Q. Khan’s nuclear network thus began as a collection of suppliers for
+Pakistan’s nuclear weapons program but evolved into a lucrative
+transnational business enterprise when Khan shifted from being an importer
+to an exporter of nuclear technology.18 In 1990, the Khan network
+approached Iraq with an offer to supply enrichment technology and project
+designs.19 A 1990 memo found by United Nations (UN) weapons inspectors
+details a meeting between Iraqi intelligence officers and an intermediary for
+A.Q. Khan. The memo lists an asking price of five million dollars for the
+network’s assistance plus an additional ten percent commission for all
+procurement.20 There is currently no evidence to indicate the final outcome
+of the discussions, but experts suggest that procurement “would have been
+impossible after the initiation of Operation Desert Storm in January 1991 and
+the subsequent intrusive inspection operations by the UN.”21
+In the late 1990s, Khan’s frequent international travel, particularly to multiple
+countries in Africa such as Kenya, Mali, Mauritania, Morocco, Niger, Nigeria,
+Sudan, and Tunisia began to raise suspicion by British and American
+intelligence officials.22 In March 2001, amid intense pressure from the United
+States, President Musharraf removed Khan as the head of KRL.23 In
+response, Khan moved the base of his smuggling operations to Dubai. By this
+time Khan’s illicit network had evolved to become something of a virtual onestop-shop for nuclear weapons design plans, centrifuge machines needed to
+produce fissile material, and technical expertise to run the facilities.24 Khan’s
+17 Squassoni, Sharon A. Weapons of Mass Destruction: Trade Between North Korea and
+
+Pakistan, CRS Report RL31900 (Washington, D.C., The Library of Congress,
+Congressional Research Service, 2003: 6; quoted in Sanger, David, “The Khan Network”
+Conference on South Asia and the Nuclear Future, Stanford University, San Jose, CA,
+June 4-5, 2004.
+18 The International Institute for Strategic Studies, Nuclear Black Markets, 80.
+19 Ibid., 72.
+20 Ibid.
+21 Ibid.
+22 Corera, Shopping for Bombs, 132.
+23 Ibid., 148.
+24 “Investigators suspect nuclear smuggling network is still alive,” Jane’s Intelligence
+Review (June 16, 2006): 2.
+
+107
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+removal from KRL therefore seems to have had little effect on the continued
+operations of the network. At least thirty companies and middlemen located
+in Switzerland, the Netherlands, the United Kingdom, the United Arab
+Emirates (UAE), Turkey, South Africa, and Malaysia sold nuclear-related
+goods through the network.25 The following sections briefly describe the
+network’s members and activities in various regions:
+Europe: Khan recruited several of his former European college friends and
+businessmen as buyers and suppliers for the network. Henk Slebos, a Dutch
+metallurgist and college friend became a Khan supplier. Slebos reportedly
+first travelled to Pakistan in 1976.26 He started his own company whose
+website reportedly stated, “we find hard-to-get objects for customers all over
+the world.”27 Slebos was once arrested when a US-made oscilloscope was
+found in his luggage at a Dutch airport, but he spent no time in jail and
+reportedly “business was never interrupted.”28
+Khan also recruited several individuals from Britain. Peter Griffin, a British
+engineer and businessman, supplied Khan with numerous items for twentyfive years. Griffin set up a Dubai-based company, Gulf Technical Industries
+(GTI) in 2000, but has maintained that his shipments always conformed to
+the export controls in place at the time.29 In addition, Abu Siddiqui, a British
+businessman, received a twelve-month suspended sentence for exporting a
+number of nuclear-related items from KRL.30 Over the years, Siddiqui
+supplied a five-ton crane, a twelve-ton furnace, and sophisticated measuring
+machines to Pakistan.31
+Beginning in the 1970s, Khan and other Pakistanis made trips to Switzerland
+and Germany, offering huge sums of money (more than the sale price) to
+various manufacturers for component parts.32 It was at this time that Khan
+recruited Friedrich Tinner, a Swiss engineer. Tinner’s company reportedly
+attempted to send fluoride-resistant valves for centrifuges to Iraq in the early
+1990s. The items were intercepted in Jordan but Swiss authorities did not
+25 Douglas Frantz, “Vital Nuclear Parts are Missing,” Los Angeles Times, April 22, 2005;
+
+quoted in The International Institute for Strategic Studies, Nuclear Black Markets, 80;
+David Albright and Corey Hinderstien, “Unraveling the A.Q. Khan and Future
+Proliferation Networks,” The Washington Quarterly 28:2 (Spring 2005): 114.
+26 Corera, Shopping for Bombs, 25.
+27 Ibid.
+28 Ibid.
+29 The International Institute for Strategic Studies, Nuclear Black Markets, 27 and 80.
+30 Ibid., 104.
+31 Corera, Shopping for Bombs, 112.
+32 Ibid., 23.
+
+108
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+charge Tinner.33 Lastly, Gottard Lerch, a German national, was suspected of
+being one of Khan’s main buyers for Libya’s secret nuclear effort and one of
+the network’s first contacts with Iran.34
+Middle East: Dubai was the site of the network’s first substantial export deal
+with Iran in 1987.35 Iranian officials reportedly met with S. Mohamed
+Farouq, an Indian-born businessman who owned a legitimate computer
+business but also allegedly assisted Khan with marketing P-1 centrifuge
+components.36 Farouq’s nephew, Buhary Syed Ali (B.S.A.) Tahir, a Sri
+Lankan national, was also present at the 1987 deal.37 Tahir was later involved
+in numerous aspects of the network, including shipment of money and
+materials and recruitment of individuals and firms.38
+Following Khan’s removal from Khan Research Laboratory (KRL) in 2001,
+Khan moved the main base of operations for the network to Dubai. Dubai
+also served as the network’s central transshipment point.39 Turkey acted as
+both an assembly point for centrifuge motors and frequency converters and a
+transfer point on to Dubai for subcomponents procured from European
+suppliers.40
+Asia: Malaysia served as the production point for centrifuge parts.41 Friedrich
+Tinner’s sons, Urs and Marco, both Swiss nationals, helped establish
+production lines in Malaysia and modified centrifuge parts in Turkey.42 Urs
+consulted for the Scomi Precision Engineering (SCOPE) factory in Malaysia,
+which reportedly shipped fourteen types of centrifuge components to Dubai
+in 2003.43 Several companies in South Korea and Japan also reportedly
+provided dual-use technology for the Libyan program.44
+Africa: The Khan network worked with companies and experts involved in
+South Africa’s nuclear weapons program before it was abandoned in 1993.45
+33 The International Institute for Strategic Studies, Nuclear Black Markets, 50.
+34 Ibid., 80.
+35 Corera, Shopping for Bombs, 59; The International Institute for Strategic Studies,
+
+Nuclear Black Markets, 67.
+36 The International Institute for Strategic Studies, Nuclear Black Markets, 69.
+37 Ibid.
+38 Corera, Shopping for Bombs, 110.
+39 The International Institute for Strategic Studies, Nuclear Black Markets, 80.
+40 Ibid., 81.
+41 Sanger, David, “The Khan Network”.
+42 The International Institute for Strategic Studies, Nuclear Black Markets, 149.
+43 Ibid., 81.
+44 Ibid.
+45 Ibid., 80.
+
+109
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+These included Gerhard Wisser, a German citizen who resided in South Africa
+and worked for South Africa’s nuclear program. Wisser had supplied Pakistan
+with vacuum pumps and other equipment in the 1980s. Wisser later
+recruited Johan Meyer Daniel Geiges, an associate from South Africa’s
+nuclear program, to “build a complex steel system to feed and withdraw UF6
+gas into a centrifuge cascade. The massive system filled eleven forty-foot
+shipping containers and was estimated to be worth thirty-three million
+dollars.”46
+
+Network Interdiction
+A.Q. Khan continually took steps to circumvent the international
+community’s attempts to stem the sale of nuclear technology. In the wake of
+India’s 1974 detonation of a ‘peaceful nuclear device,’ seven countries formed
+the Nuclear Supplier Group (NSG), originally called the London Club.47 The
+group created guidelines, which restricted the export of items and technology
+specifically designed for nuclear use.48 As a result, Khan could no longer
+acquire various dual-use devices and began purchasing component parts for
+enrichment plants directly from suppliers.49 For example, when the UK
+denied Pakistan access to purchasing additional high-frequency inverters in
+the late 1970s, Pakistan simply began buying the parts with which to assemble
+the inverters themselves. The London club struggled to outpace the
+proliferators, forcing Britain to expand the control list twice in 1979.50
+To circumvent export bans on dual-use nuclear items, Khan assembled an
+extensive network of technical experts, companies, suppliers and workshops.
+According to Mohamed ElBaradei, director general of the IAEA, “Nuclear
+components designed in one country could be manufactured in another,
+shipped through a third (which may have appeared to be a legitimate user),
+assembled in a fourth, and designated for eventual turnkey use in a fifth.”51
+When the network began procuring parts for the Libyan program in the late
+1990s, workshops would produce the parts and send them to Dubai under a
+46 Ibid., 81.
+47 Ibid., 10.
+48 Ibid.
+
+49 Corera, Shopping for Bombs, 22.
+50 Ibid., 26.
+51 ElBaradei, Mohamed, “Nuclear Non-Proliferation: Global Security in a Rapidly
+
+Changing World,” Carnegie International Non-proliferation Conference, Washington,
+D.C., June 21, 2004, available at: http://www.ceip.org/files/projects/npp/resources/
+2004conference/speeches/ElBaradei.doc; Albright and Hinderstien, “Unraveling the
+A.Q. Khan,” 115.
+
+110
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+false end-user certificate. In Dubai they were repackaged and sent to Libya.52
+The Khan network intended to provide Libya with a turnkey gas-centrifuge
+facility capable of enriching enough uranium to produce roughly ten nuclear
+weapons annually.53
+Dubai was also the transshipment hub for components reportedly shipped to
+Iran. In addition to Khan’s initial deal with Iran in 1987 mentioned above,
+Iran reportedly purchased P-1 designs, five hundred components for P-1
+centrifuges, and drawings for the P-2 centrifuge from the Khan network in
+1994.54 The items were allegedly shipped in two containers from Dubai.55
+The Khan network’s technical and procurement support to Iran reportedly
+continued until after 1996.56 Analysts believe the Khan network’s assistance
+enabled Iran to enrich uranium using gas centrifuges.57
+Moreover, Khan was agile in recovering from setbacks. When U.S. and
+French nonproliferation efforts blocked Pakistan’s plutonium route to nuclear
+weapons, Khan brokered a deal with North Korea for an intermediate-range
+liquid-fuel ballistic missile, which provided Pakistan with an alternate nuclear
+weapons delivery option. Analysts believe Pakistan provided North Korea
+with centrifuge technology at least partly in exchange for the No-dong
+missiles.58 Although neither Pakistan nor North Korea have been
+forthcoming regarding North Korea’s procurement of nuclear technology
+from the Khan network, analysts claim that the Pakistani government knew of
+Khan’s activities. The transfer of a number of gas centrifuges, materials, and
+technical assistance in the late 1990s was almost certainly sanctioned by the
+government.59 In exchange, North Korea reportedly assisted in the
+development of Pakistan’s Ghauri liquid-propellant missile in 1993. North
+Korea also supplied Pakistan with twelve to twenty-five No-Dong assembly
+kits between 1995 and 1996.60
+
+52 Albright and Hinderstien, “Unraveling the A.Q. Khan,” 115.
+53 Ibid., 113.
+
+54 Corera, Shopping for Bombs, 69; The International Institute for Strategic Studies,
+
+Nuclear Black Markets, 71.
+55 Corera, Shopping for Bombs, 69.
+56 Ibid., 71.
+57 Albright and Hinderstien, “Unraveling the A.Q. Khan,” 111.
+58 The International Institute for Strategic Studies, Nuclear Black Markets, 74.
+59 James Kitfield, “Nuclear Smuggler Still at Work, Expert Says,” National Journal,
+March 12, 2010, available at: http://www.nti.org/gsn/article/nuclear-smugglers-stillat-work-expert-says/.
+60 The International Institute for Strategic Studies, Nuclear Black Markets, 31.
+
+111
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+Several factors, including a new threat environment, concealment of end
+users, the desire for financial gain, and lack of political will contributed to the
+intelligence community’s failure to detect the extent of Khan’s illicit network
+for so long.
+In the wake of the Cold War, the intelligence community faced major cuts in
+human intelligence (HUMINT) collection, which is a critical component for
+the disruption of illicit smuggling networks.61 At the same time, a new threat
+began to emerge–illicit transnational non-state networks62–with which
+intelligence agencies did not have extensive experience. Analysts initially
+viewed Khan as an individual acting on behalf of the state rather than a nonstate actor.63
+Western intelligence agencies also failed to recognize that KRL was placing
+orders for more items than what was needed for Pakistan’s program.64
+Throughout the 1980s and 1990s, as head of KRL, Khan could ship
+components in and out of Pakistan with very little oversight from the
+Pakistani government.65 The ultimate end users of the items purchased for
+Pakistan’s nuclear program were not tracked.
+Greed also caused suppliers to turn a blind eye to Pakistan’s purchase of
+goods for more than the sale price.66 In fact, according to Khan, as word got
+out about Pakistan’s nuclear ambitions, suppliers began approaching him
+with details of machinery and drawings.67 In other cases, countries such as
+Switzerland and Germany banned the export of complete centrifuges but
+component parts such as vacuum tubes and valve equipment required for an
+enrichment plant were permitted even though the final purpose was
+obvious.68 Essentially, no European countries seemed to want to miss out on
+lucrative profits from the nuclear technology export market, irrespective of
+the proliferation dangers this posed.
+Lastly, there was a general lack of political will to block Pakistan’s nuclear
+ambitions. Although a series of mild sanctions were imposed against
+
+61 Sanger, David, “The Khan Network,” 3.
+62 Kristen A. Lau and Kevin C. Desouza, “Intelligence and Nuclear Non-Proliferation
+
+Programs: The Achilles Heel,” Intelligence and National Security 29:3 (2014): 406.
+63 Ibid., 408.
+64 Ibid.
+65 The International Institute for Strategic Studies, Nuclear Black Markets, 76.
+66 Corera, Shopping for Bombs, 23.
+67 Ibid., 27.
+68 Ibid., 23.
+
+112
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+Pakistan in the late 1970s and 1980s, other strategic policy priorities, namely
+the need for Pakistan’s cooperation against the Soviets in Afghanistan, were
+placed ahead of limiting Pakistan’s nuclear weapons program.69
+The precise role and/or knowledge of the Pakistani government in Khan’s
+proliferation efforts is unknown. Various experts believe that the Pakistani
+government was aware of and possibly involved in Khan’s onward
+proliferation of nuclear technology. Khan was reportedly first investigated by
+the Inter-Services Intelligence (ISI) Agency in the late 1980s, but top officials
+ignored the report.70 Again, between 1998-1999, the ISI conducted an
+investigation of Khan’s finances and uncovered eight million dollars in
+various bank accounts and multiple properties in Pakistan purchased with
+KRL funds.71 However, Pakistan has officially stated that the government did
+not know the true extent of Khan’s illicit activities and they overlooked his
+reported domestic corruption due to his contributions to national security.72
+In the late 1990s intelligence agencies in the United States and the United
+Kingdom started to take notice of Khan’s suspicious travel patterns.73 During
+the subsequent decade, the United States and the United Kingdom slowly
+gathered intelligence until there was no denying that Khan was controlling a
+transnational nuclear proliferation network. Nevertheless, some argue that
+the intelligence community’s failure to find any WMDs in Iraq in 2003 may
+have also contributed to the relatively lengthy lag time between the seizure of
+the China BBC and the ultimate dismantling of the network.74 Although
+suspicions remain, it does not appear that the network provided direct
+assistance to Al Qaeda or other violent non-state actors (VNSAs) in pursuit of
+nuclear technology.75
+Amid pressure from the United States to disclose information pertaining to
+centrifuge shipments to North Korea, as well as Khan’s suspicious foreign
+contacts and travel, Pakistan reluctantly removed Khan as head of KRL in
+2001.76 Khan was placed under house arrest in January 2004, when the
+network was exposed, but Khan was released in February 2009 as Pakistan
+
+69 Sanger, David, “The Khan Network,” 4.
+70 Corera, Shopping for Bombs, 145.
+71 Ibid., 146.
+72 The International Institute for Strategic Studies, Nuclear Black Markets, 93.
+73 Ibid., 83.
+
+74 Sanger, David, “The Khan Network,” 3.
+75 Albright and Hinderstien, “Unraveling the A.Q. Khan,” 112.
+
+76 The International Institute for Strategic Studies, Nuclear Black Markets, 97.
+
+113
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+announced the “the so-called A.Q. Khan affair is a closed chapter.”77 Khan
+remains a popular figure in Pakistan, where many see him as a national hero.
+Very few key players within the Khan network have been successfully
+prosecuted. One of Khan’s principal associates, B.S.A. Tahir, was arrested in
+Malaysia in 2004.78 He was held without official charges until 2008, when
+Malaysian officials stated he was no longer a threat to national security. 79
+Gotthard Lerch was arrested by Swiss authorities in 2004 and extradited to
+Germany in 2005. However, a report by the International Institute for
+Strategic Studies reports that in August 2006, Lerch’s trial was suspended on
+procedural grounds related to “evidence not being forwarded by Swiss
+authorities and defense being denied access to German intelligence
+material.”80 When he was finally convicted in 2008 of minor charges, Lerch
+was sentenced to time served in pretrial detention and released.81 In 2012,
+Friedrich Tinner (seventy-five), and his sons Urs (forty-six) and Marcos
+(forty-three) were found guilty of aiding Libya’s Nuclear Weapons program.
+However, Friedrich received a suspended sentence and his sons were
+sentenced to prison terms shorter than the time they had already spent in
+investigative custody. 82
+
+Analysis
+The sophistication of A.Q. Khan’s nuclear smuggling ring and the attempted
+sale of a turnkey nuclear program to Libya were a wake-up call for the
+international community. Non-state actors in pursuit of tremendous profits
+were able to assemble and transfer dual-use and special-use nuclear
+equipment by purchasing component parts from both complicit and unwitting
+suppliers. The Khan network was able to then manufacture centrifuge
+77 Joby Warrick, “Nuclear Scientist A.Q. Khan Is Freed From House Arrest,” Washington
+
+Post, February 7, 2009, available at: http://www.washingtonpost.com/wpdyn/content/article/2009/02/06/AR2009020603730.html.
+78 Associated Press, “Malaysia arrests alleged black market nuclear agent 2004,” Taipei
+Times, May 30, 2004, available at:
+http://www.taipeitimes.com/News/world/archives/2004/05/30/2003157524.
+79 Associated Press, “Malaysia free Sri Lankan accused of nuclear link,” Taipei Times,
+June 24, 2008, available at:
+http://www.taipeitimes.com/News/world/archives/2008/06/24/2003415593.
+80 The International Institute for Strategic Studies, Nuclear Black Markets, 138.
+81 Eben Harrell, “Nuclear Proliferation: The Crime with No Punishment?” Time
+Magazine, September 16, 2011, available at:
+http://content.time.com/time/world/article/0,8599,2092585,00.html.
+82 Associated Press, “Switzerland: 3 Found Guilty of Aiding Libya’s Nuclear Weapons
+Program,” New York Times, September, 24 2012, available at:
+http://www.nytimes.com/2012/09/26/world/europe/switzerland-3-found-guilty-ofaiding-libyas-nuclear-weapons-program.html?ref=topics&_r=0.
+
+114
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+technology utilizing their cache of stolen blueprints and component
+specifications.
+Khan’s network managed to stay one step ahead of international
+nonproliferation efforts by creating legitimate front companies and disguising
+end-user certificates. The network also repackaged equipment in transit hubs
+such as Turkey and the United Arab Emirates.83 As non-state actors,
+proliferators may be able to mislead suppliers into believing that dual-use
+goods are destined for legitimate purposes.
+Additionally, the Khan network illustrates that many suppliers of dual-use
+items will look the other way in pursuit of financial gains when approached by
+dubious buyers. A.Q. Khan was further shielded from suspicion due to his
+role in Pakistan’s nuclear program. Gordon Corera, author of Shopping for
+Bombs, claims European countries were well aware that European citizens
+were supplying dual-use technology to Pakistan, but they did not realize Khan
+was selling goods on to other countries.84
+So could this happen again? Following the dismantling of the Khan network,
+the international community has actively pursued several new
+nonproliferation initiatives. For example, UN Security Council Resolution
+1540 calls on all states to criminalize the proliferation of WMD, their means
+of delivery, and related materials to non-state actors.85 The Proliferation
+Security Initiative (PSI) was launched by the Bush Administration in 2003,
+just prior to the interdiction of the Libya-bound BBC China and promotes
+greater cooperation among member states to interdict proliferators when
+treaties and export controls fail.86 However, scholars such as David Albright
+argue that the United States continues to lack political will when combating
+nuclear proliferation. He asserts that the United States still does not place
+equal priority on unraveling the activities of Pakistani members of the Khan
+network as it does other foreign policy issues such as on maintaining
+Islamabad’s support for capturing members of Al Qaeda.87
+Though the international community has taken some steps to stem the supply
+side of nuclear proliferation, the demand side from both states and non-state
+actors remains or may indeed be increasing. The link between transnational
+83 The International Institute for Strategic Studies, Nuclear Black Markets, 149 and 155.
+84 Corera, Shopping for Bombs, 111.
+
+85 Kristen A. Lau and Kevin C. Desouza, “Intelligence and Nuclear Non-Proliferation
+
+Programs: The Achilles Heel,” Intelligence and National Security 29:3 (2014): 413.
+86 The International Institute for Strategic Studies, Nuclear Black Markets, 138.
+87 Albright and Hinderstien, “Unraveling the A.Q. Khan,” 119.
+
+115
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+illicit networks and nuclear proliferation thus remains central since most
+countries, and certainly most terrorist organizations, will depend for the
+foreseeable future on illicit nuclear trade for the acquisition of nuclear
+equipment, materials, and expertise.88
+On a broader level, this case illustrates the successful establishment of a
+multi-national smuggling ring that transferred highly controlled and
+sophisticated nuclear technology. Many, if not most, non-state actors who
+pursue complex engineering tasks are focused on technologies that are far less
+restricted and complex than nuclear technology. As a result, this case
+highlights the real danger posed by sophisticated transnational smuggling
+networks in terms of facilitating the efforts of violent non-state actors who
+endeavor to complete complex engineering tasks. Moreover, this case
+demonstrates both the willingness of manufactures to turn a blind eye to
+suspicious purchases in the pursuit of profit as well as the fact that the
+network (or non-state actor) can go farther and farther up the supply chain to
+obtain component parts they can then assemble themselves. Lastly, the Khan
+network illustrates the unique threat posed by countries that lack the political
+will or capacity to prevent or stop illicit behavior, in which non-state actors
+can flourish. Initial suspicions of A.Q. Khan in the late 1980s were reportedly
+brushed aside due to his status as a national hero.89 Other non-state actors
+who have pursued complex engineering tasks such as the FARC and los Zetas
+have been successful despite efforts by national authorities to stop them.
+
+88 Albright David,
+
+Paul Brannan, and Andrea Scheel Stricker, “Detecting and Disrupting
+Illicit Nuclear Trade after A.Q. Khan,” The Washington Quarterly 22:2 (2010): 85.
+89 Corera, Shopping for Bombs, 144.
+
+116
+Produced by The Berkeley Electronic Press, 2016
+
+Journal of Strategic Security, Vol. 9, No. 1
+
+Appendix A. Chronology of A.Q Khan Nuclear Smuggling Network
+ 1972: May—Khan begins work at URENCO
+ 1974: May—India conducts first nuclear test
+ 1974 Khan assigned to translate G-1/ G-2 Centrifuge designs
+ 1974: September—Khan offers his services to Z. A Bhutto
+ 1975: December—Khan leaves the Netherlands
+ 1976: Khan takes over control of Pakistan’s enrichment program as head
+of Engineering Research Laboratories (ERL)
+ 1978: Nuclear Suppliers Group published first export guidelines
+ 1979: US cuts Pakistani economic and military assistance in response to
+construction of Kahuta enrichment facility
+ 1978: ERL succeeds in enriching uranium
+ 1981: ERL renamed Khan Research Laboratories (KRL) to honor Khan’s
+successful uranium enrichment
+ 1980s: Khan approached by unknown Arab country requesting nuclear
+assistance
+ 1983: Khan convicted, in absentia in the Netherlands, of nuclear
+espionage (conviction later overturned due to a technicality)
+ late 1980s: Khan network reportedly begins nuclear transfers to Iran
+ 1988: Iranian scientists suspected of having received nuclear training in
+Pakistan
+ 1989: Iran suspected of receiving its first centrifuge assemblies and
+components
+ 1990: Khan offered to sell Iraq nuclear bomb design and guaranteed
+material support from Western Europe for uranium enrichment
+program
+ 1992: Pakistan begins missile cooperation with North Korea
+ 1997: Khan begins to transfer centrifuge components to Libya
+ 1998: May 11 & 13—India detonates a total of five devices in nuclear
+tests
+ 1998: May 28 & 30—Pakistan responds with six nuclear tests
+ 2001: Libya receives blueprints for nuclear weapons plans. The plans
+are reported to be of Chinese origin with Chinese notes in the margins
+ 2001: March—Khan removed from KRL
+ 2003: October—BBC China intercepted en route to Libya
+ 2004: January 31—Khan arrested
+ 2004: February 4—Khan confesses his illegal nuclear dealings on
+Pakistani television (in English)
+ 2009: February—Khan released from house arrest
+
+117
+https://digitalcommons.usf.edu/jss/vol9/iss1/9
+DOI: http://dx.doi.org/10.5038/1944-0472.9.1.1506
+
+MacCalman: A.Q. Khan Nuclear Smuggling Network
+
+ 2012: Septmeber—Urs Tinner (46), his brother Marco (43) and his
+father Friedrich (74) found guilty of aiding Libya’s Nuclear Weapons
+Program
+
+118
+Produced by The Berkeley Electronic Press, 2016
+
+

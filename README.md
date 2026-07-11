@@ -36,6 +36,9 @@ or public lesson.
 
 ## Source status
 
+- `literature/INDEX.md` — navigation for the retained downloaded and cleaned
+  reference corpus. Treat converted text as a research aid and verify precise
+  quotations, formulas, tables, and time-sensitive claims against the original.
 - `source/jorn-review-2026-05-11-raw-excerpts.md` — recovered direct excerpts.
 - `source/jorn-review-2026-07-11-*.md` — dated polished records of Jörn's later
   reviews; treat them as paraphrases unless marked otherwise.

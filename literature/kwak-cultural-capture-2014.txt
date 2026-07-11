@@ -1,0 +1,1454 @@
+# Cultural Capture and the Financial Crisis
+
+- **Author:** James Kwak
+- **Published in:** Preventing Regulatory Capture: Special Interest Influence and How to Limit It (Chapter 4)
+- **Editors:** Daniel Carpenter & David A. Moss
+- **Publisher:** Cambridge University Press, 2014
+- **Source URL:** https://tobinproject.org/sites/default/files/assets/Kwak%20-%20Cultural%20Capture%20and%20the%20Financial%20Crisis.pdf
+- **Access:** Freely available PDF from the Tobin Project
+
+---
+
+Preventing Regulatory Capture
+Special Interest Influence and How to Limit It
+
+Edited by
+DANIEL CARPENTER
+Harvard University
+
+DAVID A. MOSS
+Harvard University
+
+Cambridge University Press
+Not for sale or distribution.
+
+32 Avenue of the Americas, New York, NY 10013-2473, USA
+Cambridge University Press is part of the University of Cambridge.
+It furthers the University’s mission by disseminating knowledge in the pursuit of
+education, learning, and research at the highest international levels of excellence.
+www.cambridge.org
+Information on this title: www.cambridge.org/9781107646704
+
+C The Tobin Project 2014
+
+This publication is in copyright. Subject to statutory exception
+and to the provisions of relevant collective licensing agreements,
+no reproduction of any part may take place without the written
+permission of Cambridge University Press.
+First published 2014
+Printed in the United States of America
+A catalog record for this publication is available from the British Library.
+Library of Congress Cataloging in Publication Data
+Preventing regulatory capture : special interest influence and how to limit it / [edited by] Daniel
+Carpenter, Harvard University, David A. Moss, Harvard University.
+pages cm
+Includes index.
+ISBN 978-1-107-03608-6 (hardback) – ISBN 978-1-107-64670-4 (pbk.)
+1. Deregulation – United States. 2. Trade regulation – United States. 3. Interest groups –
+United States. I. Carpenter, Daniel P., 1967– II. Moss, David A., 1964–
+HD3616.U63P74 2013
+338.973–dc23
+2013008596
+ISBN 978-1-107-03608-6 Hardback
+ISBN 978-1-107-64670-4 Paperback
+Cambridge University Press has no responsibility for the persistence or accuracy of URLs for
+external or third-party Internet Web sites referred to in this publication and does not guarantee
+that any content on such Web sites is, or will remain, accurate or appropriate.
+
+Cambridge University Press
+Not for sale or distribution.
+
+4
+
+Cultural Capture and the Financial Crisis
+James Kwak1
+
+In 1992, Barbara Smiley, a resident of California, sued Citibank, alleging that it violated California law by charging late fees to her credit card
+account.2 During the litigation, the Office of the Comptroller of the Currency (OCC) – the primary regulator for national banks such as Citibank –
+issued a proposed regulation specifying that late fees were “interest”3 ; under
+federal law,4 this meant that Citibank was bound solely by the law of the
+state where its credit card subsidiary was situated – South Dakota.5 When
+the case was appealed to the Supreme Court, twenty-five states and several consumer organizations signed onto briefs supporting Smiley; fifteen
+states, the American Bankers Association, and the OCC supported Citibank.
+The Supreme Court ruled for Citibank, deferring to the OCC.6 The Court
+acknowledged but discarded the fact that the OCC seemed to have issued
+the regulation because of the ongoing litigation,7 endorsing the ability of a
+federal agency to issue regulations to sway pending litigation in favor of the
+companies it supervised.
+
+1
+
+Associate Professor, University of Connecticut School of Law. I would like to thank Christine Jolls, the other authors represented in this volume, and two anonymous reviewers for
+helpful suggestions.
+2
+Smiley v. Citi bank (South Dakota), N.A., 517 U.S. 735, 738 (1996).
+3
+Office of the Comptroller of the Currency, “Interpretive Rulings,” 60 Fed. Reg. 11924,
+11929 (1995).
+4
+Section 85 of the National Bank Act, 12 U.S.C. § 85, interpreted by Marquette National
+Bank of Minneapolis v. First of Omaha Service Corp., 439 U.S. 299 (1978).
+5
+Citibank located its credit card issuing bank in South Dakota because of favorable regulation offered by that state. Robin Stein, “The Ascendancy of the Credit Card Industry,” Frontline, November 23, 2004. Available at http://www.pbs.org/wgbh/pages/frontline/
+shows/credit/more/rise.html.
+6
+Smiley, 517 U.S. at 739.
+7
+Ibid., 741.
+
+71
+Cambridge University Press
+Not for sale or distribution.
+
+72
+
+James Kwak
+
+The OCC’s intervention in Smiley v. Citibank was just one part of a
+sweeping campaign to lift constraints on national banks, allowing them
+to enter new businesses while blocking efforts by states to rein them in.8
+The OCC, in turn, was just one of several federal agencies that spent most
+of the past two decades fulfilling the wishes of different segments of the
+financial sector. The Federal Reserve issued a series of decisions enabling
+banks to expand into the securities business9 and later declined to enforce
+consumer protection statutes against the nonbank subsidiaries of bank
+holding companies.10 All four major banking agencies (the Federal Reserve,
+the OCC, the Office of Thrift Supervision [OTS], and the Federal Deposit
+Insurance Corporation [FDIC]) relaxed the capital requirements governing
+structured financial products, enabling banks to ramp up their securitization businesses without setting aside large amounts of capital.11 The Securities and Exchange Commission (SEC) allowed major investment banks to
+use their internal models to calculate their net capital, giving them greater
+flexibility to effectively increase their leverage;12 in exchange, the banks gave
+the SEC new oversight powers that went essentially unused.13 The OTS
+was perhaps the worst offender, seemingly engaging in blatant efforts to
+attract fee-paying regulatory “customers” with the promise of lax regulation.14
+Several of these policies were vigorously contested at the time, as was the
+OCC’s position in Smiley. In 2003, when the OCC issued two proposed rules
+that would expand federal preemption of state law, it received more than
+2,700 comment letters. The vast majority of the non-form letters opposed
+the proposed rules, including a majority of letters from every category of
+8
+
+Steven P. Croley, “Public Interested Regulation,” Florida State University Law Review 28
+(Fall 2000): 75–84; Adam J. Levitin, “Hydraulic Regulation: Regulating Credit Markets
+Upstream,” Yale Journal on Regulation 26 (Summer 2009): 152–5.
+9
+Simon Kwan, “Cracking the Glass-Steagall Barriers,” Federal Reserve Bank of San Francisco
+Economic Letter 97–08, March 21, 1997.
+10
+Binyamin Appelbaum, “Fed Held Back as Evidence Mounted on Subprime Loan Abuses,”
+Washington Post, September 27, 2009. Available at http://www.washingtonpost.com/
+wp-dyn/content/article/2009/09/26/AR2009092602706.html.
+11
+Corine Hegland, “Why It Failed,” National Journal, April 11, 2009, 12–20.
+12
+Securities and Exchange Commission, “Final Rule: Alternative Net Capital Requirements
+for Broker-Dealers That Are Part of Consolidated Supervised Entities,” 69 Fed. Reg. 34428
+(2004).
+13
+SEC Office of Inspector General, SEC’s Oversight of Bear Stearns and Related Entities: The
+Consolidated Supervised Entity Program, September 25, 2008.
+14
+Binyamin Appelbaum and Ellen Nakashima, “Banking Regulator Played Advocate Over
+Enforcer,” Washington Post, November 23, 2008. Available at http://www.washingtonpost
+.com/wp-dyn/content/article/2008/11/22/AR2008112202213.html.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+73
+
+respondent except “bank industry [other].”15 The OCC made some changes
+in the final rule, but refused to budge on the core preemption issue.16 Many
+of these policies also contributed to the financial crisis that began in 2007.
+Deregulation of financial markets enabled financial institutions to spawn
+new types of mortgages that fueled the housing bubble, manufacture enormous volumes of securities that became toxic when the bubble collapsed,
+magnify and concentrate risk through the use of customized derivatives, and
+lever up with short-term debt. Policies that were favored by the financial
+sector because they increased profits in the short run ended up making the
+financial system more fragile and imposing widespread losses on society.
+CAPTURE?
+
+At first glance, federal regulation of the financial system over the past two
+decades seems like a case of regulatory capture, in which agencies do the
+bidding of industry without regard for the public good. However, there is
+a problem with this picture, which can be identified by focusing on the
+definition of capture in this volume (slightly shortened): “a process by
+which regulation . . . is consistently or repeatedly directed away from the
+public interest and toward the interests of the regulated industry by the
+intent and action of the industry itself.”
+Most importantly, it is difficult to prove that the deregulatory policies
+pursued by these agencies were clearly not in the public interest as knowable
+at the time. In retrospect, given the economic and fiscal consequences of the
+financial crisis, it seems obvious that policies that increased the likelihood or
+severity of the crisis were not in the public interest. However, two defenses
+can be made against this indictment. First, bad outcomes are not proof of bad
+policy, because the outcomes of policies are probabilistic. It is theoretically
+possible that the recent financial crisis was a fluke accident17 and that the true
+expected impact of these policies on the public interest was positive – just
+as a football team’s failure to gain a first down on fourth-and-one does not
+mean that going for a first down was a bad decision.18 Second, many agency
+15
+
+Government Accountability Office, OCC Preemption Rulemaking: Opportunities Existed
+to Enhance the Consultative Efforts and Better Document the Rulemaking Process, October
+2005, 30–6.
+16
+Ibid., 36–40.
+17
+For the record, I am highly skeptical of the “once-in-a-century flood” theory of the financial
+crisis.
+18
+Indeed, Romer shows that teams should go for a first down on fourth-and-one regardless
+of field position, at least early in a game. David Romer, “Do Firms Maximize? Evidence
+from Professional Football,” Journal of Political Economy 114, no. 2 (April 2006): 352–3.
+
+Cambridge University Press
+Not for sale or distribution.
+
+74
+
+James Kwak
+
+policies that were controversial at the time (or have become controversial
+with hindsight) were within the range of plausible disagreement about the
+public interest. In Smiley, even if there are strong criticisms to be made of a
+credit card business model that relies on keeping people in debt and harvesting fees from them,19 one can still argue that freeing banks from having to
+comply with fifty states’ fee restrictions will increase efficiency and thereby
+reduce the cost of credit. In general, financial deregulation was justified by
+plausible arguments that unregulated markets would allocate capital more
+efficiently, both reducing the cost of credit and increasing its availability.20
+Strong arguments can still be made that several of these deregulatory
+actions were in fact against the public interest. For example, the Federal
+Reserve’s decision not to undertake consumer protection examinations of
+nonbank mortgage lenders seems to contradict the intent of the Home
+Ownership and Equity Protection Act of 1994, the scope of which is defined
+by the set of mortgages falling under its terms, not the set of institutions
+originating those mortgages.21 Agencies’ failures to enforce their own rules
+against institutions they regulated – even, in the case of the OTS, allowing
+IndyMac Bancorp to backdate its capital infusions to appear better capitalized than it actually was and avoid additional FDIC restrictions22 – are
+also hard to defend as being in the public interest. However, it is difficult
+to make a blanket statement that the public interest was sufficiently well
+defined for financial deregulation to be categorically labeled as against the
+public interest.23
+Even if we cannot unambiguously say that the financial sector captured
+its regulatory agencies, however, that should not end our inquiry. There is
+a range of possibilities ranging from a “bad” agency that consciously favors
+industry over a clearly identifiable public interest to a “good” agency that
+seeks only to identify and serve the general welfare. There is also a range of
+outcomes from strong capture, which produces regulation that harms the
+public interest, to weak capture, which reduces but does not eliminate the
+19
+
+Ronald J. Mann, “Bankruptcy Reform and the ‘Sweat Box’ of Credit Card Debt,” University
+of Illinois Law Review 375 (2007): 384–92.
+20
+For example, the argument goes, unlimited late fees allow a bank to compensate itself for
+the specific risk of late payment; otherwise it would have to compensate itself by increasing
+the interest rate, which would affect all customers.
+21
+Public Law 103–325 §§ 152, 156 (1994).
+22
+Michael M. Phillips and Jessica Holzer, “Regulator Let IndyMac Backdate Infusion,”
+Wall Street Journal, December 23, 2008. Available at http://online.wsj.com/article/
+SB122998621544328009.html.
+23
+In some cases, it is also arguable that deregulatory policies were not the result of the “intent
+and action” of the financial sector. For example, returning to Smiley, the OCC might have
+reached its conclusion as a matter of pure statutory interpretation, leaving aside questions
+of the public interest.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+75
+
+benefits of regulation. Financial regulation, where different interest groups
+advance competing plausible conceptions of the public interest, is more
+likely to be the rule than the exception in regulatory policy. In this context,
+the key question is why agency policies generally ended up favoring the
+financial sector, with the outcomes we know too well – in other words, what
+mechanisms of influence enabled regulated industry to get its way.
+MECHANISMS OF INFLUENCE
+
+The motive force in traditional theories of capture is material self-interest.24
+According to Levine and Forrence,25 capture exists when regulators26 are
+motivated by self-interest and therefore select policies that would not gain
+the support of an informed public. Capture can be produced by several
+mechanisms in addition to bribes. Regulatory agencies may be dependent
+for funds on the firms they regulate; firms can provide support to legislators,
+who then apply pressure to agencies through oversight committees; or
+individual regulators may be attracted by higher paying jobs in the industry
+they oversee.
+Traditional capture theory is almost certainly incomplete. In practice,
+general interests do sometimes win out over special interests.27 Furthermore, it would be shocking if regulators did not sometimes attempt to
+advance their ideological interests – what they think is right – rather than
+their material self-interest. Even if regulators are not motivated solely by
+their conception of the public interest, regulatory discretion is still not
+traded for material gain in a transparent market. Instead, the complexities
+of politics imply that sometimes agencies are compelled to follow the general
+interest, sometimes industry exercises control over regulators, and sometimes regulators have the space to act on ideological grounds.28 Croley29 has
+argued that the structure of the administrative process makes it possible for
+24
+
+For summaries, see Michael E. Levine and Jennifer L. Forrence, “Regulatory Capture,
+Public Interest, and the Public Agenda: Toward a Synthesis,” Journal of Law, Economics,
+and Organization 6 (1990): 169–70; Steven P. Croley, “Public Interested Regulation,”
+Florida State University Law Review 28 (Fall 2000): 9–15; and Nicholas Bagley and Richard
+L. Revesz, “Centralized Oversight of the Regulatory State,” Columbia Law Review 106
+(October 2006): 1284–85.
+25
+Levine and Forrence, “Regulatory Capture, Public Interest, and the Public Agenda: Toward
+a Synthesis,” 178.
+26
+Although this chapter focuses on administrative agencies, the concepts discussed could
+also apply to other governmental actors.
+27
+Levine and Forrence, “Regulatory Capture, Public Interest, and the Public Agenda,” 172;
+Croley, “Public Interested Regulation,” 4.
+28
+Levine and Forrence, “Regulatory Capture, Public Interest, and the Public Agenda,” 171–2.
+29
+Croley, “Public Interested Regulation,” 106.
+
+Cambridge University Press
+Not for sale or distribution.
+
+76
+
+James Kwak
+
+regulators to escape the shadow of Congress or special interests and act in
+what they think is the public interest.30
+So, it seems, regulators can either cash in or do what they think is right.
+However, this is still not a satisfying understanding of regulatory behavior
+and outcomes. There is a spectrum of behavior that ranges from outright
+corruption to nobly serving the public. People’s actions are the product
+of many different factors, and mixes of motivations are certainly possible.
+In addition, to the extent that we believe that regulators act according to
+their ideological beliefs, this only raises the question of how those beliefs
+are formed – specifically, how the administrative process exposes regulators to a particular set of influences that can color their beliefs. Both the
+capture model and the public interest model of regulatory action assume
+that regulators are rational actors: either they maximize their material selfinterest or they maximize their consciously held policy interests. However,
+there is another possibility: that regulators are susceptible to nonrational
+forms of influence, which interest groups can exploit to achieve the practical
+equivalent of capture – favorable policy outcomes.
+It is uncontroversial that interest groups should attempt to convince
+regulators of their policy positions using the familiar tools of argument and
+evidence. Interest groups, however, have other channels of influence they can
+exploit to shape the way regulators think about the problems they are tasked
+with solving. Most fundamentally, regulators are human beings and are
+therefore subject to the same sets of cognitive shortcomings as other human
+beings. This implies that they make decisions for reasons other than their
+material self-interest or their consciously held policy beliefs. Even when they
+do act according to their policy beliefs, those beliefs depend on the peculiar
+ways in which people develop their ideological preferences. Policy outcomes,
+therefore, can depend not solely on regulators’ material self-interest, their
+preexisting policy positions, and the process of rational debate, but also on
+the nonrational pressures that arise out of the administrative process.
+This has been a growing area of inquiry as either a critique or an offshoot
+of capture theory.31 Rachlinski and Farina32 drew on cognitive psychology
+and behavioral economics to construct a model of governmental error that
+30
+
+See also Levine and Forrence, “Regulatory Capture, Public Interest, and the Public Agenda,”
+185.
+31
+In a sense, it is also a very old area of inquiry, dating back at least to Alexis de Tocqueville,
+who attributed America’s “singular paucity of distinguished political characters” to the
+social pressures to conform to majority opinion. Alexis de Tocqueville, Democracy in
+America, Translated by Henry Reeve (New York: George Dearborn & Co., 1838), 244–7.
+32
+Jeffrey J. Rachlinski and Cynthia R. Farina, “Cognitive Psychology and Optimal Government Design,” Cornell Law Review 87 (January 2002): 571–82.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+77
+
+is opposed to the traditional capture model. Choi and Pritchard33 similarly identified a set of behavioral biases that may partially explain the
+shortcomings of the SEC. In both cases, the authors suggested irrational
+decision-making processes rather than material self-interest as an explanation of suboptimal policies. At the same time, nonrational influences have
+also been framed as causes of capture. According to Hanson and Yosifon,34
+“[b]eneath the surface of behavior, the interior situation of relevant actors
+is also subject to capture.”35 More narrowly, Wagner36 has identified “information capture,” in which interest groups take advantage of administrative
+law – in particular, the requirement that agencies take all submissions into
+account – to inundate regulators with complex information to obtain favorable policy outcomes. An agency acting in good faith might “participate in a
+capture dynamic,” according to Bagley, because “the agency might depend
+on information from the affected entities and lack the means or ability to
+review that information skeptically. Or the agency might come to see the
+world the way that its regulated entities do.”37 Davidoff has discussed “social
+capture,” in which regulators’ decisions are influenced by the composition
+of their social networks: “These men and women may believe they are doing
+their best, but their worldview is affected by the people they interact with.”38
+The recent financial crisis has provided new motivation for nonmaterialist accounts of capture. The financial sector (and the “Wall Street”
+investment banks and universal banks in particular) seems to have gained
+the cooperation of the federal regulatory agencies, not simply by appealing to material self-interest, but also by convincing them that financial
+33
+
+Stephen J. Choi and A.C. Pritchard, “Behavioral Economics and the SEC,” Stanford Law
+Review 56 (October 2003): 20–36.
+34
+Jon D. Hanson and David G. Yosifon, “The Situation: An Introduction to the Situational
+Character, Critical Realism, Power Economics, and Deep Capture,” University of Pennsylvania Law Review 152 (November 2003): 14.
+35
+Hanson and Yosifon’s concept of “deep capture” applies to society in general, not just
+government actors.
+36
+Wendy Wagner, “Administrative Law, Filter Failure, and Information Capture,” Duke Law
+Journal 59 (April 2010): 1321.
+37
+Nicholas Bagley. “Agency Hygiene.” Texas Law Review See Also 89 (November 20, 2010):
+1–14. Available at http://www.texaslrev.com/seealso/vol/89/responses/bagley. See A.C.
+Pritchard, “The SEC at 70: Time for Retirement?” Notre Dame Law Review 80 (March
+2005): 1073–1102. For example, Pritchard wrote (2005, p. 1089), “the financial services
+industry has considerable influence over the information that the SEC receives as it undertakes its rulemaking responsibilities. The result has been a system of securities regulation
+that largely benefits the big players in the securities industry.”
+38
+Steven M. Davidoff. “The Government’s Elite and Regulatory Capture.” DealBook,
+New York Times, June 11, 2010. Available at http://dealbook.nytimes.com/2010/06/11/
+the-governments-elite-and-regulatory-capture. See p. 39.
+
+Cambridge University Press
+Not for sale or distribution.
+
+78
+
+James Kwak
+
+deregulation was in the public interest. This is not controversial in itself,
+but their positions were often contested at the time and, with hindsight,
+appear to have been catastrophically wrong. The question, then, is how
+regulators could have been so wrong, especially in the direction that favored
+the regulated industry. Joseph Stiglitz answered the question in terms of
+proximity: “I think that mindsets can be shaped by people you associate
+with, and you come to think that what’s good for Wall Street is good for
+America.”39 Needham described cognitive biases as a potential contributor
+to the Federal Reserve’s decision not to examine nonbank mortgage originators during the housing bubble.40 Buiter partially explained the response
+of the Federal Reserve to the growing panic of 2007–2008 by referring to
+“cognitive regulatory capture”: “those in charge of the relevant state entity
+internalising, as if by osmosis, the objectives, interests and perception of
+reality of the vested interest they are meant to regulate.”41 Adair Turner,42
+chair of the U.K. Financial Services Authority, also used the phrase “cognitive capture” to describe the tendency of financial regulators to engage
+in “problem solving with the [regulated] institution” rather than enforcing
+existing rules. Baxter43 has described the financial sector’s influence over
+regulation as an example of the “deep capture” described by Hanson and
+Yosifon.44 Johnson and I argued that the idea that unfettered financial activity is always good for society became a form of “cultural capital” – an idea
+that people adopt in part because of the prestige it confers.45
+There seems to be a widespread intuition that regulated industry can
+shape policy outcomes through influences other than material incentives
+and rational debate. This chapter discusses how and why this might happen:
+39
+
+Jo Becker and Gretchen Morgenson, “Geithner, Member and Overseer of Finance
+Club,” New York Times, April 26, 2009. Available at http://www.nytimes.com/2009/04/
+27/business/27geithner.html.
+40
+Carol A. Needham. “Listening to Cassandra: The Difficult of Recognizing Risks and Taking
+Action.” Fordham Law Review 78 (April 2010): 2347–2355.
+41
+Willem Buiter. “Central Banks and Financial Crises.” In Maintaining Stability in a Changing
+Financial System (proceedings of the Federal Reserve Bank of Kansas City Economic Policy
+Symposium, Jackson Hole, WY, August 21–23, 2008), 601.
+42
+Adair Turner, interview with Financial Crisis Inquiry Commission Staff, November 30,
+2010. Audiotape available at http://fcic.law.stanford.edu/interviews/view/102.
+43
+Lawrence G. Baxter. “Capture in Financial Regulation: Can We Redirect It Toward the
+Common Good?” Cornell Journal of Law and Public Policy 21, no. 1 (Fall 2011): 175–
+200.
+44
+In Baxter’s view, “the language of regulation is shaped by the common backgrounds, education, experience and intermingling of the more powerful players in the policy formation
+process.”
+45
+Simon Johnson and James Kwak, 13 Bankers: The Wall Street Takeover and the Next
+Financial Meltdown (New York: Pantheon, 2010), 104–5.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+79
+
+why regulators’ perspectives and actions might be shaded by the nature of
+their interactions with interest groups, not just the substantive content of
+those interactions. In particular, I focus on three mechanisms of influence
+that are likely to operate in the regulatory context: group identification,
+status, and relationship networks.
+I use the label cultural capture for this phenomenon: cultural because it
+operates through a set of shared but not explicitly stated understandings
+about the world; capture because it can produce the same outcome as
+traditional capture – regulatory actions that serve the ends of industry.
+Cultural capture, as I describe it, however, is not necessarily capture as
+strictly defined in this volume. It is one reason why capture can occur: an
+industry might consciously set out to induce its regulators to identify with
+industry members and their interests, and those regulators might make
+decisions because their conception of the public interest has been colonized
+by industry. The mechanisms of cultural capture, however, are also relevant
+in less clear-cut situations in which the industry position is arguably a
+plausible reading of the public interest. If we think of cultural capture as a
+strategy that interest groups can use to influence regulation, it is available
+both to sway regulators away from a clearly identifiable public interest and
+when there is a contest between multiple possible policies, none of which
+is clearly superior to any other for the public. In the terms used by Yackee
+in this volume (see Chapter 11), cultural capture may help an industry
+exert influence on agency actions, but that influence may fall short of being
+controlling. Cultural capture also implies that it is not enough from a public
+policy standpoint simply to prevent traditional capture based on material
+self-interest. The alternative to outright capture is not necessarily a world
+in which regulators follow the public interest, either in the abstract or as
+they perceive it. Instead, that perception is shaped by a host of nonrational
+factors, many of which can be manipulated by interest groups and not by
+the free competition of ideas and evidence.
+Cultural capture, then, is a channel through which capture can occur in
+parallel to the traditional materialist channel. It contributes to the ongoing
+contest between rival ideological systems, which helps to shape the belief
+systems of governmental actors. Unfortunately, this means that in most cases
+it will be impossible to prove that cultural capture is the determining factor
+behind regulatory outcomes. Traditional capture is already hard enough to
+identify, because policymakers invariably cite some justifications other than
+self-interest for their actions. Cultural capture, if anything, is even harder to
+identify empirically, because there are always multiple explanations for why
+someone forms the beliefs she has; in practice, nonrational influences will
+
+Cambridge University Press
+Not for sale or distribution.
+
+80
+
+James Kwak
+
+ease the adoption and strengthen the grip of beliefs that have plausible rational justifications. In the psychology and economics literatures, the roles of
+different types of motivations can be isolated using laboratory or field experiments, but this is unlikely to be practical in the case of regulatory policy.
+Still, cultural capture should not be written off on the grounds of nontestability. If we ignore the possibility that regulators hold beliefs or make
+decisions in part because of nonrational factors, we are both ignoring common sense and constraining the solution space for administrative policy.46
+That is, if the only problem we guard against is material self-interest, we will
+have a regulatory process protected from bribery but not from the other
+influences wielded by motivated interest groups. We should not doubt that
+sophisticated interest groups are doing what they can to achieve cultural
+capture wherever possible, because it is certainly in their interests. It is possible that our current practices are ideal – that we should have rules limiting
+bribery and its close relatives, but we should not worry about other forms
+of influence – but if so, that is a conclusion we should reach consciously,
+not by default.
+HOW CULTURAL CAPTURE WORKS
+
+In this section, I describe three mechanisms by which regulated industry is
+able to shape regulators’ beliefs and actions – mechanisms that should not
+work if regulators are rational beings devoted to their self-interest or if they
+form their policy preferences rationally. They are:
+r Identity: Regulators are more likely to adopt positions advanced by
+
+people whom they perceive as being in their in-group.
+
+r Status: Regulators are more likely to adopt positions advanced by
+
+people whom they perceive to be of higher status in social, economic,
+intellectual, or other terms.
+r Relationships: Regulators are more likely to adopt positions advanced
+by people who are in their social networks.
+These mechanisms can overlap in practice, but they are conceptually distinct. For example, if I am an agency employee meeting with a lawyer who
+is representing a Wall Street investment bank, I may feel she is in my ingroup because we went to the same law school, I may feel she is of higher
+status because she makes several times as much money as I do, and we
+46
+
+In Rachlinski and Farina, “Cognitive Psychology and Optimal Government Design.” 593–
+606, for example, Rachlinski and Farina argued that governmental decision-making processes should be informed by what we know about cognitive biases.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+81
+
+may send our children to the same schools and therefore be in the same
+social networks. However, each of these factors can also exist on its own.
+I might identify strongly as a civil servant and against the private interests
+she represents, but we might still send our children to the same schools,
+and I might see her regularly for those reasons. Furthermore, each type of
+influence relies on different psychological mechanisms and will therefore
+be important in different contexts. These are also factors that we should
+expect to be at work in interactions between regulators and regulated and
+that therefore have particular implications for administrative regulation.
+
+Identity
+Considerable psychological and economic research indicates that group
+identity matters, and not only because in helping my own group I help
+myself as a member of that group. Identification with a group has several
+effects on behavior that go beyond material self-interest. People seem to
+gain utility from behaving in conformity with their group identities. When
+multiple group identities are available to a person, her behavior will be
+influenced by the identity that she selects, whether that selection is conscious
+or unconscious.
+A standard procedure in psychology or economics experiments is to sort
+participants into minimal groups, either randomly or based on some arbitrary or trivial attribute. Many such studies find that participants act more
+favorably toward in-group members even when there is no rational reason
+to do so. In one study, participants allocated more money to in-group members than out-group members and were more likely to reward and less likely
+to punish in-group members than out-group members.47 Another study
+found that participants were more trusting of in-group members than of
+out-group members and were more trustworthy when dealing with in-group
+members.48 The mere fact of group identification can make people not only
+more generous to in-group members but also more trusting and more willing to reciprocate favorably.49 These effects also occur in experiments using
+real-world, randomly constituted groups.50 In one study, participants in the
+47
+
+Yan Chen and Sherry Xin Li, “Group Identity and Social Preferences,” American Economic
+Review 99 (March 2009): 431–57.
+48
+Shaun P. Hargreaves Heap and Daniel John Zizzo, “The Value of Groups,” American
+Economic Review 99 (March 2009): 295–323.
+49
+These group effects are also correlated with the salience of group membership to participants. See Gary Charness, Luca Rigotti, and Aldo Rustichini, “Individual Behavior and
+Group Membership,” American Economic Review 97 (September 2007): 1340–52.
+50
+Random assignment to groups is valuable because it isolates the effect of group membership
+from the effects of other characteristics that members of a group may share.
+
+Cambridge University Press
+Not for sale or distribution.
+
+82
+
+James Kwak
+
+Joint Officer Training Program of the Swiss military were more trusting of
+and trustworthy to members of their own platoons than to members of
+other platoons.51
+Group identification also induces people to conform to their expectations for the groups with which they identify. According to Akerlof and
+Kranton,52 a person derives utility from her identity. That utility is a function of the social status of the group she identifies with, her similarity to
+the ideal type of that group, and the degree of conformity between her (and
+others’) actions and her expectations of that group. For example, workers’
+effort depends on whether they identify as company insiders or as outsiders,
+not solely on their individual returns to effort, and, therefore, policies that
+encourage identification as insiders increase effort.53 In some cases, people
+are able to choose the group with which they identify, by implication to
+maximize their utility.54 This may be a choice within a single dimension
+such as gender (that is, identification as male or female is to some extent a
+matter of choice), or it may be a choice among the different group identifications that are available at any moment (that is, an Asian woman may choose
+to identify as Asian or as female in a given context). According to social
+identity theory, a person is simultaneously a member of several groups,
+and her thoughts and actions are influenced by the group affiliation that is
+most salient in a given context.55 Experiments involving priming – by which
+participants are surreptitiously reminded of some aspect of their identity –
+show that behavior is even affected by unconscious selection among available identifications. For example, Asian-American female students’ performance on a math test differed based on whether they were primed with
+their ethnic or their gender identity.56
+51
+
+Lorenz Goette, David Huffman, and Stephan Meier, “The Impact of Group Membership on
+Cooperation and Norm Enforcement: Evidence Using Random Assignment to Real Social
+Groups,” American Economic Review 96 (May 2006): 212–16. Donors are more likely to
+find a charity worthy if it is represented as serving people of the donor’s race; see Christina
+M. Fong and Erzo F.P. Luttmer, “Do Fairness and Race Matter in Generosity? Evidence
+from a Nationally Representative Charity Experiment,” Journal of Public Economics 95,
+no. 5–6 (June 2011): 372–94.
+52
+George A. Akerlof and Rachel E. Kranton, “Economics and Identity,” Quarterly Journal of
+Economics 115 (August 2000): 719.
+53
+George A. Akerlof and Rechel E. Kranton, Identity Economics: How Our Identities Shape
+Our Work, Wages and Well-Being (Princeton: Princeton University Press, 2010).
+54
+Akerlof and Kranton, “Economics and Identity,” 719–20.
+55
+Akerlof and Kranton, “Economics and Identity,” 731 n. 30.
+56
+Margaret Shih, Todd L. Pittinsky, and Nalini Ambady, “Stereotype Susceptibility: Identity
+Salience and Shifts in Quantitative Performance,” Psychological Science 10 (January 1999):
+80–3.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+83
+
+Key questions in the regulatory context, then, are what factors affect a
+regulator’s choice of group identification and what that choice implies for
+policy. Two different types of identifications are relevant here. First, in a
+contest between two interest groups – say, credit card issuers and credit card
+customers – a regulator might identify with one group and not the other; the
+specific identification could be with the interest group itself (bankers or consumers) or with that group’s representatives (bank lobbyists or consumer
+advocates). Although this may be unlikely to produce conscious favoritism,
+the regulator will be more inclined to trust the side with which she identifies more, which can affect her policy choices. Second, a regulator’s actions
+might be influenced by her conception of her own role as a civil servant.
+Someone who identifies as an economically sophisticated steward of efficient financial markets will adopt different policy positions than someone
+who identifies as a defender of the “little guy” against large, faceless corporations, even if both share the ultimate objective of increasing the economic
+welfare of ordinary people. The steward of efficient markets would be more
+open to the argument that classifying late fees as interest would lower the
+overall cost of credit because it is more consistent with her self-conception –
+in Akerlof and Kranton’s terms, she would gain greater utility from identity.
+In the context of financial regulation, both of these effects appear more
+likely to favor regulated industry. On any significant issue, all interested parties are likely to send well-educated, articulate, well-dressed representatives
+to meet with agency officials. When it comes to financial regulation, however, industry has the advantage of the revolving door. From 2009 to mid2010, for example, 148 former employees of financial regulatory agencies
+registered as lobbyists.57 In this chapter, I do not consider the implications
+of the revolving door for regulators’ material self-interest. However, the normalcy of moving from an administrative agency to the financial sector and
+the sheer number of people making the transition imply that the regulators
+and the representatives of financial institutions are really the same people,
+only at different points in their careers. Regulators are more likely to have
+personal connections with industry lobbyists or to envision themselves in
+their shoes. This may not directly affect their ideological sympathies or their
+assessment of the merits of an issue, but it could easily affect their identification – which side they consciously or unconsciously perceive as their
+in-group. And this will affect the degree to which they trust information or
+opinions provided by the financial sector.
+57
+
+Eric Lichtblau, “Ex-Regulators Get Set to Lobby on New Financial Rules,” New York Times,
+July 27, 2010. Available at http://www.nytimes.com/2010/07/28/business/28lobby.html.
+
+Cambridge University Press
+Not for sale or distribution.
+
+84
+
+James Kwak
+
+The other industry advantage is that, until recently, few people came to
+Washington to protect ordinary people from banks. Before the recent financial crisis, banks faced four major federal regulators: the Federal Reserve,
+primarily responsible for stable economic growth and low inflation; the
+FDIC, responsible for the solvency of its insurance fund; and the OCC and
+the OTS, primarily responsible for the safety and soundness of banks and
+thrifts, respectively. Before the creation of the Consumer Financial Protection Bureau (CFPB) in the Dodd-Frank Act of 2010, no agency had the
+primary mandate of protecting consumers. Instead, the dominant theory
+was that consumers’ interests would be best protected by free market competition. Because people rarely became bank regulators to protect consumers,
+it was more likely that regulators thought of themselves as stewards of an
+efficient financial system or, more simply, identified with the bankers. This
+attitude was on display in 2010 when members of the CFPB implementation team arrived for an on-site visit to a major financial institution. As
+people were meeting each other, a company executive who had flown in
+from another office introduced himself to someone he thought was from
+the CFPB. “No, I’m one of you,” the person corrected him. “I’m from the
+[bank regulatory agency].”58
+For both of these reasons, financial regulators tended to identify with
+the financial institutions that they regulated.59 This perhaps contrasts with
+the Environmental Protection Agency (EPA), which is often cited as an
+agency that is not captured by the industries that it regulates60 (and is
+sometimes criticized for being captured by environmental groups61 ). As
+Rachlinski and Farina62 say, “Those who seek work at an agency charged
+with responsibility for the environment probably have strong views about
+the appropriate goals and means of environmental regulation.” Their
+identity carries the expectation that they will protect the environment
+
+58
+
+For large financial institutions, the primary regulator typically locates a group of agency
+employees on site – hence the identification with the institution itself and not with the
+outsiders from Washington.
+59
+For example, discussing Eliot Spitzer’s prominence in investigating financial industry scandals, Jonathan Macey wrote, “The SEC was fully acclimated to existing market practices
+and saw no urgent need to change them. The SEC staff identified with the market participants they were ostensibly regulating.” Jonathan R. Macey, “State-Federal Relations
+Post-Eliot Spitzer,” Brooklyn Law Review 70 (2004): 128.
+60
+See Croley, “Public Interested Regulation,” 55–66.
+61
+For a summary and rebuttal of this criticism, see Bagley and Revesz, “Centralized Oversight
+of the Regulatory State,” 1285–90.
+62
+Rachlinski and Farina, “Cognitive Psychology and Optimal Government Design,” 579–
+80.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+85
+
+(from, say, industrial companies), and that expectation conditions their
+actions.63
+
+Status
+Like group identification, status can have significant effects on behavior. On
+issues in which expertise is recognized to be important, laypeople tend to
+defer to people with specific status characteristics (e.g., a relevant advanced
+degree), which may seem reasonable. However, status can influence behavior
+in other ways not predicted by the rational actor model. Diffuse status
+characteristics, based on stereotypes rather than relevant qualifications,
+affect beliefs about social categories and thereby affect relationships between
+people.64 As a result, people behave more favorably toward other people of
+high status. In addition, they are more likely to learn from or imitate people
+of high status, in part because they want to claim status themselves.
+As with group identification, status can confer benefits even when it
+is assigned arbitrarily or based on seemingly irrelevant criteria. In one
+experiment, after people were classified as “stars” or “no-stars” based on
+their performance on a trivia quiz, stars were offered more money in an
+ultimatum game than no-stars.65 In other experiments, high-status players
+obtained better market outcomes than low-status players, even when status
+assignment was transparently random.66 Similar results are produced by
+preexisting indicators of social status. One study found that college students
+with higher social status received more money back in a trust game than
+students with lower status.67 The common theme is that people behave
+63
+
+Bagley and Revesz (p. 1301), however, argued that agency bureaucrats are motivated less
+by ideology and more by “career advancement, producing a quality work product, and
+abiding by professional and ethical norms.”
+64
+Catherine C. Eckel, Enrique Fatas, and Rick Wilson, “Cooperation and Status in Organizations,” Journal of Public Economic Theory 12, no. 4 (2010): 740; Cecilia L. Ridgeway and
+Kristan Glasgow Erickson, “Creating and Spreading Status Beliefs,” American Journal of
+Sociology 106 (November 2000): 580.
+65
+Sheryl Ball and Catherine C. Eckel, “The Economic Value of Status,” Journal of SocioEconomics 27, no. 4 (1998): 503–7. Participants thought that status was assigned based on
+the quiz, but the actual assignment was effectively random. It is theoretically possible that
+participants believed that people who are good at trivia quizzes either deserve more money
+or are more likely to reject low offers, but this would only demonstrate the tendency of
+status distinctions in one realm to affect behavior in generally unrelated realms.
+66
+Ball and Eckel, “The Economic Value of Status,” 507–10; Sheryl Ball, Catherine Eckel, Philip
+J. Grossman, and William Zame, “Status in Markets,” Quarterly Journal of Economics 116
+(February 2001): 161–88.
+67
+Edward L. Glaeser, David I. Laibson, José A. Scheinkman, and Christine L. Soutter,
+“Measuring Trust,” Quarterly Journal of Economics 115 (August 2000): 836–40.
+
+Cambridge University Press
+Not for sale or distribution.
+
+86
+
+James Kwak
+
+more favorably toward people with high status even in contexts in which
+there is no obvious payoff from doing so. This happens in the real world
+as well, for example, when three star football players capitalized on their
+celebrity to raise money for their hedge funds – which then collapsed during
+the financial crisis.68
+People are not only nicer to high-status people; they also are more likely
+to adopt their ideas and behaviors, even when not warranted by the source of
+their status.69 In one culture, for example, “great turtle hunters are permitted
+to speak and are listened to more than others, despite the fact that their
+skill in hunting turtles gives no direct indication of their skill in public
+affairs or politics.”70 The influence of status is especially important in areas
+where it is difficult for individuals to learn on their own.71 Anecdotally,
+it appears that a major charitable contribution by a high-status donor
+will lead to follow-on gifts by other donors.72 Kumru and Vesterlund73
+confirmed experimentally that low-status participants are more likely to
+mimic high-status participants who donate first, whereas the converse is
+less likely to occur.74 In another repeated-game experiment, participants
+were more likely to respond to a signal from a high-status than from a
+low-status counterparty.75
+There are two plausible explanations for this behavior. One is deference to
+people with high status: we interpret their behavior as a command to behave
+accordingly, whether that means conceding in a negotiation or contributing
+to the same charity. Alternatively, we may want to obtain higher status
+or confirm our belief that we have that higher status. For Akerlof and
+Kranton,76 higher status can provide utility directly. Empirically, we know
+68
+
+Edward Robinson, “Winning Super Bowl Lets Montana Teammates Fumble Elite Investing,” Bloomberg Markets Magazine, February 9, 2011. Available at http://www.bloomberg
+.com/news/2011–02–02/winning-super-bowls-lets-montana-teammates-fumblehandling-elite-investor.html.
+69
+Joseph Henrich and Francisco J. Gil-White, “The Evolution of Prestige: Freely Conferred
+Deference as a Mechanism for Enhancing the Benefits of Cultural Transmission,” Evolution and Human Behavior 22 (2001): 184–6.
+70
+Ibid., 184.
+71
+Ibid., 185.
+72
+Cagri S. Kumru and Lise Vesterlund, “The Effect of Status on Charitable Giving,” Journal
+of Public Economic Theory 12 (August 2010): 709–35.
+73
+Ibid.
+74
+See also Eckel, Fatas, and Wilson, “Cooperation and Status in Organizations,” who found
+that participants in a voluntary contribution game are more likely to imitate a high-status
+player and are more responsive to punishment by a high-status player.
+75
+Catherine C. Eckel and Rick K. Wilson, “Social Learning in Coordination Games: Does
+Status Matter?” Experimental Economics 10 (2007): 317–29.
+76
+Akerlof and Kranton, “Economics and Identity,” 719.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+87
+
+that people value status and will expend resources to gain it, even when
+it provides no material advantage. In one experiment, when output was
+publicly visible, people paid money to increase their own output or to
+reduce other participants’ output even though it had no impact on their
+individual payoffs.77 In another case, participants were willing to overinvest
+in seeking status, even though this reduced their expected payoffs.78
+In the real world, where status is not determined in an experiment, we
+pursue status through signaling behaviors. According to social comparison
+theory, we can improve our self-image by emphasizing similarities with and
+connections to higher status people.79 We like to behave in ways that are consistent with our idealized images of ourselves,80 and so we adopt behaviors
+that we think are typical of high-status people. One example is conspicuous
+consumption, identified by Thorstein Veblen, but material wealth is only
+one indicator of status. According to Bourdieu,81 cultural judgments are
+another means of establishing social prestige, with the advantage that taste
+cannot simply be bought and therefore serves as a lasting marker of class
+differentiation: “Social subjects . . . distinguish themselves by the distinctions they make, between the beautiful and the ugly, the distinguished and
+the vulgar.” In addition to pursuing status through consumption choices,
+people pursue status through cultural and intellectual choices.
+In practice, status differentiations exist along many different dimensions.
+We look up to actors, athletes, firefighters, and hedge fund billionaires
+for different reasons. Several of these dimensions provide an advantage to
+financial institutions in the regulatory context. First, insofar as wealth and
+business success are sources of status, the financial sector has them in spades.
+Financial regulators living in Washington and New York saw firsthand the
+vast sums of money being made by Wall Street bankers and traders. In addition, with brief exceptions for the analyst and accounting scandals around
+2001–2002, the financial sector was routinely lionized as both an exemplar
+of the knowledge economy and an engine of economic growth. Financial
+77
+
+Gary Charness, David Masclet, and Marie-Claire Villeval, “Competitive Preferences and
+Status as an Incentive: Experimental Evidence,” Working Paper 1016, Group d’Analyse et
+de Théorie Économique Lyon-St. Étienne, June 2010.
+78
+Bernardo A. Huberman, Christoph H. Loch, and Ayse Önçuler, “Status as a Valued
+Resource,” Social Psychology Quarterly 67 (2004): 103–14.
+79
+Jerry Suls, René Martin, and Ladd Wheeler, “Social Comparison: Why, With Whom, and
+With What Effect?” Current Directions in Psychological Science 11 (October 2002): 159–
+63.
+80
+Roy F. Baumeister, “A Self-Presentational View of Social Phenomena,” Psychological Bulletin 91, no. 1 (1982): 3.
+81
+Pierre Bourdieu, Distinction: A Social Critique of the Judgment of Taste, Translated by
+Richard Nice (Cambridge, MA: Harvard University Press, 1984), 6.
+
+Cambridge University Press
+Not for sale or distribution.
+
+88
+
+James Kwak
+
+institutions and their captains also bought status through charitable work
+and contributions. For example, Sanford Weill, the creator of Citigroup,
+has donated several hundred million dollars to Cornell University (which
+named its medical school after him) and is chair of the board of Carnegie
+Hall.82
+Second, finance itself became glamorous, thanks in part to its portrayal
+in major cultural works, beginning in the late 1980s with The Bonfire of
+the Vanities, Wall Street, and Liar’s Poker. Despite the ambivalent light these
+works cast on modern finance, they popularized the image of the swashbuckling, individualistic, and very rich “master of the universe.” For agency
+employees who never had a chance to become Hollywood stars or professional athletes, the banking lifestyle was perhaps the most glamorous one
+in their sphere of potential experience. At its peak, it seemed like finance
+was the most desirable job in the world, with financial institutions claiming 40 percent of the Princeton seniors who went to work directly after
+graduation.83 The Wall Street recruiting machine, with its constant assertions that finance attracted the best and the brightest,84 also ensured that
+anyone who went to a top college, business school, or law school was well
+aware of the prestige of banking. Insofar as status can exert any pull on
+regulators, then, the major financial institutions were likely to benefit from
+that pull.
+Third, as the world of finance became more technical, its academic pedigree became more imposing. By the 1990s, financial economics was a branch
+of applied mathematics, and several of its leading figures were advocates of
+efficient markets and financial innovation, including multiple winners of
+the Nobel Prize in Economics. On an issue such as the use of value-at-risk
+statistical models for calculating capital requirements, regulators who might
+not understand the math had to choose between an old theory of the world
+that everyone knew was wrong (e.g., that all mortgages were exactly half as
+risky as all commercial loans85 ) and a new theory that, although not practically tested, was supported by famous economists. Academic endorsement
+may be a valid proxy for the correctness of a theory. However, subscribing
+82
+
+“Slate 60: Donor Bios,” Slate, February 5, 2010. Steven Schwarzman, founder of Blackstone,
+has contributed $100 million to the New York Public Library (whose main building
+is named after him) and is chair of the board of the John F. Kennedy Center for the
+Performing Arts. “Slate 60: Donor Bios,” Slate, January 23, 2009.
+83
+Cailey Hall, “Wall Street: Paradise Found?” Daily Princetonian, September 29, 2005. Available at http://www.dailyprincetonian.com/2005/09/29/13254/.
+84
+Karen Ho, Liquidated: An Ethnography of Wall Street (Durham, NC: Duke University Press,
+2009), 42–55.
+85
+These were rules mandated by the Basel I Accord for calculating capital requirements.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+89
+
+to cutting-edge financial theories also provided perceived status benefits.
+These factors all enhanced the status of the financial sector, which could
+give financial regulators additional motivation to adopt its worldview and
+policy positions.
+
+Relationships
+On March 8, 2010, I attended a “blogger briefing” at the Treasury
+Department with Secretary Timothy Geithner and several other senior
+officials. Waldman said the following about a similar meeting the previous
+November:
+Most corrupt acts don’t take the form of clearly immoral choices. People fight those.
+Corruption thrives where there is a tension between institutional and interpersonal
+ethics. There is “the right thing” in abstract, but there are also very human impulses
+towards empathy, kindness, and reciprocity that result from relationships with flesh
+and blood people. . . . I was flattered and grateful for the meeting and left with more
+sympathy for the people I spoke to than I came in with. In other words, I have been
+corrupted, a little.86
+
+(Note that Treasury did not pay the expenses of meeting attendees, whose
+only material benefit was cookies.)87 This is the familiar effect of relationships: you are more favorably disposed toward someone you have shared
+cookies with, or at least it is harder for you to take some action that harms
+his or her interests. Relationships matter because we care about what other
+people think of us, in particular those people with whom we come into
+contact regularly. Relationship pressure is magnified both by visibility –
+the degree to which one party can observe the other’s actions – and by the
+frequency with which people interact.
+These familiar observations are borne out by research in psychology and
+economics. Because we care about what other people think about us, we
+engage in “self-presentation” that, according to Baumeister,88 “is aimed
+at establishing, maintaining, or refining an image of the individual in the
+minds of others.” One consequence is that “people conform more readily to
+the opinions and expectations of others when these others are watching than
+86
+
+Steve Randy Waldman, “Sympathy for the Treasury,” Interfluidity, November 5, 2009.
+Available at http://www.interfluidity.com/posts/1257407150.shtml.
+87
+Cookies are no joking matter. In December 2010, as the Federal Communications Commission was setting rules for managing Internet traffic, AT&T sent the agency 1,530
+cupcakes from Georgetown Cupcake. Edward Wyatt, “Arsenal of a Lobbyist: Hardball and
+Cupcakes,” New York Times, March 26, 2011. Available at http://www.nytimes.com/2011/
+03/27/business/27phone.html.
+88
+Baumeister, “A Self-Presentational View of Social Phenomena,” 3.
+
+Cambridge University Press
+Not for sale or distribution.
+
+90
+
+James Kwak
+
+when they are not”; deindividuation, where people’s actions are not individually identifiable, has the effect of reducing conformity.89 The importance
+of self-presentation has been borne out in economics experiments. In a trust
+game, participants were less likely to cooperate when their counterparties
+could not see their behavior and less likely to cooperate when it was not clear
+who was matched with whom.90 Because participant pairs were randomly
+shuffled (and often anonymous), it is likely that people were motivated by
+what others thought about them and not by the material benefits of establishing a reputation.91 In another experiment, players in two-person games
+behaved more aggressively before an audience of in-group members and
+more deferentially before an audience of out-group members.92
+Similar behavior has been identified in the real world. A study of supermarket cashiers found that an individual cashier’s productivity depended
+on the productivity of the cashiers immediately behind her – but not if her
+shifts had little overlap with theirs.93 By implication, the individual cashier
+was motivated by what the people behind her (who could watch her working) thought about her, but only if she was likely to interact with them often
+in the future. As another example, when college students played a trust
+game, the amount that recipients returned to senders depended in part on
+the degree of social connection between them.94
+In the regulatory context, relationship effects can be difficult to disentangle from revolving door effects. Traditional capture theory holds
+that regulators have a rational interest in doing favors for firms that
+can provide them future employment options. However, even an agency
+employee who is uninterested in higher paying private sector jobs is not
+immune to relationship pressures. In what Meidinger95 called a “regulatory
+community,” “members of the community frequently influence each other,
+act with reference to each other, and desire each other’s respect.” Or as Ayres
+and Braithwaite96 put it, “One of the most plausible noneconomic theories
+89
+
+Ibid., 8.
+Steven Tadelis, “The Power of Shame and the Rationality of Trust,” Working Paper, March
+2, 2011.
+91
+Tadelis, “The Power of Shame and the Rationality of Trust,” 14–15.
+92
+Charness, Rigotti, and Rustichini, “Individual Behavior and Group Membership.”
+93
+Alexandre Mas and Enrico Moretti, “Peers at Work,” American Economic Review 99 (March
+2009): 112–45.
+94
+Glaeser et al., “Measuring Trust,” 834–86.
+95
+Errol Meidinger, “Regulatory Culture: A Theoretical Outline,” Law & Policy 9 (October
+1987): 365.
+96
+Ian Ayres and John Braithwaite, “Tripartism: Regulatory Capture and Empowerment,”
+Law & Social Inquiry 16 (Summer 1991): 471.
+90
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+91
+
+of capture is the most mundane: regulators like to cooperate with firms
+because they seek a conflict-free work life.”97
+In principle, there is no reason why relationship pressures would necessarily favor one interest group over another, because administrative actions
+are equally visible to all sides (at least in theory), and regulatory policy is a
+repeat game in which the issues may change but the parties often remain the
+same. In practice, however, there are two reasons why relationship pressure
+is likely to favor regulated industry, at least in the case of financial regulation. First, for reasons discussed previously, financial regulators are likely to
+share more social networks with financial institutions and their lawyers and
+lobbyists than with competing interest groups such as consumers. Although
+group identification and relationship pressure are two conceptually distinct
+channels of influence, they are likely to occur in overlapping circumstances.
+The revolving door between government and industry, by creating social
+connections between people on opposite sides of the door, therefore has an
+influence even on people who are personally impervious to its attractions.98
+Similarly, Minerals Management Service (MMS) employees working in
+Lake Charles, Louisiana, shared social networks with industry personnel; as
+Carrigan notes in this volume (see Chapter 10), one MMS employee said,
+“Almost all of our inspectors have worked for oil companies out on these
+same platforms. They grew up in the same towns. . . . Some of these people,
+they’ve been friends with all their life.”
+Second, the importance of relationships exacerbates the collective action
+problem often identified as a cause of regulatory capture. According to
+the traditional account, small interest groups (in the sense that they have a
+small number of members, not that they are small economically) with a deep
+interest in the issue at hand are better able to coordinate their activities and
+buy favorable policy than large groups with diffuse interests; the former are
+typified by regulated industry, the latter by the public at large.99 Croley100 has
+criticized the collective action account for, among other things, assuming
+that politicians will necessarily be more responsive to small, well-financed
+97
+
+Similarly, daily contact with agency staff can influence the positions held by agency heads,
+as described by Livermore and Revesz in this volume (see Chapter 15), reducing the
+potential impact of new political appointees on agency policies.
+98
+One potential consequence, according to Baxter, is “a cognitive bias in which different views are not even perceived, let alone recognized and properly analyzed.” Baxter,
+“Capture in Financial Regulation.”
+99
+See George J. Stigler, “The Theory of Economic Regulation,” Bell Journal of Economics
+and Management Science 2 (Spring 1971): 10–13; Croley, “Public Interested Regulation,”
+13–15.
+100
+Croley, “Public Interested Regulation,” 18–21.
+
+Cambridge University Press
+Not for sale or distribution.
+
+92
+
+James Kwak
+
+interest groups than to broad-based interest groups that represent large
+numbers of voters. However, even if broad-based groups can command
+attention at election time or when issues gain significant public attention,
+they are still likely to lack the organizational infrastructure and staying power
+to knock on regulators’ doors month in, month out, on issue after issue.
+For example, the congressional debate over financial regulatory reform
+in 2009–2010 attracted widespread media attention and the participation of
+broad-based, pro-reform groups such as Americans for Financial Reform
+(AFR), a coalition of hundreds of progressive organizations.101 By contrast, when regulatory reform moved to the agencies for implementation,
+although AFR did not close up shop, representatives of financial institutions
+and large nonfinancial companies were much better able to fill the halls of
+the agencies. Early in 2011, CFTC chair Gary Gensler said, “Large institutions have a great deal more resources than the investor advocates. If you
+looked at those 475 meetings [in the past five months] . . . 90-plus percent
+are probably larger institutions or corporations.”102 In this case, industry
+representatives are better situated to build the long-term relationships that
+can shade regulators’ perceptions of people and of the merits of policy issues.
+Similar distinctions can also occur within a single industry. For example,
+the Offshore Energy division of MMS chose to focus its attention on small,
+independent developers rather than the major energy companies in part
+because it was more familiar with the latter (see Chapter 10). Again, this
+apparent advantage for regulated industry might be contrasted with other
+regulatory domains such as certain types of environmental policy, in which
+major environmental organizations may occupy a more symmetric position
+to industry.
+Regulators, like all human beings,103 are susceptible to other cognitive
+biases beyond those discussed here, and this is not an exhaustive list of the
+ways in which interest groups can influence the process by which regulators
+101
+
+This is an example of how “[t]he financial crisis and the national debate over financial
+regulation opened a social aperture in the realm of finance policy making.” Daniel
+Carpenter, “The Contest of Lobbies and Disciplines: Financial Politics and Regulatory
+Reform in the Obama Administration,” in Lawrence Jacobs and Theda Skocpol, eds.,
+Reaching for a New Deal: President Obama’s Agenda and the Dynamics of U.S. Politics
+(Russell Sage Foundation, 2011).
+102
+Ben Protess and Mac William Bishop, “At Center of Derivatives Debate, a Gung-Ho Regulator,” DealBook, The New York Times, February 10, 2011. Available at http://dealbook
+.nytimes.com/2011/02/10/at-center-of-debate-over-derivatives-a-gung-ho-regulator/.
+103
+Or, at least, like most well-educated Americans. See Joseph Henrich, Steven J. Heine, and
+Ara Norenzayan, “The Weirdest People in the World?” Behavioral and Brain Sciences 33
+(2010): 61–135.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+93
+
+form their beliefs and preferences.104 The well-known set of cognitive limitations identified by behavioral psychology can provide inspiration for countless other lobbying tactics. Information capture as discussed by Wagner105
+works in part because human beings have limited processing capacity and
+therefore resort to useful but potentially misleading heuristics when dealing
+with large volumes of information. Filling up regulators’ meeting schedules
+also affects regulators’ ability to evaluate competing perspectives objectively. In general, the more complex and information-intensive an issue is
+and the less capacity the agency has to devote to the issue, the greater the
+potential importance of cultural capture. Faced with uncertainty deciding
+between competing theories of the world and the public interest, people are
+more likely to fall back on the signals communicated by identity, status, or
+relationships.
+IMPLICATIONS
+
+In the two decades leading up to the 2007–2009 financial crisis, the banking
+industry achieved the practical equivalent of capture, with federal regulatory
+agencies generally adopting its favored positions. Although several signs
+of traditional capture were present – notably a well-oiled revolving door
+between regulatory agencies and industry – the argument for capture in
+the strict sense is weakened by a plausible alternative explanation: that
+agency officials were genuinely persuaded by the argument that free financial
+markets were good for the public. In this light, the important question
+is why theories of the world that are wrong or at least widely contested
+gain broad acceptance in a specific community – here, the community of
+financial regulatory agencies. Where the underlying theories require highly
+specialized expertise (e.g., advanced degrees in financial economics) and
+are empirically contested, it would be naı̈ve to expect policy debates to
+turn solely on the intellectual merits of the parties’ positions. Cultural
+capture provides an alternative explanation of how policy is formed – neither
+through simple corruption nor through purely rational debate, but through
+the soft pressures that arise from the specific characteristics of the regulatory
+community.
+104
+
+Rachlinski and Farina (“Cognitive Psychology and Optimal Government Design”) discussed the general implications of several well-known cognitive biases for policymakers.
+Kuran and Sunstein discussed specific measures that could help executive agencies resist
+“availability cascades.” Timur Kuran and Cass R. Sunstein, “Availability Cascades and
+Risk Regulation,” Stanford Law Review 51 (April 1999): 754–8.
+105
+Wagner, “Administrative Law, Filter Failure, and Information Capture.”
+
+Cambridge University Press
+Not for sale or distribution.
+
+94
+
+James Kwak
+
+Cultural capture need not operate alone, but can complement either
+a public interest theory of regulation or a materialist capture theory of
+regulation. On the one hand, the mechanisms of cultural capture can play
+an instrumental role in helping financial institutions convince regulators of
+the merits of their policy positions. Forced to evaluate opposing arguments
+that are difficult to compare and often based on incommensurate policy
+objectives (e.g., maximizing economic growth versus minimizing personal
+bankruptcies), regulators are more likely to resort to proxies such as their
+degree of trust in the people making those arguments or their academic
+pedigree. That reliance on proxies can be either conscious or unconscious
+and is shaped by regulators’ susceptibility to the influences of identity,
+status, and relationships. On the other hand, cultural capture can also
+make it easier for regulators to pursue their material self-interest. Most
+regulators probably do not see themselves as trading influence for material
+gain. Instead, cultural capture provides additional motivations to adopt
+industry-friendly positions that are likely to be in their long-term material
+self-interest. According to the theory of cognitive dissonance, people choose
+their preferences or beliefs to make them consistent with their actions.106
+If a regulator sees her job as protecting ordinary people and believes that
+financial institutions harm consumers, then siding with industry will
+create psychological tension; if instead she believes that free markets are
+good for ordinary people, she will be able to adopt industry-friendly (and
+self-interest–maximizing) positions without suffering cognitive dissonance.
+This is not to say that culture capture was the sole or primary reason for the
+dominance of deregulatory ideas in Washington during the past two decades.
+Modern academic finance, at least in its more popular interpretations,
+appeared to justify the ideology of free financial markets; that ideology also
+received the enthusiastic support of conservative think tanks and media
+outlets eager to make the case against government regulation in any form.
+Old-fashioned electoral politics gave deregulatory presidents, beginning
+with Ronald Reagan, the opportunity to appoint officials who explicitly
+favored relaxing constraints on financial institutions long before they arrived
+in Washington. Well-funded, plausibly rational ideas can certainly go a long
+way in shaping the policy beliefs of agency staffers, especially when they are
+championed by political appointees. However, cultural capture is likely to
+have lent a helping hand.
+106
+
+See George A. Akerlof and William T. Dickens, “The Economic Consequences of Cognitive
+Dissonance,” American Economic Review 72 (June 1982): 307–19.
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+95
+
+Cultural capture is not a complete explanation of financial regulators’
+behavior in the run-up to the financial crisis for another reason: the mechanisms that produce cultural capture are basic features of human interactions
+and therefore predate the recent cycle of financial deregulation. Although
+the potential for cultural capture may be a constant, there are several reasons
+why its effects may have been more powerful in recent years. Rapid innovation in the financial sector pushed regulators to make decisions regarding
+new activities such as complex derivatives where neither existing statutes nor
+previous regulatory actions provided much guidance; the increasing complexity of finance made it more difficult for agency employees to evaluate
+proposals on their merits, increasing the importance of proxies; the growth
+in lobbying expenditures beginning in the 1970s exacerbated the asymmetry
+of influence between the financial industry and competing interest groups;
+and the rapid growth of financial industry compensation unmistakably
+widened the status gap between major banks and federal agencies. Together,
+these factors made cultural capture an increasingly important reason why
+regulators might be swayed in favor of industry positions.
+This chapter has discussed cultural capture in the context of financial
+regulation. In general, however, some factors that should make cultural
+capture a particularly important channel of industry influence are a high
+degree of similarity between industry representatives and regulators; an
+industry with a notable social purpose with which regulators can identify;
+an industry with high social, cultural, or intellectual status; many social connections between industry and regulators; and technically complex issues,
+for which it is not clear how the benefits of policy alternatives are shared. To
+some extent, these same factors can also contribute to traditional capture
+based on material self-interest. If we think of material capture and cultural
+capture as alternative strategies for industry, then a major determinant of
+the importance of cultural capture might simply be the availability of material capture as an option. If bribes are legal, they are the simplest and surest
+way of achieving the desired outcome; insofar as bribes and their cousins
+become illegal, difficult, or subject to public scrutiny, then cultural capture
+will become more important.
+The final question to ask about cultural capture is what we should do
+about it. In this context, it is important to remember that cultural capture is
+the unavoidable byproduct of necessary interactions between human beings.
+It is not feasible and probably not desirable to strip all interactions between
+regulated industry and regulatory agencies of their human elements. The
+close relationships and repeat interactions that help make cultural capture possible may also promote socially beneficial information sharing and
+
+Cambridge University Press
+Not for sale or distribution.
+
+96
+
+James Kwak
+
+cooperation.107 Indeed, as McCarty shows in this volume (see Chapter 5), an
+agency’s ability to gain useful information from firm behavior can depend
+on the proximity between its preferences and firm preferences. Countering
+cultural capture may also be particularly difficult: for example, how do you
+prevent regulators from being influenced by the desire to maintain decent
+social relationships with repeat players?
+However, several policies designed to protect against traditional capture
+could potentially limit the importance of cultural capture: by weakening the
+underlying mechanisms of influence, by reducing the imbalance between
+regulated industry and other interest groups, or by raising the scientific or
+evidentiary standards for agency decision making. Tightening restrictions
+on the revolving door – for example, extending the period of time during
+which ex-regulators are prohibited from lobbying their former agencies –
+could attenuate the bonds of identification that link regulator and regulated.
+In the case of the recent financial crisis, criminal prosecution of bankers
+or their institutions (where warranted by the facts, of course) could go
+some way toward reducing the prestige of the financial sector. On balance,
+however, the mechanisms of cultural capture are likely to continue to favor
+financial institutions over competing interest groups such as consumer
+advocates.
+Negotiated rulemaking, in which competing interest groups are invited
+to the agency’s table to negotiate proposed rules, could reduce cultural
+capture by helping to equalize the influence of different interest groups
+and making relationships more explicit and less informal.108 A conceptually related approach is tripartism, in which a nongovernment organization (NGO) is given full access to the regulatory process and standing to
+enforce violations after the fact; competition between NGOs should limit
+the risk of capture.109 Another possibility is the appointment of an official public advocate to represent the public interest or consumers’ interests
+107
+
+See Errol Meidinger, “Regulatory Culture: A Theoretical Outline,” Law & Policy 9 (October 1987): 366. A similar dynamic may exist in corporate boards of directors, where
+collegiality can produce higher productivity and performance but where social ties can
+lead some members to “develop a sense of ‘in-group’ bias that colors how they evaluate
+claims by others . . . that threaten one or more group members.” Donald C. Langevoort,
+“The Human Nature of Corporate Boards: Law, Norms, and the Unintended Consequences of Independence and Accountability,” Georgetown Law Journal 89 (April 2001):
+810–11.
+108
+Negotiated Rulemaking Act of 1990, codified at 5 U.S.C. §§ 561–570. For an overview of
+negotiated rulemaking and some critiques, see Jody Freeman, “Collaborative Governance
+in the Administrative State,” UCLA Law Review 45 (October 1997): 33–40.
+109
+Ayres and Braithwaite, “Tripartism: Regulatory Capture and Empowerment.” On tripartism and financial regulation, see also Baxter, “Capture in Financial Regulation.”
+
+Cambridge University Press
+Not for sale or distribution.
+
+Cultural Capture and the Financial Crisis
+
+97
+
+in agency proceedings.110 Schwarcz in this volume (see Chapter 13) discusses the strengths and weaknesses of similar consumer empowerment
+programs in insurance regulation. In each of these cases, one goal is to provide a counterbalance to industry power and influence, whether material or
+cultural.
+Another general approach to the problem of cultural capture is to create
+an external check on the information and analysis used to justify agency
+actions. One possible source of external review is the Office of Information
+and Regulatory Affairs (OIRA), which has issued guidelines governing data
+quality and the use of peer review by administrative agencies; Bagley and
+Revesz111 regard “OIRA’s standardization of agency science as a salutary
+development for the regulatory state,” but argue that it could go further.
+OIRA’s generalist scope and its role in harmonizing regulations among
+affected agencies, discussed by Livermore and Revesz in this volume (see
+Chapter 15), could also ensure that an agency’s actions are reviewed by people with different group identifications and relationship networks. Another
+example is provided by the advisory boards convened by some agencies to
+review the data and methodologies that they use. Although OIRA enforcement could help reduce agencies’ dependence on “bad science,” the external
+academic community might do a better job of ensuring that agencies consider a diversity of relevant opinion and research. In the financial context,
+this might have meant paying more attention to research by people such as
+Robert Shiller showing that markets are not always efficient and housing
+bubbles can occur.112 However, it would be unrealistic to expect academic
+criticism alone to solve the problem of cultural capture. In 2005, Raghuram Rajan, one of the world’s leading finance scholars, chose the Federal
+Reserve’s main policy conference to argue that financial liberalization was
+making the global financial system less rather than more stable. He was
+strongly criticized, both by Fed Vice Chair Donald Kohn and by former
+Treasury Secretary Larry Summers, and Federal Reserve policy did not
+budge.113 And, of course, academics can also be captured, as shown by
+Zingales in this volume (see Chapter 6).
+110
+
+Rachel E. Barkow, “Insulating Agencies: Avoiding Capture Through Regulatory Design,”
+Texas Law Review 89 (November 2010): 62–4.
+111
+Bagley and Revesz, “Centralized Oversight of the Regulatory State,” 1316.
+112
+For an overview of empirical attacks on the efficient markets hypothesis, see Justin Fox,
+The Myth of the Rational Market: A History of Risk, Reward, and Delusion on Wall Street
+(New York: Harper Business, 2009), 191–210.
+113
+Justin Lahart, “Mr. Rajan Was Unpopular (But Prescient) at Greenspan Party.”
+Wall Street Journal, January 2, 2009. Available at http://online.wsj.com/article/SB
+123086154114948151.html.
+
+Cambridge University Press
+Not for sale or distribution.
+
+98
+
+James Kwak
+
+Because cultural capture takes advantage of unconscious biases that regulators become subject to, another approach is to attempt to “debias” those
+regulators through procedures or substantive rules designed to counteract
+those biases.114 A common debiasing strategy is to encourage or force people
+to consider disconfirming information or counterarguments.115 One way
+to approach this goal could be through policies that explicitly increase the
+set of backgrounds from which regulators are drawn, thereby requiring a
+diversity of viewpoints.116 A more aggressive step could be institutionalizing independent “devil’s advocates” within agencies to represent contrarian
+viewpoints; by forcing regulators to justify their positions using evidence
+and reason, they could reduce the influence of unconscious biases and
+reliance on illegitimate proxies.117
+In the end, however, cultural capture may simply be harder than traditional capture to protect against. In the traditional capture model, a regulator who sides with one interest group out of self-interest would still accept a
+better offer from another interest group. When groups or ideas attain prestige of their own, however, and when people identify with groups or adopt
+ideas in part because of the status they confer, it is considerably harder for
+those people to identify the sources of their choices. Those choices become
+sticky and are not vulnerable either to a higher offer or to rational argument
+about the public interest. And so, although cultural capture may be less
+reliable than the traditional kind, it can also provide a long-term source of
+advantage for regulated industries that are able to mobilize it.
+
+114
+
+See Christine Jolls and Cass R. Sunstein, “Debiasing Through Law,” Journal of Legal
+Studies 35 (January 2006): 201–2.
+115
+For example, forcing (experimental) plaintiffs and defendants to consider and list the
+weaknesses in their respective cases eliminated self-serving bias on each side, making it
+easier to reach settlement. Linda Babcock, George Loewenstein, and Samuel Issacharoff,
+“Creating Convergence: Debiasing Biased Litigants,” Law and Social Inquiry 22 (1997):
+918–20.
+116
+Steven M. Davidoff, “The Government’s Elite and Regulatory Capture,” DealBook,
+New York Times, June 11, 2010. Available at http://dealbook.nytimes.com/2010/06/11/
+the-governments-elite-and-regulatory-capture/.
+117
+On regulatory devil’s advocates in general, see Brett McDonnell and Daniel Schwarcz,
+“Regulatory Contrarians,” North Carolina Law Review 89 (2011): 1629–79. Similarly, Troy
+Paredes has suggested that corporate boards should include a “chief naysayer” to counter
+CEO overconfidence. Troy A. Paredes, “Too Much Pay, Too Much Deference: Behavioral
+Corporate Finance, CEOs, and Corporate Governance,” Florida State University Law
+Review 32 (Winter 2005): 740–7.
+
+Cambridge University Press
+Not for sale or distribution.
+
+

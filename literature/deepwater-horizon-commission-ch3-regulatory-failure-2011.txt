@@ -1,0 +1,1646 @@
+# Deep Water: The Gulf Oil Disaster and the Future of Offshore Drilling — Chapter 3: Regulatory Failure
+
+- **Author:** National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+- **Date:** January 2011
+- **Full Report URL:** https://www.govinfo.gov/content/pkg/GPO-OILCOMMISSION/pdf/GPO-OILCOMMISSION.pdf
+- **Access:** U.S. Government public document, freely available via govinfo.gov
+- **Note:** This file contains Chapter 3 only, which covers the history and failures of the Minerals Management Service (MMS).
+  The full report is 398 pages. Other chapters cover the incident itself, cleanup, and recommendations.
+
+---
+
+Chapter Three
+
+Chapter Three
+
+“It was like
+pulling teeth.”
+Oversight—and Oversights—in
+Regulating Deepwater Energy
+Exploration and Production in the
+Gulf of Mexico
+The Deepwater Horizon rig sank on April 22,
+2010, two days after the Macondo well blowout
+and explosion that killed 11 workers. Not long
+after the tragedy, its repercussions shifted to the
+Minerals Management Service (MMS), the federal
+agency responsible for overseeing the well’s drilling
+and operation. Nineteen days after the rig sank,
+Secretary of the Interior Ken Salazar announced his
+intention to strip MMS’s safety and environmental
+enforcement responsibilities away from its leasing,
+revenue collection, and permitting functions,
+and to place the former within a “separate and
+independent” entity.1 A week later, he announced
+MMS would be reorganized into three separate
+entities with distinct missions: a Bureau of Ocean
+Energy Management; a Bureau of Safety and
+Environmental Enforcement; and an Office of
+Natural Resources Revenue.2 And, by June 19,
+the Secretary had discarded the “MMS” name
+altogether.3 Like the Deepwater Horizon, MMS had
+ceased to exist.
+The rig’s demise signals the conflicted evolution—
+and severe shortcomings—of federal regulation
+of offshore oil drilling in the United States, and
+particularly of MMS oversight of deepwater
+The often competing goals of energy independence and environmental
+protection collide at the Department of the Interior, which historically has held
+broad regulatory authority in both realms. For nearly three decades a single
+departmental agency, the Minerals Management Service, was at the center of
+the offshore-oil saga.
+
+Mark Wilson/Getty Images
+
+55
+
+55
+
+56
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+drilling in the Gulf of Mexico. The regulatory context for the leasing procedures and
+safety and environmental oversight that led up to the Macondo blowout took shape in
+the 1970s, when two conflicting priorities dominated the political landscape. The first to
+appear, in the early 1970s, was the public mandate for environmental protection, which
+prompted enactment of an extraordinary series of sweeping regulatory laws intended,
+in the language of the National Environmental Policy Act, to “create and maintain
+conditions under which man and nature can exist in productive harmony.”4 The second
+was the nation’s drive for energy independence; it led to new policies designed to increase
+domestic production and decrease American reliance on foreign energy supplies. Oil served
+as a catalyst for both: the Santa Barbara oil spill in 1969 helped to promote passage
+of demanding environmental protection mandates, and the OPEC oil embargo of 1973
+amplified the urgency of efforts to make the nation more energy self-sufficient.
+The federal regulation of offshore drilling awkwardly combined the two priorities, as a
+series of Congresses, Presidents, and Secretaries of the Interior—responding to competing
+constituencies in explicitly political ways—sought to reconcile the sometimes conflicting
+goals of environmental protection, energy independence, and revenue generation. In some
+offshore regions, oil drilling was essentially banned in response to environmental concerns.
+Elsewhere, most notably in the Gulf, some environmental protections and safety oversight
+were formally relaxed or informally diminished so as to render them ineffective, promoting
+a dramatic expansion of offshore oil and gas production and billions of dollars in federal
+revenues.
+The origins of MMS vividly illustrate that political compromise. Secretary of the Interior
+James Watt created the agency with great fanfare in January 1982, aiming from the
+outset to promote domestic energy supplies by dramatically expanding drilling on the
+outer continental shelf. He combined, in one entity, authority for regulatory oversight
+with responsibility for collecting for the U.S. Treasury the billions of dollars of revenues
+obtained from lease sales and royalty payments from producing wells.5 From birth, MMS
+had a built-in incentive to promote offshore drilling in sharp tension with its mandate to
+ensure safe drilling and environmental protection.
+Revenue generation—enjoyed both by industry and government—became the dominant
+objective. But there was a hidden price to be paid for those increased revenues. Any
+revenue increases dependent on moving drilling further offshore and into much deeper
+waters came with a corresponding increase in the safety and environmental risks of such
+drilling. Those increased risks, however, were not matched by greater, more sophisticated
+regulatory oversight. Industry regularly and intensely resisted such oversight, and neither
+Congress nor any of a series of presidential administrations mustered the political support
+necessary to overcome that opposition. Nor, despite their assurances to the contrary, did
+the oil and gas industry take the initiative to match its massive investments in oil and gas
+development and production with comparable investments in drilling safety and oil-spill
+containment technology and contingency response planning in case of an accident.
+On April 20, the inherent risks of decades of inadequate regulation, insufficient investment,
+and incomplete planning were realized in tragic fashion. MMS no doubt can fairly boast
+
+Chapter Three
+
+of many hardworking individual public servants who have in good faith sought to
+achieve their agency’s important safety mission over sustained industry opposition. But,
+notwithstanding their individual efforts and accomplishments, the overall picture of MMS
+that has emerged since April 20 is distressing. MMS became an agency systematically
+lacking the resources, technical training, or experience in petroleum engineering that
+is absolutely critical to ensuring that offshore drilling is being conducted in a safe and
+responsible manner. For a regulatory agency to fall so short of its essential safety mission
+is inexcusable.
+This chapter is divided into three parts. The first part describes the emergence of MMS as
+the dominant federal regulatory agency responsible for overseeing the offshore oil and gas
+industry. The second part examines the performance of MMS over time, with particular
+focus on its efforts to promote drilling safety and the institutional, political, and cultural
+impediments to its success. Finally, the third part explores in more detail the application
+of environmental protection requirements to offshore drilling, highlighting the particular
+ways in which the requirements were effectively diminished or ignored.
+
+Creation of a Cross-Purposes Regulator
+The federal government’s authority to regulate oil and gas leasing activities on the outer
+continental shelf is not merely an expression of the government’s traditional authority to
+regulate private activities affecting public health, safety, and welfare. Its authority is even
+more sweeping in nature and further arises out of the nation’s ownership of the natural
+resources on the outer continental shelf and the federal government’s corresponding power
+and responsibility to manage and protect those invaluable resources on behalf of current
+and future generations of Americans. As described by the Constitution’s Property Clause, it
+is the “power to dispose and make all needful rules and regulations respecting the territory
+or other property belonging to the United States.”6 The federal government, accordingly,
+has plenary authority, essentially “without limitations,”7 “to prescribe the conditions upon
+which others may obtain rights in” natural resources located on properties that belong
+to the nation as a whole.8 Because, moreover, of the national security implications of
+those resources, especially energy resources, that national power further implicates the
+President’s broad authority as Commander-in-Chief to ensure the maintenance of sufficient
+energy supplies to keep the nation secure.9
+
+Rights and Riches: The Early Skirmishes over the Outer Continental Shelf
+The foundations of federal regulation of offshore oil and gas development were laid in the
+Outer Continental Shelf Lands Act of 1953.10 That initial legislation gave the Department
+of the Interior diverse and potentially contradictory responsibilities for offshore mineral
+development. The vigorous debates preceding enactment of the new law and its early
+implementation gave the impression that it was all about the money.11
+The potential windfall from leasing public land offshore to private companies for
+mineral development provoked an intense dispute between coastal states and the federal
+
+57
+
+57
+
+58
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+government. In 1945, President Harry Truman had proclaimed federal authority
+over the subsoil of the U.S. continental shelf. California, Texas, and Louisiana defied
+this proclamation and continued to lease offshore land, prompting suits by the U.S.
+Department of Justice. The Supreme Court ruled against California in 1947 and against
+Louisiana and Texas in 1950, declaring that the federal government possessed “paramount
+rights” that transcended the states’ rights of ownership.12 Offshore leasing and exploration
+stalled for three years, as Congress and the 1952 presidential candidates postured around
+proposals to return submerged coastal lands to the states.13 That conflict was largely
+resolved in the Submerged Lands Act, passed in 1953, two months before the Outer
+Continental Shelf Lands Act: states would control three nautical miles out from the
+shoreline (9 nautical miles for Texas and western Florida due to historic claims).14 The
+“outer continental shelf ”—seaward of state lands—was claimed by the federal government.
+Estimates of the value of federal land offshore ranged from $40 billion to $250 billion.15
+President Truman had called on the nation to postpone mineral development in the federal
+offshore area, foregoing the revenues immediately available. He argued that setting the
+federal offshore area aside, in the Naval Petroleum Reserve, would ensure that the oil
+and gas would be there later when needed for strategic purposes.16 But the congressional
+debates in 1953, under President Dwight Eisenhower, focused on what to do with this
+attractive new source of revenue. Various senators proposed dedicating the funds to deficit
+reduction or to education. But in the end, the new money from lease sales, rents, and
+royalties would flow into the general treasury.17
+The first leases. During the first week of September 1954, Secretary of the Interior
+Douglas McKay announced the first federal lease sale: rights to explore 748,000 acres
+off the coast of Louisiana.18 When the sealed bids were opened on October 13, half the
+available acreage was leased with winning bids totaling $130 million. The next month,
+a similar sale off the Texas coast yielded $23 million.19 The promise of a new stream of
+federal revenue had come to pass.
+
+The Rise of Environmental Law
+At the outset, environmental restrictions on offshore drilling were very limited. The 1953
+legislation governing offshore mineral development authorized the Interior Department to
+prescribe rules “for the prevention of waste and conservation of natural resources” of the
+outer continental shelf,20 but “conservation” at that time mostly referred to the desire not
+to waste the resource physically by destroying the oil and gas reservoir. The Department
+did announce, however, that the Fish and Wildlife Service would have to approve all
+offshore drilling in wildlife refuges and that oil and gas leasing there that endangered “rare”
+wildlife species (like whooping cranes or trumpeter swans) would not be allowed.21
+Federal offshore leasing policy remained largely unchanged until a Union Oil Company
+well located in the Santa Barbara Channel blew out on January 28, 1969 (described in
+Chapter 2). The Interior Department toughened its rules in response to the spill (after first
+issuing a moratorium on offshore drilling and production in California waters pending
+those new rules), the first changes since 1953.22 And, at that time Congress was already
+taking up legislation in response to heightened awareness of a host of environmental
+
+Chapter Three
+
+problems, now punctuated by the Santa Barbara spill. Starting with the National
+Environmental Policy Act (NEPA), signed into law on January 1, 1970,23 Congress enacted
+sweeping new environmental protection and resource conservation laws that dramatically
+changed the federal role in overseeing activities that polluted the air or water or that
+exploited the nation’s natural resources on public lands—including offshore oil and gas
+development.24
+Given its bold promises of preserving the environment for future generations, NEPA is
+often referred to as the Magna Carta of the nation’s environmental laws. It requires federal
+agencies to prepare “environmental impact statements” for all proposed “major Federal
+actions significantly affecting the quality of the human environment” in order to ensure
+that decisions are based on full consideration of their environmental consequences.25
+Although it is far from clear that either Congress or the President appreciated NEPA’s full
+import, federal courts quickly embraced the law, applying its procedural requirements
+strictly and enjoining agency actions found to be in violation.26
+In order to provide the science needed for the environmental reviews and consultations
+directed by these statutes, the Department of the Interior created the “Environmental
+Studies Program” in 1973.27 The program was established to provide information on the
+geological, physical, biological, and chemical characteristics of offshore oil and gas leasing
+areas. It was initially focused on scientifically characterizing areas and providing baseline
+environmental data, but later shifted its focus to research directly linked to resource
+management decisions by the offshore leasing program.28
+NEPA was just the first among approximately 20 new laws enacted during the 1970s that
+aimed to advance environmental protection by curbing pollution of the nation’s waters,
+air, or land; manage commercial activities that sought to exploit the nation’s natural
+resources, including mining and forestry; manage the coastal zone prudently; control
+noise; regulate toxic substances; and protect endangered species—among other goals.29
+Amid this rapid, extensive transformation of the nation’s environmental protection and
+natural resource management laws, one had particular significance for federal oversight of
+offshore drilling: the Outer Continental Shelf Lands Act Amendments of 1978. It was the
+last major natural resource law that Congress passed during the 1970s—and so embodies
+the shifting nature of national politics from the decade’s beginning to its end.
+
+Energy Independence vs. Environmental Protection:
+Conflicting Aims in High Relief
+Although Americans’ embrace of environmental protection persisted throughout the
+decade, the 1973 oil embargo prompted ambitious efforts to promote the nation’s energy
+independence. President Richard Nixon proposed a dramatic expansion of offshore oil and
+gas development, including in frontier areas around most of the nation’s coast. President
+Jimmy Carter created the Department of Energy in 1977 and secured passage of the
+National Energy Act of 1978, consisting of five separate laws, some designed to promote
+development of domestic energy supplies and others to encourage energy conservation.30
+
+59
+
+59
+
+60
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+The Outer Continental Shelf Lands Act Amendments, also enacted that year, not
+surprisingly reflected the tension between the nation’s environmental and energy
+independence goals. Those skeptical of accelerated offshore leasing—including many
+coastal states, local governments, fishermen, and environmentalists—sought, to that end,
+opportunities to ensure that offshore oil and gas leasing complied with strict safeguards
+and a greater voice in the decisionmaking process. They were concerned about the broad
+discretion the Act conferred on the Secretary of the Interior over control and management
+of offshore energy resources.
+By contrast, advocates for expanded domestic production wanted to ensure that the new
+legislation did not allow environmental protection laws to stifle exploration, development,
+and production of significant offshore oil and gas reservoirs. They were aware that
+environmental organizations had used NEPA successfully to challenge a proposed lease
+sale, covering almost 380,000 acres offshore Louisiana and Mississippi, on the grounds
+that the Interior Department had failed to first prepare an adequate environmental impact
+statement. The federal courts had agreed and enjoined the sale in January 1972.31 Coastal
+states and environmentalists had since launched challenges against other lease sales.
+Congress began to hold hearings on revamping the federal offshore leasing program in
+1974—just after the oil embargo and not long after those early environmental challenges.32
+The law that emerged in 197833 included findings on the need to reduce the nation’s
+dependence on “imports of oil from foreign nations,” the potential to increase production
+of oil and gas on the outer continental shelf significantly “without undue harm or damage
+to the environment,” and the need to review “environmental and safety regulations
+relating to activities on the Outer Continental Shelf . . . in light of current technology
+and information.”34 The Act’s purposes included “expedited exploration and development
+of the Outer Continental Shelf ” and the “development of new and improved technology
+for energy resource production which will eliminate or minimize risk of damage to the
+human, marine, and coastal environments.”35
+The 1978 Act fundamentally transformed federal offshore leasing. The law added detailed
+procedures governing the leasing of rights to explore, develop, and produce the resources of
+the outer continental shelf. The offshore program was divided into four distinct stages:
+• Development by the Secretary of the Interior of a “schedule of proposed lease sales
+indicating, as precisely as possible, the size, timing, and location of leasing activity
+which he determines will best meet national energy needs for the five-year period
+following its approval or reapproval”;36
+• Lease sales by the Secretary pursuant to that five-year schedule;
+• Submission by lessees of exploration plans for the Secretary’s approval; and
+• Upon discovery of oil and gas in commercial quantities, submission of development
+and production plans by lessees for the Secretary’s approval.
+The Act further requires lessees to apply for the Secretary of the Interior’s permission
+prior to drilling any wells, pursuant to an approved exploration plan37 or, in most areas,
+pursuant to a development and production plan.38
+
+Chapter Three
+
+FIGURE 3.1: Outer Continental Shelf Oil and Gas Leasing, Exploration & Development Process
+
+PRE-LEASE
+
+• Stage I: Develop 5-Year Program
+SOLICIT COMMENTS
+DRAFT PROPOSED PROGRAM PUBLISHED
+PROPOSED PROGRAM DRAFT
+PROPOSED FINAL DRAFT
+
+5-YEAR PROGRAM ANNOUNCED
+
+• Stage II: Planning for Specific Sale
+CALL FOR INFORMATION PUBLISHED
+DEFINE SALE AREA
+NOTICE OF SALE
+SALE
+POST-LEASE
+
+LEASES ISSUED
+
+• Stage III: Exploration Plan Approval
+EXPLORATION PLAN SUBMITTED
+APPLICATION FOR PERMIT TO DRILL APPROVED | PERMITS GRANTED
+EXPLORATION DRILLING STARTS
+FIRST EXPLORATION WELL COMPLETED
+DELINEATION DRILLING
+
+• Stage IV: Development & Production Plan Approval
+DEVELOPMENT & PRODUCTION PLAN
+DEVELOPMENT & PRODUCTION PLAN APPROVED
+PRODUCTION WELL APPLICATION
+FIRST OIL / GAS PRODUCTION
+
+Four major steps guide the Outer Continental Shelf leasing and development process, from the decision to open an area to drilling, to the
+operations during oil and gas production. Before a lease is granted, Stage I establishes the “5-Year Program,” setting the schedule and
+possible locations for individual lease sales, and Stage II lays out the details by which each individual lease sale is conducted. After a
+company acquires a lease, Stage III plans and executes the oil and gas exploration activities, and Stage IV plans and executes the oil and
+gas development and production operations.
+
+At the same time, the statute also made clear that environmental safeguards are a relevant,
+important part of the Secretary’s decisionmaking. For instance, it charged the Secretary
+“to obtain a proper balance between the potential for environmental damage, the potential
+for discovery of oil and gas, and the potential for adverse impact on the coastal zone.”39
+The law also expressly required the Secretary to prepare a series of “environmental studies”
+
+61
+
+61
+
+62
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+to assess the environmental impacts of activities on the outer continental shelf,40 and
+“the Secretary of the Department in which the Coast Guard is operating” (currently the
+Department of Homeland Security) to promulgate “safety regulations.”41 Such regulations
+were to include “the use of the best available and safest technologies which the Secretary
+[of the Interior] determines to be economically feasible, wherever failure of equipment
+would have a significant effect on safety, health, or the environment.”42 But this
+potentially demanding requirement included an exception “where the Secretary determines
+that the incremental benefits are clearly insufficient to justify the incremental costs of
+utilizing such technologies.”43
+The Gulf of Mexico exemption. Offsetting the apparent interest in environmental review,
+the Act reflected a carefully calibrated political compromise designed to promote offshore
+drilling: it expressly exempted leases in the “Gulf of Mexico” from the law’s requirement
+that development and production pursuant to an oil and gas lease must be based on and
+consistent with a “development and production plan” submitted by the lessee and approved
+by the Secretary of the Interior.44 (No comparable exception applied to “exploration plans,”
+which all lessees were required to submit for approval prior to conducting such drilling,
+which naturally occurs prior to development and production.45) The telling compromise
+lay in the details: the law specified that a development and production plan must set forth
+“the environmental safeguards to be implemented”46 and the Secretary must at least once
+declare the approval of a development and production plan in any area “to be a major
+Federal action”—language which triggers NEPA’s requirement for an impact statement
+detailing the environmental consequences of development and production.47 Therefore,
+by exempting leases in the Gulf from the required “development and production plan,”
+the Act was also exempting such leases from the related requirement of at least one NEPA
+impact statement.48 And the Act included one further bit of congressional horse-trading.
+It authorized the Secretary of the Interior to reinstate the development and production
+plan requirements, including NEPA review, for an oil and gas lease located in the eastern
+planning area of the Gulf abutting the western coastline of Florida, leaving only the central
+and western Gulf planning areas off limits from such requirements.49
+The legislative history makes clear that this was a deal brokered between the Carter
+administration, the oil and gas industry, Congress, and Gulf states. Industry had argued
+that NEPA and similar requirements could lengthen the interval between leasing and
+production by three to six years. In response to this concern, Congress amended the bill
+to draw a distinction between the Gulf of Mexico, where such consultation would not
+be required, and other offshore areas where it would. The rationale for singling out the
+Gulf of Mexico for less environmental oversight than other parts of the nation’s offshore
+was that the oil and gas industry in the Gulf was already mature and therefore the
+environmental risks were already better known than they were in “frontier” areas. This
+rough geographically-defined generalization took no account of the Gulf ’s remarkable
+fisheries, or the economic importance of the region’s beaches to the tourism industry.
+Secretary of the Interior Cecil Andrus sought administrative discretion to require the full
+environmental review even in some non-frontier areas if drilling in those areas proved
+to present heightened environmental risks,50 but the final legislation made that further
+concession only for a part of the Gulf.51
+
+Chapter Three
+
+A compromise comes undone. Whatever compromise Congress and President Carter
+may have thought they had struck in the 1978 legislation quickly unraveled. In the first
+five-year leasing schedule issued in June 1980, Secretary Andrus offered 55 million acres,
+and proposed Lease Sale 53 along the Pacific Coast. Unlike previous sales, which had been
+concentrated on one geographic region, Lease Sale 53 called for nominations of tracts from
+the Santa Barbara Channel all the way up the California coast to the Oregon border. Fierce
+opposition immediately greeted the proposed leasing schedule and Lease Sale 53. California
+and Alaska filed lawsuits challenging the legality of the leasing schedule under the 1978
+law. After huge public rallies, Secretary Andrus formally withdrew the entire northern and
+central California portion of the proposed sale.52
+
+The Creation of the Minerals Management Service (MMS)
+Against a backdrop of rising inflation, record interest rates, further turbulence in the
+oil market following the 1979 Iranian revolution, and a severe recession, the politics
+of offshore drilling became even more volatile early in the administration of President
+Ronald Reagan, who was inaugurated in January 1981. Perhaps not surprisingly, after
+the upwelling of new regulatory powers under Presidents Nixon, Ford, and Carter, the
+new President made clear from the outset his view that government regulation was a
+leading cause of the nation’s problems—a drag on the nation’s economy in general and the
+development of its rich natural resources in particular.
+Secretary of the Interior James Watt shared that outlook and focused his early regulatory
+reform efforts on offshore drilling. He quickly vowed to lease a billion acres of the outer
+continental shelf—virtually the entire area—for oil and gas exploration.53 And he made
+clear his commitment to maintaining that objective, notwithstanding enormous criticism:
+“If the press is here,” he declared during a National Ocean Industries Association meeting in
+April 1982, “I hope they will write this down. We will offer one billion acres for leasing in
+the next five years. We will not back away from our plans to have 42 lease sales.”54
+MMS originated in this context, driven by the administration’s desire to ensure that it
+obtained the financial fruits of its plan for this massive expansion in offshore drilling. With
+the dramatic increase in oil prices over the previous decade, royalties and revenues from
+federal oil and gas resources had already become the second largest revenue source for the
+U.S. Treasury. (A September 1980 lease sale in New Orleans had demonstrated the sums
+potentially at stake, bringing in a record $2.8 billion of cash bonuses, far more than any
+prior lease sale; see Chapter 2.) Clearly, this was a consequential way to secure revenue
+without needing to raise taxes.
+Revenue collection and regulation, separated. Until this time, the Interior Department’s
+Bureau of Land Management and Bureau of Indian Affairs had been responsible for
+collecting royalties for mining and drilling on federal and Indian lands, respectively—and
+regulatory oversight of offshore exploration and energy production had been vested in the
+U.S. Geological Survey’s Conservation Division.
+But the department’s management of royalties was subjected to frequent criticism. In
+July 1981, the administration created a Commission on Fiscal Accountability of the
+
+63
+
+63
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+FIGURE 3.2: Federal Revenues from the Outer Continental Shelf, 1955-2010
+
+$20
+$18
+Nominal Dollars (Billions)
+
+$16
+$14
+$12
+$10
+$8
+$6
+$4
+
+• Other Revenues
+• Lease Bonuses
+• Royalties
+
+2010
+
+2005
+
+2000
+
+1995
+
+1990
+
+1985
+
+1980
+
+1975
+
+1970
+
+1965
+
+$0
+
+1960
+
+$2
+1955
+
+64
+
+Year*
+
+Source:
+Commission
+Staff, Adapted
+from DOIoffshore mineral revenue collections, Calendar Years 1953-2000, 2001, 7,
+Sources: Minerals
+Revenue
+Management,
+Total Federal
+*Calendar year from 1955–2000; fiscal
+year
+2001–2010
+http://www.onrr.gov/Stats/pdfdocs/coll_off.pdf;
+Office
+of from
+Natural
+Resources Revenue, Total Federal Offshore Reported Royalty Revenues,
+http://www.onrr.gov/ONRRWebStats/Home.aspx.
+Revenues from lease bonuses can occasionally dwarf royalties. A single 2008 lease sale in the Chukchi Sea, Alaska, brought in a record cash
+bonus of $2.6 billion.
+* Calendar year from 1955-200; fiscal year from 2001-2010
+
+Nation’s Energy Resources, charged with reviewing and recommending changes in the
+system for collecting royalties. Reporting the next January, the commission concluded
+that “[m]anagement of royalties for the nation’s energy resources has been a failure for
+more than 20 years. . . . [T]he oil and gas industry is not paying all the royalties it rightly
+owes. The government’s royalty recordkeeping . . . is in disarray.”55 It accordingly called
+for a complete overhaul, including a wholesale reorganization of Interior Department
+responsibility for overseeing royalty collection from federal and Indian lands.
+Mixing oil and water: revenue-collection and regulation combined. Using the discretion
+conferred on him in the 1978 Outer Continental Shelf Lands Act Amendments, Secretary
+Watt moved quickly, issuing Secretarial Order No. 3071 on January 19, creating the
+Minerals Management Service. Moving beyond the commission recommendations for
+reform of royalty collection, he provided that the new agency would also absorb offshore
+leasing and oversight responsibilities from the U.S. Geological Survey. There is no available
+formal record of his reasoning for this further step, but the most likely reasons are revealed
+by a memorandum written by the Chief of the Conservation Division, Don Kash, dated
+December 11, 1981, just a few weeks earlier. In that memo, Kash vigorously argued in
+favor of relocating responsibilities for lease management from the Conservation Division
+into a new independent agency within the Interior Department—precisely what the
+Secretary then did.
+
+Chapter Three
+
+But Secretary Watt’s decision did not fully reflect Kash’s concerns. The latter had worried
+that the controversial politics of lease management were “sullying the [U.S. Geological]
+Survey’s scientific reputation” and threatened its “science ethos” and “scientific virtue.”
+The collision of cultures between those engaged in scientific research and those engaged
+in lease management was a “continuing source of irritation” and “bitterness” within the
+U.S. Geological Survey. He was concerned that lease management would increasingly
+take priority, draining resources from the research that should be the hallmark of the
+U.S. Geological Survey. Finally, Kash described problems that leasing management would
+face going forward—foremost among them a tendency toward myopic thinking and
+inadequately trained personnel. On that last issue, he pointed out that the government
+could not retain “geologists and geophysicists associated with [outer continental shelf]
+activities” because they “can move to an industrial or business concern for a substantial
+increase in pay, almost at will.” Kash recommended a series of steps to attract and train
+personnel capable of overseeing the management of offshore oil and gas activities.56
+Secretary Watt organized two distinct programs within his newly-minted MMS:
+the Offshore Energy and Minerals Management program and the Minerals Revenue
+Management program. (He rejected the General Accounting Office’s recommendation,
+which industry had opposed, that MMS also assume responsibility for onshore oil and
+gas leasing; the Bureau of Land Management retained that regulatory authority.57) The
+result was that the same agency became responsible for regulatory oversight of offshore
+drilling—and for collecting revenue from that drilling.
+
+The Billion-Acre Leasing Land Rush
+It did not take long for Secretary Watt to make sure that his new agency was fully
+engaged. In July 1982, just after MMS’s birth, he issued a new five-year plan that
+envisioned leasing nearly one billion acres of the outer continental shelf from August
+1982 to June 1987—18 times the 55 million acres offered by the first five-year plan of
+June 1980. To meet this ambitious program, he scheduled 41 sales over the ensuing five
+years; divided the billion acres into 18 planning areas, ranging in size from 8 million to
+133 million acres; and established a streamlined process for leasing in those areas. Under
+this new process, MMS would no longer lease just those tracts previously designated by
+industry to be of interest, but would instead offer vast acreage on an “area-wide” basis.58
+As described in Chapter 2, area-wide leasing promoted significant new discoveries of large
+oil-bearing formations in contrast to the smaller fields found in shallower depths. Those
+additional discoveries in fact led to major technological advances and increased exploration
+of oil and gas reservoirs in Gulf waters. But the federal revenues generated fell short of
+expectations. With such a large increase in supply, the price offered for leases declined.
+The Sierra Club claimed that Secretary Watt’s plans for accelerated leasing would cost the
+U.S. Treasury $77 billion over the five-year period.59 Moreover, the Gulf states persuaded
+Congress to increase their share of leasing revenues as compensation for physical drainage
+of oil and gas from reservoirs within state jurisdiction by offshore activities of federal
+lessees. In 1986, Congress amended the federal law to guarantee that the Gulf states would
+receive 27 percent of the revenues from leases in the federal zone three nautical miles
+
+65
+
+65
+
+66
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+Watt and Reagan
+
+In January 1982, President Reagan’s Interior Secretary, James Watt, created the Minerals Management Service (MMS) in support of his goal
+to open unprecedented reaches of U.S. territorial waters to oil and gas exploration. MMS had a conflicting and ultimately disastrous mandate:
+to both regulate offshore energy leases and collect the revenue they generated.
+Frank Johnston/The Washington Post via Getty Images
+
+beyond state waters.60 Previously the law had provided only that states should receive
+a “fair and equitable” portion of those revenues, an ambiguous standard that invited
+disagreement between the federal and state governments concerning what that portion
+should be.
+The Gulf of Mexico’s still-more-special status. The distinction first drawn in the 1978
+Act between offshore drilling in the Gulf of Mexico and in other parts of the nation was
+widened further during the 1980s and 1990s. What began as a policy allowing offshore
+drilling in the Gulf under a more relaxed regulatory regime than applied elsewhere
+gradually became a policy of allowing offshore drilling, as a practical matter, almost only
+in the Gulf.
+Court challenges quickly greeted Secretary Watt’s efforts to expand offshore leasing
+throughout the United States. But decisively, Congress, not court rulings, ended the
+Secretary’s plan and effectively singled out the Gulf for offshore drilling. In a series of
+
+Chapter Three
+
+recurring one-year moratoriums imposed on the Interior Department’s annual budgets,
+the House Appropriations Committee effectively prohibited everything from new leasing
+activities to exploration and development on existing leases in areas all over the outer
+continental shelf outside the Gulf of Mexico and a few sub-regions off of Alaska.61 From
+1982 to 1993, the area covered by these moratoriums expanded from 0.7 million acres
+to 266 million.62 The persistent unpopularity of offshore drilling outside the Gulf was
+underscored by President George H.W. Bush. Despite his background as a former Gulf
+state (Texan) oil-industry executive, he issued a memorandum in June 1990 that canceled
+all scheduled sales off of the California, southern Florida,* North Atlantic, Washington,
+and Oregon coasts and withdrew those areas from leasing until after 2000 (Alaska was
+not mentioned). At the same time, the President began a process to buy back existing
+leases in the eastern Gulf of Mexico; he established the proposed Monterey Bay Marine
+Sanctuary, banning oil and gas leasing there; and he prepared legislation to provide coastal
+communities directly affected by outer continental shelf development with a greater share
+of revenues from development and more voice in decisionmaking.63
+Secretary Watt’s promise of offshore drilling throughout the outer continental shelf was
+never realized. But he succeeded in creating an agency (MMS) and a method of leasing
+(via area-wide sales) that dramatically expanded the reach of offshore drilling in one
+place: the Gulf of Mexico. In that one oil- and gas-rich region, that same agency would
+increasingly struggle to keep up with the pace of industry expansion, while juggling four
+distinct responsibilities—offshore leasing, revenue collection and auditing, permitting
+and operational safety, and environmental protection—requiring different skill sets and
+cultures.
+
+Impediments to Safety Regulation
+The federal government has never lacked the sweeping authority required to control
+whether, when, and how valuable oil and gas resources located on the outer continental
+shelf are leased, explored, or developed. As described at the outset, the government’s
+authority is virtually without limitation, traceable to both its authority as proprietor
+and as sovereign, then further bolstered by the President’s inherent authority as Chief
+Executive and Commander-in-Chief to ensure the security of the nation. The root problem
+has instead been that political leaders within both the Executive Branch and Congress have
+failed to ensure that agency regulators have had the resources necessary to exercise that
+authority, including personnel and technical expertise, and, no less important, the political
+autonomy needed to overcome the powerful commercial interests that have opposed more
+stringent safety regulation.
+
+* Although Florida’s jurisdiction offshore extends to 9 nautical miles, Florida has not joined those other states in favoring significant offshore oil and gas drilling. Florida
+has instead supported continuing moratoriums on drilling in the outer continental shelf off the Florida coast. Nor has the State sought to promote such drilling within its
+territorial jurisdiction offshore. Florida’s principal reason has been to protect its coast from the potential adverse environmental consequences of drilling activity, including
+oil spills. See Robert Gramling, Oil on the Edge: Offshore Development, Conflict, Gridlock (Albany, NY: SUNY Press, 1996), 13.
+
+67
+
+67
+
+68
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+Safety on the Outer Continental Shelf: Increasing Risk, Absence of Necessary
+Regulatory Reform, and Decreasing Government Oversight Capacity
+Modern oil and gas drilling rigs and producing platforms are, in effect, enormous
+floating machines, densely equipped with powerful engines and responsible for keeping
+within geologic formations large volumes of highly combustible hydrocarbons at high
+temperatures and pressures. For all their productivity, the rigs expose their crews to the
+risks of injury or death if not properly operated and maintained—risks compounded for
+operations conducted in progressively deeper waters, ever farther from shore.
+From its creation until the Macondo well blowout, MMS was the federal agency primarily
+responsible for leasing, safety, environmental compliance, and royalty collection from
+offshore drilling.* In carrying out its duties, MMS subjected oil and gas activities to an
+array of prescriptive safety regulations: hundreds of pages of technical requirements for
+pollution prevention and control, drilling, well-completion operations, oil and gas wellworkovers (major well maintenance), production safety systems, platforms and structures,
+pipelines, well production, and well-control and -production safety training.64 As required
+by the 1978 Act, MMS also attempted to conduct both annual and periodic unscheduled
+(unannounced) inspections of all offshore oil and gas operations to try to assess compliance
+with those requirements. Agency officials have tried to meet the requirement for annual
+inspections of the operation of safety equipment designed to prevent blowouts, fires, spills,
+and other major accidents. In both annual and unannounced inspections, MMS officials
+used a national checklist, covering categories such as pollution, drilling, well completion,
+production, crane, electrical, and personal safety. Most inspections tend to cover a subset
+of the elements on the list. Roughly 20 percent of the matters for inspection (those for the
+production meters) are not related to safety.65
+But over time, MMS increasingly fell short in its ability to oversee the offshore oil industry.
+The agency’s resources did not keep pace with industry expansion into deeper waters and
+industry’s related reliance on more demanding technologies. And, senior agency officials’
+focus on safety gave way to efforts to maximize revenue from leasing and production.
+
+The “Safety Case” and MMS’s Inability to Adopt New Practices
+By the early 1990s, some MMS officials had begun to rethink the agency’s approach to
+safety oversight of the offshore industry. In the wake of an accumulation of accidents in
+U.S. waters, and several devastating accidents elsewhere around the globe, they had come
+to appreciate that a command and control, prescriptive approach to regulation did not
+adequately address the risks generated by the offshore industry’s new technologies and
+exploration, development, and production activities, including industrial expansion into
+deeper waters.
+In March 1980, the Alexander Kielland—built as a drilling rig but under lease to Phillips
+Petroleum Company to house offshore workers at the Ekofisk Field in the Norwegian
+North Sea—capsized, killing 123 of the 212 people on board the “flotel.” Two years
+* Other federal agencies, including the United States Coast Guard, Department of Transportation, Occupational Safety and Health Administration, Environmental
+Protection Agency, and National Oceanic and Atmospheric Administration possess regulatory authority over discrete aspects of oil and gas operations offshore.
+
+Chapter Three
+
+later, during preparation for an approaching North Atlantic storm, the Ocean Ranger
+semisubmersible drilling the Hibernia field for Mobil Oil of Canada, sank off the coast
+of Newfoundland; all 84 crew members were lost in the freezing-cold waters. And in
+July 1988, the Piper Alpha production platform operated by Occidental Petroleum 120
+miles northeast of Aberdeen, Scotland, exploded and sank, killing 167 people, including 2
+rescuers.66 Although the causes of the three accidents varied, they all involved international
+operations of U.S.-based oil and gas companies. Common contributing factors included
+inadequate safety assurance, worker training, and evacuation procedures. Poor
+communication and confusion about lines of authority amplified the death toll in at least
+two of the accidents.
+The Norwegian government responded to the loss of the Alexander Kielland by
+transforming its approach to industry operations. Under the new regime, rather than
+relying solely on prescribed operational and safety standards, the government required the
+industry to demonstrate thorough consideration of all risks associated with the structures
+and operations for a drilling or production plan. The regulator no longer “approved”
+operations. Shifting the burden of demonstrating safety to the operator, the regulator
+would instead now “consent” to development activity proceeding only upon the operator’s
+demonstration that sufficient safety and risk management systems were in place.
+The Piper Alpha accident and the subsequent investigation led by Lord Cullen had a similar
+impact on United Kingdom regulation. As in Norway, the previous prescriptive regulatory
+approach evolved into one where regulations were supplemented with a requirement
+for companies to demonstrate to the regulator that they had undertaken a thorough
+assessment of risks associated with an activity and they had adequate safety and risk
+management systems to address those risks.
+All these foreign regulators—the United Kingdom, Norway, and Canada—had previously
+relied on the kind of prescriptive approach used in the United States, but in the aftermath
+of these fatal accidents in harsh, remote offshore environments, authorities elsewhere
+concluded that adding a risk-based approach was essential. They faulted reliance on
+the “prescriptive regulation with inspection model” for being fundamentally reactive
+and therefore incapable of driving continuous improvement in policies and practices.67
+According to Magne Ognedal, the Director General of the Norwegian Petroleum Safety
+Authority, the prescription-only model engendered hostility between the parties and put
+the risk—legal and moral—onto the regulator to accommodate changing technology,
+geology, and location, rather than onto the operator, where the responsibility rightly
+belonged.68 Under the new safety-management model, minimum standards for structural
+and operational integrity (well control, prevention of fires and explosions, and worker
+safety) remained in place. But the burden now rested on industry to assess the risks
+associated with offshore activities and demonstrate that each facility had the policies,
+plans, and systems in place to manage those risks. In the United Kingdom, such riskmanagement plans were called a “Safety Case.”
+
+69
+
+69
+
+70
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+On March 19, 1989, while the Piper Alpha accident was still under review, a platform
+operated by ARCO exploded in the South Pass Block 60 off the Louisiana coast. An
+uncontrolled release of liquid hydrocarbons ignited, destroying the platform and killing
+seven people. An MMS investigation concluded that poor management of a repair
+operation was to blame: not only was there an “absence of detailed and coordinated
+planning for the project,” there was a dearth of much-needed “oversight over contractor
+activities.”69
+After South Pass Block 60, the latest in the series of tragic accidents involving U.Sbased companies, MMS convened an internal task force to review its offshore drilling
+inspection and enforcement program by October 1989. That same year, the agency
+also commissioned the Marine Board of the National Research Council to make
+recommendations for overhauling MMS’s regulatory program to best fulfill its safety
+mission at current levels of staffing and budget.70 The Marine Board’s report, delivered
+in January 1990,71 concluded that MMS’s emphasis on a list of “potential incidents of
+non-compliance” could lead to an attitude on the part of an operator that compliance
+with the list equals safety, thereby diminishing “recognition of [the operator’s] primary
+responsibility for safety.”72 The report recommended that MMS place its primary emphasis
+on the detection of potential accident-producing situations—particularly those involving
+human factors, operational procedures, and modification of equipment and facilities—
+rather than scattered instances of noncompliance with hardware specifications.
+The Marine Board found that MMS needed to upgrade its program to address changes in
+the operating environment on the outer continental shelf—including its aging platforms,
+more complex systems and operations, activities in deeper water at greater distances from
+shore, and changing characteristics of operating companies. Further, the Board urged
+continuation of frequent and comprehensive inspections of facilities engaged in drilling
+and workover operations, including the conduct of the operations themselves, because of
+“(1) the high frequency of events per unit for these facilities as compared to production
+facilities, and (2) the large population of workers on each facility. . . .” Overall, the Board
+recommended that MMS cultivate a more proactive inspector corps and develop a greater
+focus on identifying emerging safety risks.73
+Safety reform run aground. Unfortunately, by the time the Marine Board delivered
+its report, hardly anyone was listening. Five days after the South Pass Block tragedy
+in March 1989, the Exxon Valdez ran aground in Prince William Sound, spilling an
+estimated 11 million gallons of crude oil on the Alaskan shore. The Board’s calls for
+change were thus presented to a government still preoccupied with cleanup duties in Prince
+William Sound and to a nation attuned to demands for requiring double-hulled tankers.
+Ironically, Congress enacted the Oil Pollution Act of 1990, but failed to address any of the
+regulatory deficiencies identified by the Marine Board, while adding to MMS’s regulatory
+responsibilities (the agency was charged, under the Act and a supplementary Presidential
+Executive Order74 with overseeing offshore pipelines and oil-spill response planning and
+prevention).75 The agency’s already scarce regulatory resources were stretched even
+thinner.
+
+Chapter Three
+
+MMS nonetheless tried to take the initiative for regulatory reform. In July 1991, in
+response to the Marine Board report and MMS’s own internal task force report, MMS
+published a notice requesting comments on alternative strategies to promote safety
+and environmental protection, specifically a requirement that outer continental shelf
+lessees and/or operators develop, maintain, and implement “a safety and environmental
+management program (SEMP), similar to the United Kingdom’s Formal Safety Assessment
+or Norway’s Concept Safety Evaluation programs.”76 Declaring that lessees and operators
+already had “full responsibility to plan and prepare for the overall safety and reliability
+of Outer Continental Shelf operations,” MMS asserted that requiring SEMP would help to
+enhance offshore safety and environmental protection.77 Acknowledging the difference in
+scale and scope of the activities between the Gulf of Mexico and the North Sea—as the Gulf
+consists of many more, but smaller facilities78—MMS sought in its request for comments
+“to determine the degree to which such programs exist and to draw upon that experience
+in establishing the requirements for a management control program.”79
+Reform indefinitely frozen in time. At the time of the Macondo blowout—almost 20
+years after its original proposal—MMS had still not published a rule mandating that all
+operators have plans to manage safety and environmental risks. The agency’s efforts to
+adopt a more rigorous and effective risk-based safety regulatory regime were repeatedly
+revisited, refined, delayed, and blocked alternatively by industry or skeptical agency
+political appointees.80 MMS thus never achieved the reform of its regulatory oversight of
+drilling safety consonant with practices that most other countries had embraced decades
+earlier.
+Industry served as an initial impediment to MMS reform efforts—and has largely remained
+so. In late 1991, the American Petroleum Institute asked the agency to postpone action in
+order to allow the institute itself to develop an offshore safety standard.81 MMS agreed,
+and actively participated in the institute’s committee-based process over the next two
+years. The American Petroleum Institute’s “recommended practice” guidance document
+was published in May 1993—the same month that the UK Safety Case regulations came
+into force.82 Missing from the first edition of the Institute’s guideline, however, was a key
+element of standard process safety management83—nor did it even cover drilling rigs,84
+clearly an integral element in operating offshore.
+MMS announced in June 1994 that it would continue evaluating the new safety concept
+for two additional years in order to determine whether it should be mandated85—a deadline
+it soon extended by yet another year, delaying a final decision until late 1997.86 In the
+meantime, the agency urged companies to adopt safety and environmental management
+systems voluntarily, and hinted that wide industry participation might prevent a formal
+rulemaking.87
+By this time, there appears to have been a working assumption within both the agency
+and the industry it was charged with overseeing that technological advances had made
+equipment remarkably reliable. As one MMS official put it in 1996, conceding that the best
+the agency could do with available resources was to encourage voluntary compliance with
+SEMP, “We want to approach our relationship with the offshore industry more as a partner
+
+71
+
+71
+
+72
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+than a policeman. We need to create an atmosphere where the primary concern is to fix the
+problem, not the blame”—an apt characterization for a period of “regulatory reform” in
+Congress and fiscal restraint nationwide.88
+Holy Grail or Poisoned Chalice? The MMS voluntary approach to risk assessment was
+met with skepticism by regulators in the North Sea. At a May 1996 industry forum in
+Houston, Texas, an official with the UK Health and Safety Executive (HSE) compared the
+two safety regimes in a presentation titled US Voluntary SEMP Initiative: Holy Grail or
+Poisoned Chalice? “Last year, with the safety cases of most UK rigs already accepted well
+ahead of the deadline, IADC [the International Association of Drilling Contractors] told us
+they were pleased to be operating a premium fleet in North Sea and that HSE was not to
+think of relaxing the safety case requirements.” By contrast, he described the voluntary
+SEMP scheme as an unrealistic halfway position, while noting that “both the US and the
+UK need more time to find out which way provides the best lasting effect.”89
+Almost a decade later, MMS was no more successful when it tried to resurrect movement
+toward even a weakened version of a safety and environmental management rule. In May
+2006, when MMS finally proposed a rule on “Safety and Environmental Management
+Systems”—the successor to the long-moribund SEMP initiative—its proposed rule was
+limited in its reach. The proposal would have required that only 4 of the 12 widely
+accepted elements of industrial process safety management be put into place. Industry
+opposition even to this watered-down proposal was swift. And, ultimately, it was only
+after the Macondo well blowout four years later that the federal agency finalized a more
+comprehensive, mandatory SEMP rule.
+Other MMS regulatory initiatives critical to safety faced strong and effective opposition.
+In 2003, the White House stiffly opposed MMS’s efforts to update its requirements for the
+reporting of key risk indicators.90 (MMS had proposed that all unintentional gas releases
+be reported, because even small gas leaks can lead to explosions.91) “It was like pulling
+teeth,” one senior MMS official involved with the process told the Commission: “We never
+got positive cooperation” from either industry or the Office of Management and Budget.92
+The Offshore Operators Committee, an industry association, vehemently objected that the
+requirement would be too burdensome and not conducive to safety; MMS disagreed, yet
+the final rule in 2006 mandated that a gas release be reported to MMS only if it resulted
+in an “equipment or process shut-in,” or mechanical closure—a much less complete
+standard.93
+
+Safety Regulation on a Starvation Diet
+During the 1990s, the resources available to MMS decreased precipitously just as it
+faced a dramatic increase in the offshore activity it was charged with overseeing—and
+matters only deteriorated thereafter. Perversely, MMS’s budget reached its lowest point
+in November 1996,94 just as major development activities in deepwater were expanding.
+That December, the Houston Chronicle reported with tragic detail an 81 percent increase
+in offshore fires, explosions, and blowouts in the Gulf since 1992.95 The oil and gas
+industry drilled a record number of Gulf wells in 1997—many in deepwater.96 By 1999,
+oil production from deepwater eclipsed production from shallow water for the first
+
+Chapter Three
+
+$300
+
+250
+
+$250
+
+200
+
+$200
+
+150
+
+$150
+
+100
+
+$100
+
+50
+
+$50
+
+0
+
+$0
+
+Real 2005 Doallars (Millions)
+
+600
+
+1984
+1985
+1986
+1987
+1988
+1989
+1990
+1991
+1992
+1993
+1994
+1995
+1996
+1997
+1998
+1999
+2000
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+
+Barrels of Oil (Millions)
+
+FIGURE 3.3: MMS Budget and Gulf of Mexico Crude Oil Production, 1984-2009
+
+Year
+
+• Ultra-Deep (5,000+ ft)
+• Deep (1,000–4,999 ft)
+• Shallow (0–999 ft)
+OEMM Enacted Budget
+Sources: “Budget Division: Congressional Budget Justifications,” Bureau of Ocean Energy Management, Regulation, and Enforcement,
+http://www.boemre.gov/adm/budget.html; Minerals Management Service, Deepwater Gulf of Mexico 2009: Interim Report of 2008 Highlights,
+(May 2009), 71-72, http://www.gomr.boemre.gov/PDFs/2009/2009-016.pdf; U.S. Energy Information Administration, This Week in Petroleum:
+Production, Proved Reserves and Drilling in the Ultra-Deepwater Gulf of Mexico, (May 26, 2010), http://www.eia.gov/oog/info/twip/
+twiparch/100526/twipprint.html.
+In the last twenty years, MMS’s leasing, environmental, and regulatory budget decreased or remained static while deepwater oil production in
+the Gulf of Mexico boomed. Note: OEMM (Office of Energy and Minerals Management) has responsibility for renewable energy, leasing and
+environmental, resource evaluation, regulatory, and information management programs. It does not include revenue management or general
+administration.
+
+time.97 Oil production in the Gulf grew from 275 million barrels in 1990 (when only 4.4
+percent of that volume came from deepwater wells) to 567 million barrels in 2009 (when
+deepwater wells yielded more than 80 percent of the total).98
+Changing technology and changing industry structure outpacing regulations. As
+MMS’s resources lagged behind the industry’s expansion into deepwater drilling—with its
+larger-scale and more demanding technology, greater pressures, and increasing distance
+from shore-based infrastructure and environmental and safety resources—the agency’s
+ability to do its job was seriously compromised.99 Of particular concern, MMS was unable
+to maintain up-to-date technical drilling-safety requirements to keep up with industry’s
+rapidly evolving deepwater technology. As drilling technology evolved, many aspects of
+drilling lacked corresponding safety regulations. The regulations increasingly lagged behind
+industry and what was happening in the field.
+When industry contended that blowout-preventer stacks—the critical last line of defense
+in maintaining control over a well—were more reliable than the regulations recognized,
+warranting less frequent pressure testing, MMS conceded and halved the mandated
+
+73
+
+73
+
+74
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+Drill Pipe
+
+frequency of tests.100* Soon afterward, a
+series of third-party technical studies raised
+the possibility of high failure rates for the
+blowout preventers’ control systems, annular
+rams, and blind-shear rams under certain
+deepwater conditions and due to changes in the
+configuration and strength of drill pipe used
+by industry.101 Two studies commissioned by
+MMS found that many rig operators, by not
+testing blowout preventers, were basing their
+representations that the tool would work “on
+information not necessarily consistent with the
+equipment in use.”102 Yet, MMS never revised
+its blowout-preventer regulations nor added
+verification as an independent inspection item
+in light of this new information.103
+
+Nor did MMS adapt its regulatory framework
+in response to significant ways in which the
+oil and gas industry has changed over time.
+Waiting their turn, lengths of colored drill pipe stack up
+aboard a Transocean rig. Independent studies suggest that
+In particular, the industry has witnessed a
+failures of crucial blowout preventer components could
+rise in specialized service contractors, such
+be caused in part by industry-driven changes to drill-pipe
+strength and configuration.
+as Halliburton and Transocean that serviced
+Derick E. Hingle/Bloomberg via Getty Images
+BP at the Macondo well. When the lessee
+directly regulated by the government is itself
+not performing many of the activities critical to well safety, that separation of functions
+poses heightened challenges for the regulator. But there was no apparent effort by MMS to
+respond to those challenges by making the service companies more accountable.
+Permit “shopping.” With increasing industry activity, MMS regulators could not possibly
+keep pace. The oil and gas industry works 24/7, but MMS regulators generally work
+regular office hours, requiring “on-call” responsibility to be assigned to individual senior
+engineers. Those engineers, however, work at a marked disadvantage because they cannot
+gain access to the permit database from off-site locations due to security concerns.104
+Even during normal business hours, the Gulf of Mexico office lacks a sufficient number
+of engineers to process permit reviews with necessary scrutiny. From 2005 to 2009, the
+number of applications for drilling permits in just the MMS New Orleans District increased
+71 percent: from 1,246 to 2,136.105 Without enough engineers in the Gulf of Mexico
+district office to process all the applications, some operators literally “shop around.” They
+“contact district offices outside the appropriate jurisdictional area . . . to find an engineer
+who will eventually give approval.”106
+Inspections forgone. Not surprisingly, with diminished resources, MMS inspections
+became less effective, as the Interior Department’s Inspector General reported in 1999.107
+* “The MMS said the revised testing requirements could save industry $35-46 million per year without compromising safety.” See “MMS eases rule for BOP testing,” Oil &
+Gas Journal, June 8, 1998, 32.
+
+Chapter Three
+
+FIGURE 3.4: MMS Inspections in the Gulf of Mexico, 1990-2009
+
+Number of MMS Inspections in the Gulf of Mexico, 1990-2009
+
+8,000
+
+Number of Inspections
+
+7,000
+6,000
+5,000
+4,000
+3,000
+2,000
+
+• Announced
+• Unannounced
+
+2009
+
+2006
+2007
+2008
+
+2005
+
+2003
+2004
+
+2001
+2002
+
+2000
+
+1999
+
+1998
+
+1996
+1997
+
+1995
+
+1994
+
+1993
+
+1992
+
+0
+
+1990
+1991
+
+1,000
+
+Year
+
+Source: Bureau of Ocean Energy Management, Regulation, and Enforcement data upon National Commission Staff
+
+the Department
+of theRegulation,
+Interior and Enforcement data upon National Commission Staff request to the
+Source: Bureau ofrequest
+Ocean to
+Energy
+Management,
+Department of the Interior.
+“Unannounced” or surprise inspections of offshore oil and gas activity grew increasingly rare over time. Less than 3% of MMS inspections
+conducted in 2009 were unannounced.
+
+The frequency of unannounced inspections plummeted.108 Although the raw incident
+data are online, MMS last produced an analysis of offshore incidents—critical data for
+promoting the safety of offshore operations—for calendar year 2000.109 And MMS’s
+progressive reduction in oversight relative to the level of industry activity occurred just
+as the industry struggled to find highly trained staff needed to work the expanding
+population of deepwater drilling rigs.110 Precisely when the need for regulatory oversight
+intensified, the government’s capacity for oversight diminished.
+Overlaps and “underlaps.” The lack of resources extended beyond MMS. The United
+States Coast Guard is responsible for regulating the “safety of life and property on Outer
+Continental Shelf (OCS) facilities, vessels, and other units engaged in OCS activities.”111
+Because most drilling rigs and even some production platforms fall under the definition of
+“vessels,” part of the responsibility for regulating their safe operation (and full authority
+for certifying their seaworthiness) is within the jurisdiction of the Coast Guard.112 But
+just when the need for Coast Guard oversight increased during the 1990s—as industry
+drilled in deeper waters farther offshore and used more ambitious floating drilling and
+production systems—it, too, faced more severe budgetary restraints. Accordingly, the
+Coast Guard failed to update its marine-safety rules—the last major revision was in
+1982113—to reflect the industry’s new technology. The resource plight worsened further
+following the terrorist attacks of September 11, 2001, given the nation’s overriding need
+to focus on border and port security. The Coast Guard’s “solution”—to transfer much of
+
+75
+
+75
+
+76
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+its responsibility for fixed platform safety to MMS in 2002114—eerily echoed earlier cycles
+of expanding MMS’s mandate in the face of inadequate resources, stretching its capabilities
+thinner still. The practical effect of the Coast Guard and MMS’s shared responsibility for
+offshore safety has been the presence of “overlaps” in jurisdiction that have required the
+renegotiation of informal interagency agreements ever since 1989—the continuance of
+which has left MMS with “underlaps” in resources.115
+
+The Culture of Revenue Maximization
+When Interior Secretary Watt moved regulatory oversight of offshore energy exploration
+and production to a new entity that was also responsible for collecting revenue from the
+activity it regulated, he created a new agency that inexorably came to be dominated by its
+focus on maximizing that revenue.
+For at least the past 15 years, every former MMS Director has freely acknowledged that
+the royalty issues have taken most of the Director’s time—at the expense of offshore
+regulatory oversight.116 In 1995, as the United States faced global competition for oil
+exploration and development capital during a period of low prices, Congress enacted the
+Deep Water Royalty Relief Act.117 It provided a suspension of royalty payments on a
+portion of new production from deepwater operations.
+But when prices and volumes increased, the sheer amount of money at stake—literally
+billions of dollars (MMS total onshore and offshore revenues for 2008 were $23
+billion118)—compelled even greater attention, as the White House, members of Congress,
+and certainly the states each advanced competing notions of how those sums might best
+be spent.* Litigation, new regulations, and legislation designed to increase one party’s
+relative share of such massive sums have been a constant feature of managing the flow of
+royalties from onshore and offshore energy production. Such disputes have invariably been
+controversial, politically sensitive, and time-consuming for MMS decisionmakers.119
+Agency leadership and technical expertise. Agency personnel naturally look to agency
+leadership to signal what constitutes their primary mission, including the expertise and
+experience that such leaders bring with them. In the case of MMS, those signals were
+profoundly disturbing, yet nonetheless consistent over time. No one who has led MMS
+since it was created almost 30 years ago has possessed significant training or experience in
+petroleum engineering or petroleum geology, or any significant technical expertise related
+to drilling safety.
+In the absence of a clear statement from the top about the necessity for such expertise to
+ensure drilling safety, it should be no surprise that MMS personnel have suffered from
+the loss of essential expertise throughout their ranks. Indeed, the lack of requisite training
+is abysmal. According to a recent survey conducted at the request of the Secretary of
+the Interior, “[a]lmost half of the [MMS] inspectors surveyed do not believe they have
+received sufficient training.” MMS, unlike Interior’s Bureau of Land Management (which
+* Because of a bureaucratic mistake within Interior, however, federal lease sales held in 1998 and 1999 failed to include price thresholds in each lease, meaning that
+those lessees received relief from royalty payments even though higher oil prices made such relief wholly unnecessary. The Government Accountability Office has
+estimated that the error could cost the government at least $10 billion and perhaps as much as $80 billion. Government Accountability Office, “Oil and Gas Royalties –
+Royalty Relief Will Likely Cost the Government Billions, but the Final Costs Have Yet to Be Determined” (January 18, 2007), 3, 5.
+
+Chapter Three
+
+inspects onshore oil and gas drilling operations), has no “oil and gas inspection certification
+program” and no exam “is required of each inspector in order to be certified.” MMS “does
+not provide formal training specific to the inspections process, and does not keep up with
+changing technology. Some inspectors noted that they rely on industry representatives to
+explain the technology at a facility.”120
+The Macondo well blowout makes all too clear the cost of such a departure from the
+standards of excellence that the nation expects from its public servants. As described in
+Chapter 4, the MMS personnel responsible for reviewing the permit applications submitted
+to MMS for the Macondo well were neither required nor prepared to evaluate the aspects
+of that drilling operation that were in fact critical to ensuring well safety. The regulations
+did not mandate that MMS regulators inquire into the specifics of “rupture disks,” “long
+string” well designs, cementing process, the use of centralizers, lockdown sleeves, or the
+temporary abandonment procedures (see Chapter 4). And, no doubt for that same reason,
+the MMS personnel responsible for deciding whether the necessary drilling permits were
+granted lacked the expertise that would have been necessary in any event to determine the
+relative safety of the well based on any of these factors.*
+Agency integrity and pockets of corruption. The preoccupation with revenues did not
+merely divert MMS leaders’ attention from drilling safety. It also allowed the ethical culture
+to degenerate in a few isolated offices, leading to serious charges of abuse of government
+authority and even charges of criminal misconduct by a few individuals. This conduct was
+far removed from the daily work of almost all those agency personnel who performed
+regulatory oversight of offshore drilling. But the conduct of a few working elsewhere in
+the agency unfairly cast a cloud over the agency as a whole, especially in the immediate
+aftermath of the Macondo well blowout, providing a ready reminder of the critical
+importance of public trust in the management of the nation’s resources.
+The most notorious example arose from the “royalty in kind” program, based in Denver,
+Colorado. Under the program, MMS exercised its option to accept royalty payments “in
+kind” rather than in cash.† A September 2008 Inspector General’s report implicated more
+than a dozen employees in the Denver royalty-in-kind office in unethical and criminal
+conduct.121 Those MMS staff had also socialized with, and received a wide array of gifts
+from, companies with whom they were conducting business. The Inspector General
+further acknowledged that although “99.9 percent of [Interior] employees are hardworking, ethical, and well-intentioned[,] . . . the conduct of a few has cast a shadow on an
+entire bureau.”122
+Nor was unethical conduct limited to MMS’s revenue collections. It extended to some of
+those who worked on overseeing offshore oil and gas activities in the Gulf of Mexico.
+An Inspector General’s investigation in 2010 revealed that prior to 2007, “a culture of
+* See, e.g., Written submission to the National Commission from MMS permitting official, November 5, 2010 (“I did not know they were using nitrogen foamed cement. .
+. . [I]t would not have mattered under the regulations. We do not do any evaluations of types of cement.”) id. (“I do not recall them informing me as to why they decided
+not to drill to that length. . . . We do not need an explanation as to why a well is not drilled to the proposed depth.”).; id. (“At the time I reviewed the APD [drilling permit
+application], my knowledge of rupture disks was limited to what I had learned from the previous drilling engineer when working with him learning the review process.”);
+id. (“I did not receive training on lock down sleeve setting procedures.”).
+
+†
+
+The royalty-in-kind program allowed MMS to market the natural gas or oil to establish a reference against which it could evaluate industry reports of their market value.
+
+77
+
+77
+
+78
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+accepting gifts from oil and gas companies was prevalent throughout the MMS Lake
+Charles[, Louisiana] office.” “[A] number of MMS employees at th[at] district office
+admitted to attending sporting events prior to 2007 in which oil and gas production
+companies sponsored teams, as well as receiving lunches and accepting gifts.” The
+investigation found that one employee had conducted inspections on a company’s oil
+platforms while in the process of negotiating (and later accepting employment) with
+the company.123 Here again, the actions of a few damaged the reputation of the agency
+as a whole, and demoralized the vast majority of MMS employees who avoided such
+conflicts.124 In January 2009, only days after taking office, Secretary Salazar met with
+MMS employees and announced an ethics reform initiative in response to the problems
+identified at MMS and elsewhere in the agency.125
+
+Mismanagement and Misdirection
+Perhaps because of the cumulative lack of adequate resources, absence of a sustained
+agency mission, or sheer erosion of professional culture within some offices, MMS
+came progressively to suffer from serious deficiencies of organization and management:
+the fundamental traits of any effective institution. According to the Outer Continental
+Shelf Safety Oversight Board,* MMS lacks “a formal, bureau-wide compilation of rules,
+regulations, policies, or practices pertinent to inspections, nor does it have a comprehensive
+handbook addressing inspector roles and responsibilities.” As a result, the Board concluded,
+“policies and enforcement mechanisms vary among the [Gulf of Mexico] districts and
+the regions, and there is no formal process to promote standardization, consistency, and
+operational efficiency.”126
+The Safety Oversight Board singled out MMS’s handling of inspections for pointed
+criticism. For example, management promoted inspections by single inspectors in order
+to increase the total number of inspections, even though “most inspectors interviewed
+said that two-person teams would increase efficiencies, eliminate reliance on an operator
+representative for observations on safety tests, improve the thoroughness of the inspection,
+and reduce the ability of operators to successfully pressure an inspector not to issue [a
+citation].” The Board’s interviews revealed “staff concerns regarding a perceived emphasis
+on the quantity rather than quality of inspection.”127
+The agency’s management shortcomings were underscored, and compounded, by lack of
+communication and inconsistencies among its three regional offices for the Gulf of Mexico,
+the Pacific, and Alaska. The directors of each regional office naturally adapted practices
+to best suit the specific characteristics and needs of the region. But by acting in parallel
+fashion, with little coordination in decisionmaking and resource allocation, program
+implementation, regulatory interpretation, and enforcement policies became inconsistent,
+undermining the integrity of MMS’s work.128 For example, the Safety Oversight Board
+found that “the Pacific Region employs 5 inspectors to inspect 23 production facilities—a
+ratio of 1 inspector for every 5 facilities. By contrast, the [Gulf of Mexico Region] employs
+55 inspectors to inspect about 3,000 facilities—a ratio of 1 inspector for every 54
+facilities.” 129
+* Secretary Salazar created the Outer Continental Shelf Safety Oversight Board in the immediate aftermath of the Macondo well blowout and charged the Board with
+reviewing the effectiveness of MMS’s management. The Board issued its report on September 1, 2010.
+
+Chapter Three
+
+Ultimately, MMS was unable to ensure that its staffing capabilities and competencies kept
+pace with the changing risks and volume of offshore activity. As the Safety Oversight
+Board concluded, the Gulf of Mexico “district offices did not have a sufficient number of
+engineers to efficiently and effectively conduct permit reviews.”130 As the Chief of the U.S.
+Geological Survey’s Conservation Division had warned nearly 30 years earlier,131 salaries—
+for engineers stuck in the midranges of the federal pay scale—were far too low to attract
+individuals possessing the experience and expertise needed to oversee the increasingly
+complicated oil and gas drilling activities in the deepwater Gulf.132 At the most elementary
+level, MMS frequently lacked defined qualifications that new employees must meet before
+they start performing their jobs, or clear procedures for on-the-job training. The Board
+report further observed that the “amount of time and the structure of this training vary
+from office to office and from inspector to inspector,” and it concluded that the on-the-job
+training “does not address the need for substantive, consistent training in all aspects of the
+job.”133
+
+An Environment Unfavorable to Responsible Drilling
+Erosion of Environmental-Protection Safeguards in the Gulf of Mexico
+Even as oversight of drilling safety became less effective while the industry pursued more
+demanding deepwater plays in the Gulf of Mexico, environmental safeguards eroded,
+too—putting the rich natural resources of the Gulf waters and the surrounding coasts at
+increasing risk.
+The legislative promise. The 1978 Outer Continental Shelf Lands Act Amendments
+promised full consideration of concerns for environmental protection. The Act provides
+that “[m]anagement of the outer Continental Shelf shall be conducted in a manner which
+considers economic, social, and environmental values of the renewable and nonrenewable
+resources contained in the outer Continental Shelf, and the potential impact of oil and
+gas exploration on other resource values of the outer Continental Shelf and the marine,
+coastal, and human environments.”134 It further requires that the timing and location
+of exploration, development, and production of oil and gas take environmental factors
+into consideration, including: existing ecological characteristics; an equitable sharing
+of development benefits and environmental risks among the regions; the relative
+environmental sensitivity and marine productivity of areas; and relevant environmental
+and predictive information.135 Based on an evaluation of these and other factors, the Act
+directsthe Secretary of the Interior to select the “timing and location of leasing, to the
+maximum extent practicable, so as to obtain a proper balance between the potential for
+environmental damage, the potential for the discovery of oil and gas, and the potential for
+adverse impact on the coastal zone.”136
+A host of other laws, many enacted by Congress during the 1970s surge of environmental
+legislation, buttress these promised priorities. Of particular relevance to oil and gas leasing
+on the outer continental shelf is the National Environmental Policy Act requirement that
+federal agencies prepare environmental impact statements for all major federal actions
+
+79
+
+79
+
+80
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+significantly affecting the human environment.137 Those detailed statements must include
+not only discussion of the immediate adverse impacts on the natural environment that
+might result from the federal action, but also the “socio-economic”* effects of those
+impacts.138 The Magnuson-Stevens Fishery Conservation and Management Act requires
+agencies to analyze the potentially adverse impacts of oil and gas activities on fish habitat
+and populations, and provide conservation measures to mitigate those impacts.139 The
+Endangered Species Act requires federal agencies to determine the potential adverse impact
+of oil and gas activities on endangered and threatened species, limits activities that harm
+individual members of such species, and bars altogether activities that place such species
+in jeopardy.140 The Marine Mammal Protection Act imposes limits on activities that
+injure or even harass marine mammals.141 The National Marine Sanctuaries Act requires
+consultations to guard against harm to marine sanctuary resources from oil and gas
+leasing activities.142 The federal Clean Water Act imposes permitting requirements on any
+discharge of pollutants into navigable waters from such activities.143 And, the Oil Pollution
+Act of 1990,144 supplemented by a Presidential Executive Order,145 imposes a panoply of
+oil-spill planning, preparedness, and response requirements on fixed and floating facilities
+engaged in oil and gas exploration, development, and production on the outer continental
+shelf.
+Promise vs. practice. But some of these apparent statutory promises dim upon closer
+examination. The Outer Continental Shelf Lands Act routinely requires consideration of
+environmental protection concerns in leasing location and timing—but ultimately gives
+the Secretary of the Interior tremendous discretion in deciding what weight to give those
+concerns.146 The balance ultimately struck depends largely on the politics of the moment.
+The Secretary can assign significant weight to environmental protection concerns—or not.
+And in fact, parts of the 1978 Act arguably stack the deck against full consideration of
+environmental concerns. For instance, the law provides that the Secretary must approve
+a lessee’s exploration plan within 30 days of submission.147 If environmental review is to
+occur after plan submission, that timetable effectively precludes the kind of exacting review
+necessary to ensure that the Act’s environmental safeguards can be achieved. It would, in
+effect, be a statement by Congress that the rush to energy exploration is too important to
+be delayed.
+The Act also expressly singles out the Gulf of Mexico for less rigorous environmental
+oversight under NEPA. As a result of political compromise with oil and gas interests, the
+Act exempts lessees from submitting development and production plans (which include
+environmental safeguards) for agency approval. Accordingly, Gulf leases, unlike those
+applicable to other offshore areas, are not subject to the requirement of at least one NEPA
+environmental impact statement for development plans for a particular geographic area.148
+None of the other statutes includes such a stark exception, but their effects still are more
+limited than it might at first seem. For instance, both the Endangered Species Act and the
+*
+
+As the Macondo well blowout makes clear, the socio-economic effects of an oil spill are hardly an incidental concern. As described in Chapter 6, the economic costs
+of the spill to the Gulf states can be measured in the billions of dollars. Yet absent careful NEPA review, there are no assurances that these potential consequences of a
+decision to lease, explore, develop, or drill in any given location will be carefully considered by the governmental decisionmaker before the decision is made.
+
+Chapter Three
+
+Clean Water Act impose tough substantive limits on activities. But each has only a narrow,
+discrete focus and statutory trigger: threats to endangered or threatened species or their
+critical habitat under the Endangered Species Act or, under the Clean Water Act, only the
+incidental aspects of oil and gas activities that discharge pollutants into navigable waters
+(unless, of course there is an oil spill).
+Neither the Magnuson-Stevens Act nor the Marine Sanctuaries law imposes any
+mandatory substantive limitation on oil and gas activities offshore. Each instead authorizes
+the National Oceanic and Atmospheric Administration (NOAA) to make recommendations
+to MMS about possible adverse environmental impacts (to fish habitat and marine
+sanctuaries) and appropriate conservation measures. Congress clearly assigned NOAA
+this central role because it is the federal agency most expert on ocean science and has
+a clear mission to serve as the steward safeguarding the nation’s ocean resources. But,
+notwithstanding that assignment, neither law provides any corresponding obligation on
+the part of MMS to heed NOAA’s advice. MMS can, and has, on occasion given little or no
+weight to NOAA’s views; according to NOAA officials, that causes some NOAA scientists to
+expend fewer resources on generating such views.
+As a result, although the various laws create the potential for comprehensive
+environmental protection in oil and gas drilling on the outer continental shelf, neither
+alone nor in combination do any of the laws come close to ensuring a reasonable level of
+overall environmental protection applicable to all aspects of oil and gas activities on the
+outer continental shelf. Whether they have achieved their statutory objectives has therefore
+historically depended instead entirely on the discretionary determinations of MMS officials.
+Limiting NEPA. The Department of the Interior and MMS also took a series of steps that
+further limited the potential for NEPA to ensure government decisions were based on
+full consideration of their environmental consequences. Erosion of NEPA’s application
+to offshore oil and gas activities began, as noted, when Congress exempted a category
+of leasing activities in the Gulf of Mexico from NEPA review. The Interior Department,
+however, subsequently took that legislative exemption and unilaterally expanded its scope
+beyond those original legislative terms.
+Although the 1978 Act exempted only the Interior Department’s review of a lessee’s
+“development and production plan” from the environmental impact statement process,
+Interior unilaterally extended that exemption. In January 1981, the Department
+promulgated final rules declaring that exploration plans in the central and western
+Gulf of Mexico were “categorically excluded” from NEPA review.* At that same time,
+the Department also categorically excluded from NEPA review applications to drill wells
+(for exploration or subsequent development and production of oil and gas) “when said
+well and appropriate mitigation measures are described in an approved exploration plan,
+development plan, or production plan.”149 In 1986, MMS scaled back the categorical
+
+*
+
+The President’s Council on Environmental Quality, which is responsible for the administration of NEPA, has promulgated a regulation that permits agencies to create
+“categorical exclusions” from NEPA review for categories of minor activities that can be reasonably assumed in advance not to have significant environmental impacts.
+See 40 C.F.R. § 1508.4.
+
+81
+
+81
+
+82
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+exclusion to account for the possibility that NEPA review would be needed for these
+activities in certain narrowly defined “extraordinary circumstances.” Extraordinary
+circumstances include those actions that have highly uncertain and potentially significant
+environmental effects or involve unique or unknown environmental risks.150
+But because MMS personnel were apparently reluctant to conclude that such extraordinary
+circumstances were present, the rule in practice in the Gulf of Mexico was the categorical
+exclusion—rather than the exception to that exclusion. MMS staff have reported that
+leasing coordinators and managers discouraged them from reaching conclusions about
+potential environmental impacts that would increase the burden on lessees, “thus
+causing unnecessary delays for operators.” The Safety Oversight Board also noted that
+“[s]ome [MMS] environmental staff also reported that environmental assessments for
+smaller operators may be minimized if the [Regional Office of Field Operations] manager
+determines that implementing the recommendation may be too costly.”151
+With regard to NEPA specifically, some MMS managers reportedly “changed or minimized
+the [MMS] scientists’ potential environmental impact findings in [NEPA] documents to
+expedite plan approvals.” According to several MMS environmental scientists, “their
+managers believed the result of NEPA evaluations should always be a ‘green light’ to
+proceed.” In some cases, there may also have been built-in employee financial incentives
+that “distort[ed] balanced decision-making” to the extent that “[e]mployee performance
+plans and monetary awards [were] . . . based on meeting deadlines for leasing or
+development approvals.”152
+Finally, just as a matter of sheer practicality, MMS personnel plainly lacked the substantial
+resources that would have been required to engage in meaningful NEPA review in light of
+the extraordinary expansion of leasing activity in the Gulf. There were literally hundreds
+of exploration, development, and production plans, as well as individual permit drilling
+applications to be processed. No President ever sought for MMS the level of resources that
+would have been required to prepare individual assessments concerning whether each of
+those activities required an environmental impact statement, let alone such a statement for
+those that did. Nor did Congress. It should be no surprise under such circumstances that a
+culture of complacency with regard to NEPA developed within MMS, notwithstanding the
+best intentions of many MMS environmental scientists.
+
+The Macondo Well
+The gap between the protections promised by environmental statutes and regulations and
+actual practice is fully illustrated in the review and permitting of the Macondo well itself.
+MMS engaged in no NEPA review of the well’s permitting, and neither MMS nor other
+federal agencies gave significant attention to the environmental mandates of other federal
+laws.
+NEPA. MMS performed no meaningful NEPA review of the potentially significant adverse
+environmental consequences associated with its permitting for drilling of BP’s exploratory
+Macondo well. MMS categorically excluded from environmental impact review BP’s initial
+and revised exploration plans—even though the exploration plan could have qualified for
+
+Chapter Three
+
+an “extraordinary circumstances” exception to such exclusion, in light of the abundant
+deep-sea life in that geographic area and the biological and geological complexity of that
+same area.153 MMS similarly categorically excluded from any NEPA review the multiple
+applications for drilling permits and modification of drilling permits associated with the
+Macondo well. The justification for these exclusions was that MMS had already conducted
+NEPA reviews for both the Five-Year Program and the Lease Sale that applied to the
+Macondo well. The flaw in that agency logic is that both those prior NEPA reviews were
+conducted on a broad programmatic basis, covering huge expanses of leased areas of which
+the Macondo well was a relatively incidental part. Neither, moreover, included a “worst
+case analysis” because the President’s Council on Environmental Quality had eliminated the
+requirement for such analysis under NEPA for all federal agencies in 1986.154 As a result,
+none of those prior programmatic reviews carefully considered site-specific factors relevant
+to the risks presented by the drilling of the Macondo well.*
+Fishery conservation and management. Under the Magnuson-Stevens Fishery
+Conservation and Management Act, federal agencies must consult with NOAA on all
+activities (or proposed activities) authorized, funded, or undertaken by the agency that
+may adversely affect essential fish habitat. For the Gulf of Mexico, accordingly, NOAA
+prepared a “programmatic” Essential Fish Habitat Consultation for the entire Gulf.155 To
+similar effect, MMS complied with the Magnuson-Stevens consultation requirement by
+preparing Essential Fish Habitat Assessments that looked at offshore oil and gas leasing
+activities in the Gulf broadly.156 Neither NOAA nor MMS considered the possible adverse
+impacts of any one well, such as the Macondo well, in isolation. Nor would it have been
+practical for them to do so in light of their understandable focus on possible cumulative
+impacts on fish populations from many offshore leasing activities. What is more telling,
+however, is that to the extent that the MMS Assessment identified potential threats to
+essential fish habitat and marine fishery resources from oil spills, both NOAA and MMS
+ultimately relied exclusively on conservation measures included in oil-spill response plans
+prepared by the oil and gas industry pursuant to the Oil Pollution Act of 1990 to address
+those threats.157 For the Macondo well, both agencies assumed that BP’s plan would
+adequately address those threats and therefore there was no need to seek to do so directly
+through the Magnuson-Stevens Act. There was, however, little reason to assume that
+those plans were in fact up to the task.
+Oil Pollution Act of 1990 and Oil Spill Response Plans. Under the Oil Pollution Act of
+1990, as supplemented by a Presidential Executive Order, MMS is responsible for oilspill planning and preparedness as well as select response activities for fixed and floating
+facilities engaged in exploration, development, and production of liquid hydrocarbons
+and for certain oil pipelines. The agency requires all owners or operators of offshore
+oil-handling, storage, or transportation facilities to prepare Oil Spill Response Plans.
+MMS regulations detail the elements of the response plan (an emergency-response action
+plan, oil-spill response equipment inventory, oil-spill response contractual agreements, a
+* For instance, bluefin tuna are both commercially vital and biologically significant as predators in the Gulf. But in the relevant Five-Year (2007–2012) Programmatic
+Environmental Impact Statement on the entire offshore leasing program—covering the entire outer continental shelf of the United States—MMS discusses potential
+impacts of leasing activities on bluefin tuna in one sentence. Subsequent MMS environmental impact statements for lease sales within the Gulf of Mexico contained
+no significant or geographically-focused analysis of the potential impacts on bluefin tuna. And, in finally permitting the drilling of the Macondo well, MMS categorically
+excluded the action from any NEPA review, and thus conducted no analysis of the potential impacts of drilling on bluefin tuna, based on the rationale that it had already
+adequately reviewed environmental impacts in its prior reviews.
+
+83
+
+83
+
+84
+
+National Commission on the BP Deepwater Horizon Oil Spill and Offshore Drilling
+
+calculation of the worst-case discharge scenario, plan for dispersant use, in-situ burning
+plan, and information regarding oil-spill response training and drills).158 The emergencyresponse plan is supposed to be the core of the overall plan, and in turn is required to
+include information regarding the spill-response team; the types and characteristics of oil
+at the facilities; procedures for early detection of a spill; and procedures to be followed in
+the case of a spill.159
+But neither BP, in crafting its Oil Spill Response Plan for the Gulf of Mexico applicable
+to the Macondo well, nor MMS in approving it, evidenced serious attention to detail.160
+For instance, the BP plan identified three different worst-case scenarios that ranged from
+28,033 to 250,000 barrels of oil discharge and used identical language to “analyze”
+the shoreline impacts under each scenario.161 To the same effect, half of the “Resource
+Identification” appendix (five pages) to the BP Oil Spill Response Plan was copied from
+material on NOAA websites, without any discernible effort to determine the applicability of
+that information to the Gulf of Mexico. As a result, the BP Oil Spill Response Plan described
+biological resources nonexistent in the Gulf—including sea lions, sea otters, and walruses.*
+Even more troubling, the MMS Gulf of Mexico Regional Office approved the BP plan
+without additional analysis. There is little in that approval to suggest that BP and MMS
+gave close scrutiny to the contents of the Oil Spill Response Plan. The Regional Office’s
+routine practice was to review and approve oil-spill response plans within 30 days of their
+receipt. Absent any legal requirement to do so, the office did not distribute submitted plans
+to other federal agencies for review or comment, nor did it seek public review or comment.
+The inescapable conclusion is striking, and profoundly unsettling. Notwithstanding
+statutory promises of layers of required environmental scrutiny—by NEPA, the
+Magnuson-Stevens Act, the Outer Continental Shelf Lands Act, and the Oil Pollution
+Act—and the potential application of some of the nation’s toughest environmental
+restrictions—the Endangered Species Act and Clean Water Act—none of these laws resulted
+in site-specific review of the drilling operations of the Macondo well. The agency in
+charge, MMS, lacked the resources and committed agency culture to do so, and none of
+the other federal agencies with relevant environmental expertise had adequate resources or
+sufficient statutory authority to make sure the resulting gap in attention to environmental
+protection concerns was filled.†
+Federal oversight of oil and gas activities in the Gulf of Mexico—almost the only area
+where substantial amounts of drilling were taking place—took a generally minimalist
+approach in the years leading up to the Macondo explosion. The national government
+failed to exercise the full scope of its power, grounded both in its role as owner of
+the natural resources to be developed and in its role as sovereign and responsible for
+ensuring the safety of drilling operations. Many aspects of national environmental law
+*
+
+The BP plan does not appear to be an aberration. It was prepared by a contractor who also prepared the Gulf of Mexico plans for Chevron, ConocoPhillips,
+ExxonMobil, Shell, and other companies operating in the Gulf. The result is four nearly identical plans that repeat the same mistakes found in the BP plan applicable to
+the Macondo well.
+
+†
+
+The President’s decision in March 2010 to expand offshore oil and gas leasing is a more recent example of the absence of full consideration of environmental
+protection concerns. According to their testimony before the Commission in August 2010, the White House did not ask either the Chair of the President’s Council on
+Environmental Quality or the Administrator of NOAA to be directly involved in reviewing the plans before the President’s decision. See Testimony of The Honorable Nancy
+Sutley, Chair, Council on Environmental Quality, and The Honorable Jane Lubchenco, Administrator, NOAA, Hearing before the National Commission, August 25, 2010.
+
+Chapter Three
+
+were ignored, resulting in less oversight than would have applied in other areas of the
+country. In addition, MMS lacked the resources and technical expertise, beginning with its
+leadership, to require rigorous standards of safety in the risky deepwater and had fallen
+behind other countries in its ability to move beyond a prescription and inspection system
+to one that would be based on more sophisticated risk analysis.
+In short, the safety risks had dramatically increased with the shift to the Gulf ’s
+deepwaters, but Presidents, members of Congress, and agency leadership had become
+preoccupied for decades with the enormous revenues generated by such drilling rather than
+focused on ensuring its safety. With the benefit of hindsight, the only question had become
+not whether an accident would happen, but when. On April 20, 2010, that question was
+answered.
+
+85
+
+85
+
+86
+
+87
+
+Part II
+Explosion and Aftermath: The Causes
+and Consequences of the Disaster
+The loss of control of the Macondo well; the resulting explosion,
+fire, and destruction of the Deepwater Horizon rig; and the
+ensuing spill of nearly 5 million barrels of oil before the well was
+capped on July 15 reflect specific decisions about well design,
+construction, monitoring, and testing. The Commission’s detailed
+analysis (Chapter 4) explains those actions in the context of this
+specific reservoir and subsurface geology as well as the regulatory
+framework and practices that affected those business decisions.
+Once the rig was destroyed and the uncontrolled flow of oil began
+leaking into the Gulf, industry and government struggled to
+contain and respond to the spill—prompting important questions
+about public and private authority, technical capability and
+capacity, and the current state of the art in addressing such crises.
+Understanding of the Gulf ecosystem and the regional economy
+underlies an early assessment of the spill’s impacts and how to
+restore damaged natural resources, respond to economic losses,
+and address adverse impacts on human health. Chapters 4, 5, 6,
+and 7 address the related issues of containment and response,
+impact assessment, recovery, and restoration.
+
+87
+
+Chapter Four

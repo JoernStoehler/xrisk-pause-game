@@ -1,0 +1,102 @@
+Title: Nuclear Nonproliferation: Six Lessons Not Yet Learned
+Author: Pierre Goldschmidt (former IAEA Deputy Director-General, head of Department of Safeguards)
+Date: 20 March 2018
+Publisher: Carnegie Endowment for International Peace
+URL: https://carnegieendowment.org/posts/2018/03/nuclear-nonproliferation-six-lessons-not-yet-learned?lang=en
+Type: Policy analysis (full text from web)
+
+Description: Analysis by the former head of IAEA Safeguards of six critical lessons from
+Iran, North Korea, and Libya noncompliance cases that the international community has
+failed to learn. Covers the failure to swiftly refer Iran to the Security Council in 2003,
+the need for temporary expanded verification authority, the case for generic Security Council
+resolutions, prompt condemnation of NPT withdrawal, veto restraint, and irreversible safeguards.
+
+--- FULL TEXT BELOW ---
+
+Nuclear Nonproliferation: Six Lessons Not Yet Learned
+
+By Pierre Goldschmidt
+Carnegie Endowment for International Peace
+March 20, 2018
+
+Introduction
+
+The year 2003 marked a pivotal moment in the International Atomic Energy Agency's safeguards history. Four significant events occurred that year -- North Korea's NPT withdrawal, Iran's undeclared nuclear facilities discovery, the Iraq invasion, and Libya's nuclear program abandonment -- revealing important gaps in nonproliferation enforcement that remain unaddressed.
+
+The Lessons From Iran
+
+Lesson 1: Swift Referral to UN Security Council
+
+When noncompliance is discovered, immediate referral to the Security Council is essential. The IAEA failed to declare Iran in noncompliance in November 2003, creating a harmful precedent. States should understand that "within a short period of time" they face referral to the council for either information purposes or action.
+
+The 2003 Board of Governors resolution demanding Iran suspend enrichment lacked binding legal force. Only Security Council resolutions carry binding authority, yet Iran's case wasn't referred until December 2006 -- losing three crucial years during which Iran's nuclear program became practically irreversible.
+
+Lesson 2: Temporary Expanded Verification Authority
+
+When states refuse full transparency, the IAEA needs enhanced access beyond standard agreements. This should include unrestricted access to individuals, documents, procurement records, military workshops, and R&D facilities suspected of nuclear weapons connections.
+
+The IAEA's 2005 report on Iran emphasized that "transparency measures should extend beyond the formal requirements" of existing agreements. Yet these expanded powers were never formally defined or incorporated into Security Council resolutions, limiting inspection effectiveness.
+
+Lesson 3: Generic Security Council Resolution
+
+The Security Council should adopt a preventive, generic resolution establishing automatic procedures for noncompliance cases. When the IAEA identifies a state in violation, the council should automatically adopt state-specific resolutions granting extended access rights under a Model Temporary Complementary Protocol.
+
+This framework should require noncompliant states to:
+- Immediately suspend all nuclear fuel-cycle activities
+- Conclude facility-specific safeguards agreements within a limited timeframe
+
+If compliance isn't achieved within 60 days, the council reconvenes to impose Article 41 sanctions.
+
+The Lessons From North Korea
+
+Lesson 4: Prompt Condemnation of NPT Withdrawal
+
+North Korea declared noncompliance in April 1993 and announced NPT withdrawal in March 1993. However, the Security Council waited 13 years before taking action -- only after North Korea tested a nuclear weapon in October 2006.
+
+Resolution 1718 imposed modest sanctions: arms embargoes, luxury goods bans, and travel restrictions. These measures arrived too late and proved insufficient to deter continued weapons development. The council's delayed response enabled North Korea to advance its arsenal substantially.
+
+Lesson 5: Deterring NPT Withdrawal Through Veto Restraint
+
+States often exploit the Security Council's veto mechanism, hoping a permanent member will block sanctions. To strengthen deterrence, the council should adopt a binding generic resolution declaring that NPT withdrawal constitutes a threat to international peace and security.
+
+Critically, the five permanent members should issue a joint statement that they will not exercise veto rights if they are the sole opposing member in a state-specific sanctions resolution. This declaration, while not legally binding on veto rights, would increase sanctions likelihood and raise withdrawal costs.
+
+Lesson 6: Irreversible IAEA Safeguards
+
+A critical loophole exists: comprehensive safeguards agreements automatically lapse if a state withdraws from the NPT. This permits a nation to abandon the treaty and weaponize previously safeguarded materials without treaty violation.
+
+The solution involves requiring all enrichment and reprocessing facilities to operate under facility-specific INFCIRC/66-type safeguards agreements with the IAEA. Unlike comprehensive agreements, these don't lapse upon NPT withdrawal and would "remain in force" regardless of treaty status.
+
+Benefits of this approach:
+- Uses existing safeguards framework rather than creating new standards
+- Imposes no operational financial burden
+- Requires minimal administrative effort
+- Applies to both non-nuclear-weapon and nuclear-weapon states
+
+Non-nuclear-weapon states should lead by example. The Nuclear Suppliers Group should formally interpret their "effective safeguards in perpetuity" export criterion as requiring INFCIRC/66 agreements before enrichment or reprocessing technology transfers. Nuclear-weapon states should place eligible facilities on their voluntary offer lists under identical requirements.
+
+Analysis and Recommendations
+
+The Iran Nuclear Agreement Context
+
+The July 2015 Joint Comprehensive Plan of Action constrains Iran for 15 years, preventing weaponization within one year. However, two critical provisions were omitted:
+
+1. Facility-specific IAEA safeguards agreements for all Iranian nuclear installations
+2. Comprehensive Test Ban Treaty ratification requirements
+
+The author privately recommended these provisions to U.S. State Department officials. Their exclusion likely reflected U.S. non-ratification of the CTBT, which diminished negotiating leverage on Iranian ratification requirements.
+
+The Broader Nonproliferation Challenge
+
+An increasing number of non-nuclear-weapon states will develop scientific and technical capabilities enabling nuclear weapons manufacture. Some will become nuclear threshold states -- capable of producing multiple weapons within months.
+
+Success requires either addressing proliferators' underlying security concerns or building strong multilateral coalitions enforcing rigorous sanctions with minimal exploitable divisions. The North Korean case demonstrates the stakes are substantial.
+
+Conclusion and Forward Path
+
+The international community must adopt legally binding generic procedures for responding to noncompliance and NPT withdrawal. Because council members wouldn't know which states might be involved, such discussions should occur during peaceful times rather than during crisis heat, reducing acrimony.
+
+Establishing standard responses applied evenhandedly would significantly enhance nonproliferation regime credibility. As the author concludes, implementing these measures now would "make a real difference in protecting against nuclear proliferation." Without such action, future proliferation crises will prove increasingly difficult to manage effectively.
+
+Author Note:
+Pierre Goldschmidt is a nonresident senior associate at the Carnegie Endowment for International Peace and former IAEA deputy director-general heading the Department of Safeguards.

@@ -1,0 +1,1148 @@
+# A Revisionist History of Regulatory Capture
+
+- **Author:** William J. Novak, University of Michigan Law School
+- **Published in:** Preventing Regulatory Capture: Special Interest Influence and How to Limit It (Chapter 2)
+- **Editors:** Daniel Carpenter & David A. Moss
+- **Publisher:** Cambridge University Press, 2014
+- **Source URL:** https://repository.law.umich.edu/cgi/viewcontent.cgi?params=/context/book_chapters/article/1469/&path_info=a_revisionist_history_of_regulatory_capture.pdf
+- **Access:** Open access via University of Michigan Law School Scholarship Repository
+
+---
+
+University of Michigan Law School
+
+University of Michigan Law School Scholarship Repository
+Book Chapters
+
+Faculty Scholarship
+
+2013
+
+A Revisionist History of Regulatory Capture
+William J. Novak
+
+University of Michigan Law School, wnovak@umich.edu
+
+Available at: https://repository.law.umich.edu/book_chapters/469
+
+Follow this and additional works at: https://repository.law.umich.edu/book_chapters
+Part of the Law and Economics Commons, and the Legal History Commons
+
+Publication Information & Recommended Citation
+Novak, William J. "A Revisionist History of Regulatory Capture." In Preventing Regulatory Capture: Special
+Interest Influence and How to Limit It, edited by David A. Moss and Daniel Carpenter, 25-48. New York:
+Cambridge University Press, 2013.
+
+This Book Chapter is brought to you for free and open access by the Faculty Scholarship at University of Michigan
+Law School Scholarship Repository. It has been accepted for inclusion in Book Chapters by an authorized
+administrator of University of Michigan Law School Scholarship Repository. For more information, please contact
+mlaw.repository@umich.edu.
+
+1
+
+A Revisionist History of Regulatory Capture
+William J. Novak
+
+The idea of regulatory capture has controlled discussions of economic regulation and regulatory reform for more than two generations. Originating
+soon after World War II, the so-called capture thesis was an early harbinger
+of the more general critique of the American regulatory state that dominated
+the closing decades of the twentieth century. The political ramifications of
+that broad critique of government continue to be felt today both in the
+resilient influence of neoliberal policies such as deregulation and privatization as well as in the rise of more virulent and populist forms of anti-statism.
+Indeed, the capture thesis has so pervaded recent assessments of regulation
+that it has assumed something of the status of a ground norm – a taken-forgranted term of art and an all-purpose social-scientific explanation – that
+itself frequently escapes critical scrutiny or serious scholarly interrogation.
+This chapter attempts to challenge this state of affairs by taking a critical
+look at the emergence of regulatory capture theory from the perspective of
+history. After introducing a brief account of the diverse intellectual roots of
+the capture idea, this chapter makes three interpretive moves. First, it suggests that, to a large extent, capture theory relies on a short and increasingly
+outmoded history of American regulation that is out of synch with the latest
+accounts of the development of the American regulatory and administrative state. Second, it questions just how “new” the insights of capture theory
+ever really were or are. Although earlier generations of American political
+thinkers and regulatory reformers did not use the language of “capture” per
+se, they were exceedingly well-versed in the general notion that democratic
+and republican institutions of government were prone to the corruptions
+of private interest. Finally, this chapter documents the degree to which progressive regulatory initiatives were themselves oriented toward the control
+of undue corporate and private influence in democratic and public life. It
+closes by suggesting that some of those original progressive explorations
+25
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+26
+
+William J. Novak
+
+of the ongoing problem of private coercion in a democratic republic continue to provide a more satisfactory account than capture theory of the new
+configurations of public and private power that dominate early twenty-first
+century American life.
+A BRIEF GENEALOGY OF THE CAPTURE THESIS
+
+The basic outlines of the intellectual history of the regulatory capture thesis
+are fairly clear and broadly agreed on.1 Indeed, one of the most surprising
+things about that genealogy is the extraordinary degree of consensus about
+regulatory capture across a broad spectrum of economists; historians; and
+scholars of law, politics, and public administration. Within legal and economics scholarship, it is customary to start discussions of capture theory
+with the Chicago School and George Stigler’s pointed thesis in “The Theory of Economic Regulation” that “as a rule, regulation is acquired by the
+industry and is designed and operated primarily for its benefit.”2 However,
+there are a couple of other important earlier incarnations of the critique.
+The capture thesis first originated not in law and economics but in the
+fields of political science and public administration. Indeed, the first essay to
+attempt to show systematically that “regulation is acquired by the industry”
+and operates “for its benefit” was a precocious bit of regulatory revisionism focused notably on the Interstate Commerce Commission (ICC) by a
+young Harvard government instructor named Samuel P. Huntington.3 In
+“The Marasmus of the ICC,” Huntington began by reflecting on the era of
+good feeling that had built up around the original federal independent regulatory commission: “During its sixty-five years of existence, the [Interstate
+Commerce] Commission developed an enviable reputation for honesty,
+impartiality, and expertness” that made it “the premier federal agency in
+the transportation field.”4 However, the bulk of his article was dedicated to
+1
+
+See, for example, the strikingly similar accounts of Thomas W. Merrill, “Capture Theory
+and the Courts, 1967–1983,” Chicago-Kent Law Review 72 (1996–1997): 1039, and John
+Shepard Wiley Jr., “A Capture Theory of Antitrust Federalism,” Harvard Law Review 99
+(1986): 713, 723–5.
+2
+George J. Stigler, “The Theory of Economic Regulation,” Bell Journal of Economics and
+Management Science 2 (1971): 3–21; Richard Posner, “Theories of Economic Regulation,”
+Bell Journal of Economics and Management Science 4 (1974): 335–58; Sam Peltzman,
+“Toward a More General Theory of Regulation,” Journal of Law and Economics 19 (1976):
+211–20.
+3
+Samuel P. Huntington, “The Marasmus of the ICC: The Commission, the Railroads, and
+the Public Interest,” Yale Law Journal 61 (1952): 467.
+4
+Huntington, “Marasmus,” 468–9. Huntington could not help include as well the sarcastic
+assessment from conservative and anti–New Dealer James M. Beck, “The Commission has
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+27
+
+a critique of that celebratory public administration orthodoxy. In contrast
+to the usual story of enlightened administrative regulation in the public
+interest, Huntington wrote a tale of trouble – a story of agency decline and
+what he polemically dubbed “marasmus”: a biological pathology featuring
+a gradual and continuous wasting away of the body from a morbid cause.
+Morbid cause was key here, for it was not just time or desuetude or inertia that contributed to this peculiar regulatory disease. Rather, Huntington
+proffered a more distinct and direct cause, that is, the infectious influence
+of pervasive railroad interest in almost every aspect of ICC policymaking.
+Huntington ultimately proposed abolishing the ICC with a line of argumentation that would soon become a staple of formal capture theory: “The
+independence of a regulatory commission is based upon the premise that
+this independence will aid it in being objective and impartial. When such
+a commission loses its objectivity and impartiality by becoming dependent
+upon the support of a single narrow interest group, obviously the rationale for
+maintaining its independence has ceased to exist.”5
+Huntington’s pointed critique of interest group influence on regulatory
+agencies did not remain confined to the ICC for very long. Three years
+later, in Regulating Business by Independent Commission, another politics
+scholar, Marver H. Bernstein, extended Huntington’s analysis and capture
+perspective to six additional agencies: the Federal Trade Commission, Federal Power Commission, Civil Aeronautics Board, Federal Communications Commission, National Labor Relations Board, and the Securities and
+Exchange Commission.6 Continuing Huntington’s biological metaphor,7
+Bernstein examined the life cycle of commissions into a ripe “old age,” where
+become the sacred white elephant of our governmental system. Members of the Bar and
+even litigants may exercise their constitutional right, when the Supreme Court decides
+against them, to swear at the Court, but it seems to be a species of treason for any one to
+question the beneficence of the Interstate Commerce Commission.” Beck’s Wonderland
+of Bureaucracy (from which this quote was taken) was something of an antiregulatory
+screed, referring to “bureaucracy” generally as involving “the irrepressible war between
+the individual and the State” and a “wonderland of Socialist experiments in a government,
+whose constitution was intended to be a noble assertion of individualism.” James Beck,
+Our Wonderland of Bureaucracy (New York: Macmillan, 1932), vii, x.
+5
+Huntington, “Marasmus,” 467 (emphasis added).
+6
+Marver H. Bernstein, Regulating Business by Independent Commission (Westport, CT:
+Greenwood Press, 1955); Bernstein, “Independent Regulatory Agencies: A Perspective on
+Their Reform,” The Annals of the American Academy of Political and Social Science 400
+(1972): 14.
+7
+The return of biological metaphorical thinking about modern governmental institutions
+in these 1950s studies is a matter of concern given the earlier attempts of American social
+science to develop a more realistic and pragmatic approach to law and government that
+dispensed with just such naturalistic metaphors.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+28
+
+William J. Novak
+
+sclerotic relations with specific interest groups yielded agencies protecting
+the industries they were originally designed to regulate. Bernstein’s resulting
+indictment of regulatory agencies exceeded Huntington’s more focused critique and, in fact, outstripped the research bounds of his own investigation:
+Commissions have proved to be more susceptible to private pressures, to manipulation for private purposes, and to administrative and public apathy than other
+types of governmental organization. They have lacked an affirmative concept of
+public interest; they have failed to meet the test of political responsibility in a democratic society; and they tend to define the interest of the regulated groups as the
+public interest.8
+
+Two historical contexts are important in coming to terms with this original burst of capture theory in the1950s. First, methodologically, Huntington
+and Bernstein were writing at the high tide of the influence of behavioralism
+in political science – an approach impatient with formal philosophical and
+juridical abstractions such as “the public interest” and eager to examine
+more “critically” and “scientifically” the real individual and group interests
+that were so frequently viewed as constituting and producing actual political
+behavior. Huntington relied explicitly on David B. Truman’s The Governmental Process: Political Interests and Public Opinion (1951) – something of a
+culminating synthesis of the long methodological revolution begun by A. F.
+Bentley, Charles Merriam, Harold Lasswell, V. O. Key, Herbert Simon, and
+many others.9 Second, coming as they did within a decade of the passage of
+the Administrative Procedure Act, Huntington’s and Bernstein’s critiques of
+the regulatory commission have to be read in the political context of a series
+of high-profile efforts to reorganize and control (if not exactly roll back) a
+maturing and sprawling administrative regulatory apparatus, including the
+persistent and contested efforts at executive reorganization advocated by the
+Brownlow Commission and the First and Second Hoover Commissions.10
+Like the First Hoover Commission that originally aired issues of undue
+industry influence as early as 1949,11 Huntington recommended transferring the ICC’s executive functions to the Secretary of Commerce. Bernstein
+8
+
+Bernstein, Regulating Business, 296 (emphasis added).
+David B. Truman, The Governmental Process: Political Interests and Public Opinion (New
+York: Knopf, 1951). For a couple of useful summaries of the behavioral revolution, see
+Robert A. Dahl, “The Behavioral Approach in Political Science: Epitaph for a Monument
+to a Successful Protest,” The American Political Science Review 55 (1961): 763–72; Bernard
+Crick, The American Science of Politics (Berkeley: University of California Press, 1959).
+10
+For the best overarching history of these efforts, see Joanna Grisinger, The Unwieldy
+American State: Administrative Politics since the New Deal (New York: Cambridge University
+Press, 2012).
+11
+Grisinger, 302–4.
+9
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+29
+
+even more explicitly linked the academic exercise of piercing the veil of
+commission independence to a policy prescription of increased political
+and executive supervision. With Eisenhower and Hoover guiding such recommendations, the links between the scholarly development of a capture
+thesis and the more general resurgence of interest in competition and private enterprise as countervailing forces to the rise of a bureaucratic state
+were already being forged.12
+Despite these very specific intellectual and political contexts, however,
+over the next decade, this early political exploration of private influence in
+public regulation hardened into the prevailing wisdom known as regulatory
+capture theory. As Louis Jaffe put it in “The Limits of the Administrative
+Process” in 1954, “The phenomenon loosely and invidiously described
+as ‘industry orientation’ is much less a disease of certain administrations
+than a condition endemic in any agency or set of agencies which seek to
+perform such a [regulatory] task.”13 Undue influence (from malfeasance to
+ex parte approaches to “subtle but pervasive methods pursued by regulated
+industries to influence regulatory agencies by social favors, promises of later
+employment in the industry itself, and other similar means”) was a major
+preoccupation of the 1960 Landis Report on Regulatory Agencies.14 By the
+time the Chicago School began to focus seriously on the issue, Bernstein
+himself had already summarized that “The most familiar charge against
+independent commissions is that they develop an orientation toward the
+views and interests of their clientele and become ripe for capture.”15
+For the most part, early formulations of capture theory were mildly
+reformist in orientation – usually concluding with a call for something
+such as increased judicial review or enhanced executive supervision or a
+higher level of administrative formality in regulatory practice to rein in
+or counterbalance industry influence.16 In the 1960s and 1970s, however,
+capture theory and social science investigations of regulatory agencies grew
+12
+
+In a campaign speech in Seattle, Washington, on October 7, 1952, Eisenhower complained
+about certain “zealots” who urged a “whole-hog Federal Government” believing “that it
+must own and control just as many of our resources as it can lay its hands on – by fair
+means or foul.” Quoted in Grisinger, 348–9. Also see Herbert Hoover, The Challenge to
+Liberty (New York: C. Scribner’s Sons, 1934).
+13
+Louis L. Jaffe, “Effective Limits of the Administrative Process,” Harvard Law Review 67
+(1953–1954), 1113. See also, Harold Seidman, Politics, Position, and Power: The Dynamics
+of Federal Organization (New York: Oxford University Press, 1970).
+14
+James M. Landis, Report on Regulatory Agencies to the President-Elect (Washington, D.C.:
+U.S. Government Printing Office, December 1960), 12.
+15
+Bernstein, “Independent Regulatory Agencies,” 23 (emphasis added).
+16
+Theodore J. Lowi, The End of Liberalism (New York: Norton, 1969); Kenneth Culp Davis,
+Discretionary Justice: A Preliminary Inquiry (Urbana: University of Illinois Press, 1969).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+30
+
+William J. Novak
+
+increasingly ideological, generating a much more thoroughgoing critique.
+And though the attack from the right and economics is most well-known,
+blood was drawn first on the left among an emerging generation of radical
+historians of American economic policy who produced what is known in
+the trade as the corporate liberal synthesis.
+The corporate liberal synthesis originated in Gabriel Kolko’s 1963 radical
+denunciation of progressive reform in the provocatively entitled Triumph
+of Conservatism. Like Huntington and Bernstein, Kolko was looking for an
+alternative to the public welfare, liberal consensus histories that too easily
+aligned economic regulation and the public good in a Whiggish morality
+play featuring the inevitable triumph of the democratic people over the
+special interests. However, Kolko took his cues from Veblen, Marx, and
+Weber rather than Merriam, Lasswell, and Truman. In a survey of the great
+episodes of Progressive-era regulation from the U.S. Industrial Commission to the Bureau of Corporations to the Food and Drug Administration
+and the Federal Trade Commission, Kolko redefined the entire progressive movement as an exemplar of capture theory writ large. He defined
+progressivism as “a movement that operated on the assumption that the
+general welfare of the community could be best served by satisfying the
+concrete needs of business.” Consequently, Kolko contended, “Regulation
+itself was invariably controlled by leaders of the regulated industry, and
+directed toward ends they deemed acceptable or desirable.”17 James Weinstein and Martin Sklar continued in this vein, developing an overarching
+critical history of capture with more of a class-based edge than either the
+special-interest or rent-seeking theories of economists and political scientists. Weinstein explicitly disparaged the historical orthodoxy of the likes of
+Arthur Schlesinger, Jr. (whom he identified as “intellectual in residence of
+the Kennedys”), where “Liberalism in America” was self-understood as a
+progressive effort to “restrain the power of the business community.” On
+the contrary, Weinstein argued, the liberal and regulatory reforms of the
+Progressive era were primarily “the product, consciously created, of the
+leaders of the giant corporations and financial institutions.”18
+17
+
+Gabriel Kolko, The Triumph of Conservatism: A Reinterpretation of American History,
+1900–1916 (Chicago: Quadrangle Books, 1963), 2–3.
+18
+James Weinstein, The Corporate Ideal in the Liberal State, 1900–1918 (Boston: Beacon Press,
+1968), xv; Martin J. Sklar, The Corporate Reconstruction of American Capitalism, 1890–
+1916: The Market, the Law, and Politics (New York: Cambridge University Press, 1988). As
+Gerald Berk summarized this school of thought in an excellent review essay: “Corporate
+liberal scholarship, especially in its left-wing variant reintroduced class analysis into the
+study of twentieth-century politics, concluding that a powerful cadre of class-conscious
+corporate elites successfully used the state to stabilize modern capitalism and co-opt radical
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+31
+
+In short, by the time George Stigler aimed his economic theories at the
+“idealistic view of public regulation,” there seemed to be hardly any idealism left. Indeed, Stigler himself admitted that by 1971, denunciations of
+the ICC for “prorailroad policies” had become something of “a cliché of the
+literature.” However, like their unlikely compatriots in history Kolko and
+Weinstein, the Chicago School economists were not particularly interested
+in the reform of regulatory processes or administrative procedures. Rather,
+the “capture thesis” was but an opening gambit in pursuit of a more total
+critique of the “basic logic of political life” that undergirded the regulatory
+impulse as a whole. Stigler bemoaned the many “victims” of the general
+and “pervasive use of the state’s support of special groups.” In addition, he
+encouraged economists to more aggressively establish a “license to practice,” a “rational theory of political behavior.” Until and unless that larger
+economic science of politics was produced, he concluded (rather imperiously and undemocratically), reformers were “ill equipped to use the state
+for their reforms.”19
+These were the intellectual roots of what Thomas Merrill dubbed “the
+public choice era,” when capture theory’s original skepticism about the
+behavior of a certain set of administrative institutions morphed into a more
+general and ideological “pessimism about the capacity of any governmental
+institution” to serve the “public interest.”20 Gary Becker foreshadowed this
+trend in an audacious five-page reflection on the slight topic of “Competition and Democracy” in the very first issue of the Journal of Law and
+Economics in 1958. He asked, “Does the existence of market imperfections justify government intervention?” He responded, “The answer would
+be ‘no,’ if the imperfections in government behavior were greater than
+those in the market.” Capture theory was meant to demonstrate the pervasive “imperfections in government behavior” that called into question
+the general governmental regulatory impulse as a whole. As Becker concluded tellingly (challenging all the assumptions of progressive and liberal
+economic policymaking), “It may be preferable not to regulate economic
+monopolies and to suffer their bad effects, rather than to regulate them
+and suffer the effects of political imperfections.”21 Although public interest
+theories insisted upon the ultimate priority of democracy over economy,
+policy demands from below.” Gerald Berk, “Corporate Liberalism Reconsidered: A Review
+Essay,” Journal of Policy History 3 (1991): 70–84, 70–71.
+19
+Stigler, “The Theory of Economic Regulation,” 18.
+20
+Merrill, “Capture Theory and the Courts,” 1053 (emphasis added).
+21
+Gary S. Becker, “Competition and Democracy,” Journal of Law and Economics 1 (1958),
+105–9, 109 (emphasis added).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+32
+
+William J. Novak
+
+Becker’s conclusion (and his title) began the process of putting competition
+back out front. It thus echoed perfectly Friedrich Hayek’s original reasoning
+in Freedom and the Economic System (1939): “It is often said that democracy
+will not tolerate capitalism. If ‘capitalism’ here means a competitive society
+based on free disposal over private property, it is far more important to
+observe that only capitalism makes democracy possible.”22
+Caught in the middle of this triple (center-left-right; 50s-60s-70s) assault
+of politics, history, and economics, it is perhaps not surprising that the “public interest” or “public service” theory of regulation and administration has
+been treated by social scientists as something akin to a pipe dream since the
+heyday of the late New Deal.23 Indeed, despite very different methodological
+and political contexts, the road from the public administration investigations of Huntington and Bernstein to the more formal law and economics
+theories of capture developed by Stigler and Peltzman runs fairly straight
+and narrow. En route, descriptions of a quite specific kind of regulatory
+pathology or misdevelopment gave way to a more general critique of public
+as compared with private ordering and a general preference for individual market as opposed to collective regulatory solutions. Moreover, this
+was an intellectual history with distinct policy ramifications, as progressive
+and New Deal initiatives in regulation, public utility, and social services
+were soon met with ubiquitous counter-reform proposals in the name of
+deregulation, privatization, and neoliberalism.
+THE LONG (RATHER THAN SHORT) HISTORY OF ECONOMIC
+REGULATION IN AMERICA
+
+Although the politics of capture theorists diverges significantly from Bernstein to Kolko to Stigler (creating something like a cacophony of consensus),
+one thing that remains common to the perspective as a whole is the historical point of departure. One thing that almost all capture narratives seem
+to agree on is that economic regulation in the United States began somewhere around 1887. For the historically adventurous, perhaps the state
+22
+
+Friedrich A. von Hayek, Freedom and the Economic System (Chicago: University of Chicago
+Press, 1939), 28.
+23
+Two classic statements of the public interest theory are Felix Frankfurter, The Public and
+Its Government (New Haven, CT: Yale University Press, 1930) and James M. Landis, The
+Administrative Process (New Haven, CT: Yale University Press, 1938). For some signs of a
+renewal of interest in “public interest,” see Martha Minow, Partners not Rivals: Privatization
+and the Public Good (Boston: Beacon Press, 2002); and David A. Moss and Michael R. Fein,
+“Radio Regulation Revisited: Coase, the FCC, and the Public Interest,” Journal of Policy
+History 15 (2003).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+33
+
+railroad commission movement might push the starting date back a decade
+or two. But otherwise, the founding of the federal independent regulatory
+commissions, especially the ICC, marks the genesis from which the capture
+story usually unfolds. From Huntington’s marasmus to Kolko’s railroad case
+study24 to Stigler’s cliché, capture theory embeds some strong assumptions
+about regulation and administration as comparatively recent developments
+in American history – modern departures from some original position of
+nineteenth century smaller government, competitive markets, perhaps even
+laissez-faire. For most capture theorists, in other words, the history of economic regulation in America is distinctly short. Indeed, it is sometimes so
+short that it can be seen as aberrational – something of a flawed experiment with governmental intervention in economic life primarily associated
+with the excesses of the Progressive and New Deal eras. Regulatory intervention is thus safely, historically confined to the “market-in-exile”25 era
+between Herbert Spencer and Friedrich Hayek, when American liberal political economy went somewhat off the tracks. The capture thesis turns on a
+meta-narrative of exposing the short-term historical error in the interest
+of righting the wrong – returning policymaking to fundamental economic
+principles and restoring some kind of purer and lost original, natural, and
+classical order.
+In “Why Have the Socialists Been Winning,” Stigler made clear the political and ideological underpinnings of this kind of historical chronology,
+focusing directly on “the massive growth of governments in the twentieth
+century” – what he dubbed “the most conspicuous single change in the
+organization of social life – a growth so large and so pervasive that it would
+be as difficult to deny as the existence of the Pacific Ocean.” For Stigler, this
+distinctly modern “growth of government” was the problem to be investigated – the thing to be explained, criticized, and ultimately repudiated.
+He ventured a hypothesis that explicitly linked this historical point about a
+novel departure in the scale and scope of regulatory power to the capture
+thesis point about the rising power of special interest groups. For as Stigler
+saw it, the unprecedented “growth of government” after 1887 was directly
+attributable to “the purposeful use of public power to increase the incomes
+of particular groups in society.”26 Political imperfections thus joined
+24
+
+Gabriel Kolko, Railroads and Regulation, 1877–1916 (Princeton: Princeton University
+Press, 1965).
+25
+Cass R. Sunstein, Radicals in Robes: Why Extreme Right-Wing Courts Are Wrong for America
+(New York: Basic Books, 2006), 1 (on the “constitution-in-exile”).
+26
+George Stigler, “Why Have the Socialists Been Winning,” in Kurt R. Leube and Thomas
+Gale Moore, eds., The Essence of Stigler (Stanford: Hoover Institution Press, Stanford
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+34
+
+William J. Novak
+
+market imperfections to create something like the imperfect historical storm
+that yielded the modern regulatory state and the aberrational “growth of
+governments.”
+So, history is not peripheral to capture theory. Rather, temporal accounts
+and historical assumptions pervade the literature. Specific historical regulatory changes over time – particularly those of the Progressive and New
+Deal eras – seem to animate the entire inquiry. Unfortunately, however, the
+historical chronology of American regulation and administrative statecraft
+conventionally deployed by capture theory is flawed.
+One of the most important developments in American political and legal
+historiography over the past decade or two has been a radical revision in
+commonly accepted notions of the lack of economic regulation or national
+administration in early American history.27 Indeed, the overwhelming conclusion of a still rapidly expanding revisionist literature is that the history
+of economic regulation in America is distinctly long rather than short. Well
+before the founding of the Interstate Commerce Commission, the United
+States across all levels of government engaged in a huge number of regulatory
+and administrative activities. From the perspective of an emerging historical
+consensus, the growth of government is not a new deviation in American
+history; it is the historical norm. Economic regulation is a quite old rather
+than a relatively new phenomenon, found just as easily in the eighteenth
+and nineteenth centuries as in the twentieth and twenty-first centuries.
+Indeed, from the perspective of the overthrown Articles of Confederation,
+the growth of a stronger government, far from being a recent departure in
+the American political-economic tradition, is more like a founding raison
+d’etre. Administrative regulation in America was not invented in 1887 as a
+prelude to Progressive and New Deal reform; rather, it was a technique of
+governance with deep roots in the earliest political and economic practices
+of the American republic. Although it is still common for generalists to talk
+about American history in terms of a transition from nineteenth century
+laissez-faire to the twentieth century general welfare state, that political and
+ideological mythology has been under sustained attack from professional
+historians for almost half a century.
+On the local and state level, a whole series of historical monographs have
+been written challenging the myth of nineteenth century laissez-faire by
+University, 1986): 337–346. Although quite dissimilar in orientation, the corporate liberal
+theory of capture also focused on this distinctive expansion of governmental power – what
+Kolko dubbed a distinctly new form of “political capitalism.”
+27
+For an overview of just a small segment of this literature, see William J. Novak, “The Myth
+of the Weak American State,” The American Historical Review 113 (2008), 752.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+35
+
+documenting a long history of market policing, public works, inspection
+laws, and health and safety regulations governing almost every aspect of
+social and economic life before the Civil War.28 More importantly and more
+recently, at the national level, scholars such as Jerry Mashaw, Richard John,
+Gautham Rao, Nick Parrillo, and Max Edling have been making a powerful
+case that the story of national economic regulation and administrative governance needs to begin in 1787 not 1887.29 As Mashaw’s new book on “The
+Lost One Hundred Years of American Administrative Law” demonstrates
+clearly, the U.S. economy has developed in the shadow of almost constant
+and continuous scrutiny, investigation, promotion, protection, regulation,
+and redistribution by a cadre of public officers and national economic
+regulators.30
+These are but few select examples from recent historical scholarship. A
+more comprehensive, but still quite selective list of scholars who have worked
+seriously and substantively on the long, distinctively non-aberrational history of regulation and administration in the United States includes a broad
+cross-section of the modern American social science community: Richard
+28
+
+I am thinking here primarily of the so-called “commonwealth studies” of regulation in
+antebellum America – a literature on which I build in my own monograph, The People’s
+Welfare: Law and Regulation in Nineteenth-Century America (Chapel Hill: University of
+North Carolina Press, 1996). An exhaustive bibliography of the commonwealth studies
+would make for a ridiculously long footnote. Here are the classics: Oscar and Mary Flug
+Handlin, Commonwealth: A Study of the Role of Government in the American Economy:
+Massachusetts, 1774–1861, rev. ed. (Cambridge, MA: Harvard University Press, 1969);
+Louis Hartz, Economic Policy and Democratic Thought: Pennsylvania, 1776–1860 (New
+York: Cambridge University Press, 1948); Gerald D. Nash, State Government and Economic
+Development: A History of Administrative Policies in California, 1849–1933 (Berkeley: University of California, 1964); and Carter Goodrich, Government Promotion of American
+Canals and Railroads, 1800–1890 (New York: Columbia University Press, 1960). However,
+it is hard to get an idea of the full import of this school without also including the work of
+Harry Scheiber on the Ohio canal era, Milton Heath, Bray Hammond, James Neal Primm,
+George Miller, Paul Gates, and Edwin M. Dodd. For fuller bibliographical summaries and
+analysis see Robert A. Lively, “The American System: A Review Article,” Business History
+Review 29 (1955): 91–6; and Harry N. Scheiber, “Government and the Economy: Studies of
+the ‘Commonwealth’ Policy in Nineteenth-Century America,” Journal of Interdisciplinary
+History 3 (1972): 135–51.
+29
+Jerry L. Mashaw, “Recovering American Administrative Law: Federalist Foundations,
+1787–1801,” Yale Law Journal 115 (2006): 1256–344; Max M. Edling, A Revolution in Favor
+of Government: Origins of the U.S. Constitution and the Making of the American State (New
+York: Oxford University Press, 2003); Richard R. John, Spreading the News: The American
+Postal System from Franklin to Morse (Cambridge, MA: Harvard University Press, 1995);
+John, “Governmental Institutions as Agents of Change: Rethinking American Political
+Development in the Early Republic, 1787–1835,” Studies in American Political Development
+11 (Fall 1997): 347–80.
+30
+Jerry L. Mashaw, Creating the Administrative Constitution: The Lost One Hundred Years of
+American Administrative Law (New Haven: Yale University Press, 2012).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+36
+
+William J. Novak
+
+Bensel, Ed Berkowitz, Alan Brinkley, Elliot Brownlee, Daniel Carpenter,
+Michele Landis Dauber, Martha Derthick, Dan Ernst, Gary Gerstle, Otis
+Graham, Joanna Grisinger, Oscar and Mary Handlin, Louis Hartz, Ellis
+Hawley, Sam Hays, Christopher Howard, Barry Karl, Michael Katz, Ira
+Katznelson, Morton Keller, Jen Klein, John Larson, Robert Lieberman,
+David Mayhew, Tom McCraw, Ajay Mehrotra, Sid Milkis, David Moss, Karen
+Orren, Steve Sawyer, Harry Scheiber, Theda Skocpol, Stephen Skowronek,
+Bat Sparrow, Jim Sparrow, Mark Wilson, John Witt, Jim Wooten – the list
+goes on and on.
+Yet the strange fact of the matter is that modern capture theory (focused
+directly as it is on trying to tell us something about patterns and tendencies of
+regulation in crucial eras of transition and transformation) rarely cites any
+of the authors or literatures listed previously. Somewhat curiously, capture
+theorists have been writing about and drawing bold conclusions from the
+history of the American regulatory state without actually consulting real
+histories of regulation. In consequence, the capture literature has been
+operating with a rather crimped and crabbed (if not outright fictional)
+portrait of the rise of the American regulatory state that no longer reflects
+the actual state of historical knowledge.
+However, does a longer and more accurate historical chronology of the
+American regulatory state really matter – can it actually affect the way in
+which we substantively think about capture in regulatory processes more
+generally? Can the simple act of historical re-periodization really affect the
+analytics and interpretation? I think so. Indeed, even on the most general
+interpretive level, the vast range of extraordinarily diverse regulatory initiatives and practices currently being unearthed by historians as coincident
+with the earliest economic development of the United States simply resists
+easy, uniform categorization within a capture framework. The new histories
+provide an archive of new materials with which to investigate early national
+regulatory initiatives (e.g., the national steamboat inspection regime that
+dates from the late 1830s) as well as the habits and practices of the first
+real independent commissions (e.g., the Patent Office).31 These histories
+also suggest that regulation is not something that originates historically
+outside of the development of a market economy (and at some later date
+for exogenous reasons), but is historically endemic to and constitutive of
+it. However, let me suggest another more specific way in which changing
+31
+
+John G. Burke, “Bursting Boilers and the Federal Power,” Technology & Culture 7 (1966):
+1; Steven W. Usselman and Richard R. John, “Patent Politics: Intellectual Property, the
+Railroad Industry, and the Problem of Monopoly,” Journal of Policy History 18 (2006): 96.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+37
+
+how we think about the history of regulation might lead to a reevaluation
+of capture, regulation, and public and private interest more generally.
+CORRUPTION: THE ORIGINAL CAPTURE THEORY
+
+Obviously, the first thing that the long history of American regulation
+opens up is a broader time horizon within which scholars must grapple
+with regulatory cause and effect, expectation and outcome, and success and
+failure. Lengthening the historical timeline greatly increases the range of
+factors behind the regulatory impulse and multiplies the social, political,
+and economic contexts out of which regulation emerged as a viable solution.
+This longer chronology thus disrupts some of the simple and politically
+freighted storylines that too often accompany the conventional eras that
+preoccupy capture theory: for example, Progressivism, the New Deal, or the
+new social regulation of the 1960s and 1970s. Looking at the formation of the
+ICC as an unsurprising mid-level development in a long regulatory history
+rather than as a sudden new point of departure (yet alone a violent rupture)
+in the American governmental tradition provides a different context from
+which to evaluate the interpretive implications of the capture narrative.
+More particularly, a longer chronology retrospectively highlights the nature
+of the special problems that regulation was responding to rather than the
+regulatory solution and the inevitable problems of implementation going
+forward. Capture theory all too often uses history like a rearview mirror,
+reading history backward from the present to the historical origin of a
+particular regulatory regime. In contrast, the long history of regulation in
+America recommends reading history forward starting with the specific
+historical reasons for the emergence of one set of regulatory policies over
+existing alternatives.
+One thing highlighted by that longer historical perspective is the distinctive set of concerns articulated by reformers themselves in self-consciously
+redesigning the institutions of an existing American regulatory state at the
+turn of the twentieth century. In contrast to the caricature of regulatory
+reform frequently portrayed in the capture literature, progressives did not
+“invent” regulation, nor did they naively advocate regulatory solutions in
+the interest of some ill-specified and general “protection and benefit of the
+public at large.”32 Rather, the chief architects of progressive regulation and
+administration – people such as Frank Goodnow, Ernst Freund, Woodrow
+Wilson, Walton Hamilton, Felix Frankfurter, and Milton Handler – were
+32
+
+Stigler, “The Theory of Economic Regulation,” 1.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+38
+
+William J. Novak
+
+very serious and careful students of American (as well as European) political,
+regulatory, and economic history. They were under no illusions that the relationships of private and public interest or competition and democracy were
+simple matters (much less coverable in five pages in a new law and economics
+journal). And they were anything but unaware that businesses, corporations,
+unions, interest groups, private associations, professional societies, and lobbying organizations could and would influence regulatory policymaking. In
+contrast to the idealistic public-interestedness frequently attributed to them
+in the capture literature, progressive reformers in the regulatory field were
+sophisticated moderns – known explicitly for their pragmatism, positivism,
+empiricism, skepticism, and critical realism.33 They helped professionalize the modern social sciences in the United States, and they were some
+of the shrewdest and most well-read and prolific students of law, politics,
+and economics in American intellectual history. Although the term capture
+might have been coined in the 1950s, 1960s, and 1970s, the economic and
+political phenomena it attempts to describe would hardly strike them as
+news.
+Indeed, one of the central problems that progressive reformers were consciously attempting to remedy through regulation was something that itself
+looks very much like a version of the problem of “strong” capture delineated
+by Dan Carpenter and David Moss in the introduction to this volume.34 The
+independent regulatory commissions were themselves designed to combat
+what progressives envisioned as a perennial problem in republican and
+democratic governance – that is, the tendency of private economic interests to capture the public political sphere. More particularly, they viewed
+late nineteenth century agglomerations of corporate wealth and power as
+producing a dangerous new form of the age-old threat of private interest
+trumping public democracy. Of course, they did not use the modern language (yet alone theory) of “capture” when they talked about this problem;
+rather in the vernacular of the time, they invoked the very old theme and
+problem of “corruption.”
+Although the capture thesis is frequently heralded as a new and distinctly
+contemporary economic theory, from the long perspective of history it looks
+more like old wine in new bottles. For there is simply no older theme in the
+Western legal and political tradition than the one highlighted by capture.
+33
+
+See, for example, James T. Kloppenberg, Uncertain Victory: Social Democracy and Progressivism in European and American Thought, 1870–1920 (New York: Oxford University Press,
+1986); Daniel T. Rodgers, Atlantic Crossings: Social Politics in a Progressive Age (Cambridge,
+1998).
+34
+Daniel Carpenter and David Moss, “Introduction,” Preventing Capture, 1–22.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+39
+
+In Plato’s Republic, Socrates noted that “our aim in founding the State
+was not the disproportionate happiness of any one class, but the greatest
+happiness of the whole.” In addition, he bemoaned “the corruption of
+society” whereby “the guardians of the laws and of the government are only
+seemingly and not real guardians” who “turn the State upside down” and
+ultimately destroy it.35 Aristotle’s Politics also decried the corrupting effects
+of private interest and private vice on the commonwealth noting, “The true
+forms of government, therefore, are those in which the one, or the few, or
+the many, govern with a view to the common interest; but governments
+which rule with a view to the private interest, whether of the one, the few,
+or the many, are perversions.”36
+As Gordon Wood, J. G. A. Pocock, and many other historians have convincingly argued, it was precisely this classical tradition from Aristotle to
+Montesquieu and its preoccupation with corruption and the private capture of the public sphere that structured the revolutionary political thinking
+of the original American founders. As Wood put it, “When the American
+Whigs described the English nation and government as eaten away by ‘corruption,’ they were in fact using a technical term of political science, rooted
+in the writings of classical antiquity, made famous by Machiavelli, developed
+by the classical republicans of seventeenth-century England, and carried into
+the eighteenth century by nearly everyone who laid claim to knowing anything about politics.”37 Anyone who knew anything about politics in the late
+eighteenth century was well aware of the dangers of “corruption” and the
+way the legislature and other branches could be turned from the public good
+by the force of private vice, group interest, and/or ministerial manipulation.
+Two hundred years before the emergence of George Stigler, James Madison made a pretty compelling case for himself as the original American
+capture theorist in Federalist No. 10.38 There, of course, Madison explicitly warned about the influence of faction in “public councils” and “public administrations” whereby the interests or passions of “a majority or a
+35
+
+Plato, The Republic: The Complete and Unabridged Jowett Translation (New York: Vintage
+Books, 1991), Book IV, 129–30. Socrates also offered a bit of wisdom on the priority
+of politics over economics: “Our opponent is thinking of peasants at a festival, who are
+enjoying a life of revelry, not of citizens who are doing their duty to the State.”
+36
+Aristotle, The Politics and The Constitution of Athens (New York: Cambridge University
+Press, 1996), Book III, 71.
+37
+Gordon S. Wood, The Creation of the American Republic, 1776–1787 (Chapel Hill: University of North Carolina Press, 1969), 32–3; J. G. A. Pocock, The Machiavellian Moment:
+Florentine Political Thought in the Atlantic Republic Tradition (Princeton: Princeton University Press, 1975).
+38
+James Madison, “The Federalist No. 10: The Utility of the Union as a Safeguard against
+Domestic Faction and Insurrection (continued),” Daily Advertiser, November 22, 1787.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+40
+
+William J. Novak
+
+minority of the whole” were pursued adversely to “the public good” or “the
+permanent and aggregate interests of the community.” Madison concluded,
+moreover, that the causes and sources of factions, interests, and parties could
+not (and should not)39 be stamped out or eliminated, for “the latent causes
+of faction are . . . sown in the nature of man.” As he wisely noted, “It is in
+vain to say that enlightened statesmen will be able to adjust these clashing
+interests, and render them all subservient to the public good.”
+However, notably, and thankfully, Madison at this point did not put
+down his pen in pessimistic resignation about the prospects for legislation,
+regulation, or republican governance. Rather, the famous conclusion to
+which he was drawn was that although “the causes of faction cannot be
+removed,” relief could still “be sought in the means of controlling its effects.”
+In other words, the existence of faction, corruption, and capture was not fatal
+to the conceit of legislation and regulation in the public interest. Rather,
+they were prods to better public institutional design – the never-ending
+task of thinking through better plans of governance to control the noxious
+effects of all-too-human corruption: “factious tempers,” “local prejudices,”
+“sinister designs,” and the “cabals of the few.” In Federalist No. 10, Madison
+thought carefully through representation, voting, and the appropriate size
+of a body politic, because, as he put it, “The regulation of these various and
+interfering interests forms the principal task of modern legislation.”
+Long before the advent of the twentieth century, in other words, concern
+about private interests or factions capturing public governing institutions
+and bending them toward selfish ends rather than general benefits was a
+well-developed (indeed perhaps the central) trope in American political
+and economic commentary. In the Jacksonian era, just such a perspective
+dominated critiques of special incorporation via legislative charters. From
+Jackson’s notorious fight with the Bank of the United States to calls for more
+general incorporation in states such as Massachusetts and Pennsylvania,
+reformers questioned the mixture of public/private motive and profit that
+guided the legislative distribution of monopoly privileges, land grants,
+rights-of-way, and other valuable statutory benefits. As the Boston Daily
+Herald complained in 1836, “They are not for the public good – in design
+or end. . . . They are for the aggrandizement of the stockholders – for the
+39
+
+On the attempt to eliminate the causes of faction, Madison contended that the “remedy”
+would be “worse than the disease.” As he put it, “Liberty is to faction what air is to fire, an
+aliment without which it instantly expires. But it could not be less folly to abolish liberty,
+which is essential to political life, because it nourishes faction, than it would be to wish the
+annihilation of air, which is essential to animal life, because it imparts to fire its destructive
+agency.”
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+41
+
+promotion of the interest of the few. . . . We wish to have public good and
+private speculation more distinctly separated.”40
+So, although seldom recognized by capture theory, it should come as
+no surprise that by the turn of the twentieth century, the problem of private interest in public governance was well understood. Indeed, the theme
+of public corruption was something of a leitmotif for progressive reform.
+Beyond the well-known exposes of the muckraking journalists Ida Tarbell,
+Lincoln Steffens, and Ray Stannard Baker who gathered around McClure’s
+Magazine, progressive intellectuals and social scientists mounted a sustained attack on the corruptions of the so-called Gilded Age. So strong
+was the progressive preoccupation with private influence on public policy
+that historian Richard L. McCormick placed the “Discovery that Business
+Corrupts Politics” – the awakening of the people to illicit business influence
+in American public life – at the very origin point of progressivism itself.41
+Progressives used “corruption” in its classical sense indicating the despoiling
+of a distinctly collective public sphere (a republic supposedly devoted to res
+publica – the public things) by private and individual economic interests.
+They spent a great deal of time exposing the various frauds, thefts, bribes,
+extortions, and schemes that linked unvirtuous robber barons to corrupt
+politicos (to use Matthew Josephson’s evocative terms).42
+However, although concern about public corruption was as old as the
+republic, what was new at the turn of the twentieth century was an acute
+awareness of the unprecedented threat to the polity posed by the arrival of
+large-scale business and corporate interests in rail, oil, meatpacking, and
+insurance, whose corruptions were cataloged in a seemingly endless series
+of reports and even fictional portrayals from Charles and Henry Adams’s
+Chapters of Erie (1871) to Frank Norris’s McTeague, The Octopus, and The
+Pit (1899–1903).43 “Laissez-faire constitutionalism” was understood as a
+40
+
+Oscar Handlin and Mary Flug Handlin, Commonwealth: A Study of the Role of Government
+in the American Economy, Massachusetts, 1774–1861 (New York: Cambridge University
+Press, 1969), 213; Louis Hartz, Economic Policy and Democratic Thought: Pennsylvania,
+1776–1860 (Cambridge: Harvard University Press, 1948); James Willard Hurst, The Legitimacy of the Business Corporation (Charlottesville: University Press of Virginia, 1970).
+41
+Richard L. McCormick, “The Discovery that Business Corrupts Politics: A Reappraisal of
+the Origins of Progressivism,” American Historical Review 86 (1981): 247–274.
+42
+Matthew Josephson, The Robber Barons: The Great American Capitalists, 1861–1901 (New
+York, 1934); Matthew Josephson, The Politicos, 1865–1896 (New York: Harcourt Brace,
+1938).
+43
+Charles Francis Adams, Jr., and Henry Adams, Chapters of Erie (Boston: J.R. Osgood and
+Company, 1871); Frank Norris, McTeague: A Story of San Francisco (New York: Doubleday
+and McClure Co., 1899); Norris, The Octopus: A Story of California (New York: P.F. Collier,
+1901); Norris, The Pit: A Story of Chicago (New York: Doubleday, Page, and Co., 1903).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+42
+
+William J. Novak
+
+corruption of the American rule of law in precisely this sense – as a
+usurpation (a capture) of the public law by private economic interests and
+philosophies. In “Business Principles in Law and Politics,” Thorstein Veblen
+contended that “constitutional government has, in the main, become a
+department of the business organization and is guided by the advice of
+business men.”44 For just such sentiments, Veblen became something of a
+prophet for capture historians like Kolko, Weinstein, and Sklar.
+However, the important point here is that there was nothing particularly
+unusual or prophetic in Veblen’s perspective. Rather it was common wisdom – the baseline assumption from which much American constitutional
+development and almost all progressive reform proceeded.
+In the economic regulatory field, the reformer who most clearly articulated the explicit relationship between regulation and corruption was
+Charles Francis Adams, Jr. It goes without saying that Adams was neither
+a wooly-headed idealist nor particularly naı̈ve about the limits and possibilities of American politics. A lawyer, a historian, a regulator, a railroad
+executive, and a member of one of the most influential families in American
+politics and letters, Adams was well equipped to size up the problem of railroad economics in the late nineteenth century and its impact on the body
+politic. The picture he painted was not pretty, let alone rational. He talked
+about the railroad problem not in terms of market failure or externalities
+but as nothing less than a national “emergency.”45 In “A Chapter of Erie,” he
+described the battle for control of the Erie Railroad between the Erie men –
+Jay Gould, Jim Fisk, and Daniel Drew – and Cornelius Vanderbilt as nothing
+less than the “Erie war.”46 Although capture theory’s ex post analysis frequently draws attention to the “roads not taken,” for example, competition
+or legislative regulation, Adams made clear ex ante that the starting point
+for regulatory reform was the explicit recognition that those “other roads
+were indeed taken” and found completely wanting. As Adams started his
+chapter on “The Government and the Railroad Corporations”: “Neither
+competition nor legislation have proved themselves effective agents for the
+regulation of the railroad system.” And so Montesquieu-like, Madison-like,
+he probed further: “What other and more effective [instrument] is there
+within the reach of the American people?”47
+44
+
+Thorstein Veblen, The Theory of Business Enterprise (New York: A.M. Kelley, 1904), 287.
+Charles Francis Adams, Jr., “The Railroad System,” in Charles Francis Adams, Jr., and
+Henry Adams, Chapters of Erie and other Essays (Boston: J.R. Osgood and Company,
+1871), 333–429, 414.
+46
+Charles Francis Adams, Jr., “A Chapter of Erie,” in Adams and Adams, Chapters of Erie,
+1–99, 6.
+47
+Adams, “The Railroad System,” 414.
+45
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+43
+
+Adams’s other explicit starting point was capture – or as the progressives
+referred to it – corruption.48 For Adams, the railroad problem involved not
+just the economic problem of expensive “natural monopolies” operating
+in an atmosphere of “ruinous competition” between states and localities
+(as Herbert Hovenkamp summarized the situation: “railroads seemed destined to be either filthy rich or perpetually broke”).49 Rather, anticipating
+Richard McCormick’s analysis, Adams recognized that the railroad problem also involved the explicitly political problem of business corrupting
+the body politic – “the sturdy corporation beggars who infested the lobby”
+of state legislatures.50 As Adams saw it, “Our legislatures are now universally becoming a species of irregular boards of railroad direction” creating
+persistent “scandal and alarm.” “The effects upon political morality have
+been injurious,” he suggested, adding that “many States in this country, and
+especially New York, New Jersey, Pennsylvania, and Maryland have now for
+years notoriously been controlled by their railroad corporations.” Noting
+that “there is no power which can purify a corrupted legislature,” Adams
+turned instead to the regulatory commission – independent, permanent,
+and competent tribunals that he analogized to courts.51
+Now, at this critical juncture in the historical development of the modern
+regulatory commission, it must be noted that Charles Francis Adams was
+under no illusion that regulatory commissions would be somehow magically immune from private influence, economic interest, or other forms of
+group special pleading. On the contrary, he specifically anticipated the exact
+question of regulatory capture as early as 1871: “But it will be said, Who
+will guard the virtue of the tribunal? Why should the corporations not deal
+with [the commissions just] as [they did] with the legislatures?” Who would
+48
+
+In Prophets of Regulation, Thomas K. McCraw draws attention to one of Adams’s many
+classic depictions of Gilded Age corruption during the Erie war featuring an interrupted
+meeting of Daniel Drew in his New York office:
+They were speedily aroused from their real or affected tranquility by trustworthy
+intelligence that processes for contempt were already issued against them, and that
+their only chance of escape from incarceration lay in precipitate flight. At ten o’clock
+the astonished police saw a throng of panic-stricken railway directors – looking more
+like a frightened gang of thieves, disturbed in the division of their plunder, than like
+the wealthy representatives of a great corporation – rush headlong from the doors
+of the Erie office, and dash off in the direction of the Jersey ferry. In their hands
+were packages and files of papers, and their pockets were crammed with assets and
+securities. One individual bore away with him in a hackney-coach bales containing six
+millions of dollars in greenbacks.
+
+McCraw, Prophets of Regulation (New York: Cambridge University Press, 1984), 16.
+Herbert Hovenkamp, Enterprise and American Law, 1836–1937 (New York: Cambridge
+University Press, 1991), 148.
+50
+Adams, “The Railroad System,” 427.
+51
+Ibid., 417–418.
+49
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+44
+
+William J. Novak
+
+guard the guardians? Adams’s answer to this question was very important
+to the overarching goals and perspectives that animate this volume of essays
+on “Preventing Capture.” For like Madison, Adams concluded that there
+was no final answer, no silver bullet, no complete economic theory or political model that would forever preclude the capture and corruption of any
+governmental institution in a democratic republic. Rather, the very nature
+and history of democracy suggested that the capture of public institutions
+by private interest was an ever-present weakness and danger. Vigilance was
+as necessary as it was eternal. The public virtue of the people themselves,
+of course, was perhaps the best line of defense against such corruption and
+capture, but as Madison famously observed long ago, “If men were angels,
+no government would be necessary. If angels were to govern men, neither
+external nor internal controls on government would be necessary.”52 No,
+Adams recognized that corruption and capture were endemic and historic
+problems in any truly popular form of government and that the only viable
+solution was the pragmatic, ongoing, never-ending Madisonian constitutional tradition of, as Adams marvelously phrased it, continually developing “all the checks and balances that human ingenuity can devise.”53 In the
+late nineteenth and early twentieth centuries, the independent regulatory
+commission offered a new, historical check and balance to offset private
+economic corruption and public legislative capture. Adams had no preconception that further checks and balances would not be necessary in a
+democratic American future.
+So, progressive regulatory reformers were certainly not lacking basic
+awareness about the problem of capture. Quite the contrary, they explicitly emphasized the theme of corruption as a prelude to and a basis for
+their own reform proposals. The peak years of muckraking disclosure from
+1904 to 1908 were accompanied by a wave of legislative activity specifically designed to curb the influence of private interest and private money
+in American politics, including federal and state corrupt practices, laws
+regulating campaign contributions and the solicitation of funds from corporations, laws regulating legislative lobbying, laws prohibiting free transportation passes, and political reforms such as direct primaries.54 The development of the independent regulatory commissions (as well as economic
+52
+
+James Madison, “The Federalist No. 51: The Structure of the Government Must Furnish
+the Proper Checks and Balances Between the Different Departments,” Independent Journal,
+February 6, 1788.
+53
+Ibid., 427 (emphasis added).
+54
+McCormick, “Business Corrupts Politics,” 266–7; Earl Ray Sikes, State and Federal Corrupt
+Practices Legislation (Durham: Duke University Press, 1928); Helen M. Rocca, Corrupt
+Practices Legislation (Washington: National League of Women Voters, 1928).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+45
+
+regulatory and police power measures) must be understood in this larger
+context of: (a) long American experience with regulatory and administrative
+techniques; and (b) a heightened concern about the susceptibility of existing
+democratic politics to capture by new organizations of private economic
+interest.
+Viewing regulation and administration within this much longer arc of
+historical American regulatory practice (as opposed to exceptionalist departures from nonexistent traditions of laissez-faire) thus highlights a much
+more complex backdrop to regulatory change and innovation than suggested by the simple binary of public interest and private capture. Proponents of regulation were not unaware of the potential for corruption in
+state-directed activities – in fact, it was one of their main concerns about
+the status quo ante. Indeed, their original and almost obsessive focus on
+the undue influence of private economic interest on existing configurations
+of democratic politics eventually brought them to a more comprehensive
+reevaluation and critique of the new systemic forms of private coercion
+emerging from within the modern corporate economy. The problem of
+private “governing power” was not an oversight in the progressive theory of
+economic regulation; it was a driving force.
+In the end, however, progressive reformers did not rest content with
+“corruption” analysis or some kind of incipient “capture” theory. Rather,
+their early inquiries into the influence of private economic actors on democratic politics soon gave way to a much more sophisticated concern with the
+role of “private coercion” more generally in American social and economic
+life. Beginning in the late nineteenth century and extending through to the
+early New Deal, a rather extraordinary group of legal, economic, and social
+science authors (some of whom Barbara Fried dubbed the “first law and
+economics movement”) developed a deeper critique of the role of private
+economic power in modern societies.55 Here organized business interest
+came to be seen as a threat not simply because of its secondary effects on
+the corruption of the polity, but as a primary concern in and of itself. The
+problem of organized private coercion – the creation of new forms of private
+55
+
+Barbara H. Fried, The Progressive Assault on Laissez Faire: Robert Hale and the First Law and
+Economics Movement (Cambridge, MA: Harvard University Press, 1998). The list of key
+authors in this tradition (and I include a prototypical text for each) includes Henry Carter
+Adams (“Relation of the State to Industrial Action” and “Economics and Jurisprudence”),
+Thorstein Veblen (Theory of Business Enterprise), Richard T. Ely (Property and Contract
+in their Relations to the Distribution of Wealth), John R. Commons (Legal Foundations of
+Capitalism), John Maurice Clark (Social Control of Business), Bruce Wyman (Control of
+the Market), Samuel P. Orth (Relation of Government to Property and Industry), Robert
+Lee Hale (Freedom Through Law), Walton Hale Hamilton (The Politics of Industry), and
+Rexford G. Tugwell (The Economic Basis of Public Interest).
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+46
+
+William J. Novak
+
+despotism in large and influential corporations and property holders (what
+Roscoe Pound once talked about as “the new feudalism”) – supplemented
+earlier concerns about the corruptibility and capture of democratic power.
+The economic power of business came to be seen as problematic not simply
+for its undue influence on politics, but because of its implications for the
+imbalance and the concentration of power and wealth more generally in a
+supposedly free and democratic republic.
+Robert Lee Hale’s jurisprudential contribution (along with the work of
+Commons and Ely in economics and Pound and Morris Cohen in law)
+came when he detected in the new economic organizations of the late nineteenth and early twentieth centuries some of the attributes of “sovereignty” –
+unchecked social coercion and force. The problem of unprecedented private power in trusts, unions, corporations, and other large associations
+became the focus of legal-economic inquiry and experimentation in the
+first decades of the twentieth century precisely because such organizations
+seemed to operate beyond the jurisdiction of the traditional authority of
+state legislatures and common laws. The legal-governmental remedy in
+these analyses was not a series of political regulations insulating the polity
+from economic influence (yet alone a traditional reliance on common law
+litigation or ex post criminal prosecutions), but the development of new regulatory police powers and administrative agencies that envisioned an active
+state apparatus as a continuous, countervailing force to the organization of
+new forms of economic power in modern American life.
+CONCLUSION
+
+When looking at the history of economic regulation in the United States,
+capture theory frequently assumed that the main problem that regulation
+was attempting to solve was essentially an economic problem – for which a
+political solution was proposed. Theorists such as George Stigler and Gary
+Becker then went further and examined the political solution itself from the
+perspective of economic theory – that is, Stigler’s promotion of an economic
+“license to practice on the rational theory of political behavior.” From such
+an “economics all the way down” perspective, democratic political solutions
+were found to be (surprise, surprise) “inefficient.” Consequently, regulatory
+policies almost always fared poorly when compared with some kind of ideal,
+theoretical market solution. In the process, democracy and government
+went from being viewed as the key political forums for the resolution of
+social and economic problems to being viewed, in Ronald Reagan’s famous
+formulation, as part of (if not all of) the problem.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+A Revisionist History of Regulatory Capture
+
+47
+
+However, capture theory went somewhat astray in assuming that economic regulation was primarily motivated by an economic problem. As
+progressive theorists made perfectly clear in text after text, the problem of
+economic concentration at the turn of the century was viewed by and large
+as a political problem – both in terms of the unprecedented influence of large
+corporations on politics per se as well as the more subtle corrosive effects
+of an increasingly unequal distribution of wealth and power in an allegedly
+democratic regime. Political failure rather than market failure was the first
+priority of the reform tradition. And democracy came before competition.
+In our own neoliberal era, it is a bit hard to fully comprehend this fundamentally political rather than economic perspective despite 2,000 years
+of development in the Western philosophical tradition and 200 years of
+experience with American constitutionalism. However, something of the
+continued salience of the priority of democracy over economy was suggested by Justice Oliver Wendell Holmes, Jr., when he opened the most
+famous dissenting opinion in American history with these words:
+This case is decided upon an economic theory which a large part of the country does
+not entertain. If it were a question whether I agree with that theory I should desire
+to study it further and longer before making up my mind. But I do not conceive
+that to be my duty, because I strongly believe that my agreement or disagreement
+has nothing to do with the right of a majority to embody their opinions in law.56
+
+For Holmes, Herbert Spencer’s Social Statics and late nineteenth century
+theories of laissez-faire prioritized economy over democracy and thus curiously elided or confused the basic principle undergirding the historic development of popular government in the Western world – the right of the
+people to embody their opinions in law. In many ways, late twentieth century capture theory made something of the same mistake.57 Working with
+a foreshortened narrative of nineteenth century laissez-faire and twentieth
+century regulation, capture theorists missed the degree to which the problem of capture and corruption animated most previous American political, constitutional, and legislative (as well as regulatory) development –
+and indeed motivated the development of the regulatory commission in
+the first place. Thinking that the capture problem was peculiar to the regulatory form rather than endemic to democratic institutions in general,
+modern capture theory mistook the discovery of a general precondition for
+an immanent and incisive critique. Consequently, capture theory’s traditional prescription – usually some form of deregulation or simply ending
+56
+57
+
+Lochner v. New York, 198 U.S. 45 (1905) (emphasis added).
+As Mark Twain observed, “History may not repeat itself, but it sometimes rhymes.”
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+48
+
+William J. Novak
+
+the regulation as we know it – ended up being as shortsighted as the myopic
+history that stood behind it. The Jacksonian critique of the role of special
+influence and interest in the Bank of the United States did not mean the end
+of central banking in American history. And the discovery of regulatory or
+agency capture does not signal the end of regulation in America.
+For, as this chapter has attempted to demonstrate, the regulatory impulse
+itself is rooted in a much longer and wider historic American struggle with
+the problem of corruption – with the persistent threat that agglomerations
+of private interest continually pose to the aspirations of the commonwealth.
+As James Madison reminded us long ago, “It is of great importance in a
+republic, not only to guard the society against the oppression of its rulers; but
+to guard one part of the society against the injustice of the other part.”58 If
+history is any guide (or contemporary politics any indicator), the problems
+of faction, special interest, special privilege, and private coercion are not
+going away anytime soon in this still open and democratic society. And it
+is but a chimera to presume that a simple dismantling of an earlier era’s
+checks and balances and regulatory institutions will somehow automatically
+and spontaneously vitiate the age-old problems of inequality, privilege,
+and private (as well as public) coercion. The problems of regulation and
+capture will not be solved by fleeing to some kind of imaginary laissezfaire past. No, the way forward involves neither ignoring the problems
+of corruption and capture, nor capitulating to the private interests that
+seek undue influence in the polity as well as the economy. Rather, a more
+sensible approach is recommended by both Western political tradition and
+American constitutional experience. The chapters in this volume build on
+the example of Montesquieu and Madison in embracing fresh thought on
+the question of institutional (as well as constitutional) design to prevent
+capture in new and uncertain times. And they continue the endless, vigilant
+democratic-republican project endorsed by Charles Francis Adams – the
+simultaneously mundane and heroic task of attempting to blunt the force
+of perennial public corruptions and private coercions by simply piling on
+“all the checks and balances that human ingenuity can devise.”
+
+58
+
+James Madison, “The Federalist No. 51: The Structure of the Government Must Furnish
+the Proper Checks and Balances Between the Different Departments,” Independent Journal,
+February 6, 1788.
+
+https://doi.org/10.1017/CBO9781139565875.004 Published online by Cambridge University Press
+
+

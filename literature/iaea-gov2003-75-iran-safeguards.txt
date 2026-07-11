@@ -1,0 +1,1653 @@
+Title: Implementation of the NPT Safeguards Agreement in the Islamic Republic of Iran
+Author: IAEA Director General (Mohamed ElBaradei)
+Date: 10 November 2003
+Document: GOV/2003/75
+URL: https://www.iaea.org/sites/default/files/documents/gov2003-75.pdf
+Type: IAEA Board of Governors Report (full text, extracted from PDF)
+
+Description: The landmark November 2003 IAEA report documenting Irans two decades of
+undeclared nuclear activities, including secret centrifuge enrichment at Natanz, laser
+enrichment experiments, and plutonium separation -- all conducted in violation of Irans
+NPT safeguards agreement. This report was central to the subsequent noncompliance finding.
+
+--- FULL TEXT BELOW ---
+
+International Atomic Energy Agency
+
+Derestricted 26 November 2003
+(This document has been derestricted at the meeting of the Board on 26 November 2003)
+
+Board of Governors
+
+GOV/2003/75
+Date: 10 November 2003
+
+Original: English
+
+For official use only
+Item 3 (b) of the provisional agenda
+(GOV/2003/71)
+
+Implementation of the NPT Safeguards
+Agreement in the Islamic Republic of Iran
+Report by the Director General
+
+1. This report on safeguards issues in the Islamic Republic of Iran (hereinafter referred to as Iran)
+responds to paragraph 7 of the Board of Governors’ resolution GOV/2003/69 of 12 September 2003. It
+covers relevant developments from the time of the Director General’s visit to Iran on 20-21 February
+2003 and Iran’s acknowledgement of its centrifuge enrichment programme, but concentrates on the
+period since his last report (GOV/2003/63 of 23 August 2003). This report begins with the background
+to the issues in question (Section A) and a chronology of recent events (Section B). Information on the
+Agency’s verification activities is summarized in Section C, organized according to the various
+technical processes involved (the details of which are set out in Annex 1). Section D provides a
+summary of the Agency’s findings, while Section E sets out its current assessment and next steps.
+Annexes 2 and 3 to this report contain, respectively, a list of the locations identified to date as relevant
+to the implementation of safeguards in Iran, and a map showing those locations. Annex 4 is a list of
+relevant abbreviations and terms used in the text of the report.
+
+A. Background
+2. At the meeting of the Board of Governors on 17 March 2003, the Director General reported on
+discussions taking place with Iran on a number of safeguards issues that needed to be clarified and
+actions that needed to be taken in connection with the implementation of the Agreement between Iran
+and the IAEA for the Application of Safeguards in Connection with the Treaty on the
+Non-Proliferation of Nuclear Weapons (INFCIRC/214) (the Safeguards Agreement).
+3. On 6 June 2003, the Director General submitted to the Board of Governors a report
+(GOV/2003/40) providing further information on the nature of the safeguards issues involved and the
+actions that needed to be taken, and describing developments in that regard since March 2003. In that
+report, the Director General stated that Iran had failed to meet its obligations under its Safeguards
+Agreement with respect to the reporting of nuclear material imported into Iran and the subsequent
+
+GOV/2003/75
+Page 2
+
+processing and use of the material, and the declaring of facilities and other locations where the
+material had been stored and processed. He described these failures and the actions being taken by
+Iran to correct them.
+4. On 18–19 June 2003, the Board considered the above report of the Director General. In its
+conclusions, the Board noted its concern about the number of past failures by Iran to report material,
+facilities and activities as required by its safeguards obligations, and noted the actions taken by Iran to
+correct those failures. The Board urged Iran to rectify promptly all of the safeguards problems
+identified in the Director General’s report and to resolve questions that remained open. It welcomed
+Iran’s reaffirmed commitment to full transparency and expressed its expectation that Iran would grant
+the Agency all necessary access. The Board encouraged Iran, as a confidence building measure, not to
+introduce nuclear material at the Pilot Fuel Enrichment Plant (PFEP) located at Natanz pending the
+resolution of related outstanding issues. The Board called on Iran to co-operate fully with the Agency
+in its ongoing work. It welcomed Iran’s readiness to look positively at signing and ratifying an
+Additional Protocol, and urged Iran to promptly and unconditionally conclude and implement such a
+protocol, in order to enhance the Agency’s ability to provide credible assurances regarding the
+peaceful nature of Iran’s nuclear activities, particularly the absence of undeclared material and
+activities.
+5. On 26 August 2003, the Director General submitted to the Board for its consideration a further
+report (GOV/2003/63) on relevant developments since June 2003. The report included: a summary of
+the state of the Agency’s understanding of Iran’s nuclear programme at that time; the Agency’s
+findings and assessments, including the identification of some additional failures to report and the
+issues that needed to be clarified (particularly with regard to enrichment); and the corrective actions
+that needed to be taken. In the report, the Director General noted an increased degree of co-operation
+by Iran, while noting that some of the information and access were at times slow in coming and
+incremental, and that some of the information was in contrast to that previously provided by Iran.
+6. At its meeting on 12 September 2003, the Board of Governors adopted a resolution
+(GOV/2003/69) in which it, inter alia:
+•
+
+Called on Iran to provide accelerated co-operation and full transparency to allow the Agency to
+provide at an early date the assurances required by Member States (GOV/2003/69, para. 1).
+
+•
+
+Called on Iran to ensure that there were no further failures to report material, facilities and
+activities that Iran is obliged to report pursuant to its Safeguards Agreement (GOV/2003/69,
+para. 2).
+
+•
+
+Called on Iran to suspend all further uranium enrichment related activities and, as a confidence
+building measure, any reprocessing activities, pending provision by the Director General of the
+assurances required by Member States and pending satisfactory application of the provisions of
+the Additional Protocol (GOV/2003/69, para. 3).
+
+•
+
+Decided that, in order to ensure Agency verification of non-diversion of nuclear material, it was
+essential and urgent that Iran remedy all failures identified by the Agency and co-operate fully
+with the Agency by taking certain specified actions by the end of October 2003 (GOV/2003/69,
+para. 4).
+
+•
+
+Requested all third countries to co-operate closely and fully with the Agency in the clarification of
+open questions on the Iranian nuclear programme (GOV/2003/69, para. 5).
+
+•
+
+Requested that Iran work with the Secretariat to sign, ratify and fully implement the Additional
+Protocol promptly and unconditionally, and as a confidence building measure to act henceforth in
+accordance with the Additional Protocol (GOV/2003/69, para. 6).
+
+GOV/2003/75
+Page 3
+
+7. The Board also asked the Director General to submit a report to the Board, in November 2003 or
+earlier if appropriate, on the implementation of the Board’s resolution, enabling it to draw definitive
+conclusions.
+
+B. Chronology since September 2003
+8. Between 14 and 18 September 2003, the Agency conducted a safeguards inspection at the Tehran
+Research Reactor (TRR) and at the PFEP in Natanz. The inspection activities at TRR included
+physical inventory verification and design information verification, as well as a number of activities to
+follow up on issues related to the natural uranium imported in 1991, including further examination of
+the cylinders from which imported UF6 gas was said to have leaked (see GOV/2003/63, para. 18).
+9. On 16 September 2003, the Agency met representatives of Iran to discuss the results of the
+analysis of the environmental samples taken at the Kalaye Electric Company in August 2003, which
+had revealed the presence of high enriched uranium (HEU) particles and low enriched uranium (LEU)
+particles which were not consistent with the nuclear material in the declared inventory of Iran. Also
+discussed were the results of the environmental sampling taken at PFEP, which had revealed the
+presence of other types of HEU particles, as well as LEU and other particles, not of a type on Iran’s
+inventory.
+10. The Deputy Director General for Safeguards (DDG-SG) and the Director of Safeguards
+Operations Division B (DIR-SGOB) travelled to Iran on 2–3 October 2003 to discuss the most urgent
+safeguards implementation issues that remained open. Following these discussions, a technical team of
+the Agency visited Iran from 4 to 12 October 2003 in order to carry out activities related to the
+verification of Iran’s activities in the areas of uranium conversion and laser and gas centrifuge
+enrichment. Following up on recent open source reports of enrichment activities being undertaken at
+an industrial complex in Kolahdouz in western Tehran, the team was permitted on 5 October 2003 to
+visit three locations which the Agency had identified as corresponding to those mentioned in the
+reports. While no work was seen at those locations that could be linked to uranium enrichment,
+environmental samples were taken.
+11. In a letter to the Agency dated 9 October 2003 from Mr. E. Khalilipour, Vice President of the
+Atomic Energy Organization of Iran (AEOI), Iran provided information that had not been provided
+earlier on research activities carried out on uranium conversion processes, including acknowledgement
+of laboratory and bench scale experiments. Specifically, Iran confirmed that, between 1981 and 1993,
+it had carried out at the Esfahan Nuclear Technology Centre (ENTC) bench scale preparation of UO2
+and, at the Tehran Nuclear Research Centre (TNRC), bench scale preparation of ammonium uranyl
+carbonate (AUC), UO3, UF4 and UF6.
+12. Between 13 and 22 October 2003, an Agency inspection team conducted safeguards inspections
+at PFEP and other facilities in Esfahan and Tehran. These inspections included follow-up activities
+related to the HEU and LEU particles found at the Kalaye Electric Company and at Natanz and to the
+newly acknowledged existence of nuclear material resulting from uranium conversion experiments.
+13. On 16 October 2003, at the invitation of the Iranian Government, the Director General met in
+Tehran with H.E. Dr. H. Rohani, Secretary of the Supreme National Security Council of Iran, to
+discuss the open issues requiring urgent resolution. These issues related to the use of nuclear material
+in the testing of centrifuges (including the presence of LEU and HEU particles at the Kalaye Electric
+Company and at Natanz); the testing of conversion processes; the purpose of uranium metal
+
+GOV/2003/75
+Page 4
+
+production; the existence of laser isotope enrichment; and details of Iran’s heavy water reactor
+programme. At this meeting, Dr. Rohani stated that a decision had been taken to provide the Agency,
+in the course of the following week, with a full disclosure of Iran’s past and present nuclear activities.
+He also expressed Iran’s readiness to conclude an Additional Protocol and, pending its entry into
+force, to act in accordance with the Protocol and with a policy of full transparency.
+14. Upon the request of the Iranian authorities, a meeting was held on 18–19 October 2003, also in
+Tehran, between legal, policy and technical staff of the Agency and Iranian officials to discuss issues
+related to the conclusion by Iran of an Additional Protocol.
+15. As a follow-up to the 16 October 2003 meeting, in a letter to the Director General dated
+21 October 2003 and received on 23 October 2003, H.E. Mr. R. Aghazadeh, Vice President of the
+Islamic Republic of Iran and President of the AEOI, reaffirmed that “the Islamic Republic of Iran
+ha[d] decided to provide a full picture of its nuclear activities, with a view to removing any
+ambiguities and doubts about the exclusively peaceful character of these activities and commencing a
+new phase of confidence and co-operation in this field at the international level.” Mr. Aghazadeh
+stated further in his letter that Iran was prepared “to provide, in full transparency, any additional
+clarifications that the Agency may deem necessary.”1
+16. In that letter, Iran acknowledged that: between 1998 and 2002 it had carried out some testing of
+centrifuges at the Kalaye Electric Company using UF6 imported in 1991; between 1991 and 2000 it
+had had a laser enrichment programme, in the course of which it had used 30 kg of uranium metal not
+previously declared to the Agency; and between 1988 and 1992 it had irradiated 7 kg of UO2 targets
+and extracted small quantities of plutonium. Attached to the letter was significant additional
+information with respect to those activities, as well as information concerning Iran’s conversion and
+heavy water reactor programmes.
+17. Between 27 October and 1 November 2003, a technical team from the Agency, led by
+DIR-SGOB and including centrifuge technology experts, visited Iran to follow up on these and other
+issues, including, in particular, the source of HEU and LEU contamination.
+18. On 10 November 2003, the Agency received from the Government of Iran a letter of the same
+date in which Iran conveyed its acceptance of the draft text of the Additional Protocol based on the
+Model Additional Protocol (INFCIRC/540 (Corr.)) Iran indicated that it was prepared to sign the
+Additional Protocol, and that, pending its entry into force, Iran would act in accordance with the
+provisions of that Protocol.
+19. On the same day, the Iranian Government informed the Director General that it had decided to
+suspend, with effect from 10 November 2003, all enrichment related and reprocessing activities in
+Iran2, and specifically: to suspend all activities on the site of Natanz, not to produce feed material for
+enrichment processes and not to import enrichment related items.
+
+__________________________________________________________________________________
+1
+
+In his letter, Mr. Aghazadeh also referred to his Government’s expectation that the Agency would “take cognizance, in
+preparing its report, of Iran’s concerns and constraints for the full disclosure of detailed information about these activities in
+the past, notably the concern about expansion of illegal sanctions to prevent Iran from exercising its inalienable right to
+nuclear technology for peaceful purposes stipulated in Article IV of the [Treaty on the Non-Proliferation of Nuclear
+Weapons].”
+2
+
+It should be noted also that, on 21 October 2003, the Iranian Government and the Foreign Ministers of France, Germany
+and the United Kingdom issued in Tehran an agreed statement on Iran’s nuclear programme. In that statement, Iran indicated
+that it had “decided voluntarily to suspend all uranium enrichment and reprocessing activities as defined by the IAEA.”
+
+GOV/2003/75
+Page 5
+
+C. Verification Activities
+C.1. Uranium Conversion
+20. The Agency received preliminary design information on the Uranium Conversion Facility (UCF)
+under construction at ENTC in July 2000, and has been carrying out continuous design information
+verification (DIV) since then. In that design information, the facility was described as being intended
+for the conversion of uranium ore concentrate into UF6, for enrichment outside Iran, and for the
+subsequent conversion (at UCF) of the enriched UF6 into low enriched UO2, enriched uranium metal
+and depleted uranium metal. Following its declaration of the enrichment facilities at Natanz in
+February 2003, Iran acknowledged that it intended to carry out the enrichment activities domestically
+using UF6 to be produced by UCF.
+21. At the time of the Director General’s last report to the Board of Governors (GOV/2003/63),
+questions remained about the completeness of Iran’s declarations concerning the chronology and
+details of its uranium conversion activities, in particular in light of its previous assertion that it had
+designed UCF without having used nuclear material to test the most difficult conversion processes.
+22. While Iran acknowledged in February 2003 having used some of the natural uranium imported in
+1991 for testing certain parts of the conversion process (i.e. uranium dissolution, purification using
+pulse columns and the production of uranium metal), it denied having tested other processes (e.g.
+conversion of UO2 to UF4 and conversion of UF4 to UF6), stating that they had been developed based
+on the supplier’s drawings. In a letter dated 19 August 2003, Iran further acknowledged that it had
+carried out UF4 conversion experiments on a laboratory scale during the 1990s at the Radiochemistry
+Laboratories of TNRC using imported depleted UO2 which had previously been declared as having
+been lost during processing (process loss). This activity was acknowledged by Iran only after the
+Agency’s July 2003 waste analysis results indicated the presence of depleted UF4.
+23. On 9 October 2003, Iran further acknowledged that, contrary to its previous statements,
+practically all of the materials important to uranium conversion had been produced in laboratory and
+bench scale experiments (in kilogram quantities) between 1981 and 1993 without having been
+reported to the Agency. These activities were carried out at TNRC and ENTC.
+24. The information provided in Iran’s letter of 21 October 2003 reveals that, in conducting these
+experiments, Iran had used nuclear material imported by Iran in 1977 and 1982, some of which had
+been exempted from safeguards, as well as safeguarded nuclear material which had been declared to
+the Agency as a process loss. Iran also declared that, using nuclear material imported in 1991 and
+reported to the Agency in February 2003, experiments had been carried out on the conversion of some
+of the UF4 to UF6, and on the conversion of UO2 to UF4. On 1 November 2003, Iran agreed to submit
+all relevant inventory change reports (ICRs) and design information to cover these activities.
+25. In addition to the issues associated with the testing of UCF processes, the Agency had previously
+raised with Iran questions related to the purpose and use of nuclear material to be produced at UCF,
+such as uranium metal. In its letter of 21 October 2003, Iran acknowledged that the uranium metal had
+been intended not only for the production of shielding material, as previously stated, but also for use in
+the laser enrichment programme (as discussed below).
+
+C.2. Reprocessing Experiments
+26. In its letter of 21 October 2003, Iran acknowledged the irradiation of depleted UO2 targets at
+TRR and subsequent plutonium separation experiments in a hot cell in the Nuclear Safety Building of
+TNRC. Neither the activities nor the separated plutonium had been reported previously to the Agency.
+
+GOV/2003/75
+Page 6
+
+27. In the meetings held 27 October–1 November 2003, Iran provided additional information about
+these experiments. According to Iranian officials, the experiments took place between 1988 and 1992,
+and involved pressed or sintered UO2 pellets prepared at ENTC using depleted uranium that had been
+exempted from safeguards in 1978. The capsules containing the pellets had been irradiated in TRR in
+connection with a project to produce fission product isotopes of molybdenum, iodine and xenon. The
+plutonium separation was carried out at TNRC in three shielded glove boxes, which, according to Iran,
+were dismantled in 1992 and later stored in a warehouse at ENTC along with related equipment. Iran
+stated that these experiments had been carried out to learn about the nuclear fuel cycle, and to gain
+experience in reprocessing chemistry.
+28. According to Iran, a total of about 7 kg of UO2 was irradiated, 3 kg of which was processed to
+separate plutonium. The small amount of separated plutonium was stored in a laboratory of Jabr Ibn
+Hayan Multipurpose Laboratories (JHL), while the remaining 4 kg of unprocessed irradiated UO2
+targets was placed in containers and stored at the TNRC site, and the wastes disposed of at the Qom
+salt marsh.
+29. On 1 November 2003, Iran agreed to submit all nuclear material accountancy reports, and design
+information for ENTC and JHL, covering these activities. On that date, Iran also presented the
+separated plutonium and the irradiated unprocessed targets to Agency inspectors at JHL. Verification
+of the material, as well as of possible nuclear material hold-up in the dismantled glove boxes, is
+foreseen to take place during the 8–15 November 2003 inspection.
+
+C.3. Uranium Enrichment
+C.3.1. Gas Centrifuge Enrichment
+30. In February 2003, Iran acknowledged the existence of two centrifuge enrichment plants under
+construction at Natanz: PFEP and a large commercial-scale Fuel Enrichment Plant (FEP). In February
+2003, Iran also acknowledged that the workshop of the Kalaye Electric Company in Tehran had been
+used for the production of centrifuge components, but stated that there had been no testing of these
+components involving the use of nuclear material, either at the Kalaye Electric Company or at any
+other location in Iran. According to Iran, its enrichment programme was indigenous and based on
+information from open sources.
+31. During the visit of 2–3 October 2003, the Agency was shown, for the first time, the centrifuge
+drawings previously requested by it (see GOV/2003/63, para. 28).
+32. In its letter of 21 October 2003, Iran acknowledged that “a limited number of tests, using small
+amounts of UF6, [had been] conducted in 1999 and 2002” at the Kalaye Electric Company. In a
+meeting with enrichment technology experts held during the 27 October–1 November 2003 visit,
+Iranian authorities explained that the experiments that had been carried out at the Kalaye Electric
+Company had involved the 1.9 kg of imported UF6, the absence of which the State authorities had
+earlier attempted to conceal by attributing the loss to evaporation due to leaking valves on the
+cylinders containing the gas (see GOV/2003/63, para. 18).
+33. During that visit, the Agency was able to meet with the individual who had been in charge of the
+centrifuge research and development work during the period 1992–2001 with a view to clarifying
+issues associated with these activities. Iran has agreed to provide the relevant ICRs and design
+information, and to present the nuclear material for Agency verification during the inspection
+scheduled for 8–15 November 2003.
+34. As mentioned above, environmental samples taken by the Agency at PFEP and at the Kalaye
+Electric Company revealed particles of HEU and LEU indicating the possible presence in Iran of
+
+GOV/2003/75
+Page 7
+
+nuclear material that had not been declared to the Agency. The Iranian authorities attributed the
+presence of these particles to contamination originating from centrifuge components which had been
+imported by Iran. In connection with its efforts to verify that information, the Agency requested, and
+Iran provided in October 2003, a list of imported and domestically produced centrifuge components,
+material and equipment, and an indication of the batches of items that Iran claims to have been the
+source of the contamination. The Agency carried out another sample-taking campaign in October
+2003, at which time all major imported and domestically produced components, as well as various
+pieces of manufacturing equipment, were sampled.
+35. In a meeting on 1 November 2003, the Iranian authorities stated that all nuclear material in Iran
+had been declared to the Agency, that Iran had not enriched uranium beyond 1.2% U-235 using
+centrifuges and that, therefore, the contamination could not have arisen as a result of indigenous
+activities. The Agency has now obtained information about the origin of the centrifuge components
+and equipment which Iran claims to be the source of HEU contamination. The Agency will continue
+its investigation of the source of HEU and LEU contamination, including through follow up with other
+relevant parties.
+
+C.3.2. Laser Enrichment
+36. As reflected in GOV/2003/63 (para. 41), Iran permitted the Agency to visit in August 2003 a
+laboratory located at Lashkar Ab’ad, which was described by Iran as originally having been devoted to
+laser fusion research and laser spectroscopy, but whose focus had been changed to research and
+development and the manufacture of copper vapour lasers (CVLs). In its 19 August 2003 letter to the
+Agency, Iran stated that it had had a substantial research and development programme on lasers, but
+that it currently had no programme for laser isotope separation.
+37. During discussions which took place in Iran from 2 to 3 October 2003, in response to Agency
+questioning, the Iranian authorities acknowledged that Iran had imported and installed at TNRC laser
+related equipment from two countries: in 1992, a laser spectroscopy laboratory intended for the study
+of laser induced fusion, optogalvanic phenomena and photoionization spectroscopy; and in 2000, a
+large vacuum vessel, now stored at Karaj, for use in the spectroscopic studies referred to in the
+previous paragraph.
+38. On 6 October 2003, Agency inspectors were permitted to take at Lashkar Ab’ad the
+environmental samples requested by the Agency in August 2003. The inspectors also visited a
+warehouse in the Karaj Agricultural and Medical Centre of the AEOI, where a large imported vacuum
+vessel and associated hardware were stored. The Iranian authorities stated that the equipment had been
+imported in 2000, that it had never been used, and that it had now been packed for shipment back to
+the manufacturer, since the contract related to its supply had been terminated by the foreign partner in
+2000. The inspectors were informed that later during their visit to Tehran the equipment related to the
+laboratory imported in 1992 would be made available for examination and environmental sampling
+and the individuals involved in the projects would be available for interviews. However, these
+interviews and the presentation of the equipment were deferred by Iran.
+39. In its letter dated 21 October 2003, Iran acknowledged that, starting in the 1970s, it had had
+contracts related to laser enrichment with foreign sources from four countries. These contracts are
+discussed in detail in Annex 1 to this report.
+40. During the inspectors’ follow-up visit to Iran between 27 October and 1 November 2003, Iran
+provided more information on Lashkar Ab’ad and acknowledged that a pilot plant for laser enrichment
+had been established there in 2000. The project for the establishment of the plant consisted of several
+contracts covering not only the supply of information, as indicated in Iran’s letter of 21 October 2003
+to the Agency, but also the delivery of additional equipment. Iran also stated that uranium laser
+
+GOV/2003/75
+Page 8
+
+enrichment experiments had been conducted between October 2002 and January 2003 using
+previously undeclared natural uranium metal imported from one of the other suppliers. According to
+Iranian authorities, all of the equipment was dismantled in May 2003 and transferred to Karaj for
+storage together with the uranium metal. The equipment and material were presented to Agency
+inspectors at Karaj on 28 October 2003.
+41. In the meeting of 1 November 2003, Iran agreed to submit all of the relevant ICRs and design
+information, and to present the nuclear material for Agency verification during the inspection
+scheduled for 8–15 November 2003.
+
+C.4. Heavy Water Reactor Programme
+42. On 12 July 2003, the Iranian authorities made a presentation on the technical features, said to
+have been based on indigenous design, of the Iran Nuclear Research Reactor (IR-40) to be constructed
+at Arak. The purpose of the reactor was declared to be research and development and the production of
+radioisotopes for medical and industrial use. Iran explained that it had tried to acquire a reactor from
+abroad to replace the old research reactor in Tehran (TRR), but that those attempts had failed, and that
+Iran had concluded, therefore, that the only alternative was a heavy water reactor which could use
+domestically produced UO2 and zirconium. In order to have a sufficient neutron flux, a reactor with
+power on the order of 30–40 MW(th) was said to be required.
+43. During their visit in July 2003, Agency inspectors were provided with drawings of the IR-40.
+Contrary to what would have been expected given the declared radioisotope production purpose of the
+facility, the drawings contained no references to hot cells. The Agency raised this issue during that
+visit, particularly in light of open source reports of recent efforts by Iran to acquire from abroad heavy
+manipulators and leaded windows designed for hot cell applications. The Agency indicated to the
+Iranian authorities that, given the specifications of the manipulators and windows which were the
+subject of those reports, a design for hot cells should have existed already and that therefore the hot
+cell, or cells, should already have been declared, at least on a preliminary basis, as part of the facility
+or as a separate installation.
+44. In its letter of 21 October 2003, Iran acknowledged that two hot cells had been foreseen for this
+project. However, according to the information provided in that letter, neither the design nor detailed
+information about the dimensions or the actual layout of the hot cells was available yet, since they did
+not know the characteristics of the manipulators and shielded windows which they could procure. On
+1 November 2003, Iran confirmed that it had tentative plans to construct at the Arak site yet another
+building with hot cells for the production of radioisotopes. Iran has agreed to submit the relevant
+preliminary design information with respect to that building in due course.
+
+D. Findings
+45. Iran’s nuclear programme, as the Agency currently understands it, consists of a practically
+complete front end of a nuclear fuel cycle, including uranium mining and milling, conversion,
+enrichment, fuel fabrication, heavy water production, a light water reactor, a heavy water research
+reactor and associated research and development facilities.
+46. Iran has now acknowledged that it has been developing, for 18 years, a uranium centrifuge
+enrichment programme, and, for 12 years, a laser enrichment programme. In that context, Iran has
+admitted that it produced small amounts of LEU using both centrifuge and laser enrichment processes,
+
+GOV/2003/75
+Page 9
+
+and that it had failed to report a large number of conversion, fabrication and irradiation activities
+involving nuclear material, including the separation of a small amount of plutonium.
+47. Based on all information currently available to the Agency, it is clear that Iran has failed in a
+number of instances over an extended period of time to meet its obligations under its Safeguards
+Agreement with respect to the reporting of nuclear material and its processing and use, as well as the
+declaration of facilities where such material has been processed and stored. In his June and August
+2003 reports to the Board of Governors (GOV/2003/40 and GOV/2003/63), the Director General
+identified a number of instances of such failures and the corrective actions that were being, or needed
+to be, taken with respect thereto by Iran.
+48. Since the issuance of the Director General’s last report, a number of additional failures have been
+identified. These failures can be summarized as follows:
+(a)
+
+Failure to report:
+(i)
+
+the use of imported natural UF6 for the testing of centrifuges at the Kalaye Electric
+Company in 1999 and 2002, and the consequent production of enriched and
+depleted uranium;
+
+(ii)
+
+the import of natural uranium metal in 1994 and its subsequent transfer for use in
+laser enrichment experiments, including the production of enriched uranium, the
+loss of nuclear material during these operations, and the production and transfer of
+resulting waste;
+
+(iii)
+
+the production of UO2, UO3, UF4, UF6 and AUC from imported depleted UO2,
+depleted U3O8 and natural U3O8, and the production and transfer of resulting
+wastes;
+
+(iv)
+
+the production of UO2 targets at ENTC and their irradiation in TRR, the
+subsequent processing of those targets, including the separation of plutonium, the
+production and transfer of resulting waste, and the storage of unprocessed
+irradiated targets at TNRC;
+
+(b)
+
+(c)
+
+Failure to provide design information for:
+(i)
+
+the centrifuge testing facility at the Kalaye Electric Company;
+
+(ii)
+
+the laser laboratories at TNRC and Lashkar Ab’ad, and locations where resulting
+wastes were processed and stored, including the waste storage facility at Karaj;
+
+(iii)
+
+the facilities at ENTC and TNRC involved in the production of UO2, UO3, UF4,
+UF6 and AUC;
+
+(iv)
+
+TRR, with respect to the irradiation of uranium targets, and the hot cell facility
+where the plutonium separation took place, as well as the waste handling facility
+at TNRC; and
+Failure on many occasions to co-operate to facilitate the implementation of
+safeguards, through concealment.
+
+49. As corrective actions, Iran has undertaken to submit ICRs relevant to all of these activities, to
+provide design information with respect to the facilities where those activities took place, to present all
+nuclear material for Agency verification during its forthcoming inspections and to implement a policy
+of co-operation and full transparency.
+
+GOV/2003/75
+Page 10
+
+E. Assessment and Next Steps
+50. The recent disclosures by Iran about its nuclear programme clearly show that, in the past, Iran
+had concealed many aspects of its nuclear activities, with resultant breaches of its obligation to comply
+with the provisions of the Safeguards Agreement. Iran’s policy of concealment continued until last
+month, with co-operation being limited and reactive, and information being slow in coming, changing
+and contradictory. While most of the breaches identified to date have involved limited quantities of
+nuclear material, they have dealt with the most sensitive aspects of the nuclear fuel cycle, including
+enrichment and reprocessing. And although the materials would require further processing before
+being suitable for weapons purposes, the number of failures by Iran to report in a timely manner the
+material, facilities and activities in question as it is obliged to do pursuant to its Safeguards Agreement
+has given rise to serious concerns.
+51. Following the Board’s adoption of resolution GOV/2003/69, the Government of Iran informed
+the Director General that it had now adopted a policy of full disclosure and had decided to provide the
+Agency with a full picture of all of its nuclear activities. Since that time, Iran has shown active cooperation and openness. This is evidenced, in particular, by Iran’s granting to the Agency unrestricted
+access to all locations the Agency requested to visit; by the provision of information and clarifications
+in relation to the origin of imported equipment and components; and by making individuals available
+for interviews. This is a welcome development.
+52. The Agency will now undertake all the steps necessary to confirm that the information provided
+by Iran on its past and present nuclear activities is correct and complete. To date, there is no evidence
+that the previously undeclared nuclear material and activities referred to above were related to a
+nuclear weapons programme. However, given Iran’s past pattern of concealment, it will take some
+time before the Agency is able to conclude that Iran’s nuclear programme is exclusively for peaceful
+purposes. To that end, the Agency must have a particularly robust verification system in place. An
+Additional Protocol, coupled with a policy of full transparency and openness on the part of Iran, is
+indispensable for such a system.
+53. In that context, Iran has been requested to continue its policy of active co-operation by answering
+all of the Agency’s questions, and by providing the Agency with access to all locations, information
+and individuals deemed necessary by the Agency. One issue requiring investigation as a matter of
+urgency is the source of HEU and LEU contamination. The Agency intends to pursue the matter with a
+number of countries, whose full co-operation is essential to the resolution of this issue.
+54. The recent announcement of Iran’s intention to conclude an Additional Protocol, and to act in
+accordance with the provisions of the Protocol pending its entry into force, is a positive development.
+The draft Additional Protocol is now being submitted to the Board for its consideration.
+55. Iran’s decision to suspend its uranium enrichment related and reprocessing activities is also
+welcome.3 The Agency intends to verify, in the context of the Safeguards Agreement and the
+Additional Protocol, the implementation by Iran of this decision.
+56. The Director General will inform the Board of additional developments for its further
+consideration at the March 2004 meeting of the Board, or earlier, as appropriate.
+__________________________________________________________________________________
+3
+
+It should be noted that Iran introduced UF6 into the first centrifuge at PFEP on 25 June 2003, and, on 19 August 2003,
+began testing a small ten-machine cascade. On 31 October 2003, Agency inspectors observed that no UF6 gas was being fed
+into the centrifuges, although construction and installation work at the site was continuing.
+
+GOV/2003/75
+Annex 1
+Page 1
+
+DETAILED TECHNICAL CHRONOLOGY
+
+Uranium Conversion
+The Uranium Conversion Facility (UCF)
+1. According to Iran, UCF was originally based on a design provided by a foreign supplier in the
+mid-1990s. The plant was supposed to have been constructed by the supplier under a turnkey contract,
+but the contract was cancelled in 1997 and, according to Iran, the supplier did not provide any
+equipment to Iran. The AEOI has acknowledged having received from the supplier the blueprint of the
+facility, including equipment test reports and some design information on the equipment, but has
+stated that all the parts and equipment for the plant were manufactured domestically based on detailed
+designs developed without external assistance. Construction of the plant was begun in 1999.
+2. Preliminary design information on UCF was submitted to the Agency on 31 July 2000. The
+Agency has performed DIV at UCF since then on a regular basis with a view to monitoring progress in
+construction and equipment installation, and to develop a safeguards approach. The proposed
+safeguards approach was given to the Iranian authorities in February 2002.
+3. The design information provided to the Agency in July 2000 described the purpose of this facility
+as the conversion of uranium ore concentrate (UOC or U3O8) into natural UO2, UF6 and uranium
+metal. The production design capacity was said to be 200 t of UF6 annually. The facility was described
+as having the following process lines: conversion of natural UOC into UF6; conversion of low
+enriched UF6 into UO2 (30 t per year of UO2 enriched to 5% U-235); conversion of depleted UF6 to
+UF4 (170 t per year of depleted UO4); conversion of low enriched UF6 LEU metal (30 kg per year of
+uranium metal enriched to 19.7% U-235), and the conversion of depleted UF4 to depleted uranium
+metal. According to information provided by Iran, commissioning of the first line (for the conversion
+of U3O8 to ammonium uranyl carbonate (AUC)) is expected to begin in November 2003.
+4. While conducting a DIV at the facility in 2002, inspectors noticed that the depleted uranium
+metal line had been changed to a line for natural uranium metal production. The updated design
+information, which was provided to the Agency on 9 April 2003, now includes an additional line for
+conversion to natural UO2 and a line for conversion to natural uranium metal. In a letter dated 19
+August 2003, Iran stated that the uranium metal production line could be used to produce shielding
+material, and that the natural UO2 line was envisaged to meet the needs of the heavy water reactor
+programme.
+
+Uranium Conversion Experiments and Testing
+5. The explanations by Iran that it had not conducted any tests using nuclear material on certain
+parts of the conversion process and that those processes had been based on the supplier’s drawings and
+test reports, raised questions, particularly given that the simpler steps of the conversion process (such
+as U3O8 dissolution and uranium purification using pulse columns) had undergone extensive testing.
+According to Agency experts, such an approach would be inconsistent with the normal practice of first
+validating the processes and carrying out pilot scale production before proceeding to the final design
+and construction of a commercial conversion plant.
+6. As indicated in GOV/2003/63, Iran acknowledged in August 2003 that it had carried out some
+bench scale uranium conversion experiments in the early 1990s, experiments that Iran should have
+reported in accordance with its obligations under the Safeguards Agreement.
+
+GOV/2003/75
+Annex 1
+Page 2
+
+7. On 9 October 2003, the Agency received acknowledgement that, contrary to Iran’s previous
+communications, practically all of the materials important to uranium conversion (AUC, UO3, UF4 and
+UF6) had been produced in laboratory and bench scale experiments (kilogram quantities) conducted
+between 1981 and 1993 without having been reported to the Agency. On 1 November 2003, Iran
+explained that, due to foreign involvement in the design and construction of UCF, it was decided in
+1993 to terminate domestic research and development on UF4 and UF6. Iran further explained that the
+facilities related to the UF4 and UF6 experiments had been dismantled, and that the equipment had
+been moved to waste storage at Karaj. This is being evaluated by the Agency.
+8. For ease of reference, a summary of major processing experiments by Iran using imported
+uranium, based on information currently available to the Agency, is provided in Table 1.
+TABLE 1: Major Processing Experiments by Iran Using Imported Uranium
+Year
+
+Material
+
+of
+
+Type &
+
+Import
+
+Quantity
+
+1977
+
+20 kg U3O8
+
+•
+
+At Iran’s request the U3O8 was exempted from safeguards in 1978 (de-exempted in 1998).
+
+(depleted)
+
+•
+
+Processing activities were carried out between 1981 and 1993 and reported to the Agency in
+
+Use by Iran
+
+1998. 5.2 kg U3O8 was declared a process loss from the experiments.
+50 kg UO2
+
+•
+
+At Iran’s request the UO2 was exempted from safeguards in 1978 (de-exempted in 1998).
+
+(depleted)
+
+•
+
+Fuel fabrication research was carried out between 1985 and 1993 at FFL and reported to the
+Agency in 1998; 13.1 kg depleted UO2 was declared as a process loss from these experiments.
+
+•
+
+Lab-scale experiments using UO2, reported in 1998 as a loss, were used between 1989 and 1993
+to produce UF4 at TNRC.
+
+•
+
+UO2 targets were produced from 1988 to 1992 at ENTC using about 6.9 kg UO2, previously
+declared as a process loss in 1998, subsequently irradiated at TRR; the resulting plutonium
+separated at TNRC was stored together with the irradiated unprocessed targets at TNRC.
+
+1982
+
+531 t U3O8
+
+•
+
+concentrate
+(natural)
+
+Processing of 85 kg U3O8 between 1982 and 1993 was carried out at UCL and reported to the
+Agency in 1998; 45 kg was declared as a process loss from these experiments.
+
+•
+
+Between 1982 and 1987 about 12.2 kg UO2 was produced using U3O8 declared in 1998 as a loss.
+This UO2, combined with some other materials, was used between 1989 and 1993 to produce
+about 10 kg UF4 at TNRC.
+
+1991
+
+1005 kg
+
+•
+
+1.9 kg UF6 was used for testing of centrifuges at Kalaye Electric between 1999 and 2002.
+
+•
+
+376.6 kg UF4 was converted to U metal in 113 experiments at JHL; and about 9.4 kg UF4, which
+
+UF6
+(natural)
+402 kg
+
+1993
+
+UF4
+
+had been declared earlier in 2003 as a process loss, was used to produce 6.5 kg UF6 at TNRC
+
+(natural)
+
+between 1991 and 1993.
+
+401.5 kg
+
+•
+
+44 kg UO2 was used in testing of pulse columns and pellet production at JHL.
+
+UO2
+
+•
+
+1-2 g UO2 was irradiated in experiments in TRR and processed at JHL.
+
+(natural)
+
+•
+
+2.7 kg UO2 was used to produce UF4.
+
+50 kg
+
+•
+
+8 kg uranium metal was used for AVLIS experiments from 1999 to 2000 at TNRC.
+
+uranium
+
+•
+
+22 kg uranium metal was used for AVLIS experiments from October 2002 to February 2003 at
+
+metal
+
+Lashkar Ab’ad.
+
+GOV/2003/75
+Annex 1
+Page 3
+
+9. In 1977, Iran imported 20 kg of depleted U3O8 and 50 kg of depleted UO2. Upon request by Iran
+in 1978, these materials were exempted from safeguards. In 1982, Iran imported 531 t of natural U3O8
+concentrate, which it reported to the Agency in 1990.
+10. In 1981 and 1984, respectively, Iran commissioned with a foreign supplier the construction at
+ENTC of a Uranium Chemistry Laboratory (UCL) and a Fuel Fabrication Laboratory (FFL). The
+existence of these laboratories was disclosed to the Agency during a visit of the then DDG-SG in
+1993, and formally reported to the Agency in 1998. Between 1981 and 1993, Iran carried out at UCL
+and FFL unreported activities involving the exempted depleted U3O8, the exempted depleted UO2, and
+the U3O8 concentrate (see paras. 11 and 12 below). These activities were only reported to the Agency
+in 1998 after lengthy discussions between the Agency and Iranian officials. The material was
+de-exempted in 1998, and what remained of it was stored at ENTC. In 1998, Iran declared that UCL
+had been closed down since 1987. FFL is still in operation.
+11. Between 1981 and 1993, processing activities involving the 20 kg of exempted depleted U3O8
+and some of the 531 t of natural U3O8 concentrate were carried out at UCL. Of the original 20 kg of
+depleted U3O8, 5.2 kg was reported in 1998 as process losses by Iran. Iran also reported in 1998 that it
+had processed 85 kg of the 531 t of U3O8 concentrate, of which 45 kg was declared as process losses.
+12. During the period 1985 through 1993, FFL was used for research in fuel fabrication, the main
+activity having been the manufacture of sintered pellets using the imported 50 kg of exempted
+depleted UO2. Iran reported the existence of FFL, and the processing of the nuclear material there, in
+1998, at which time it declared that 13.1 kg of the material had been lost during processing.
+13. In a letter dated 19 August 2003, Iran acknowledged that it had carried out UO2 to UF4
+conversion experiments on a laboratory scale during the 1990s at the Radiochemistry Laboratories of
+the TNRC using some of the imported depleted UO2 referred to in the previous paragraph. Until
+August 2003, Iran had claimed that it had carried out no UF4 production experiments. This activity
+was acknowledged by Iran only after the July 2003 waste analysis results of samples taken to verify
+experiments using nuclear material imported in 1991 indicated the presence of depleted UF4 mixed
+with natural UF4. Iran acknowledged that the UO2 which had been used had been part of that
+previously declared by Iran as having been lost during experiments at FFL.
+14. On 9 October 2003, Iran provided further details on these UF4 experiments, stating that, between
+1987 and 1993, there had been bench scale production of UF4 at the Radiochemistry Laboratories.
+This information was further amplified in Iran’s letter dated 21 October 2003 and in a subsequent
+meeting on 1 November 2003. According to that information, the UF4 production experiments
+included testing of wet and dry production methods. Between 1982 and 1987, approximately 12.2 kg
+of natural UO2 was produced at UCL using imported U3O8 concentrate that had been reported as a
+process loss in 1998 (see para. 11 above). This material, together with 1 kg of the UO2 imported in
+1991, and 1.23 kg of depleted UO2 that had been reported in 1998 as a process loss at UCL (see para.
+12 above), was used for the production of UF4 at the Radiochemistry Laboratories through the wet
+method. In addition, 2.5 kg of UF4 was produced with the dry method, using UO2 imported in 1991 as
+the source material.
+15. Between 1991 and 1992, 0.2 kg of UO3 and 4.45 kg of AUC were produced in the
+Radiochemistry Laboratories using, as source material, some of the U3O8 concentrate imported in
+1982.
+16. On 1 November 2003, Iran agreed, as a corrective measure, to submit ICRs for UCL, FFL, JHL
+and the waste storage facility at Karaj, as well as design information for the waste storage facility.
+
+GOV/2003/75
+Annex 1
+Page 4
+
+17. Final evaluation of the information provided on these conversion experiments will depend on the
+results of the destructive and environmental sample analysis and the assessment of the experiment
+reports provided by Iran.
+18. Following the import in 1991 of natural uranium (1005 kg of UF6, 402 kg of UF4 and 401.5 kg of
+UO2), Iran carried out a number of experiments, on a laboratory scale, at JHL located at TNRC. The
+import of the nuclear material in question was only acknowledged by Iran in March 2003. The status
+of the imported material, as currently declared, is as follows:
+•
+
+Of the 1005 kg of UF6, 1.9 kg was found to have been missing from two cylinders in which
+the material is said to have been delivered. This loss was originally attributed by Iran to
+evaporation of the material due to high temperatures during storage of the material. Iran has
+now acknowledged that it used that material for testing centrifuges at the Kalaye Electric
+Company, as described below.
+
+•
+
+Of the 402 kg of UF4, 376.6 kg was converted to uranium metal. The conversion was declared
+by Iran in March 2003, and in June 2003, it was described as having been achieved through
+113 experiments carried out at JHL in the early 1990s. In October 2003, Iran also
+acknowledged having used 9.43 kg of the UF4 for conversion to UF6, as described below.
+
+•
+
+Of the 401.5 kg of UO2, 44 kg was used in testing pulse column process and pellet production
+experiments at JHL. In addition, between June 1987 and February 1999, small amounts (1 to
+2 g) of UO2 were irradiated in TRR in about 50 experiments and sent to the Molybdenum,
+Iodine and Xenon Radioisotope Production Facility (MIX Facility) for separation of I-131. In
+October 2003, Iran acknowledged having used 2.7 kg of the UO2 in conversion experiments to
+produce UF4.
+
+19. Iran has provided ICRs on its import of the material referred to in the preceding paragraph, as
+well as on its subsequent processing. Iran has also submitted physical inventory listings (PILs) and
+material balance reports (MBRs) reflecting the current status of nuclear material at JHL, including
+uranium metal, uranyl nitrate, UO2 pellets and waste containing uranium.
+20. JHL, where many of these experiments are declared to have been carried out, consists of several
+rooms where conversion activities took place using the nuclear material imported in 1991. The facility
+was declared to the Agency in March 2003. In May 2003, design information for JHL was received,
+and verification thereof commenced. Iran has been informed that the design information is not yet
+complete, and has been requested to provide an update.
+
+Production and use of UF6
+21. Until recently, the Iranian authorities repeatedly asserted that the UF6 imported in 1991 had not
+been processed, and specifically that it had not been used in any centrifuge, enrichment or other tests.
+The State authorities explained that the small amount of UF6 (1.9 kg) missing from the two smaller
+cylinders in which the material had been imported might have been due to leaking valves, an
+explanation challenged by the Agency on the basis of its technical assessment and verification
+activities. In the information submitted on 23 October 2003, however, Iran acknowledged that it had
+used 1.9 kg of the imported UF6 to test centrifuge machines at the Kalaye Electric Company workshop
+between 1999 and 2002, before the dismantling of the test facility at the end of 2002. This material is
+currently declared as hold-up in the dismantled equipment currently stored at PFEP.
+22. The remaining container of the UF6 imported in 1991, a large 30 B-type cylinder currently stored
+at Natanz, was presented to Agency inspectors, and appeared to have been intact. However,
+destructive analysis sampling of its contents need to be performed. This will be done as soon as the
+
+GOV/2003/75
+Annex 1
+Page 5
+
+necessary equipment is installed. In the meantime, environmental samples and non-destructive
+measurements have been taken in order to confirm the presence of natural uranium.
+23. In contrast to its earlier declarations that it had not used nuclear material to test the production of
+UF6, Iran acknowledged in its letter dated 21 October 2003 that, between 1987 and 1993, it had carried
+out in the Radiochemical Laboratories at TNRC bench scale preparation of UF6 using as feed 9.43 kg
+of the UF4 which had been imported in 1991. The laboratory equipment has since then been
+dismantled. On 12 October 2003, the equipment was presented for Agency verification in a container
+at the Karaj Nuclear Research Centre for Medicine and Agriculture, together with a number of
+cylinders containing approximately 6.5 kg of UF6. Final evaluation will depend on the results of
+environmental sampling and assessment of experiment records provided by Iran.
+24. On 1 November 2003, Iran agreed to submit ICRs for JHL, PFEP and the waste storage facility at
+Karaj and to provide design information for those facilities.
+
+Production of uranium metal
+25. In March 2003, Iran informed the Agency that most of the natural UF4 imported in 1991 had been
+converted to uranium metal at JHL between 1995 and 2000 in the course of 113 experiments. Neither
+the experiments nor the facility where these experiments were conducted were declared to the Agency
+at the time the experiments were conducted. The nuclear material resulting from these experiments
+was verified by the Agency during its May 2003 inspection, and Iran has submitted the relevant ICRs,
+PILS and MBRs, as well as updated design information for JHL.
+26. In its letter dated 21 October 2003, Iran admitted that the uranium metal production capabilities
+had also been intended for use in Iran’s laser enrichment programme (see discussion below).
+
+Reprocessing Experiments
+27. In March 2003, Iran stated that some of the UO2 imported in 1991 had been used for pellet
+fabrication experiments. In April 2003, Iran informed the Agency that some of the UO2 had also been
+used in isotope production experiments involving irradiation at TRR of the natural UO2 targets and the
+subsequent separation of molybdenum, xenon and iodine. The liquid uranium-containing waste
+resulting from these experiments is said by Iran to have been sent to Esfahan.
+28. In its letter of 21 October 2003, Iran acknowledged the irradiation of depleted UO2 targets at
+TRR and subsequent plutonium separation experiments in a hot cell in the Nuclear Safety Building of
+TNRC between 1988 and 1992. Neither the activities nor the separated plutonium had been reported to
+the Agency previously.
+29. In the meetings held 27 October–1 November 2003, additional information was provided about
+the experiments involving the depleted uranium. Iran stated that they had been carried out to learn
+about the nuclear fuel cycle, and to gain experience in reprocessing chemistry. The experiments took
+place between 1988 and 1992, and involved 7 kg of pressed or sintered UO2 pellets prepared at ENTC
+using depleted uranium that had been exempted, at the request of Iran, in 1978. In 1997, this material
+was reported as a process loss at FFL. The capsules containing the pellets were irradiated typically for
+two weeks in TRR in connection with a project to produce fission product isotopes of molybdenum,
+iodine and xenon. The plutonium separation, based on the Purex process, was carried out on the site of
+TNRC, on a laboratory scale, in three shielded glove boxes, which, according to Iran, were dismantled
+in 1992 and later stored in a warehouse at ENTC along with related equipment.
+30. The Agency was informed that a total of about 7 kg of UO2 was used, of which 3 kg had been
+irradiated and processed to separate plutonium. The remaining 4 kg of irradiated UO2 targets was
+
+GOV/2003/75
+Annex 1
+Page 6
+
+placed in containers and stored on the TNRC site; the separated plutonium was stored in a laboratory
+of JHL following the dismantling of the glove boxes; and the wastes were disposed of at Qom.
+31. In August 2003, Agency inspectors visited the waste storage location at Anarak where the waste
+referred to in paragraph 27 above had been stored. Iran has agreed to transfer that waste to JHL.
+32. On 1 November 2003, Iran agreed to submit all nuclear material accountancy reports from 1988
+through the present covering the manufacture of the UO2 targets, their irradiation and subsequent
+processing and the storage of the remaining nuclear material and wastes. In addition, Iran has agreed
+to submit design information covering these activities and nuclear material at ENTC and JHL.
+33. On 1 November 2003, Iran presented both the separated plutonium and the irradiated
+unprocessed targets to Agency inspectors at JHL. Verification of that material, as well as possible
+hold-up in dismantled glove boxes, is foreseen to take place during the forthcoming inspection.
+
+Uranium Enrichment
+Gas Centrifuge Enrichment
+34. In February 2003, in response to inquiries by the Agency, Iran acknowledged the existence of
+two centrifuge enrichment plants under construction at Natanz: PFEP and the large commercial scale
+FEP. In February 2003, Iran also acknowledged that the workshop of the Kalaye Electric Company in
+Tehran had been used for the production of centrifuge components, but stated that there had been no
+operations in connection with its centrifuge enrichment development programme involving the use of
+nuclear material, either at the Kalaye Electric Company or at any other location in Iran. According to
+Iran, all testing had been carried out either in vacuum or using simulation studies. Iranian officials
+stated that the enrichment programme had been started in 1997 and that it was indigenous and based
+on information available from open sources, such as scientific publications and patents.
+35. A team of Agency centrifuge technology experts met on 7–11 June 2003 with Iranian officials to
+seek clarification about Iran’s centrifuge enrichment programme, in particular about its statement that
+the design and development, which was said to have been begun in 1997, had been based on
+information from open sources and extensive modelling and simulation, and that the tests of centrifuge
+rotors at the Amir Khabir University and on the premises of the AEOI in Tehran had been conducted
+without nuclear material. This meeting was followed by a round of technical discussions in Tehran in
+July 2003, and further meetings of the centrifuge technology experts with Iranian officials in Iran on
+9–12 August 2003, 4–9 October 2003 and 27 October–1 November 2003.
+36. Following up on recent open source reports of enrichment activities being undertaken at an
+industrial complex in Kolahdouz in western Tehran, the Agency was permitted on 5 October 2003 to
+visit three locations which the Agency had identified as corresponding to those mentioned in the
+reports. Iran stated that there were no nuclear related activities being carried out at this site. While no
+work was seen at those locations that could be linked to uranium enrichment, environmental samples
+were taken.
+
+GOV/2003/75
+Annex 1
+Page 7
+
+The Natanz Facilities
+37. At the time Iran disclosed the construction of PFEP, in February 2003, over 100 of the
+approximately 1000 planned centrifuge casings had already been installed. Iran informed the Agency
+that the remaining centrifuges were scheduled to be installed by the end of 2003. Iran also informed
+the Agency that the commercial scale FEP, which is planned to contain over 50 000 centrifuges, was
+scheduled to start accepting centrifuges in early 2005, after the design is confirmed by the tests to be
+conducted in PFEP, but that FEP was not scheduled to receive nuclear material in the near future.
+38. The Agency took baseline environmental samples at PFEP on several occasions between March
+and May 2003 before nuclear material was introduced in the facility, the results of which revealed
+particles of HEU indicating the possible presence in Iran of nuclear material that had not been declared
+to the Agency. In June 2003, the results were provided to Iran for comments. In August 2003, the
+Iranian authorities attributed the presence of HEU particles to contamination originating from
+centrifuge components that had been imported by Iran.
+39. Subsequent environmental samples revealed the presence in Iran of natural uranium, LEU and at
+least two other types of HEU particles. It was also noted that there had been differences among the
+samples taken from the surfaces of the centrifuge casings installed for the single machine tests. The
+Agency asked the Iranian authorities to investigate whether there were differences in the
+manufacturing history of those pieces of equipment.
+40. In August 2003, the IAEA was allowed to take swipe samples of imported components stored at
+Natanz, as well as of some of the newly machined components that had been produced in Iran. At the
+request of the Agency, Iran provided a list of imported and domestically produced centrifuge
+components and equipment in October 2003.
+41. Agency inspectors were told in early October 2003 that all of the centrifuges from the Kalaye
+Electric Company had been scrapped, and therefore were not available for inspection, whereas it
+became clear later that the centrifuges had in fact been stored at another location in Tehran and were
+finally shown to the inspectors at Natanz on 30–31 October 2003, at which time Agency experts
+examined the centrifuges and associated equipment, and took environmental samples. All major
+imported and domestically produced components, as well as various pieces of manufacturing
+equipment have now been sampled. The results of the sample analyses are not expected to be available
+before December 2003. The nuclear material held in this equipment will be verified during the
+forthcoming inspections. The Agency has now also obtained information about the source of the
+components that Iran claims to have been contaminated.
+42. On 25 June 2003, Iran introduced UF6 into the first centrifuge at PFEP for the purpose of single
+machine testing. On 19 August 2003, Iran began the testing of a small ten-machine cascade at PFEP
+with UF6. As of October 2003, some single machine testing using UF6 had been carried out at PFEP
+and the installation of a 164-machine cascade was being finalized. Agency inspectors visited PFEP on
+31 October 2003, and observed that no UF6 gas was being fed into the first centrifuges of the
+164-centrifuge machine cascade. However, construction and installation work at the site was
+continuing.
+
+Kalaye Electric Company
+43. In March 2003, during an Agency visit to the workshop at the Kalaye Electric Company, the
+Iranian authorities refused Agency access to one of the workshop buildings, claiming that the building
+was used for storage and that no keys to the building were available.
+
+GOV/2003/75
+Annex 1
+Page 8
+
+44. During their 9–12 August 2003 visit to Iran, Agency inspectors were permitted to take
+environmental samples at the Kalaye Electric Company workshop, with a view to assessing the role of
+that company in Iran’s enrichment research and development programme. During that visit, the
+inspectors noted that there had been considerable modification of the premises since their visits in
+March and May 2003, which the Iranian authorities attributed to the transformation of the workshop
+from use as a storage facility to its use as a laboratory for non-destructive analysis. As reflected in the
+Director General’s previous report to the Board, this could impact on the accuracy of the
+environmental sampling and the Agency’s ability to verify Iran’s declarations about the types of
+activities previously carried out there.
+45. On 16 September 2003, the Agency informed representatives of Iran of the results of the analysis
+of the environmental samples taken at the Kalaye Electric Company in August 2003, which had
+revealed the presence of HEU and LEU particles which were not consistent with the nuclear material
+in the declared inventory of Iran.
+46. In its letter of 21 October 2003, Iran acknowledged that “a limited number of tests, using small
+amounts of UF6, [had been] conducted in 1999 and 2002” at the Kalaye Electric Company. The
+equipment used between 1999 and 2000 at Kalaye Electric Company was suitable for pilot scale
+uranium isotope separation. As an isotope separation plant is defined in Article 98.I.(a) of the
+Safeguards Agreement as a facility, the existence of this facility should have been declared to the
+Agency.
+
+Enrichment research and development activities
+47. As indicated in the Director General’s previous report, in contrast to the initial information
+provided about the chronology of the enrichment programme and its indigenous nature, Iran informed
+the Agency in August 2003 that the decision to launch a centrifuge enrichment programme had
+actually been taken in 1985, and that Iran had received drawings of the centrifuge through a foreign
+intermediary around 1987. Iranian officials further described the programme as having consisted of
+three phases: the first phase, from 1985 until 1997, during which related activities had been located
+mainly at the AEOI premises in Tehran (with laboratory work at the Plasma Physics Laboratories of
+TNRC); the second phase, between 1997 and 2002, during which the activities had been relocated and
+concentrated at the Kalaye Electric Company in Tehran and Iran was able to make all components had
+some success in mechanically testing centrifuges and decided to construct the enrichment facilities at
+Natanz; and the third phase, 2002 to the present, when the research and development and assembly
+activities were moved to Natanz.
+48. According to information provided by Iran in August 2003, during the first phase, about 2000
+components and some subassemblies had been obtained from abroad through foreign intermediaries or
+directly by Iranian entities, but no help was received from abroad in the assembly of centrifuges or in
+training, nor were any completed centrifuges imported. Efforts had been concentrated on achieving an
+operating centrifuge, but many difficulties were encountered as a result of machine crashes attributed
+to poor quality components. Iran described the second phase of activities as having involved the
+assembly and testing of centrifuges, but again without inert (e.g. xenon) or UF6 gas.
+49. In pursuit of its verification of Iran’s statement that it had not tested any centrifuges using nuclear
+material, the Agency’s team of centrifuge technology experts inquired of Iran how it had developed
+the ‘enrichment factor’4 and ‘separative output’5 used in the relevant calculations. The Agency was
+__________________________________________________________________________________
+4
+The “enrichment factor” of a centrifuge is the ratio of the amount of U-235 in the product to the amount of U-235 in the
+feed.
+
+GOV/2003/75
+Annex 1
+Page 9
+
+told that they had been obtained from an original centrifuge ‘sketch’, supported by theoretical
+calculations using open literature, and not from experiments.
+50. The Agency’s centrifuge technology experts remained of the view that, based on all information
+available to them, Iran’s assertion that no UF6 or any simulation gas had ever been introduced into a
+centrifuge machine in Iran was inconsistent with other countries’ experience, and they still could not
+conclude that the then current status of the centrifuges installed at Natanz could have been achieved
+solely on the basis of open source information and computer simulations without additional
+confirmation through the use of UF6 in laboratory testing.
+51. No new information was provided by Iran with respect to the issue of testing of centrifuges using
+nuclear material until October 2003. In its letter of 21 October 2003, Iran acknowledged that, in order
+to ensure the performance of centrifuge machines, a limited number of tests using small amounts of
+UF6 imported in 1991 had been carried out at the Kalaye Electric Company. According to Iran, the
+first test of the centrifuges was conducted in 1998 using an inert gas (xenon). Series of tests using UF6
+were performed between 1999 and 2002. In the course of the last series of tests, an enrichment level of
+1.2% U-235 was achieved.
+52. In a meeting with enrichment technology experts held during the 27 October–1 November 2003
+visit, Iran provided additional information about its gas centrifuge programme. The authorities
+explained that the experiments which had been carried out at the Kalaye Electric Company had
+involved the 1.9 kg of imported UF6 the absence of which the State authorities had earlier attributed to
+evaporation due to leaking valves on the cylinders containing the gas. The individual who had been in
+charge of the actual research and development work during the period 1992–2001 was made available
+for discussions with the Agency. Although there were no detailed technical or nuclear material
+accountancy reports available, the individual interviewed by the Agency was able to provide, as
+supporting documentation, his personal notebooks.
+53. On 1 November 2003, the Iranian authorities stated that all nuclear material had been declared to
+the Agency and that Iran had not enriched uranium beyond 1.2% U-235 using centrifuges, and that,
+therefore, the contamination could not have arisen as a result of indigenous activities. In the course of
+these investigations and interviews of individuals involved in the nuclear programme, the Agency has
+obtained information on the origin of the centrifuge components and equipment which Iran claims to
+be the source of HEU, LEU and other particle contamination at the Kalaye Electric Company and at
+PFEP. The Agency will continue to investigate this matter.
+54. As a corrective measure, Iran has agreed to submit ICRs for JHL and for PFEP, and to provide
+updated design information for PFEP.
+
+Laser Enrichment
+55. During the Agency’s 12 August 2003 visit to the laser laboratory located at Lashkar Ab’ad, the
+Iranian authorities described the laboratory as originally having been devoted to laser fusion research
+and laser spectroscopy, but stated that its focus had been changed and the equipment unrelated to the
+site’s current projects, including a large vacuum vessel imported by Iran in 2000, had been moved.
+The Agency requested that Iran confirm that there had not been in the past any activities related to
+uranium laser enrichment at this location or at any other location in Iran, and requested permission to
+take environmental samples at the laboratory.
+___________________________________________________________________________
+5
+
+The “separative output” of a centrifuge defines the amount of enrichment achieved by the centrifuge. The “separative
+output” multiplied by the number of centrifuges in an enrichment plant defines the total output achievable by the plant.
+
+GOV/2003/75
+Annex 1
+Page 10
+
+56. In response to that request, in its 19 August 2003 letter to the Agency, Iran stated that, in the past,
+apart from planned co-operation in laser fusion and laser spectroscopy which never materialized, there
+had been a research thesis on laser spectroscopy of SF6 prepared by a university student in
+co-operation with the laser division of AEOI. As indicated in the Director General’s previous report to
+the Board, Iran stated that it had a substantial research and development programme on lasers, but that
+it currently had no programme for laser isotope separation.
+57. During discussions which took place in Iran from 2 to 3 October 2003, the Iranian authorities
+informed Agency inspectors that Iran had received from a foreign source, in 1992, a laser
+spectroscopy laboratory intended for the study of laser induced fusion, optogalvanic phenomena and
+photoionization spectroscopy, and from another foreign source, in 2000, the large vacuum vessel
+referred to above, but that the equipment had been only for spectroscopic studies. It was agreed that
+the Agency would be shown the equipment and permitted to take environmental samples, as had been
+requested by the Agency on 12 August 2003.
+58. On 6 October 2003, Agency inspectors were permitted to take environmental samples at Lashkar
+Ab’ad. The inspectors also visited a warehouse in the Karaj Agricultural and Medical Centre of the
+AEOI, where a large imported vacuum vessel (approximately 5 m long, 1 m in diameter) with
+associated hardware were stored. The Iranian authorities stated that it was the equipment which had
+been imported in 2000, that it had never been used, and that it had now been packed for shipment back
+to the manufacturer, since the contract related to its supply had been terminated by the foreign partner
+in 2000. The inspectors were informed that the individuals involved with the projects would be made
+available for interviews, but that the interviews would take place later in Tehran, where the equipment
+related to the laboratory imported from another country in 1992 would be made available for
+examination and environmental sampling. However, these interviews and the presentation of the other
+equipment were deferred by Iran until the end of October 2003.
+59. In its letter dated 21 October 2003, Iran acknowledged that, starting in the 1970s, it had had
+contracts related to laser enrichment using atomic vapour laser isotope separation (AVLIS) and
+molecular laser isotope separation (MLIS) techniques with foreign entities from four countries:
+(a)
+
+1975 – a contract for the establishment of a laboratory to study the spectroscopic
+behaviour of uranium metal, which had been abandoned in the 1980s as the laboratory
+had not functioned properly. The laboratory had also contained two mass
+spectrometers, purchased from the same source in 1976, which had been used to
+analyse samples of nuclear material obtained from enrichment experiments at Kalaye
+Electric Company, TNRC and Lashkar Ab’ad. While the import of the nuclear
+material used in that project had been reported to the Agency, the laboratory where the
+laser equipment had been installed (at TNRC) was not. None of these activities
+involving the nuclear material had been reported to the Agency.
+
+(b)
+
+Late 1970s – a contract with a second supplier to study MLIS, under which four 5 µm
+CO lasers and four vacuum chambers were delivered, but which was ultimately
+terminated due to the political situation prevailing at that time.
+
+(c)
+
+1991 – a contract with a third supplier for the establishment of a laser laboratory,
+consisting of two parts: the “Laser Spectroscopy Laboratory” (LSL), for the
+spectroscopic study of uranium metal; and the “Comprehensive Separation
+Laboratory” (CSL), at which enrichment would be carried out on a milligram scale.
+The contract also provided for the supply to Iran of 50 kg of natural uranium metal
+(which was imported in 1993). The equipment was able to enrich uranium up to the
+contracted level of 3% U-235, and even slightly beyond, in the course of the
+
+GOV/2003/75
+Annex 1
+Page 11
+
+experiments. It was used until October 2002, when the laboratories, and the nuclear
+material, were moved from TNRC to Lashkar Ab’ad. None of these activities
+involving nuclear material were reported to the Agency.
+(d)
+
+1998 – a contract with a fourth supplier to obtain information related to laser
+enrichment, and the supply of relevant equipment. However, due to the inability of the
+supplier to secure export licences, only some of the equipment was delivered (to
+Lashkar Ab’ad).
+
+60. The equipment imported in connection with the above mentioned AVLIS and MLIS projects was
+presented to the Agency inspectors in October 2003, and the inspectors were able to discuss the
+projects with individuals who had been involved with them and to take environmental samples. Final
+assessment must await evaluation of the recently available information and the environmental
+sampling results.
+61. In October 2003, Iran provided more information on Lashkar Ab’ad, and acknowledged that it
+had in fact contained a pilot plant for laser enrichment using AVLIS techniques, which had been
+established in 2000 pursuant to a project involving the fourth country. As indicated above, this
+contract was not fully implemented, since export licences were not obtained for all of the equipment.
+The project had consisted of several contracts covering not only the supply of information, as
+indicated in Iran’s letter of 21 October 2003 to the Agency, but also delivery of more powerful copper
+vapour lasers (CVLs) up to 150 kW. Since the delivery of the CVLs was blocked due to the lack of
+export licences, the equipment at LSL and CSL was moved to Lashkar Ab’ad in October 2002, and,
+taking advantage of the CVL and dye lasers from these laboratories and the large vacuum chamber and
+associated equipment imported in 2000 and already located there, experiments were conducted from
+October 2002 through January 2003 using 22 kg of the 50 kg of imported natural uranium metal.
+According to Iranian authorities, the uranium metal was located at Lashkar Ab’ad from December
+2002 through May 2003. The equipment was dismantled in May 2003 and transferred together with
+uranium metal to Karaj, where they were presented to Agency inspectors on 28 October 2003. The
+Agency took environmental samples from the equipment and nuclear material presented to it.
+62. In its letter of 21 October 2003, Iran also informed the Agency that it had used for separation
+experiments at LSL and CSL at TNRC 8 kg of the 50 kg of natural uranium metal imported in 1993.
+63. The equipment received in 1992 and 1999 was suitable for pilot plant scale operations of uranium
+isotope separation using AVLIS. As an isotope separation plant is defined in Article 98.I.(a) of the
+Safeguards Agreement as a facility, the existence of these facilities should have been declared to the
+Agency, and information provided on an as-built basis at Lashkar Ab’ad, and its subsequent transfer to
+Karaj.
+64. Iran had failed to report the receipt and use of uranium metal and to provide design information
+for LSL, CSL and Lashkar Ab’ad. In the meeting of 1 November 2003, Iran agreed, as a corrective
+measure, to submit the relevant ICRs concerning the use of the uranium metal, which will be presented
+for Agency verification during the inspection scheduled for 8–15 November 2003. Iran also agreed to
+submit design information for a new storage facility at Karaj, where the waste from the laser
+enrichment programme is being stored along with the dismantled equipment, and to amend the design
+information for JHL to cover the mass spectrometer and laser laboratories as well as some waste tanks
+containing nuclear material.
+65. Final assessment is pending evaluation of the new information, the verification results from the
+November 2003 inspection and the results of environmental and other sample taking.
+
+GOV/2003/75
+Annex 1
+Page 12
+
+Heavy Water Reactor Programme
+66. In response to Agency enquiries in September 2002, Iran confirmed in February 2003 its
+construction of a Heavy Water Production Plant at Arak. In explaining the need for such a plant,
+Iranian officials said that they had not known whether their uranium enrichment programme would
+succeed, and that, therefore, they had considered in the 1980s the possibility of constructing a natural
+uranium nuclear power plant using heavy water as the moderator and coolant. They further explained
+that, now that the enrichment programme had succeeded, there was no need for heavy water
+production, and they were not sure whether the plant would be completed. On 26 February 2003, the
+Agency submitted a number of questions to Iran about its heavy water reactor programme, requesting
+that it provide further information, in particular on any plans Iran had to build heavy water reactors.
+
+Design and Purpose of the IR-40
+67. The Agency was first informed of Iran’s construction of a heavy water reactor in a letter from
+Iran dated 5 May 2003. In that letter, Iran stated that it intended to construct a 40 MW(th) heavy water
+reactor, the Iran Nuclear Research Reactor (IR-40) at Arak. Enclosed with the letter was only
+preliminary design information on the reactor, in which the reactor power output of 40 MW(th) was
+confirmed; it did not include information on the fuel or the reactor design. At the same time, Iran
+provided preliminary information on a facility intended to manufacture fuel for IR-40, namely the Fuel
+Manufacturing Plant (FMP) to be built on the Esfahan site.
+68. During a technical visit to Iran by the Agency on 10–13 July 2003, the Iranian authorities made a
+presentation on some of the technical features of the IR-40, and informed the Agency that the
+construction was planned to start in 2004. According to statements made in the course of this
+presentation, Iran had decided to replace TRR because, after 35 years of operation, it was reaching the
+safety limits for which it had been designed and because of its location within what had become the
+suburbs of the city of Tehran. However, as it had tried, unsuccessfully, on several occasions to import
+a research reactor suitable for medical, industrial isotope production and for research and
+development, Iran had decided in the mid-1980s to construct its own reactor. The only alternative was
+a heavy water reactor which could use UO2 and zirconium produced in Esfahan. According to the
+Iranian authorities, to meet its isotope production requirements, such a reactor should have a neutron
+flux of 1013 to 1014 n/cm2/s, based on a power of the order of 30-40 MW(th) when using natural UO2
+fuel.
+69. During the presentation, the Iranian authorities informed the Agency that the facility was based
+on indigenous design, and that it was currently in the detailed design phase and would be built in the
+Khondab area near Arak. The core fuel assemblies would be made from natural UO2 and supplied by
+FMP, the feed for which would be supplied by UCF, currently under construction at Esfahan. The
+Agency was informed that the construction of FMP would begin in 2003 and be completed in 2006,
+and that operations were planned to start in 2007. Iran provided updated design information on the
+IR-40 on 26 July 2003, and preliminary design information on FMP in 2003.
+70. In a letter to the Agency dated 19 August 2003, the AEOI provided more information on Iran’s
+heavy water reactor programme, stating that a decision to start the research and development had been
+made in the early 1980s.
+71. As indicated above, Iran previously stated that the IR-40 was of indigenous design. According to
+the information provided by Iran in its letter of 21 October 2003, however, foreign experts had been
+consulted in the development of some parts of the design of the reactor. When asked, Iranian
+
+GOV/2003/75
+Annex 1
+Page 13
+
+authorities stated that they had conducted extensive reactor core calculations for the fuel management
+strategies and to control the excess reactivity6 of the core. In that letter, Iran stated further that the
+reactor design had been 90% completed by the end of 2002, and the detailed design was expected to
+be completed by the end of 2005.
+72. On 29 October 2003, Iran informed the Agency that the production of both “short lived” and
+“long lived” isotopes had been considered for this project, and that the exact amount and type of these
+isotopes would be decided upon during the detailed design stage of the project.
+
+Hot Cells
+73. During its July 2003 visit to Tehran, the Agency was provided with drawings of the reactor.
+Contrary to what would have been expected given the declared radioisotope production purpose of the
+facility, the drawings contained no references to hot cells. The Agency raised this issue during that
+visit, particularly in light of open source reports of recent efforts by Iran to acquire from abroad heavy
+manipulators and leaded windows designed for hot cell applications. The Agency indicated to the
+Iranian authorities that, given the specifications of the manipulators and windows which were the
+subject of those reports, a design for hot cells should exist already and that, therefore, the hot cell, or
+cells, should already have been declared, at least on a preliminary basis, as part of the facility or as a
+separate installation. On 4 August 2003, the Agency was provided with updated design information on
+the IR-40 which did not contain any references to hot cells. Later in August, Iran informed the Agency
+that, as Iran had not been certain about the success of its procurement efforts, the design of the hot
+cell(s) had not been included in the preliminary drawings of the IR-40 Research Reactor.
+74. In its letter of 21 October 2003, Iran acknowledged that two hot cells had been foreseen for this
+project. However, according to the information provided in that letter, neither the design nor detailed
+information about the dimensions or the actual layout of the hot cells were available at the present
+time, since they did not know the characteristics of the manipulators and shielded windows for the hot
+cells which they could procure. Iran indicated in that letter that manipulators would be needed for: 4
+hot cells for the production of medical radioisotopes, 2 hot cells for the production of Co-60 and Ir192 sources, 3 hot cells for waste processing, and 10 back-up manipulators. The 21 October 2003
+letter included a drawing of a building which Iran said would contain hot cells for the production of
+isotopes. In the meeting on 1 November 2003, upon further Agency inquiry, Iran confirmed that there
+were tentative plans to construct at the Arak site an additional building with hot cells for the
+production of radioisotopes. Iran stated that that first building was to contain hot cells for the
+production of “short lived” isotopes, and that it intended to construct the other building to produce
+“long lived” radioisotopes. Iran agreed to provide preliminary design information for the second
+building.
+75. Agency experts will examine in detail all of the available information with a view to making a
+technical assessment of the explanations provided by Iran concerning the prospective use of the hot
+cells at Arak and the associated equipment and manipulators.
+
+Heavy water production capacity and inventory
+76. According to Iranian statements, the estimated annual need for heavy water at the IR-40 is less
+than 1 t. In a 19 August 2003 letter to the Agency, Iran provided additional information on the amount
+of heavy water initially needed for the reactor (approximately 80–90 t), and on the design capacity of
+__________________________________________________________________________________
+6
+
+Excess reactivity is the maximum deviation from criticality attainable at any time by adjustment of the reactor’s control
+rods.
+
+GOV/2003/75
+Annex 1
+Page 14
+
+the heavy water production plant under construction at Khondab near Arak (8 t of heavy water per
+year with expansion capabilities to twice its design capacity). According to the information provided
+in that letter, Iran plans to start the production of heavy water in 2004. In that letter, Iran stated further
+that laboratory scale experiments to produce heavy water had been conducted in Esfahan in the 1980s
+using electrolysis techniques.
+77. In a meeting held on 29 October 2003, Iran confirmed that the construction of a second
+production line, with a production capacity of 8 t, had been started. It was further stated that the
+Khondab facility was actually a pilot plant, and that no laboratory or other experiments using the
+Girdler-Sulphide method (to be used at the Arak facility) had been carried out in the past in Iran.
+
+GOV/2003/75
+Annex 2
+Page 1
+
+LIST OF LOCATIONS RELEVANT TO THE IMPLEMENTATION OF
+AGENCY SAFEGUARDS
+
+LOCATION
+TEHRAN NUCLEAR
+RESEARCH CENTRE
+
+AS OF NOVEMBER 2003
+
+STATUS
+
+Tehran Research Reactor (TRR)
+
+Operating
+
+Molybdenum, Iodine and Xenon
+Radioisotope Production Facility
+(MIX Facility)
+
+Constructed, but not
+operating
+
+*Jabr Ibn Hayan Multipurpose
+Laboratories (JHL)
+
+Operating
+
+*Waste Handling Facility (WHF)
+
+Operating
+
+TEHRAN
+
+*Kalaye Electric Company
+
+Dismantled pilot enrichment
+facility
+
+BUSHEHR
+
+Bushehr
+(BNPP)
+
+ESFAHAN NUCLEAR
+TECHNOLOGY CENTRE
+
+Miniature Neutron Source Reactor
+(MNSR)
+
+Operating
+
+Light Water Sub-Critical Reactor
+(LWSCR)
+
+Operating
+
+Heavy Water Zero Power Reactor
+(HWSPR)
+
+Operating
+
+Fuel Fabrication Laboratory (FFL)
+
+Operating
+
+Uranium Chemistry Laboratory
+(UCL)
+
+Closed down
+
+Uranium Conversion Facility
+(UCF)
+
+Under construction, first
+process units being
+commissioned for operation
+
+Graphite Sub-Critical Reactor
+(GSCR)
+
+Decommissioned
+
+*Fuel Manufacturing Plant (FMP)
+
+In detailed design stage,
+construction to begin in 2004
+
+*Pilot Fuel Enrichment Plant
+(PFEP)
+
+Operating
+
+*Fuel Enrichment Plant (FEP)
+
+Under construction
+
+NATANZ
+
+Nuclear
+
+Power
+
+Plant
+
+Under construction
+
+GOV/2003/75
+Annex 2
+Page 2
+
+KARAJ
+
+*Radioactive Waste Storage
+
+Under construction, but
+partially operating
+
+LASHKAR AB’AD
+
+*Pilot Uranium Laser Enrichment
+Plant
+
+Dismantled
+
+ARAK
+
+*Iran Nuclear Research Reactor
+(IR-40)
+
+In detailed design phase
+
+*Hot cell facility for production of
+radioisotopes
+
+In preliminary design stage
+
+*Heavy Water Production Plant
+(HWPP)
+
+ANARAK
+
+*
+
+Locations declared in 2003
+
+*Waste storage site
+
+Under construction
+Not subject to Safeguards
+Agreement
+Waste to be transferred to
+JHL
+
+GOV/2003/75
+Annex 3
+Page 1
+
+MAP OF IRAN
+
+GOV/2003/75
+Annex 3
+Page 2
+
+ABBREVIATIONS AND TERMS
+AEOI
+
+Atomic Energy Organisation of Iran
+
+AUC
+
+ammonium uranyl carbonate
+
+AVLIS
+
+atomic vapour laser isotope separation
+
+BNPP
+
+Bushehr Nuclear Power Plant, Bushehr
+
+CO
+
+carbon monoxide
+
+CSL
+
+Comprehensive Separation Laboratory, TNRC and Lashkar Ab’ad
+
+CVL
+
+copper vapour laser
+
+DIV
+
+design information verification
+
+ENTC
+
+Esfahan Nuclear Technology Centre
+
+FEP
+
+Fuel Enrichment Plant, Natanz
+
+FFL
+
+Fuel Fabrication Laboratory, ENTC
+
+FMP
+
+Fuel Manufacturing Plant, ENTC
+
+GSCR
+
+Graphite, Sub-Critical Reactor, ENTC
+
+HEU
+
+high enriched uranium
+
+HWPP
+
+Heavy Water Production Plant, Arak
+
+HWSPR
+
+Heavy Water Zero Power Reactor, ENTC
+
+ICR
+
+inventory change report
+
+IR-40
+
+Iran Nuclear Research Reactor, Arak
+
+JHL
+
+Jabr Ibn Hayan Multipurpose Laboratories, TNRC
+
+LEU
+
+low enriched uranium
+
+LSL
+
+Laser Separation Laboratory, TNRC and Lashkar Ab’ad
+
+LWSCR
+
+Light Water Sub-Critical Reactor, ENTC
+
+MBR
+
+material balance report
+
+MIX Facility
+
+Molybdenum, Iodine and Xenon Radioisotope Facility, TNRC
+
+MLIS
+
+molecular laser isotope separation
+
+MNSR
+
+Miniature Neutron Source Reactor, ENTC
+
+PFEP
+
+Pilot Fuel Enrichment Plant, Natanz
+
+PIL
+
+physical inventory listing
+
+GOV/2003/75
+Annex 3
+Page 3
+
+SF6
+
+sulphur hexafluoride
+
+TNRC
+
+Tehran Nuclear Research Centre
+
+TRR
+
+Tehran Research Reactor, Tehran
+
+UCF
+
+Uranium Conversion Facility, ENTC
+
+UCL
+
+Uranium Chemistry Laboratory, ENTC
+
+UF4
+
+uranium tetrachloride
+
+UF6
+
+uranium hexafluoride
+
+UO2
+
+uranium dioxide
+
+UO3
+
+uranium trioxide
+
+U3O8
+
+urano-uranic oxide
+
+UOC
+
+uranium ore concentrate
+
+WHF
+
+Waste Handling Facility, TNRC
+
+WSF
+
+Waste Storage Facility, Karaj
+
+

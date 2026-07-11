@@ -1,0 +1,1707 @@
+# The Theory of Economic Regulation
+
+- **Author:** George J. Stigler
+- **Published in:** The Bell Journal of Economics and Management Science, Vol. 2, No. 1 (Spring, 1971), pp. 3-21
+- **Publisher:** RAND Corporation
+- **Source URL:** https://bfi.uchicago.edu/wp-content/uploads/2023/02/3003160.pdf
+- **JSTOR Stable URL:** https://www.jstor.org/stable/3003160
+- **Access:** Freely available PDF from the University of Chicago Becker Friedman Institute
+
+---
+
+The Theory of Economic Regulation
+Author(s): George J. Stigler
+Source: The Bell Journal of Economics and Management Science, Vol. 2, No. 1 (Spring,
+1971), pp. 3-21
+Published by: RAND Corporation
+Stable URL: https://www.jstor.org/stable/3003160
+Accessed: 01-03-2023 05:19 UTC
+JSTOR is a not-for-profit service that helps scholars, researchers, and students discover, use, and build upon a wide
+range of content in a trusted digital archive. We use information technology and tools to increase productivity and
+facilitate new forms of scholarship. For more information about JSTOR, please contact support@jstor.org.
+Your use of the JSTOR archive indicates your acceptance of the Terms & Conditions of Use, available at
+https://about.jstor.org/terms
+
+RAND Corporation is collaborating with JSTOR to digitize, preserve and extend access to The
+Bell Journal of Economics and Management Science
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+The theory of economic regulation
+George J. Stigler
+The University of Chicago
+
+The potential uses of public resources and powers to imrtprove the
+economic status of economic groups (such as industries anid occupations) are analyzed to provide a scheme qf the demand for regulation.
+The characteristics of the political process which allow relatively small
+groups to obtain such regulation is then sketched to provide elements
+of a theory of supply of regulation. A variety of empirical evidence and
+illustr ation is also presented.
+
+* The state-the machinery and power of the state-is a potential
+resource or threat to every industry in the society. With its power to
+prohibit or compel, to take or give money, the state can and does
+selectively help or hurt a vast number of industries. That political
+juggernaut, the petroleum industry, is an immense consumer of
+
+political benefits, and simultaneously the underwriters of marine
+insurance have their more modest repast. The central tasks of the
+theory of economic regulation are to explain who will receive the
+benefits or burdens of regulation, what form regulation will take, and
+the effects of regulation upon the allocation of resources.
+Regulation may be actively sought by an industry, or it may be
+thrust upon it. A central thesis of this paper is that, as a rule, regulation is acquired by the industry and is designed and operated primarily for its benefit. There are regulations whose net effects upon
+the regulated industry are undeniably onerous; a simple example is
+the differentially heavy taxation of the industry's product (whiskey,
+
+playing cards). These onerous regulations, however, are exceptional
+and can be explained by the same theory that explains beneficial (we
+may call it "acquired") regulation.
+Two main alternative views of the regulation of industry are
+widely held. The first is that regulation is instituted primarily for the
+protection and benefit of the public at large or some large subclass of
+
+the public. In this view, the regulations which injure the public-as
+when the oil import quotas increase the cost of petroleum products
+to America by $5 billion or more a year-are costs of some social
+
+goal (here, national defense) or, occasionally, perversions of the
+regulatory philosophy. The second view is essentially that the political
+
+process defies rational explanation: "politics" is an imponderable,
+a constantly and unpredictably shifting mixture of forces of the most
+diverse nature, comprehending acts of great moral virtue (the emancipation of slaves) and of the most vulgar venality (the congressman
+feathering his own nest).
+The author obtained the B.B.A. degree from the University of Washington,
+the M.B.A. degree from Northwestern, and the Ph.D. degree from the University
+of Chicago. He is presently Charles R. Walgreen Distinguished Service Professor
+of American Institutions at the University of Chicago, and has published numerous articles and texts in the field of economics. Dr. Stigler is Vice Chairman of THEORY OF
+
+the Securities Investor Protective Commission. REGULATION / 3
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+why does not the powerful industry which obtained this expensive
+program instead choose direct cash subsidies from the public treasury? The "protection of the public" theory of regulation must say
+that the choice of import quotas is dictated by the concern of the
+
+federal government for an adequate domestic supply of petroleum in
+the event of war-a remark calculated to elicit uproarious laughter
+at the Petroleum Club. Such laughter aside, if national defense were
+the goal of the quotas, a tariff would be a more economical instrument of policy: it would retain the profits of exclusion for the treasury. The non-rationalist view would explain the policy by the inability
+of consumers to measure the cost to them of the import quotas, and
+hence their willingness to pay $5 billion in higher prices rather than
+
+the $2.5 billion in cash that would be equally attractive to the industry. Our profit-maximizing theory says that the explanation lies
+in a different direction: the present members of the refining industries
+
+would have to share a cash subsidy with all new entrants into the
+refining industry.' Only when the elasticity of supply of an industry
+is small will the industry prefer cash to controls over entry or output.
+
+This question, why does an industry solicit the coercive powers of
+
+the state rather than its cash, is offered only to illustrate the approach
+of the present paper. We assume that political systems are rationally
+devised and rationally employed, which is to say that they are appropriate instruments for the fulfillment of desires of members of the
+
+society. This is not to say that the state will serve any person's concept
+
+of the public interest: indeed the problem of regulation is the problem
+of discovering when and why an industry (or other group of likeminded people) is able to use the state for its purposes, or is singled
+
+out by the state to be used for alien purposes.
+
+1. What benefits can
+
+* The state has one basic resource which in pure principle is not
+
+a state provide
+
+shared with even the mightiest of its citizens: the power to coerce.
+
+to an industry?
+
+The state can seize money by the only method which is permitted
+
+by the laws of a civilized society, by taxation. The state can ordain
+the physical movements of resources and the economic decisions of
+households and firms without their consent. These powers provide
+
+the possibilities for the utilization of the state by an industry to increase its profitability. The main policies which an industry (or
+occupation) may seek of the state are four.
+The most obvious contribution that a group may seek of the
+government is a direct subsidy of money. The domestic airlines received "air mail" subsidies (even if they did not carry mail) of $1.5
+
+billion through 1968. The merchant marine has received construction
+and operation subsidies reaching almost $3 billion since World War
+II. The education industry has long shown a masterful skill in obtaining public funds: for example, universities and colleges have received
+federal funds exceeding $3 billion annually in recent years, as well as
+subsidized loans for dormitories and other construction. The veterans
+of wars have often received direct cash bonuses.
+I The domestic producers of petroleum, who also benefit from the import
+quota, would find a tariff or cash payment to domestic producers equally attractive. If their interests alone were consulted, import quotas would be auctioned off
+4 / GEORGE J. STIGLER
+
+instead of being given away.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+We have already sketched the main explanation for the fact that
+an industry with power to obtain governmental favors usually does
+not use this power to get money: unless the list of beneficiaries can
+
+be limited by an acceptable device, whatever amount of subsidies the
+industry can obtain will be dissipated among a growing number of
+rivals. The airlines quickly moved away from competitive bidding for
+
+air mail contracts to avoid this problem.2 On the other hand, the
+premier universities have not devised a method of excluding other
+claimants for research funds, and in the long run they will receive
+much-reduced shares of federal research monies.
+
+The second major public resource commonly sought by an in-
+
+dustry is control over entry by new rivals. There is considerable, not
+
+to say excessive, discussion in economic literature of the rise of
+peculiar price policies (limit prices), vertical integration, and similar
+devices to retard the rate of entry of new firms into oligopolistic industries. Such devices are vastly less efficacious (economical) than
+the certificate of convenience and necessity (which includes, of course,
+the import and production quotas of the oil and tobacco industries).
+The diligence with which the power of control over entry will be
+exercised by a regulatory body is already well known. The Civil
+Aeronautics Board has not allowed a single new trunk line to be
+
+launched since it was created in 1938. The power to insure new banks
+has been used by the Federal Deposit Insurance Corporation to
+reduce the rate of entry into commercial banking by 60 percent.3 The
+interstate motor carrier history is in some respects even more striking,
+because no even ostensibly respectable case for restriction on entry
+can be developed on grounds of scale economies (which are in turn
+
+adduced to limit entry for safety or economy of operation). The
+
+number of federally licensed common carriers is shown in Figure 1:
+the immense growth of the freight hauled by trucking common
+carriers has been associated with a steady secular decline of numbers
+of such carriers. The number of applications for new certificates has
+
+been in excess of 5000 annually in recent years: a rigorous proof that
+hope springs eternal in an aspiring trucker's breast.
+
+We propose the general hypothesis: every industry or occupation
+that has enough political power to utilize the state will seek to control entry. In addition, the regulatory policy will often be so fashioned
+as to retard the rate of growth of new firms. For example, no new
+
+savings and loan company may pay a dividend rate higher than that
+prevailing in the community in its endeavors to attract deposits.4 The
+power to limit selling expenses of mutual funds, which is soon to be
+conferred upon the Securities and Exchange Commission, will serve
+to limit the growth of small mutual funds and hence reduce the sales
+costs of large funds.
+
+One variant of the control of entry is the protective tariff (and the
+corresponding barriers which have been raised to interstate move-
+
+ments of goods and people). The benefits of protection to an industry,
+
+one might think, will usually be dissipated by the entry of new domestic producers, and the question naturally arises: Why does the
+industry not also seek domestic entry controls? In a few industries
+2 See [7], pp. 60 ff.
+ISee [10}.
+4The Federal Home Loan Bank Board is the regulatory body. It also controls
+the amount of advertising and other areas of competition.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+THEORY OF
+REGULATION / 5
+
+FIGURE 1
+
+CERTIFICATES FOR INTERSTATE MOTOR CARRIERS
+200
+
+0~~~~~~~~~~~~~~~~~~~~~~~~~~~~~00
+
+0j 150
+
+<
+
+O
+
+'_CUM
+
+ULATIV
+
+E
+
+APPLICATIONS
+
+0
+
+z
+
+C E : 9
+80
+
+15 10
+
+SOURCE: TABLE 5 ~ ~ LICNSE
+
+(petroleum) the domestic controls have been obtained, but not in
+
+most. The tariff will be effective if there is a specialized domestic
+resource necessary to the industry; oil-producing lands is an example.
+
+Even if an industry has only durable specialized resources, it will gain
+if its contraction is slowed by a tariff.
+A third general set of powers of the state which will be sought by
+the industry are those which affect substitutes and complements.
+Crudely put, the butter producers wish to suppress margarine and
+encourage the production of bread. The airline industry actively supports the federal subsidies to airports; the building trade unions have
+opposed labor-saving materials through building codes. We shall
+examine shortly a specific case of inter-industry competition in
+transportation.
+
+The fourth class of public policies sought by an industry is directed to price-fixing. Even the industry that has achieved entry
+control will often want price controls administered by a body with
+coercive powers. If the number of firms in the regulated industry is
+even moderately large, price discrimination will be difficult to main-
+
+tain in the absence of public support. The prohibition of interest on
+demand deposits, which is probably effective in preventing interest
+payments to most non-business depositors, is a case in point. Where
+
+there are no diseconomies of large scale for the individual firm (e.g.,
+a motor trucking firm can add trucks under a given license as common carrier), price control is essential to achieve more than competitive rates of return.
+
+O Limitations upon political benefits. These various political boons
+are not obtained by the industry in a pure profit-maximizing form.
+The political process erects certain limitations upon the exercise of
+6 / GEORGE J. STIGLER
+
+cartel policies by an industry. These limitations are of three sorts.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+TABLE 1
+IMPORT QUOTAS OF REFINERIES AS PERCENT
+OF DAILY INPUT OF PETROLEUM
+(DISTRICTS I - IV, JULY 1, 1959 - DEC. 31, 1959)
+
+SIZE OF REFINERY P QUOTA
+
+(THOUSANDS OF BARRELS)PECNQUT
+0-10
+
+11.4
+
+10-20
+
+10.4
+
+20-30
+
+9.5
+
+30-60
+
+8.5
+
+60-100
+
+7.6
+
+100-150
+
+6.6
+
+150-200
+
+5.7
+
+200-300
+
+4.7
+
+300
+
+AND
+
+OVER
+
+3.8
+
+SOURCE: HEARING, SELECT COMMITTEE ON SMALL BUSINESS, U. S. CONGRESS,
+
+88thCONG.,2ndSESS.,AUG.10AND 11, 1964, [12] P. 121.
+
+First, the distribution of control of the industry among the firms
+in the industry is changed. In an unregulated industry each firm's
+
+influence upon price and output is proportional to its share of industry output (at least in a simple arithmetic sense of direct capacity
+
+to change output). The political decisions take account also of the
+political strength of the various firms, so small firms have a larger
+influence than they would possess in an unregulated industry. Thus,
+
+when quotas are given to firms, the small firms will almost always
+receive larger quotas than cost-minimizing practices would allow.
+
+The original quotas under the oil import quota system will illustrate
+this practice (Table 1). The smallest refiners were given a quota of
+11.4 percent of their daily consumption of oil, and the percentage
+dropped as refinery size rose.5 The pattern of regressive benefits is
+characteristic of public controls in industries with numerous firms.
+Second, the procedural safeguards required of public processes
+are costly. The delays which are dictated by both law and bureau-
+
+cratic thoughts of self-survival can be large: Robert Gerwig found
+the price of gas sold in interstate commerce to be 5 to 6 percent
+higher than in intrastate commerce because of the administrative
+
+costs (including delay) of Federal Power Commission reviews [5].
+Finally, the political process automatically admits powerful
+outsiders to the industry's councils. It is well known that the alloca-
+
+tion of television channels among communities does not maximize
+industry revenue but reflects pressures to serve many smaller communities. The abandonment of an unprofitable rail line is an even
+more notorious area of outsider participation.
+These limitations are predictable, and they must all enter into the
+
+calculus of the profitability of regulation of an industry.
+
+Li An illustrative analysis. The recourse to the regulatory process is
+of course more specific and more complex than the foregoing sketch
+5 The largest refineries were restricted to 75.7 percent of their historical quota
+under the earlier voluntary import quota plan.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+THEORY OF
+REGULATION / 7
+
+suggests. The defensive power of various other industries which are
+affected by the proposed regulation must also be taken into account.
+An analysis of one aspect of the regulation of motor trucking will
+illustrate these complications. At this stage we are concerned only
+with the correspondence between regulations and economic interests;
+later we shall consider the political process by which regulation is
+achieved.
+The motor trucking industry operated almost exclusively within
+cities before 1925, in good part because neither powerful trucks nor
+good roads were available for long-distance freight movements. As
+these deficiencies were gradually remedied, the share of trucks in
+intercity freight movements began to rise, and by 1930 it was esti-
+
+mated to be 4 percent of ton-miles of intercity freight. The railroad
+industry took early cognizance of this emerging competitor, and one
+
+of the methods by which trucking was combatted was state regulation.
+By the early 1930's all states regulated the dimensions and weight
+of trucks. The weight limitations were a much more pervasive control
+
+over trucking than the licensing of common carriers because even the
+
+trucks exempt from entry regulation are subject to the limitations on
+dimensions and capacity. The weight regulations in the early 1930's
+
+are reproduced in the appendix (Table 6). Sometimes the participation of railroads in the regulatory process was incontrovertible:
+Texas and Louisiana placed a 7000-pound payload limit on trucks
+serving (and hence competing with) two or more railroad stations,
+
+and a 14,000-pound limit on trucks serving only one station (hence,
+not competing with it).
+
+We seek to determine the pattern of weight limits on trucks that
+would emerge in response to the economic interests of the concerned
+parties. The main considerations appear to be the following:
+
+(1) Heavy trucks would be allowed in states with a substantial number of trucks on farms: the powerful agricultural interests would
+insist upon this. The 1930 Census reports nearly one million trucks
+on farms. One variable in our study will be, for each state, trucks per
+1000 of agricultural population.6
+(2) Railroads found the truck an effective and rapidly triumphing
+competitor in the shorter hauls and hauls of less than carload traffic,
+
+but much less effective in the carload and longer-haul traffic. Our
+second variable for each state is, therefore, length of average railroad
+
+haul.7 The longer the average rail haul is, the less the railroads will
+be opposed to trucks.
+(3) The public at large would be concerned by the potential damage
+done to the highway system by heavy trucks. The better the state
+highway system, the heavier the trucks that would be permitted. The
+
+percentage of each state's highways that had a high type surface is the
+third variable. Of course good highways are more likely to exist where
+the potential contribution of trucks to a state's economy is greater,
+so the causation may be looked at from either direction.
+6 The ratio of trucks to total population would measure the product of (1)
+the importance of trucks to farmers, and (2) the importance of farmers in the
+
+state. For reasons given later, we prefer to emphasize (1).
+7This is known for each railroad, and we assume that (1) the average holds
+within each state, and (2) two or more railroads in a state may be combined on the
+8 / GEORGE J. STIGLER
+
+basis of mileage. Obviously both assumptions are at best fair approximations.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+We have two measures of weight limits on trucks, one for 4-wheel
+trucks (X1) and one for 6-wheel trucks (X2). We may then calculate
+two equations,
+
+Xi (or X2) = a + bX3 + cX4 + dX5,
+where
+
+X3 = trucks per 1000 agricultural labor force, 1930,
+X = average length of railroad haul of freight traffic, 1930,
+
+X5 = percentage of state roads with high-quality surface, 1930.
+(All variables are fully defined and their state values given in Table
+7 on page 20.)
+
+The three explanatory variables are statistically significant, and
+
+each works in the expected direction. The regulations on weight were
+less onerous; the larger the truck population in farming, the less
+competitive the trucks were to railroads (i.e., the longer the rail
+hauls), and the better the highway system (see Table 2).
+n The foregoing analysis is concerned with what may be termed the
+
+industrial demand for governmental powers. Not every industry will
+have a significant demand for public assistance (other than money!),
+
+meaning the prospect of a substantial increase in the present value
+of the enterprises even if the governmental services could be obtained
+gratis (and of course they have costs to which we soon turn). In some
+economic activities entry of new rivals is extremely difficult to control-consider the enforcement problem in restricting the supply of
+domestic servants. In some industries the substitute products cannot
+
+be efficiently controlled-consider the competition offered to bus
+lines by private car-pooling. Price fixing is not feasible where every
+TABLE 2
+
+REGRESSION ANALYSIS OF STATE WEIGHT LIMITS ON TRUCKS
+
+(T VALUES UNDER REGRESSION COEFFICIENTS)
+
+DEPENDENT N CONSTANT X5 R2
+VARIABLE N OSAT X3 X
+
+i X 48 12.28 0.0336 0.0287 0.2641 0.502
+(4.87) (3.99) (2.77) (3.Q4)
+
+46 10.34 0.0437 0.0788 0.2528 0.243
+
+(1.57) (2.01) (2.97) (1.15)
+Xl = WEIGHT LIMIT ON 4-WHEEL TRUCKS (THOUSANDS OF POUNDS), 1932-33
+
+X2 = WEIGHT LIMIT ON 6-WHEEL TRUCKS (THOUSANDS OF POUNDS), 1932-33
+X3 = TRUCKS ON FARMS PER 1,000 AGRICULTURAL LABOR FORCE, 1930
+
+X4 = AVERAGE LENGTH OF RAILROAD HAUL OF FREIGHT (MILES), 1930
+X5 = PERCENT OF STATE HIGHWAYS WITH HIGH-TYPE SURFACE,
+DEC. 31, 1930
+
+SOURCES: XI AND X2: THE MOTOR TRUCK RED BOOK AND DIRECTORY [11],
+1934 EDITION, P. 85-102, AND U.S. DEPT. OF AGRIC., BUR.
+
+OF PUBLIC ROADS, DEC. 1932 [13].
+
+X3: CENSUS OF AGRICULTURE, 1930, VOL. IV, [14].
+X4: A.A.R.R., BUR. OF RAILWAY ECONOMICS, RAILWAY MILEAGE BY
+
+STATES, DEC. 31, 1930 [1] AND U.S.I.C.C., STATISTICS OF
+
+RAILWAYS IN THE U.S., 1930 [18]. THEORY OF
+X5: STATISTICAL ABSTRACT OF THE U.S., 1932 [16]. REGULATION / 9
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+unit of the product has a different quality and price, as in the market
+for used automobiles. In general, however, most industries will have
+a positive demand price (schedule) for the services of government.
+
+2. The costs of
+
+* When an industry receives a grant of power from the state, the
+
+obtaining legislation
+
+benefit to the industry will fall short of the damage to the rest of the
+community. Even if there were no deadweight losses from acquired
+regulation, however, one might expect a democratic society to reject
+
+such industry requests unless the industry controlled a majority of
+the votes.8 A direct and informed vote on oil import quotas would
+reject the scheme. (If it did not, our theory of rational political pro-
+
+cesses would be contradicted.) To explain why many industries are
+
+able to employ the political machinery to their own ends, we must
+examine the nature of the political process in a democracy.
+A consumer chooses between rail and air travel, for example, by
+voting with his pocketbook: he patronizes on a given day that mode
+
+of transportation he prefers. A similar form of economic voting
+occurs with decisions on where to work or where to invest one's
+
+capital. The market accumulates these economic votes, predicts their
+future course, and invests accordingly.
+
+Because the political decision is coercive, the decision process is
+
+fundamentally different from that of the market. If the public is asked
+to make a decision between two transportation media comparable
+
+to the individual's decision on how to travel-say, whether airlines
+or railroads should receive a federal subsidy-the decision must be
+abided by everyone, travellers and non-travellers, travellers this year
+and travellers next year. This compelled universality of political de-
+
+cisions makes for two differences between democratic political decision processes and market processes.
+(1) The decisions must be made simultaneously by a large number
+
+of persons (or their representatives): the political process demands
+simultaneity of decision. If A were to vote on the referendum today,
+B tomorrow, C the day after, and so on, the accumulation of a majority decision would be both expensive and suspect. (A might wish
+to cast a different vote now than last month.)
+The condition of simultaneity imposes a major burden upon the
+political decision process. It makes voting on specific issues prohibitively expensive: it is a significant cost even to engage in the
+
+transaction of buying a plane ticket when I wish to travel; it would be
+stupendously expensive to me to engage in the physically similar
+
+transaction of voting (i.e., patronizing a polling place) whenever
+a number of my fellow citizens desired to register their views on railroads versus airplanes. To cope with this condition of simultaneity,
+
+the voters must employ representatives with wide discretion and must
+eschew direct expressions of marginal changes in preferences. This
+
+characteristic also implies that the political decision does not predict
+voter desires and make preparations to fulfill them in advance of their
+realization.
+8 If the deadweight loss (of consumer and producer surplus) is taken into
+account, even if the oil industry were in the majority it would not obtain the
+
+legislation if there were available some method of compensation (such as sale of
+
+votes) by which the larger damage of the minority could be expressed effectively
+10 / GEORGE J. STIGLER
+
+against the lesser gains of the majority.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+(2) The democratic decision process must involve "all" the
+community, not simply those who are directly concerned with a decision. In a private market, the non-traveller never votes on rail versus
+plane travel, while the huge shipper casts many votes each day. The
+political decision process cannot exclude the uninterested voter: the
+abuses of any exclusion except self-exclusion are obvious. Hence, the
+political process does not allow participation in proportion to interest
+and knowledge. In a measure, this difficulty is moderated by other
+
+political activities besides voting which do allow a more effective vote
+
+to interested parties: persuasion, employment of skilled legislative
+representatives, etc. Nevertheless, the political system does not offer
+good incentives like those in private markets to the acquisition of
+knowledge. If I consume ten times as much of public service A
+
+(streets) as of B (schools), I do not have incentives to acquire corresponding amounts of knowledge about the public provision of these
+services.9
+
+These characteristics of the political process can be modified by
+having numerous levels of government (so I have somewhat more
+incentive to learn about local schools than about the whole state
+school system) and by selective use of direct decision (bond referenda). The chief method of coping with the characteristics, however,
+is to employ more or less full-time representatives organized in
+
+(disciplined by) firms which are called political parties or machines.
+The representative and his party are rewarded for their discovery
+and fulfillment of the political desires of their constituency by success
+in election and the perquisites of office. If the representative could
+confidently await reelection whenever he voted against an economic
+
+policy that injured the society, he would assuredly do so. Unfor-
+
+tunately virtue does not always command so high a price. If the representative denies ten large industries their special subsidies of money or
+
+governmental power, they will dedicate themselves to the election of
+a more complaisant successor: the stakes are that important. This
+does not mean that every large industry can get what it wants or all
+that it wants: it does mean that the representative and his party must
+find a coalition of voter interests more durable than the anti-industry
+
+side of every industry policy proposal. A representative cannot win
+or keep office with the support of the sum of those who are opposed
+to: oil import quotas, farm subsidies, airport subsidies, hospital
+subsidies, unnecessary navy shipyards, an inequitable public housing
+program, and rural electrification subsidies.
+
+The political decison process has as its dominant characteristic
+infrequent, universal (in principle) participation, as we have noted:
+
+political decisions must be infrequent and they must be global. The
+voter's expenditure to learn the merits of individual policy proposals
+and to express his preferences (by individual and group representa-
+
+tion as well as by voting) are determined by expected costs and returns, just as they are in the private marketplace. The costs of comprehensive information are higher in the political arena because in-
+
+formation must be sought on many issues of little or no direct concern to the individual, and accordingly he will know little about
+
+most matters before the legislature. The expressions of preferences in
+voting will be less precise than the expressions of preferences in the
+THEORY OF
+
+I See [2].
+
+REGULATION / 11
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+marketplace because many uninformed people will be voting and
+affecting the decision.10
+
+The channels of political decision-making can thus be described
+as gross or filtered or noisy. If everyone has a negligible preference for
+
+policy A over B, the preference will not be discovered or acted upon.
+If voter group X wants a policy that injures non-X by a small amount,
+it will not pay non-X to discover this and act against the policy. The
+
+system is calculated to implement all strongly felt preferences of
+
+majorities and many strongly felt preferences of minorities but to
+disregard the lesser preferences of majorities and minorities. The
+filtering or grossness will be reduced by any reduction in the cost to
+the citizen of acquiring information and expressing desires and by
+
+any increase in the probability that his vote will influence policy.
+The industry which seeks political power must go to the appropriate seller, the political party. The political party has costs of
+operation, costs of maintaining an organization and competing in
+
+elections. These costs of the political process are viewed excessively
+narrowly in the literature on the financing of elections: elections are
+to the political process what merchandizing is to the process of producing a commodity, only an essential final step. The party maintains its organization and electoral appeal by the performance of
+costly services to the voter at all times, not just before elections. Part
+
+of the costs of services and organization are borne by putting a part
+
+of the party's workers on the public payroll. An opposition party,
+however, is usually essential insurance for the voters to discipline the
+party in power, and the opposition party's costs are not fully met by
+public funds.
+
+The industry which seeks regulation must be prepared to pay
+
+with the two things a party needs: votes and resources. The resources may be provided by campaign contributions, contributed
+services (the businessman heads a fund-raising committee), and more
+indirect methods such as the employment of party workers. The
+votes in support of the measure are rallied, and the votes in opposition are dispersed, by expensive programs to educate (or uneducate)
+members of the industry and of other concerned industries.
+
+These costs of legislation probably increase with the size of the
+industry seeking the legislation. Larger industries seek programs
+which cost the society more and arouse more opposition from sub-
+
+stantially affected groups. The tasks of persuasion, both within and
+without the industry, also increase with its size. The fixed size of the
+
+political "market," however, probably makes the cost of obtaining
+legislation increase less rapidly than industry size. The smallest in-
+
+dustries are therefore effectively precluded from the political process
+unless they have some special advantage such as geographical concentration in a sparsely settled political subdivision.
+If a political party has in effect a monopoly control over the
+governmental machine, one might expect that it could collect most of
+the benefits of regulation for itself. Political parties, however, are
+10 There is an organizational problem in any decision in which more than one
+vote is cast. If because of economies of scale it requires a thousand customers to
+buy a product before it can be produced, this thousand votes has to be assembled
+by some entrepreneur. Unlike the political scene, however, there is no need to
+obtain the consent of the remainder of the community, because they will bear no
+12 / GEORGE J. STIGLER
+
+part of the cost.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+perhaps an ideal illustration of Demsetz' theory of natural monopoly
+[4]. If one party becomes extortionate (or badly mistaken in its reading of effective desires), it is possible to elect another party which will
+provide the governmental services at a price more closely proportioned to costs of the party. If entry into politics is effectively controlled, we should expect one-party dominance to lead that party to
+
+solicit requests for protective legislation but to exact a higher price
+for the legislation.
+
+The internal structure of the political party, and the manner in
+which the perquisites of office are distributed among its members,
+offer fascinating areas for study in this context. The elective officials
+
+are at the pinnacle of the political system-there is no substitute for
+the ability to hold the public offices. I conjecture that much of the
+compensation to the legislative leaders takes the form of extrapolitical payments. Why are so many politicians lawyers?-because
+everyone employs lawyers, so the congressman's firm is a suitable
+avenue of compensation, whereas a physician would have to be given
+bribes rather than patronage. Most enterprises patronize insurance
+companies and banks, so we may expect that legislators commonly
+have financial affiliations with such enterprises.
+The financing of industry-wide activities such as the pursuit of
+
+legislation raises the usual problem of the free rider.11 We do not
+possess a satisfactory theory of group behavior-indeed this theory
+is the theory of oligopoly with one addition: in the very large number
+industry (e.g., agriculture) the political party itself will undertake the
+
+entrepreneurial role in providing favorable legislation. We can go no
+further than the infirmities of oligopoly theory allow, which is to
+say, we can make only plausible conjectures such as that the more
+concentrated the industry, the more resources it can invest in the
+campaign for legislation.
+[ Occupational licensing. The licensing of occupations is a possible
+use of the political process to improve the economic circumstances
+of a group. The license is an effective barrier to entry because occupational practice without the license is a criminal offense. Since
+
+much occupational licensing is performed at the state level, the area
+provides an opportunity to search for the characteristics of an occupation which give it political power.
+Although there are serious data limitations, we may investigate
+several characteristics of an occupation which should influence its
+ability to secure political power:
+(1) The size of the occupation. Quite simply, the larger the occupa-
+
+tion, the more votes it has. (Under some circumstances, therefore,
+one would wish to exclude non-citizens from the measure of size.)
+(2) The per capita income of the occupation. The income of the
+
+occupation is the product of its number and average income, so this
+variable and the preceding will reflect the total income of the occupa-
+
+tion. The income of the occupation is presumably an index of the
+probable rewards of successful political action: in the absence of
+specific knowledge of supply and demand functions, we expect
+11 The theory that the lobbying organization avoids the "free-rider" problem
+by selling useful services was proposed by Thomas G. Moore [81 and elaborated
+by Mancur Olson [9]. The theory has not been tested empirically.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+THEORY OF
+REGULATION / 13
+
+licensing to increase each occupation's equilibrium income by roughly
+the same proportion. In a more sophisticated version, one would
+predict that the less the elasticity of demand for the occupation's
+services, the more profitable licensing would be. One could also view
+
+the income of the occupation as a source of funds for political action,
+but if we view political action as an investment this is relevant only
+with capital-market imperfections.12
+The average income of occupational members is an appropriate
+
+variable in comparisons among occupations, but it is inappropriate
+
+to comparisons of one occupation in various states because real income will be approximately equal (in the absence of regulation) in
+each state.
+
+(3) The concentration of the occupation in large cities. When the
+occupation organizes a campaign to obtain favorable legislation, it
+
+incurs expenses in the solicitation of support, and these are higher
+for a diffused occupation than a concentrated one. The solicitation
+of support is complicated by the free-rider problem in that individual
+members cannot be excluded from the benefits of legislation even if
+they have not shared the costs of receiving it. If most of the occupa-
+
+tion is concentrated in a few large centers, these problems (we suspect) are much reduced in intensity: regulation may even begin at the
+local governmental level. We shall use an orthodox geographical
+
+concentration measure: the share of the occupation of the state in
+cities over 100,000 (or 50,000 in 1900 and earlier).
+
+(4) The presence of a cohesive opposition to licensing. If an occupa-
+
+tion deals with the public at large, the costs which licensing imposes
+upon any one customer or industry will be small and it will not be
+economic for that customer or industry to combat the drive for
+licensure. If the injured group finds it feasible and profitable to act
+
+jointly, however, it will oppose the effort to get licensure, and (by
+increasing its cost) weaken, delay, or prevent the legislation. The
+same attributes-numbers of voters, wealth, and ease of organization-which favor an occupation in the political arena, of course,
+favor also any adversary group. Thus, a small occupation employed
+by only one industry which has few employers will have difficulty in
+getting licensure; whereas a large occupation serving everyone will
+encounter no organized opposition.
+
+An introductory statistical analysis of the licensing of select
+occupations by states is summarized in Table 3. In each occupation
+the dependent variable for each state is the year of first regulation of
+
+entry into the occupation. The two independent variables are
+(1) the ratio of the occupation to the total labor force of the state in
+the census year nearest to the median year of regulation,
+(2) the fraction of the occupation found in cities over 100,000 (over
+
+50,000 in 1890 and 1900) in that same year.
+
+12 Let n = the number of members of the profession and y = average income.
+
+We expect political capacity to be in proportion to (ny) so far as benefits go, but
+to reflect also the direct value of votes, so the capacity becomes proportional to
+14 / GEORGE J. STIGLER
+
+(nay) with a > 1.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+TABLE 3
+
+INITIAL YEAR OF REGULATION AS A FUNCTION OF
+
+RELATIVE SIZE OF OCCUPATION AND DEGREE OF URBANIZATION
+
+REGRESSION COEFFICIENTS (AND T-VALUES)
+NUMBER MEDIAN
+
+OCCUPATION OF CENSUS SIZE OF URBANIZATION R2
+STATES YEAR OF OCCUPATION (SHARE OF OCCUPALICENSING LICENSING (RELATIVE TO TION IN CITIES
+LABOR FORCE) OVER 100,000*)
+
+BEAUTICIANS
+
+ARCHITECTS
+
+BARBERS
+
+LAWYERS
+
+48
+
+47
+
+46
+
+1930
+
+1930
+
+29
+
+PHYSICIANS
+
+1930
+
+(1.24)
+
+0.125
+
+-24.06
+
+-6.29
+
+0.184
+
+(2.15)
+
+(0.51)
+
+1890
+
+43
+
+(2.50)
+
+0.26
+
+1890
+
+(0.84)018
+
+-26.10
+
+-65
+
+0.65)
+
+.78
+
+-23.80
+
+0.146
+
+0.102
+
+0.165
+
+EMBALMERS 37 1910 ~~~~~3.32 -4.24007
+
+| EMBALMERS | 37 | 1910 l (0.36) (0.44) 0
+REGISTERED
+
+NURSES
+
+48
+
+1910
+
+-2.08
+
+(2.28)
+
+-3.36
+
+(1.06)
+
+0.176
+
+| DENTISTS l 48 | 190C0 l 2.51 -22.94 103
+
+DENTISTS 48 1900 ~~~~~~ ~ ~~~(0.44) (2.19)0.3
+
+| VETERINARIANS T 40 1910-10.69 -37.16 l m
+
+VETERINARIANS 40 1910 ~~~~~~ ~~(1.94) (4.20)0.2
+
+CHIROPRACTORS 48 1930 -17.70 (11.69 0.079
+
+PHARMACISTS 48 1900
+-4.19 -6.84 0.082
+(1.50) (0.80)
+SOURCES: THE COUNCIL OF STATE GOVERNMENTS, "OCCUPATIONAL LICENSING LEGISLATION IN THE
+
+STATES", 1952 [3], AND U.S.CENSUS OF POPULATION [15], VARIOUS YEARS.
+
+* 50,000 IN 1890 AND 1900.
+
+We expect these variables to be negatively associated with year of
+licensure, and each of the nine statistically significant regression coefficients is of the expected sign.
+
+The results are not robust, however: the multiple correlation
+coefficients are small, and over half of the regression coefficients are
+
+not significant (and in these cases often of inappropriate sign).
+Urbanization is more strongly associated than size of occupation
+with licensure."3 The crudity of the data may be a large source of these
+disappointments: we measure, for example, the characteristics of the
+barbers in each state in 1930, but 14 states were licensing barbers by
+1910. If the states which licensed barbering before 1910 had relatively
+more barbers, or more highly urbanized barbers, the predictions
+13 We may pool the occupations and assign dummy variables for each occupation; the regression coefficients then are:
+
+size of occupation relative to labor force: -0.450 (t = 0.59)
+urbanization . -12.133 (t = 4.00).
+
+THEORY OF
+
+REGULATION
+/ 15
+Thus urbanization is highly significant, while size of
+occupation
+is no
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+would be improved. The absence of data for years between censuses
+and before 1890 led us to make only the cruder analysis."4
+In general, the larger occupations were licensed in earlier years.15
+Veterinarians are the only occupation in this sample who have a welldefined set of customers, namely livestock farmers, and licensing was
+later in those states with large numbers of livestock relative to rural
+population. The within-occupation analyses offer some support for
+the economic theory of the supply of legislation.
+A comparison of different occupations allows us to examine
+several other variables. The first is income, already discussed above.
+The second is the size of the market. Just as it is impossible to organ-
+
+ize an effective labor union in only one part of an integrated market,
+so it is impossible to regulate only one part of the market. Consider
+an occupation-junior business executives will do which has a
+
+national market with high mobility of labor and significant mobility
+
+of employers. If the executives of one state were to organize, their
+
+scope for effective influence would be very small. If salaries were
+raised above the competitive level, employers would often recruit
+
+elsewhere so the demand elasticity would be very high.16 The third
+variable is stability of occupational membership: the longer the
+members are in the occupation, the greater their financial gain from
+control of entry. Our regrettably crude measure of this variable is
+
+based upon the number of members aged 35-44 in 1950 and aged 4554 in 1960: the closer these numbers are, the more stable the membership of the occupation. The data for the various occupations are given
+
+in Table 4.
+The comparison of licensed and unlicensed occupations is consistently in keeping with our expectations:
+(1) the licensed occupations have higher incomes (also before licensing, one may assume),
+(2) the membership of the licensed occupations is more stable (but
+
+the difference is negligible in our crude measure),
+(3) the licensed occupations are less often employed by business
+enterprises (who have incentives to oppose licensing),
+(4) all occupations in national markets (college teachers, engineers,
+
+scientists, accountants) are unlicensed or only partially licensed.
+14 A more precise analysis might take the form of a regression analysis such as:
+Year of licensure = constant
+
++bj (year of critical size of occupation)
+
++b2 (year of critical urbanization of occupation),
+where the critical size and urbanization were defined as the mean size and mean
+urbanization in the year of licensure.
+
+15 Lawyers, physicians, and pharmacists were all relatively large occupations
+
+by 1900, and nurses also by 1910. The only large occupation to be licensed later
+was barbers; the only small occupation to be licensed early was embalmers.
+10 The regulation of business in a partial market will also generally produce
+very high supply elasticities within a market: if the price of the product (or service) is raised, the pressure of excluded supply is very difficult to resist. Some
+occupations are forced to reciprocity in licensing, and the geographical dispersion
+of earnings in licensed occupations, one would predict, is not appreciably different
+than in unlicensed occupations with equal employer mobility. Many puzzles are
+16 / GEORGE J. STIGLER
+
+posed by the interesting analysis of Arlene S. Holen in [6], pp. 492-98.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+TABLE 4
+
+CHARACTERISTICS OF LICENSED AND UNLICENSED
+PROFESSIONAL OCCUPATIONS, 1960
+
+0
+
+OCCUPATION
+
+|
+
+Z< < < c < o z i ? oJ <
+LU < LU L9 1-~ ~ m LU L1 uj~
+
+ui( i u Lu <cL 0 LL U WO 0 LuZ> WIu-LO
+
+LICENSED:
+
+ARCHITECTS 41.7 16.8 $ 9,090 0.012 57.8% 44.1% 0.045%
+CHI ROPRACTORS 46.5 16.4 6,360 0.053 5.8 30.8 0.020
+DENTISTS 45.9 17.3 12,200 0.016 9.4 34.5 0.128
+EMBALMERS 43.5 13.4 5,990 0.130 52.8 30.2 0.055
+LAWYERS 45.3 17.4 10,800 0.041 35.8 43.1 0.308
+PROF. NURSES 39.1 13.2 3,850 0.291 91.0 40.6 0.868
+OPTOMETRISTS 41.6 17.0 8,480 0.249 17.5 34.5 0.024
+PHARMACISTS 44.9 16.2 7,230 0.119 62.3 40.0 0.136
+PHYSICIANS 42.8 17.5 14,200 0.015 35.0 44.7 0.339
+VETERINARIANS 39.2 17.4 9,210 0.169 29.5 14.4 0.023
+AVERAGE
+
+43.0
+
+16.3.
+
+8,741
+
+0.109
+
+39.7
+
+35.7
+
+0.195
+
+PARTIALLY LICENSED:
+
+ACCOUNTANTS 40.4 14.9 6,450 0.052 88.1 43.5 0.698
+ENGINEERS 38.3 16.2 8,490 0.023 96.8 31.6 1.279
+
+ELEM. SCHOOL TEACHERS 43.1 16.5 4,710 (a) 99.1 18.8 1.482
+
+AVERAGE 40.6 15.9 6,550 0.117(b) 94.7 34.6 1.153
+UNLICENSED:
+
+ARTISTS 38.0 14.2 5,920 0.103 77.3 45.7 0.154
+CLERGYMEN 43.3 17.0 4,120 0.039 89.0 27.2 0.295
+COLLEGE TEACHERS 40.3 17.4 7,500 0.085 99.2 36.0 0.261
+
+DRAFTSMEN 31.2 12.9 5,990 0.098 98.6 40.8 0.322
+REPORTERS & EDITORS 39.4 15.5 6,120 0.138 93.9 43.3 0.151
+MUSICIANS 40.2 14.8 3,240 0.081 65.5 37.7 0.289
+NATURAL SC I ENTISTS 35.9 16.8 7,490 0.264 96.3 32.7 0.221
+AVERAGE
+
+38.3
+
+15.5
+
+5,768
+
+0.115
+
+88.5
+
+37.6
+
+0.242
+
+(*) 1-R, WHERE R=RATIO: 1960 AGE 45-54 TO 1950 AGE-35-44.
+
+(a) NOT AVAILABLE SEPARATELY; TEACHERS N.E.C. (INCL. SECONDARY SCHOOL AND OTHER) = 0.276
+(b') INCLUDES FIGURE FOR TEACHERS N.E.C. IN NOTE (a)
+
+SOURCE: U.S. CENSUS OF POPULATION, [151, 1960.
+
+The size and urbanization of the three groups, however, are unrelated
+
+to licensing. The inter-occupational comparison therefore provides
+a modicum of additional support for our theory of regulation.
+
+* The idealistic view of public regulation is deeply imbedded in
+
+3. Conclusion
+
+professional economic thought. So many economists, for example,
+have denounced the ICC for its pro-railroad policies that this has
+become a cliche of the literature. This criticism seems to me exactly
+as appropriate as a criticism of the Great Atlantic and Pacific Tea
+Company for selling groceries, or as a criticism of a politician for
+currying popular support. The fundamental vice of such criticism is
+that it misdirects attention: it suggests that the way to get an ICC
+which is not subservient to the carriers is to preach to the commissioners or to the people who appoint the commissioners. The only
+
+THEORY OF
+
+way to get a different commission would be to change the political
+
+REGULATION / 17
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+support for the Commission, and reward commissioners on a basis
+unrelated to their services to the carriers.
+
+Until the basic logic of political life is developed, reformers will
+be ill-equipped to use the state for their reforms, and victims of the
+pervasive use of the state's support of special groups will be helpless
+to protect themselves. Economists should quickly establish the license
+to practice on the rational theory of political behavior.
+
+Appendix
+TABLE 5
+
+COMMON, CONTRACT AND PASSENGER MOTOR CARRIERS, 1935-19691
+CUMULATIVE OPERATING
+APPLICATIONS CARRIERS
+
+YEAR
+
+ENDING NME
+
+GRAND- NEW TOTAL APPROVED INUME
+
+FATHER APPLICATIONS 3 OPE ION
+
+OCT. 1936 82,827 1,696 84,523 - 1937 83,107 3,921 87.028 1;114 1938 85,646 6,694 92,340 20,398 1939 86,298 9,636 95,934 23,494 1940 87,367 12,965 100,332 25,575 1941 88,064 16,325 104,389 26,296 1942 88,702 18,977 107,679 26,683 1943 89,157 20,007 109,164 27,531 1944 89,511 21,324 110,835 27,177 21,044
+1945 89,518 22,829 112,347 20,788
+1946 89,529 26,392 115,921 20 632
+1947 89,552 29,604 119,156 20,665
+1948 89,563 32,678 122,241 20,373
+
+1949 89,567 35,635 125,202 18,459
+1950 89,573 38,666 128,239 19,200
+1951 89,574 41,889 131,463 18,843
+1952 (89,574)4 44,297 133,870 18,408
+1953 46,619 136,192 17,869
+1954 49,146 138,719 17,080
+1955 51,720 141,293 16,836
+
+JUNE 1956 53,640 143,213 16,486
+1957
+1958
+1959
+
+56,804
+60,278
+64,171
+
+146,377
+149,851
+153,744
+
+16,316
+16,065
+15,923
+1960 " 69,205 158,778 15,936
+1961 72,877 162,450 15,967
+1962 76,986 166,559 15,884
+1963 81,443 171,016 15,739
+1964 86,711 176,284 15,732
+1965 93,064 182,637 15,755
+1966 101,745 191,318 15,933
+1967 106,647 196,220 16,003
+1968 (6) (6) 16,2305
+1969 (6) (6) 16,3185
+
+SOURCE: U.S. INTERSTATE COMMERCE COMMISSION ANNUAL REPORTS [17].
+1 EXCLUDING BROKERS AND WITHIN-STATE CARRIERS.
+
+2 PROPERTY CARRIERS WERE THE FOLLOWING PERCENTAGES OF ALL
+
+OPERATING CARRIERS: 1944-93.4%; 1950-92.4%; 1960-93.0%; 1966-93.4%.
+3 ESTIMATED.
+
+4 NOT AVAILABLE; ASSUMED TO BE APPROXIMATELY CONSTANT.
+5 1968 AND 1969 FIGURES ARE FOR NUMBER OF CARRIERS REQUIRED TO FILE
+ANNUAL REPORTS.
+
+18 / GEORGE J. STIGLER
+
+6 NOT AVAILABLE COMPARABLE TO PREVIOUS YEARS; APPLICATIONS FOR
+PERMANENT AUTHORITY DISPOSED OF (I.E., FROM NEW AND PENDING FILES)
+1967-69 ARE AS FOLLOWS: 1967-7,049; 1968-5,724; 1969-5,186.
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+TABLE 6
+
+WEIGHT LIMITS ON TRUCKS, 1932-33*, BY STATES (BASIC DATA FOR TABLE 2).
+
+MAXIMUM WEIGHT MAXIMUM WEIGHT
+(IN
+LBS.)
+(IN
+LBS.)
+
+STATE
+
+STATE
+
+4-WHEEL1 6-WHEEL2 4-WHEEL1 6-WHEEL2
+ALABAMA 20,000 32,000 NEBRASKA 24,000
+ARIZONA 22,000 34,000 NEVADA 25,000
+
+40,000
+38,000
+
+ARKANSAS 22,200 37,000 NEW HAMPSHIRE 20,000 20,000
+CALIFORNIA 22,000 34,000 NEW JERSEY 30,000 30,000
+COLORADO
+
+30,000
+
+40,000
+
+NEW
+
+MEXICO
+
+27,000
+
+45,000
+
+CONNECTICUT 32,000 40,000 NEW YORK 33,600 44,000
+DELAWARE
+
+26,000
+
+38,000
+
+NO.
+
+CAROLINA
+
+20,000
+
+20,000
+
+FLORIDA 20,000 20,000 NO. DAKOTA 24,000 48,000
+GEORGIA 22,000 39,600 OHIO 24,000 24,000
+IDAHO 24,000 40,000 OKLAHOMA 20,000 20,000
+
+ILLINOIS
+
+24,000
+
+40,000
+
+OREGON
+
+25,500
+
+42,500
+
+INDIANA 24,000 40,000 PENNSYLVANIA 26,000 36,000
+IOWA 24,000 40,000 RHODE ISLAND 28,000 40,000
+KANSAS 24,000 34,000 SO. CAROLINA 20,000 25,000
+KENTUCKY 18,000 18,000 SO. DAKOTA 20,000 20,000
+
+LOUISIANA 13,400 N. A. TENNESSEE 20,000 20,000
+MAINE 18,000 27,000 TEXAS 13,500 N. A.
+MARYLAND 25,000 40,000 UTAH 26,000 34,000
+MASSACHUSETTS 30,000 30,000 VERMONT 20,000 20,000
+MICHIGAN 27,000 45,000 VIRGINIA 24,000 35,000
+
+MINNESOTA
+
+27,000
+
+MISSISSIPPI
+
+18,000
+
+42,000
+
+WASHINGTON
+
+22,000
+
+WEST
+
+24,000
+
+34,000
+
+VA.
+
+24,000
+
+40,000
+
+MISSOURI 24,000 24,000 WISCONSIN
+MONTANA 24,000 34,000 WYOMING
+
+24,000
+27,000
+
+36,000
+30,000
+
+* RED BOOK [11] FIGURES ARE REPORTED (P.89) AS "BASED ON THE STATE'S INTERPRETATIONS OF
+THEIR LAWS [19331 AND ON PHYSICAL LIMITATIONS OF VEHICLE DESIGN AND TIRE CAPACITY." PUBLIC
+
+ROADS [13] FIGURES ARE REPORTED (P.167) AS "AN ABSTRACT OF STATE LAWS, INCLUDING LEGISLATION PASSED IN 1932."
+
+1.4-WHEEL: THE SMALLEST OF THE FOLLOWING 3 FIGURES WAS USED:
+
+(A) MAXIMUM GROSS WEIGHT (AS GIVEN IN RED BOOK, P.90-91).
+
+(B) MAXIMUM AXLE WEIGHT (AS GIVEN IN RED BOOK, P.90-91), MULTIPLIED BY 1.5 (SEE RED
+BOOK, P. 89).
+
+(C) MAXIMUM GROSS WEIGHT (AS GIVEN IN RED BOOK, P.93).
+EXCEPTIONS: TEXAS AND LOUISIANA-SEE RED BOOK, P.91.
+
+2.6-WHEEL: MAXIMUM GROSS WEIGHT AS GIVEN IN PUBLIC ROADS, P. 167. THESE FIGURES AGREE IN
+MOST CASES WITH THOSE SHOWN IN RED BOOK, P. 93, AND WITH PUBLIC ROADS MAXIMUM
+AXLE WEIGHTS MULTIPLIED BY 2.5 (SEE RED BOOK, P.93). TEXAS AND LOUISIANA ARE EXCLUDED AS DATA ARE NOT AVAILABLE TO CONVERT FROM PAYLOAD TO GROSS WEIGHT
+LIMITS.
+
+THEORY OF
+
+REGULATION / 19
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+TABLE 7
+INDEPENDENT VARIABLES
+
+(BASIC DATA FOR TABLE 2 - CONT'D)
+
+TRUCKS ON FARMS PER AVERAGE LENGTH OF PERCENT OF STATE
+
+STATE 1,000 AGRICULTURAL RAILROAD HAUL OF HIGHWAYS WITH
+LABOR FORCE FREIGHT (MILES) HIGH-TYPE SURFACE
+ALABAMA
+ARIZONA
+
+26.05
+79.74
+
+189.4
+
+1.57
+
+282.2
+
+2.60
+
+ARKANSAS
+CALIFORNIA
+
+28.62
+123.40
+
+COLORADO
+
+159.50
+
+233.1
+1.72
+264.6
+13.10
+244.7
+0.58
+
+CONNECTICUT
+173.80
+132.6
+7.98
+DELAWARE
+173.20
+202.7
+21.40
+FLORIDA
+91.41
+184.1
+8.22
+GEORGIA
+32.07
+165.7
+1.60
+IDAHO
+95.89
+243.6
+0.73
+
+ILLINOIS
+114.70
+207.9
+9.85
+INDIANA
+120.20
+202.8
+6.90
+IOWA
+98.73
+233.3
+3.39
+KANSAS
+146.70
+281.5
+0.94
+KENTUCKY
+20.05
+227.5
+1.81
+LOUISIANA
+31.27
+201.0
+1.94
+MAINE
+209.30
+120.4
+1.87
+MARYLAND
+134.20
+184.1
+12.90
+MASSACHUSETTS 172.20 144.7 17.70
+MICHIGAN
+148.40
+168.0
+6.68
+MINNESOTA
+120.40
+225.6
+1.44
+MISSISSIPPI
+29.62
+164.9
+1.14
+MISSOURI
+54.28
+229.7
+2.91
+MONTANA
+183.80
+266.5
+0.09
+NEBRASKA
+132.10
+266.9
+0.41
+NEVADA
+139.40
+273.2
+0.39
+NEW HAMPSH I RE 205.40 129.0 3.42
+NEWJERSEY
+230.20
+137.6
+23.30
+NEW
+MEXICO
+90.46
+279.0
+0.18
+NEWYORK
+220.50
+163.3
+21.50
+NO.
+CAROLINA
+37.12
+171.5
+8.61
+NO.
+DAKOTA
+126.40
+255.1
+0.01
+OHIO
+125.80
+194.2
+11.20
+OKLAHOMA
+78.18
+223.3
+1.42
+OREGON
+118.90
+246.2
+3.35
+
+PENNSYLVANIA 187.60 166.5 9.78
+RHODE ISLAND 193.30 131.0 20.40
+SO. CAROLINA 20.21 169.8 2.82
+SO.
+DAKOTA
+113.40
+216.6
+0.04
+TENNESSEE
+23.98
+191.9
+3.97
+UTAH
+101.70
+235.7
+1.69
+VERMONT
+132.20
+109.7
+2.26
+VIRGINIA
+71.88
+229.8
+2.86
+WASHINGTON
+180.90
+254.4
+4.21
+WEST
+
+VIRGINIA
+
+62.88
+
+WISCONSIN
+178.60
+WYOMING
+133.40
+
+218.7
+
+195.7
+286.7
+
+8.13
+4.57
+0.08
+
+(1) AVERAGE LENGTH OF RR HAUL OF (REVENUE) FREIGHT =AVERAGE DISTANCE IN MILES EACH TON IS
+CARRIED = RATIO OF NUMBER OF TON-MILES TO NUMBER OF TONS CARRIED. FOR EACH STATE, AVERAGE
+LENGTH OF HAUL WAS OBTAINED BY WEIGHTING AVERAGE LENGTH OF HAUL OF EACH COMPANY BY THE
+NUMBER OF MILES OF LINE OPERATED BY THAT COMPANY IN THE STATE (ALL FOR CLASSI RR'S).
+
+(2) PERCENTAGE OF STATE ROADS WITH HIGH-QUALITY SURFACE: WHERE HIGH-QUALITY (HIGH-TYPE)
+SURFACE CONSISTS OF BITUMINOUS MACADAM, BITUMINOUS CONCRETE, SHEET ASPHALT, PORTLAND
+CEMENT CONCRETE, AND BLOCK PAVEMENTS. ALL STATE RURAL ROADS, BOTH LOCAL AND STATE
+HIGHWAYS SYSTEMS, ARE INCLUDED.
+
+20 / GEORGE J. STIGLER
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+References
+1. ASSOCIATION OF AMERICAN RAILROADS, BUREAU OF RAILWAY ECONOMICS.
+
+Railway Mileage by States. Washington, D. C.: December 31, 1930.
+2. BECKER, G. S. "Competition and Democracy." Jolurnlal of Law anld Economics,
+October 1958.
+3. THE COUNCIL OF STATE GOVERNMENTS. "Occupational Licensing Legislation
+in the States." 1952.
+4. DEMSETZ, H., "Why Regulate Utilities?" Jouirnlal of Law and Econlomics,
+
+April 1968.
+5. GERWIG, R. W. "Natural Gas Production: A Study of Costs of Regulation."
+Journ-lal of Law and Economics, October 1962, pp. 69-92.
+6. HOLEN, A. S. "Effects of Professional Licetising Arrangements on Interstate
+
+Labor Mobility and Resource Allocation." Jouinal of Political Econlomy,
+Vol. 73 (1915), pp. 492-98.
+7. KEYES, L. S. Federal Colntrol of Enltry ilito Air Tranlsportation. Cambridge,
+
+Mass.: Harvard University Press, 1951.
+
+8. MOORE, T. G. "The Purpose of Licensing." Joulrnal of Law anld Econlomics,
+October 1961.
+
+9. OLSON, M. The Logic of Collective Actionl. Cambridge, Mass.: Harvard Unixversity Press, 1965.
+
+10. PELTZMAN, S. "Entry in Commercial Banking." Joutrnal of Law anld Econiomics,
+October 1965.
+
+11. The Motor Truick Red Book anld Directory, 1934 Edition, pp. 85-102.
+12. U. S. CONGRESS, SELECT COMMITTEE ON SMALL BUSINESS. Hearings, 88th
+
+Congress, 2nd Session, August 10 and 11, 1964.
+13. U. S. DEPARTMENT OF AGRICULTURE, BUREAU OF PUBLIC ROADS. Piublic
+Roads. Washington, D. C.: U. S. Government Printing Office, December 1932.
+14. U. S. DEPARTMENT OF COMMERCE, BUREAU OF THE CENSUS. Uniited States
+
+Cenisus of Agriclultutre, 1930, Vol. 4. Washington, D. C.: U. S. Government
+Printing Office, 1930.
+15. ---. Uniited States Censuts of Popuilation. Washington, D. C.: U. S. Government Printing Office, appropriate years.
+
+16. ---, BUREAU OF FOREIGN AND DOMESTIC COMMERCE. Statistical Abstr-act
+
+of the U. S., 1932. Washington, D. C.: U. S. Government Printing Office,
+1932.
+17. U. S. INTERSTATE COMMERCE COMMISSION. Annuitial Report. Washington, D. C.:
+U. S. Government Printing Office, appropriate years.
+
+18. ---. Statistics of Railways in the Uniited States, 1930. Washington, D. C.:
+U. S. Government Printing Office, 1930.
+
+THEORY OF
+
+REGULATION / 21
+
+This content downloaded from 73.73.173.118 on Wed, 01 Mar 2023 05:19:41 UTC
+All use subject to https://about.jstor.org/terms
+
+

@@ -1,0 +1,127 @@
+Title: Safeguards Noncompliance: A Challenge for the IAEA and the UN Security Council
+Author: Pierre Goldschmidt (former IAEA Deputy Director-General, head of Department of Safeguards)
+Date: January/February 2010
+Publisher: Arms Control Association (Arms Control Today)
+URL: https://www.armscontrol.org/act/2010-01/safeguards-noncompliance-challenge-iaea-and-un-security-council
+Type: Policy analysis (full text from web)
+
+Description: Detailed analysis by the former head of IAEA Safeguards examining how the
+IAEA Secretariat, Board of Governors, and UN Security Council have handled (and mishandled)
+safeguards noncompliance cases including Iran, Libya, South Korea, Egypt, North Korea, and
+Syria. Proposes structural reforms including generic Security Council resolutions and
+expanded IAEA verification authority.
+
+--- FULL TEXT BELOW ---
+
+Safeguards Noncompliance: A Challenge for the IAEA and the UN Security Council
+
+By Pierre Goldschmidt
+
+Introduction
+
+Compliance with safeguards obligations represents a cornerstone of participation in the global nuclear nonproliferation regime. This issue was contentious at the 2005 Nuclear Nonproliferation Treaty (NPT) Review Conference and would likely remain central at the 2010 conference.
+
+The International Atomic Energy Agency's mandate, established in its statute, centers on promoting atomic energy's peaceful applications while preventing nuclear material, equipment, and information from military misuse. The IAEA fulfills this dual mandate through safeguards implementation.
+
+The IAEA's primary nonproliferation function involves detecting and reporting unauthorized nuclear activities in non-nuclear-weapon NPT states. This includes diversion of nuclear material from declared facilities and undeclared nuclear material or activities.
+
+IAEA inspections verify country compliance with safeguards agreements. The UN Security Council emphasized noncompliance importance in Resolution 1887 (September 24, 2009), adopted during the United Nations' nonproliferation and disarmament summit.
+
+However, the international community must move beyond this resolution by adopting a refined, strengthened approach to safeguards noncompliance with multiple elements: distinguishing between reportable noncompliance versus technical compliance failures; enabling the IAEA Board of Governors to request additional verification rights from the Security Council; and strengthening the council's capacity for prompt action against persistent noncompliance.
+
+The Safeguards Department's Role
+
+The IAEA Secretariat functions as the agency's technical arm, responsible for detecting technical or legal noncompliance with safeguards agreements. This body must perform objectively and apolitically, without political considerations influencing its assessments.
+
+The absence of an official noncompliance definition should not excuse the secretariat from "promptly, fully, and factually" reporting significant intentional failures or breaches of safeguards undertakings, including subsidiary arrangements.
+
+When determining intentionality, the Department of Safeguards should consider whether any state organization, including state nuclear material accounting systems, knew of undeclared nuclear material, facilities, or activities requiring IAEA declaration.
+
+Denying facility access, whether declared or suspected, constitutes intentional noncompliance by definition. Similarly, refusing environmental sampling requests is inherently intentional. Prolonged denial beyond a few days (absent legitimate safety reasons) requires prompt reporting to the director-general as a concern matter. If the safeguards agreement legally authorizes such access requirements, denial constitutes noncompliance.
+
+Experience demonstrates that access denial and environmental sampling refusal often indicate undeclared activities. This pattern appeared in Iran, North Korea, South Korea, and possibly Syria.
+
+Denying access to relevant persons and documents warrants serious reporting, either in the Safeguards Implementation Report or to the board, if denial prevents prompt issue resolution — particularly for repeated denials or breaches occurring alongside other safeguards violations.
+
+Evidence of intentional concealment or "obstruction of IAEA inspector activities, safeguards equipment interference, or prevention of verification activities" requires noncompliance reporting. Intentionally undeclared nuclear material also warrants noncompliance findings.
+
+Demonstrating that undeclared nuclear material or activities related to weapons programs is unnecessary for noncompliance findings; unknown purposes suffice.
+
+Director-General Mohamed ElBaradei stated in November 2002 that noncompliance responses should maintain consistency across cases for regime credibility: a "'zero tolerance'" approach. By this standard, South Korea and Egypt's failures and breaches should have qualified as noncompliance cases.
+
+ElBaradei's November 2003 Iran report characterized the situation as a "breach of obligation" rather than "noncompliance" — terminology the IAEA statute specifically uses. This ambiguous language potentially politicized what should have remained purely technical secretariat work.
+
+Libya's February 2004 violation assessment proved even more problematic. Despite Libya admitting receipt of nuclear weapons design documentation and implicitly acknowledging a weapons program, ElBaradei avoided using "noncompliance." This contradicted his 2002 statement and set a negative precedent. Fortunately, the board found Libya noncompliant and requested reporting to the Security Council "for information purposes only," while commending Libya's remedial actions. The Security Council subsequently welcomed Libya's cooperation and weapons abandonment decision.
+
+Finding noncompliance represents one reason for IAEA Security Council reporting. When safeguards inspectors encounter "questions within Security Council competency regarding international peace and security maintenance," the IAEA statute suggests reporting these through the board to the council.
+
+Per Paragraph 19 of Comprehensive Safeguards Agreements, the board can find noncompliance if "unable to verify absence of nuclear material diversion." This means noncompliance findings don't require proven diversion; state noncooperation preventing verification suffices.
+
+One nonproliferation official recently observed that inability to conclude absence of undeclared activities deserves equivalent significance to noncompliance findings. The official noted that "'smoke screen'" situations prove "as telling and dangerous as 'smoking gun'" evidence.
+
+The IAEA statute requires director-general transmission of all noncompliance reports to the board. Unlike the board, the secretariat must function as a technical, apolitical body maintaining objectivity and impartiality.
+
+Yukiya Amano, the new director-general, faces the critical task of restoring member state confidence that the IAEA Secretariat will "promptly, fully, and factually report" safeguards noncompliance per the agency statute.
+
+Handling Noncompliance Reports
+
+The IAEA board, a political body, determines whether secretariat-reported safeguards breaches constitute statutory noncompliance and whether Security Council reporting is necessary. The statute specifies no criteria for this determination. Given distinct roles, board criteria presumably differ from secretariat criteria for reporting technical or legal noncompliance.
+
+The discussion avoids focusing on whether the board should have found South Korea and Egypt noncompliant in 2004-2005, respectively, and subsequently reported these cases to the Security Council for information purposes only.
+
+Regarding South Korea, which had ratified an additional protocol and subsequently cooperated fully with the IAEA, Security Council action proved unnecessary. South Korea's cooperation enabled the agency to conclude in 2007 that the country maintained no undeclared nuclear material or activities, with all nuclear material remaining in peaceful use.
+
+In Egypt's case, the IAEA found no indication that reported failures and breaches reflected concealment efforts or deception strategies. Similar to South Korea, Egypt showed no military involvement in nuclear-related activities. However, Egypt lacks an additional protocol, preventing IAEA conclusion regarding undeclared state-wide nuclear material or activities. The Safeguards Implementation Report noted continued inability to identify the source of highly enriched and low-enriched uranium particles found in environmental samples at Egypt's Nuclear Research Center of Inshas. Unresolved questions about Egypt's nuclear activities nearly five years after initial reporting warrant concern. Progress should be reported separately from the annual Safeguards Implementation Report.
+
+These persistent open questions illustrate why the board should have adopted resolutions expressing concern about South Korea and Egypt's failures and breaches, even without formal noncompliance findings.
+
+Regarding Iran, the IAEA board adopted a September 2003 resolution calling for suspension of "all further uranium enrichment-related activities, including further nuclear material introduction into Natanz," pending director-general assurances and additional protocol satisfactory application. The resolution also demanded "unrestricted access, including environmental sampling, to whatever locations the Agency deems necessary for verification of declaration correctness and completeness."
+
+By spring 2004, Iran clearly violated the September 2003 resolution. A June 18, 2004, board resolution acknowledged Director-General statements regarding essential integrity and credibility for resolving issues "within the next few months." Subsequently, the international community apparently lost sight of this time factor's importance. Once significant or deliberate safeguards agreement breaches are identified or states obstruct verification activities (as presently occurs in Syria), board action and potential UN Security Council intervention become urgent.
+
+The September 18, 2004, board resolution noted "with serious concern" that Iran repeatedly ignored board calls to suspend enrichment and reprocessing as confidence-building measures. By this point, the IAEA required legally binding verification rights exceeding Model Additional Protocol provisions. Only the UN Security Council, through Chapter 7 UN Charter resolutions addressing international peace and security threats, can provide such legal rights; the board cannot.
+
+Only after Iran's August 2005 uranium concentrate conversion breach did the board find Iran noncompliant. The September 24, 2005, resolution vote was 22-1 with 12 abstentions.
+
+The September 2005 resolution usefully established that Iran's "many failures and breaches of obligation to comply with NPT Safeguards Agreement" reported in November 2003 "constitute non compliance in the context of Article XII.C" of the statute. By confirming that November 2003 findings constituted noncompliance, the board mitigated the precedent harm from its earlier refusal to make a noncompliance finding. However, the board's February 4, 2006, decision to report noncompliance to the Security Council — followed ten months later by a council resolution legally requiring enrichment suspension — proved too late to deter Iran from disregarding these directives.
+
+The Security Council's Role
+
+Under the statute, noncompliant states found by the IAEA board must be referred to the Security Council. The board need not report immediately, potentially providing sufficient time for corrective implementation. If noncompliant states fully and proactively cooperate, the board reports to the council for information purposes only, typically praising constructive attitudes, as occurred with Libya. If noncompliant states employ delaying and deceptive tactics while denying location, equipment, document, and personnel access, the agency may temporarily require legally binding expanded verification rights from the UN Security Council.
+
+As demonstrated by Iran and North Korea, major deterrence difficulties arise from states' hope that geopolitical or economic considerations will cause at least one veto-wielding Security Council member to oppose effective sanctions.
+
+To guarantee timely council reaction to safeguards noncompliance and increase consequences likelihood for council and IAEA resolution noncompliance, the council should adopt a generic (non-state-specific) Chapter 7 UN Charter resolution. To provide IAEA verification tools needed when noncompliant states fail adequate cooperation, the resolution should provide that "upon agency request," the Security Council would automatically adopt specific Chapter 7 resolutions requiring states grant IAEA extended access rights per a "temporary complementary protocol." These rights would terminate once the IAEA Secretariat and board concluded countries have no undeclared nuclear material or activities with correct, complete declarations.
+
+Under this multistage process, if the director-general could not report within 60 days of state-specific resolution adoption that noncompliant states fully implemented the temporary complementary protocol, the Security Council would adopt a second specific resolution requiring immediate enrichment and reprocessing suspension.
+
+If noncompliant states further refused implementing relevant Security Council resolutions, the council would adopt a third Chapter 7 resolution calling all states to suspend military cooperation, including equipment supply, with noncompliant states during noncompliance persistence. A priori council agreement that military cooperation suspension would occur under these circumstances should constitute strong state defiance disincentive while not affecting ordinary citizen welfare.
+
+Had such a generic resolution existed pre-2002, France, Germany, and United Kingdom foreign ministers would not have negotiated the October 2003 Tehran deal wherein Iran "voluntarily suspended all enrichment activities as defined by the IAEA" while the September 2003 board resolution had called for suspending "all further enrichment-related activities" — a much broader term. In exchange for this limited, nonbinding EU-3 pledge, Iran received tacit commitment that three countries would not support IAEA resolutions referring noncompliance to the Security Council. By failing to find Iran noncompliant in November 2003, the IAEA board created a damaging precedent with far-reaching consequences persisting today.
+
+Withdrawing From the NPT
+
+Particularly threatening for international peace and security is noncompliant non-nuclear-weapon state NPT withdrawal after IAEA noncompliance findings. As frequently stressed, the NPT's great benefit to the international community would dangerously erode if states violating safeguards agreements or the NPT felt free withdrawing, developing nuclear weapons, and enjoying impunity.
+
+Addressing this, the Security Council should adopt another generic, legally binding Chapter 7 UN Charter resolution stating that noncompliant states' NPT withdrawal (an undisputed right per Article X.1) after IAEA noncompliance findings constitutes international peace and security threats under UN Charter Article 39. This generic resolution should also provide that under these circumstances, all materials and equipment made available to such states or resulting from assistance under comprehensive safeguards agreements must be sealed by the IAEA and removed under agency supervision, remaining under agency safeguards. Refused state military cooperation with other UN member states would be suspended.
+
+An important preventive measure involves urging all enrichment and reprocessing facility states to conclude "back-up" safeguards agreements not terminating upon NPT withdrawal.
+
+Conclusion
+
+IAEA safeguards play key nonproliferation roles by ensuring nuclear energy in non-nuclear-weapon states remains exclusively peaceful and deterring nuclear weapons pursuit. However, deterrence effectiveness requires state belief that noncompliance has strong detection likelihood and detection carries consequences.
+
+President Barack Obama noted both elements in his 2009 Prague speech: the need for "more resources and authority to strengthen international inspections" and "real and immediate consequences for countries caught breaking the rules or trying to leave the treaty without cause."
+
+The IAEA should not complacently tolerate state nonproliferation undertaking violations. That said, today's nonproliferation regime's weakest link is not IAEA safeguards performance but international community response to noncompliance. The burden primarily falls on the IAEA board and UN Security Council.
+
+UN Security Council Resolution 1887, emphasizing noncompliance attention, represents significant but insufficient progress. It calls for treaty strengthening, complete obligation compliance, Comprehensive Test Ban Treaty ratification, stricter national sensitive technology export controls, and more. However, states face no obligation following resolution recommendations.
+
+Therefore, states should discuss and agree on legally binding generic noncompliance response procedures. Since Security Council members wouldn't know future involved states, such discussions should be easier and less contentious than crisis-period negotiations. Standard response agreement applied evenhandedly to any noncompliant state, regardless of allies, would significantly enhance nonproliferation regime credibility.
+
+Finally, considering North Korea's 2003 NPT withdrawal precedent, planning for another state withdrawal is necessary. The critical step involves Security Council adoption of a Chapter 7 UN Charter resolution deciding noncompliant state NPT withdrawal constitutes international peace and security threats.
+
+If adopted, the concrete measures recommended here would meaningfully protect against nuclear proliferation. However, all countries — not only five permanent Security Council members — must first acknowledge that these measures should be adopted now for mitigating next potential proliferation crisis consequences. Protecting against this dangerous prospect serves everyone's security interests.
+
+Author Note:
+Pierre Goldschmidt is a nonresident senior associate at the Carnegie Endowment for International Peace and former IAEA deputy director-general heading the Department of Safeguards.

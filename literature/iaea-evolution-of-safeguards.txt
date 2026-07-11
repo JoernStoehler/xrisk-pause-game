@@ -1,0 +1,3289 @@
+Title: The Evolution of IAEA Safeguards
+Author: IAEA (International Nuclear Verification Series No. 2, Revised)
+Date: 1998 (revised edition)
+URL: https://www-pub.iaea.org/MTCD/Publications/PDF/NVS2_web.pdf
+Type: IAEA official publication (full text, extracted from PDF)
+
+Description: Comprehensive IAEA account of how its safeguards system evolved, with
+extensive coverage of the Iraq lessons learned (post-1991 Gulf War discovery of Iraqs
+clandestine nuclear weapons program), the resulting Programme 93+2 strengthening
+measures, and the development of the Additional Protocol (INFCIRC/540). Documents
+the shift from verifying declared materials to detecting undeclared activities.
+
+--- FULL TEXT BELOW ---
+
+THE EVOLUTION OF IAEA
+SAFEGUARDS
+
+The following States are Members of the International Atomic Energy Agency:
+AFGHANISTAN
+ALBANIA
+ALGERIA
+ARGENTINA
+ARMENIA
+AUSTRALIA
+AUSTRIA
+BANGLADESH
+BELARUS
+BELGIUM
+BOLIVIA
+BOSNIA AND
+HERZEGOVINA
+BRAZIL
+BULGARIA
+BURKINA FASO
+CAMBODIA
+CAMEROON
+CANADA
+CHILE
+CHINA
+COLOMBIA
+COSTA RICA
+CÔTE D’IVOIRE
+CROATIA
+CUBA
+CYPRUS
+CZECH REPUBLIC
+DEMOCRATIC REPUBLIC
+OF THE CONGO
+DENMARK
+DOMINICAN REPUBLIC
+ECUADOR
+EGYPT
+EL SALVADOR
+ESTONIA
+ETHIOPIA
+FINLAND
+FRANCE
+GABON
+GEORGIA
+GERMANY
+GHANA
+GREECE
+GUATEMALA
+
+HAITI
+HOLY SEE
+HUNGARY
+ICELAND
+INDIA
+INDONESIA
+IRAN, ISLAMIC REPUBLIC OF
+IRAQ
+IRELAND
+ISRAEL
+ITALY
+JAMAICA
+JAPAN
+JORDAN
+KAZAKHSTAN
+KENYA
+KOREA, REPUBLIC OF
+KUWAIT
+LATVIA
+LEBANON
+LIBERIA
+LIBYAN ARAB JAMAHIRIYA
+LIECHTENSTEIN
+LITHUANIA
+LUXEMBOURG
+MADAGASCAR
+MALAYSIA
+MALI
+MALTA
+MARSHALL ISLANDS
+MAURITIUS
+MEXICO
+MONACO
+MONGOLIA
+MOROCCO
+MYANMAR
+NAMIBIA
+NETHERLANDS
+NEW ZEALAND
+NICARAGUA
+NIGER
+NIGERIA
+NORWAY
+PAKISTAN
+PANAMA
+
+PARAGUAY
+PERU
+PHILIPPINES
+POLAND
+PORTUGAL
+QATAR
+REPUBLIC OF MOLDOVA
+ROMANIA
+RUSSIAN FEDERATION
+SAUDI ARABIA
+SENEGAL
+SIERRA LEONE
+SINGAPORE
+SLOVAKIA
+SLOVENIA
+SOUTH AFRICA
+SPAIN
+SRI LANKA
+SUDAN
+SWEDEN
+SWITZERLAND
+SYRIAN ARAB REPUBLIC
+THAILAND
+THE FORMER YUGOSLAV
+REPUBLIC OF MACEDONIA
+TUNISIA
+TURKEY
+UGANDA
+UKRAINE
+UNITED ARAB EMIRATES
+UNITED KINGDOM OF
+GREAT BRITAIN AND
+NORTHERN IRELAND
+UNITED REPUBLIC
+OF TANZANIA
+UNITED STATES
+OF AMERICA
+URUGUAY
+UZBEKISTAN
+VENEZUELA
+VIET NAM
+YEMEN
+YUGOSLAVIA
+ZAMBIA
+ZIMBABWE
+
+The Agency’s Statute was approved on 23 October 1956 by the Conference on the Statute of the
+IAEA held at United Nations Headquarters, New York; it entered into force on 29 July 1957. The
+Headquarters of the Agency are situated in Vienna. Its principal objective is “to accelerate and
+enlarge the contribution of atomic energy to peace, health and prosperity throughout the world’’.
+© IAEA, 1998
+Permission to reproduce or translate the information contained in this publication may be
+obtained by writing to the International Atomic Energy Agency, Wagramerstrasse 5, P.O. Box 100,
+A-1400 Vienna, Austria.
+Printed by the IAEA in Austria
+November 1998
+IAEA/NVS/2
+
+INTERNATIONAL NUCLEAR VERIFICATION SERIES No. 2
+
+THE EVOLUTION OF IAEA
+SAFEGUARDS
+
+INTERNATIONAL ATOMIC ENERGY AGENCY
+VIENNA, 1998
+
+EDITORIAL NOTE
+Although great care has been taken to maintain the accuracy of information
+contained in this publication, neither the IAEA nor its Member States assume any
+responsibility for consequences which may arise from its use.
+The mention of names of specific companies or products (whether or not
+indicated as registered) does not imply any intention to infringe proprietary rights, nor
+should it be construed as an endorsement or recommendation on the part of the IAEA.
+
+Foreword
+This is the second in a new series of booklets dealing with IAEA safeguards.
+The booklets are intended for persons professionally interested in the subject,
+such as government officials having responsibilities relating to nonproliferation or to the management of nuclear facilities, and for the
+practitioners of safeguards — the international and national officials charged
+with implementing IAEA safeguards.a This particular booklet is also aimed at
+the broader public concerned about the spread of nuclear weapons and
+interested in nuclear arms control and disarmament. It presents the situation
+as IAEA safeguards make a ‘quantum jump’ into a new phase, characterized
+by the IAEA as the Strengthened Safeguards System.
+To the newcomer the term ‘IAEA safeguards’ may sound vague and remote,
+of interest chiefly to a limited group of specialists. In fact, the evolution of
+IAEA safeguards is one of the most engrossing historical processes that
+have taken place since the Second World War — in effect the story of a more
+than fifty year long international endeavour, vital in the long term
+for humanity’s survival, to keep nuclear weapons within the cage in which
+they have been confined by 1970 and eventually to do away with them
+entirely.
+Despite several setbacks this endeavour has been a success. Since the end of
+the Cold War the focus of nuclear controls has begun to shift from stopping
+the further spread of nuclear weapons — although this remains their cardinal
+objective — to a step-by-step ban on the testing and production of all nuclear
+explosives and, eventually, their total elimination. As the Director General of
+the IAEA put it in June 1998, “we need …to reaffirm our course of action: no
+nuclear tests, no new weaponization or deployment of nuclear weapons; a
+working system of global and regional security; and nuclear disarmament not
+a The first in the current series is Safeguards Techniques and Equipment, Inter-
+
+national Verification Series No. 1 (1997). In 1981 and 1983 the IAEA also published two
+booklets entitled IAEA Safeguards: An Introduction and IAEA Safeguards: Aims,
+Limitations, Achievements (IAEA/SG/INF/3 and IAEA/SG/INF/4). While this
+material is now largely out of date these booklets retain some interest since they show
+how the IAEA perceived its safeguards operations before the challenges with which
+the Agency was faced in Iraq and the Democratic Poeple’s Republic of Korea in the
+early 1990s. The reader’s attention is also drawn to the IAEA Safeguards Glossary,
+1987 Edition, IAEA/SG/INF/1 (Rev. 1), a revised version of which will be published
+in the present series.
+
+a day too soon”.b But, as the nuclear tests of May 1998 have shown, the chains
+that constrain the spread of nuclear weapons have their weak links and the
+threat of nuclear proliferation and the danger of nuclear war, though greatly
+reduced, are still with us.
+
+b ELBARADEI, M., Director General of the IAEA, Statement to the IAEA Board
+
+of Governors, 8 June 1998.
+
+Contents
+
+INTRODUCTION . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1
+
+I.
+
+INTERNATIONAL SAFEGUARDS: 1945–1998 . . . . . . . . . . . . . . . .
+
+6
+
+The first attempts at international control . . . . . . . . . . . . . . . .
+Item specific safeguards: INFCIRC/26 and
+INFCIRC/66/Rev. 2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The emergence of treaties requiring
+comprehensive safeguards:
+The NPT and the regional treaties . . . . . . . . . . . . . . . . . .
+Regional treaties . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Challenges to the NPT and IAEA safeguards . . . . . . . . . . . . . .
+The initial report of the
+Democratic People’s Republic of Korea (DPRK) . . . . . . .
+The first use of international safeguards to monitor
+nuclear disarmament . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Negotiation and approval of INFCIRC/540 . . . . . . . . . . . . . . .
+The position in mid-1998 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+8
+
+II.
+
+9
+
+11
+16
+17
+21
+23
+24
+28
+
+THE AIMS AND LIMITATIONS OF
+IAEA SAFEGUARDS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+A.
+
+The Aims of IAEA Safeguards . . . . . . . . . . . . . . . . . . . . . . . . . . 30
+The political aim of IAEA safeguards . . . . . . . . . . . . . . . . . . . . 30
+The technical aim of IAEA safeguards . . . . . . . . . . . . . . . . . . . 32
+
+B.
+
+Limitations on the Scope and
+Effectiveness of Safeguards . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Acceptance is voluntary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Activating safeguards . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Sounding an alarm . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Constraints on inspections . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Non-discrimination . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The problems of theft, smuggling and other illegal
+acts of individuals . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Budgetary restrictions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+33
+33
+34
+34
+35
+36
+37
+38
+
+III.
+
+HOW SAFEGUARDS WORK IN PRACTICE . . . . . . . . . . . . . . . . . . 39
+A.
+
+Legal and Administrative Arrangements . . . . . . . . . . . . . . . . . 39
+The organization of safeguards . . . . . . . . . . . . . . . . . . . . . . . . .
+The legal action that triggers safeguards . . . . . . . . . . . . . . . . .
+Agreements under INFCIRC/153 alone and agreements
+under INFCIRC/153 as amplified by INFCIRC/540 . . .
+Sanctions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Subsidiary arrangements and facility attachments . . . . . . . . .
+Designation of inspectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The State's System of Accounting for and the Control of
+Nuclear Materials (SSAC) . . . . . . . . . . . . . . . . . . . . . . . . .
+The provision of information about safeguards and the
+protection of safeguards information . . . . . . . . . . . . . . . .
+IAEA statements to national safeguards authorities . . . . . . . .
+
+B.
+
+42
+42
+44
+45
+45
+47
+48
+
+Principles Underlying the Application of Safeguards to
+Declared Nuclear Material . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 48
+Tailoring safeguards to different fuel cycles . . . . . . . . . . . . . . .
+The starting point of safeguards . . . . . . . . . . . . . . . . . . . . . . . .
+Nuclear materials accountancy . . . . . . . . . . . . . . . . . . . . . . . . .
+The technical objective of safeguards on
+declared nuclear material . . . . . . . . . . . . . . . . . . . . . . . . .
+‘Timely detection’ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+‘Significant quantity’ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+‘Containment’ and ‘surveillance’ . . . . . . . . . . . . . . . . . . . . . . . .
+Safeguards approaches for declared nuclear material:
+‘diversion strategies’ . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+‘Safeguards criteria’ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+‘Inspection goals’ . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Implementing safeguards agreements
+under INFCIRC/153 . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+C.
+
+39
+40
+
+48
+49
+50
+52
+52
+53
+53
+54
+54
+55
+56
+
+Principles Underlying the Application of Safeguards
+to Detect Clandestine Operations . . . . . . . . . . . . . . . . . . . . . . . 56
+The new approach:
+The State as well as the facility . . . . . . . . . . . . . . . . . . . . . 56
+Approach to the evaluation of States’ nuclear activities . . . . . 58
+
+IV.
+
+NEW CHALLENGES AND OPPORTUNITIES . . . . . . . . . . . . . . . . . 59
+A.
+
+Further Optimization of Current Safeguards . . . . . . . . . . . . . . 59
+Enhancing cost effectiveness . . . . . . . . . . . . . . . . . . . . . . . . . . . 59
+Applying new safeguards technologies . . . . . . . . . . . . . . . . . . 59
+
+B.
+
+Realizing the Promise of the Additional Protocol . . . . . . . . . . 61
+The impact of INFCIRC/540 . . . . . . . . . . . . . . . . . . . . . . . . . . .
+The implementation of INFCIRC/540 . . . . . . . . . . . . . . . . . . . .
+‘Universality’ of INFCIRC/540 . . . . . . . . . . . . . . . . . . . . . . . . .
+The integration of safeguards under INFCIRC/153 and
+INFCIRC/540 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+C.
+
+63
+
+Verification of Certain Specific Measures of
+Nuclear Disarmament . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64
+Placing former military material under
+international surveillance . . . . . . . . . . . . . . . . . . . . . . . . .
+Verification of a cut-off . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+Verification requirements of
+additional nuclear weapon free zones . . . . . . . . . . . . . . .
+Co-operation with other international
+verification agencies . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+D.
+
+61
+62
+63
+
+64
+65
+66
+66
+
+Progress in Disarmament and its Verification . . . . . . . . . . . . . 67
+Steps towards universal acceptance of
+international inspection . . . . . . . . . . . . . . . . . . . . . . . . . . . 67
+
+ANNEX 1:
+ANNEX 2:
+
+THE IAEA AND THE WAY IT WORKS . . . . . . . . . . . . . . 70
+THE CONTROL OF NUCLEAR EXPORTS . . . . . . . . . . . 72
+
+PICTURE DESCRIPTIONS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75
+
+B
+L
+A
+N
+K
+
+INTRODUCTION
+Safeguards have gone through three major phases. The first began in the late
+1950s and the 1960s as nations started to trade in nuclear plants and fuel. The
+safeguards of that time were designed chiefly to ensure that this trade did not
+lead to the spread of nuclear weapons. The second phase reflected a growing
+perception that, “pending nuclear disarmament, world security is better
+served with fewer rather than more nuclear weapons and nuclear weapon
+States”.1 This found expression in the 1968 Treaty on the Non-Proliferation of
+Nuclear Weapons (NPT) which “…shut the doors of the nuclear club”2 by
+confining nuclear weapons to the five nations that possessed them at that
+time. The tool to be used for this purpose was to apply safeguards on all the
+nuclear material in the States that had not acquired nuclear weapons and to
+keep a rigorous account of such material. The safeguards system to be
+applied by the IAEA was approved by the IAEA’s Board of Governors in
+1971. The States that had already acquired nuclear weapons undertook, in the
+NPT, to pursue in good faith the goal of eliminating them in due course,
+without, however, setting any timetable for this process.3
+The third and most recent phase has consisted of a far-reaching review
+designed to remedy shortcomings that had come to light in the 1971 system.
+The review began in 1991 and its results culminated in 1997 in the approval
+of a significantly expanded legal basis for IAEA safeguards. It was prompted
+chiefly by the discovery of an extensive clandestine nuclear weapon
+programme in Iraq, by problems that the IAEA ran into in applying comprehensive safeguards in the Democratic People’s Republic of Korea (DPRK) and
+by the unique experience the IAEA had gained in verifying4, since 1991, the
+1 ELBARADEI, M., Director General of the IAEA, Statement to the IAEA Board
+of Governors, 8 June 1998.
+2 Ibid.
+3 Article IX.3 of the NPT defines a nuclear weapon State as one “which has
+manufacured and exploded a nuclear weapon or other nuclear explosive device prior
+to 1 January, 1967”. Under NPT Article VI each party of the Treaty “undertakes to pursue
+negotiations in good faith on effective measures relating to cessation of the nuclear
+arms race at an early date and to nuclear disarmament, and on a treaty on general and
+complete disarmament under strict and effective international control”. While
+Article VI places an obligation on all parties to the Treaty, it is seen as having particular reference to the five nuclear weapon States that qualify as such under Article IX.3.
+4 The term used by the IAEA for this activity is ‘observing’ rather than
+‘verifying’, though the security objective sought was clearly to verify that a nuclear
+weapon programme had been discontinued and eliminated.
+
+1
+
+Evolution of Safeguards
+
+first denuclearization of a State that had previously manufactured and maintained nuclear weapons — South Africa. The review was also directed at
+making IAEA safeguards more cost effective, and took account of recent
+advances in safeguards technology.
+It should be stressed that since the early 1960s the improvement of safeguards
+has been a dynamic and continuous process, stimulated by technical progress
+and developments in international security, and did not stop with the
+1991–1997 review nor with the Board’s approval of the new measures that the
+review recommended.
+The success of IAEA safeguards is reflected in many aspects of international
+affairs, for instance, in the fact that they now cover almost all nuclear material in the non-nuclear-weapon States, in their incorporation in regional
+treaties banning nuclear weapons and in most bilateral and multilateral
+nuclear co-operation and supply agreements, in their application —
+admittedly still limited — in all the nuclear weapon States,5 and in the 1995
+decision to make the NPT and, by the same token, the comprehensive IAEA
+safeguards a permanent feature of the international landscape.
+What is meant by IAEA safeguards? The dictionary definition of ‘safeguard’
+is very wide (a “proviso, stipulation, quality or circumstance, that tends to
+prevent something undesired” according to the Concise Oxford Dictionary;
+Webster’s contains a similar but more general definition: “a precautionary
+measure, stipulation or device”). In US nuclear usage, safeguards include
+measures to protect against hazardous radiation and measures of physical
+protection against criminal acts such as the theft and hijacking of nuclear
+materials. Originally, IAEA usage was similarly broad. Under the Statute of
+the IAEA, safeguards include “health and safety measures” (Article XII) or,
+more explicitly, “standards for protection of health and minimization of
+danger to life and property” (Article III.A.6). In the context of international
+5 The
+
+five recognized nuclear weapon States, China, France, the Russian
+Federation, the UK and the USA, are not required by the NPT or any other existing
+international treaty to accept safeguards on any of their civilian nuclear activities.
+However, each of the five has voluntarily placed certain nuclear plants and stocks of
+nuclear material (and in two cases, the USA and UK, all civilian nuclear acivities)
+under ‘voluntary offer’ agreements. The chief purpose of these agreements was to
+encourage the non-nuclear-weapon States to accept the NPT by demonstrating that
+IAEA safeguards would not impede civilian nuclear activities nor place their nuclear
+programmes at a disadvantage in relation to those of the nuclear weapon States.
+
+2
+
+Introduction
+
+security, safeguards under the Statute are “designed to ensure” that
+safeguarded items “are not used in such a way as to further any military
+purpose’’ (Article III.A.5).
+With the passage of time the focus of IAEA safeguards has become both
+narrower and broader. Today they could be described as a comprehensive set
+of internationally approved technical and legal measures, applied by the
+IAEA, to verify the political undertakings of States not to use nuclear material
+to manufacture nuclear weapons and to deter any such use; this has become
+the normal objective of safeguards in the non-nuclear-weapon States.6
+
+6 The NPT prohibits the diversion of nuclear materials not only to ‘nuclear
+
+weapons’ but also to ‘other nuclear explosive devices’, but nuclear explosives have not
+been used for any ‘non-weapon’ purpose since the mid-1980s. The explosion caused
+by a nuclear device used for civilian purposes cannot be distinguished from that caused
+by the testing of a nuclear weapon. Hence, the use of nuclear explosives for any
+purpose (other than as a weapon in war) would be forbidden by the Comprehensive
+[Nuclear] Test Ban Treaty which was approved by the General Assembly of the United
+Nations in 1996 and is awaiting entry into force. The use of nuclear explosives for any
+purpose is also forbidden by the treaties establishing nuclear weapon free zones in
+several regions of the world. In short, it seems likely that the reference in the NPT to
+‘other nuclear explosive devices’ is losing its practical meaning.
+
+3
+
+Evolution of Safeguards
+
+In mid-1998, in the four non-nuclear-weapon States that had not accepted
+comprehensive safeguards, the IAEA was applying safeguards to specified
+nuclear plants, equipment and technology and to certain nuclear material to
+verify that they were “not used in such a way as to further any military
+purpose”.7 In nuclear weapon States safeguards were applied in 1998 solely
+for the formal purpose of verifying that nuclear items were not withdrawn
+from safeguards except in accordance with procedures specified in the
+safeguards agreement.
+The broadening of IAEA safeguards has been manifest in their acceptance
+today by all nations that are operating nuclear plants or producing nuclear
+material (though in the case of the eight countries that possess or are assumed
+to possess nuclear weapons, many nuclear plants and much nuclear material
+lie outside the reach of any safeguards). In a different sense, safeguards have
+also become broader recently so as to focus not only on verifying that
+declared nuclear material remains in peaceful use, but — much more sharply
+— on verifying the absence of clandestine nuclear activities.
+The safeguards of the IAEA are legally anchored in the IAEA Statute of 1957,
+in the NPT of 1968 (which entered into force in 1970)8 and in five treaties establishing nuclear weapon free zones covering the entire southern hemisphere
+and extensive areas of the northern hemisphere. They are also anchored in the
+IAEA safeguards system, which has undergone four major modifications.9
+As noted, numerous bilateral and multilateral agreements between States call
+for the application of IAEA safeguards. Safeguards are also required by the
+Rome Treaty of 1957, which created the European Atomic Energy Community
+(Euratom); since the late 1970s, when the safeguards agreement between the
+IAEA, Euratom and Euratom non-nuclear-weapon States came into force,
+Euratom safeguards have been very similar to those of the IAEA.
+Insofar as safeguards serve the ends of non-proliferation, they are supported by
+international controls of the export of nuclear commodities such as the ‘Zangger
+7 This
+
+is the formulation used in the IAEA Statute Article II and IAEA/
+INFCIRC/66/Rev. 2, para. I.A.1.
+8 The five yearly conferences to review the implementation of the NPT and, in
+particular, the 1995 Conference on the Review and Extension of the NPT made several
+recommendations that have influenced the development of safeguards, though they
+were not binding on the participants.
+9 They are set forth in IAEA/INFCIRC/26 (1961), INFCIRC/66/Rev. 2
+(1965–1968), INFCIRC/153 (1971) and INFCIRC/540 (1997).
+
+4
+
+Introduction
+
+guidelines’ listing those nuclear items whose export triggers the application
+of safeguards,10 and the Nuclear Suppliers’ Guidelines of 1978 and 1992.11
+In the final analysis the effectiveness of safeguards depends significantly on
+the laws that individual nations enact to govern their nuclear policy and their
+nuclear exports and on the rules and decisions of the European Union. Their
+effectiveness also greatly depends on the decisions of the UN Security
+Council, which is the sole international body that has the power to enforce them.
+To understand how IAEA safeguards have developed into what they are
+today, what the relationship is between various sets of safeguards, and why
+they have come to play such an important role in international security, it is
+necessary to sketch their evolution since 1945, when the need for effective
+safeguards was first proclaimed. Accordingly, this booklet opens with a brief
+historical outline of this evolution. This is followed by a discussion of the
+aims of IAEA safeguards as those aims are seen today and the constraints
+under which safeguards function, a more detailed discussion of how they
+work in practice and a brief look at the future.
+
+10 Published as IAEA/INFCIRC/209.
+11 Published as IAEA/INFCIRC/254, Parts 1 and 2.
+
+5
+
+I. INTERNATIONAL SAFEGUARDS: 1945–1998
+Hiroshima and Nagasaki shocked the world into a painful realization of the
+horrors latent in nuclear weapons. They showed that it was essential and
+urgent to bring nuclear energy under effective international control and to
+ensure that it would be used for peaceful purposes only. It was already clear
+that “a nuclear arms race …[would be] a universal concern…”12 and not only
+a mortal danger to the few countries that might have or might soon acquire
+nuclear weapons. As the sole nuclear power of the time, the USA took the
+lead in seeking ways to avoid a nuclear Armageddon.
+The loose pre-war framework of international obligations would have been
+quite inadequate to constrain this new force.13 The consequences of a breach
+of pre-war treaties were often severe, but they were of a different order from
+those that might follow the uncontrolled spread of nuclear technology or
+breaches of nuclear agreements — leading to a world in which more and
+more nations would have their hands on the bomb, and to a growing threat
+that in the event of war between those possessing them, these inhuman
+weapons might be used. In 1945 the fear of such a catastrophe led the USA,
+the UK and Canada to issue a ‘Three State Declaration on Atomic Energy’.
+This proclaimed that effective safeguards and inspection would be a precondition for access to the peaceful uses of nuclear energy.14 ‘Safeguards’
+were thus the child of the atom.
+In practice, the first applications of safeguards resulted not so much from
+fear of a general nuclear holocaust as from more limited and prosaic, but
+12 ELBARADEI, M., ibid.
+13 With some exceptions, the guiding principle until 1939 was that international
+
+treaties were self-executing. It was usually obvious whether the parties to a treaty
+were observing its terms — for instance by accepting a new ruler, ceding territory or
+paying reparations after defeat in war. Even the peace treaties of 1919, which imposed
+limits on the German armaments and military forces, and the agreement that certain
+of the ‘great powers’ reached in the 1920s to limit the size of their navies made no
+provision for continuing verification of compliance.
+14 US President Truman, Prime Minister Attlee of the UK and Prime Minister
+Mackenzie King of Canada said that they would be willing “to proceed with the
+exchange of fundamental scientific literature for peaceful ends with any nation that
+will fully reciprocate” but only when “it is possible to devise reciprocal and enforceable safeguards acceptable to all nations” against its use for destructive purposes. This
+is the first reference to safeguards — in the sense they are understood today — in any
+important international statement.
+
+6
+
+International Safeguards: 1945–1998
+
+nonetheless valid concerns — the fear that, unless it was strictly monitored,
+international nuclear trade could lead to nuclear proliferation. This fear was
+implicit in a number of agreements for transferring civilian nuclear technology
+that were concluded in the early 1950s and that required that safeguards be
+applied to the hardware or technology transferred.15 As international commerce
+in nuclear commodities expanded, safeguards became the customary and,
+after the 1960s, an invariable condition of nuclear trade.16 In time, various safeguards procedures also became a tool of nuclear arms control. Today, safeguards
+are beginning to serve as a means to further nuclear disarmament indirectly.
+Those who grasped the meaning of nuclear war were appalled by Hiroshima
+and Nagasaki. Nonetheless, ‘getting the bomb’ still carried little or no stigma in
+the 1950s and 1960s; in fact, the majority of political observers believed that the
+spread of nuclear weapons was inevitable. Pessimism about nuclear proliferation was reinforced by doubts whether effective control of the uses of nuclear
+energy would be politically feasible. The atom was then at the cutting edge of
+science and technology. It seemed improbable that nations would freely
+agree to the inspection of their most sensitive research and industrial activities.
+However, several factors facilitated the technical application of effective
+nuclear safeguards. Unlike conventional explosives, poison gases or bacteria,
+the physical characteristics of nuclear materials make them relatively easy to
+detect and measure — chiefly because they emit identifiable and measurable
+radiation and leave behind traces of radioactive particles. These characteristics permit precise and accurate monitoring of the flow of nuclear materials
+15 The First International Conference on the Peaceful Uses of Atomic Energy,
+
+convened by the United Nations in Geneva in 1955, gave great impetus to the development and use of nuclear technology and to trade in nuclear plants and fuel. The
+conference lifted the heavy blanket of secrecy with which nations had covered almost
+all applications of nuclear science since 1939 — except that of uranium enrichment
+and the actual manufacture of the bomb.
+16 When the USA began exporting nuclear technology to non-nuclear-weapon
+States it insisted, in most cases, on safeguards administered by the USA itself (US
+nuclear exports to the Member States of Euratom constituted an important exception).
+In the 1960s the USA began transferring the administration of these safeguards to the
+IAEA. The UK generally followed the same policy. In 1957 Canada insisted on bilateral
+safeguards and inspection, but in the case of the CIRUS reactor, which Canada sold to
+India, these safeguards fell away when India was able to provide its own fuel, and
+CIRUS subsequntly became the source of plutonium for the Indian nuclear test of
+1974. The Soviet Union insisted that spent fuel generated by the reactors it exported
+should be returned to the Soviet Union.
+
+7
+
+Evolution of Safeguards
+
+through the national nuclear fuel cycle. In the early days, nuclear materials
+were also scarce and expensive. Consequently, for many years, only a few
+countries were technically equipped and had access to the raw materials
+needed for a significant nuclear programme, peaceful or military.
+With time, many of these technical and resource constraints were bound to
+erode. But they still apply, in a large proportion, to many countries of the
+approximately 190 States that now make up the United Nations. Moreover, as
+the technical constraints fell away, the international community forged
+additional and more powerful political barriers to nuclear proliferation.
+
+The First Attempts at International Control
+In 1946 the USA launched the first comprehensive scheme to outlaw nuclear
+weapons by proposing to bring atomic energy under the management and
+ownership of the UN. The scheme, known as the Baruch Plan from the name
+of the US delegate who presented it to the UN, was far too visionary to survive
+the shocks of the Cold War, and by the end of the 1940s it was tacitly abandoned.
+In December 1953, mindful of the fate of the Baruch plan, President
+Eisenhower put forward a set of less radical proposals for achieving nuclear
+disarmament and promoting the peaceful use of nuclear energy.17 After
+lengthy negotiations and much modification, Eisenhower’s proposals formed
+the basis of the Statute of the IAEA, which entered into force in July 1957. The
+Statute required that IAEA safeguards be applied to nuclear plant and
+material furnished by the IAEA, and to other nuclear activities assisted,
+sponsored, supervised or controlled by the IAEA.18 In other cases, however,
+17 President Eisenhower presented his proposals in an address to the United
+
+Nations General Assembly on 8 December 1953. Eisenhower’s speech and the proposals he made were collectively named ‘Atoms for Peace’.
+18 When the Statute was being negotiated (1954–1956), it was expected that the
+IAEA would receive, store and distribute very substantial amounts of nuclear fuel
+including enriched and natural uranium and plutonium (e.g. Statute Articles IX and
+XI.C and F). At a later date (1957–1958) it also seemed possible that the IAEA would
+acquire and operate a research reactor. These expectations proved to be incorrect, and
+in practice the IAEA has never handled or exercised direct control over the amount of
+nuclear materials or over a nuclear plant that would call for the application of safeguards. In many cases the IAEA has helped a Member State to obtain nuclear fuel or
+nuclear material from another Member State, but it did not take physical control of the
+material in question.
+
+8
+
+International Safeguards: 1945–1998
+
+States would be free to seek or not to seek the application of IAEA
+safeguards.19
+
+Item Specific Safeguards : INFCIRC/26 and INFCIRC/66/Rev. 2
+Almost all nations welcomed the new Agency. They saw it as the key that
+would unlock the door to the numerous benefits they expected to flow from
+nuclear energy. Nonetheless, there was much initial resistance to the application of IAEA safeguards. Thus the first, incomplete but complex, safeguards
+system covered only reactors of up to 100 megawatt thermal — MW(th) —, in
+other words, the research and experimental reactors of the day.20 The IAEA
+Board of Governors approved the system only after lengthy and divisive
+debate and at the cost of severe constraints on the operations of the IAEA and
+its inspectors. For example, the rules governing the appointment and
+activities of IAEA inspectors required the Director General to give at least
+one week’s notice before each routine IAEA inspection.21 The inspector
+had to enter, travel in and leave the country at points and on routes designated
+by the government concerned. The concepts of short notice and unannounced
+inspections, now increasingly important features of IAEA safeguards, would
+have been regarded as inadmissible infractions of national sovereignty.
+The nuclear co-operation agreements that the USA concluded in the 1950s
+and 1960s usually provided that the safeguards to be applied by the USA
+would in due course be turned over to the IAEA. British and Canadian
+agreements subsequently included a similar clause.
+As early as 1959 the IAEA had concluded its first safeguards agreement. It
+covered the fuel that Canada was supplying for a small research reactor in
+Japan. The arrangements for safeguarding the reactor fuel and the reactor
+itself were set out in an ad hoc exchange of letters. In 1960 the IAEA arranged
+for the supply of two small nuclear facilities and their fuel to Finland, under
+IAEA safeguards, and in 1962 the IAEA carried out its first inspection,
+verifying the design of a small research reactor in Norway.
+19 For instance, the IAEA might be asked to verify undertakings that the State
+had given to another State in an agreement for the supply of nuclear items. Or, if a
+State so decided, the IAEA might be asked to apply safeguards to any or all of its
+nuclear activities. But whether or not to ask the IAEA to apply safeguards was a
+matter within the discretion of the State or States concerned.
+20 Published as IAEA/INFCIRC/26.
+21 Published as ‘The Inspectors’ Document’, GC(V)/INF/39, Annex.
+
+9
+
+Evolution of Safeguards
+
+In the early 1960s, when the USA, the UK and Canada began negotiations for
+the supply of relatively large nuclear power plants to India and Japan, it was
+clear that the 1961 system would prove to be inadequate. After 1963, in the
+wake of the Cuban crisis, political relations between the USA and the USSR
+improved. This helped to open the way to rapid progress in safeguards (and
+to the conclusion of the Limited Test Ban Treaty of 1973).22 From 1965 to 1967
+the IAEA was able to reach agreement on the first comprehensive set of safeguards covering reactors of all sizes and, subsequently, reprocessing plants
+and fuel fabrication plants.23 After the approval of safeguards covering
+reactors of all sizes, the USA, the UK and Canada began to turn over to the
+IAEA the application of safeguards under their bilateral agreements. Most of
+these agreements thus covered individual supplies of nuclear plant or fuel.24
+22 The Treaty prohibited all nuclear tests in the atmosphere, under the sea and
+
+in outer space but not underground.
+23 The safeguards are set forth in IAEA/INFCIRC/66 (reactors of all sizes),
+INFCIRC/66/Rev. 1 (adding reprocessing plants) and INFCIRC/66/Rev. 2 (adding
+fuel fabrication plants). The system did not extend to enrichment plants since none
+was yet in operation or projected in any non-nuclear-weapon State.
+24 Some of the US agreements covered all nuclear supplies by the exporting to
+the recipient country. In 1967, after the entry into force of the Tlatelolco Treaty, Mexico
+concluded the first IAEA comprehensive safeguards agreement. The agreement was
+placed in suspense when Mexico ratified the NPT and concluded an NPT type
+comprehensive agreement.
+
+10
+
+International Safeguards: 1945–1998
+
+The experience gained by the IAEA in applying the first comprehensive set of
+safeguards (INFCIRC/66/Rev. 2) proved to be invaluable both to the Agency
+itself and to the international community as it became increasingly determined to stop the further spread of nuclear weapons. Thus, in 1967–1968 the
+negotiators of the NPT proposed that the IAEA should be the principal body
+to apply safeguards to nuclear material in non-nuclear-weapon States. The
+IAEA’s 1970 Safeguards Committee also leaned heavily on the Agency’s
+experience when it specified in detail what safeguards should be applied
+pursuant to the NPT, in other words, when it drew up document
+INFCIRC/153.
+Today, the safeguards prescribed by INFCIRC/66/Rev. 2 are in operation in
+only four States, namely Cuba, India, Israel and Pakistan. These are the only
+non-nuclear-weapon States — as defined by the NPT — that have nuclear
+facilities, but have not accepted comprehensive safeguards.25 In view of
+the nearly universal adherence of States to the NPT and of the large and
+growing number of States that require comprehensive safeguards as a
+condition of supply to a non-nuclear-weapon State, it is unlikely that any
+further agreements based on INFCIRC/66/Rev. 2 will be concluded with
+any state.
+
+The Emergence of Treaties Requiring
+Comprehensive Safeguards:
+The NPT and the Regional Treaties
+Until the late 1960s it had been at the discretion of any State to accept or
+apply IAEA safeguards on any particular nuclear transaction or activity, or
+
+25 ‘Comprehensive
+
+safeguards’, also sometimes referred to as ‘full scope
+safeguards’, mean, in practice, the application of IAEA safeguards to all nuclear
+material in a non-nuclear-weapon State.
+Cuba has signed the Tlatelolco Treaty, which calls for comprehensive
+safeguards, but has not yet brought the Treaty into force for Cuba. However, all Cuba’s
+known nuclear plants and their fuel have been placed under INFCIRC/66/Rev. 2
+safeguards. The IAEA is also applying safeguards under INFCIRC/66/Rev. 2 to all
+nuclear plants and material in Taiwan, China.
+
+11
+
+Evolution of Safeguards
+
+to proceed without safeguards, and several important nuclear transfers to
+non-nuclear-weapon States as well as to or between the nuclear weapon
+States took place without any IAEA safeguards.26 In 1967 the nations of
+Latin America and the Caribbean reached agreement on the first treaty
+outlawing nuclear weapons in a populated region of the world (the Tlatelolco
+Treaty).27 The approval of the Tlatelolco Treaty opened a new chapter by
+requiring its parties not only to abjure nuclear weapons but also to accept
+IAEA safeguards on all their nuclear activities.28
+In 1968, after three years of negotiations, the international committee
+that served as the main forum for negotiating treaties on arms control
+and disarmament29 reached agreement on the text of the NPT. In June 1968
+the United Nations General Assembly commended the NPT to the UN
+Member States. The entry into force of the NPT in 1970 imposed
+much the same safeguards obligation as the Tlatelolco Treaty on all nonnuclear-weapon States that joined it, namely the renunciation of
+nuclear weapons and the acceptance of comprehensive safeguards. For each
+country the decision whether or not to join the NPT was and has remained
+
+26 For
+
+instance, South Africa supplied uranium concentrates to the UK,
+France and Israel without requiring IAEA safeguards. Australia similarly supplied
+unsafeguarded uranium concentrates to the UK; the USSR obtained unsafeguarded
+uranium from its allies. Until the entry into force of the NPT in 1970, the suppliers
+were not under any international obligation to require the application of IAEA
+safeguards.
+27 The Treaty for the Prohibition of Nuclear Arms in Latin America, or
+Tlatelolco Treaty, is reproduced in IAEA document GOV/INF/179. The Latin
+American nations had a special incentive to prevent any re-introduction of nuclear
+weapons into the region after the Cuban missile crisis.
+28 The 1957 Treaty of Rome, between the six members of what was then the
+European Community or Common Market, required its parties to accept comprehensive Euratom safeguards. However, Euratom safeguards do not prohibit
+the use of the nuclear material in nuclear weapons or for other military purposes.
+Hence, France could become a nuclear weapon State without violating the
+Treaty of Rome, and the UK could join the European Community as a nuclear weapon
+State.
+29 At that time the committee was known as the Eighteen Nations Disarmament
+Committee. It subsequently evolved, by successive expansions, into today’s 60-nation
+Committee on Disarmament.
+
+12
+
+International Safeguards: 1945–1998
+
+optional, but the pressure on non-nuclear-weapon States to do so began to
+mount.30
+On 6 April 1970, soon after the entry into force of the NPT, the IAEA Board of
+Governors created a special committee to draw up the safeguards to be
+applied in the non-nuclear-weapon States that would join the NPT —
+safeguards agreements that would give effect to their undertakings to place
+all their nuclear material under safeguards.31 The committee met from
+June 1970 to March 1971, and some 45 States, or nearly half of the IAEA’s
+membership at that time, took part in it.
+At the time it seemed to many that if any additional States did acquire
+nuclear weapons those most likely to do so would be leading industrialized
+non-nuclear-weapon States. It was here that the nuclear industry was already
+well established and growing rapidly, thus providing the technical infrastructure that would be needed for a nuclear weapon programme. It was
+therefore essential to induce these industrialized States to accept the Treaty,
+but some of them feared that if they accepted IAEA safeguards they would
+lose valuable proprietary information. To meet these concerns, the system
+devised by the safeguards committee focused on the flow or inventory of
+nuclear material and, unlike earlier IAEA safeguards, deliberately refrained
+from any reference to safeguards on nuclear facilities. This was, at least to
+30 The following are the main points on which INFCIRC/66/Rev. 2 safeguards
+
+differ from those of INFCIRC/153:
+INFCIRC/66/Rev. 2 is a set of guidelines designed to enable the clause in
+the IAEA Statute that authorizes the Agency to apply safeguards. INFCIRC/66/Rev. 2
+is also a ‘menu’, setting forth the various safeguards arrangments and measures
+that may be selected for incorporation into INFCIRC/66/Rev. 2 safeguards
+agreements.
+INFCIRC/153, on the other hand, is, in effect, a ‘model’ agreement covering
+the entire nuclear programme of the non-nuclear-weapon State concerned.
+INFCIRC/66/Rev. 2 safeguards may be applied to nuclear plants, services,
+equipment, facilities and information and to certain non-nuclear material such as
+heavy water. INFCIRC/153 safeguards apply to all nuclear material in peaceful uses
+in the non-nuclear-weapon State concerned.
+In the mid-1970s, it was made clear that safeguards under INFCIRC/66/
+Rev. 2 apply to the transfer of the ‘sensitive’ nuclear technologies for reprocessing and
+enrichment and the production of heavy water.
+31 Except any nuclear material that might be withdrawn from safeguards for a
+military use that is tacitly permitted by the NPT — e.g. as the fuel of a naval reactor.
+No such material has been withdrawn from safeguards.
+
+13
+
+Evolution of Safeguards
+
+some extent, a distinction without a difference since the IAEA would need
+access to nuclear plants and to information about their design in order to
+apply safeguards to the nuclear material handled in them. The second principle laid down by the committee had much greater practical importance. The
+flow or inventory of nuclear material was to be monitored at certain ‘strategic
+points’ within the nuclear plant and routine inspection access would be
+confined to these points. Maximum use was to be made of instruments rather
+than of human inspectors.
+Since most governments were unwilling to give the IAEA a free hand to scout
+for undeclared plants or stocks, the 1970–1971 safeguards focused almost
+exclusively on verifying that there was no diversion of nuclear material that
+the governments concerned had declared and placed under safeguards. The
+possibility that undeclared plants might exist was, of course, recognized by
+the architects of the 1970–1971 system, but it was tacitly assumed that if such
+plants were built they would be detected by means other than IAEA
+safeguards. In practice, accounting for nuclear material in declared nuclear
+operations thus became the main task of IAEA safeguards.
+The text that the 1970–1971 safeguards committee unanimously agreed upon,
+set forth in IAEA/INFCIRC/153, has since provided the basis for
+•
+
+•
+•
+
+all negotiations of safeguards agreements between the IAEA and NPT
+non-nuclear-weapon States and with groups of non-nuclear-weapon
+States,
+agreements with States that have not joined the NPT but are parties to
+treaties establishing nuclear weapon free zones,
+agreements with States that have not joined the NPT but request to
+conclude a comprehensive safeguards agreement with the IAEA.
+
+INFCIRC/153 has also provided the technical elements of agreements with
+the five nuclear weapon States, each of which has, in time, offered to place
+some or all of its civilian nuclear plants under safeguards.
+By the mid 1970s the main industrialized non-nuclear-weapon States had
+joined the NPT and had thereby accepted comprehensive safeguards on all
+their own nuclear material.32 The remaining non-nuclear-weapon States of
+North America, Western and Eastern Europe and the Far East soon followed
+32 The five non-nuclear-weapon States of Euratom acceded to the NPT in 1975,
+
+and Japan in 1976.
+
+14
+
+International Safeguards: 1945–1998
+
+suit; so, too, did a majority of the developing countries. This process
+continued throughout the 1980s and early 1990s, with the result that by
+mid-1998 180 non-nuclear-weapon States had acceded to the Treaty. Only
+eight States operating relevant nuclear plants had not placed — or accepted
+the obligation to place — all their nuclear material permanently under
+IAEA safeguards. They were the five nuclear weapon states — China, France,
+the Russian Federation, the UK and the USA — and India, Pakistan and
+Israel.33
+At first, the NPT was generally interpreted as requiring safeguards only in
+respect of those nuclear goods that a party to the Treaty exported to a nonnuclear-weapon State, but not on all the importing State’s nuclear material. In
+other words the importing state, if not a party to the NPT, would be free to
+produce unsafeguarded nuclear items or to import them from any State that
+did not require safeguards on its exports.34 However, in the early 1990s most
+of the major nuclear suppliers began to insist on comprehensive safeguards
+in the importing non-nuclear-weapon State as a prerequisite for any nuclear
+supplies.
+Despite the differences in approach and content between INFCIRC/66/Rev. 2
+and comprehensive (INFCIRC/153) safeguards agreements, the IAEA, for
+obvious reasons of economy and efficiency, seeks as much uniformity as
+possible in the practical application of safeguards under both types of agreement. It does so, for instance, by helping States, including those that have
+INFCIRC/66/Rev. 2 agreements, to establish and maintain national systems
+of accounting and control of nuclear material and by encouraging all States to
+accept standardized formats for subsidiary arrangements and for the operating records that they maintain and the reports they submit to the IAEA.
+As already noted, many of INFCIRC/153’s approaches were already in use
+before 1971 or have since been retrofitted into INFCIRC/66/Rev. 2 safe33 India, Israel and Pakistan have accepted INFCIRC/66/Rev. 2 safeguards on
+
+certain imported plants and their fuel. These three are ‘non-nuclear-weapon’ States
+pursuant to Article IX of the NPT but India has carried out six tests of nuclear explosives (one in 1974; five in May 1998), Pakistan six (in May 1998), and Israel is generally
+thought to have a nuclear weapon capability.
+34 In 1971 the main nuclear exporters set up a committee (the ‘Zangger
+Committee’) to establish a common understanding of the meaning of Article III.2 of
+the NPT, which requires its parties to ensure that IAEA safeguards are applied in
+connection with their exports to non-nuclear-weapon States (see Annex 2).
+
+15
+
+Evolution of Safeguards
+
+guards, for instance, the requirements of nuclear material accountancy and
+the use of containment and surveillance.
+
+Regional Treaties
+The first treaty that had the effect of banning nuclear weapons (together with
+all other military activities) from an entire region, the Antarctic Treaty, came
+into force as early as 1959. No further nuclear weapon free zones were created
+until the Tlatelolco Treaty in 1967. This treaty naturally gave much impetus to
+the growth of IAEA safeguards in Latin America and the Caribbean. By mid1998 only two States in the region had not yet taken all the legal actions
+needed to bring the Treaty into full force throughout the region and its adjoining oceans. They were Cuba, which had signed but not yet ratified the Treaty,
+and Haiti, which had ratified the Treaty and negotiated but not yet brought
+into force the requisite safeguards agreement with the IAEA.
+Other treaties establishing nuclear weapon free zones are now in force
+in the South Pacific (the Rarotonga Treaty) and in South-East Asia (the
+Bangkok Treaty). The Pelindaba Treaty is awaiting entry into force in Africa.
+Proposals have recently been made for nuclear weapon free zones in other
+regions, in particular Central Asia and Eastern Europe. For many years
+the General Assembly has adopted resolutions supporting the creation of
+zones free of weapons of mass destruction in the Middle East and in
+South Asia.
+The prohibitions foreseen by the existing treaties establishing nuclear weapon
+free zones are more extensive than those of the NPT. As a general rule, the
+nuclear weapon free zone treaties prescribe that no nuclear weapon may be
+developed, manufactured, possessed or otherwise acquired by treaty parties.
+The NPT, on the other hand, effectively permits each of the five parties that it
+recognizes as nuclear weapon States to retain and acquire nuclear weapons
+and to deploy them anywhere provided that, in peace time, they remain
+under the exclusive control of the nuclear weapon State.35 The regional
+treaties generally call upon all their parties to accept comprehensive IAEA
+35 The Antarctic Treaty prohibits all military activities in the region it covers.
+The other regional treaties call upon the nuclear weapon States to respect the nonnuclear-weapon status of the regions they cover but generally do not prohibit the
+passage of ships carrying nuclear weapons through the areas of sea and ocean that the
+treaties cover.
+
+16
+
+International Safeguards: 1945–1998
+
+safeguards on their nuclear activities, and some of these treaties (Rarotonga
+and Pelindaba) expressly require their parties not to export nuclear items to
+any non-nuclear-weapon State unless that State has accepted comprehensive
+safeguards.
+
+Challenges to the NPT and IAEA Safeguards
+In 1981, in the first major challenge to NPT safeguards, Israeli bombers
+destroyed a large research reactor (‘Tammuz’) that France had supplied to
+Iraq. Iraq was a party to the NPT, and the reactor, which had not yet begun
+operating, was under IAEA safeguards. In justifying the attack, Israel
+declared that it did not consider that these safeguards would prevent Iraq
+from clandestinely using the reactor as a source of plutonium for a nuclear
+weapon programme.36
+Ten years later, Iraq itself was responsible for inflicting a serious blow to
+confidence in the Agency’s safeguards and for justifying fears about Iraq’s
+nuclear activities. After the defeat of Iraqi forces in the Gulf War of 1991,
+it became clear that the Iraqi government had been carrying out a very
+large programme, unknown to the IAEA (and apparently undetected
+by foreign intelligence services), for the production of enriched uranium for
+use in nuclear weapons. Iraq had also made considerable progress in secretly
+designing and constructing prototypes of such weapons.
+After the defeat of Iraq in 1991, IAEA inspectors worked together with those
+of UNSCOM (the United Nations Special Commission) in fulfilment of resolutions of the United Nations Security Council inviting the IAEA to remove,
+destroy or render harmless Iraq’s ability to acquire nuclear weapons (Security
+Council Resolution 687/1991) and to make it impossible for Iraq to acquire
+weapons of mass destruction or long range missiles. But the question
+remained: how did Iraq manage to launch a major nuclear weapon
+programme without being detected?
+Before the Gulf War, IAEA inspectors could routinely inspect only a handful
+of the almost one hundred installations in operation at the main Iraqi nuclear
+
+36 The
+
+IAEA maintained that the Israeli authorities had seriously underestimated the frequency and effectiveness of the safeguards that would have been
+applied when the reactor came into operation.
+
+17
+
+Evolution of Safeguards
+
+Research Centre at Tuwaitha. According to Iraq’s declarations, the inspected
+installations contained all the nuclear material in that country that should be
+safeguarded. The installations were the two surviving small research reactors
+and their ancillary buildings, and various storage areas including the store of
+highly enriched uranium that France had supplied for the large reactor
+destroyed by the Israelis in 1981. It later became clear that many of the facilities at Tuwaitha, to which the IAEA inspectors did not have the right of
+routine access, had played a vital role in the clandestine Iraqi programme.
+These included some facilities in which no nuclear material was normally
+present, for instance, workshops that manufactured some of the hardware
+needed for the enrichment of uranium. If the routine access of IAEA
+inspectors had not been so restricted, the probability of their detecting Iraq’s
+clandestine operations would have been much higher.37
+
+37 In other words, IAEA inspectors were legally entitled to carry out routine
+
+inspections at specific declared sites at Tuwaitha. In theory, the IAEA could carry out
+‘special inspections’ at other locations in a country with which it had concluded a
+comprehensive safeguards agreement, but this right had never before been exercised
+at an unsafeguarded facility. It had been exercised only in one or two cases, and, in
+these instances, at declared locations.
+
+18
+
+International Safeguards: 1945–1998
+
+It was also obvious that one of the main reasons why, until 1991, Iraq had
+been able to dissemble its programme was the backdoor access it enjoyed to
+nuclear and dual use equipment, technology and material.
+To some extent this was due to the approach taken in INFCIRC/153 in regard
+to information to be given to the IAEA about nuclear exports. INFCIRC/153
+merely required non-nuclear-weapon States to notify the IAEA of transfers
+abroad of safeguarded nuclear material to other non-nuclear-weapon States.38
+Any party to the NPT could export a reprocessing or enrichment plant to any
+other NPT state without sending any notification to the IAEA. The only
+obligation to keep the IAEA informed was that placed on the importer of the
+plant. The importing State was required to provide the IAEA with design
+information about the plant “as early as possible before nuclear material is
+introduced into [it]”.39 Until the early 1990s the IAEA interpreted ‘as early as
+possible’ to mean that the importing state could defer sending the notification
+as long as it was despatched at least 180 days before the importing State
+introduced nuclear material into the plant. It would have been more logical
+to require that the IAEA be informed as soon as a decision was taken to build
+a nuclear plant.
+In short, it was clear that, to reduce the risk that other States might be able to
+undertake clandestine programmes, the IAEA should receive much earlier
+information about new nuclear plants and, in general, fuller information
+about the nuclear exports of States that manufactured nuclear facilities or
+produced nuclear material. The exporting States would also have to place
+stricter controls on their exports. This matter is dealt with in greater detail in
+Annex 2, which sketches the evolution of multinational nuclear export
+guidelines.
+
+38 INFCIRC/153, paras 92–94. In the case of exports of nuclear plant and
+
+equipment to a state not party to the NPT, the exporting NPT State must ensure that
+safeguards will be applied on the exported item and its products. The exporter is, in
+principle, under the same obligation in the case of the export of a plant to an NPT
+non-nuclear-weapon State, but the exporter normally assumes that all nuclear
+material processed, produced or used by such a plant will automatically be under
+comprehensive safeguards as a consequence of the importing State’s membership of
+the NPT. These obligations do not apply to exports of nuclear plant to nuclear weapon
+States which are not required by the NPT to accept any safeguards (see NPT
+Article III.2).
+39 INFCIRC/153, para. 42.
+
+19
+
+Evolution of Safeguards
+
+But the most important conclusion to be drawn from the IAEA’s experience
+in Iraq was that even the most rigorous accounting for nuclear material
+would not ensure the detection of a clandestine nuclear programme. The
+disappearance of a large amount of safeguarded nuclear material — in other
+words, a large unexplained MUF (‘material unaccounted for’) — might point
+to an unreported nuclear activity, but if a State carried out a self-contained, or
+so-called parallel, nuclear programme without any use of safeguarded
+material — as Iraq had done —, there would be virtually no prospect that the
+programme would be detected by the use of material accountancy alone.
+The Iraqi experience thus highlighted the urgent need for the IAEA to review
+its current safeguards system. Nuclear material accountancy, the cornerstone
+of this programme, had worked well in monitoring the operation of declared
+and safeguarded nuclear activities, but, manifestly, it had been unable to
+detect a secret programme despite the programme’s vast scope and dimensions. In other words, while the operation of material accountancy under
+INFCIRC/153 might provide the IAEA with the means of verifying the
+correctness of the information that a State having a comprehensive agreement
+provided about its safeguarded activities, INFCIRC/153 was not framed in
+such a way as to enable the IAEA to assess that such information was
+complete.
+The IAEA would need access to much more data about the nuclear
+programmes of States having comprehensive safeguards. The IAEA’s inspectors must, for instance, have rights of access, not only in those plants using
+nuclear material that was already under safeguards, but also in any plant
+relevant to the national nuclear programme even if it did not contain nuclear
+material, and in any plant at a nuclear site whether or not it was declared to
+be engaged in nuclear activities. Examples of the latter would be plants that
+manufactured the components of a nuclear facility such as centrifuges for
+enriching uranium or that produced ‘non-nuclear material’ such as heavy
+water.
+Moreover, as Dr. Hans Blix, the former Director General of the IAEA, put it,
+the IAEA could not scour the territories of upwards of 150 NPT nonnuclear-weapon States ‘in a blind search’ for clandestine nuclear activities.
+It was therefore particularly important that the IAEA regularly receive
+information that other States obtained by the use of their ‘national
+technical means’ of verification such as satellites (information which, until
+then, governments had been reluctant to provide to any international
+organization).
+
+20
+
+International Safeguards: 1945–1998
+
+The IAEA should also make use of a hitherto neglected provision of
+INFCIRC/153 that authorized it to carry out ‘special inspections’ anywhere
+in the State concerned. The IAEA may carry out such inspection if it has
+reason to believe that the government concerned was not providing all the
+information about its nuclear material that its safeguards agreement required
+it to supply (namely, a detailed account of all nuclear material in all peaceful
+activities in the State concerned or under its jurisdiction or control) or,
+more generally, if the IAEA considered that it needed more information to
+fulfil its responsibilities under the relevant safeguards agreement.40
+Dr. Blix also stressed that it would be necessary for the IAEA to have the
+backing of the Security Council if the State concerned obstructed the effective
+application of safeguards. In January 1992, after the Iraqi disclosures, the
+members of the UN Security Council placed on record that they considered
+that the proliferation of all weapons of mass destruction was a threat to international peace and security and that its members “... will take appropriate
+action in the case of any violations [of a safeguards agreement] notified to
+them by the Agency”.41
+
+The Initial Report of the
+Democratic People’s Republic of Korea (DPRK)
+The safeguards system was soon put to another test. A year after the
+disclosure of Iraq’s clandestine programme the IAEA was faced with
+disquieting evidence that pointed to the possibility of another secret
+nuclear programme. The DPRK had acceded to the NPT seven years earlier
+(in 1985). Finally, in 1992, more than five years late, the DPRK concluded
+its comprehensive INFCIRC/153 safeguards agreement with the IAEA42
+and submitted the required ‘initial report’ on all its nuclear material. The
+nuclear programme under way in the DPRK was centred on natural
+uranium fuelled, graphite moderated research or prototype reactors similar
+to those that the UK had built in the 1950s for the production of weapon
+grade plutonium, and on a reprocessing plant (which the DPRK called a
+
+40 INFCIRC/153, paras 1, 62, 73 and 77.
+41 Presidential Statement, Security Council document S/23500.
+42 Under the NPT, a non-nuclear-weapon State acceding to the Treaty normally
+
+has eighteen months to complete the conclusion of its comprehensive safeguards
+agreement with the IAEA (NPT Article III.4).
+
+21
+
+Evolution of Safeguards
+
+radiochemical laboratory) for extracting the plutonium from the reactor’s
+spent fuel.
+When the IAEA sought to verify the initial report, new and very sensitive
+analytical techniques now at its disposal enabled it to detect an unexplained ratio of certain radioisotopes in the DPRK’s ‘radiochemical
+laboratory’ (i.e. its pilot reprocessing plant). In other words, there were
+inconsistencies between the DPRK’s declarations and the IAEA’s own
+findings. These suggested that the DPRK had not provided complete
+information about the quantity of plutonium it had separated.43 In addition,
+satellite images provided to the IAEA showed, in the vicinity of its officially notified nuclear plants, two undeclared facilities of the type
+normally used for the storage of nuclear waste. The Government of the
+DPRK rejected the IAEA’s request for access to these facilities, whereupon
+the Director General, with the backing of the Board of Governors, called
+upon the DPRK to accept a ‘special inspection’. Again the Government of
+the DPRK refused. In the light of this refusal and after examining the
+results of the IAEA’s analyses as well as the satellite images, the Board
+concluded that the DPRK was in violation of its safeguards agreement
+and reported the violation to the Security Council, whereupon the
+DPRK gave notice of its intention to withdraw from the NPT. Just
+before the withdrawal was due to take legal effect, the DPRK suspended
+its notification.44
+The DPRK’s disputes with the IAEA, and, indirectly, with the Security
+Council, continued for more than a year. The USA became directly
+involved and the negotiation turned into a largely bilateral contention
+between it and the DPRK. In 1994 the DPRK and the USA reached an
+agreement (called an ‘Agreed Framework’) about the DPRK’s future
+nuclear activities. Under the main clauses of the ‘Agreed Framework’ the
+DPRK agreed to stop activities at its graphite moderated reactor and
+related facilities, and, in due course, to dismantle the facilities involved.
+The USA, for its part, would arrange for the construction of two large
+light water nuclear power plants. The high burnup spent fuel produced
+
+43 Plutonium that, according to the authorities in the DPRK, had been produced
+in the fuel elements of the natural uranium reactor which was then in operation in the
+DPRK.
+44 The term used by the DPRK was that it had "suspended the effectuation of its
+withdrawal".
+
+22
+
+International Safeguards: 1945–1998
+
+by these two plants would yield a mixture of plutonium isotopes that has
+not been used as the source of nuclear explosives for a nuclear arsenal.
+The DPRK would eventually permit the IAEA to verify the completeness
+and correctness of the DPRK’s ‘initial report’. The DPRK also revoked its
+notice of withdrawal from the NPT.
+The UN Security Council requested the IAEA to monitor the ‘freeze’ of
+the relevant parts of the DPRK’s programme. In mid-1998 the IAEA
+was continuing to maintain an unbroken ‘inspector presence’ for this
+purpose. Work had begun on the construction of the two light water power
+reactors. The IAEA had still not been able fully to verify the DPRK’s initial
+declaration.
+
+The First Use of International Safeguards to
+Monitor Nuclear Disarmament
+In 1991 South Africa acceded to the NPT, concluded its NPT safeguards
+agreement and submitted the ‘initial report’ in which it was required to list
+all nuclear material subject to safeguards under the agreement. At the
+instigation of States that suspected South Africa of having a secret nuclear
+weapon programme, the IAEA General Conference formally requested the
+Director General to verify the completeness of the South African initial report.
+With the co-operation of the South African authorities, the IAEA took special
+pains to do so and to account, in particular, for all enriched uranium that
+South Africa had produced.
+In 1993 the South African Government disclosed that, between 1979 and 1989,
+it had made and later dismantled six nuclear weapons, and it requested
+the IAEA to verify through observation the elimination of certain crucial
+components of South Africa’s weapon programme. For this purpose the
+South African authorities arranged access to all the facilities that had been
+used in that programme.
+These two exercises — verifying South Africa’s initial report and South
+Africa’s declaration that its warhead programme had been eliminated —
+were the first international undertakings to ascertain that all the fissile
+material produced by a State that had made nuclear weapons had been
+satisfactorily accounted for and that its weapon programme had been
+terminated. They thus set a precedent of potential importance for the
+international verification of nuclear disarmament.
+
+23
+
+Evolution of Safeguards
+
+Negotiation and Approval of INFCIRC/540
+The problems that the IAEA encountered in applying safeguards in Iraq
+and the DPRK, plus the useful experience it gained in South Africa,
+confirmed the need for a substantially broader and more effectively focused
+approach to safeguards. The rapid growth in the number of comprehensive
+safeguards agreements,45 the stringent budgetary constraints under which
+the safeguards programme was operating and advances in verification
+technology also pointed to the need for a thorough review of existing
+safeguards.
+The first concrete steps to strengthen safeguards had been taken in 1992.
+In February of that year, on the proposal of the Director General, the Board
+reaffirmed the IAEA’s right to carry out special inspections at any location
+in a State having a comprehensive safeguards agreement if the Agency
+had reason to believe that the State was carrying out unreported
+nuclear activities — in other words, the Board endorsed a more vigorous
+use of the provisions of INFCIRC/153 relating to special inspections.
+The Board also endorsed the voluntary reporting scheme by which the
+leading nuclear suppliers had agreed to provide the IAEA with information
+(not required by INFCIRC/153 safeguards) about their exports and
+imports of nuclear material, specialized nuclear equipment and non-nuclear
+material of nuclear interest.46 The Board also prescribed that design information about new plants or changes in existing plants should be provided as
+soon as the national authority decided or granted permission to build the
+plant.
+In April 1993 SAGSI (the group of senior safeguards experts that advises
+the IAEA on the implementation of safeguards) recommended that
+
+45 After the Cold War had ended and major political changes had taken place in
+
+South Africa and Southern America, three countries with nuclear programmes,
+Argentina, Chile and South Africa, acceded to the NPT, Brazil became a full party to
+the Tlatelolco Treaty, and all four concluded comprehensive safeguards agreements
+with the IAEA. The nations that had been part of the former Soviet Union, including
+Lithuania, Belarus and Ukraine, joined the NPT and concluded comprehensive
+safeguards agreements. (Belarus and Ukraine had been nominally in charge of their
+own foreign affairs since 1945, but in practice they were constituent parts of a nuclear
+weapon State, the USSR, in which safeguards were generally not applied.)
+46 The Board agreed for ‘purposes of practicability’ to use Part 1 of the NSG
+Trigger List as a basis for the voluntary reporting scheme (see Annex 2).
+
+24
+
+International Safeguards: 1945–1998
+
+safeguards should provide assurance that there were no undeclared
+nuclear activities in States having comprehensive agreements. This was an
+important departure from a practice that had developed in implementing INFCIRC/153, namely that of focusing safeguards primarily (in
+practice, almost exclusively) on nuclear material in declared facilities. The
+Board confirmed SAGSI’s view concerning the assurance to be provided
+by safeguards. It endorsed the launching of a special development
+programme to “strengthen the effectiveness and improve the efficiency
+of safeguards”. This was dubbed the Programme 93+2 — 1993 being the
+year the programme was formally launched and the 1995 NPT Review
+and Extension Conference being the target date for completion of the
+programme. In general, the aim of Programme 93+2 was “to gain a broader
+horizontal view” of the nuclear programmes of the States concerned, a
+holistic approach, instead of “piling up controls vertically on existing nuclear
+facilities”.47
+In due course it was decided that, to make progress as rapidly as possible,
+the recommendations made by Programme 93+2 should be presented to
+the Board in two steps. Part I comprised additional safeguards measures that
+the IAEA had the authority to undertake within the framework of existing
+comprehensive safeguards agreements. Part II comprised those safeguards
+measures for the execution of which the IAEA would need additional legal
+authority.
+The measures foreseen in Part I (which could be applied relatively quickly)
+consisted mostly of obtaining additional or earlier information from
+States, for instance about facilities that had been closed down or about those
+that were still at the planning stage, of collecting so-called ‘environmental
+samples’ at locations to which inspectors already had the right of access,
+and of using advanced technology for the remote monitoring of movements
+of nuclear material. Part I also envisaged greater use of unannounced inspections (these were already permissible — but seldom carried out — under
+INFCIRC/15348). Better use was also to be made of national systems of
+accounting and control. This would lead to a more cost efficient operation
+and enable the IAEA to reduce its routine inspections at certain standard
+types of plant.
+
+47 PELLAUD, B., Safeguards: The evolving picture, IAEA Bull. 4 (1996) 2.
+48 INFCIRC/153, para. 84.
+
+25
+
+Evolution of Safeguards
+
+From March 1995 until April 1997, the Board, the Secretariat and a special
+committee set up by the Board drew up the text of the new legal ‘instrument’
+that would authorize the IAEA to implement Part II. This took the form of a
+‘Model Additional Protocol’, approved by the Board in May 1997 and
+published as document INFCIRC/540 “as the standard for additional
+protocols that are to be concluded by States and other parties to comprehensive safeguards agreements with the Agency” (chiefly INFCIRC/153
+agreements). With a view to promoting universality, the Board requested the
+Director General “to negotiate additional protocols or other legally binding
+agreements with nuclear weapon States” that would incorporate appropriate
+provisions of the Model Additional Protocol. The Board also requested the
+Director General to negotiate additional protocols with States that do not
+have comprehensive agreements but are willing to accept measures
+contained in the Model Additional Protocol. Each additional protocol would
+require the approval of the Board as well of the State or group of States
+concerned.
+In many ways INFCIRC/540 embodied a radical modification of the
+approach taken in 1971 in INFCIRC/153. The main new elements of
+INFCIRC/540 reflect the fact that effective safeguards depend upon two
+related factors. One is the extent to which the IAEA is aware of the nature
+
+26
+
+and location of all the nuclear activities and all the nuclear related activities
+of the non-nuclear-weapon State concerned. While the chief object of
+safeguards under INFCIRC/153 is to verify that declared nuclear material
+was not being diverted, the chief object of the new measures under
+INFCIRC/540 is to obtain assurance that the State has no undeclared nuclear
+activities. The other factor is the extent to which the IAEA inspectors have
+physical access to relevant locations (and not only, as previously, to strategic
+points in a nuclear plant handling declared nuclear material) so that they may
+independently verify the exclusively peaceful nature of all the State’s nuclear
+activities.49
+Hence, the Model Additional Protocol sought to provide the IAEA with
+information about, and the right of access to, the entire nuclear programme of
+a State, including all buildings (and not only nuclear facilities) on a nuclear
+site, nuclear related research and development, including that which does not
+involve the use of nuclear material, external nuclear trade, and extensive
+rights to take environmental samples.50
+
+49 In the final analysis, the effectiveness of safeguards also depends upon the
+
+readiness of the international community to take action against a State that does not
+comply with its non-proliferation commitments.
+50 More specifically, the Protocol provides the IAEA with the following:
+• information about, and the right of access to, all aspects of a State's nuclear
+fuel cycle from uranium mines to nuclear waste. This will expand the IAEA's
+knowledge of the State's fuel cycle from the practical source of nuclear material — the
+uranium mine — to the stage when the material is no longer usable for nuclear
+purposes;
+• information on, and short notice inspection access to, all buildings on a
+nuclear site;
+• information about nuclear fuel cycle related research and development
+activities even if such activities do not involve the use of nuclear material, and
+mechanisms to obtain access by IAEA inspectors to such research and development
+activities;
+• information about the manufacture and export of sensitive technologies
+related to the nuclear fuel cycle;
+• mechanisms to permit access to locations where nuclear fuel cycle related
+components are manufactured or to which they are transferred from abroad; and
+• authority to collect environmental samples wherever the IAEA deems such
+collection to be necessary, even if the location has not been declared by the State as one
+in which nuclear material is stored or used.
+
+27
+
+Evolution of Safeguards
+
+The Model Additional Protocol also required the State to make arrangements
+for streamlining the process of designating inspectors and for facilitating their
+work such as issuing multiple entry visas and facilitating access to modern
+means of communication.
+
+The Position in Mid-1998
+By 30 June 1998, 180 non-nuclear-weapon States had joined the NPT and/or
+regional treaties embodying comparable non-proliferation undertakings
+requiring them to accept safeguards on all their nuclear activities. All the
+States in these groups that had substantial nuclear activities had already
+negotiated or were negotiating the safeguards agreements required by those
+treaties.
+In the case of the DPRK the safeguards agreement remained legally in force
+but only partially implemented because of the DPRK’s unwillingness to
+accept some of its requirements.
+All the five nuclear weapon States had acceded to the NPT and, under
+‘voluntary offer’ agreements, had placed a few of their nuclear plants under
+IAEA safeguards.
+By mid-1998 momentum was building up for the rapid and widespread
+introduction of the Strengthened Safeguards System. One agreement (with
+Australia) incorporating an Additional Protocol had entered into force.
+Ten States, including one nuclear weapon State (the USA), had signed an
+Additional Protocol. The Board had approved four further Additional
+Protocols, which await signature (between the IAEA, Euratom and France;
+the IAEA, Euratom and the UK; the IAEA, Euratom and the thirteen nonnuclear-weapon States of the EU; the IAEA and Canada).
+Nuclear weapon free zone treaties were in force in Antarctica, in almost all of
+Latin America and the Caribbean, in the South Pacific and in South East Asia,
+and had been signed but not yet entered into force in Africa.
+The first steps had been taken to apply in the service of nuclear disarmament
+some of the verification techniques that the IAEA had developed and the
+experience it had gained in monitoring the peaceful uses of nuclear energy.
+The first step was taken in South Africa. The USA and the Russian Federation
+had declared their intention to place under IAEA verification substantial
+
+28
+
+International Safeguards: 1954–1998
+
+amounts of fissile material withdrawn from military stockpiles, and, as a
+second step, the USA had done so.
+India and Pakistan had demonstrated by nuclear tests that they had the
+means to prepare and carry out a series of nuclear explosions. For many years
+there had been allegations that Israel had built up a nuclear arsenal.
+
+29
+
+II. THE AIMS AND LIMITATIONS OF
+IAEA SAFEGUARDS
+The historical outline given in Part I shows how the aim and scope of safeguards have evolved from the ambitious aspirations of the Baruch Plan in
+1945, to the modest scope of export oriented safeguards in the 1960s, to the
+global objective sought (and largely achieved since 1970) by the NPT, to the
+new focus on clandestine activities which began in 1991 and which, in 1997,
+gave the IAEA a set of powerful new tools. The 1990s also saw the IAEA’s first
+forays into the international verification of nuclear disarmament.
+This chapter reflects the aims and limitations of IAEA safeguards as the twentieth century draws to a close.
+
+A. The Aims of IAEA Safeguards
+
+The Political Aim of IAEA Safeguards
+One should distinguish between the ends that safeguards seek to achieve in
+the non-nuclear-weapon and in the nuclear weapon States. Today, safeguards
+have the following main political and security objectives in the non-nuclearweapon States:
+•
+
+To provide assurance that non-nuclear-weapon States party to comprehensive safeguards agreements are complying with their undertakings
+not to acquire nuclear weapons or other nuclear explosive devices.51
+This became the main aim of IAEA safeguards after the entry into force
+of the NPT in 1970. Hence, the achievement of this aim was the principal objective of the comprehensive safeguards agreements concluded
+under INFCIRC/153. The likelihood of securing this aim has been
+greatly enhanced by the introduction of the strengthened safeguards
+
+51 The non-nuclear-weapon States that are not party to comprehensive agreements fall into two groups: one already mentioned (Cuba, India, Israel and Pakistan)
+and the other a number of developing States party to the NPT or to regional treaties
+that have no militarily significant nuclear activities, but, nonetheless, are under a legal
+obligation to conclude comprehensive agreements, but have not yet done so.
+
+30
+
+The Aims and Limitations of IAEA Safeguards
+
+•
+
+•
+
+system. Verifying the renunciation of nuclear weapons is also the main
+aim of the safeguards applied in nuclear weapon free zones.
+As a corollary, to deter States that have renounced nuclear weapons
+from acquiring unsafeguarded nuclear material. Safeguards must therefore be effective enough — and be perceived to be effective enough —
+to detect within reasonable time the diversion or clandestine production
+of nuclear material. Moreover, the perceived consequences of detection
+must be grave enough to deter States from taking this risk. In other
+words, safeguards must be seen as closing the door to acquiring nuclear
+weapons not only by diversion of safeguarded material, but also by
+clandestine operations. If the State is determined to acquire nuclear
+weapons it must do so openly and openly withdraw from the NPT
+(and/or any relevant regional treaty to which it is a party), giving three
+months notice (in the case of the NPT) of its intention to withdraw.52
+A somewhat different objective in the (currently) four non-nuclearweapon States that that have significant nuclear programmes (i.e. Cuba,
+India, Israel and Pakistan) but have not concluded comprehensive
+safeguards agreements, namely, to verify that the facilities and
+material that these States have placed under safeguards are not used to
+acquire nuclear explosives of any kind or to further any other military
+purpose.
+
+The undertakings given by States about their nuclear activities vary
+considerably. They include:
+•
+
+a commitment not to use nuclear energy to further any military purpose
+(IAEA Statute and some early safeguards agreements concluded under
+INFCIRC/66);53
+
+52 Article X.1 of the NPT permits withdrawal from the Treaty by any party
+
+if it decides "that extraordinary events, related to the subject matter of this Treaty,
+have jeopardised the supreme interest of its country". It is likely that any such
+withdrawal would be seen by other parties as a clear signal that the State
+concerned intended to acquire nuclear weapons. Only one party to the NPT, the
+DPRK, has given notice of a decision, subsequently revoked, to withdraw from the
+NPT.
+53 The IAEA’s Statute requires its Member States to give such an undertaking
+in regard to any nuclear assistance they receive from the IAEA under a Project
+Agreement (Statute Article XI.F.4). The prohibition in most of the treaties that establish
+nuclear weapon free zones, like that of the NPT, is limited to any explosive use of
+nuclear energy (see also next footnote).
+
+31
+
+Evolution of Safeguards
+
+•
+
+a commitment to refrain from any explosive use of nuclear energy
+(NPT and all safeguards agreements concluded since 1975 — if
+the latter are not comprehensive they also prohibit any other military
+use).54
+
+The initial purpose of safeguards in the recognized nuclear weapon States
+was to encourage widespread acceptance of the NPT and to provide the IAEA
+with experience in applying safeguards in plants of advanced design.
+Since 1995, the IAEA has also applied safeguards techniques to nuclear
+material from nuclear warheads and military stocks which the USA
+has stated to have permanently removed from military use. The Russian
+Federation has indicated that it will also make available for such
+verification nuclear material from its military stocks. The UK has indicated that substantial quantities of nuclear material no longer needed
+for defence purposes would be made liable to IAEA inspections. In due
+course, the other nuclear weapon States may follow suit, thus leading to international verification of agreements relating to nuclear disarmament (see
+Chapter IV).
+
+The Technical Aim of IAEA Safeguards
+Generally speaking, safeguards may be defined as the technical means used
+to verify that a State’s nuclear activities are in conformity with the undertakings that the State has given about the nature and scope of these activities.
+Such undertakings have been given in international and regional treaties, in
+bilateral agreements concluded with other States, in agreements concluded
+with international and regional organizations and in the form of unilateral
+declarations.
+In the NPT context, the technical aim of IAEA safeguards has been defined as
+“the timely detection of diversion of significant quantities of nuclear material
+from peaceful nuclear activities to the manufacture of nuclear weapons or of
+other nuclear explosive devices or for purposes unknown, and deterrence of
+such diversion by the risk of early detection”.55
+
+54 The NPT prohibits all explosive uses, but not other military uses, of nuclear
+
+energy. This prohibition of explosive uses applies to the parties to the Treaty that do
+not possess nuclear weapons — the ‘non-nuclear-weapon States’.
+55 INFCIRC/153, para. 28.
+
+32
+
+The Aims and Limitations of IAEA Safeguards
+
+The meanings of the terms ‘timely detection’ and ‘significant quantities’ are
+obviously crucial in defining this aim and will be examined later.
+At this point it should be stressed that IAEA safeguards are not required
+positively to establish the physical diversion of nuclear material, let alone to produce evidence of the manufacture of a nuclear weapon or explosive device. It
+might be very difficult for safeguards to produce proof of either of these activities. This point is clarified in INFCIRC/153. To establish that there has been
+a violation of an INFCIRC/153 type safeguards agreement the Board has simply
+to conclude that “the Agency is not able to verify that there has been no
+diversion of nuclear material required to be safeguarded under the Agreement
+to nuclear weapons or other nuclear explosive devices” (emphasis added).56
+Examples of reasons and circumstances that might lead the Board to such a
+conclusion are:
+•
+
+•
+•
+
+Nuclear material has been withdrawn from safeguards for purposes
+unknown or has simply disappeared from a safeguarded inventory
+(for instance, the IAEA detects the absence of a significant quantity
+of nuclear material from a State’s verified stock of such material, and the
+State is unable to provide a satisfactory explanation of the absence);
+A State has failed to place all its nuclear material under safeguards; or
+A State obstructs the activities of inspectors or interferes with the operation of safeguards equipment in such a way as to prevent the IAEA
+from verifying what the State is doing with its nuclear material.
+
+Each of these cases would constitute a violation of the State’s safeguards
+agreement, irrespective of whether the State was using the nuclear material to
+make a nuclear explosive device or not. The sanctions available to the IAEA
+in such cases are discussed in Chapter III.A.
+
+B. Limitations on the Scope and Effectiveness of Safeguards
+Acceptance is Voluntary
+A major but unavoidable source of weakness of the IAEA safeguards regime
+is the fact that the acceptance of safeguards is a purely voluntary act by the
+56 INFCIRC/153, para. 19.
+
+33
+
+Evolution of Safeguards
+
+State concerned. All safeguards agreements are entered into at the instance of
+a State or group of States and the IAEA has no power to compel any State to
+sign any treaty or agreement.57 However, this deficiency has been largely
+remedied by the fact that all the treaties directed towards the aim of nonproliferation require their parties to conclude safeguards agreements with the
+IAEA, and by the expanding coverage of the NPT and of the regional nuclear
+weapon free zones.
+
+Activating Safeguards
+The accession of a State to a treaty such as the NPT requires it to place its
+nuclear material under safeguards — but it does not, by itself, bring those
+safeguards into operation. As a rule, IAEA safeguards are activated only
+when the State concerned has negotiated and concluded a specific safeguards
+agreement with the IAEA or when a State has acceded to an existing
+safeguards agreement.58
+
+Sounding an Alarm
+If the IAEA finds a State is in violation of its safeguards agreement, the IAEA’s
+principal function is to sound the international alarm — to its Member States,
+to the United Nations General Assembly and, in particular, to the Security
+Council. The IAEA has neither the legal authority nor the means to seek physically to prevent diversion; in fact it is not within its power or its statutory
+authority to compel governments to take or to desist from any action. Within
+the United Nations collective security system, only the Security Council has
+the power to decide on measures of enforcement such as imposing political
+or economic sanctions or, in the extreme case, by taking military action. While
+the IAEA can impose certain limited penalties on the non-compliant State59,
+57 If a State asks for and obtains assistance from the IAEA under an ‘Agency
+
+Project’, acceptance of IAEA safeguards may, however, be a condition set by the IAEA
+for carrying out the Project (IAEA Statute Article XI.F.4).
+58 In principle, IAEA safeguards also automatically apply to some of the IAEA’s
+own activities involving nuclear material (Statute Article XII.B).
+59 For instance, if the State fails to take ‘fully corrective action’ to remedy
+non-compliance with a safeguards agreement, the Board of Governors may suspend
+assistance to that State, and the IAEA may suspend its privileges and rights of
+membership (Statute Article XII.C).
+
+34
+
+the technical, economic and political price that the State will pay for a
+violation of a safeguards agreement (or a failure to prevent such a violation
+by persons or entities under its jurisdiction or control) will be determined by
+other States, acting through the Security Council or, subject to the provisions
+of the Charter, individually.60
+
+Constraints on Inspections
+From 1960 until the 1980s Member States and the Board imposed additional constraints — beyond those already included in INFCIRC/26,
+INFCIRC/66/Rev. 2 and INFCIRC/ 153 — on the freedom of action of
+
+60 The IAEA Board of Governors and General Conference and the General
+
+Assembly of the United Nations may recommend that the non-compliant State
+should terminate and redress its non-compliance or that other Member States of
+the UN or IAEA should take action to induce compliance or to penalize the
+non-compliant State (Statute Article XII.C). Though such recommendations may
+carry considerable political and moral weight, they have the status of recommendations, while the decisions of the Security Council under Chapter VII of the
+Charter and the sanctions it imposes thereunder are mandatory — in effect,
+commands —, and all States are required to execute them (though they do not
+invariably do so).
+
+35
+
+Evolution of Safeguards
+
+the IAEA and its inspectors. For instance, States negotiating safeguards
+agreements began to insist in the early 1970s on specifying a limit to
+the number of routine inspections (in terms of ‘man-days’) at every nuclear
+plant. The limits became known as ARIEs or the IAEA’s ‘actual
+routine inspection effort’.61 The ‘complementary access’ authorized by
+INFCIRC/540 permits inspectors to go at short notice to any place within
+a facility if such access is required for effective verification. Such actions
+by the inspector are not regarded as ‘routine inspections’ and do not
+‘count’ against the ARIE. INFCIRC/540 should also provide an effective
+corrective to the preoccupation of INFCIRC/153 with declared nuclear
+material and MUF. It redirects the focus of safeguards away from the
+routine operations of safeguarded plants and on to what have so far proved
+to be the real threats of nuclear proliferation, namely clandestine nuclear
+programmes.
+
+Non-Discrimination
+An often asked question is why the IAEA does not concentrate its safeguards
+on countries whose intentions are regarded (by the questioner) as suspect. It
+is, however, both constitutionally and politically impossible for an international organization to make a judgement of this type about a Member State
+unless the State has openly violated its international obligations and has been
+found delinquent by the Board of Governors. Nonetheless, the refocusing of
+safeguards so as to verify the activities of States rather than the operations of
+individual plants and the fact that the range of information collected by safeguards has been greatly broadened and includes media reports are expected
+to permit a differentiation between States on an objective basis. For example,
+in weighing the need for complementary access the IAEA would take note of
+a report in the media that a third party had intercepted sensitive nuclear
+equipment being transferred between two States without any notification to
+the IAEA, or of a statement by a national leader that indicated a possibly
+clandestine nuclear activity in his or her country.
+
+61 The limits were specified in the subsidiary arrangements of comprehensive
+
+agreements.
+
+36
+
+How Safeguards Work in Practice
+
+The Problems of Theft, Smuggling and Other Illegal Acts of Individuals
+IAEA safeguards apply to the activities of governments or to activities carried
+out under their authority. They do not apply directly to the actions of individuals or national entities. This is not a limitation since governments (or the
+regional international organizations concerned) have authority over the
+activities of persons (including citizens) and entities falling under their jurisdiction or control and are therefore internationally responsible for their
+actions.
+International safeguards are designed to detect and deter certain actions by
+States; ‘physical protection’ comprises those measures that the States themselves take to prevent or deter certain actions of individuals such as the
+forcible seizure or theft of, or trafficking in, nuclear material (or, conceivably,
+nuclear weapons) and nuclear terrorism. Preventing and punishing criminal
+activities is the responsibility of governments, which are able to use all the
+power at their disposal, including military and police force, physically to
+prevent such activities, and to recover any nuclear material that may have
+been illegally acquired.
+The national requirements for timely action and the amounts of material
+involved therefore differ considerably from those relevant to international
+safeguards. It may be necessary for a national physical protection system to
+detect and prevent unlawful activities within an hour or less and promptly to
+recover even very small quantities of nuclear material — for instance, a few
+grams of plutonium — because of the terrorist threat or the health hazard
+they may present. However, as noted, international safeguards are essentially
+designed to deter governments from making nuclear explosives. Accordingly,
+the targets that safeguards must set for the detection of diversion derive from
+the substantial amount of fissile material and time that a government would
+need to make a nuclear explosive.
+Nonetheless, there has been much speculation and growing concern, especially since the end of the Cold War, about the threats that could be posed by
+trafficking in nuclear materials. The IAEA is helping governments to establish
+effective national systems of accounting and control of all nuclear materials
+in their territories or under their control (such national systems are in any
+case required by every comprehensive safeguards agreement). Since 1997 the
+IAEA has also encouraged governments to exchange information on nuclear
+trafficking and on the best means of dealing with it. With the help of the
+States most affected, the IAEA has established an authoritative international
+
+37
+
+Evolution of Safeguards
+
+database on all reported incidents of trafficking and other illegal actions
+involving nuclear material.
+
+Budgetary Restrictions
+The overall budget of the Agency is determined by its Member States and has
+been maintained at close to zero real growth for more than ten years. This
+restriction has also had its effect on the safeguards budget. The application of
+INFCIRC/540 should permit increasingly cost effective safeguards but it will
+continue to be a challenge for the IAEA to achieve its technical safeguards
+goals under budgetary constraints.
+
+38
+
+III. HOW SAFEGUARDS WORK IN PRACTICE 62
+This chapter describes how the IAEA goes about translating INFCIRC/153
+and the complementary authority given by INFCIRC/540 into practical
+safeguards measures. Much of the following also applies to the practical
+implementation of INFCIRC/66/Rev. 2.
+
+A. Legal and Administrative Arrangements
+The Organization of Safeguards
+The IAEA Board of Governors, which now consists of the representatives of
+35 Member States, has overall political authority for the planning and execution of IAEA safeguards. The Board (and the special committees it establishes
+for this purpose) is responsible for drawing up and approving the IAEA’s
+safeguards systems and related documents (e.g. INFCIRC/66/Rev. 2,
+INFCIRC/153 and INFCIRC/540), and for approving safeguards agreements.
+It deals with any case of non-compliance that the Director General reports to
+it, and if it finds that a State is in non-compliance with a safeguards agreement it reports the matter direct to all IAEA Member States, to the Security
+Council and to the General Assembly.63
+The Board also approves the appointment of inspectors. It approves the
+safeguards budget and the safeguards programme as well as the system
+and procedures for financing the cost of safeguards. Each year the Board
+examines the IAEA’s safeguards operation, largely on the basis of the
+Safeguards Implementation Report (SIR) drawn up by the Secretariat.
+The Board must obtain the concurrence of the General Conference in its
+proposals for the safeguards budget and for financing the cost of safeguards.
+It has on occasion sought the endorsement of the IAEA’s General Conference
+for major decisions, for instance, on some of the early safeguards documents.
+But for the most part the Board acts autonomously in matters pertaining to
+safeguards.
+62 See also the IAEA booklet ‘IAEA Safeguards: An Introduction’, IAEA/SG/
+
+INF/3, on the implementation of INFCIRC/153.
+63 IAEA Statute Article XII.C and INFCIRC/153, para. 19.
+
+39
+
+Evolution of Safeguards
+
+The Director General is responsible to the Board for the functioning of the
+IAEA’s staff including its safeguards staff. All the Secretariat’s proposals for
+Board action on safeguards or for Board approval are submitted under the
+Director General’s authority.
+The IAEA’s safeguards programme is carried out chiefly by the Department
+of Safeguards under the direction of the Deputy Director General for Safeguards. Proposals to the Director General, and through him or her to the Board,
+are submitted under the authority of the Deputy Director General. In mid-1998
+the Department of Safeguards comprised six technical divisions (three of
+which were responsible for applying safeguards in major geographical regions).
+Several other divisions of the IAEA Secretariat were substantively involved,
+in particular the Division of External Relations and the Legal Division.
+Since 1991 the IAEA’s activities relating to the elimination of the Iraqi nuclear
+weapon capability and programme have been carried out by a specially
+constituted Action Team reporting directly to the Director General. These
+activities have been carried out in implementation of a number of resolutions
+of the Security Council and are much more rigorous than the safeguards
+applied under INFCIRC/153 and INFCIRC/540. One reason for this rigour is
+that the IAEA’s task in Iraq is not only to eliminate its ability to make nuclear
+weapons but also its ability to produce any nuclear material that might be
+used for this purpose (e.g. plutonium and highly enriched uranium).
+INFCIRC/153 and INFCIRC/540, on the other hand, permit the production
+of such materials under safeguards.
+The implementation of the IAEA’s INFCIRC/153 safeguards agreement with
+Iraq has been subsumed under the implementation of the relevant resolutions
+of the Security Council.
+The senior scientific and technical committee advising the IAEA on safeguards is the Standing Advisory Group on Safeguards Implementation
+(SAGSI). This consisted in mid-1998 of 18 leading safeguards experts drawn
+from a broad range of Member States including some of those in which
+safeguards are most extensively applied and the nuclear weapon States.
+
+The Legal Action that Triggers Safeguards
+As noted, the IAEA is legally empowered to apply safeguards only when a
+State brings into force a safeguards agreement with the IAEA. At this point,
+
+40
+
+How Safeguards Work in Practice
+
+if the safeguards agreement is comprehensive, the State is required to send
+the IAEA an initial report on all its nuclear material. The IAEA has the right
+and obligation to verify the completeness and correctness of the initial report.
+In most non-nuclear-weapon States, especially in those in the developing
+world, the national nuclear programme (if it exists) began with the import of
+a nuclear reactor and its fuel from one of a small group of industrialized
+States. Both the reactor and its fuel were supplied under bilateral safeguards,
+later transferred to the IAEA or, after the early 1960s, supplied under IAEA
+safeguards. As the programme expanded, the new plants and their fuel also
+came under IAEA safeguards except in a handful of instances where the
+State was itself able to construct the plant and, in the case of reactors, to
+produce its nuclear fuel. When non-nuclear-weapon States joined the NPT
+or a nuclear weapon free zone, as nearly all of them have done, the original
+INFCIRC/66/Rev.2 safeguards were placed in suspense and replaced by
+INFCIRC/153 safeguards.
+The net result of this historical process has been that the entire nuclear
+programmes of the majority of non-nuclear-weapon States have been under
+safeguards since those programmes were first launched.64
+It is difficult to verify with confidence the completeness of initial reports
+submitted by States which conclude a comprehensive safeguards agreement
+after they have already produced significant quantities of unsafeguarded
+nuclear weapon usable material or have acquired such material as a result of
+unforeseen political developments. Such cases began to emerge in the late
+1980s and the early 1990s when South Africa acceded to the NPT, Argentina
+and Brazil renounced nuclear explosives of all kinds and in due course
+accepted comprehensive IAEA safeguards, and when Belarus, Kazakhstan
+and Ukraine gained full independence and territorial custody of numerous
+nuclear warheads and unsafeguarded nuclear facilities left on their soil, but
+eventually acceded to the NPT. As noted, the South African initial report was
+satisfactorily verified; verification of the reports of the other States mentioned
+is well advanced.
+
+64 The
+
+main exceptions to this rule were the nuclear programmes of the
+non-nuclear-weapon States of Euratom, whose programmes came under IAEA
+safeguards in 1976 (these programmes had been under Euratom safeguards since
+they were first launched), and those of the non-nuclear-weapon States that have not
+joined the NPT or the Tlatelolco Treaty and operate unsafeguarded nuclear plants.
+
+41
+
+Evolution of Safeguards
+
+Agreements under INFCIRC/153 Alone and Agreements under INFCIRC/153 as
+Amplified by INFCIRC/540
+During the period when agreements incorporating the Additional Protocol
+are being concluded two sets of comprehensive agreements will be in force in
+non-nuclear-weapon States, namely agreements based solely on INFCIRC/153
+and those with States that have also concluded an agreement embodying the
+Model Additional Protocol (INFCIRC/540) and that are thus providing the
+additional information and granting the complementary access prescribed in
+the latter. In due course, the great majority of parties to comprehensive
+agreements is expected to be in the latter category (i.e. having accepted
+INFCIRC/540 as well as INFCIRC/153). The progress being made towards
+this goal will be a topic at the five yearly conferences that review the
+implementation of the NPT.
+It seems probable that any non-nuclear-weapon State that accedes to the NPT
+in future, or that joins a nuclear weapon free zone, will accept the
+INFCIRC/540 as well as INFCIRC/153. As foreseen in INFCIRC/540, it is
+also expected that some measures contained in INFCIRC/540 will be added
+to the ‘voluntary offer’ safeguards agreements with nuclear weapon States,
+and by mid-1998 three of the five States concerned had taken concrete steps
+in this direction. In due course, some aspects of INFCIRC/540 may also be
+accepted by the few remaining non-nuclear-weapon States that are not
+subject to comprehensive safeguards.
+
+Sanctions
+What sanctions are available to the IAEA if its evaluation leads it to conclude
+that a State may be in breach of its safeguards agreement? The Director
+General will report to the Board any significant problem that the Secretariat
+has run into in applying safeguards. If the Board decides that an action by the
+State concerned is essential and urgent to enable the IAEA to verify that
+nuclear material has not been diverted, the Board may call upon the State to
+take the required action without delay. If the Board subsequently concludes
+“that the Agency is not able to verify that there has been no diversion”, it shall
+report the matter to all Member States, to the UN General Assembly and the
+Security Council and, as already pointed out, it may impose certain, largely
+symbolic, sanctions.65 The real sanctions that the delinquent State must
+65 INFCIRC/153, paras 18–19.
+
+42
+
+How Safeguards Work in Practice
+
+reckon with depend upon the reactions of other States and the Security
+Council to the IAEA’s reports.
+Since the IAEA’s statute came into force in July 1957, two States, Iraq and the
+DPRK, have been found by the Board to be in violation of their safeguards
+agreements. The Board reported the violations to the Security Council and
+has kept the Council informed about the steps the IAEA has taken in relation
+to the nuclear activities of both countries.
+There have been many rumours and accusations in the media about
+the nuclear programmes of certain other States, but they have not reached
+the level of formal consideration by the Board, and much less a formal
+accusation or a finding of non-compliance.66
+As noted, on 31 January 1992 the President of the Security Council, then
+meeting at the level of Heads of State or government, declared on behalf
+of the Council’s members that “the proliferation of weapons of mass
+destruction constitutes a threat to international peace and security”. This
+wording implies that to deal with such proliferation the Security Council
+might take action under Chapter VII of the United Nations Charter (this
+chapter prescribes the measures that might be taken to deal with, inter alia,
+threats to international peace and security; such measures include the
+imposition of economic sanctions and military action).67 The 31 January 1992
+statement went on to declare that the members of the Council would take
+“appropriate measures in the case of any violations notified to them by the
+Agency”.
+Summing up: the IAEA must report to the Security Council any violation of
+a safeguards agreement that it formally finds to have occurred; the Security
+Council is the only organ within the United Nations system that has the
+authority to enforce its decisions — for instance, by imposing sanctions; the
+Security Council thus becomes in a practical sense the ultimate United
+Nations arbiter whether a violation has occurred and, if so, what action
+should be taken.
+
+66 When the apartheid government was in power in South Africa, the South
+African nuclear activities became a subject of regular discussion. There was also much
+discussion of Israel's nuclear activities. It was not, however, claimed that either
+country had violated IAEA safeguards.
+67 United Nations Charter, Article 42.
+
+43
+
+Evolution of Safeguards
+
+Subsidiary Arrangements and Facility Attachments
+When, or even before, a comprehensive safeguards agreement enters
+into force, the IAEA, the government concerned, and sometimes the
+plant operators, negotiate ‘subsidiary arrangements’, which set forth the
+detailed arrangements for applying safeguards at the State’s nuclear
+plants. The subsidiary arrangements amplify and interpret but do not
+amend the comprehensive agreement. The general part of the subsidiary
+arrangements deals with such matters as records to be kept and reports to
+be sent to the IAEA, channels of communication between the IAEA, the
+State and the operator, procedures for accrediting inspectors, notification
+of the location and nature of existing nuclear plants and notification of
+the construction of new or decommissioning of old plants, and safety
+measures to be observed by IAEA inspectors. The subsidiary arrangements
+are classified as ‘confidential’. Nonetheless, in the interest of uniformity
+of interpretation, practice and economy, the IAEA seeks to standardize
+as far as possible all subsidiary arrangements relating to comprehensive
+agreements including those with Additional Protocols, as well as subsidiary
+arrangements concluded under safeguards agreements with nuclear weapon
+States.
+Each set of subsidiary arrangements relating to a comprehensive agreement
+includes a ‘facility attachment’ for each nuclear plant and store in the State.
+The facility attachment briefly describes the facility, specifies in detail the
+arrangements for safeguarding it, including its general design, the accounts
+and records to be kept and reports to be made, the location of key measurement and other ‘strategic points’, the containment and surveillance measures
+to be carried out, and the mode and scope, including frequency, of inspections
+of the facility. Until agreement has been reached on the subsidiary arrangements including facility attachments, the IAEA’s inspectors may carry out ‘ad
+hoc’ inspections at any location in the State where the initial report (or inspections carried out in connection with it) indicates the presence of nuclear
+material. When the strategic points have been specified, routine inspections
+under INFCIRC/153 are confined to such strategic points and to accounting
+and operating records.68
+When an Additional Protocol is added to a safeguards agreement, additions
+will be made to the general part of the subsidiary arrangements to specify
+how the new measures are to be applied, in particular, the provision of
+68 INFCIRC/153, para. 76.
+
+44
+
+How Safeguards Work in Practice
+
+additional information by the State and the general arrangements for
+complementary access by inspectors. Under INFCIRC/540 inspectors have
+the right of complementary access to
+•
+•
+•
+•
+
+all locations in a State that are connected with the national fuel cycle,
+all buildings on a nuclear site,
+any location where nuclear material intended for non-nuclear use is
+present, and
+specific locations where the IAEA requests an arrangement to collect
+environmental samples.
+
+Designation of Inspectors
+Under INFCIRC/153 the IAEA must seek in writing the State’s acceptance of
+members of the IAEA staff as inspectors in that State. In certain cases an
+inspector may also have to obtain a visa before each visit to the State.
+INFCIRC/540 introduced an important change in this procedure: a State that
+has accepted the Model Additional Protocol automatically accepts any
+inspector whose appointment has been approved by the Board of Governors,
+unless the State objects within three months after receiving notice of the
+inspector’s appointment. If the State has not waived visa requirements it
+must, if so requested by the IAEA, grant a multiple-entry visa, valid for at
+least one year, to the designated inspector.
+
+The State’s System of Accounting for and the Control of Nuclear Materials (SSAC)
+Every comprehensive safeguards agreement with the IAEA requires the State
+to establish and maintain a national system of accounting for and control of
+all nuclear materials within its territory, or under its jurisdiction or control.69
+In two instances a regional safeguards authority is involved. In fact, nearly
+every State having a significant nuclear programme, whether or not it is party
+to a comprehensive safeguards agreement, finds that its own security,
+economic and safety interests require it to establish an effective SSAC.
+In the case of the European Union the safeguards system of Euratom fulfils
+this function, and in the case of Argentina and Brazil it is fulfilled by ABACC
+(the Brazilian–Argentine Agency for Accounting and Control of Nuclear
+Materials). In mid-1998 the European Union consisted of 15 States including
+69 INFCIRC/153, paras 31–32.
+
+45
+
+Evolution of Safeguards
+
+two nuclear weapon States (France and the UK). Euratom was established
+in 1957 by the Treaty of Rome, and its experience in applying safeguards is
+thus comparable with that of the IAEA. The safeguards operations of the
+two organizations were meshed together by an agreement and protocol
+which was approved by the IAEA Board in 1972 and entered into force
+in 1977, and more closely linked by a ‘New Partnership Approach’, which
+was agreed to in 1992.
+The quadripartite agreement between the IAEA, Argentina, Brazil and
+ABACC entered into force in March 1994. Its structure and contents resemble
+those of the agreement between the IAEA and Euratom and its non-nuclearweapon States.
+As already indicated, the IAEA’s nuclear materials accountancy and
+verification are based primarily upon the records that the operators of
+nuclear facilities maintain and the reports that the SSAC submits to the
+IAEA. It is the responsibility of the SSAC to ensure that plant operators
+comply with the requirements of the safeguards agreement. These include
+the keeping of accurate records of the plant’s operation and timely and
+accurate reporting — according to an agreed format — of the movements
+and production of nuclear material. The SSAC must also ensure that the
+operators of nuclear plants are able to measure accurately and precisely
+the quantities and composition of nuclear materials that the plant
+uses, produces or processes, and that the equipment and procedures for
+measuring nuclear material at the plant meet the latest international
+standards.70
+The SSAC must also ensure that IAEA inspectors are permitted all necessary
+access to facilities and material and receive the support they need to carry out
+their duties effectively. The SSAC must also enable and help IAEA inspectors
+to apply containment and surveillance measures (such as seals, cameras and
+other monitoring devices).
+In the case of States that have accepted the Additional Protocol
+(INFCIRC/540), the SSAC must ensure that the IAEA receives the additional
+information and is granted the additional rights of access conferred by the
+Protocol.
+
+70 INFCIRC/153, paras 51–58.
+
+46
+
+How Safeguards Work in Practice
+
+The Provision of Information about Safeguards and the
+Protection of Safeguards Information
+It is natural that governments should want to know in some persuasive
+detail how effectively IAEA safeguards are being carried out. This
+interest is shared by the public, news media and non-governmental
+bodies concerned about non-proliferation. It sharpened after the IAEA
+had failed to detect the clandestine nuclear activities of Iraq in the late
+1980s.
+The IAEA seeks to meet this interest in many ways. For instance, it issues a
+detailed annual report on safeguards (the SIR), in addition to publishing an
+annual report on all the IAEA’s activities. The IAEA also publishes numerous
+articles and press releases on safeguards. This current series of booklets and
+its predecessors have much the same purpose.
+On the other hand, from the start of the IAEA’s safeguards operations,
+Member States have stressed the importance of protecting proprietary and
+other confidential information that the IAEA may acquire in applying
+safeguards and in successive safeguards documents. Member States have
+included explicit provisions designed to ensure such protection. These
+provisions reflected fears that information of commercial value, such as the
+design of a nuclear plant or nuclear equipment, or sensitive production
+statistics, might reach the hands of commercial competitors or other
+governments (as well as proliferation concerns connected with enrichment
+technology). The concern of several non-nuclear-weapon States was
+particularly apparent in 1970, when it became clear that their entire fuel
+cycles would come under safeguards while the fuel cycles of nuclear
+weapon States might remain largely exempt — at a time when the commercial use of nuclear energy was expanding rapidly. The concerns of certain
+Member States arose again during the discussion of the additional information and complementary access to be provided under the Additional
+Protocols.
+The IAEA has put in place elaborate arrangements to ensure that safeguards
+information remains confidential and to prevent unauthorized disclosures.
+These arrangements are reviewed periodically by the Board of Governors.
+Despite the very large quantity of safeguards information handled by
+the IAEA since 1970, there has not been any substantiated case of such a
+disclosure nor any complaint on this score by the government of any State in
+which safeguards are applied.
+
+47
+
+Evolution of Safeguards
+
+IAEA Statements to National Safeguards Authorities
+As provided for in the safeguards agreements, the IAEA reports to the
+national authority concerned, in a formal statement, the results of each of its
+inspections and informs the authority annually, in a formal statement for each
+inspected facility, of the conclusions the IAEA has reached after evaluating
+the material balances of its nuclear plants. The statement includes the IAEA’s
+assessment of the amount (if any) of declared nuclear material unaccounted
+for. These statements also draw attention to the problems that have come to
+light during inspections and the corrective and follow-up actions needed.
+As provided for in INFCIRC/540, the IAEA will report to the national authority concerned, in a formal statement, the activities it has carried out under the
+Additional Protocol, the results of activities in respect to any question or
+inconsistency it has identified, and the conclusions it has drawn from its
+activities.
+If the IAEA’s evaluation were to reveal significant accounting discrepancies
+or indicate unreported nuclear activities, the matter would be reported to the
+Board of Governors.
+
+B. Principles Underlying the Application of Safeguards to
+Declared Nuclear Material
+Tailoring Safeguards to Different Fuel Cycles
+The civilian nuclear fuel cycle of a State is a series of interconnected plants
+through which nuclear material flows or in which it is stored. The purpose of
+this activity is to release nuclear energy, usually for the production of
+electricity, but in certain cases to generate heat, to produce radioisotopes or to
+provide facilities for research and training purposes. The fuel cycle may
+include all or some of the following:
+•
+•
+•
+•
+•
+
+48
+
+uranium mines (and in a few cases thorium deposits)
+uranium/thorium ore processing plants,
+plants for converting such ore into oxides, metal, or other forms of
+material (e.g. uranium hexafluoride)
+plants for enriching uranium,
+plants for fabricating nuclear fuel,
+
+How Safeguards Work in Practice
+
+•
+•
+•
+
+reactors,
+facilities for storing spent reactor fuel and other nuclear materials, and
+plants for reprocessing spent fuel.
+
+Naturally, the extent and complexity of the fuel cycle varies very widely from
+country to country. The majority of the States that are members of the IAEA
+still have neither nuclear plants nor nuclear research facilities. A few have a
+single or a few uranium mines or thorium deposits. At the other end of the
+spectrum are a few States that operate the so-called ‘closed fuel cycle’, in
+which uranium is processed and manufactured into nuclear fuel, the fuel is
+used in power reactors, the spent fuel from the reactors is reprocessed, and
+the plutonium and uranium recovered by the reprocessing operation is used
+again (recycled) in power reactors; the plutonium recovered is recycled as
+plutonium oxide mixed with uranium oxide (MOX).
+The IAEA tailors its safeguards approach in each State to the nature and scope
+of its fuel cycle. It tailors its strategy for verifying the reports submitted for
+each facility to the type and design of the facility and the type and quantity
+of nuclear material it handles.
+
+The Starting Point of Safeguards
+The IAEA is required to concentrate its “verification procedures on those
+stages in the nuclear fuel cycle involving the production, processing, use or
+
+49
+
+Evolution of Safeguards
+
+storage of nuclear material from which nuclear weapons … could readily be
+made …” and to minimize such procedures in respect of other nuclear
+material.71
+Consistently with this precept, safeguards under INFCIRC/153 are not
+applied to nuclear material in mining or ore processing activities.72
+Comprehensive safeguards procedures are applied only when the nuclear
+material has been processed to a point suitable for isotopic enrichment or fuel
+fabrication (for use in a reactor). At that stage, the material becomes subject to
+all the safeguards procedures specified in INFCIRC/153 — to full verification
+including on-site inspection. If uranium ore or concentrates are transferred
+to another non-nuclear-weapon State before this stage, the exporting
+and importing States are required to inform the IAEA of the amount
+and composition and, in the case of exports, the destination of the ore or
+concentrates.73
+The nuclear weapon States have voluntarily agreed to report their nuclear
+material exports.
+
+Nuclear Materials Accountancy74
+Under INFCIRC/153, “the use of material accountancy” is a “measure of
+fundamental importance, with containment and surveillance as important
+complementary measures”.75
+The basic concept of nuclear materials accountancy is simple and has much
+in common with a financial accounting system, with the IAEA playing the
+part of an auditor. The manager/operator of a nuclear plant must from time
+to time take stock (take a physical inventory) of the various categories of all
+nuclear material at the plant or store. The IAEA receives a copy of the State’s
+report (known as a ‘material balance report’).
+
+71 INFCIRC/153, para. 6(c).
+72 INFCIRC/153, para. 33.
+73 Unless the ore or concentrate is imported or exported for specifically non-
+
+nuclear purposes.
+74 See also the introduction to the first booklet in this series, Safeguards
+Techniques and Equipment, International Nuclear Verification Series No. 1 (1997).
+75 INFCIRC/153, para. 29.
+
+50
+
+How Safeguards Work in Practice
+
+Thereafter, the operator reports to the IAEA (via the national or regional
+nuclear authority) all changes in the inventory of nuclear material at the
+plant. These are called ‘inventory change reports’, and they catalogue all
+input, production and output of nuclear material.
+Before the following physical inventory is taken, the operator and the IAEA
+calculate how much material should be in the plant. The starting point for this
+calculation is the physical inventory recorded in the preceding material
+balance report. To this are added all inputs and subtracted all outputs that
+have been identified in subsequent inventory change reports. The results of
+this calculation are designated as the ‘book inventory’. This book inventory
+— which indicates how much and what material should be at the plant — is
+then compared with the new physical inventory now undertaken by the operator which shows the amount of nuclear material that actually is at the plant.
+Any difference between the book inventory and the physical inventory is
+defined as ‘material unaccounted for’ or MUF. If the MUF is large enough to
+be statistically significant, considering the instruments used, its cause is
+evaluated by the IAEA, if need be in consultation with the operator.76
+In practice, the book and physical inventories and the material balance
+and inventory change reports normally relate to a particular functional area
+of the plant known as a ‘material balance area’ rather than to the entire
+plant.77
+The IAEA independently verifies, chiefly by inspection, the consistency of the
+plant’s operating records with its actual operations, and the consistency of
+these records with the ‘inventory change reports’ submitted to the IAEA. The
+‘intensity’ — frequency and extent — of the IAEA’s inspections is determined
+by parameters such as the amount of particular nuclear material a State
+would need to make a nuclear explosive device (‘significant quantity’ — see
+also Technical Objective below) and the estimated time it would need to
+convert diverted material into such a device (‘timeliness’ — see also Technical
+Objective below).
+
+76 INFCIRC/153, paras 29–30 and 63–64.
+77 A ‘material balance area’, or MBA, is an area of the plant so designed,
+constructed or equipped as to permit the plant’s operator to measure or otherwise
+determine the quantity of nuclear material contained in each transfer of material into
+or out of the MBA and to enable the operator to take a physical inventory of the
+material in the MBA. Typical MBAs are the fresh and the spent fuel stores of a reactor.
+
+51
+
+Evolution of Safeguards
+
+In the late 1990s the IAEA was carrying out about 2500 on-site inspections a
+year at about 600 facilities.
+In large and complex plants, especially those in which there is a continuous flow of nuclear material, material accountancy is more complicated but the basic concept remains the same: comparing what is in
+the plant or in a particular part of the plant with what should be there,
+and seeking an explanation if there is found to be a significant quantity of
+MUF.
+
+The Technical Objective of Safeguards on Declared Nuclear Material
+The technical objective of comprehensive safeguards as set forth in
+INFCIRC/153 — the basis, as has been noted, for by far the most common
+type of agreement under which the IAEA applies safeguards — is “the
+timely detection of the diversion of significant quantities of nuclear material
+from peaceful uses to the manufacture of nuclear weapons or other nuclear
+explosive devices or for purposes unknown and the deterrence of such
+diversion by the risk of early detection”.
+The following are definitions of a few of the basic terms used in framing the
+technical objective of comprehensive safeguards agreements. The explanations given below are less formal than those given in the technical and legal
+language of the Safeguards Glossary.78
+
+‘Timely Detection’
+The timeliness guidelines — i.e. the time within which the diversion of
+a significant quantity of nuclear material should be detected — depends
+upon several factors including, as noted above, the time it would take
+to process the material into the metallic components of a nuclear
+explosive (the ‘conversion time’), and hence upon the composition of
+the material. At present the guidelines are that a diversion must be
+detected:
+
+78 For
+
+definition of most of the terms used in this booklet see the IAEA
+Safeguards Glossary, 1987 Edition, IAEA/SG/INF/1 (Rev. 1).
+
+52
+
+How Safeguards Work in Practice
+
+— within a month for fresh nuclear fuel containing highly enriched
+uranium, plutonium or mixed oxides of plutonium and uranium;
+— within three months for irradiated fuel containing plutonium or highly
+enriched uranium;
+— within twelve months for nuclear material consisting of natural
+uranium, low enriched uranium or thorium.
+
+‘Significant Quantity’
+As noted, this is the approximate quantity of nuclear material that a State
+might need to make a nuclear explosive device. If a State possesses such a
+quantity, the possibility of it manufacturing a nuclear explosive cannot be
+excluded. Significant quantities take into account unavoidable losses during
+conversion and manufacturing processes.
+The significant quantities of ‘direct use’ material are 8 kg for plutonium and
+uranium-233 and 25 kg of uranium-235 for uranium enriched to 20% or more.
+For indirect use materials, the significant quantities are 75 kg of uranium-235
+for uranium enriched to less than 20%, 10 t for natural uranium and 20 t for
+depleted uranium and thorium.
+
+‘Containment’ and ‘Surveillance’
+Containment is the term the IAEA uses to describe that group of features of
+a nuclear facility (or part of such a facility) or that category of equipment
+that prevents access to, movement of or interference with, nuclear or other
+relevant material or with IAEA safeguards equipment or data. Examples of
+containment are the walls of a storage room or pool, a transport flask, or a
+storage container. Tamper resistant seals or surveillance instruments are used
+to ensure or verify the continuing integrity of the containment, especially at
+locations where the containment is pierced by, for instance, a door or the lid
+of a vessel.
+Surveillance is the term used to describe the collection of information by
+inspectors or instruments (normally the latter) in order to monitor the
+movement of nuclear material and to detect any interference with containment or tampering with IAEA safeguards devices, samples and data. The
+most important surveillance instruments are automatic optical devices and
+monitors. An example of surveillance is a twin camera enclosed in a sealed,
+
+53
+
+Evolution of Safeguards
+
+tamper indicating box which at regular intervals takes a picture of a spent
+fuel store. The pictures are taken at sufficiently frequent intervals to ensure
+that any unreported movement of the spent fuel will be recorded. A similar
+result may be achieved by a closed circuit television system that records on
+magnetic tape or optical disc.
+The first booklet in this series (Safeguards Techniques and Equipment,
+International Nuclear Verification Series No. 1) provides detailed descriptions
+of the containment and surveillance equipment used in applying IAEA
+safeguards.
+
+Safeguards Approaches for Declared Nuclear Material: ‘Diversion Strategies’
+The basic hypothesis of comprehensive safeguards is that the State is
+neither diverting nuclear material nor conducting any clandestine nuclear
+operations, but this must be verified by assessing whether all the information
+obtained by the IAEA using all the means at its disposal is consistent with this
+hypothesis.
+In all cases in which safeguards are applied, the IAEA must assume the
+possibility that the State concerned may have or may acquire unsafeguarded nuclear facilities. In devising its safeguards approach, the IAEA
+analyses hypothetical diversion strategies that the State might follow in order
+to divert safeguarded nuclear material for use in a nuclear weapon
+programme.
+
+‘Safeguards Criteria’
+It is obviously essential to decide on and define what inspection activities
+must be undertaken — in accordance with the prescribed technical objectives
+— to detect a possible diversion. These activities are documented as
+’safeguards criteria’ and are specified for each type of nuclear facility.
+The criteria are first used to plan safeguards operations. Later they are used
+to evaluate the extent to which the inspection goals (see below) set by the
+Agency have been attained. The criteria specify the scope, the normal
+frequency and the extent of the inspection activities that must be carried out
+to achieve the technical objective. The criteria vary according to the types and
+the categories of material present in the plant. The type of material may, for
+instance, be plutonium, highly enriched uranium, depleted, natural and low
+
+54
+
+How Safeguards Work in Practice
+
+enriched uranium or thorium. The category of material may be unirradiated, direct use material, irradiated direct use material or indirect use
+material.79
+The safeguards criteria also specify activities that relate to the State as a
+whole. Currently, these include, inter alia, requirements for ‘transit matching’
+of transfers abroad (i.e. verifying that the reports of the shipper and of the
+recipient of nuclear material, within specified periods, are consistent with
+each other) and for verifying that nuclear material is not ‘borrowed’ from
+another nuclear plant in order to hide a diversion at an inspected plant. The
+successful performance of these activities supports the conclusion that no
+significant quantity of material has been diverted from a facility.
+‘Inspection Goals’
+The requirements of the safeguards criteria are used as inspection goals to
+evaluate annually how effectively the IAEA is meeting its technical objectives.
+The results of the evaluation are described in the SIR.
+The inspection goal for a nuclear plant comprises two components. One specifies the inspection activities needed to provide assurance that there has been
+no diversion of a significant quantity (see above) of nuclear material during
+the period between physical inventories. The second component specifies the
+activities that must be carried out to provide assurance that there has been no
+diversion of a significant quantify of nuclear material during the period
+between inspections. The inspection frequency prescribed takes into account
+the time that it would take the State to manufacture a nuclear weapon or other
+nuclear explosive device from the diverted material. Thus, for instance, inspections must be carried out at intervals of no longer than one month in the case
+of unirradiated direct use material (the material that is most readily usable as
+the component of a nuclear explosive, such as unirradiated highly enriched
+uranium), no longer than three months or less in the case of irradiated direct
+use material (spent fuel) and one year in the case of indirect use material, i.e.
+natural or low enriched uranium. (Indirect use material must be either enriched
+or irradiated and reprocessed before it can be used as a nuclear explosive.)
+79 Unirradiated
+
+direct use material has not been in an operating reactor.
+Irradiated direct use material has been and therefore contains radiation emitting
+products from irradiation. Unirradiated material requires less processing time and
+effort than irradiated material.
+
+55
+
+Evolution of Safeguards
+
+In coming years the remote transmission of essential safeguards data will
+enable the IAEA to draw conclusions at IAEA headquarters or at a regional
+office about the achievement of timeliness goals, and as a consequence to
+reduce the frequency of inspections at facilities.
+The inspection goal is attained if all criteria have been met. If not all the
+criteria are fully met, the inspection goal will be regarded as having been only
+partially attained.
+
+Implementing Safeguards Agreements under INFCIRC/153
+Summing up, the main work done by the IAEA in implementing safeguards
+agreements under INFCIRC/153 — i.e. in accounting for declared nuclear
+material — includes the following at each nuclear plant:
+•
+auditing the plant’s accounting of nuclear materials and its
+operating records, and comparing them with the State’s reports to the
+IAEA;
+•
+verifying the flow of nuclear material including transfers between
+plants and in some cases within plants;
+•
+verifying inventories of nuclear material;
+•
+verifying information about the design of nuclear plants;
+•
+verifying the accuracy of the operator’s measurement systems;
+•
+applying containment and surveillance measures;
+•
+confirming that there is no undeclared production of direct use material
+at reactors or at enrichment plants; and
+•
+carrying out checks to ensure that diversion is not concealed by
+obtaining nuclear material from another plant.
+
+C. Principles Underlying the
+Application of Safeguards
+to Detect Clandestine Operations
+
+The New Approach: The State as well as the Facility
+Material accountancy, the kernel of INFCIRC/153, is chiefly concerned with
+the diversion of nuclear material in declared facilities in which IAEA safeguards are being or will be applied. Material accountancy and complementary
+measures, surveillance and containment (see above), identify the signs that
+
+56
+
+How Safeguards Work in Practice
+
+would indicate such a diversion (e.g. a large MUF for which no satisfactory
+explanation is available, the rupture of a seal, failure to report recorded movement of nuclear material) and the circumstances where the possibility of
+diversion cannot be ruled out. These activities also provide assurance that
+declared facilities are not being used in support of an undeclared nuclear
+weapon programme.
+The strengthened safeguards supported by INFCIRC/540 evaluate the State’s
+declarations concerning the entirety of its past, present and future nuclear
+programmes — both its strictly nuclear and its nuclear related activities —
+and its use of nuclear material.
+The conceptual approach of INFCIRC/540 derives from the fact that a State’s
+nuclear programme involves an interrelated set of nuclear operations that
+require or are indicated by the existence of:
+•
+•
+•
+•
+
+certain equipment,
+a particular infrastructure,
+tell-tale traces in the environment, and
+a predictable use of nuclear material.
+
+These provide the IAEA with the elements of a conceptual assessment
+of the absence or presence of clandestine activities. This assessment is
+founded on:
+•
+•
+
+•
+•
+
+an expanded declaration by the State designed to cover all aspects of its
+nuclear activities — all relevant data and activities;
+a technical evaluation of the internal consistency of the State’s declaration and a point-by-point comparison of the indications of nuclear
+operations, based on all the information available to the IAEA and on
+what the State says that it is doing or plans to do;
+new technical tools;
+enhanced inspection access — ‘complementary access’ — to any part of
+a facility containing nuclear material, to any place on a nuclear site and
+to any installation, whether or not it contains nuclear material, that
+carries out nuclear fuel cycle related activities.
+
+Just as the efficacy of INFCIRC/153 safeguards is routinely tested against the
+objective of verifying the absence of diversion in each declared facility in the
+State concerned, so the efficacy of strengthened safeguards is tested against
+the objective of verifying the absence of any undeclared nuclear activities in
+
+57
+
+Evolution of Safeguards
+
+that State — as well as the absence of diversion and the achievement of cost
+effectiveness.
+The IAEA’s experience in Iraq showed that the mere submission of a report
+— for instance, that a State has received or been sent uranium
+concentrates from abroad — may not prevent the importing State from
+secretly misusing the material unless the IAEA has the right to inspect the
+material and ascertain what the importing State is doing with it. This is
+one of the reasons why the Additional Protocol (INFCIRC/540) requires
+States to provide the IAEA with comprehensive information about and to
+grant its inspectors access to all aspects of a State’s nuclear fuel cycle,
+from uranium mines to nuclear waste. Thus, under INFCIRC/540, IAEA
+inspectors have access to uranium mines and uranium and thorium ore and
+concentrates, though in practice such access would be infrequent — limited
+to cases where there were inconsistencies in the information about such
+material.
+
+Approach to the Evaluation of States’ Nuclear Activities
+The IAEA now uses an important new tool in the strengthened safeguards
+approach, as a means of evaluating the nuclear activities of States. Weapon
+usable nuclear material does not exist in nature but must be manufactured
+from nuclear ores in a series of discrete steps. The State would have a choice
+between several processes for carrying out each step; for instance, there are at
+least nine proven processes for enriching uranium. The process chosen for a
+given step depends to some extent on the processes chosen for both the
+preceding and the following steps. The IAEA has identified, described and
+characterized every known process for carrying out each step. Thus, every
+possible route from source material to weapon usable nuclear material is
+described as a combination of some of the processes identified and characterized. Which particular process the State has chosen would be disclosed by
+specific indicators, such as the existence of specialized or dual use equipment,
+or of specific nuclear or non-nuclear materials, or by environmental
+signatures unique to that process, or by the demands that the State is
+apparently making for experts possessing specific technical skills.
+
+58
+
+IV. NEW CHALLENGES AND OPPORTUNITIES
+
+A. Further Optimization of Current Safeguards
+
+Enhancing Cost Effectiveness
+Many States will continue to press the IAEA to keep the cost of safeguards as
+low as possible, both for the IAEA and for national governments and SSACs.
+A ‘new partnership approach’ that the IAEA and Euratom agreed to in 1992
+set an example of rational co-operation between an experienced and well
+equipped SSAC and the IAEA to achieve a more cost effective application of
+safeguards. This example is being followed by Argentina, Brazil, the ABACC
+and the IAEA in implementing their quadripartite comprehensive safeguards
+agreement. Increased co-operation with effective national SSACs will reduce
+the cost and enhance the efficacy of IAEA safeguards.
+
+Applying New Safeguards Technologies 80
+In the late 1980s and in the 1990s, new technologies became available
+enabling the IAEA to detect even minute trace indicators of various types of
+nuclear activities. In 1996 the IAEA completed and brought into operation a
+‘clean laboratory’ within the complex of its Safeguards Analytical Laboratory
+at Seibersdorf near Vienna. The clean laboratory will enable the IAEA to make
+extensive and independent use of environmental sampling (including the
+services of specialized laboratories in Member States). At present the use of
+environmental sampling is limited to detecting activities within declared
+facilities in which safeguards are applied under comprehensive safeguards
+agreements, but under the Additional Protocol such sampling will be more
+widely used.
+Technological progress also makes it increasingly affordable to transmit to
+IAEA headquarters, in near real time, the readings of the IAEA’s safeguards
+
+80 For further information on IAEA safeguards technology and instruments see
+
+the first booklet in this series, Safeguards Techniques and Equipment, International
+Nuclear Verification Series No. 1 (1997).
+
+59
+
+60
+
+12 VDC
+
+VDIS 2
+
+Lighting
+
+VACOSS-S
+seal
+
+VACOSS-S
+seal
+
+VDIS 1
+
+Serial
+data
+
+Facility mains
+220 VAC
+
+Protocol
+converter
+
+Serial
+data
+
+USAT
+
+Monitoring station
+
+SSAC terminal
+
+19.2 kbits/s
+
+Orion @ 37.5° W
+
+Uninterruptible power supply
+
+19.2 kbits/s
+
+Paul Scherrer Institute, Switzerland
+
+Satellite hub
+Clarksburg, Maryland, USA
+
+Facility mains
+220 VAC
+
+220
+VAC
+Image
+capture
+station
+
+Serial
+data
+
+USAT
+
+Image
+server
+
+Token ring
+network
+
+Image
+storage
+
+IAEA HQ, Vienna
+
+Review
+stations
+
+Printer
+
+Evolution of Safeguards
+
+New Challenges and Opportunities
+
+instruments, to encipher and transmit relevant data recorded by unattended
+monitors and, all in all, to carry out an increasingly cost effective operation.
+
+B. Realizing the Promise of the Additional Protocol
+The Impact of INFCIRC/540
+Together with the new techniques at the IAEA’s disposal, INFCIRC/540 has
+provided the Agency with a set of powerful new safeguards tools. It has also
+brought the need for some fundamental changes in the way in which the
+IAEA approaches its safeguards tasks.
+As already noted, INFCIRC/153 is chiefly designed to verify the absence of
+diversion in individual nuclear plants or parts of plants — in other words,
+despite its focus on nuclear material INFCIRC/153 is essentially ‘facility
+oriented’. Since a State’s declared nuclear programme is an aggregate of the
+work done by individual plants, INFCIRC/153 will continue to provide the
+groundwork for the application of safeguards. But to enable the IAEA to
+detect any undeclared activities, INFCIRC/540 lifts the IAEA’s sights to
+encompass the totality of the State’s nuclear activities, including any possible
+clandestine nuclear weapon programme. In this context the ‘expanded
+declaration’ to be made by States plays a vital role.
+As noted above, the nuclear programme of any State is a set of activities
+linked with certain equipment, based on a specific infrastructure, and it
+leaves unique traces in the environment. The picture presented by these three
+features enables the IAEA to predict what use the State is making of its
+nuclear material. Obviously, the more transparent the programme is, the
+more accurate that prediction will be.
+This again illustrates the importance of the State’s expanded declaration. It
+must be evaluated for internal consistency, for consistency with information
+from external sources, and for consistency with the information the IAEA
+gains from its own verification. Discrepancies between these sources must be
+assessed to identify inconsistencies and questions, and the IAEA must seek
+clarification of any questions that emerge. For this purpose, comprehensive
+information and complementary access are the two main tools provided by
+INFCIRC/540. It is expected that the combination of information from all
+relevant sources including a methodical use of open sources such as media
+
+61
+
+Evolution of Safeguards
+
+reports, and the IAEA’s enhanced right to send inspectors ‘on the ground’,
+will provide the IAEA with a firmer and more reliable basis than in the past
+for drawing conclusions regarding the absence or presence of undeclared
+activities. It should, however, be stressed that when this booklet was written
+the testing in action of the new tools provided by INFCIRC/540 had only
+recently begun.
+To sum up, the new armoury at the IAEA’s disposal consists not only of the
+database that the expanded declaration provides and the analytical concept
+linked with it, but also of the enhanced freedom of action (‘complementary
+access’) that is now available to its inspectors, the availability to the IAEA of
+information provided by its Member States as well as from open sources, the
+new verification tools such as environmental monitoring that the IAEA is
+now using and, last but not least, the unrivalled wealth of experience gained
+by the IAEA during nearly forty years of carrying out on-site inspections.
+
+The Implementation of INFCIRC/540
+The first major task was to get in place whatever was needed to implement
+INFCIRC/540. Therefore the IAEA:
+•
+•
+•
+•
+
+provided guidance to States about the form and content of their
+expanded statements;
+prepared standardized additions to existing subsidiary arrangements;
+prepared the technical basis and guidance for the complementary access
+foreseen in INFCIRC /540; and
+began to train or retrain IAEA inspectors so as to enable them to
+integrate INFCIRC/540 fully into their work.
+
+States accepting the Additional Protocol also find it necessary to undertake
+preparations, sometimes extensive, for the application of INFCIRC/540 in
+their own nuclear and related facilities. National authorities had to modify
+the procedures laid down in their SSACs and to help their nuclear industry to
+meet the requirements of INFCIRC/540. In some cases, States had or will
+have to adopt new legislation, for instance, to enable the governments to
+grant complementary access to IAEA inspectors in facilities and locations that
+do not handle or provide storage for nuclear material.
+The eventual aim will be the complete merging of the application of
+INFCIRC/153 and INFCIRC/540.
+
+62
+
+New Challenges and Opportunities
+
+It should be stressed that even when INFCIRC/540 has been widely
+adopted, the safeguards procedures prescribed by INFCIRC/153 (i.e.
+systematic accounting for declared nuclear material and the use of
+containment and surveillance) will continue to provide an essential basis for
+much of the safeguards operation. In fact, the information required and the
+inspection regime foreseen in the two documents will be integrated into a
+single ‘seamless’, more efficient and cost effective system. This should permit
+the IAEA to reduce the routine activities associated with material
+accountancy.
+
+‘Universality’ of INFCIRC/540
+Another task ahead is to secure the application of the relevant provisions
+of INFCIRC/540 in the nuclear weapon States and in other States that have
+not, or not yet, accepted comprehensive nuclear safeguards. This is often
+referred to as universality. The process began in mid-1998 with the approval
+and signing of Additional Protocols to the existing safeguards agreements
+of three nuclear weapon States: France, the United Kingdom and the United
+States of America.
+The non-nuclear-weapon States that have accepted INFCIRC/540 will
+continue to press all other States to accept the application of the relevant
+provisions of INFCIRC/540 to their own nuclear programmes; so, too, will
+the nuclear weapon States that have accepted relevant provisions of
+INFCIRC/540.
+
+The Integration of Safeguards under INFCIRC/153 and INFCIRC/540
+Assessing the effectiveness of the new safeguards measures foreseen in
+INFCIRC/540 will require some hands-on experience. An evaluation of
+their absolute effectiveness will never be possible since they aim at
+exposing clandestine activities which, by their very nature, are taking
+place in an unknown and undefined environment. An absolute
+assurance that they are not taking place will never be attained. In early 1998
+the IAEA embarked on a project aimed at assessing the relative
+effectiveness of the new measures in comparison with the IAEA’s
+traditional verification activities, in order to establish what reductions of
+inspection effort might be made in States that have adopted the Additional
+Protocol.
+
+63
+
+Evolution of Safeguards
+
+The IAEA’s goal in this context is to achieve optimum effectiveness and
+efficiency by meshing fully in an integral whole the means of verification
+provided by traditional material accountancy with new, more qualitative and
+technologically oriented means.
+
+C. Verification of Certain Specific Measures of
+Nuclear Disarmament
+International verification of agreements relating to nuclear disarmament
+is not necessarily the same as applying IAEA safeguards, though the
+techniques employed in each case may have much in common. Three opportunities for the use of the techniques developed by the IAEA are being tested
+or lie ahead: verifying the status of former nuclear weapon material,
+verifying a ‘cut-off’ convention and verifying additional nuclear weapon free
+zones.
+The opportunities thus offered represent modest but perhaps significant steps
+towards the eventual elimination of nuclear weapons to which the five
+nuclear weapon States party to the NPT are committed by that Treaty and
+were again committed by the undertakings given at the 1995 Conference on
+the Review and Extension of the Treaty.
+
+Placing Former Military Material under International Surveillance
+A still open question is to what extent the governments of nuclear
+weapon States will permit international verification of nuclear material
+released from their military programmes and the eventual transformation of
+this material into fuel for civilian use or for its final disposal. The nuclear
+weapon States have an obligation under the NPT not to disseminate sensitive
+information about the design and production of nuclear warheads (indeed, it
+is generally not in their interest to do so). However, the internationally most
+credible way of preventing the military reuse of plutonium or highly
+enriched uranium is to place it under international surveillance after it has
+been removed from a nuclear warhead before or after its features characteristic of weapon design have been eliminated. The USA has now started this
+process. The Russian Federation and the UK have undertaken to do the
+same.
+
+64
+
+New Challenges and Opportunities
+
+Verification of a Cut-off
+For more than forty years one of the most widely discussed proposals for
+nuclear arms control and disarmament has been a permanent halt to the
+production of fissile material for military use, the ‘cut-off’ or ‘fissban’
+treaty. The current known producers or holders of significant stocks of
+such material are the five recognized nuclear weapon States — China, France,
+the Russian Federation, the UK and the USA — and India, Israel and
+Pakistan.
+The 1995 Conference on the Review and Extension of the NPT agreed that
+progress towards a cut-off convention would be one of the benchmarks by
+which the parties to the treaty would judge how effectively the provisions of
+the NPT relating to disarmament were being implemented. The Conference
+on Disarmament agreed to terms of reference for an ad hoc committee on a
+cut-off ban; however, differences of opinion about the purpose and scope of a
+cut-off treaty prevented the creation of such an ad hoc committee until
+August 1998. The ad hoc committee is expected to begin serious negotiation
+of a treaty in early 1999.81
+It seems that the IAEA could be an appropriate international body to verify
+fulfilment of its main provisions, for instance, to verify that existing plants for
+the production of fissile material for nuclear weapons have been permanently
+closed down and that no new material is being produced. The application
+of safeguards in such plants could entail a major expansion of the IAEA’s
+safeguards operation and budget, should the IAEA be asked to undertake
+the task.
+If agreement can be reached on a cut-off treaty, existing IAEA safeguards
+practice could provide the technical elements of the means used to verify that
+the States concerned are complying with the convention. However, the
+complexity and size of the nuclear programmes of the nuclear weapon States
+may require a more selective approach to safeguards than that adopted in
+standard INFCIRC/153 agreements; the additional verification measures
+prescribed in INFCIRC/540 may also be relevant.
+
+81 The chief disagreements were whether the treaty should cover only the
+
+future production or also existing stocks of fissile material, and whether or not the
+treaty should be negotiated only as a component of an agreed programme for phased
+nuclear disarmament.
+
+65
+
+Evolution of Safeguards
+
+Verification Requirements of Additional Nuclear Weapon Free Zones
+The States concerned have negotiated treaties for the creation of five nuclear
+weapon free zones, namely, the Antarctic, Tlatelolco (Latin America and the
+Caribbean), Rarotonga (South Pacific), Pelindaba (Africa) and Bangkok
+(South East Asia) Treaties. All except the Pelindaba Treaty were in force by
+mid-1998. All the nuclear material in facilities that exist or are under construction in these five regions were already or will be under safeguards as a consequence of these treaties or safeguards agreements. Hence, implementation of
+these treaties does not entail any expansion of the IAEA’s safeguards except
+to such additional nuclear material as may be produced in or imported into
+these regions.
+Nuclear weapon free zones have also been proposed for Central Asia, the
+Middle East, South Asia, and Central and Eastern Europe, but there is no
+certainty that they will be established or, if they are, when this will happen. If
+it does prove possible to create a nuclear weapon free zone in the Middle East
+or in South Asia it would bring substantial quantities of additional nuclear
+material under safeguards. This would not apply in Central Asia and Central
+and Eastern Europe, where all nuclear material is covered by existing treaties
+or agreements.
+
+Co-operation with Other International Verification Agencies
+The entry into force of the NPT in 1970 made the IAEA the first international
+agency to verify compliance with a major arms control treaty. The IAEA has
+now been joined by the organization responsible for verifying compliance
+with the Chemical Weapon Convention (CWC) and will be joined by the
+agency established to verify compliance with the draft Comprehensive Test
+Ban Treaty. In mid-1998 negotiations were also under way for a verification
+protocol to the 1975 Biological and Toxin Weapons Convention (BTWC),
+which prohibits the use of disease as a weapon of war. The negotiations
+envisage creation of an independent organization to implement the relevant
+provisions of the protocol.
+The methods of verification that each agency employs or will employ differ
+substantially. Thus, for instance, the CWC places much emphasis on
+‘challenge inspections’ (these may also become one of the procedures of
+the BTWC). If a party to the CWC suspects another party of violating it,
+for instance, by producing militarily significant quantities of a prohibited
+
+66
+
+New Challenges and Opportunities
+
+chemical warfare agent, it may demand an inspection of the site that it
+believes is used for producing the agent. The challenged party must accede to
+the demand for inspection within a stipulated number of days — unless the
+governing body of the Organization for the Prohibition of Chemical Weapons
+(OPCW) rejects the demand by a specified large majority. In the case of the
+IAEA, however, all inspections are undertaken under the authority of the
+Director General, and Member States have no formal role in triggering the
+inspection and do not take part in it.
+It has been suggested to add challenge inspections to the range of activities
+the IAEA carries out in future verification regimes. So far the OPCW has had
+no occasion to undertake a challenge inspection and thus to gain practical
+experience with this form of verification, but in early 1998 it carried out a trial
+run of the procedures it would follow if it were to carry out such a challenge
+inspection. Arrangements for the sharing of experience between the various
+verifying organizations and possibly further co-operation should be on their
+agenda.
+
+D. Progress in Disarmament and its Verification
+There has been remarkable progress since the 1960s in reaching international
+and regional agreement on measures of verified disarmament — in reducing
+nuclear arsenals, erecting barriers to the proliferation of weapons of mass
+destruction and the means of their delivery, banning chemical weapons
+and outlawing land mines — to mention only some of the most significant
+steps. Much of this is doubtless due to the end of the Cold War but there
+has been autonomous progress in Latin America, Africa, South East Asia
+and the Pacific as well as in Europe itself. One may hope that, despite
+inevitable setbacks, progress in one direction of arms control and disarmament will, in a form of beneficent synergy, help to promote progress in other
+directions.
+
+Steps Towards Universal Acceptance of International Inspection
+In drawing up and applying INFCIRC/66 and INFCIRC/153, the IAEA
+pioneered the application of international safeguards, including on-site
+inspection, to serve the purposes of arms control and disarmament.
+INFCIRC/66/Rev. 2 tested safeguards concepts, techniques and procedures
+chiefly in relation to individual nuclear facilities, INFCIRC/153 broadened
+
+67
+
+Evolution of Safeguards
+
+the scope of safeguards to that of verifying that non-nuclear-weapon States
+were not producing nuclear weapons from any safeguarded material and
+required them to submit all their nuclear material to safeguards, and
+INFCIRC/540 extended the IAEA’s powers so as to ensure that this obligation
+effectively covered any material and plant that had not been submitted to
+safeguards.
+By demonstrating that effective verification was feasible and did not impair
+military security, the IAEA encouraged reluctant nuclear weapon States to
+accept on-site inspection by each other and later by international officials.
+Thus the first indication of USSR acceptance of on-site inspection on Soviet
+territory was a 1982 article in a Soviet foreign policy journal citing IAEA
+safeguards as a model for arms control and disarmament. And the
+first formal acceptance by the USSR of international on-site inspection was
+
+68
+
+the conclusion of an agreement in 1985 to place certain Soviet facilities under
+IAEA safeguards.82
+Although for different reasons, France followed much the same path as
+the USSR in initially questioning the value of safeguards in nuclear weapon
+States. At the end of the 1960s, France proclaimed that it would not ratify
+the NPT but would behave as though it were a party to the Treaty. By 1981
+France had concluded an agreement, placing some of its nuclear plants
+under safeguards, and in 1992 France acceded to the NPT. China, too,
+was initially sceptical of safeguards and the NPT but in 1989 likewise
+concluded an agreement under which it would place certain facilities
+under IAEA safeguards, and in 1992 it acceded to the NPT. The first French
+and Chinese acceptance of international on-site inspection of their own
+activities, like that of the USSR, took the form of a safeguards agreement with
+the IAEA.
+In this way the evolution of IAEA safeguards helped to open the way to
+bilateral treaties (INF and START) and later to international treaties for
+putting constraints on, or reducing, arsenals of weapons of mass destruction
+(CWC, the draft CTBT and the proposed Cut-off Convention).
+The very success of IAEA safeguards has compelled any non-nuclear-weapon
+State bent on acquiring nuclear weapons either to abstain from the NPT (as a
+shrinking number of such States has done), to threaten withdrawal from the
+Treaty (as the DPRK did for some time) or to construct a clandestine fuel cycle
+as Iraq did. The effect of the latest development of IAEA safeguards,
+INFCIRC/540, should be to foreclose this last option.
+
+82 ZHELEZNOV, R., Monitoring Arms Limitation Measures, International
+Affairs, Moscow (July 1982) 75–84. Dr. Zheleznov noted that "the positive significance
+of the IAEA safeguards system lies in the fact that it can in many ways provide
+a prototype for organizing control in other areas of limiting arms, especially nuclear
+arms".
+
+69
+
+ANNEX 1: THE IAEA AND THE WAY IT WORKS
+On 8 November 1953, in an address at the United Nations, President
+Eisenhower of the United States of America proposed the creation of an
+international organization to promote the peaceful uses of atomic energy and
+to seek to ensure that it would not serve any military purpose.83 After
+three years of negotiations in Washington amongst a group of interested
+States the draft of the Statute was reviewed by a special conference at UN
+headquarters and approved on 23 October 1956.
+The IAEA, or ‘the Agency’ as its staff and delegates call it, came legally into
+existence on 29 July 1957. Its Preparatory Committee began work at UN
+headquarters early in 1957 and then moved to Vienna. The first meeting of the
+IAEA’s General Conference in October 1957 confirmed that the IAEA’s
+headquarters would be in Vienna.
+The IAEA Statute established the three main components of the
+organization:
+•
+
+An executive body, the Board of Governors, consisting (in 1998) of
+35 nations, which is the main instrument by which Member States
+shape the plans and control the operations of the Agency. The Board
+has almost exclusive authority over the Agency’s safeguards. With
+the help of the Secretariat and of the Board’s own committees, the
+Board draws up and approves safeguards systems and general rules of
+inspection, approves safeguards agreements with States, assesses
+whether States are complying with their safeguards agreements, reports
+any non-compliance to the IAEA’s Member States, to the Security
+Council and to the General Assembly of the United Nations and may
+take other actions authorized by the Statute in the case of noncompliance. The Board annually reviews the way in which safeguards
+are being implemented, determines the size of the inspectorate and
+appoints the IAEA’s inspectors. The Board meets three or four times a
+year in sessions lasting a week or less.
+
+•
+
+A General Conference in which all Member States of the IAEA have
+the right to take part (in mid-1998, there were 127 Member States).
+The General Conference meets for about one week in September
+
+83 See ‘The first attempts at international control’, in Chapter 1.
+
+70
+
+Annex 1
+
+each year. It gives broad guidance about how the membership as
+a whole wishes the work of the IAEA to evolve, and it has the final
+say on a number of political issues. These include the admission of
+new Member States, suspension of Member States’ rights and privileges, the total annual budget including the scale of contributions by
+Member States to the budget, agreements with other organizations
+including the United Nations, the amendment of the IAEA’s Statute and
+the appointment of the Director General. In these matters, the General
+Conference acts after considering the recommendations or proposals of
+the Board.
+•
+
+A Secretariat in which slightly more than 2200 persons were employed
+in mid-1998, of whom 590 were in the Department of Safeguards. The
+Secretariat drafts the programmes and budgets of the IAEA and carries
+them out after they have been reviewed and approved by the Board of
+Governors (and the General Conference in the case of the budget). The
+Secretariat also makes recommendations to the Board and General
+Conference on most other substantive matters on which the Board
+and/or the General Conference take decisions. Standing committees of
+Member States or of international experts help the Board to review the
+Secretariat’s proposals.
+
+The Secretariat operates under the authority of the Director General. He
+or she is appointed by the Board, subject to the approval of the General
+Conference, for a period of four years. The appointment is renewable.
+Since 1957 the IAEA has had four Directors General, namely Sterling Cole
+(USA) 1957–1961, Sigvard Eklund (Sweden) 1961–1981, Hans Blix (Sweden)
+1981–1997, and the present incumbent, Mohamed ElBaradei (Egypt),
+appointed in 1997. The Secretariat comprises six Departments dealing,
+respectively, with Research and Isotopes, Safeguards, Technical Co-operation,
+Nuclear Energy, Nuclear Safety, and Administration; each Department is
+headed by a Deputy Director General.
+The IAEA operates two laboratory centres: a complex of laboratories
+at Seibersdorf, some 35 km from Vienna, which provides services in
+support of several IAEA programmes including safeguards, and a Marine
+Environment Laboratory at Monaco. At the Seibersdorf laboratories a
+Safeguards Analytical Laboratory provides a wide variety of analytical
+support services for the safeguards programme. These include handling
+the samples for destructive analysis and environmental samples taken by
+inspectors.
+
+71
+
+ANNEX 2: THE CONTROL OF NUCLEAR EXPORTS
+In its Article III.2, the NPT requires each of its parties to ensure that
+IAEA safeguards are applied to any nuclear material (‘source material’
+and ‘special fissionable material’, as defined in the Statute of the IAEA)
+that the party exports to a non-nuclear-weapon State for peaceful purposes.
+Each party must similarly ensure that safeguards are applied to any nuclear
+material that is derived from any “equipment or material especially designed
+or prepared for the processing, use or production of special fissionable
+material” that it similarly exports to a non-nuclear-weapon State for peaceful
+purposes.
+For the practical purpose of drawing up and enforcing national export
+controls and to establish a common understanding amongst exporters
+about the meaning of Article III.2, it was necessary to define in detail
+what was meant by the ‘nuclear material’ referred to in that Article and
+what was meant by “equipment or material especially designed or prepared
+for the processing, use or production of special fissionable material”.
+Accordingly, in 1971, soon after the NPT came into force a group of
+NPT parties, including all those that were leading nuclear exporters,
+met under the chairmanship of Dr. Claude Zangger of Switzerland to draw
+up a ‘trigger list’ — a list of items whose export would trigger IAEA
+safeguards. The Committee agreed on the first version of such a trigger list
+in 1974 (published as IAEA document INFCIRC/209) and has revised
+the trigger list from time to time. The Committee also agreed that the
+importing non-nuclear-weapon State must provide a formal assurance
+that imported items would not be used for making a nuclear explosive
+and that the importer would attach the same safeguards conditions
+and require the same assurances if it re-exported the supplied items. The
+Zangger Committee, as it became known, is not a committee of the IAEA,
+but its list eventually served as the basis for the data on nuclear exports
+that the main exporting States agreed in February 1993 to send to the IAEA
+and for the reports required from all States that accept the Model Additional
+Protocol (INFCIRC/540).
+In 1974 India exploded a nuclear device using nuclear technology transferred for peaceful purposes. A number of parties to the NPT concluded
+that the existing international regime, including the operation of the
+Zangger Committee’s trigger list, would not be sufficient to impede
+further nuclear proliferation, and in 1974 they established the Nuclear
+Suppliers’ Group (NSG) or London Club, so named because of the location of
+
+72
+
+Annex 2
+
+its meetings. In 1977 the NSG agreed on a set of guidelines (published
+in 1978 as IAEA document INFCIRC/254). The guidelines incorporated
+the Zangger trigger list but went a good deal further, recommending
+(amongst other things) that safeguards should be imposed on exported
+nuclear technology, and that members of the NSG should exercise restraint
+on the export of sensitive technologies such as reprocessing, enrichment
+and the means for producing heavy water. The NSG Guidelines also
+included a requirement for the physical protection (against criminal acts) of
+nuclear items transferred internationally and strengthened the Zangger
+Committee’s provisions concerning retransfers of nuclear items.
+The trigger list and the early version of the NSG guidelines called for
+safeguards on exported nuclear items and their products. They did not
+require the importing non-nuclear-weapon State to accept comprehensive
+(‘full scope’) safeguards on all its nuclear material, although non-nuclearweapon States party to the NPT were, of course, required to accept such
+safeguards. (Such a condition of supply had been established by Canada
+in December 1976, and was set by Australia in May 1977 and by the USA
+in 1978.) In the following years other nuclear suppliers began to insist
+on comprehensive safeguards on all nuclear exports to non-nuclearweapon States. The NSG, which had not met since 1978, met again in
+the Hague in 1991 and since then has met every year. In 1992 the NSG
+guidelines were amended to require comprehensive safeguards as a
+condition for the supply of any trigger list item to any non-nuclearweapon State. In 1994 the NSG made its rules governing retransfers more
+rigorous.
+The disclosures that followed the Gulf War also underlined the
+important role that dual use items had played in the evolution of Iraq’s
+nuclear weapon programme (dual use items are items that can be used either
+for a nuclear or for another purpose, or for a variety of non-nuclear purposes,
+and hence do not fall within the scope of Article III.2 of the NPT which relates
+only to “equipment or material especially designed or prepared for the processing, use or production of special fissionable material” (emphasis added)). In
+1992 the NSG guidelines were amplified to include a separate list of more
+than 60 dual use items, and agreement was reached amongst the Member
+States of the NSG on means to ensure that the export of such items would be
+subject to effective controls and licensing.
+By 1998 all major nuclear exporters except China, which was not a Member
+State of the NSG, were following the rules recommended by the NSG.
+
+73
+
+B
+L
+A
+N
+K
+
+PICTURE DESCRIPTIONS
+Page 3. Vienna International Center, headquaters of the International Atomic Energy
+Agency and centre of its activities in international safeguards.
+Page 10. An IAEA inspector performing safeguards activities at a nuclear facility.
+Page 18. An inspector performing environmental sampling of water, a safeguards
+measure which is used in confirming the absence of undeclared nuclear activities in a
+State.
+Page 26. The two model documents for safeguards agreements: INFCIRC/153, “The
+Structure and Content of Agreements Between the Agency and States Required in
+Connection with the Treaty on the Non-Proliferation of Nuclear Weapons”, and
+INFCIRC/540, “Model Protocol Additional to the Agreement(s) Between State(s) and
+the International Atomic Energy Agency for the Application of Safeguards”.
+Page 35. Random pattern on IAEA seal, used to verify that there has been no tampering with the seal.
+Page 49 An IAEA inspector applying an IAEA seal on a cylinder containing uranium
+hexafluoride.
+Page 60. Schematic of a safeguards remote monitoring system for transmitting safeguards information from a facility to IAEA Headquarters by satellite link.
+Page 68. Model of a ploughshare made from a dismantled nuclear weapon component, a gift presented to the IAEA by the Government of South Africa in 1994. It
+symbolizes the commitment of South Africa to the non-proliferation of nuclear
+weapons.
+
+75
+
+

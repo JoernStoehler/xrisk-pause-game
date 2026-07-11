@@ -1,0 +1,561 @@
+# Preventing Regulatory Capture: Special Interest Influence and How to Limit It — Introduction
+
+- **Authors:** Daniel Carpenter & David A. Moss
+- **Published:** Cambridge University Press, 2014
+- **Source URL:** https://assets.cambridge.org/97811070/36086/excerpt/9781107036086_excerpt.pdf
+- **Access:** Freely available excerpt from Cambridge University Press
+
+---
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+Introduction
+Daniel Carpenter and David A. Moss
+
+When markets or regulations fall short of our expectations, observers often
+point to regulatory capture as a culprit. Critics maintain that regulatory
+capture stunts competition and innovation, as firms able to capture their
+regulators effectively wield the regulatory power of the state and can use it as
+a weapon to block the entry or success of other firms. Some critics even blame
+regulatory capture for the outbreak of financial crises and other manmade
+disasters. Recent years provide no exception. In the wake of the global financial crisis of 2007–2009, and following catastrophes ranging from massive
+oil spills to mine explosions, observers seemed to find capture everywhere.
+In explaining the financial crisis, for example, both left and right pounced
+on the reputed capture of state and federal regulatory agencies. Forbes
+columnist Daniel Kauffman maintained that “There are multiple causes
+of the financial crisis. But we cannot ignore the element of ‘capture’ in
+the systemic failures of oversight, regulation and disclosure in the financial
+sector.” Chicago economist Gary Becker pointed to an “economically disastrous example of the capture theory,” one “provided by the disgraceful
+regulation of the two mortgage housing behemoths, Fannie Mae and Freddie Mac, before and leading up to the financial crisis.” After the Deepwater
+Horizon explosion and Gulf Oil spill of spring 2010, conservative columnist
+Gerald P. O’Driscoll wrote in the Wall Street Journal that, “Obviously, regulation failed. By all accounts, MMS operated as a rubber stamp for BP. It is a
+striking example of regulatory capture: Agencies tasked with protecting the
+public interest come to identify with the regulated industry and protect its
+interests against that of the public. The result: Government fails to protect
+the public.”1
+1
+
+Kauffman, “Corruption and the Global Financial Crisis,” Forbes (January 27, 2009);
+Gary S. Becker, “‘Capture’ of Regulators by Fannie Mae and Freddie Mac-Becker,”
+
+1
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+2
+
+Daniel Carpenter and David A. Moss
+
+Capture has thus been alleged – perhaps quite plausibly – to figure significantly in the major human and environmental crises of our time. In the
+aftermath of these crises, capture has also been blamed for severely undercutting efforts at reform. The widespread belief that special interests capture
+regulation, and that neither the government nor the public can prevent this,
+understandably weakens public trust in government and contributes to a
+sense that our political system is not capable of meeting the challenges it
+faces.
+Surely, no system will be able to meet every challenge it encounters, and
+even effective political solutions will often – perhaps always – appear imperfect, as they address multiple and conflicting goals. Just as surely, however,
+political and regulatory solutions have overcome significant challenges in
+the past, from increasing the safety of our food supply and the security of
+our bank accounts to cleaning our air and water and reducing hazards on
+the road.2 Regulatory capture is not always and everywhere the devastating
+problem it is often made out to be. In some cases, good regulation does
+prevail, in spite of the special interests. But what exactly does this imply?
+If we know that capture doesn’t affect all regulation equally, is it possible
+to translate this truism into a deeper understanding of capture – of how
+to prevent it before it occurs and how to detect and eliminate (or at least
+mitigate) it where it is found?
+This volume represents a first step toward answering these questions. It
+brings together a set of authors from a range of disciplines who carefully
+examine contemporary regulation to gain a clearer grasp of what regulatory capture is, where and to what extent it occurs, what prevents it from
+occurring more fully and pervasively, and, finally, to distill lessons for policymakers and the public for how capture can be mitigated and the public
+http://www.becker-posner-blog.com/2011/06/capture-of-regulators-by-fannie-mae-andfreddie-mac-becker.html (accessed July 21, 2011); Gerald P. O’Driscoll, Jr., “The Gulf
+Spill, the Financial Crisis and Government Failure,” Wall Street Journal (June 12, 2010).
+See also James Surowiecki, “The Regulation Crisis,” New Yorker (June 14, 2010).
+2
+In fact, recent polling indicates strong support among Americans for regulation (and
+even for stricter regulation) in key areas. According to a 2011 Harris poll, “The strongest
+support for stricter regulation relates to food safety (73%), executive pay and bonuses
+(70%), the safety of pharmaceuticals (70%), banks and financial services (69%), air
+and water pollution (68%), consumer product safety (67%), and environmental safety
+(66%). Majorities also support more strict regulation of advertising claims (65%), big
+business (64%), and health and safety in the workplace (54%).” See “Do We Want
+More or Less Regulation of Business? It All Depends on What Is Being Regulated,”
+The Harris Poll #76, June 10, 2010, accessed July 23, 2011, www.harrisinteractive
+.com/NewsRoom/HarrisPolls/tabid/447/ctl/ReadCustom%20Default/mid/1508/ArticleId
+/407/Default.aspx.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+Introduction
+
+3
+
+interest protected. Such a comprehensive approach is badly needed. Cries
+of regulatory capture, from all quarters, have been met with little more than
+murmurs from the academy for some time now.3 A surfeit of claims has
+been neither demonstrated nor disproved. Although early models and stylized case studies greatly advanced our understanding of the danger, there
+has been relatively little follow-up in recent decades. Our conception of how
+capture works in practice, and what limits it, remains very far from complete. Indeed, no general volume on regulatory capture has been produced
+in more than three decades, since the 1981 publication of political scientist
+Paul Quirk’s Industry Influence in Regulatory Agencies.4
+The chapters in this volume suggest that regulatory capture is very commonly misdiagnosed and mistreated. Misdiagnosed because the study of
+regulatory capture, in both academic and policy circles, has grown stale
+and ever more detached from practice. All too often, observers are quick to
+see capture as the explanation for almost any regulatory problem, making
+large-scale inferences about agencies and their cultures without a careful
+look at the evidence. At the same time, there appears to be a great deal
+of fatalism – some of it strategic, no doubt – about the impossibility of
+ameliorating or preventing capture, virtually ensuring that the ailment is
+mistreated in many cases. Some or even much of this may be the product of
+3
+
+As Rhode Island Senator Sheldon Whitehouse remarked on the Senate floor in June 2011,
+“regulatory capture isn’t getting the attention it deserves.” “Congressional Record – Senate,
+S4453” (July 7, 2011).
+4
+There have, of course, been numerous synthetic publications and new treatments on regulation, most notably Ian Ayres and John Braithwaite’s Responsive Regulation: Transcending
+the Deregulation Debate (New York: Oxford University Press, 1992); Cass R. Sunstein, After
+the Rights Revolution: Reconceiving the Regulatory State (Chicago: University of Chicago
+Press, 1990). More recent treatments include David Moss, When All Else Fails: Government as the Ultimate Risk Manager (Cambridge, MA: Harvard University Press, 2005);
+W. Kip Viscusi, John M. Vernon, and Joseph E. Harrington, Jr., Economics of Regulation
+and Antitrust (Cambridge, MA: MIT Press, 2005); Edward Balleisen and David Moss,
+eds., Government and Markets: Toward a New Theory of Regulation (New York: Cambridge
+University Press, 2012); Steven Croley, Regulation and Public Interests: The Possibility of
+Good Regulatory Government (Princeton: Princeton University Press, 2008); Marc Eisner,
+Regulatory Politics in Transition (Baltimore, MD: Johns Hopkins University Press, 2000);
+and Cary Coglianese, ed., Regulatory Breakdown: The Crisis of Confidence in U.S. Regulation
+(Philadelphia, PA: University of Pennsylvania Press, 2012).
+The closest theoretical accounts in mathematical modeling occur in sections of JeanJacques Laffont and Jean Tirole’s A Theory of Incentives in Procurement and Regulation
+(Cambridge, MA: MIT Press, 1992) and in Gene Grossman and Elhanan Helpman’s
+Special Interest Politics (Cambridge, MA: MIT Press, 2003). Yet these books do not offer
+specific or general empirical tests of the theory, and the models have limited applicability
+to the kinds of regulatory capture that are most important for public policy discussions.
+We offer further critiques later.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+4
+
+Daniel Carpenter and David A. Moss
+
+highly simplified models – models in which the complete capture of regulators by incumbent firms is all but inevitable. Once such simplified models
+permeated policy discourse, it is perhaps not surprising that capture came
+to be seen as lurking nearly everywhere and that the range of options for
+treating capture became unduly narrowed (sometimes with deregulation
+being seen as the only viable option).
+Consider a few recent “scandals” in the news: financial regulators missing
+investment fraud and toxic loans at the very time their staff was shuttling
+back and forth between Washington and Wall Street; energy regulators
+ignoring the risk of a catastrophic oil spill just as their inspectors and officials
+were cavorting with industry managers; a telecommunications regulator
+making a series of industry-friendly decisions, and just over a year later a
+prominent commissioner who was a pivotal vote in these decisions departing
+the agency to take a high-status vice-presidential position with a regulated
+company.5 In all of these cases, capture certainly seems plausible.
+Plausibility, however, lies quite a distance from proof. If residents of an
+apartment complex witnessed a bitter argument between a father and son
+just days before the father was murdered, investigators might reasonably be
+interested in the son as a potential suspect. Yet evidence of the argument,
+by itself, would hardly be grounds for conviction. Unfortunately, students
+of regulation are not always as disciplined about distinguishing plausibility
+from proof, and claims of capture proliferate so broadly that they are rarely
+tested or examined closely. Even when they are well supported, such claims
+5
+
+See “Madoff Bragged about Profits to SEC while Advising on Oversight,” Huffington Post
+Business (December 16, 2008), accessed October 20, 2012, http://www.huffingtonpost
+.com/2008/12/16/madoff-bragged-about-prof_n_151332.html; Eric Dash, “Post-Mortems Reveal Obvious Risk at Banks,” The New York Times (November 18, 2009),
+accessed October 20, 2012, http://www.nytimes.com/2009/11/19/business/19risk.html?
+pagewanted=all&_r=0; Edward Wyatt, “Promises Made, and Remade, by Firms in S.E.C.
+Fraud Cases,” The New York Times (November 7, 2011), accessed October 20, 2012,
+http://www.nytimes.com/2011/11/08/business/in-sec-fraud-cases-banks-make-and-breakpromises.html?pagewanted=all&_r=0; Noelle Straub, “Interior Probe Finds Fraternizing,
+Porn and Drugs at MMS Office in La.,” The New York Times (May 25, 2010), accessed October 20, 2012, http://www.nytimes.com/gwire/2010/05/25/25greenwire-interior-probefinds-fraternizing-porn-and-dru-45260.html?pagewanted=all; Eric Lipton and John M.
+Broder, “Regulator Deferred to Oil Industry on Rig Safety,” The New York Times (May
+7, 2010), accessed October 20, 2012, http://www.nytimes.com/2010/05/08/us/08agency.
+html; David Hatch, “Baker Stuns with Abrupt Move from FCC to Comcast,” National
+Journal (May 12, 2011), accessed October 20, 2012, http://www.nationaljournal.com/
+tech/baker-stuns-with-abrupt-move-from-fcc-to-comcast-20110511; Edward Wyatt,
+“F.C.C. Commissioner Leaving to Join Comcast,” The New York Times Media Decoder
+Blog (May 11, 2011), accessed October 20, 2012, http://mediadecoder.blogs.nytimes
+.com/2011/05/11/f-c-c-commissioner-to-join-comcast/.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+Introduction
+
+5
+
+are often extended far beyond the available evidence. All too frequently,
+moreover, casual claims of capture are associated with demands that the
+regulatory policy or agency in question be not merely reformed but abandoned. Observers of regulation are often quicker to yelp about the evils of
+capture than to think hard about how it might be prevented or mitigated,
+short of wholesale deregulation.
+This fatalism is seen in the center, the left, and the right of political
+discourse. As recent polling suggests, “This fatalism has over time deeply
+influenced not just scholars and inside-the-beltway cynics, but the broad
+mass of the American electorate. Public trust in the Federal government
+has slid ever lower over the last forty years and as of this writing, stands
+at under 20%.”6 To the extent that assumptions about regulatory capture
+contribute to such fatalism, it is incumbent on us to move beyond simplified
+theories and carefully explore special interest influence with a closer eye on
+practice.
+In this volume, we aspire to improve our understanding of capture,
+making it more rigorous, more thorough, and more practically useful to
+those who want to prevent capture. Capture is real and a genuine threat
+to regulation, we recognize, but regulation is also a fact of modern life
+and undoubtedly necessary in some circumstances to protect the public
+and stave off catastrophe. The critical question is whether capture, where
+it exists, can be mitigated or prevented. We believe the evidence strongly
+suggests that the answer is yes, and that better study of regulation and special
+interest influence can show us how to limit capture and make regulatory
+governance a more useful tool for accomplishing public ends.
+CAPTURE AND THE ACADEMY
+
+The principal problems with contemporary capture scholarship boil down
+to the link between theory and evidence. As the financial crisis of 2007–
+2009 unfolded, we began to notice some common features of the dozens (if
+not hundreds) of claims being made about captured regulatory agencies.
+The claims had the benefit of seeming to resonate with the unfolding story,
+yet a disturbing commonality among them was a lack of solid or thorough
+evidence. Unfortunately, much the same can be said about a large proportion
+of capture scholarship – that good stories, rooted in elegant models, too
+often take the place of rigorous evidence.
+6
+
+“Public Trust in Government,” Pew Research Center, April 18, 2012, accessed October 21,
+2012, http://people-press.org/2010/04/18/public-trust-in-government-1958–2010/.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+6
+
+Daniel Carpenter and David A. Moss
+
+Some of the earliest claims of capture within the academy came from
+scholars who were reviewing the early history of government regulation,
+and even then there was a tendency to rely heavily on especially juicy tidbits
+from the historical record. In 1892, Richard Olney, a prominent corporate
+attorney and soon-to-be attorney general, advised Charles E. Perkins, a
+railroad president, against seeking the repeal of the Interstate Commerce
+Act, noting that:
+The [Interstate Commerce] Commission, as its functions have now been limited
+by the courts, is, or can be made, of great use to the railroads. It satisfies the
+popular clamor for a government supervision of railroads, at the same time that
+that supervision is almost entirely nominal. Further, the older such a Commission
+gets to be, the more inclined it will be found to take the business and railroad view
+of things. It thus becomes a sort of barrier between the railroad corporations and
+the people and a sort of protection against hasty and crude legislation hostile to
+railroad interests. . . . The part of wisdom is not to destroy the Commission, but to
+utilize it.
+
+Olney’s remark has been repeatedly quoted and cited as evidence that even
+the earliest national regulatory agencies in the United States were captured.
+Its language inspired the work of Bernstein and Huntington, and it was
+rehearsed on the floor of the United States Senate.7 It is critical to understand, however, that Olney’s letter, although certainly powerful, provides
+no direct evidence that the Commission did in fact “take the business and
+railroad view of things.” Rather, it reveals only that one potentially interested observer predicted that the Interstate Commerce Commission (ICC)
+would take such a view and that it could ultimately be harnessed by the
+railroads. Similarly, well before Stigler penned his famous essay, “The Theory of Economic Regulation,” another economist later identified with the
+Chicago school, Ronald Coase, surveyed the early history of federal broadcast regulation and suggested it had been poorly designed and conceived.
+Although Coase’s seminal paper on the Federal Communications Commission (FCC) did not claim that broadcast regulation had been captured, his
+analysis appears to have set the stage for many of his followers to diagnose
+7
+
+Richard Olney to Charles E. Perkins, December 28, 1892, quoted in Marver Bernstein,
+Regulating Business by Independent Commission (Princeton: Princeton University Press,
+1955), 265. For an early citation to this remark, consult Matthew Josephson, The Politicos
+(New York: Harcourt Brace, 1938), 526. For a review of the intellectual history of the
+uses to which Olney’s letter has been put, among other claims, see Eduardo Federico
+Canedo, “The Rise of the Deregulation Movement in Modern America, 1957–1980” (PhD
+dissertation, Columbia University, 2008). Olney’s letter constituted a core reference and
+piece of evidence for some of the founding scholars of capture theory, including Bernstein
+and Huntington.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+Introduction
+
+7
+
+capture rather too easily, in some cases after only a cursory look at the
+historical evidence.8
+These older claims about capture have been succeeded by scholarly arguments that make vast inferences from statistical correlations. Having claimed
+to show by statistical association that the relative wage and profit effects
+of labor safety and environmental regulation fell more heavily on small
+firms and industries in Southern states, economists Ann Bartel and Lacy
+Glenn Thomas declared this to be a case of “predation by regulation”: “We
+have shown that regulation has become a predatory device that indeed is
+utilized to enhance the wealth of predators and to reduce the wealth of
+rivals.”9 Thomas later claimed to show a similar impact for food and drug
+regulation.10 Similarly, in examining the stability of the cotton dust standards implemented by the Occupational Safety and Health Administration
+(OSHA), economist W. Kip Viscusi wrote in 1992:
+now that the large firms in the industry are in compliance, they no longer advocate
+changes in the regulation. Presumably, the reason is that the capital costs of achieving
+compliance represent a barrier to the entry of newcomers into the industry. This is
+simply one more illustration of the familiar point that surviving firms often have a
+strong vested interest in the continuation of a regulatory system.
+8
+
+Ronald Coase, “The Federal Communications Commission,” Journal of Law and Economics
+2 (October 1959): 1–40. On later claims that broadcast regulation was captured from the
+beginning, see especially Thomas W. Hazlett, “The Rationality of U.S. Regulation of the
+Broadcast Spectrum,” Journal of Law and Economics 33 (1990): 133–75, and Hazlett,
+“Assigning Property Rights to Radio Spectrum Users: Why Did FCC License Auctions
+Take 67 Years?” Journal of Law and Economics 41 (2) (October 1998): 529–76. For an
+evaluation of the evidence relating to the alleged capture of early broadcast regulation, see
+Chapter 8, “Capturing History,” by Moss and Decker in this volume.
+9
+In a revealing rhetorical defense of these conclusions, Bartel and Thomas argued that their
+statistical associations were due directly to congressional calculations of the time. “We
+recognize that public interest theorists will object to our characterization of OSHA and
+EPA as predatory. From the viewpoint of these scholars, regulations inevitably have heterogeneous effects, and indirect effects are entirely innocent by-products of the public pursuit
+of work-place safety and environmental quality. We explicitly reject any such defense of
+OSHA and EPA behavior. . . . [W]e . . . find ample evidence of OSHA and EPA actions that
+unnecessarily exacerbate or even artificially create indirect effects for political purposes
+(what we call enforcement asymmetries). Furthermore, despite mounting evidence of the
+inefficiency of OSHA and EPA, Congress has continued to be uninterested in adequate
+monitoring of regulatory effect, much less in regulatory reform. All this suggests that indirect effects are far more than innocent by-products – indeed, they may well be the primary
+political concern.” Ann P. Bartel and Lacy Glenn Thomas, “Predation through Regulation:
+The Wage and Profit Effects of the Occupational Safety and Health Administration and the
+Environmental Protection Agency,” Journal of Law and Economics 30 (2) (October 1987):
+239–64.
+10
+Lacy Glenn Thomas, “Regulation and Firm Size: FDA Impacts on Innovation,” The RAND
+Journal of Economics 21 (4) (Winter, 1990): 497–515.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+8
+
+Daniel Carpenter and David A. Moss
+
+The stability of any law or regulation, and the lack of opposition to
+these policies, could be due to capture, but also potentially to inertia, to the
+institutions in American politics (filibuster, bicameralism, presidential veto,
+the Administrative Procedures Act) that make policy change difficult, or to
+broad public support for the regulations. Yet Viscusi is quick to highlight
+a well-established capture argument – incentives for creating or preserving
+entry barriers to competitors – as the explanation. We believe that far more
+evidence is needed to make an accurate diagnosis of capture.11
+In thinking this way, economists, legal scholars, and political scientists
+have been following the lead of George Stigler, who argued that empirical
+analyses of the operation and effect of regulation should be used to make
+inferences about the original purposes of its design:
+The theory [of economic regulation] tells us to look, as precisely and carefully as
+we can, at who gains and who loses, and how much, when we seek to explain a
+regulatory policy. . . . It is of course true that the theory would be contradicted if,
+for a given regulatory policy, we found the group with larger benefits and lower
+costs of political action being dominated by another group with lesser benefits
+and higher cost of political action. . . . The first purpose of the empirical studies
+is to identify the purpose of the legislation! The announced goals of a policy are
+sometimes unrelated or perversely related to its actual effects, and the truly intended
+effects should be deduced from the actual effects.12
+
+As Carpenter suggests in Chapter 3 (Detecting and Measuring Capture),
+Stigler’s rather casual standard of causal inference has been uncritically
+embraced by a subsequent generation of economists. With little circumspection on the limits of drawing broad theoretical conclusions from observational data analysis, scholars have repeatedly proclaimed empirical triumphs
+for capture theory after data analysis of select cases or highly aggregated
+cross-national datasets. Roger Noll correctly wrote of “the lurking danger
+of tautology, i.e., of attributing causality to an inevitable consequence of
+any public policy action. It is impossible to imagine that regulation could
+be imposed without redistributing income. Hence, a look for winners in
+the process – and organizations that represent them – is virtually certain to
+succeed.”13
+11
+
+W. Kip Viscusi, Fatal Tradeoffs (New York: Oxford University Press, 1992), 177.
+George Stigler, “Supplementary Note on Economic Theories of Regulation,” in The Citizen
+and the State (Chicago: University of Chicago Press, 1975), 140, emphasis in original.
+13
+Roger G. Noll, “Economic Perspectives on the Politics of Regulation,” in Handbook of
+Industrial Organization, vol. II, eds. Richard Schmalensee and Robert D. Willig (Amsterdam: North Holland, 1989), 1276–77. For a mathematical demonstration of the invalidity
+of Stigler’s principle of inference, consult Daniel Carpenter, “Protection without Capture:
+12
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+Introduction
+
+9
+
+Perhaps the deepest problem with much of the research on regulatory
+capture is not merely its tendency to overstate the evidence for capture,
+but its lack of nuance in describing how and to what degree capture works
+in particular settings. As scholars in law, political science, economics, and
+other areas of policy have noted, sometimes almost in passing, capture often
+prevails in a matter of degrees, in some agencies or regulations more visibly
+and robustly, in others less so.14 The regulatory world is one of shades of gray.
+Yet capture scholarship does not typically discriminate among these shades
+in ways that enable informed advice on the marginal value of regulatory (or
+deregulatory) policy options. Existing treatments of regulatory capture give
+us too little sense of the sources or patterns of variation in capture, and they
+fail to instruct readers as to how, given this variation, capture ought to be
+prevented or minimized.
+All of this is not to say that capture scholarship has failed to progress
+beyond the seminal contribution of George Stigler in 1971.15 Path-breaking
+work on capture preceded Stigler, and outstanding work has followed him as
+well.16 In fact, economic models of interest group politics have evolved considerably since 1971, allowing for the interplay of multiple groups exerting
+influence on policymakers and multiple motivations on the part of policymakers themselves. However, the essential idea that policymakers are for
+sale, and that regulatory policy is largely purchased by those most interested
+and able to buy it, remains central to the literature.17 And far too much of
+Product Approval by a Politically Responsive, Learning Regulator,” American Political
+Science Review (98) (4) (November 2004): 613–31.
+14
+See especially Stephen Breyer, Regulation and Its Reform (Cambridge, MA: Harvard University Press, 1982).
+15
+George Stigler, “The Theory of Economic Regulation,” Bell Journal of Economics and
+Management Science 2 (1) (Spring 1971): 3–21.
+16
+Several of the pioneering works include Samuel Huntington, “The Marasmus of the
+ICC: The Commission, the Railroads, and the Public Interest,” Yale Law Journal 614
+(1952): 467–509; Marver Bernstein, Regulating Business; and Gabriel Kolko, The Triumph
+of Conservatism: A Reinterpretation of American History: 1900–1916 (New York: Free Press,
+1963). Major contributions that built on – and extended – Stigler’s model include Sam
+Peltzman, “Toward a More General Theory of Regulation,” Journal of Law and Economics
+19 (2) (August 1976): 211–40; Gary S. Becker, “A Theory of Competition among Pressure
+Groups for Political Influence,” Quarterly Journal of Economics 98 (3) (August 1983):
+371–400; and Gene M. Grossman and Elhanan Helpman, “Protection for Sale,” American
+Economic Review 84 (4) (September 1994): 833–50. See also Jean-Jacques Laffont and Jean
+Tirole, “The Politics of Government Decision Making: A Theory of Regulatory Capture,”
+Quarterly Journal of Economics 106 (4) (1991): 1089–127.
+17
+See Ernesto Dal Bó and Rafael Di Tella, “Capture by Threat,” Journal of Political Economy
+111 (5) (2003): 1123–54; David Moss and Mary Oey, “The Paranoid Style in the Study of
+American Politics,” in Balleisen and Moss, Government and Markets, 260.
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+Cambridge University Press
+978-1-107-03608-6 - Preventing Regulatory Capture: Special Interest Influence and
+How to Limit it
+Edited by Daniel Carpenter and David A. Moss
+Excerpt
+More information
+
+10
+
+Daniel Carpenter and David A. Moss
+
+the relevant empirical work has sought to confirm this thesis (often rather
+casually), rather than to test it or discover its limits.
+Beyond this, arguments stipulating capture often carry policy prescriptions. They move quickly from “is” to “ought,” and they are especially likely
+to recommend deregulation. This move – from the postulated fact of capture to strong arguments for the dismantling or avoidance of regulation –
+was a central stratagem of Stigler, and many specialists have since followed
+it. This is especially true of studies – such as the article “The Regulation
+of Entry” (2002) by former World Bank economist Simeon Djankov and
+coauthors – that posit two possible states of the world: “good” public interest
+regulation versus “bad” captured regulation. Notwithstanding the obvious
+fact that reality could fall anywhere between these two extremes, Djankov
+and coauthors proceeded from the premise that, if the empirical evidence
+on entry regulation appears consistent with the existence of the bad regulatory world, then such regulation must be bad worldwide. On the basis of
+aggregate-level data and the authors’ starting premise, they concluded that
+the regulation of entry “does not yield visible social benefits,” and that the
+“principal beneficiaries” of strict entry regulations “appear to be the politicians and bureaucrats themselves.” If such regulations benefit the powerful
+few at the expense of the broader public, then it seems only a very short
+leap to the conclusion that the world would be better off without such regulation. Although no explicit leap of this sort was made within the article,
+Djankov’s subsequent actions provide an especially revealing example of the
+move from analysis to advocacy. In the years following publication of “The
+Regulation of Entry,” Djankov and his World Bank colleagues established a
+highly structured, Bank-funded deregulatory initiative that recommended
+and tracked reforms worldwide with the intent of easing barriers to the
+creation or launch of a new business.18
+As a result of these trends in the literature, we now know much more
+about how regulation can fail due to capture than about the conditions
+under which regulation sometimes succeeds, or can be made to succeed,
+when capture is constrained. What is needed, we believe, is a new wave of
+18
+
+Simeon Djankov, Rafael La Porta, Florencio Lopes-de-Silanes, and Andrei Shleifer, “The
+Regulation of Entry,” Quarterly Journal of Economics 117 (1) (February 2002): 1–37,
+quotes from p. 35. More generally, see Andrei Shleifer and Robert Vishny, The Grabbing
+Hand: Government Pathologies and Their Cures (Cambridge, MA: Harvard University Press,
+1999). The World Bank’s Doing Business Project launched in 2002, the year of the Djankov
+et al. publication, and in addition to running deregulation seminars for policymakers in
+developing and industrialized countries, it also provides individualized national tracking
+of deregulatory reforms and even simulators for policymakers to examine the possible
+effects of deregulation (see http://www.doingbusiness.org, accessed July 28, 2011).
+
+© in this web service Cambridge University Press
+
+www.cambridge.org
+
+
