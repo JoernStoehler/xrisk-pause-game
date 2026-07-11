@@ -64,8 +64,9 @@ Keep the brief outcome-first and compact:
   decision-relevant content on real small phones, with a clear focal action and
   without nuance being hidden in tiny or dense text?
 - **Minimum context:** the rendered artifact at target viewports, its immediate
-  task/copy, [simple-spike evidence](../prototype/SIMPLE_MOBILE_SPIKE.md), and
-  the relevant criterion in the [success model](../product/SUCCESS_MODEL.md).
+  task/copy, the relevant criterion in the
+  [success model](../product/SUCCESS_MODEL.md), and, when comparison is useful,
+  rejected spike evidence on branch `codex/simple-mobile-spike` at `7f23bc2`.
 - **Evidence:** real-device observation with target humans, text size and zoom
   behavior, scan path, skipped text, comprehension, and density by state.
 - **Non-goals:** proving interaction accessibility, domain truth, game feel, or
@@ -74,6 +75,28 @@ Keep the brief outcome-first and compact:
 - **Verdict scope:** readability/editorial fitness for named states, devices,
   settings, and audience. The current public UI is rejected in this lane despite
   prior semantic and technical passes.
+
+## Visual craft and appeal
+
+- **Core question:** Does the artifact's palette, typography, imagery, portrait
+  treatment, spacing, composition, motion, and finish create a coherent and
+  desirable mobile game at the intended quality bar?
+- **Minimum context:** the rendered artifact at representative phone and desktop
+  viewports, its intended tone and audience, and the visual-craft criterion in
+  the [success model](../product/SUCCESS_MODEL.md). For comparative review, the
+  retired GPT-5.5 product is recoverable at
+  `0c5262c34c423cc62b68124d30d002b4886b879f`; use it as a reference, not an
+  approved target.
+- **Evidence:** independent visual critique, target-human first impression,
+  hierarchy and composition at real size, consistency across states, perceived
+  trust and production value, desire to continue, and willingness to share.
+- **Non-goals:** settling readability, accessibility, narrative effectiveness,
+  domain truth, or fun. A visually attractive screenshot does not establish a
+  usable interaction, and readable text does not establish visual appeal.
+- **Verdict scope:** visual craft for the named artifact, states, viewports, and
+  audience. The integrated candidate at `1c6f376` is rejected in this lane;
+  Jörn's preference for the older product's simplicity does not approve its
+  portraits or require restoring its architecture.
 
 ## Interaction and accessibility
 

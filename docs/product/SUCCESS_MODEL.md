@@ -58,7 +58,7 @@ their reasoning about unfamiliar cases, this teaching strategy weakens.
 | **Fixed architecture premise** | Mobile simplicity is architectural: one focal decision, a small known-state surface, and progressive disclosure. | Complexity must be compressed in the model and prose, not merely squeezed into smaller type. |
 | **Product hypotheses** | Director identification, consequential choices, receipts, callbacks, retrospectives, and replay can create pleasure, comprehension, transfer, and useful reasoning. Premise-qualified audiences and facilitators may carry that reasoning into discourse or policy contexts. | Each claim remains defeasible until the relevant human or field evidence exists. |
 | **Experiments** | Short episodes, same-world comparison, progressive depth, facilitated use, and instrumented sharing are bounded ways to discriminate among product hypotheses. | A diagnostic world tests a mechanism; it is not a forecast or evidence of demand. |
-| **Current evidence** | The symbolic model and prototype preserve important semantic boundaries, and automated/technical checks passed. The current public UI is nevertheless rejected: rendered phone views use tiny type and high editorial density. | Semantic correctness and technical conformance did not establish public usability. Treat this as a product failure requiring a new human-facing artifact and fresh review, not polish on an accepted interface. |
+| **Current evidence** | The symbolic model and prototype preserve important semantic boundaries, and automated/technical checks passed. The current public UI is nevertheless rejected: phone views use tiny type and high editorial density, while the palette, typography, portraits/images, composition, and overall production quality also fail the intended public bar. | Semantic correctness, technical conformance, and a narrow readability review did not establish public usability or visual appeal. Treat this as a product failure requiring a new human-facing artifact and fresh review, not polish on an accepted interface. |
 
 Underlying claim statuses remain distinct: source fact, Jörn judgment, project
 inference, diagnostic fixture, playability transform, and approved player-facing
@@ -75,6 +75,7 @@ strong result in one cannot silently compensate for failure in another.
 | **Mission and model fidelity:** play makes treaty adequacy and operation causally legible without fake neutrality or magical institutional control. | The game exists to improve reasoning about a potentially survival-relevant intervention, not merely to wear its setting. | Players learn that signing, monitoring, or a Director's order automatically controls hardware; or the most engaging design requires reopening extinction as a balanced lifestyle choice. |
 | **Claim and epistemic integrity:** truth, observation, evidence, belief, finding, authority, implementation, and retrospective knowledge remain distinct; uncertainty and claim status are honest. | False confidence about verification or safety could make discourse worse, while unlabelled fixtures turn playability choices into apparent forecasts. | Players infer omniscience, treat branch frequency as likelihood, or repeat a compressed claim that Jörn or sources reject. |
 | **Mobile readability and editorial simplicity:** the primary path is comfortably readable on real small phones at ordinary settings, with only decision-relevant text in the moment. | Mobile-first is an access and product-shape constraint; unreadable correctness has no public effect. | Target users strain, skip, zoom, lose the focal action, or describe the experience as dense even though it technically fits. The current public UI already supplies this counterevidence. |
+| **Visual craft and appeal:** palette, typography, imagery, portrait treatment, spacing, composition, motion, and finish create a coherent, inviting Director fantasy at mobile scale. | First impressions affect trust, desire to continue, sharing, and whether the artifact feels like a game worth recommending rather than an internal policy dashboard. Readability alone cannot establish this. | Target users describe the artifact as ugly, generic, amateur, tonally wrong, visually incoherent, or not worth sharing even when they can read and operate it. The current public UI already supplies this counterevidence. |
 | **Interaction and accessibility:** players can perceive, navigate, understand, and act through supported input and assistive modes without losing essential state. | Excluding people or making consequential actions error-prone undermines reach, evidence quality, and the Director fantasy. | Real keyboard, screen-reader, low-vision, limited-dexterity, touch, or device use blocks decisions or changes the information available. |
 | **Game feel and agency:** choices create understandable leverage, uncertainty, recovery, and delayed consequences; players experience pleasure beyond being taught. | Attention and voluntary continuation are required for the mechanism model to become felt knowledge rather than homework. | Players see a fixed assay, opinion quiz, paperwork, arbitrary punishment, or choices whose visible outcomes barely differ. |
 | **Narrative and emotional appeal:** people and crises make the institution worth caring about without turning advisors into truth meters or using extinction as empty spectacle. | Emotion supports attention, memory, sharing, and identification with active crisis management. | Players feel detached, manipulated, fatalistic, or unable to recount a consequential human story from play. |
@@ -94,6 +95,9 @@ one. It should not survive merely because it is written here.
 - **Conformance as approval:** passing semantic, accessibility-automation,
   screenshot, build, or deployment checks while the human experience remains
   unreadable, dense, confusing, or dull.
+- **Legibility as visual approval:** readable type and a clear focal action
+  accepted as sufficient while palette, typography, imagery, composition,
+  tone, or finish still makes the product undesirable or unshareable.
 - **Learning theatre:** correct answers immediately after play, vocabulary
   recall, or debrief agreement without novel-case or delayed transfer; beating
   no intervention while failing to beat a cheaper prose or facilitated case.
@@ -120,12 +124,20 @@ The project has a typed opening slice, an intended symbolic model, draft expert
 synthesis, a serious game-design portfolio, and a mobile interaction spike. It
 has structural evidence that the central distinctions can be represented and
 technical evidence that the prototype renders and operates. It does **not** yet
-have evidence of fun, comfortable mobile reading, cold-use comprehension,
-transfer, demand, sharing, target-audience fit, institutional reuse, or policy
-effect. The current [320×568 decision](../prototype/screenshots/decision-320x568.png)
-and [390×844 decision](../prototype/screenshots/decision-390x844.png) screenshots,
-together with current product feedback, contradict the spike's favorable visual
-conclusion that the distinctions fit this card rhythm as a public baseline.
+have evidence of fun, comfortable mobile reading, visual appeal, cold-use
+comprehension, transfer, demand, sharing, target-audience fit, institutional
+reuse, or policy effect. The rejected spike and its screenshots remain
+inspectable on branch `codex/simple-mobile-spike` at commit `7f23bc2`; the
+integrated candidate remains on `codex/integrated-mobile-candidate` at
+`1c6f376`. Jörn's 11 July product feedback contradicts the spike's favorable
+visual conclusion: the failure includes density and type size **and** palette,
+typography, portraits/images, composition, and perceived production value.
+
+The retired GPT-5.5 product at `0c5262c34c423cc62b68124d30d002b4886b879f`
+is a reference because Jörn preferred its mobile simplicity and overall UI/UX,
+not an approved design to restore wholesale. Its portraits and other visual
+choices still require fresh criticism; the old architecture remains quarry,
+not authority.
 
 The largest open questions are:
 
@@ -155,7 +167,7 @@ product approval.
 | --- | --- | --- |
 | **Coherent concept** | The premise, causal model, claims, player authority, and intended lesson survive mission/model and claim/epistemic challenge; Jörn approves expert-grounded content promoted toward players. | Readability, fun, learning, demand, or feasibility of the full product. |
 | **Reviewable prototype** | A rendered, instrumentable artifact on representative desktop and mobile surfaces; code/model boundaries and major interaction states are inspectable. | Public usability. The current spike reached much of this gate while failing the next one. |
-| **Human-usable slice** | Fresh target humans on real devices can read, enter, act, and understand the immediate feedback in silent first use; relevant disabled users can complete the path. | Enjoyment, transfer, retention, or broad accessibility from a small formative sample. |
+| **Human-usable slice** | Fresh target humans on real devices can read, enter, act, understand the immediate feedback, and find the visual presentation credible enough to continue in silent first use; relevant disabled users can complete the path. | Enjoyment, transfer, retention, broad accessibility, or shareability from a small formative sample. |
 | **Promising game loop** | Target humans report and demonstrate agency, fair uncertainty, emotional engagement, a satisfying stop, and voluntary interest in continuing; recurring failure modes are understood. | Learning transfer, demand, or campaign-scale durability. |
 | **Learning and transfer candidate** | Unprompted causal explanation, differently worded novel-case reasoning, misconception checks, appropriate uncertainty, and delayed evidence improve without material false beliefs across relevant cohorts and against a credible cheaper alternative. | Public-discourse change, policy influence, or real-world treaty adequacy. |
 | **Distribution candidate** | Qualified acquisition, recipient engagement, repeat use, and facilitated/institutional reuse are observed with channel, role, and use-context differences preserved. A voluntary game, explainer, and facilitated case may receive different verdicts. | Treaty adoption, operational influence, market size, or virality. Facilitator compliance does not establish voluntary demand. |
