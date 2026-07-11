@@ -1,0 +1,4 @@
+interface:
+  display_name: "Orchestrate Project"
+  short_description: "Coordinate priorities, agents, and handoffs"
+  default_prompt: "Use $orchestrate-project to coordinate this open-ended, multi-stream project task."
