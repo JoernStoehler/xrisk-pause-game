@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { buildGoldenTraces } from "../src/model/golden.ts";
 
 test("golden traces preserve their intended causal lessons", () => {

@@ -49,11 +49,6 @@ RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && rm -rf /var/lib/apt/lists/* \
     && node -v && npm -v
 
-# Install uv globally. Pin for reproducibility and parity with codex-pkm.
-ENV UV_INSTALL_DIR=/usr/local
-ENV UV_VERSION=0.5.14
-RUN curl -LsSf https://astral.sh/uv/${UV_VERSION}/install.sh | sh
-
 # Playwright system dependencies for Chromium.
 # Uses the playwright CLI to install the correct system packages for this OS.
 RUN npx -y "playwright@${PLAYWRIGHT_VERSION}" install-deps chromium

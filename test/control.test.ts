@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { aggregateCoordinatedResources, classifyResourcePool } from "../src/model/control.ts";
 import { openingFixture } from "../src/model/fixtures.ts";
 

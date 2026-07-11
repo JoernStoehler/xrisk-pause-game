@@ -3,6 +3,9 @@
 
 set -euo pipefail
 
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$REPO_ROOT"
+
 echo "[post-create] Local devcontainer post-create..."
 
 sudo mkdir -p \
@@ -33,6 +36,7 @@ if command -v npm >/dev/null 2>&1; then
   npm config set prefix "${HOME}/.local"
   npm config set cache "${HOME}/.cache/npm"
   npm install -g @openai/codex
+  npm ci
 fi
 
 # Trust the project root so Codex loads repo-local .codex/ and .agents/ files.
@@ -49,8 +53,8 @@ fi
 # Use repo-local git hooks (gitleaks pre-commit secret scanner)
 git config core.hooksPath .githooks
 
-# Install the browser binary for the package version in node_modules if needed.
-npx -y playwright@1.60.0 install chromium
+# Install the browser binary matching the locked project package if needed.
+npx playwright install chromium
 
 cat > ~/.tmux.conf << 'TMUXCONF'
 set -g mouse on
@@ -85,5 +89,4 @@ echo "[post-create] codex: $(codex --version 2>/dev/null || echo 'not found')"
 echo "[post-create] gh: $(gh --version 2>/dev/null | head -1 || echo 'not found')"
 echo "[post-create] node: $(node -v 2>/dev/null || echo 'not found')"
 echo "[post-create] npm: $(npm -v 2>/dev/null || echo 'not found')"
-echo "[post-create] uv: $(uv --version 2>/dev/null || echo 'not found')"
 echo "[post-create] Local post-create complete."

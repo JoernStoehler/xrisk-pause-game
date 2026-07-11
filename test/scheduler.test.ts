@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { EventQueue } from "../src/model/scheduler.ts";
 
 test("event queue resolves races by timestamp, not insertion order", () => {

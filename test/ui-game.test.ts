@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { createGame, configureFixture, reduceGame } from "../src/ui/game.ts";
 
 test("cold path skips the hosted-service detail card", () => {

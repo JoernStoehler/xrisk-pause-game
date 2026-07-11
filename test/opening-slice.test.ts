@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { firstDivergence, runOpeningSlice } from "../src/model/engine.ts";
 import { diagnosticParameters, openingFixture } from "../src/model/fixtures.ts";
 import { namedDraw } from "../src/model/random.ts";

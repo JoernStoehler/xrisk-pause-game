@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { authorityActions, resolveAuthority, type AuthorityGate } from "../src/model/authority.ts";
 
 const gates = (...values: AuthorityGate[]) => new Set(values);

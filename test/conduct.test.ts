@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import test from "node:test";
+import { test } from "vitest";
 import { evaluateViolationDecision } from "../src/model/conduct.ts";
 import { runOpeningSlice } from "../src/model/engine.ts";
 import { diagnosticParameters, openingFixture } from "../src/model/fixtures.ts";
