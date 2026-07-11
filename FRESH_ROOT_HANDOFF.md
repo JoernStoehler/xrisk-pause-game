@@ -82,7 +82,7 @@ Branch names are working pointers; full hashes identify the recorded state.
 | `codex/success-model` | `4336e8e` | Useful challengeable success/review model, but lengthy and incomplete on visual art direction. Treat as proposal. |
 | `codex/project-control` | `4336e8e` base | Interrupted attempt; one read-only child audit exists in the old session log, no committed artifact. |
 | `codex/fresh-root-handoff` | this branch | Handoff and restored portable skills only. |
-| `codex/handoff-evidence-options` | `c0fc996` | Curated research, product options, game-design hypotheses, and corrected success/review model; contains no rejected prototype code or assets. Preferred evidence checkout for the next root. |
+| `codex/handoff-evidence-options` | `7d9bf45` | Curated research, product options, game-design hypotheses, corrected success/review model, and this postmortem; contains no rejected prototype code or assets. Preferred evidence checkout for the next root. |
 
 Cloudflare production remains `main`. The rejected review aliases may still be
 publicly reachable and `noindex`; their existence is not product readiness.
