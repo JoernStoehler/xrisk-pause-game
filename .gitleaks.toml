@@ -1,12 +1,5 @@
 # Custom gitleaks rules for patterns not in the default ruleset.
 
-# fal.ai API keys: UUID:hex format (e.g. "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-[[rules]]
-id = "fal-ai-api-key"
-description = "fal.ai API Key"
-regex = '''[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}:[0-9a-f]{32}'''
-keywords = []
-
 # Generic high-entropy secrets assigned to variables named *KEY*, *SECRET*, *TOKEN*, *PASSWORD*
 [[rules]]
 id = "generic-credential-assignment"

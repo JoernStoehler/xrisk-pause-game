@@ -1,0 +1,627 @@
+meta:
+  id: isia_game_symbolic_model_v0
+  maturity: reconstructed_unverified
+  status: [uncalibrated]
+  purpose: >-
+    Human-readable specification of the simplified playable engine. This is a
+    review and conformance artifact, not executable code and not the expert model.
+  time_resolution:
+    representation: event_driven_with_calendar_time
+    opening_window: days_to_months
+    later_window: months_to_decades
+    note: A turn need not consume a fixed duration.
+
+world_sample:
+  timing: once_at_run_start
+  conditioning: sampled_after_fixed_scenario_premises_are_selected
+  persistence: persistent_within_run
+  correlation: conditional_dependencies_and_shared_latents
+  prohibition: do_not_redraw_fundamental_difficulty_after_each_decision
+  families:
+    - id: H_CAP
+      name: capability production
+      status: [included, uncalibrated]
+      contains:
+        - within_paradigm_effective_compute_to_general_capability_shape
+        - ragged_domain_profiles_and_phase_changes
+        - algorithmic_efficiency_process
+        - research_labor_and_AI_assistance_productivity
+        - paradigm_shift_opportunities
+      constraints:
+        - benchmark_regressions_are_mostly_measurement_or_distribution_effects
+        - latent_learning_progress_is_persistent_not_independently_redrawn
+        - qualitative_prerequisites_can_remain_at_high_effective_compute
+
+    - id: H_REINVEST
+      name: cognitive reinvestment and RSI
+      status: [included, uncalibrated, unresolved]
+      contains:
+        - prerequisite_task_graphs
+        - candidate_improvement_portfolios
+        - serial_depth_and_parallelism
+        - evaluation_error_and_false_leads
+        - improvement_carrier_transitions
+        - fizzle_bottlenecks
+        - access_acquisition_and_response_races
+      route_families:
+        - internal_cognitive_procedure
+        - explicit_machine_learning_theory_or_code
+        - trained_successor
+        - human_AI_research_lab
+        - hardware_or_systems_improvement
+        - economic_or_distributed_reinvestment
+      carrier_scopes:
+        - context_local
+        - communicated
+        - scaffold_persistent
+        - successor_inherited
+      prohibition: no_single_universal_RSI_threshold_or_geometric_multiplier
+
+    - id: H_CONTROL
+      name: compute control and evasion
+      status: [included, uncalibrated]
+      contains:
+        - site_discoverability
+        - monitor_and_sensor_reliability
+        - compute_memory_network_and_power_substitution
+        - distributed_training_feasibility
+        - component_diversion_and_reconstruction
+        - enforcement_response_latency
+        - insider_and_state_actor_concealment_skill
+
+    - id: H_POL
+      name: political and institutional dynamics
+      status: [included, uncalibrated]
+      contains:
+        - actor_specific_beliefs_preferences_skills_and_authority
+        - public_and_elite_opinion_responsiveness
+        - coalition_and_constituency_formation
+        - capture_and_policy_feedback
+        - bureaucratic_reliability_and_normal_accidents
+        - crisis_continuity_and_issue_linkage
+        - bargaining_misperception_and_higher_order_beliefs
+        - enforcement_legitimacy_and_backlash
+      prohibition: no_single_treaty_health_meter_as_complete_causal_state
+
+    - id: H_SAFE
+      name: safety tractability and recognition
+      status: [included, uncalibrated, unresolved]
+      contains:
+        - candidate_specific_objective_adequacy
+        - threat_model_coverage
+        - evidence_relevance_and_manipulability
+        - evaluator_school_competence_and_correlation
+        - human_recognizability_of_objective_adequacy
+        - institution_building_beyond_historical_precedent
+        - calibrated_pessimism_and_wishful_error_rejection
+        - foundational_research_secrecy_labor_and_political_legibility
+        - designed_cognition_route
+        - control_assisted_learned_system_route
+        - enhanced_human_route
+      current_route_weighting: >-
+        No presently brainstormed route is judged adequate. Enhanced or uploaded
+        humans are Jörn's leading speculative route; other routes remain live
+        ontology branches rather than equally weighted candidates.
+      prohibition: no_generic_labor_prestige_or_route_label_to_alignment_adequacy_meter
+
+scenario_initialization:
+  mainline_pause_founded:
+    status: [included, uncalibrated]
+    fixed_premises:
+      - United_States_and_China_are_founding_signatories
+      - ISIA_exists_and_the_player_is_its_Director_General
+      - both_top_leaderships_initially_accept_the_need_for_a_frontier_training_pause
+      - known_frontier_sites_can_be_approached_immediately
+    unresolved_opening_choices:
+      - domestic_implementation_and_reciprocal_inspection
+      - inference_policy
+      - custody_consolidation_and_resource_coverage
+      - military_and_intelligence_scope
+      - global_accession_and_third_country_enforcement
+    requirement: >-
+      A dated starting-state card must supply actual sites, assets, legal powers,
+      deployed models, and outstanding projects; rumors and verified facts must
+      be distinct. This scenario conditions the game and is not a forecast that
+      the treaty will form.
+
+entities:
+  actors:
+    fields:
+      - id
+      - jurisdiction
+      - actor_type
+      - beliefs_by_claim
+      - preferences_and_red_lines
+      - task_specific_skill
+      - formal_authority
+      - factual_control
+      - information_access
+      - coalition_links
+      - legitimacy_by_audience_object_and_procedure
+      - current_conduct
+    required_instances:
+      - US_top_leadership_and_NSC
+      - US_Congress_and_courts
+      - US_defense_intelligence_and_enforcement
+      - US_labs_clouds_and_chip_firms
+      - PRC_top_leadership
+      - PRC_civilian_regulators
+      - PLA_and_security_organs
+      - PRC_provinces_and_state_firms
+      - ISIA_board
+      - ISIA_Director_General
+      - ISIA_inspectorate
+      - ISIA_technical_panel
+      - third_country_governments
+      - publics_and_organized_interests
+
+  compute_assets:
+    fields:
+      - id_and_location
+      - accelerators_memory_network_power
+      - ownership
+      - custody
+      - credentials_and_workload_control
+      - physical_disposition
+      - authorized_workloads
+      - actual_workloads
+      - monitor_coverage
+      - evidence_chain
+      - reconstruction_and_substitution_options
+
+  model_assets:
+    fields:
+      - id_and_model_profile
+      - weight_copies_and_locations
+      - ownership_and_custody
+      - credentials_and_serving_control
+      - serving_endpoints
+      - context_memory_tool_and_rate_limits
+      - authorized_uses
+      - actual_uses
+      - logging_and_monitor_coverage
+      - replication_leak_and_recovery_state
+
+  technical_projects:
+    fields:
+      - objective
+      - participants_and_tools
+      - task_graph
+      - resources
+      - artifacts
+      - observability
+      - evaluation_process
+      - implementation_window
+      - carrier_scope
+      - access_and_control
+
+  safety_candidates:
+    fields:
+      - candidate_id
+      - architecture_family
+      - deployment_plan
+      - proposed_threat_model
+      - hidden_world_relevant_threats_and_coverage
+      - required_claims
+      - ground_truth_by_claim
+      - evidence_items
+      - evaluator_dossiers
+      - dissent_and_selection_history
+      - institutional_approval
+      - legal_authorization
+      - actual_implementation
+
+  information_objects:
+    types:
+      - declaration
+      - sensor_reading
+      - source_report
+      - analyst_interpretation
+      - advisor_recommendation
+      - public_claim
+      - DG_dossier
+    fields:
+      - provenance
+      - timestamp
+      - recipients
+      - tamper_status
+      - uncertainty_or_rival_hypotheses
+      - dependencies_on_other_evidence
+      - latent_fact_references_for_omniscient_trace_only
+
+  external_events_and_crises:
+    fields:
+      - id_and_event_family
+      - onset_and_duration
+      - affected_actors_sites_and_channels
+      - directly_observed_facts
+      - actor_specific_reports_and_interpretations
+      - authority_access_and_continuity_effects
+      - endogenous_escalation_and_deescalation_options
+
+state:
+  clock:
+    - current_date
+    - elapsed_time
+    - pending_deadlines
+    - queued_events
+  technology:
+    - deployed_model_capability_profiles
+    - algorithmic_efficiency_profiles_and_method_portfolio
+    - research_technology_portfolios
+    - active_improvement_loops
+    - known_and_hidden_artifacts
+  control_regime:
+    - legal_thresholds
+    - covered_resources_including_memory
+    - site_registry
+    - custody_and_access_graph
+    - model_and_weight_access_graph
+    - workload_permissions
+    - inspection_and_stop_authority
+    - implementation_latency_by_action_stage_actor_and_site
+    - enforcement_escalation_state_by_case_and_target
+  institutions:
+    - actor_and_authority_graph
+    - domestic_implementation_gates_by_action_and_jurisdiction
+    - legal_basis_appropriation_sunset_and_court_state_by_action
+    - PRC_civilian_and_CMC_military_parallel_chains
+    - treaty_commitments
+    - operating_capacity_by_actor_and_task
+    - evidence_channels_by_source_recipient_and_dependency
+    - crisis_continuity_by_function_site_and_channel
+    - coalition_links_support_and_opposition_by_actor_issue_and_audience
+    - active_exemptions_and_disputes
+  economy_and_distribution:
+    - realized_services_and_operational_benefits
+    - sectoral_and_fiscal_costs
+    - concentrated_beneficiaries_and_burdened_groups
+    - substitution_and_adaptation
+  safety:
+    - active_candidates
+    - evidence_and_review_state
+    - release_standards
+    - authorizations
+  public_view:
+    - reported_and_perceived_benefits_and_costs
+    - salient_incidents
+    - elite_cues
+    - support_by_constituency
+  terminal:
+    enum:
+      - none
+      - safe_transformative_deployment
+      - unsafe_superintelligence_extinction
+
+action_pipeline:
+  stages:
+    - proposal
+    - DG_choice
+    - authority_and_required_approvals
+    - implementation_attempt
+    - immediate_costs_and_signals
+    - actor_adaptation
+    - delayed_technical_and_political_effects
+  invariant: An accepted proposal can fail, be delayed, be narrowed, or backfire.
+
+policy_actions:
+  - id: A_THRESHOLD
+    family: prohibit_training_or_workloads_above_resource_threshold
+    parameters:
+      - covered_resource_vector_including_compute_memory_network_and_power
+      - accounting_rule_over_resources_workload_and_time
+      - threshold_or_prohibited_region
+      - workload_definition
+      - jurisdictions
+      - exceptions
+    principal_effects:
+      - reduces_authorized_frontier_training
+      - creates_classification_and_substitution_pressure
+
+  - id: A_MONITOR
+    family: place_monitor_with_stop_authority
+    parameters: [sites, evidence_access, interruption_latency, independence]
+    principal_effects:
+      - shortens_response_at_obvious_sites
+      - produces_evidence
+      - creates_monitor_capture_and_evasion_surface
+
+  - id: A_CONTROL
+    family: change_physical_or_factual_control
+    variants:
+      - voluntary_stop_with_or_without_evidence
+      - legal_ban_with_external_enforcement
+      - credentials_or_power_cutoff
+      - factual_custody_transfer
+      - physical_relocation_and_consolidation
+      - component_removal
+      - destruction
+    principal_effects:
+      - changes_who_can_act_and_how_fast
+      - imposes_economic_legitimacy_and_reconstruction_costs
+
+  - id: A_INFERENCE
+    family: set_existing_frontier_inference_policy
+    variants:
+      - cold_storage
+      - restricted_hosted_inference
+      - broad_hosted_inference
+    parameters:
+      - named_users_and_tasks
+      - rate_price_tool_and_memory_limits
+      - logging
+      - weight_access
+      - successor_training_use
+    principal_effects:
+      - changes_economic_benefit_and_constituencies
+      - changes_research_experiment_throughput
+      - changes_cyber_leakage_cover_and_evasion_capacity
+    status: [included, unresolved]
+
+  - id: A_TREATY
+    family: negotiate_or_change_treaty_commitments_and_support
+    parameters:
+      - accession_or_participation
+      - reciprocal_assurance_and_data_access
+      - dispute_resolution_and_contingent_response
+      - implementation_assistance_and_supply_chain_cooperation
+      - compensation_due_process_and_reversibility
+      - side_payments_issue_linkage_and_security_assurances
+    principal_effects:
+      - changes_formal_commitments_authority_and_reciprocal_evidence
+      - changes_implementation_capacity_and_domestic_coalitions
+      - may_stabilize_cooperation_or_create_bargaining_and_linkage_failure_surfaces
+
+  - id: A_INSPECT
+    family: change_verification_and_cross_monitoring
+    parameters:
+      - domestic_or_cross_national
+      - site_and_supply_chain_scope
+      - raw_data_access
+      - challenge_inspection
+      - chain_of_custody
+    principal_effects:
+      - changes_detection_and_false_positive_processes
+      - changes_sovereignty_cost_and_reciprocal_confidence
+
+  - id: A_ENFORCE
+    family: escalate_against_suspected_violation
+    variants:
+      - request_and_clarify
+      - investigate
+      - suspend_access_or_trade
+      - seize_or_disable
+      - cyber_sabotage
+      - kinetic_action
+    principal_effects:
+      - may_stop_or_delay_project
+      - may reveal_or_destroy_evidence
+      - may deter_or_displace_activity
+      - may damage_legitimacy_cooperation_or_crisis_stability
+
+  - id: A_RESEARCH
+    family: restrict_or_fund_research
+    parameters:
+      - field_or_method
+      - safety_or_capability_classification
+      - publication_and_information_controls
+      - approved_compute_and_model_access
+    principal_effects:
+      - changes_safety_and_capability_progress
+      - creates_dual_use_classification_and_leakage_risk
+
+  - id: A_INSTITUTION
+    family: change_ISIA_capacity_and_governance
+    parameters:
+      - hiring_and_selection
+      - delegation
+      - independent_review
+      - dissent_protection
+      - selection_for_calibrated_pessimism_and_error_detection
+      - continuity_measures
+      - anti_capture_rules
+      - transparency_and_public_justification
+    principal_effects:
+      - changes_task_specific_competence_and_error_correlation
+      - changes_implementation_and_evidence_quality
+      - changes_legitimacy_and_capture_surface
+
+  - id: A_SAFETY_EXIT
+    family: evaluate_authorize_or_reject_transformative_build
+    parameters:
+      - candidate
+      - proposed_threat_model
+      - required_claims
+      - evaluator_selection
+      - evidence_threshold
+      - staged_build_controls
+      - foundational_result_secrecy_and_controlled_circulation
+    principal_effects:
+      - may_continue_pause
+      - may authorize_objectively_safe_build
+      - may authorize_persuasive_but_unsafe_build
+
+transition_modules:
+  - id: T_ECONOMY
+    reads:
+      - H_POL
+      - technology
+      - compute_assets
+      - model_assets
+      - control_regime
+      - A_CONTROL
+      - A_INFERENCE
+      - A_RESEARCH
+    writes:
+      - economy_and_distribution
+      - public_economic_signals
+      - constituency_formation_opportunities
+    semantics: >-
+      Actual services, costs, distributional effects, substitution, and adaptation
+      evolve before they are selectively observed and politically interpreted.
+      The module is sectoral and coarse, not a general-equilibrium forecast.
+
+  - id: T_TECH
+    reads: [H_CAP, technology, compute_assets, model_assets, A_INFERENCE, A_RESEARCH]
+    writes: [capability_profiles, efficiency_frontier, project_opportunities]
+    semantics: >-
+      Resource- and task-graph-mediated research changes persistent technical
+      state. It can make bounded improvements, hit bottlenecks, or open a new
+      paradigm. Benchmark observations are noisy projections of this state.
+
+  - id: T_REINVEST
+    reads: [H_REINVEST, technical_projects, capability_profiles, access_and_control]
+    writes: [artifacts, carrier_transitions, successor_projects, response_races]
+    semantics: >-
+      Candidate improvements move fallibly between context-local, communicated,
+      scaffold-persistent, and inherited carriers. Evaluation, implementation,
+      resource access, and response each take time. Improvement can fizzle.
+
+  - id: T_CONTROL
+    reads: [H_CONTROL, control_regime, compute_assets, model_assets, actor_conduct]
+    writes: [actual_workloads_and_model_uses, evidence_objects, access_graphs, enforcement_cases]
+    semantics: >-
+      Rules and monitors alter opportunity but do not directly set compliance.
+      Actors act through resources they factually control; evasion and sensor
+      error can yield violations without alerts or alerts without violations.
+
+  - id: T_POLITICS
+    reads: [H_POL, actors, information_objects, economy_and_distribution, public_view, action_costs, external_events_and_crises]
+    writes: [beliefs, coalitions, authority, implementation, exemptions, continuity]
+    semantics: >-
+      Recipient-specific information and interests affect actor decisions.
+      Interventions pass through veto points and implementers. War, bargaining
+      linkage, agenda displacement, and physical access failure are distinct
+      pathways even when they co-occur.
+
+  - id: T_SAFETY_REVIEW
+    reads: [H_SAFE, safety_candidates, information_objects, institutions]
+    writes: [dossiers, recommendations, institutional_approval]
+    semantics: >-
+      Evaluators see evidence, not ground truth. Selection, school-specific blind
+      spots, correlated errors, filtered dissent, and manipulation can generate
+      correct rejection, justified approval, or a false pass.
+
+  - id: T_BUILD
+    reads:
+      - safety_candidates.ground_truth_by_claim
+      - safety_candidates.institutional_approval
+      - safety_candidates.legal_authorization
+      - safety_candidates.actual_implementation
+      - technical_projects
+      - active_improvement_loops
+      - compute_assets
+      - model_assets
+      - access_and_control
+    writes: [terminal_or_continuing_state]
+    semantics: >-
+      Approval and authorization are neither descriptions of objective safety
+      nor sufficient causes of deployment. A decisive process may be authorized,
+      covert, ambiguously authorized, or arise inside a permitted inference or
+      improvement episode. Starting a dangerous run is nonterminal: interruption
+      latency races hidden within-run improvement and takeover latency. Only a
+      completed decisive process that defeats remaining concrete control paths
+      resolves to terminal loss.
+
+  - id: T_CRISIS
+    reads: [external_events_and_crises, actor_graph, continuity, compute_assets, model_assets, treaty_commitments]
+    writes: [access, evidence_channels, emergency_authority, subordinate_opportunities]
+    semantics: >-
+      A crisis can unravel operational restraint while top leaders retain the
+      catastrophe belief. This does not require either leader to order an AI race.
+
+observation_model:
+  views:
+    omniscient_debug:
+      audience: developers_only
+      sees: latent_world_and_all_transitions
+    DG_play_view:
+      audience: player
+      sees:
+        - advisor_cards
+        - dossiers_and_reports_received
+        - public_events
+        - declared_policy_and_known_implementation
+        - deliberately_coarse_state_indicators
+      does_not_see:
+        - latent_hypothesis_sample
+        - true_compliance
+        - true_safety_adequacy
+        - exact_ASI_or_RSI_threshold
+        - exact_survival_probability
+    actor_local_view:
+      audience: simulated_actor
+      sees: information_reachable_through_actor_specific_edges
+    retrospective_run_explanation:
+      audience: player_after_run
+      sees: selected_hidden_causes_and_counterfactual_explanations
+      constraint: reveal_enough_to_teach_without_claiming_unique_historical_truth
+
+event_order:
+  - mature_scheduled_projects_and_external_events
+  - sample_conditional_actor_conduct
+  - execute_technical_and_control_processes
+  - generate_sensor_reports_and_public_signals
+  - route_information_to_recipients
+  - update_actor_interpretations_and_proposals
+  - request_player_decision_where_due
+  - resolve_authority_and_implementation
+  - apply_costs_adaptation_and_delayed_effects
+  - check_terminal_processes
+  - append_trace_records
+  - advance_to_next_decision_relevant_time
+
+terminal_invariants:
+  - capability_leakage_is_nonterminal_and_updates_future_efficiency_or_route_feasibility
+  - dangerous_run_initiation_is_nonterminal_until_improvement_takeover_or_interruption_resolves
+  - signatory_withdrawal_is_nonterminal_and_may_be_followed_by_reentry_and_control_restoration
+  - successful_interruption_need_not_reveal_the_counterfactual_distance_to_loss
+
+terminal_processes:
+  - id: WIN_SAFE
+    preconditions:
+      - decisive_candidate_covers_the_hidden_world_relevant_threats_not_merely_its_proposed_threat_model
+      - deployment_and_successor_process_preserve_adequacy
+      - candidate_is_actually_implemented
+    outcome: safe_transformative_intelligence_and_humanity_survives
+    note: recognition_and_authorization_affect_reachability_but_not_ground_truth
+
+  - id: LOSS_UNSAFE
+    preconditions:
+      - RSI_capable_or_otherwise_decisive_unsafe_system_is_actually_created_or_released
+      - system_obtains_the_route_specific_capability_and_access_needed_for_takeover
+      - no_remaining_concrete_control_or_interruption_path_prevents_takeover
+    process:
+      - model_capability_and_access_acquisition
+      - defeat_or_bypass_human_countermeasures
+      - strategic_takeover
+      - novel_technology_enabled_extinction
+    outcome: humanity_extinct
+    note: do_not_limit_failure_to_present_day_weapon_technologies
+
+  - id: CONTINUE_PAUSE
+    classification: nonterminal
+    condition: no_decisive_safe_or_unsafe_system_has_resolved_the_run
+
+required_trace_fields:
+  - event_id_and_time
+  - module_and_transition_id
+  - latent_cause_references
+  - actor_and_action_references
+  - information_available_to_each_decider
+  - authority_and_implementation_result
+  - stochastic_draw_name_and_conditioning_parent_ids
+  - state_delta
+  - immediate_and_scheduled_consequences
+  - player_visible_explanation
+
+forbidden_shortcuts:
+  - treaty_health_scalar_directly_causes_compliance
+  - safety_progress_scalar_directly_causes_safe_build
+  - capability_multiplier_directly_causes_RSI_without_route_or_resources
+  - advisor_receives_noisy_direct_ground_truth
+  - legal_ban_directly_sets_actual_workload_to_zero
+  - false_sensor_alert_implies_actual_violation
+  - accepted_policy_is_instantly_and_perfectly_implemented
+  - treaty_breakdown_immediately_sets_game_over
+  - independent_redraw_of_fundamental_world_difficulty_each_turn

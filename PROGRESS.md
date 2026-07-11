@@ -1,112 +1,37 @@
 # Progress
 
-This is the current externally supplied work state: what is active, blocked,
-planned, deferred, or needs Jörn. Current implementation state belongs in
-`ARCHITECTURE.md`; old tracker detail belongs in git history.
+Updated 11 July 2026.
 
-## Labels
+## Current state
 
-- `[active]`: current work or nearest useful next work.
-- `[blocked]`: useful but waiting on a named blocker.
-- `[planned]`: intended direction, but not necessarily approved unless marked.
-- `[idea]`: possible later, not committed.
-- `[cut]`: intentionally not on the path.
-- `[needs Jörn]`: requires Jörn's domain, scope, taste, or expert-context call.
+- The 2026-07-11 ChatGPT Work-mode packet is now the substantive baseline in a migration worktree. The retired baseline remains at commit `0c5262c34c423cc62b68124d30d002b4886b879f`.
+- The executable opening slice is a strict TypeScript diagnostic engine plus a vanilla browser UI. It is an internal prototype, not forecast-calibrated release content.
+- Packet reproduction passed 36 tests, a production build, and a high-severity dependency audit before integration.
+- The integrated candidate passes 40 model tests and 51 browser tests locally. The same 51 browser tests pass against the deployed preview across desktop, Pixel 5, and iPhone 13-like Chromium profiles.
+- Devcontainer, VS Code tunnel, Cloudflare Pages configuration, gitleaks, and Playwright infrastructure were retained because they solve current external development and review needs. The retired automatic production deployment and its GitHub secret references were intentionally removed.
+- GPT-5.5-specific skills and old React/card-engine architecture were removed. Deployment is the only repo-local skill retained.
 
-Nesting is allowed when it clarifies partial progress or feature-local
-submodules. The labels are for clarity, not a task-management schema.
+## Completed migration checks
 
-## Current Phase
+- The compute-versus-memory player choice now changes a same-world diagnostic outcome.
+- Director-General projection leaks and false artifact reporting have focused regressions.
+- Browser coverage exercises all opening paths, swipe, keyboard, focus, mobile reflow, and automated accessibility semantics.
+- Packet implementation and provenance maps now point to the current code and dated source records.
 
-- `[active]` Architecture cleanup has shifted the game loop to explicit
-  aggregate state, append-only history, card-owned monthly rates/reducers, pure
-  pool building, and deterministic continuous-time hazard draw.
-- `[active]` The current cards are dummy scaffolding for the card-loop
-  architecture, not the approved expert model.
-- `[blocked]` Broad content/card review, rewrites, and new expert-grounded
-  mechanisms should wait until Jörn marks the recovered expert-model material
-  ready for integration review.
+## Migration readiness
 
-## Content
+- The authorized unlisted preview is `https://gpt56-handoff-2026-07-11.global-pause.pages.dev` (deployment `db50756a`). It is publicly addressable, protected from indexing by `X-Robots-Tag: noindex`, and not protected by Cloudflare Access.
+- The preview returns `200`, serves the expected ISIA opening build, has no browser/console/request errors on a complete path, and passes the full remote browser/accessibility suite.
+- Cloudflare identifies `main` as production. The preview is a separate branch deployment, and `https://global-pause.pages.dev` still serves the retired production build.
+- Technical migration checks are complete. Actual work can resume after Jörn reviews the draft content/UX and approves merging the migration branch to `main`.
 
-- `[needs Jörn]` Expert-grounded content is draft until Jörn approves it.
-- `[active]` Treat `docs/expert-context.md` as the compact context surface for
-  future expert-model/content work. It is not approval for broad content
-  implementation.
-- `[active]` Treat `docs/expert-model-chat-excerpts.md` as recovered raw Jörn
-  wording and `docs/expert-model-recovered.md` as fallible recovered synthesis.
-- `[active]` Preserve traceability from literature/source notes and
-  Jörn-provided context to implementation.
-- `[active]` Use `src/content/cards/` as the current code-owned card surface.
-  Cards should usually own their own `rate` and `reduce` functions.
-- `[active]` Keep the global state schema explicit in `src/engine/state.ts`.
-  Prefer direct `state.foo.bar` access over indirection when writing card logic.
-- `[planned]` Replace dummy cards with expert-grounded cards after Jörn approves
-  the relevant concepts and mechanism framing.
-- `[planned]` Rebalance after the content pass.
-- `[planned]` Regenerate portraits after card content stabilizes.
-- `[idea]` Deterministic card emitters may replace static card definitions if
-  future content needs state-templated card variants.
+## Review gates
 
-## App And Playability
+- Jörn review: the packet's political opening, advisor choices, terminology, and expert synthesis remain draft even when technically implemented.
+- Jörn review: unresolved quantitative judgments in `docs/expert-model/judgments-and-tensions.md` must not become game probabilities.
+- Jörn review: confirm whether the packet's Yudkowsky-default source policy and US/PRC founding-signatory opening should become durable approved decisions.
+- Merge gate: review the simplified `AGENTS.md` and deployment skill before merging the migration branch.
 
-- `[active]` Preserve settled engine, swipe, and theme behavior while content
-  overhaul proceeds.
-- `[active]` Match validation to touched surface; `npm run check` alone does not
-  prove engine/card/UI behavior is fully covered.
-- `[active]` Keep app, Playwright, and future playtest tooling on shared
-  engine/session transitions.
-- `[planned]` Rework title/death screen polish after content and takeaway
-  message are clearer.
-- `[idea]` Revisit achievements/card collection after content overhaul.
-- `[cut]` Do not add settings until tutorial skip, accessibility, or another
-  real configuration need appears.
+## Next substantive work after review
 
-## Playtesting
-
-- `[blocked]` No durable playtest corpus exists yet.
-- `[active]` Playtest first, then record what was actually observed: build or
-  version, player context if known, session shape, confusion points, remembered
-  takeaways, fun/friction, bugs, screenshots, and card histories actually
-  collected.
-- `[active]` Route observed findings back to concrete work: content/source
-  issues, app/UX bugs, deploy/release-loop issues, or harness/map issues.
-- `[planned]` Once repeated findings exist, propose lightweight capture formats
-  or quality gates for Jörn review.
-
-## Deploy And Release
-
-- `[active]` Keep deployment discoverable through the `deploy` skill because
-  release mechanics, public feedback loops, and game-outcome tracking are
-  distinct from app implementation.
-- `[active]` Current GitHub Actions deploy is main-only. Branch/commit
-  Cloudflare preview deployment is possible future deploy work if worktree-first
-  development makes preview links important.
-- `[planned]` Coordinate with playtesting before treating a public deploy as
-  ready for broader feedback loops.
-- `[idea]` Add deploy dry-run or preview guidance if deployment changes become
-  frequent or risky.
-
-## Harness And Maps
-
-- `[active]` Keep `AGENTS.md` as the root instruction map, not a tracker or
-  design doc.
-- `[active]` Keep durable project facts and repeated context in `FACTSHEET.md`,
-  current implementation state in `ARCHITECTURE.md`, current work state here,
-  and deploy operations in `.agents/skills/deploy/SKILL.md`.
-- `[active]` Use `skill-writing` and `gpt-55-prompting` for skill, prompt, and
-  other agent-facing instruction changes. The old broad `harness-engineering`
-  skill has been removed.
-- `[active]` Use `plan-first` only when Jörn invokes it or explicitly asks to
-  plan before implementation.
-- `[active]` Use `stalled-session-recovery` when chat repair overhead blocks
-  useful work.
-- `[active]` Use `goal-tool` before creating, updating, checkpointing, or
-  completing `/goal`.
-- `[active]` Ordinary tracked work should happen in git worktrees, not directly
-  on `main`, so independent parallel sessions stay mergeable.
-- `[needs Jörn]` `AGENTS.md` and skill bodies require Jörn approval before they
-  are treated as final durable instruction material.
-- `[idea]` Decide later whether the Codex web backup environment needs actual
-  setup scripts; current evidence says browser binaries, Node 22+ for Wrangler,
-  and `age` are missing there.
+The current prioritized candidates are target-specific capability artifacts, multi-dimensional custody, distributed-training topology and detection, first-quarter political processing, save/load with schema migration, and actor-local projections. Reprioritize after Jörn reviews the playable opening slice; do not treat the handoff ordering as final feature approval.

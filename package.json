@@ -1,46 +1,27 @@
 {
-  "name": "xrisk-pause-game",
+  "name": "isia-treaty-game-model",
   "private": true,
-  "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "lint": "eslint .",
-    "typecheck": "tsc -b --noEmit",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "node --test",
+    "typecheck": "tsc --noEmit && tsc --project tsconfig.test.json --noEmit",
     "test:e2e": "playwright test",
-    "cards": "tsx scripts/export-cards.ts",
-    "screenshot": "npx tsx e2e/screenshot.ts",
-    "check": "npm run typecheck && npm run lint && npm run build && npm test"
+    "check": "npm run typecheck && npm test && npm run build",
+    "diagnostic": "node src/diagnostic.ts",
+    "golden": "node --input-type=module -e \"import { buildGoldenTraces } from './src/model/golden.ts'; console.log(JSON.stringify(buildGoldenTraces(), null, 2))\"",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
-  "dependencies": {
-    "@fal-ai/client": "^1.9.3",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "engines": {
+    "node": ">=22.22.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@playwright/test": "1.60.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@types/react": "^19.2.5",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "jsdom": "^29.1.1",
-    "tailwindcss": "^4.1.11",
-    "tsx": "^4.19.0",
-    "typescript": "~5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4",
-    "vitest": "^3.2.4",
-    "wrangler": "^4.63.0"
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^22.20.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.1.4",
+    "wrangler": "^4.110.0"
   }
 }

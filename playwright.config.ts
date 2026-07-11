@@ -1,8 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
 const port = Number(process.env.PLAYWRIGHT_PORT ?? 5174);
-const baseURL = `http://127.0.0.1:${port}`;
-const mobileRegressionSpec = /mobile-regression\.spec\.ts/;
+const localBaseURL = `http://127.0.0.1:${port}`;
+const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? localBaseURL;
 
 export default defineConfig({
   testDir: "./e2e",
@@ -28,27 +28,24 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      testIgnore: mobileRegressionSpec,
     },
     {
       name: "mobile-chrome",
-      testMatch: mobileRegressionSpec,
       use: {
         ...devices["Pixel 5"],
       },
     },
     {
       name: "mobile-safari-like",
-      testMatch: mobileRegressionSpec,
       use: {
         ...devices["iPhone 13"],
         browserName: "chromium",
       },
     },
   ],
-  webServer: {
+  webServer: process.env.PLAYWRIGHT_BASE_URL ? undefined : {
     command: `npm run dev -- --host 127.0.0.1 --port ${port}`,
-    url: baseURL,
+    url: localBaseURL,
     reuseExistingServer: false,
   },
 });
