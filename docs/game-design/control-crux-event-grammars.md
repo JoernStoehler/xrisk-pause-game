@@ -5,13 +5,6 @@ unapproved draft playability transforms**. Site names, characters, timings, and
 outcomes below are diagnostic fiction, not predictions. Relative branch
 frequencies are intentionally unspecified.
 
-Fixed framing: target players grant that superintelligence is possible and is
-lethal if not developed safely. Jörn's expert judgment is that without an
-adequate pause we are almost certainly dead. These scripts explore whether one
-part of a pause is adequately designed and operated; they do not stage a
-neutral race-versus-pause choice or encode that judgment as a frequency, meter,
-or survival probability.
-
 ## The shared crux
 
 All three versions teach the same expert-model distinction:
