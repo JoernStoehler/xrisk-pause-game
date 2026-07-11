@@ -10,11 +10,18 @@ this directory remain draft.
 This exploration assumes the following product premises rather than spending
 play time debating them:
 
-- unsafe superintelligence is possible and can be lethal;
+- target players grant that superintelligence is possible and is lethal if it
+  is not developed safely;
+- Jörn's expert judgment is that without an adequate pause we are almost
+  certainly dead;
 - the United States and China founded a ban treaty for that reason;
 - the player is ISIA's Director-General and wants the treaty to succeed; and
-- the question is how to make the pause work, not whether extinction is a
-  legitimate side of a balanced debate.
+- the uncertainty the game explores is how to design and operate an adequate
+  pause under different threat models, not a neutral race-versus-pause balance.
+
+That expert judgment is a premise for this design direction, not a displayed
+frequency. The game should not encode it as survival odds, a countdown, a
+race-versus-pause meter, or diagnostic-world branch frequencies.
 
 The game should give the Director real leverage. Domestic authority still
 matters, but "the Director can do nothing until every sovereign actor agrees"
@@ -223,9 +230,10 @@ alternative. Surprise alone is not depth.
 
 ### Debate cards that reopen the premise
 
-Do not spend early play on a lab CEO arguing that lethal unsafe
-superintelligence is impossible or on the Director considering whether survival
-matters. Opposition should target scope, evidence, authority, cost, sovereignty,
+Do not spend play on a lab CEO arguing that superintelligence cannot be lethal,
+on the Director considering whether survival matters, or on a nominally neutral
+choice between racing and pausing. Opposition should target whether a proposed
+pause design is adequate: scope, evidence, authority, cost, sovereignty,
 capture, escalation, and feasible implementation.
 
 ## Product cruxes for Jörn review
@@ -259,6 +267,8 @@ prototype order:
 | Item used here | Status | Permitted use in this portfolio |
 | --- | --- | --- |
 | Source code/tests define implemented behavior; `model.yaml` defines intended symbolic behavior beyond it | Project authority rule | Used to separate the current assay from proposed play |
+| Target players grant superintelligence is possible and lethal if not developed safely | Target-audience premise fixed for this design task | Do not reopen as a balanced debate in play |
+| Without an adequate pause we are almost certainly dead | Jörn's clarified expert judgment | Directional premise only; no displayed probability, meter, or fixture frequency |
 | US and PRC founding premise; DG role; known sites approachable | Scenario premise, not real-world forecast | Fixed opening frame |
 | Law, authority, implementation, factual control, evidence, and DG belief can diverge | Source-backed structure plus Jörn/project synthesis | Central mechanic; player text still draft |
 | Deterrence covers many ordinary actors while direct control covers a catastrophic residual | Dated Jörn judgment in a polished paraphrase; not calibrated | Candidate opening crux, not a frequency claim |
