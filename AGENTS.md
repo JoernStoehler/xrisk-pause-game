@@ -8,11 +8,17 @@ Fun, realism, and political and scientific detail serve that public-understandin
 
 ## Authority
 
-- Jörn is the domain owner. Expert-grounded content remains draft until he approves it.
-- Ask before changing the thesis, political model, player-facing terminology, card concepts, major UX direction, final feature set, or expert predictions. Agents may draft, implement, test, refactor, and propose reviewable alternatives.
+- Jörn is the domain owner. He also has prompt, harness, and agent-engineering expertise available when relevant. Expert-grounded content remains draft until he approves it.
 - Keep `main` available for independent work. Make tracked changes in a worktree unless Jörn asks for an exact edit on `main`. Merge to `main` only after Jörn approves.
 - Ask before changing production routing, credentials, Cloudflare project settings, or other external state not already authorized by the task.
 - Changes to this file or repo-local skills require Jörn review before merge.
+
+## Coordination
+
+- Delegation is useful when bounded work can proceed independently or when its internal context is substantially larger than the result its parent needs to integrate. Subagents may delegate further when the same condition holds. Avoid concurrent write ownership that requires agents to reconcile the same files or decisions.
+- A delegation should identify why the work matters and where it sits in the current workflow; its ownership and relevant concurrent work; the required context or repository sources; the expected deliverable and next consumer; and the acceptance, validation, and handoff conditions. Fork conversation history when it is materially required; otherwise provide bounded context and let the receiving agent retrieve supporting context from the repository.
+- Agents resolve what they can within their scope through accessible work. Unresolved questions and blockers, together with recommendations that require coordination, return through the coordinating parent. Each coordinating agent passes upward the evidence, work already performed, recommendation, and specific missing input. The root involves Jörn when his approval, domain judgment, unavailable external access, or review of an already-developed artifact is the remaining scarce input.
+- Coordinating agents remain responsible for integrating and validating returned work. Workstream boundaries and agent lifetimes are temporary; revise them when the work becomes differently coupled.
 
 ## Trust and claim status
 
@@ -21,19 +27,6 @@ Fun, realism, and political and scientific detail serve that public-understandin
 - Expert-atlas documents are project synthesis. Keep source fact, Jörn judgment, project inference, diagnostic fixture, playability transform, and approved player-facing claim distinct.
 - Do not turn diagnostic fixture frequencies or unresolved quantitative judgments into forecasts.
 - The retired repository is recoverable at commit `0c5262c34c423cc62b68124d30d002b4886b879f`; do not retain old architecture merely to reduce a diff.
-
-## Navigation
-
-- `README.md`: product split, source status, and starting commands.
-- `PROGRESS.md`: current state, known gaps, and review gates.
-- `docs/expert-model/`: expert atlas and provenance map.
-- `docs/game-model/`: symbolic specification, executable opening-slice map, and pruning decisions.
-- `docs/review/`: expert review, disagreement, forecast, and representation interfaces.
-- `source/`: dated Jörn records and research/source maps.
-- `src/model/`: dependency-free TypeScript diagnostic engine.
-- `src/ui/`: declarative advisor content, typed game reducer, and browser interface.
-- `test/` and `e2e/`: model and browser checks.
-- `docs/migration/retained-old-material.md`: migration provenance and retained infrastructure.
 
 ## Validation
 
@@ -57,10 +50,3 @@ npx wrangler pages project list
 ```
 
 An environment-provided API token is already an authentication method. Do not run `wrangler login` unless deliberately replacing token authentication with OAuth. The main checkout's ignored `.env` is Wrangler's local credential source; untracked files do not appear in git worktrees. For a nested `.worktrees/<name>` worktree, verify `.env` is ignored and link it to `../../.env` without reading or copying its contents.
-
-## Communication with Jörn
-
-- Put the main result or decision first.
-- Number actionable findings or questions so they are easy to reference.
-- State relevant evidence, uncertainty, and approval status.
-- Ask Jörn only for domain judgment, meaningful scope choices, external access, or review—not accessible repository work.
