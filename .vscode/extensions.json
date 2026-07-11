@@ -1,7 +1,7 @@
 {
     "recommendations": [
-        "miguelsolorio.symbols",
-        "github.github-vscode-theme",
-        "openai.chatgpt"
+        "openai.chatgpt",
+        "tamasfe.even-better-toml",
+        "mathematic.vscode-pdf"
     ]
 }
