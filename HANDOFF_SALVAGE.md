@@ -29,6 +29,7 @@ equal candidate or reread the session to rediscover its failures.
 | `codex/integrated-mobile-candidate` / `1c6f376` | **Abandoned** | No unique material beyond the source branches; useful only as integration/deployment history. | The integrated product, public preview, or commit history as a baseline. |
 | `codex/project-control` / `4336e8e` | **Abandoned** | One read-only UX audit exists in the old rollout and is summarized in this handoff. | The interrupted control-plane delegation; it produced no committed artifact. |
 | `codex/fresh-root-handoff` | **Active control handoff** | Recovery skills, raw-log pointer, decisions, branch map, this disposition record. | Treating this scratch record as source truth when the raw log or repository contradicts it. |
+| `codex/handoff-evidence-options` / `c0fc996` | **Active curated evidence** | Accepted research/design documents plus a success model that separates visual craft from readability and records the rejected UI accurately. | Treating hypotheses as product decisions, or using the absence of rejected prototype code as evidence that its model semantics have been ported. |
 
 ## Specific prototype salvage
 

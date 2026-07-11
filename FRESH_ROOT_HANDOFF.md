@@ -70,7 +70,7 @@ Branch names are working pointers; full hashes identify the recorded state.
 
 | Branch | Commit | Disposition |
 | --- | --- | --- |
-| `main` | `e73eef0` locally | Tree matches the pre-session main tree; history contains five accidental local cherry-picks and five reverts. Nothing was pushed. No cleanup is needed. |
+| `main` | `2f846a5` | Restored recovery skills and corrected always-on root/review guidance; pushed with Jörn's approval. Earlier accidental cherry-picks remain paired with reverts and require no cleanup. |
 | `codex/roadmap-mechanism-review` | `4903e7d` | Stage-gated roadmap and mechanism review; proposal, not authority. |
 | `codex/public-discourse-research` | `b3f0be9` | Useful purposive discourse audit; not a prevalence estimate. |
 | `codex/full-prototype` | `7cbf546` | Semantically repaired first-watch prototype; public UI rejected. Quarry only. |
@@ -82,6 +82,7 @@ Branch names are working pointers; full hashes identify the recorded state.
 | `codex/success-model` | `4336e8e` | Useful challengeable success/review model, but lengthy and incomplete on visual art direction. Treat as proposal. |
 | `codex/project-control` | `4336e8e` base | Interrupted attempt; one read-only child audit exists in the old session log, no committed artifact. |
 | `codex/fresh-root-handoff` | this branch | Handoff and restored portable skills only. |
+| `codex/handoff-evidence-options` | `c0fc996` | Curated research, product options, game-design hypotheses, and corrected success/review model; contains no rejected prototype code or assets. Preferred evidence checkout for the next root. |
 
 Cloudflare production remains `main`. The rejected review aliases may still be
 publicly reachable and `noindex`; their existence is not product readiness.
@@ -152,13 +153,16 @@ adaptations:
 - `session-resume-packet`
 
 The current `msc-math` intentionally removed older stalled-session, scoping,
-project-quality, and skill-writing skills; they were not resurrected. Changes
-to repo-local skills require Jörn review before merge.
+project-quality, and skill-writing skills; they were not resurrected. Jörn
+subsequently approved these three adapted skills for `main`; they were merged
+and pushed in `c136cf8`.
 
 ## Bootstrap prompt for the new root
 
-> Read `AGENTS.md`, `README.md`, `docs/CURRENT_GAPS.md`, and
-> `FRESH_ROOT_HANDOFF.md`. Verify the handoff's highest-impact user decisions
+> Start in `/workspaces/xrisk-pause-game-worktrees/handoff-evidence-options`.
+> Read `AGENTS.md`, `README.md`, `docs/CURRENT_GAPS.md`,
+> `FRESH_ROOT_HANDOFF.md`, and `HANDOFF_SALVAGE.md`. Verify the handoff's
+> highest-impact user decisions
 > against the referenced raw rollout using the session-log skill. Preserve all
 > branches. Reconstruct a concise authoritative priority ledger, then pursue
 > the highest-value accessible work. Do not show Jörn another preview until it
