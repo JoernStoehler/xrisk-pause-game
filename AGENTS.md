@@ -26,17 +26,18 @@ Fun, realism, and political and scientific detail serve that public-understandin
 ## Trust and claim status
 
 - Source code and tests define implemented behavior. `docs/game-model/model.yaml` defines the intended symbolic model where code does not yet exist.
-- Dated records in `source/` are the closest available layer to Jörn's statements. The July records are polished paraphrases unless explicitly marked as quotations. `source/jorn-review-2026-05-11-raw-excerpts.md` preserves older direct excerpts.
+- Human-readable project knowledge lives under `docs/`. `docs/jorn/jorn-review-2026-05-11-raw-excerpts.md` preserves older direct excerpts; the July Jörn records are polished paraphrases unless explicitly marked as quotations.
 - Expert-atlas documents are project synthesis. Keep source fact, Jörn judgment, project inference, diagnostic fixture, playability transform, and approved player-facing claim distinct.
 - Do not turn diagnostic fixture frequencies or unresolved quantitative judgments into forecasts.
 - The retired repository is recoverable at commit `0c5262c34c423cc62b68124d30d002b4886b879f`; do not retain old architecture merely to reduce a diff.
 
 ## Knowledge placement
 
-- Put the current best project understanding in the narrowest relevant location under `docs/`: success and impact models, evidence gates, review and testing strategy, product or game-design reasoning, and development guidance. For material uncertainty, link the supporting evidence and reasoning, preserve the strongest live alternatives, and state what future evidence would discriminate among them. Update the best guess when contrastive evidence changes it. Keep implemented behavior in code and tests, and intended symbolic behavior in `docs/game-model/model.yaml`.
-- Put dated inputs beneath that synthesis in `source/`: Jörn records, web or literature investigations, source maps, sampling or search methods, and material limitations. Synthesis must link to its evidence and preserve the distinction between observation, attributed judgment, and project inference.
+- Put durable human-readable project knowledge in the narrowest relevant location under `docs/`: source extracts, research and reasoning, current best guesses and alternatives, success models, specifications, review results, and development guidance. Begin each artifact with a format-native explanation of what it is, its status and authority, the sources it derives from, and how it should be updated or interpreted.
+- Keep raw artifacts with their owning system or corpus: session JSONL under the Codex session store, downloaded literature under `literature/`, runtime behavior in code and test output, and generated data beside its producer. A curated quotation, paraphrase, or summary under `docs/` must point to the raw source precisely enough to check it and must not silently inherit the source's authority.
+- For material uncertainty, link the supporting sources and reasoning, preserve the strongest live alternatives, and state what future evidence would discriminate among them. Update the current best guess when contrastive evidence changes it. Keep implemented behavior in code and tests, and intended symbolic behavior in `docs/game-model/model.yaml`.
 - Preserve decision breadcrumbs that let a future agent check and revise the result: the question, source pointers, assumptions and claim status, current conclusion, confidence when useful, and remaining discriminators. Do not preserve raw reasoning or transient process when it adds no verification or decision value.
-- Put session recovery or process learning in a handoff or postmortem only when future work depends on it. Temporary exploration may remain in a worktree or scratch location; promote it into `source/`, `docs/`, code, or tests only when it becomes durable project knowledge.
+- Put session recovery or process learning in a handoff or postmortem only when future work depends on it. Temporary exploration may remain in a worktree or scratch location; promote it into `docs/`, code, tests, or a skill only when it becomes durable project knowledge.
 
 ## Validation
 

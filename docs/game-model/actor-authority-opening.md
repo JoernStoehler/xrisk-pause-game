@@ -76,5 +76,5 @@ narrowed, delayed or blocked for named reasons.
 
 ## Source packets
 
-- `source/us-authority-map-2026-07-11.md`
-- `source/prc-authority-map-2026-07-11.md`
+- `docs/research/us-authority-map-2026-07-11.md`
+- `docs/research/prc-authority-map-2026-07-11.md`
