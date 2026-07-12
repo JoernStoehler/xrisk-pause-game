@@ -1,6 +1,6 @@
 # Compact loop experiment: JOINT-KEY-01
 
-Status: integrated experiment brief, 12 July 2026. This is a project proposal and diagnostic fixture, not an approved product direction, calibrated scenario, or approved player-facing expert content. Jörn must approve the simplified control mechanism and authority gate before participant exposure.
+Status: integrated experiment brief, 12 July 2026. This is a project proposal and diagnostic fixture, not an approved product direction, calibrated scenario, or approved player-facing expert content. Internal drafting proceeds with split startup credentials and a separate domestic implementation gate; Jörn reviews a concrete trace before participant exposure.
 
 Derived from the [priority ledger](PRIORITY_DECISION_LEDGER.md), [game-design portfolio](../game-design/README.md), [control-crux grammars](../game-design/control-crux-event-grammars.md), [public-discourse priorities](../review/PUBLIC_DISCOURSE_PRIORITIES.md), [success model](SUCCESS_MODEL.md), and [review routing](../review/REVIEW_ROUTING.md). Update this brief when structural preflight, Jörn review, or human evidence changes the experiment.
 
@@ -135,11 +135,7 @@ Compare patterns with transcript-backed examples by variant, device, cohort, and
 
 ## Approval and escalation
 
-Before participant exposure, ask Jörn:
-
-> Is joint credential custody the right simple example of direct factual control for this opening experiment, or should it use power cutoff, model-weight custody, component removal, or another mechanism? Must domestic acceptance gate the Director's order?
-
-His answer changes the action package, authority path, receipt, and possibly fairness of the reveal. It does not select variant A or B.
+For internal drafting, use split startup credentials and represent domestic implementation as distinct from the Director's treaty-authorized request. Do not ask Jörn to brainstorm alternatives in the abstract. Before participant exposure, present the concrete matched trace and ask only whether it teaches anything materially false. If it does, isolate the false step and offer the smallest concrete replacement.
 
 Reverse or pause the experiment if the approved mechanism cannot fit a meaningful phone-scale decision and receipt, if the diagram necessarily teaches completeness, if both variants fail agency and causal explanation, if C matches their transfer at substantially lower cost, or if a committed facilitator supplies a more informative immediate use context.
 
