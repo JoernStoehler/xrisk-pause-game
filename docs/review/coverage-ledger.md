@@ -11,12 +11,12 @@ retired baseline commit but is not current source truth.
 
 The present workspace contains these direct or dated project source records:
 
-- `source/jorn-review-2026-05-11-raw-excerpts.md` — recovered direct excerpts;
-- `source/jorn-review-2026-07-11-*.md` — polished records of three later Jörn
+- `docs/jorn/jorn-review-2026-05-11-raw-excerpts.md` — recovered direct excerpts;
+- `docs/jorn/jorn-review-2026-07-11-*.md` — polished records of three later Jörn
   reviews, not raw transcripts;
-- `source/jorn-review-batch-1.md` — the questions and project synthesis used for
+- `docs/jorn/jorn-review-batch-1.md` — the questions and project synthesis used for
   part of the July review, not Jörn's response;
-- `source/current-source-check-2026-07-11.md` — a narrow dated check of the MIRI
+- `docs/research/current-source-check-2026-07-11.md` — a narrow dated check of the MIRI
   illustrative treaty, the April 2026 accelerator-memory proposal, the agreement
   report, and inaccessible AI 2040 pages;
 - `literature/INDEX.md` — the restored downloaded and converted research corpus,

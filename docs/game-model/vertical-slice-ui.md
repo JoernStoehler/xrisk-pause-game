@@ -91,7 +91,7 @@ play samples another diagnostic fixture.
 - empirical session/drop-off instrumentation.
 
 The source-backed instrumentation and user-test plan is in
-`source/product-ux-research-2026-07-11.md`. No universal session-length target is
+`docs/research/product-ux-research-2026-07-11.md`. No universal session-length target is
 assumed.
 
 The app can be run with `npm run dev`, built with `npm run build`, and tested

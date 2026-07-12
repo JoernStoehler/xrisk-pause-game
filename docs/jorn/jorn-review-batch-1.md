@@ -1,5 +1,8 @@
 # Jörn review batch 1 — frontier causal edges
 
+Interpretation: questions and project synthesis presented to Jörn, not a record
+of Jörn's answers.
+
 This packet asks for no annual probabilities and no review of simulator
 terminology. The standard literature work, ordinary attack-tree construction,
 and first-pass causal graphs were completed before selecting these questions.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Record Project Knowledge"
+  short_description: "Capture evidence, synthesis, and workflows"
+  default_prompt: "Use $record-project-knowledge to preserve this result in the right durable project layer."

@@ -34,15 +34,19 @@ Similarity between these products is optional. Crosswalks exist only where they
 help determine whether a game abstraction changes an important policy ordering
 or public lesson.
 
-## Source status
+## Knowledge and source status
+
+See [`docs/README.md`](docs/README.md) for artifact roles, navigation, and the
+format-native opening notes that distinguish extracts, analysis, living models,
+specifications, and review results.
 
 - `literature/INDEX.md` — navigation for the retained downloaded and cleaned
   reference corpus. Treat converted text as a research aid and verify precise
   quotations, formulas, tables, and time-sensitive claims against the original.
-- `source/jorn-review-2026-05-11-raw-excerpts.md` — recovered direct excerpts.
-- `source/jorn-review-2026-07-11-*.md` — dated polished records of Jörn's later
+- `docs/jorn/jorn-review-2026-05-11-raw-excerpts.md` — recovered direct excerpts.
+- `docs/jorn/jorn-review-2026-07-11-*.md` — dated polished records of Jörn's later
   reviews; treat them as paraphrases unless marked otherwise.
-- `source/jorn-review-batch-1.md` — questions and synthesis that prompted part
+- `docs/jorn/jorn-review-batch-1.md` — questions and synthesis that prompted part
   of the July review, not the response record itself.
 - Public sources — should be cited inside the expert-model atlas when used.
 - Reconstructed project inference — must be labeled rather than attributed to

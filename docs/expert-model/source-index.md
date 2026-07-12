@@ -6,15 +6,15 @@ transfer to an ASI treaty.
 
 ## Jörn review records
 
-- [Recovered May direct excerpts](../../source/jorn-review-2026-05-11-raw-excerpts.md)
+- [Recovered May direct excerpts](../jorn/jorn-review-2026-05-11-raw-excerpts.md)
   preserve older wording about treaty scope, duration, controls, research
   restrictions, evasion, and governance boundaries.
 - The dated July records cover
-  [capability](../../source/jorn-review-2026-07-11-capability.md),
-  [control and inference](../../source/jorn-review-2026-07-11-control-inference.md),
-  and [safety and exit](../../source/jorn-review-2026-07-11-safety-exit.md).
+  [capability](../jorn/jorn-review-2026-07-11-capability.md),
+  [control and inference](../jorn/jorn-review-2026-07-11-control-inference.md),
+  and [safety and exit](../jorn/jorn-review-2026-07-11-safety-exit.md).
   They are polished records/paraphrases rather than raw chat transcripts.
-- [The July question packet](../../source/jorn-review-batch-1.md) records the
+- [The July question packet](../jorn/jorn-review-batch-1.md) records the
   review prompt and project synthesis. Do not cite it as Jörn's answer.
 
 ## Default risk and treaty model

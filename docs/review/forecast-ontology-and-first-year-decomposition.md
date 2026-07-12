@@ -3,8 +3,8 @@
 Status: review method, not a forecast and not a simulator specification.
 
 Provenance boundary: this document was produced from the packet-era project
-synthesis in `source/jorn-review-batch-1.md` and the dated source check in
-`source/current-source-check-2026-07-11.md`. It is not itself a record of Jörn's
+synthesis in `docs/jorn/jorn-review-batch-1.md` and the dated source check in
+`docs/research/current-source-check-2026-07-11.md`. It is not itself a record of Jörn's
 answers. Current executable coverage is mapped in
 `docs/game-model/implementation-map.md`; claims still need claim-level source
 links before public use.

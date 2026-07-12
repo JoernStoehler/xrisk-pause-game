@@ -2,6 +2,9 @@
 
 Date: 11 July 2026.
 
+Interpretation: polished record of Jörn's response, not a verbatim quotation.
+The raw session pointer has not yet been recorded in this file.
+
 Context: response to point 1 of the current substantive synthesis.
 
 ## Judgment captured
