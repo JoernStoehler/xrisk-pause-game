@@ -62,6 +62,28 @@ difficult. Avoid several agents independently synthesizing the whole project
 unless disagreement itself is the experiment. Reassess or stop streams whose
 output no longer affects a live decision.
 
+## Spend compute deliberately
+
+Start with the least expensive model and reasoning effort likely to produce a
+reliable artifact, then escalate when the task or observed failure justifies
+it. Treat routing as an empirical choice rather than a permanent capability
+ranking. Read [model and effort routing](references/model-effort-routing.md)
+when selecting agents, choosing reasoning effort, or deciding whether the root
+session should change model or effort.
+
+Deep derivation may be delegated to a Sol-high specialist that returns sources,
+assumptions, alternatives, conclusions, and reversal conditions. The lead must
+understand and audit the result well enough to integrate it, but need not
+rederive it from scratch. Keep the lead capable enough for the synthesis it
+retains.
+
+Avoid near-duplicate agents unless independent disagreement is the experiment.
+Bound requested output, reuse recorded investigations, and increase effort only
+after identifying what the cheaper attempt could not establish. At a clear
+phase change, recommend a cheaper or stronger root model/effort to Jörn when the
+expected API saving or quality gain materially exceeds the interruption cost;
+the agent cannot change its own root model during the session.
+
 ## Integrate and review
 
 Integrate returned work into the priority model; do not substitute a collection

@@ -31,6 +31,13 @@ Fun, realism, and political and scientific detail serve that public-understandin
 - Do not turn diagnostic fixture frequencies or unresolved quantitative judgments into forecasts.
 - The retired repository is recoverable at commit `0c5262c34c423cc62b68124d30d002b4886b879f`; do not retain old architecture merely to reduce a diff.
 
+## Knowledge placement
+
+- Put the current best project understanding in the narrowest relevant location under `docs/`: success and impact models, evidence gates, review and testing strategy, product or game-design reasoning, and development guidance. For material uncertainty, link the supporting evidence and reasoning, preserve the strongest live alternatives, and state what future evidence would discriminate among them. Update the best guess when contrastive evidence changes it. Keep implemented behavior in code and tests, and intended symbolic behavior in `docs/game-model/model.yaml`.
+- Put dated inputs beneath that synthesis in `source/`: Jörn records, web or literature investigations, source maps, sampling or search methods, and material limitations. Synthesis must link to its evidence and preserve the distinction between observation, attributed judgment, and project inference.
+- Preserve decision breadcrumbs that let a future agent check and revise the result: the question, source pointers, assumptions and claim status, current conclusion, confidence when useful, and remaining discriminators. Do not preserve raw reasoning or transient process when it adds no verification or decision value.
+- Put session recovery or process learning in a handoff or postmortem only when future work depends on it. Temporary exploration may remain in a worktree or scratch location; promote it into `source/`, `docs/`, code, or tests only when it becomes durable project knowledge.
+
 ## Validation
 
 Use the smallest relevant set, then run the full set before a preview or merge:
