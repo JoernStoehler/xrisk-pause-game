@@ -49,7 +49,7 @@ Keep the brief outcome-first and compact:
   fixtures, playability transforms, observations, and retrospective truth kept
   honest and distinct?
 - **Minimum context:** the artifact's claim ledger, relevant dated record under
-  `source/`, and [expert-model provenance](../expert-model/provenance.md). Add
+  `docs/jorn/` and `docs/research/`, and [expert-model provenance](../expert-model/provenance.md). Add
   model trace semantics only when the claim depends on information flow.
 - **Evidence:** sentence-level provenance, current approval state, rival views,
   uncertainty language, and what the player can actually infer.
@@ -104,7 +104,7 @@ Keep the brief outcome-first and compact:
   technology perceive state, take intended actions, recover from errors, and
   receive equivalent essential information?
 - **Minimum context:** the running artifact, supported-state inventory, and
-  [product/UX evidence](../../source/product-ux-research-2026-07-11.md).
+  [product/UX evidence](../research/product-ux-research-2026-07-11.md).
 - **Evidence:** automated checks plus real keyboard, screen-reader, low-vision,
   limited-dexterity, touch, motion-preference, and representative-device use.
 - **Non-goals:** rating prose density, fun, model fidelity, or demand except

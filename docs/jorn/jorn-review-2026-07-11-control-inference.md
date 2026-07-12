@@ -2,6 +2,9 @@
 
 Date: 11 July 2026.
 
+Interpretation: polished record of Jörn's response, not a verbatim quotation.
+The raw session pointer has not yet been recorded in this file.
+
 Context: response to substantive synthesis points 2–5.
 
 ## Reinvestment

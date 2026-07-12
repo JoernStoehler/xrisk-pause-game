@@ -3,7 +3,7 @@
 Status: product-research synthesis, 11 July 2026. Ordinal judgments are for
 review, not expert-approved claims, forecasts, or a claim about public-opinion
 prevalence. Evidence and method are in
-`source/public-discourse-audit-2026-07-11.md`.
+`docs/research/public-discourse-audit-2026-07-11.md`.
 
 ## Recommendation
 

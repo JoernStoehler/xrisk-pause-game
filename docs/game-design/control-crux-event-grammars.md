@@ -441,11 +441,11 @@ and transfer without replacing the mobile advisor shell.
 ## Sources and status
 
 - Deterrence/direct-control complement and breach/recovery distinctions:
-  [`source/jorn-review-2026-07-11-control-inference.md`](../../source/jorn-review-2026-07-11-control-inference.md)
+  [`docs/jorn/jorn-review-2026-07-11-control-inference.md`](../jorn/jorn-review-2026-07-11-control-inference.md)
   (**dated polished paraphrase of Jörn review**).
 - Raw earlier statements about tracking, restriction, monitoring, enforcement,
   and realistic delay:
-  [`source/jorn-review-2026-05-11-raw-excerpts.md`](../../source/jorn-review-2026-05-11-raw-excerpts.md)
+  [`docs/jorn/jorn-review-2026-05-11-raw-excerpts.md`](../jorn/jorn-review-2026-05-11-raw-excerpts.md)
   (**direct excerpts; not polished player text**).
 - Typed control, information, action-pipeline, and observation distinctions:
   [`docs/game-model/model.yaml`](../game-model/model.yaml)

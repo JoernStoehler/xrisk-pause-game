@@ -46,11 +46,11 @@ These records are intentionally coarse while the research archive is being rebui
 
 | ID | Kind | Locator or description | Used for |
 |---|---|---|---|
-| `JORN-PROMPT-2026-07` | PROJECT-SYNTHESIS | [Frontier causal-edges review questions](../../source/jorn-review-batch-1.md) | questions and synthesis presented for review; not Jörn's response |
-| `JORN-REVIEW-2026-07-CAP` | EXPERT-JUDGMENT | [Capability review record](../../source/jorn-review-2026-07-11-capability.md), a polished record rather than a raw transcript | lethal-resource uncertainty and capability/reinvestment distinctions |
-| `JORN-REVIEW-2026-07-CONTROL` | EXPERT-JUDGMENT | [Control and inference review record](../../source/jorn-review-2026-07-11-control-inference.md), a polished record rather than a raw transcript | deterrence/control complementarity, inference-policy comparison, breach and recovery transitions |
-| `JORN-REVIEW-2026-07-SAFETY` | EXPERT-JUDGMENT | [Safety and exit review record](../../source/jorn-review-2026-07-11-safety-exit.md), a polished and partly truncated record | candidate safety routes, uploads/intelligence augmentation, institutional evaluation, secrecy dilemma |
-| `JORN-EXCERPTS-2026-05` | EXPERT-JUDGMENT | [Recovered direct excerpts](../../source/jorn-review-2026-05-11-raw-excerpts.md) | treaty scope, duration, necessary controls, research restrictions, backlash/evasion, and governance boundaries |
+| `JORN-PROMPT-2026-07` | PROJECT-SYNTHESIS | [Frontier causal-edges review questions](../jorn/jorn-review-batch-1.md) | questions and synthesis presented for review; not Jörn's response |
+| `JORN-REVIEW-2026-07-CAP` | EXPERT-JUDGMENT | [Capability review record](../jorn/jorn-review-2026-07-11-capability.md), a polished record rather than a raw transcript | lethal-resource uncertainty and capability/reinvestment distinctions |
+| `JORN-REVIEW-2026-07-CONTROL` | EXPERT-JUDGMENT | [Control and inference review record](../jorn/jorn-review-2026-07-11-control-inference.md), a polished record rather than a raw transcript | deterrence/control complementarity, inference-policy comparison, breach and recovery transitions |
+| `JORN-REVIEW-2026-07-SAFETY` | EXPERT-JUDGMENT | [Safety and exit review record](../jorn/jorn-review-2026-07-11-safety-exit.md), a polished and partly truncated record | candidate safety routes, uploads/intelligence augmentation, institutional evaluation, secrecy dilemma |
+| `JORN-EXCERPTS-2026-05` | EXPERT-JUDGMENT | [Recovered direct excerpts](../jorn/jorn-review-2026-05-11-raw-excerpts.md) | treaty scope, duration, necessary controls, research restrictions, backlash/evasion, and governance boundaries |
 | `YUDKOWSKY-DEFAULT-01` | EXPERT-JUDGMENT + STRUCTURAL | Yudkowsky's published takeoff and alignment arguments; exact-claim bibliography pending | default treatment of optimization, recursive improvement, and alignment difficulty |
 | `MIRI-TREATY-01` | PRIMARY-POLICY + STRUCTURAL | MIRI treaty/compute-governance proposals and related posts; exact-claim bibliography pending | proactive compute control, monitoring, consolidation, memory coverage |
 | `TECH-EMPIRICAL-01` | PRIMARY-TECH | scaling, algorithmic-efficiency, benchmark, and elicitation literature; paper-level map pending | within-paradigm capability production and measurement limits |

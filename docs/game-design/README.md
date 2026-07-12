@@ -328,9 +328,9 @@ modes before broader measurement.
 - [`docs/expert-model/current-synthesis.md`](../expert-model/current-synthesis.md)
 - [`docs/expert-model/pause-formation-and-persistence.md`](../expert-model/pause-formation-and-persistence.md)
 - [`docs/expert-model/first-year-outlook.md`](../expert-model/first-year-outlook.md)
-- [`source/jorn-review-2026-07-11-control-inference.md`](../../source/jorn-review-2026-07-11-control-inference.md)
-- [`source/jorn-review-2026-05-11-raw-excerpts.md`](../../source/jorn-review-2026-05-11-raw-excerpts.md)
-- [`source/product-ux-research-2026-07-11.md`](../../source/product-ux-research-2026-07-11.md)
+- [`docs/jorn/jorn-review-2026-07-11-control-inference.md`](../jorn/jorn-review-2026-07-11-control-inference.md)
+- [`docs/jorn/jorn-review-2026-05-11-raw-excerpts.md`](../jorn/jorn-review-2026-05-11-raw-excerpts.md)
+- [`docs/research/product-ux-research-2026-07-11.md`](../research/product-ux-research-2026-07-11.md)
 
 The retired build at `0c5262c34c423cc62b68124d30d002b4886b879f` was inspected
 for interaction patterns only. Its aggregate resource/death model and visible

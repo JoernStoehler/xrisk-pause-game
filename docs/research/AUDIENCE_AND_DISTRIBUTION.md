@@ -112,7 +112,7 @@ These are experiments, not claims about demand.
   control: observation, evidence routing, authority, response and repair. This
   research therefore recommends distributing that mechanism laboratory, not a
   generic “AI doom” message. The audit itself is purposive and not a prevalence
-  estimate; use the `source/public-discourse-audit-2026-07-11.md` copy on the
+  estimate; use the `docs/research/public-discourse-audit-2026-07-11.md` copy on the
   `codex/public-discourse-research` branch for the project record.
 
 ## Cheap evidence collection before scaling

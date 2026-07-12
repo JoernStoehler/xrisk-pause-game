@@ -280,18 +280,18 @@ pointers, not archival guarantees.
   `docs/review/first-year-scenario-cards.md`. They are conditioning choices, not
   real-world forecasts.
 - Product/UX evidence and accessibility defaults:
-  `source/product-ux-research-2026-07-11.md`. Reigns establishes only that a
+  `docs/research/product-ux-research-2026-07-11.md`. Reigns establishes only that a
   card-decision shell is viable, not that this loop, session length or learning
   works.
 - Public teaching priorities: branch `codex/public-discourse-research` at the
   full SHA above, especially `docs/review/PUBLIC_DISCOURSE_PRIORITIES.md` and
-  `source/public-discourse-audit-2026-07-11.md`. Its sample and rankings are
+  `docs/research/public-discourse-audit-2026-07-11.md`. Its sample and rankings are
   purposive auditor judgments, not misconception prevalence or expected
   impact.
 - Stage gates and opening mechanism proposal: branch
   `codex/roadmap-mechanism-review` at the full SHA above. These are coordinating
   product proposals, not approved design or evidence of fun/learning.
-- Jörn judgments: dated records under `source/`, especially control/inference,
+- Jörn judgments: dated records under `docs/jorn/`, especially control/inference,
   capability and safety/exit; the direct May excerpts and recovered judgment
   register also preserve the no-adequate-pause death judgment. July records are
   polished paraphrases unless explicitly marked as quotations. Neither this
