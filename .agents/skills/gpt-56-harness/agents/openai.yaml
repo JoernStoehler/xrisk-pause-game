@@ -1,4 +1,4 @@
 interface:
-  display_name: "GPT-5.6 Prompting"
-  short_description: "Review GPT-5.6 agent instructions"
-  default_prompt: "Use $gpt-56-prompting to review this agent-facing instruction change."
+  display_name: "GPT-5.6 Harness"
+  short_description: "Design and evaluate Codex instructions"
+  default_prompt: "Use $gpt-56-harness to design or evaluate this GPT-5.6/Codex instruction surface."

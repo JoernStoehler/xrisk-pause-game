@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Development"
+  short_description: "Develop and test game product slices"
+  default_prompt: "Use $product-development to develop or review this game product artifact."

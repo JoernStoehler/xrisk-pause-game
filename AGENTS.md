@@ -21,6 +21,7 @@ Fun, realism, and political and scientific detail serve that public-understandin
 ## Coordination
 
 - Delegate independently bounded work when it enables parallelism or keeps task-internal context out of the coordinating thread. Give each agent the context, ownership, concurrent-work constraints, expected handoff, and validation criteria needed to work independently; subagents may delegate under the same condition.
+- After the outcome, reason for delegation, and choice of a fresh recipient are fixed, use `$subagent-prompting` when a substantial bounded assignment must transfer non-obvious context, ownership boundaries, completion evidence, or a return contract. Keep assignments that fit clearly in one or two sentences direct.
 - Give concurrent workers non-overlapping write ownership. Coordinators integrate and validate returned work; unresolved needs move through the parent, and the root involves Jörn only when his domain input or approval remains necessary after accessible work.
 
 ## Trust and claim status
@@ -52,3 +53,5 @@ git diff --check
 ```
 
 For model changes, add a focused deterministic test. For UI changes, render and inspect desktop and mobile layouts. For deployment work, read `.agents/skills/deploy/SKILL.md`.
+
+For harness changes, use `$gpt-56-harness`; validate changed skills, links, discovery and trigger boundaries, then forward-test representative behavior in proportion to risk. A larger agent tree, successful instruction recitation, or passing syntax check does not by itself establish harness quality.
