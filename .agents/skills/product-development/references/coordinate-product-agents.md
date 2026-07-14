@@ -28,6 +28,8 @@ more workers.
 
 Separate reviews when failure modes differ materially. Domain/semantic fidelity,
 player comprehension, interaction and accessibility, visual craft, narrative,
-engineering, and product/use-context fit can crowd one another out. Combine them
-only when one reviewer can genuinely perform distinct passes on the relevant
-evidence. Human evidence remains necessary where the review route says so.
+engineering, and product/use-context fit can crowd one another out. These are
+possible lanes, not a mandatory checklist: assign only reviews that can change
+the named gate. Combine them only when one reviewer can genuinely perform
+distinct passes on the relevant evidence. Human evidence remains necessary
+where the review route says so.

@@ -13,11 +13,14 @@ slice owner to avoid settling an unresolved project-wide product shape, claim,
 or authority decision that would change the assignment itself.
 
 The integration owner retains cross-slice dependency order, accepted project
-scope, and merge authority. Transfer the slice-local work needed to reach the
-gate: inspect current evidence, compare plausible designs, choose an artifact,
-implement it, render real states, run relevant checks, obtain scoped agent
-reviews, revise, and return a reviewable candidate. Do not constrain the
-recipient to a designer or coder role when the outcome requires both.
+scope, and merge authority. Name the next real gate before defining the slice.
+Transfer only the slice-local work needed to reach that gate: inspect current
+evidence, compare plausible designs, choose an artifact, implement or draft what
+the gate consumes, run relevant checks and reviews, revise, and return a
+reviewable candidate. Do not bundle later implementation, every review lane, a
+Jörn packet, and a participant protocol merely because they may eventually be
+needed. Do not constrain the recipient to a designer or coder role when the
+named outcome genuinely requires both.
 
 Use `$gpt-56-harness` for a durable cold-start prompt. State:
 
@@ -32,9 +35,10 @@ Use `$gpt-56-harness` for a durable cold-start prompt. State:
 
 Keep provisional diagnoses and suggested strategies distinguishable from fixed
 constraints. Give the owner room to discover a better interaction, structure,
-or artifact medium. Define failure at the outcome level: a design inventory,
-first-pass mockup, passing build, or favorable agent review is not a successful
-product slice when the assignment is to return a human-test-ready candidate.
+or artifact medium. Define failure at the named-gate level: a design inventory,
+first-pass mockup, passing build, or favorable agent review is insufficient only
+when the gate actually requires more. Human-test readiness is the completion bar
+only for an assignment explicitly aimed at that gate.
 
 When domain evidence or adjacent implementation is moving, separate the stable
 slice core from possible extensions. Preserve insertion points or reopen

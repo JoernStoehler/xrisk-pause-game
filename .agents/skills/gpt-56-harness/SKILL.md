@@ -49,7 +49,9 @@ When reviewing a reusable or cold-start prompt, keep accepted constraints,
 mutable observations, provisional diagnoses, and proposed strategy
 distinguishable where conflating them could suppress useful reassessment.
 
-An explicit harness task authorizes worktree edits and commits. Jörn's approval
+A request to review, diagnose, evaluate, explain, or plan a harness is read-only
+unless it also asks for changes. An explicit request to change, build, fix, or
+port the harness authorizes in-scope worktree edits and commits. Jörn's approval
 is required before a harness commit reaches `main`, unless he explicitly grants
 a different merge boundary for the task. Validate syntax, links, discovery,
 trigger boundaries, and representative behavior in proportion to risk.

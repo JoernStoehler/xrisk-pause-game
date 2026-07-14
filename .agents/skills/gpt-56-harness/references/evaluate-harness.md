@@ -19,9 +19,16 @@ be the first candidate when the source harness has strong live evidence and the
 port is cheap to reverse; do not pretend that the port itself establishes
 transfer.
 
+To claim improvement, run the same case prompt against baseline and candidate
+under matched model, reasoning effort, tools, source state, and side-effect
+permissions. Preserve both raw results before comparing their artifacts and
+decisions. A candidate-only probe can establish discovery, safety, domain fit,
+or a defect; it cannot establish uplift over the baseline.
+
 ## Choose Cases
 
-Use the smallest representative set that can change the decision. Include:
+Use the smallest representative set that can change the decision. Across the
+matched set, include:
 
 1. a comprehension or discovery case when triggering/routing is at issue;
 2. a realistic production or review task whose final artifact matters;
