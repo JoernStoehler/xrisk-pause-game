@@ -24,7 +24,9 @@ preserve quotation/paraphrase status and a precise pointer to the raw artifact.
   source where code does not yet exist.
 - `review/`: review packets, adversarial audits, elicitation interfaces,
   coverage and pruning records. Treat dated verdicts as scoped evidence, not
-  timeless truth.
+  timeless truth. The dated
+  `review/context-architecture-assumption-audit-2026-07-13.md` records a
+  provisional process correction; it is not project architecture policy.
 - `jorn/`: curated excerpts, attributed paraphrases, and elicitation packets.
   These files must state whether wording is verbatim and point to a raw session
   when that pointer is available.

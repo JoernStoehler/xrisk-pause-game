@@ -1,8 +1,10 @@
 # Session-work salvage and retirement
 
-Status: handoff scratch record, 11 July 2026. Branches remain recoverable; this
-file classifies their value so a fresh root does not treat every artifact as an
-equal candidate or reread the session to rediscover its failures.
+Status: historical handoff and salvage classification recorded 11 July 2026.
+Branches remain recoverable; this file classifies their reviewed value so a
+fresh session does not treat every artifact as an equal candidate. Branch names
+and worktree paths are not a current inventory: inspect Git before relying on
+them. A 14 July audit found the curated evidence branch at `234bf61`.
 
 ## Disposition vocabulary
 
@@ -29,7 +31,7 @@ equal candidate or reread the session to rediscover its failures.
 | `codex/integrated-mobile-candidate` / `1c6f376` | **Abandoned** | No unique material beyond the source branches; useful only as integration/deployment history. | The integrated product, public preview, or commit history as a baseline. |
 | `codex/project-control` / `4336e8e` | **Abandoned** | One read-only UX audit exists in the old rollout and is summarized in this handoff. | The interrupted control-plane delegation; it produced no committed artifact. |
 | `codex/fresh-root-handoff` | **Active control handoff** | Recovery skills, raw-log pointer, decisions, branch map, this disposition record. | Treating this scratch record as source truth when the raw log or repository contradicts it. |
-| `codex/handoff-evidence-options` / `7d9bf45` (curation through `c0fc996`) | **Active curated evidence** | Accepted research/design documents plus a success model that separates visual craft from readability, records the rejected UI accurately, and includes the session postmortem. | Treating hypotheses as product decisions, or using the absence of rejected prototype code as evidence that its model semantics have been ported. |
+| `codex/handoff-evidence-options` / `7d9bf45` (curation through `c0fc996`) | **Curated evidence snapshot** | Accepted research/design documents plus a success model that separates visual craft from readability, records the rejected UI accurately, and includes the session postmortem. The branch subsequently advanced; inspect its current history. | Treating hypotheses as product decisions, or using the absence of rejected prototype code as evidence that its model semantics have been ported. |
 
 ## Specific prototype salvage
 
@@ -64,7 +66,11 @@ The old worktree directories may be removed after confirming they are clean.
 Their branches and commits must remain. A fresh root can recreate a checkout
 with `git worktree add <path> <branch>` when a named salvage need arises.
 
-Only these worktrees should remain active after retirement:
+The 11 July retirement recommendation was to retain only these worktrees. It
+was not completed and is not a current inventory; a 14 July audit found six
+worktrees, including substantial uncommitted changes in
+`joint-key-matched-prototype`. Do not remove or discard any worktree without a
+fresh status inspection.
 
 - `/workspaces/xrisk-pause-game` — existing `main` checkout;
 - `/workspaces/xrisk-pause-game-worktrees/fresh-root-handoff` — minimal control

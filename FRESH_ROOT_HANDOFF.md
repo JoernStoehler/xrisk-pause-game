@@ -4,6 +4,10 @@ Status: source-indexed handoff for abandoning thread
 `019f522c-3d5a-7442-bb1a-8c499ada9999`. This is not a product decision,
 approval packet, or instruction to merge existing work.
 
+Later state: read `SESSION_SHUTDOWN_AUDIT_2026-07-14.md` before treating the
+branch map, worktree list, allocation, or deployment language in this dated
+handoff as current.
+
 ## Start state
 
 The previous root session derailed after useful research and model work. Do not
@@ -66,7 +70,11 @@ Useful parts remain quarry material:
 
 ## Branch map
 
-Branch names are working pointers; full hashes identify the recorded state.
+This table is a historical snapshot recorded on 11 July 2026, not a current
+branch or worktree inventory. Full hashes identify the reviewed state; inspect
+Git before relying on a branch name as a moving pointer. A 14 July shutdown
+audit found `main` at `be12b5c` and `codex/handoff-evidence-options` at
+`234bf61`.
 
 | Branch | Commit | Disposition |
 | --- | --- | --- |
@@ -81,11 +89,13 @@ Branch names are working pointers; full hashes identify the recorded state.
 | `codex/integrated-mobile-candidate` | `1c6f376` | Integrated but rejected public candidate. Do not build forward blindly. |
 | `codex/success-model` | `4336e8e` | Useful challengeable success/review model, but lengthy and incomplete on visual art direction. Treat as proposal. |
 | `codex/project-control` | `4336e8e` base | Interrupted attempt; one read-only child audit exists in the old session log, no committed artifact. |
-| `codex/fresh-root-handoff` | this branch | Handoff and restored portable skills only. |
+| `codex/fresh-root-handoff` | handoff snapshot | Handoff and restored portable skills only. This file was later copied to the curated evidence branch. |
 | `codex/handoff-evidence-options` | `7d9bf45` | Curated research, product options, game-design hypotheses, corrected success/review model, and this postmortem; contains no rejected prototype code or assets. Preferred evidence checkout for the next root. |
 
-Cloudflare production remains `main`. The rejected review aliases may still be
-publicly reachable and `noindex`; their existence is not product readiness.
+On 11 July the session recorded Cloudflare production as tracking `main`; this
+was not reverified during the 14 July shutdown audit. Verify external deployment
+state before relying on it. Rejected review aliases may still be publicly
+reachable and `noindex`; their existence is not product readiness.
 
 ## Valuable evidence already produced
 

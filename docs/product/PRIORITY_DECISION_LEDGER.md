@@ -1,11 +1,17 @@
 # Project priority and decision ledger
 
 Status: living root allocation model; provisional project inference, not a product decision, domain approval, or evidence that a game loop works.
-Last material update: 12 July 2026, after reconciling the curated handoff branch with `main`.
+Last material update: 14 July 2026, clarifying allocation versus objective and removing stale live-session state.
 
 ## Decision use
 
 This ledger selects the next bounded result most likely to change project resource allocation. Update it when contrastive evidence changes the ranking; do not let an available implementation or the most recent artifact silently become the priority.
+
+This allocation is an intermediate development choice, not the project
+objective or a stopping condition. Identifying or preparing an experiment does
+not complete the work: evidence from it must inform continued product
+development toward the outcome in `AGENTS.md` and the terminal impact route in
+the [success model](SUCCESS_MODEL.md).
 
 ## Current allocation
 
@@ -78,4 +84,6 @@ Change the allocation when any of the following occurs:
 
 The root owns cross-project ranking and integration. Bounded work may independently audit: the smallest case that preserves the model distinction; interaction-variant comparability; and a non-coaching human protocol. Do not launch production implementation, campaign authoring, or broad new research until those audits are integrated into one experiment brief.
 
-The session is continuing autonomously and is not waiting on Jörn. Jörn review becomes necessary only if the chosen experiment promotes expert-grounded content toward players or reaches a value/product crux that autonomous evidence cannot settle.
+Jörn review becomes necessary if work promotes expert-grounded content toward
+players or reaches a value/product crux that accessible evidence cannot settle.
+This ledger does not assert that any particular session is active or waiting.
