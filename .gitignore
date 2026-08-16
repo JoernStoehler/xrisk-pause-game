@@ -7,7 +7,6 @@ dist-ssr
 
 # Environment
 .env
-.workspace.env
 .env.local
 .env.*.local
 

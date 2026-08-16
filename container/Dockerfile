@@ -40,11 +40,11 @@ RUN --mount=type=cache,target=/root/.npm,sharing=locked \
     && find "${PLAYWRIGHT_BROWSERS_PATH}" -type f -path '*/chrome-linux64/chrome' \
       -exec {} --version \;
 
-ARG GITLEAKS_VERSION=8.30.1
+ARG GITLEAKS_VERSION=8.30.0
 RUN set -eux; \
     work="$(mktemp -d)"; \
     curl -fsSL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
-      -o "${work}/gitleaks.tar.gz"; \
+      -o "${work}/gitleaks.tar.gz"; echo "79a3ab579b53f71efd634f3aaf7e04a0fa0cf206b7ed434638d1547a2470a66e  ${work}/gitleaks.tar.gz" | sha256sum -c -; \
     tar -xzf "${work}/gitleaks.tar.gz" -C "${work}" gitleaks; \
     install -m 0755 "${work}/gitleaks" /usr/local/bin/gitleaks; \
     rm -rf "${work}"; \

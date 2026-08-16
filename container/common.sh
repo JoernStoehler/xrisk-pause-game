@@ -5,7 +5,7 @@ readonly REPO_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)"
 readonly PROJECT="xrisk-pause-game"
 readonly SERVICE="workspace"
 readonly IMAGE="xrisk-pause-game-workspace:local"
-readonly ENV_FILE="${XRISK_PAUSE_GAME_ENV_FILE:-${REPO_ROOT}/.workspace.env}"
+readonly ENV_FILE="${XRISK_PAUSE_GAME_ENV_FILE:-${REPO_ROOT}/.env}"
 readonly NETWORK="joern-dev"
 readonly NETWORK_LABEL="io.joern.dev.owner"
 readonly NETWORK_LABEL_VALUE="joern-dev"
@@ -89,7 +89,7 @@ validate() {
   [[ -d "${REPO_ROOT}/.git" ]] ||
     die "run lifecycle commands from the primary checkout, not a linked worktree"
   [[ -f "${ENV_FILE}" ]] ||
-    die "copy .workspace.env.example to .workspace.env and fill it in"
+    die "copy .env.example to .env and fill it in"
   [[ "$(stat -c %a -- "${ENV_FILE}")" == 600 ]] ||
     die "${ENV_FILE} must have mode 0600"
   git -C "${REPO_ROOT}" check-ignore -q -- "$(realpath --relative-to="${REPO_ROOT}" "${ENV_FILE}")" ||
