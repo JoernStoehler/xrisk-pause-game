@@ -147,8 +147,8 @@ copies with:
 bash scripts/decrypt-literature.sh
 ```
 
-The script also sources `.env` when present, so local devcontainer sessions
-usually do not need a separate export.
+The script also sources `.env` when present, so local checkouts usually do not
+need a separate export.
 
 ---
 

@@ -87,6 +87,8 @@ npm run dev
 
 `npm run build` creates the ignored static bundle under `dist/`. See
 [`docs/CURRENT_GAPS.md`](docs/CURRENT_GAPS.md) for the present development
-boundaries. The retired baseline remains available at commit
+boundaries and [`docs/development-environment.md`](docs/development-environment.md)
+for supported host, Docker Sandbox, and Codex Cloud setup. The retired baseline
+remains available at commit
 `0c5262c34c423cc62b68124d30d002b4886b879f`; later migration records remain in
 Git history.

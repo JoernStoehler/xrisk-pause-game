@@ -34,6 +34,3 @@ scratch/
 
 # Local agent worktrees
 .worktrees/
-
-# Local authenticated Codex app-server secret
-.app-server-token
