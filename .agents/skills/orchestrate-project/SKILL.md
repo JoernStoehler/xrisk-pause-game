@@ -116,6 +116,9 @@ Keep Jörn-facing communication concise and decision-oriented. When requesting
 review, provide the artifact, material evidence or uncertainty, and the concrete
 feedback or decision needed. Make clear whether work continues or waits on him.
 
+Before sending a compact multi-question review, read
+[Jörn review packets](references/jorn-review-packets.md).
+
 For a root handoff, preserve source pointers, accepted decisions, open cruxes,
 branch dispositions, current validation, and a cheap starting path. Exclude raw
 process that does not help the next root verify or decide.
