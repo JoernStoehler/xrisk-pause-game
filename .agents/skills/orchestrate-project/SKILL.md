@@ -105,6 +105,12 @@ When a claim about the session, agent tree, repository, or artifact is disputed,
 inspect the available source before explaining its cause. Separate observation
 from causal hypothesis when the source cannot establish the cause.
 
+Interpret user feedback no more broadly than its content supports. An
+observation does not by itself establish a preference, approval, instruction,
+or cost judgment. Do not alter or stop work on that inference; continue work
+already authorized, and resolve the ambiguity only if the affected choice
+becomes necessary.
+
 Treat repeated requests for status, priority, or explanation as possible
 evidence that control is no longer legible. Make the smallest concrete control
 repair first. Put substantial unreviewed synthesis in a reviewable artifact
