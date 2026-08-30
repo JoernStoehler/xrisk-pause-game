@@ -107,13 +107,13 @@ These are experiments, not claims about demand.
   qualified start, causal learning/transfer, and institutional reuse or policy
   contact. Never report shares, votes, signatures or page views as treaty
   influence.
-- The public-discourse audit on `codex/public-discourse-research` found the
+- The July public-discourse audit found the
   strongest unmet teaching need to be the operational middle between a rule and
   control: observation, evidence routing, authority, response and repair. This
   research therefore recommends distributing that mechanism laboratory, not a
   generic “AI doom” message. The audit itself is purposive and not a prevalence
-  estimate; use the `docs/research/public-discourse-audit-2026-07-11.md` copy on the
-  `codex/public-discourse-research` branch for the project record.
+  estimate; use `docs/research/public-discourse-audit-2026-07-11.md` for the
+  project record. The former experimental branch ref is no longer available.
 
 ## Cheap evidence collection before scaling
 

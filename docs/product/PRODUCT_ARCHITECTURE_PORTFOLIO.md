@@ -2,7 +2,8 @@
 
 Status: product decision framework, 11 July 2026. It does not approve
 expert-grounded content, select a final product shape, or establish player
-learning or market demand.
+learning or market demand. Its product recommendation has not been revalidated
+since July.
 
 ## Decision now
 
@@ -252,12 +253,11 @@ should point to the archived artifact rather than repeat its design:
 | `legacy-product` / through 2026-07-11 | A Reigns-like advisor campaign with aggregate meters can carry the treaty game | `quarry-only` | Serious mobile role and callbacks are useful; arbitrary reducers, visible-card time and meter-extreme endings cannot preserve the current causal model | Advisor framing, onboarding interaction, callbacks, seeded history, input alternatives, trace export | Aggregate meters, cards as world mutation/clock, generic death, early gesture/art complexity | `0c5262c34c423cc62b68124d30d002b4886b879f` (existing retired-history pointer; add a remote archival tag only if its current reachability is ever retired) | Historical implementation, not current behavior; player text and expert synthesis unapproved |
 | `<experiment-id>` / `<date>` | `<hypothesis; bounded slice>` | `abandoned` / `superseded` / `quarry-only` / `revived` | `<observed evidence, including failures>` | `<portable patterns/tests>` | `<obsolete coupling or false lesson>` | `<immutable tag>` @ `<full SHA>`; former branch `<name>` | `<commands, environment/date, claim and Jörn-review status>` |
 
-Active branches are not abandoned-path entries. For current context, the
-public-discourse research is at
-`b3f0be998c7d70a7fd1b321346b19cf8a526953b`, the roadmap/mechanism review at
-`4903e7d4a165cc5c01a8d90493ed79662cf0e6a0`, and the first-watch prototype at
-`7cbf5466b875c4e760acbe36402141df685b725a`; their branch names are working
-pointers, not archival guarantees.
+The July public-discourse, roadmap/mechanism, and first-watch experimental refs
+were never archived as specified above and are no longer available locally or
+in the remote refs. Their integrated documents on `main` remain usable within
+their stated limits; the rejected prototype itself is not inspectable from the
+recorded commit. Do not present those historical refs as recoverable artifacts.
 
 ## Decision cruxes
 
@@ -283,21 +283,21 @@ pointers, not archival guarantees.
   `docs/research/product-ux-research-2026-07-11.md`. Reigns establishes only that a
   card-decision shell is viable, not that this loop, session length or learning
   works.
-- Public teaching priorities: branch `codex/public-discourse-research` at the
-  full SHA above, especially `docs/review/PUBLIC_DISCOURSE_PRIORITIES.md` and
+- Public teaching priorities: `docs/review/PUBLIC_DISCOURSE_PRIORITIES.md` and
   `docs/research/public-discourse-audit-2026-07-11.md`. Its sample and rankings are
   purposive auditor judgments, not misconception prevalence or expected
   impact.
-- Stage gates and opening mechanism proposal: branch
-  `codex/roadmap-mechanism-review` at the full SHA above. These are coordinating
-  product proposals, not approved design or evidence of fun/learning.
+- Stage gates and opening mechanism proposal: the integrated review and product
+  documents. These are coordinating product proposals, not approved design or
+  evidence of fun/learning; their former experimental ref is unavailable.
 - Jörn judgments: dated records under `docs/jorn/`, especially control/inference,
   capability and safety/exit; the direct May excerpts and recovered judgment
   register also preserve the no-adequate-pause death judgment. July records are
   polished paraphrases unless explicitly marked as quotations. Neither this
   judgment nor unresolved quantitative judgments become playable frequencies
   or a generic UI meter here.
-- Retired implementation patterns: the full retired commit above. Historical
+- Retired implementation patterns: commit
+  `0c5262c34c423cc62b68124d30d002b4886b879f`. Historical
   code is neither current implemented behavior nor approved content.
 
 The long-range impact chain, audience unity and all three product shapes remain

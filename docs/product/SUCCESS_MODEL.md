@@ -3,7 +3,8 @@
 Status: product decision model, 11 July 2026. This is a challengeable account of
 what success would mean and what evidence could justify stronger claims. It is
 not Jörn's approval of domain content, evidence that the game works, a release
-decision, or a forecast that a treaty will be established.
+decision, or a forecast that a treaty will be established. Its product
+priorities have not been revalidated since July.
 
 ## The outcome and the route
 
@@ -121,17 +122,17 @@ one. It should not survive merely because it is written here.
 ## Current known state and major uncertainty
 
 The project has a typed opening slice, an intended symbolic model, draft expert
-synthesis, a serious game-design portfolio, and a mobile interaction spike. It
-has structural evidence that the central distinctions can be represented and
-technical evidence that the prototype renders and operates. It does **not** yet
-have evidence of fun, comfortable mobile reading, visual appeal, cold-use
-comprehension, transfer, demand, sharing, target-audience fit, institutional
-reuse, or policy effect. The rejected spike and its screenshots remain
-inspectable on branch `codex/simple-mobile-spike` at commit `7f23bc2`; the
-integrated candidate remains on `codex/integrated-mobile-candidate` at
-`1c6f376`. Jörn's 11 July product feedback contradicts the spike's favorable
-visual conclusion: the failure includes density and type size **and** palette,
-typography, portraits/images, composition, and perceived production value.
+synthesis, and a serious game-design portfolio. It has structural evidence that
+the central distinctions can be represented and technical evidence that the
+current prototype renders and operates. It does **not** yet have evidence of
+fun, comfortable mobile reading, visual appeal, cold-use comprehension,
+transfer, demand, sharing, target-audience fit, institutional reuse, or policy
+effect. Historical July records describe a rejected mobile spike and integrated
+candidate, but their named branches and commits are no longer available in the
+current local repository or its remote refs. Jörn's 11 July product feedback
+records that the failure included density and type size **and** palette,
+typography, portraits/images, composition, and perceived production value; the
+unavailable artifacts cannot now be independently inspected from those refs.
 
 The retired GPT-5.5 product at `0c5262c34c423cc62b68124d30d002b4886b879f`
 is a reference because Jörn preferred its mobile simplicity and overall UI/UX,

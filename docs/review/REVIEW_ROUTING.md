@@ -2,7 +2,8 @@
 
 Status: review-navigation aid, 11 July 2026. It routes each review to the least
 context that can answer its question. It does not replace domain approval,
-human testing, or cross-lane product judgment.
+human testing, or cross-lane product judgment. Its product assumptions have not
+been revalidated since July.
 
 The coordinator or evaluator uses the [success model](../product/SUCCESS_MODEL.md)
 to select a lane and assemble only its minimum context. Do not give that model
@@ -65,8 +66,8 @@ Keep the brief outcome-first and compact:
   without nuance being hidden in tiny or dense text?
 - **Minimum context:** the rendered artifact at target viewports, its immediate
   task/copy, the relevant criterion in the
-  [success model](../product/SUCCESS_MODEL.md), and, when comparison is useful,
-  rejected spike evidence on branch `codex/simple-mobile-spike` at `7f23bc2`.
+  [success model](../product/SUCCESS_MODEL.md). Historical review records may
+  describe the rejected July spike, but its named ref is no longer available.
 - **Evidence:** real-device observation with target humans, text size and zoom
   behavior, scan path, skipped text, comprehension, and density by state.
 - **Non-goals:** proving interaction accessibility, domain truth, game feel, or
@@ -94,9 +95,10 @@ Keep the brief outcome-first and compact:
   domain truth, or fun. A visually attractive screenshot does not establish a
   usable interaction, and readable text does not establish visual appeal.
 - **Verdict scope:** visual craft for the named artifact, states, viewports, and
-  audience. The integrated candidate at `1c6f376` is rejected in this lane;
-  Jörn's preference for the older product's simplicity does not approve its
-  portraits or require restoring its architecture.
+  audience. The July integrated candidate was rejected in this lane, although
+  its named ref is no longer available. Jörn's preference for the older
+  product's simplicity does not approve its portraits or require restoring its
+  architecture.
 
 ## Interaction and accessibility
 

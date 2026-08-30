@@ -1,5 +1,10 @@
 # Expert-model atlas
 
+Freshness: the substantive synthesis was assembled and reviewed in July 2026
+and has not been revalidated against later evidence or renewed Jörn judgment.
+“Current” below means the latest recorded project synthesis, not a claim of
+August 2026 factual currency or approval.
+
 ## Purpose
 
 This atlas presents the project's current beliefs about an international pause on frontier AI: what may happen, why, what interventions change, and where the model is weak. It is optimized for knowledge transfer and expert criticism.

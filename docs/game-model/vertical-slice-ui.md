@@ -29,7 +29,8 @@ game into a policy textbook.
 Advisor content is declarative data in `src/ui/content.ts`. Choices emit a
 closed `GameAction` union. `src/ui/game.ts` reduces those actions into typed
 fixture inputs; cards cannot run arbitrary state mutations. The model core then
-produces a causal trace, and `src/ui/main.ts` renders the DG projection.
+produces a causal trace, `src/ui/App.tsx` renders the DG projection, and
+`src/ui/main.tsx` mounts the React application.
 
 This protects the engine/content boundary:
 
@@ -63,7 +64,7 @@ play samples another diagnostic fixture.
 
 - strict TypeScript check;
 - production Vite build;
-- 40 model, counterfactual, projection, golden-trace and UI-state tests;
+- the model, counterfactual, projection, golden-trace and UI-state unit suite;
 - cold path skips the hosted-access detail card;
 - continued service requires restricted versus broad choice;
 - UI actions configure typed fixtures rather than engine state;

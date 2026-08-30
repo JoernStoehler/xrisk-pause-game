@@ -1,6 +1,11 @@
 # Compact loop experiment: JOINT-KEY-01
 
-Status: integrated experiment brief, 12 July 2026. This is a project proposal and diagnostic fixture, not an approved product direction, calibrated scenario, or approved player-facing expert content. Internal drafting proceeds with split startup credentials and a separate domestic implementation gate; Jörn reviews a concrete trace before participant exposure.
+Status: unreviewed experiment brief recorded 12 July 2026. This is a project
+proposal and diagnostic fixture, not an approved product direction, calibrated
+scenario, or approved player-facing expert content. The current repository
+contains no evidence of Jörn review, participant exposure, or active follow-up.
+`JOINT-KEY-01` is an internal case identifier, not terminology Jörn is expected
+to recognize. Revalidate the priority before resuming this experiment.
 
 Derived from the [priority ledger](PRIORITY_DECISION_LEDGER.md), [game-design portfolio](../game-design/README.md), [control-crux grammars](../game-design/control-crux-event-grammars.md), [public-discourse priorities](../review/PUBLIC_DISCOURSE_PRIORITIES.md), [success model](SUCCESS_MODEL.md), and [review routing](../review/REVIEW_ROUTING.md). Update this brief when structural preflight, Jörn review, or human evidence changes the experiment.
 

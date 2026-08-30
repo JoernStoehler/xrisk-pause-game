@@ -1,7 +1,10 @@
 # Project priority and decision ledger
 
-Status: living root allocation model; provisional project inference, not a product decision, domain approval, or evidence that a game loop works.
-Last material update: 14 July 2026, clarifying allocation versus objective and removing stale live-session state.
+Status: last recorded root allocation model; provisional project inference, not
+a current product decision, domain approval, or evidence that a game loop
+works. Last material update: 14 July 2026. The repository records later
+technical work but no later product reallocation, Jörn review, or human test.
+Revalidate this ranking before using it to direct new product work.
 
 ## Decision use
 
@@ -13,7 +16,7 @@ not complete the work: evidence from it must inform continued product
 development toward the outcome in `AGENTS.md` and the terminal impact route in
 the [success model](SUCCESS_MODEL.md).
 
-## Current allocation
+## Last recorded allocation (not revalidated)
 
 Prepare a low-cost, human-testable interaction experiment for one operational-control crux before another production UI or campaign build. The experiment should compare materially different compact interaction grammars while holding the lesson, underlying case, prose budget, and evidence boundary as constant as practicable.
 
@@ -82,7 +85,12 @@ Change the allocation when any of the following occurs:
 
 ## Immediate work and ownership
 
-The root owns cross-project ranking and integration. Bounded work may independently audit: the smallest case that preserves the model distinction; interaction-variant comparability; and a non-coaching human protocol. Do not launch production implementation, campaign authoring, or broad new research until those audits are integrated into one experiment brief.
+The July allocation assigned the root cross-project ranking and integration.
+It proposed bounded audits of the smallest case that preserves the model
+distinction, interaction-variant comparability, and a non-coaching human
+protocol. Those proposals produced an unreviewed experiment brief and matched
+script, but the current repository does not establish active ownership or a
+decision to continue them.
 
 Jörn review becomes necessary if work promotes expert-grounded content toward
 players or reaches a value/product crux that accessible evidence cannot settle.

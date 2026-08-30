@@ -1,5 +1,10 @@
 # Current synthesis
 
+Status: latest recorded project synthesis, assembled in July 2026 and not
+revalidated against later evidence or renewed Jörn judgment. Quantitative and
+expert-grounded claims remain subject to the provenance and approval limits in
+the atlas README.
+
 ## In one page
 
 Absent an effective pause, the project treats the arrival of systems capable of causing recursive capability improvement as near enough and uncertain enough that ordinary reactive regulation is inadequate. Capability progress is correlated across domains but ragged at task level. Current scaling trends inform near-regime interpolation; they do not identify the capability profile, compute level, or qualitative route at which recursive improvement becomes possible. Algorithmic breakthroughs can change the mapping abruptly.

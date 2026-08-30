@@ -4,6 +4,10 @@ Status: evidence-based process review of thread
 `019f522c-3d5a-7442-bb1a-8c499ada9999`. It proposes harness changes but does
 not approve them. Jörn must review any further `AGENTS.md` or skill change.
 
+Availability check, 30 August 2026: the recorded raw rollout path no longer
+resolves in the current environment. Treat the focused measurements below as a
+historical synthesis; they cannot presently be rechecked from the named source.
+
 ## Outcome and main update
 
 The session produced useful research, model semantics, design hypotheses,

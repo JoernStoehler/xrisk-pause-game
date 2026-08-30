@@ -5,6 +5,11 @@ direction, calibrated game distribution, or approved player-facing expert
 content**. Jörn owns domain approval. All proposed dialogue and event details in
 this directory remain draft.
 
+Freshness: this portfolio was assembled in July 2026 and has not been
+revalidated against later product evidence or renewed Jörn judgment. Its
+“design conclusion” is a design hypothesis, not the current project allocation;
+the later priority ledger instead recorded a smaller comparative experiment.
+
 ## Fixed frame
 
 This exploration assumes the following product premises rather than spending

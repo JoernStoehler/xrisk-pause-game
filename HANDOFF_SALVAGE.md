@@ -1,10 +1,17 @@
 # Session-work salvage and retirement
 
 Status: historical handoff and salvage classification recorded 11 July 2026.
-Branches remain recoverable; this file classifies their reviewed value so a
-fresh session does not treat every artifact as an equal candidate. Branch names
-and worktree paths are not a current inventory: inspect Git before relying on
-them. A 14 July audit found the curated evidence branch at `234bf61`.
+At that time the branches were considered recoverable; many are not now. This
+file classifies their reviewed value so a fresh session does not treat every
+artifact as an equal candidate. Branch names and worktree paths are not a
+current inventory: inspect Git before relying on them. A 14 July audit found
+the curated evidence branch at `234bf61`.
+
+Availability check, 30 August 2026: the experimental source and prototype
+commits from `codex/public-discourse-research` through
+`codex/project-control` in the table are absent locally and from the remote
+refs. The curated handoff history and integrated documents remain; do not treat
+the unavailable prototype rows as inspectable quarry.
 
 ## Disposition vocabulary
 
@@ -36,8 +43,9 @@ them. A 14 July audit found the curated evidence branch at `234bf61`.
 ## Specific prototype salvage
 
 If a future root wants the stronger causal kernel without the rejected product,
-port only named model boundaries and their focused tests from `7cbf546` or
-`7f23bc2` into a new branch. Do not merge either prototype wholesale.
+the July recommendation was to port only named model boundaries and focused
+tests from `7cbf546` or `7f23bc2`. Those commits are currently unavailable; do
+not claim to inspect or port them unless they are separately recovered.
 
 Candidate model-level salvage:
 
@@ -62,9 +70,9 @@ Do not salvage without fresh design justification:
 
 ## Retired worktrees
 
-The old worktree directories may be removed after confirming they are clean.
-Their branches and commits must remain. A fresh root can recreate a checkout
-with `git worktree add <path> <branch>` when a named salvage need arises.
+The July plan was to remove old worktree directories only after confirming they
+were clean while preserving their branches and commits. The missing worktrees
+and refs cannot now be recreated from the recorded pointers.
 
 The 11 July retirement recommendation was to retain only these worktrees. It
 was not completed and is not a current inventory; a 14 July audit found six

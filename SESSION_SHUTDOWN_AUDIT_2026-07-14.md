@@ -7,6 +7,11 @@ Git for current state and the narrow owner documents under `docs/` for durable
 project knowledge. Update an owner document rather than extending this snapshot
 when project evidence changes.
 
+Availability check, 30 August 2026: the recorded raw rollout and prototype
+worktree no longer exist in the current environment, and the named prototype
+branch refs are absent locally and remotely. This audit remains historical
+evidence, not a currently reproducible source inventory.
+
 Raw session source:
 
 - rollout: `/home/vscode/.codex/sessions/2026/07/12/rollout-2026-07-12T16-54-48-019f5740-ba6f-7132-807d-7fdcb3e8ad70.jsonl`
@@ -80,12 +85,12 @@ Expert-grounded player content remains draft. The audited owner documents did
 not reveal an obvious false substantive domain claim; that is a scoped document
 review, not expert approval or a guarantee of completeness.
 
-Raw session logs remain outside the repository in the Codex session store.
-They preserve the conversation locally, but fresh agents should not need to
-reconstruct project policy from them. Long spawn prompts and reactive chat were
-not promoted because they add no durable project truth. The corrections above
-were promoted because future coordination would otherwise repeat the same
-mistakes.
+At the time of the audit, raw session logs remained outside the repository in
+the Codex session store. The current availability check above found the named
+rollout missing. Fresh agents should not reconstruct project policy from an
+unavailable session source. Long spawn prompts and reactive chat were not
+promoted because they add no durable project truth. The corrections above were
+promoted because future coordination would otherwise repeat the same mistakes.
 
 No deployment check, participant test, human fun/comprehension review, or Jörn
 domain approval occurred in this shutdown audit.

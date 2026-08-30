@@ -8,6 +8,12 @@ Later state: read `SESSION_SHUTDOWN_AUDIT_2026-07-14.md` before treating the
 branch map, worktree list, allocation, or deployment language in this dated
 handoff as current.
 
+Availability check, 30 August 2026: the raw rollout path and the rejected
+prototype refs in this handoff do not resolve in the current environment or
+remote refs. The curated handoff history and integrated documents remain in
+Git; the historical raw source and prototype artifacts are not presently
+inspectable.
+
 ## Start state
 
 The previous root session derailed after useful research and model work. Do not
@@ -20,7 +26,8 @@ Raw session source:
 - rollout: `/home/vscode/.codex/sessions/2026/07/11/rollout-2026-07-11T17-14-18-019f522c-3d5a-7442-bb1a-8c499ada9999.jsonl`
 - use `.agents/skills/codex-session-log-parsing/SKILL.md`; quote or extract only
   focused evidence because the rollout contains private instructions and tool
-  output.
+  output. This path no longer resolves in the current environment; do not claim
+  to have rechecked the thread from it.
 
 Not waiting on Jörn for routine planning, repository inspection, research, or
 implementation. Ask him only for domain judgment, approval of expert-grounded
@@ -167,7 +174,11 @@ project-quality, and skill-writing skills; they were not resurrected. Jörn
 subsequently approved these three adapted skills for `main`; they were merged
 and pushed in `c136cf8`.
 
-## Bootstrap prompt for the new root
+## Historical bootstrap prompt (no longer executable as written)
+
+The named worktree and raw rollout in this preserved prompt are unavailable.
+Use the current checkout and owner documents instead; do not infer that the
+verification requested below occurred.
 
 > Start in `/workspaces/xrisk-pause-game-worktrees/handoff-evidence-options`.
 > Read `AGENTS.md`, `README.md`, `docs/CURRENT_GAPS.md`,
