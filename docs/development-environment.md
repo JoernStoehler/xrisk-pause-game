@@ -17,13 +17,18 @@ an app-server capability token.
 ## Common project setup
 
 All supported environments use the checked-in Node application directly. They
-must provide Node.js 22.22.1 or newer.
+must provide Node.js 24.20.0 (the repository pins this in `.node-version`) and
+npm 11.19.0. The `packageManager` field records the npm version used to create
+the lockfile.
 
 Install the locked dependency set:
 
 ```bash
 npm ci
 ```
+
+The npm 11 install policy explicitly allows scripts for the pinned `esbuild`
+and `workerd` packages; no other dependency install scripts are approved.
 
 Run the standard validation:
 

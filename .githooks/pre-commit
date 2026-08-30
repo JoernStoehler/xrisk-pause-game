@@ -3,7 +3,7 @@
 # Installed via: git config core.hooksPath .githooks
 
 if command -v gitleaks >/dev/null 2>&1; then
-  gitleaks protect --staged --no-banner
+  gitleaks git --staged --no-banner
 else
   echo "WARNING: gitleaks not installed, skipping secret scan"
 fi
