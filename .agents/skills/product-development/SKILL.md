@@ -13,7 +13,8 @@ owners.
 ## Outcome, Players, And Surfaces
 
 - Read `docs/product/PRIORITY_DECISION_LEDGER.md` when choosing or comparing
-  project-level product work. It is a living allocation model, not a backlog.
+  project-level product work. Inspect its freshness and authority before using
+  it as the current allocation; it is an allocation model, not a backlog.
 - Read `docs/product/SUCCESS_MODEL.md` when defining or reviewing the quality
   dimensions a product artifact is intended to advance.
 - Read `docs/product/PRODUCT_ARCHITECTURE_PORTFOLIO.md` when the use context or
