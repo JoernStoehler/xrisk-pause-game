@@ -24,8 +24,9 @@ fixed implementation order or approved product design.
 
 ## Player experience and validation
 
-- The dominant mobile card disables native touch scrolling and swipe handling
-  lacks axis discrimination.
+- Card gestures now preserve vertical touch scrolling and discard cancelled
+  gestures; native scrolling is covered by Chromium touch-input regression tests.
+  Physical-device and Safari/WebKit gesture validation remains open.
 - Device profiles run Chromium only. Safari/WebKit, real touch input, and actual
   devices remain untested.
 - Focus, reset, empty-dossier layout, and causal-result legibility need review.

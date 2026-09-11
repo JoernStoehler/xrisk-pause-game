@@ -89,7 +89,7 @@ function Intro({ onBegin }: { onBegin: () => void }) {
 
 function DecisionCard({ card, onChoose }: { card: AdvisorCard; onChoose: (choice: Choice) => void }) {
   const cardRef = useRef<HTMLElement>(null);
-  const dragStartX = useRef<number | null>(null);
+  const drag = useRef<{ pointerId: number; x: number; y: number; horizontal: boolean } | null>(null);
   const dragDelta = useRef(0);
   const [visibleDelta, setVisibleDelta] = useState(0);
 
@@ -98,23 +98,45 @@ function DecisionCard({ card, onChoose }: { card: AdvisorCard; onChoose: (choice
   }, []);
 
   function startDrag(event: ReactPointerEvent<HTMLElement>) {
-    dragStartX.current = event.clientX;
+    if (!event.isPrimary || event.button !== 0 || drag.current) return;
+    drag.current = { pointerId: event.pointerId, x: event.clientX, y: event.clientY, horizontal: false };
     dragDelta.current = 0;
     event.currentTarget.setPointerCapture(event.pointerId);
   }
 
   function moveDrag(event: ReactPointerEvent<HTMLElement>) {
-    if (dragStartX.current === null) return;
-    dragDelta.current = event.clientX - dragStartX.current;
+    const start = drag.current;
+    if (!start || start.pointerId !== event.pointerId) return;
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    if (!start.horizontal) {
+      if (Math.max(Math.abs(dx), Math.abs(dy)) < 8) return;
+      if (Math.abs(dy) >= Math.abs(dx)) {
+        cancelDrag(event);
+        return;
+      }
+      start.horizontal = true;
+    }
+    dragDelta.current = dx;
     setVisibleDelta(dragDelta.current);
   }
 
-  function finishDrag() {
-    if (dragStartX.current === null) return;
-    const choice = dragDelta.current < -90 ? card.left : dragDelta.current > 90 ? card.right : null;
-    dragStartX.current = null;
+  function cancelDrag(event: ReactPointerEvent<HTMLElement>) {
+    if (drag.current?.pointerId !== event.pointerId) return;
+    drag.current = null;
     dragDelta.current = 0;
     setVisibleDelta(0);
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
+  }
+
+  function finishDrag(event: ReactPointerEvent<HTMLElement>) {
+    if (drag.current?.pointerId !== event.pointerId) return;
+    moveDrag(event);
+    if (!drag.current) return;
+    const choice = dragDelta.current < -90 ? card.left : dragDelta.current > 90 ? card.right : null;
+    cancelDrag(event);
     if (choice) onChoose(choice);
   }
 
@@ -127,13 +149,14 @@ function DecisionCard({ card, onChoose }: { card: AdvisorCard; onChoose: (choice
     <div className="card-stage">
       <div className="swipe-label swipe-left">{card.left.label}</div>
       <article
-        className={`advisor-card${dragStartX.current === null ? "" : " dragging"}`}
+        className={`advisor-card${visibleDelta === 0 ? "" : " dragging"}`}
         data-card=""
         data-direction={direction}
         onPointerDown={startDrag}
         onPointerMove={moveDrag}
         onPointerUp={finishDrag}
-        onPointerCancel={finishDrag}
+        onPointerCancel={cancelDrag}
+        onLostPointerCapture={cancelDrag}
         ref={cardRef}
         style={style}
         tabIndex={-1}
