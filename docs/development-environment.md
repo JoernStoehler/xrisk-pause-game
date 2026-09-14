@@ -102,11 +102,14 @@ Custom skills for this project live under `.agents/skills`. The project Codex
 config disables every known legacy path in `/home/agent/.agents/skills`; the
 live VirtioFS mount was detached on 2026-09-14, but `sbx` will attach it again
 after a VM restart until the sandbox is safely recreated with skill sharing
-off. Do not edit it if it reappears. Make a reusable skill correction as a
-focused commit. A host coordinator can enumerate other repository consumers,
-fetch the source commit, and apply it with `git cherry-pick -x` after checking
-each target's local skill contract. A sandbox agent must not infer that it can
-see or update consumers in other VMs.
+off. Do not edit it if it reappears. The repository-owned Herdr skill is an
+exact copy of the host-tested guidance and is available to Codex sessions
+inside the VM. Make a reusable skill correction as a focused commit. A host
+coordinator can enumerate other repository consumers, fetch the source commit,
+and apply it with `git cherry-pick -x` after checking each target's local skill
+contract. A sandbox agent must not infer that it can see or update consumers in
+other VMs. Always ask Jörn before recreating this sandbox because recreation
+deletes VM-private state.
 
 ## Codex Cloud
 
