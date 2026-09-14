@@ -111,6 +111,17 @@ contract. A sandbox agent must not infer that it can see or update consumers in
 other VMs. Always ask Jörn before recreating this sandbox because recreation
 deletes VM-private state.
 
+The repository-owned `review-files` skill can present an explicitly named
+artifact through the host's Tailscale-only port mapping:
+
+```bash
+.agents/skills/review-files/scripts/review-open --sandbox FILE...
+```
+
+Host setup for the mapping and repository-local URL belongs to dotfiles
+`INSTALL.md`. It does not require sandbox recreation or give the VM Tailscale
+credentials. A new invocation replaces the previous sandbox review session.
+
 ## Codex Cloud
 
 Codex Cloud is supported through its externally configured environment. The
