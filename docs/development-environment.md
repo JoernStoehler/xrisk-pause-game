@@ -78,6 +78,26 @@ commands above. Do not add a project Dockerfile or Compose layer to customize
 the sandbox; change the host-side sandbox setup only when the declared project
 requirements cannot be met by the supported sandbox environment.
 
+The retained named sandbox is `codex-xrisk-pause-game`, with the repository at
+`/workspaces/xrisk-pause-game`. From the host, inspect or enter it with:
+
+```bash
+sbx ls --json
+ssh codex-xrisk-pause-game.sbx
+```
+
+Verified on 2026-09-14: the sandbox resolves the checksum-verified host Micro
+2.0.15 binary from `/home/agent/.local/bin`, and all five authored files under
+`/home/agent/.config/micro/` exactly match the host configuration. Herdr 0.9.0
+is installed, its Codex integration is current at v8, and the enabled host
+machine profile `xrisk-pause-game` targets the VM's working default remote
+session. That session's workspace is labeled `xrisk-pause-game`, and its pane
+starts in `/workspaces/xrisk-pause-game`. The host Herdr UI configuration
+remains local to the host client.
+The enabled profile may start or keep the sandbox running while a host Herdr
+client reconnects; query `sbx ls --json` instead of assuming its lifecycle
+state from the saved profile alone.
+
 ## Codex Cloud
 
 Codex Cloud is supported through its externally configured environment. The
