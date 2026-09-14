@@ -14,6 +14,10 @@ path = "/home/agent/.agents/skills/gpt-prompting/SKILL.md"
 enabled = false
 
 [[skills.config]]
+path = "/home/agent/.agents/skills/harness-engineering-v2/SKILL.md"
+enabled = false
+
+[[skills.config]]
 path = "/home/agent/.agents/skills/herdr/SKILL.md"
 enabled = false
 

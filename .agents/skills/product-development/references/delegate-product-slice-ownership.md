@@ -22,7 +22,7 @@ Jörn packet, and a participant protocol merely because they may eventually be
 needed. Do not constrain the recipient to a designer or coder role when the
 named outcome genuinely requires both.
 
-Use `$gpt-56-harness` for a durable cold-start prompt. State:
+Use `$harness-engineering-v2` for a durable cold-start prompt. State:
 
 - what player/use-context decision the slice serves;
 - what earlier surfaces supply and what later surfaces may rely on;

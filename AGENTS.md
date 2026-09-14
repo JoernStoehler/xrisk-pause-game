@@ -54,4 +54,8 @@ git diff --check
 
 For model changes, add a focused deterministic test. For UI changes, render and inspect desktop and mobile layouts. For deployment work, read `.agents/skills/deploy/SKILL.md`.
 
-For harness changes, use `$gpt-56-harness`; validate changed skills, links, discovery and trigger boundaries, then forward-test representative behavior in proportion to risk. A larger agent tree, successful instruction recitation, or passing syntax check does not by itself establish harness quality.
+For harness changes, use `$harness-engineering-v2`; validate changed skills,
+links, discovery and trigger boundaries, then forward-test representative
+behavior in proportion to risk. A larger agent tree, successful instruction
+recitation, or passing syntax check does not by itself establish harness
+quality.
