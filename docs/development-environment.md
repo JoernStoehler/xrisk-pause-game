@@ -6,8 +6,8 @@ when a supported execution surface or a project prerequisite changes.
 The supported execution surfaces are:
 
 - a normal host checkout;
-- a Docker Sandbox, including an interactive `sbx run codex` session or
-  commands executed with `sbx exec`; and
+- a deliberately created Docker Sandbox, when a future task explicitly calls
+  for one; and
 - Codex Cloud.
 
 The repository does not support Docker Compose, Dev Containers, or the
@@ -67,6 +67,13 @@ git config core.hooksPath .githooks
 
 ## Docker Sandbox
 
+As of 2026-09-19, the retained `codex-xrisk-pause-game` sandbox is stopped
+while its private state is wound down, and its Codex rollouts have been
+imported into the host session store. It is not an active development surface:
+resume from the host checkout unless Jörn explicitly chooses a new sandbox
+workflow. Keep the details below as recovery history; do not start or recreate
+the retained VM merely to continue ordinary project work.
+
 Sandbox creation, authentication, resource limits, ports, and lifecycle are
 host concerns rather than repository scripts. Use `sbx run codex` for an
 attached Codex session, or use the ordinary `sbx` create, exec, ports, and
@@ -78,7 +85,7 @@ commands above. Do not add a project Dockerfile or Compose layer to customize
 the sandbox; change the host-side sandbox setup only when the declared project
 requirements cannot be met by the supported sandbox environment.
 
-The retained named sandbox is `codex-xrisk-pause-game`, with the repository at
+The retained named sandbox was `codex-xrisk-pause-game`, with the repository at
 `/workspaces/xrisk-pause-game`. From the host, inspect or enter it with:
 
 ```bash
@@ -86,7 +93,7 @@ sbx ls --json
 ssh codex-xrisk-pause-game.sbx
 ```
 
-Verified on 2026-09-14: the sandbox resolves the checksum-verified host Micro
+Before wind-down, verified on 2026-09-14: the sandbox resolved the checksum-verified host Micro
 2.0.15 binary from `/home/agent/.local/bin`, and all five authored files under
 `/home/agent/.config/micro/` exactly match the host configuration. Herdr 0.9.0
 is installed, its Codex integration is current at v8, and the enabled host
@@ -94,9 +101,9 @@ machine profile `xrisk-pause-game` targets the VM's working default remote
 session. That session's workspace is labeled `xrisk-pause-game`, and its pane
 starts in `/workspaces/xrisk-pause-game`. The host Herdr UI configuration
 remains local to the host client.
-The enabled profile may start or keep the sandbox running while a host Herdr
-client reconnects; query `sbx ls --json` instead of assuming its lifecycle
-state from the saved profile alone.
+An enabled profile may start or keep a future sandbox running while a host
+Herdr client reconnects; query `sbx ls --json` instead of assuming lifecycle
+state from a saved profile alone.
 
 Custom skills for this project live under `.agents/skills`. The project Codex
 config disables every known legacy path in `/home/agent/.agents/skills`; the
