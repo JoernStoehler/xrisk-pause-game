@@ -107,6 +107,7 @@ docs/README.md                  questions each brief helps answer; source pointe
 docs/<topic>.md                 interpreted knowledge for specializing a thread
 interviews/jorn.md              source record; dates, context, quotation/paraphrase labels
 literature/                     retained corpus, index, encrypted + private readable copies
+literature/AGENTS.md             local rules for adding/editing corpus material
 scripts/decrypt-literature.sh   retain; documented age/key prerequisites
 ```
 
@@ -136,6 +137,27 @@ Each brief needs enough context to distinguish what is supported, Jörn's dated 
 For model checks, preserve both correctness and relevance: a compact game need not model every possible future, but it must represent the distinctions and counterexamples necessary for the selected teaching aims. Checks can expose disagreement with Jörn's recorded judgment; they do not establish empirical truth, forecast calibration, or player learning by themselves.
 
 Assess the briefs with representative fresh-thread tasks: can a recipient identify relevant mechanisms, answer from appropriate evidence, challenge an unsupported inherited claim, and recognize when further sources or Jörn's input are needed? Compare errors, missing mechanisms, source access, context/latency cost and required corrections. Merely reproducing the brief's wording is insufficient. The earlier 3–8 hour cleanup estimate covers a bounded first pass of disposition/callers, not six fully researched and evaluated topic models; substantive synthesis needs a separately scoped budget.
+
+## Source-corpus navigation and local maintenance guidance
+
+Keep the flat `literature/` layout initially. The bounded audit found descriptive slugs, an alphabetical file/title/author/year/encryption catalog, and useful headings/metadata in sampled files. These support filename and full-text search without choosing one subject taxonomy for sources relevant to several topics. This is evidence that those surfaces exist, not proof that the corpus is easy to navigate for every task.
+
+The demonstrated gap is passage-level support and source status. Most existing docs point to external publications, broad source families or the catalog, rather than specific local passages. `docs/SELECTIVE_CROSSWALK.md` advertises exact citations although its associated source index is mainly an orientation bibliography. Some corpus files also mix commentary with source text: the IAEA Iran report begins with editorial `Description:` framing; the incident-database file is a project compilation and makes trend claims without adequate extraction/method context. Those should not be treated as uninterpreted original source material.
+
+Use complementary navigation surfaces according to the question:
+
+| Consumer task | Navigation surface | Maintenance boundary |
+| --- | --- | --- |
+| Specialize a thread and understand why a source matters | `docs/<topic>.md` links selected local passages and explains their claim-level relevance/limits | Topic synthesis belongs here; do not duplicate it in every source's notes. |
+| Discover what is retained or search an unfamiliar question | Filename/full-text search plus a compact corpus catalog with source-versus-compilation status and useful topic synonyms where needed | The catalog describes retained items, not all available research. Add triage text where title/slug/body searches repeatedly miss a relevant item. |
+| Check a specific claim | Local file + section/chapter/page and a short distinctive search phrase; optional current line range | A line range is convenient but can shift after conversion/metadata edits. For sensitive exact citations, identify the source edition/version or repository snapshot as well. Keep an original-source URL/locator when checking conversion fidelity matters. |
+| Reuse expensive source-specific navigation across topics | A small clearly labeled companion note, such as `<slug>.notes.md`, only when it earns its cost | Passage map, conversion omissions, relevant terminology and caveats. Do not generate a summary/notes file for every source or imply that an agent-written note has source authority. |
+
+The initial implementation need not create a new search system, move sources into subject folders, or maintain a mandatory keyword ontology. Start with good passage pointers while writing the topic briefs. A source can participate in several briefs; it still needs only one source record. A missing plaintext file should remain visibly encrypted/unavailable rather than look like a broken citation or a checked source.
+
+`literature/AGENTS.md` is the proposed owner for instructions that apply whenever corpus material is added or edited: preserve source identity and wording, distinguish conversion/excerpt/compilation/commentary, provide useful source locators, update navigation, preserve encrypted/plaintext handling, and avoid research-completeness claims. Keep executable mechanics in existing scripts. A separate skill is justified only for substantial conditional expertise or a reusable workflow with consumers beyond these ordinary local rules; it is not required to make local maintenance discoverable. Maintain one owner for each instruction rather than copying the same procedure into README, AGENTS and a skill. Each supported environment's entry/setup route must establish how its agents discover and honor repo instructions; storing `AGENTS.md` alone does not establish that behavior on an untested surface.
+
+Test navigation on a small set of real retrieval tasks: an unfamiliar-topic search, a known-claim passage lookup, a source-versus-synthesis distinction, and an unavailable encrypted source. Record right-source/right-passage success, false attribution, source-access failures, and context/time cost. Compare existing navigation with targeted improvements before expanding annotations. This audit sampled 8–12 records and existing docs references; it did not assess all sources or run that retrieval comparison.
 
 ## Portable environment setup
 
