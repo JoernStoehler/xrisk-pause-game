@@ -4,7 +4,7 @@ Status: draft proposal for Jörn, 10 October 2026; no cleanup, framework selecti
 
 ## Recommendation
 
-Create a checkpoint whose active contents are **preserved expert input, a usable source corpus, and portable setup instructions**. Keep the old game and its development reasoning recoverable, but stop presenting them as the current plan. Do not put a dummy game or a React/Vite game scaffold in the active checkout yet. Retain the existing literature-decryption tools and safe repository configuration. Describe browser-setup options in `INSTALL.md`; do not create a separate browser package before an actual rendering/testing task establishes its value.
+Create a checkpoint whose active contents are **topic briefs for specializing threads, preserved source records, and portable setup instructions**. `docs/<topic>.md` should provide useful interpreted knowledge for a substantive question; literature and interview records supply the checkable source layer. Keep the old game and its development reasoning recoverable, but stop presenting them as the current plan. Do not put a dummy game or a React/Vite game scaffold in the active checkout yet. Retain the existing literature-decryption tools and safe repository configuration. Describe browser-setup options in `INSTALL.md`; do not create a separate browser package before an actual rendering/testing task establishes its value.
 
 This is a decision about separate layers. Browser inspection can serve an HTML mock, a React game, or a canvas prototype; it need not choose the game framework. Cloud deployment records can preserve an account/project route without activating old build configuration. A dated literature catalog can help find sources without claiming that research is complete.
 
@@ -16,9 +16,9 @@ The baseline has **260 tracked files**, grouped below. Main was clean before thi
 
 | Surface | What exists | Proposed disposition |
 | --- | --- | --- |
-| Jörn input: `docs/jorn/` — 5 files | May direct excerpts; three July attributed paraphrases; a question packet containing agent synthesis | Consolidate the four response/excerpt records into one discoverable `docs/expert-input.md`, preserving dated topic sections, context and quotation status. They total about 5,200 words; three July files together are only about 1,560. The 1,280-word agent question packet is preparation, not Jörn's answer; retain necessary question context without laundering it into expert input. |
-| Expert synthesis: `docs/expert-model/` — 13 | Causal atlas, key claims, forecasts, provenance, alternative hypotheses | Preserve as dated, inspectable candidate reasoning. Reuse by question; do not inherit “current beliefs” or source-selection rules automatically. |
-| Research: `docs/research/` — 8 | Legal maps, public-discourse/audience work, UX and source checks | Retain dated investigations and their sources/limits. Refresh relevant claims when reused; these are neither exhaustive searches nor evidence of demand. |
+| Jörn input: `docs/jorn/` — 5 files | May direct excerpts; three July attributed paraphrases; a question packet containing agent synthesis | Consolidate the four response/excerpt records into a discoverable interview/source record, such as `interviews/jorn.md`, preserving dates, context and quotation status. They total about 5,200 words; three July files together are only about 1,560. July paraphrases must not be relabeled raw transcripts. The 1,280-word agent question packet is preparation, not Jörn's answer; retain necessary question context without laundering it into expert input. |
+| Expert synthesis: `docs/expert-model/` — 13 | Causal atlas, key claims, forecasts, provenance, alternative hypotheses | Use as inputs to question-specific topic briefs, checking source support and conflicting claims. Retain useful reasoning and alternatives; do not inherit “current beliefs” or source-selection rules automatically. |
+| Research: `docs/research/` — 8 | Legal maps, public-discourse/audience work, UX and source checks | Reconcile useful findings into relevant topic briefs with sources, search limits and refresh needs. These investigations are neither exhaustive searches nor evidence of demand. |
 | Literature — 119 tracked files | 98 Markdown, 16 text, 4 encrypted documents, and a local ignore file; includes index/readme/public recipient metadata | Keep the corpus. At roughly 7.3 MB, physical retention is cheap; judging source quality and completeness is the expensive part. Preserve conversion-versus-synthesis distinctions. |
 | Game specifications: `docs/game-model/` — 9 | `model.yaml`, causal/trace semantics, opening-slice/UI specifications, implementation map | Historical specification and mechanism quarry. A new concept should create its own intended model; do not pretend the old YAML is its specification. |
 | Product/game-design: `docs/product/` — 4; `docs/game-design/` — 3 | Success/allocation models, architecture portfolio, compact-loop experiment, event grammars | Optional historical design evidence. Archive the prior allocation and concept-specific prescriptions. Salvage relevant failure evidence when needed. |
@@ -103,14 +103,39 @@ README.md                       new attempt, authority, short navigation
 AGENTS.md                       reviewed mission/authority and applicable rules
 INSTALL.md                      shared setup plus environment sections
 .gitignore / secret scanning    includes private plaintext and environment files
-docs/README.md                  source/evidence map, no research-completion claim
-docs/expert-input.md            dated/topic sections; quotations vs paraphrases
-docs/<relevant-topic>.md        other retained notes only where useful to a live question
+docs/README.md                  questions each brief helps answer; source pointers
+docs/<topic>.md                 interpreted knowledge for specializing a thread
+interviews/jorn.md              source record; dates, context, quotation/paraphrase labels
 literature/                     retained corpus, index, encrypted + private readable copies
 scripts/decrypt-literature.sh   retain; documented age/key prerequisites
 ```
 
 This is a proposed layout, not an instruction to relocate every file now. There is no proposed `docs/history/` dumping ground: keep material useful to a live question discoverable under its topic; leave discarded material in a verified Git snapshot with a short recovery pointer. Keep dated expertise easy to reach; exclude old allocation, campaign shape, forecasts, palette choices and machine-specific claims from required orientation. No active `src/`, old game tests, game package/build configs or `wrangler.toml` until selected for a concrete prototype. CI must be revised with this change so it does not invoke missing root game scripts. A browser probe becomes useful when there is an environment to verify; its existence is not required to make the checkpoint look ready.
+
+## Topic briefs as the working knowledge layer
+
+Jörn clarified that `docs/` should be quick ways to specialize a thread into a subject, rather than a file-per-interview inventory or a collection of prior agent reports. The source layer may remain messy. The topic layer should interpret and organize it enough that a fresh thread can make relevant decisions and notice what it does not know. This is substantive synthesis, not just renaming folders or shortening prose.
+
+Candidate boundaries, to use only where there is enough useful content and a real consumer:
+
+| Topic brief | Questions it should prepare a thread to answer | Existing starting inputs, not presumed truth |
+| --- | --- | --- |
+| `docs/treaty-building-blocks.md` | What can a treaty do that directly or indirectly changes x-risk? How do its legal, technical and institutional capabilities develop over time? | Expert causal map, pause-formation/persistence analysis, authority maps, IABIED treaty and institutional literature. |
+| `docs/threats-and-actor-options.md` | Which adversarial and non-adversarial mechanisms threaten success? What can each relevant actor do, know, prevent, repair or exploit? | Expert mechanisms, authority/control distinctions, causal atlas and historical cases; old game action lists are design choices to reassess. |
+| `docs/jorn-judgments-and-model-checks.md` | Which attributed predictions, qualitative expectations and distinctions should a reader/agent/game model reproduce? Which deviations indicate a mistake, an omission that matters for teaching, or a live disagreement? | Interview/source records, recovered judgments and tensions, prior pruning and forecast records. Preserve conditions and missing provenance; do not turn an unresolved judgment into a calibrated numeric test. |
+| `docs/game-fun.md` | Which mechanisms plausibly create pleasure, agency and voluntary continuation, and under which player/use contexts? | Existing design hypotheses, UX research and relevant literature. Separate evidence from speculation and prototype-specific feedback. |
+| `docs/learning-and-transfer.md` | What must players understand, how can interaction teach it, and how do we detect confident misconceptions or failure to transfer? | Teaching priorities, success/review analysis, prior comprehension hypotheses and relevant learning evidence. |
+| `docs/distribution-and-sharing.md` | What makes a game reach the intended audience, get shared and reused? When does fun help those outcomes, and what else is required? | Audience/distribution investigations and hypotheses. Do not substitute channel existence or enjoyable play for observed diffusion or useful learning. |
+
+These filenames and boundaries are proposals, not six mandatory empty files. Fun, sharing and learning are coupled but distinct outcomes; split or combine their briefs according to whether that reduces specialization and maintenance cost. A brief may link another for a specific dependency without requiring every thread to read all of them.
+
+Optimize format for agent task performance, not for a human essay style: concise statements, tables, diagrams, explicit conditions, topic search terms and source locators can all help. Jörn permits agent-oriented shorthand. Compression that hides attribution, alternatives or uncertainty would defeat checkability; no special opaque notation is assumed to improve performance. Keep exact quotations/source records intact outside the interpreted brief.
+
+Each brief needs enough context to distinguish what is supported, Jörn's dated judgment, project inference, prior design choice, and a missing answer. Use whichever presentation makes that distinction cheap; do not impose a uniform metadata ceremony. A source pointer should identify the passage supporting the particular claim. A broad bibliography or an old expert judgment cannot by itself establish current correctness or complete coverage. Existing evidence may suffice for a particular task, but the brief should not prohibit new investigation by asserting that research is finished.
+
+For model checks, preserve both correctness and relevance: a compact game need not model every possible future, but it must represent the distinctions and counterexamples necessary for the selected teaching aims. Checks can expose disagreement with Jörn's recorded judgment; they do not establish empirical truth, forecast calibration, or player learning by themselves.
+
+Assess the briefs with representative fresh-thread tasks: can a recipient identify relevant mechanisms, answer from appropriate evidence, challenge an unsupported inherited claim, and recognize when further sources or Jörn's input are needed? Compare errors, missing mechanisms, source access, context/latency cost and required corrections. Merely reproducing the brief's wording is insufficient. The earlier 3–8 hour cleanup estimate covers a bounded first pass of disposition/callers, not six fully researched and evaluated topic models; substantive synthesis needs a separately scoped budget.
 
 ## Portable environment setup
 
