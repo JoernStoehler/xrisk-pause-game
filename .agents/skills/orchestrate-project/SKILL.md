@@ -71,7 +71,7 @@ ranking. Read [model and effort routing](references/model-effort-routing.md)
 when selecting agents, choosing reasoning effort, or deciding whether the root
 session should change model or effort.
 
-Deep derivation may be delegated to a Sol-high specialist that returns sources,
+Deep derivation may be delegated to an appropriate specialist that returns sources,
 assumptions, alternatives, conclusions, and reversal conditions. The lead must
 understand and audit the result well enough to integrate it, but need not
 rederive it from scratch. Keep the lead capable enough for the synthesis it

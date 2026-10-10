@@ -4,3 +4,6 @@ barnett-finnemore-io-pathologies-1999.md
 iabied-book.md
 mccright-dunlap-climate-polarization-2011.md
 slovic-psychic-numbing-2007.md
+
+# Temporary private output while an encrypted source is being decrypted.
+*.decrypt-tmp

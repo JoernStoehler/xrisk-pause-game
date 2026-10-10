@@ -15,6 +15,8 @@ notes: "Compilation of major AI incidents from 2024-2025 based on AIAAIC and AI 
 
 The AI Incident Database (incidentdatabase.ai) and AIAAIC Repository track AI-related incidents and controversies. This document compiles notable incidents from 2024-2025, illustrating the types of harms occurring as AI systems become more capable and widely deployed.
 
+> **Project-editor note (2026-10-10): internal inconsistency retained from this compilation.** The text reports 233 incidents for all of 2024, says 2025 had “already surpassed” that total through October, then gives 187 incidents for 2025 through October. Those figures and claim do not support the stated comparison as written. The count may mix incidents, issues, or different database snapshots, but this file does not establish which; check the underlying database and definitions before using a trend or count. The original compilation wording is preserved below.
+
 ## Key Statistics
 
 ### Overall Trends

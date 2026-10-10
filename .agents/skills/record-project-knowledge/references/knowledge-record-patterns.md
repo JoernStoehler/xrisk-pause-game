@@ -3,7 +3,7 @@
 Use these as adaptable shapes, not mandatory forms. Omit fields that do not
 help a future agent verify, revise, or act.
 
-## Source extract or source-grounded record under `docs/`
+## Source-grounded record
 
 Suitable for a web investigation, literature map, interview, legal map, product
 research record, or code/runtime record.
@@ -106,7 +106,7 @@ A workflow record should tell an agent:
 - common failure modes;
 - stop, escalation, and handoff conditions.
 
-## Converting Sol-level reasoning for Luna or Terra
+## Transferring an investigation to a lower-context agent
 
 The goal is not to make a lower-cost model imitate hidden reasoning. Extract the
 stable structure that made the result good:
@@ -120,35 +120,36 @@ stable structure that made the result good:
 4. Give the execution agent a bounded artifact, explicit ownership, expected
    handoff, and validation criteria. Do not make it reread the full research
    history unless its task actually depends on it.
-5. Forward-test with a fresh Luna or Terra agent on a realistic raw task. Check
+5. Forward-test with a fresh execution agent on a realistic raw task. Check
    the artifact, not whether it repeats preferred wording.
 6. Escalate only the unresolved judgment crux; do not rerun the entire workflow
    at higher effort.
 
 ### Example: web investigation
 
-- Luna writes a dated source-grounded research record under `docs/research/`
+- An investigator records source material with the owning corpus and a dated
+  source-grounded interpretation in the relevant `docs/<topic>.md`
   with method, direct sources, status, limits, and contradictions.
-- Sol synthesizes the decision-relevant best guess and alternatives in the
+- The coordinator synthesizes the decision-relevant best guess and alternatives in the
   relevant `docs/` owner file.
-- A later Luna refresh updates evidence; the owner document changes only if the
+- A later source refresh updates evidence; the owner document changes only if the
   new evidence is contrastive.
 
 ### Example: expert model
 
-- Preserve Jörn's statement or attributed paraphrase under `docs/jorn/` with
+- Preserve Jörn's statement or attributed paraphrase under `interviews/` with
   quotation status and a raw session pointer when available.
 - Record the project's current causal model, rival hypotheses, conditioning,
-  and policy consequences in `docs/expert-model/`.
+  and policy consequences in the relevant `docs/<topic>.md`.
 - Keep diagnostic game frequencies out of the expert claim unless separately
   supported.
 
 ### Example: market or public-discourse research
 
 - Preserve the purposive sample, channel findings, comparables, source pointers,
-  and limits in the relevant `docs/research/` record.
-- Put the current audience/distribution or teaching-priority model under
-  `docs/research/` or the relevant product owner directory.
+  and limits in the relevant topic brief or a linked source note.
+- Put the current audience/distribution or teaching-priority model in
+  `docs/distribution-and-sharing.md` or `docs/learning-and-transfer.md`.
 - Distinguish channel existence, demand, virality, learning, influence, and
   policy effect.
 

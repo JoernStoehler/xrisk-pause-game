@@ -5,7 +5,8 @@ Document: GOV/2003/75
 URL: https://www.iaea.org/sites/default/files/documents/gov2003-75.pdf
 Type: IAEA Board of Governors Report (full text, extracted from PDF)
 
-Description: The landmark November 2003 IAEA report documenting Irans two decades of
+Project-added description (editorial text, not GOV/2003/75; characterization unverified):
+The landmark November 2003 IAEA report documenting Irans two decades of
 undeclared nuclear activities, including secret centrifuge enrichment at Natanz, laser
 enrichment experiments, and plutonium separation -- all conducted in violation of Irans
 NPT safeguards agreement. This report was central to the subsequent noncompliance finding.

@@ -1,4 +1,0 @@
-interface:
-  display_name: "Deploy"
-  short_description: "Validate and deploy Cloudflare Pages previews safely"
-  default_prompt: "Validate the current game build and deploy the requested Cloudflare Pages preview without changing production routing."

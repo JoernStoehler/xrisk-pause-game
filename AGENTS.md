@@ -2,60 +2,91 @@
 
 ## Outcome
 
-Build a serious, mobile-first game about directing an international agency during a global pause on dangerous AI development. The game should help players understand that a global pause treaty could work, that a pause is active crisis management, and how to recognize blatant misunderstandings or false claims about what such a treaty needs under different threat models. Law, authority, hardware control, evidence, technical progress, institutional response, and hidden events can diverge.
+Build a serious, mobile-first game about directing an international agency during
+a global pause on dangerous AI development. Help players understand that a
+global pause treaty could work, that a pause is active crisis management, and how
+to recognize misunderstandings about treaty requirements under different threat
+models. Law, authority, hardware control, evidence, technical progress,
+institutional response, and hidden events can diverge.
 
-Fun, realism, and political and scientific detail serve that public-understanding goal. Passing tests or deploying a build is not project success by itself.
+Fun, realism, and political and scientific detail serve that public-understanding
+goal. Passing checks or deploying a build does not establish project success.
+The new game concept and stack are undecided; this is a knowledge checkpoint.
 
-## Authority
+## Authority and ownership
 
-- Jörn owns domain approval; expert-grounded content remains draft until he approves it.
-- Keep `main` available for independent work. Make tracked changes in a worktree unless Jörn asks for an exact edit on `main`. Merge to `main` only after Jörn approves.
-- Changes to this file or repo-local skills require Jörn review before merge.
+- Jörn owns domain approval; expert-grounded content remains draft until approved.
+- Keep `main` available for independent work. Make tracked changes in a worktree
+  unless Jörn asks for an exact edit on `main`. Merge only after his approval.
+  Changes to this file or repo-local skills require his review before merge.
+- Own the assigned outcome. Revise your route when evidence undermines it;
+  continue through accessible work, then return any concrete unresolved crux.
+- State what a check or review establishes and which material dimensions remain
+  unreviewed. Agent review cannot establish human fun, learning, or demand.
 
-## Work ownership
+## Knowledge and claim status
 
-- Own the assigned outcome, not merely the requested artifact. Relate local choices to the project outcome, respond when evidence undermines the current route, and change direction within scope rather than completing work that no longer serves its purpose.
-- Continue until the assigned outcome is complete, explicitly paused, or blocked after accessible work is exhausted. When progress requires a scope change, private context, or judgment outside the assigned authority, return the evidence and concrete crux through the parent.
-- Treat tests, reviews, and other checks as evidence only for what they actually establish. State the artifact, conditions, verdict scope, and material dimensions that remain unreviewed when handing work off.
+- Start from the question-specific brief linked in `docs/README.md`. Briefs are
+  revisable synthesis, not source truth, complete literature coverage, a fixed
+  game concept, or standing approval. Recheck time-sensitive claims and search
+  beyond retained literature when the question requires it.
+- Preserve source fact, attributed Jörn judgment, project inference, diagnostic
+  fixture, playability transform, and approved player-facing claim distinctly.
+  Do not turn fixture frequencies or unresolved numbers into forecasts.
+- `interviews/jorn.md` preserves four dated records. May contains direct excerpts;
+  July contains polished agent-written paraphrases, not recovered transcripts.
+  New interview records belong under `interviews/`; interpretation belongs in
+  the relevant topic brief with a precise source pointer.
+- Literature and conversions belong under `literature/`; read its scoped
+  `AGENTS.md` before changing the corpus. Inclusion and a confident title do
+  not certify fidelity, completeness, authority, or current coverage.
+- Put durable interpretations and decision knowledge in the narrowest relevant
+  `docs/<topic>.md`. Explain status, sources, assumptions, live alternatives,
+  and evidence that would change the conclusion. Compact agent-oriented text
+  is fine when its meaning and evidence remain checkable.
+- Keep raw logs with their owning system, source text with its corpus, and
+  generated data with its producer. Do not copy private session logs into the
+  repo. Temporary exploration need not become permanent documentation.
+- When code and a specification exist, distinguish implemented behavior from
+  intended behavior and cite their actual owners. No game specification or
+  symbolic-model file currently has authority by default.
+- Earlier work is pinned at `archive/pre-restart-2026-10-10` / `2552820`, and
+  the older retired tree at `0c5262c34c423cc62b68124d30d002b4886b879f`.
+  Use Git for obsolete records; do not preserve an architecture to reduce a diff.
 
 ## Coordination
 
-- Delegate independently bounded work when it enables parallelism or keeps task-internal context out of the coordinating thread. Give each agent the context, ownership, concurrent-work constraints, expected handoff, and validation criteria needed to work independently; subagents may delegate under the same condition.
-- After the outcome, reason for delegation, and choice of a fresh recipient are fixed, use `$subagent-prompting` when a substantial bounded assignment must transfer non-obvious context, ownership boundaries, completion evidence, or a return contract. Keep assignments that fit clearly in one or two sentences direct.
-- Give concurrent workers non-overlapping write ownership. Coordinators integrate and validate returned work; unresolved needs move through the parent, and the root involves Jörn only when his domain input or approval remains necessary after accessible work.
+Delegate independently bounded work when it enables useful parallelism or keeps
+task-internal context out of the coordinating thread. Give workers non-overlapping
+write ownership, relevant sources and conditions, expected handoff, and validation
+criteria. Use `$subagent-prompting` for substantial assignments with non-obvious
+context; simple one- or two-sentence assignments can be direct. Coordinators
+integrate results and resolve routine issues before involving Jörn in a domain
+judgment or scope change.
 
-## Trust and claim status
-
-- Source code and tests define implemented behavior. `docs/game-model/model.yaml` defines the intended symbolic model where code does not yet exist.
-- Human-readable project knowledge lives under `docs/`. `docs/jorn/jorn-review-2026-05-11-raw-excerpts.md` preserves older direct excerpts; the July Jörn records are polished paraphrases unless explicitly marked as quotations.
-- Expert-atlas documents are project synthesis. Keep source fact, Jörn judgment, project inference, diagnostic fixture, playability transform, and approved player-facing claim distinct.
-- Do not turn diagnostic fixture frequencies or unresolved quantitative judgments into forecasts.
-- The retired repository is recoverable at commit `0c5262c34c423cc62b68124d30d002b4886b879f`; do not retain old architecture merely to reduce a diff.
-
-## Knowledge placement
-
-- Put durable human-readable project knowledge in the narrowest relevant location under `docs/`: source extracts, research and reasoning, current best guesses and alternatives, success models, specifications, review results, and development guidance. Begin each artifact with a format-native explanation of what it is, its status and authority, the sources it derives from, and how it should be updated or interpreted.
-- Keep raw artifacts with their owning system or corpus: session JSONL under the Codex session store, downloaded literature under `literature/`, runtime behavior in code and test output, and generated data beside its producer. A curated quotation, paraphrase, or summary under `docs/` must point to the raw source precisely enough to check it and must not silently inherit the source's authority.
-- For material uncertainty, link the supporting sources and reasoning, preserve the strongest live alternatives, and state what future evidence would discriminate among them. Update the current best guess when contrastive evidence changes it. Keep implemented behavior in code and tests, and intended symbolic behavior in `docs/game-model/model.yaml`.
-- Preserve decision breadcrumbs that let a future agent check and revise the result: the question, source pointers, assumptions and claim status, current conclusion, confidence when useful, and remaining discriminators. Do not preserve raw reasoning or transient process when it adds no verification or decision value.
-- Put session recovery or process learning in a handoff or postmortem only when future work depends on it. Temporary exploration may remain in a worktree or scratch location; promote it into `docs/`, code, tests, or a skill only when it becomes durable project knowledge.
+Repo-local skills are conditional workflows, not additional project objectives.
+Use them when their trigger fits; inspect current tool capabilities rather than
+assuming a previous host, model family, or cloud environment remains available.
 
 ## Validation
 
-Use the smallest relevant set, then run the full set before a preview or merge:
+For this knowledge checkpoint:
 
 ```bash
-npm ci
-npm run check
-npm run test:e2e
-npm audit --audit-level=high
+python3 scripts/check-repository.py
 git diff --check
 ```
 
-For model changes, add a focused deterministic test. For UI changes, render and inspect desktop and mobile layouts. For deployment work, read `.agents/skills/deploy/SKILL.md`.
+The script checks selected local Markdown links and anchors, not truth, external
+URLs, or corpus fidelity. For source moves or consolidation, compare preserved
+bodies with originals. Keep plaintext and keys out of commits. See `INSTALL.md`
+for setup and the retained optional secret-scanning hook.
 
-For harness changes, use `$harness-engineering-v2`; validate changed skills,
-links, discovery and trigger boundaries, then forward-test representative
-behavior in proportion to risk. A larger agent tree, successful instruction
-recitation, or passing syntax check does not by itself establish harness
-quality.
+When game code is introduced, choose and document checks for its actual stack:
+focused model behavior tests, desktop/mobile inspection for UI, and appropriate
+build and deployment validation. There is no npm or browser requirement yet.
+
+For harness changes use `$harness-engineering-v2`; validate changed skills,
+links, discovery and trigger boundaries, and forward-test realistic fresh-agent
+tasks in proportion to risk. Instruction recitation and syntax checks alone do
+not establish harness quality.

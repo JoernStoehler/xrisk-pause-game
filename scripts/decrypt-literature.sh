@@ -32,7 +32,14 @@ if [[ -z "${LITERATURE_KEY:-}" ]]; then
 fi
 
 key_file="$(mktemp)"
-trap 'rm -f "$key_file"' EXIT
+plaintext_tmp=""
+cleanup() {
+  rm -f "$key_file"
+  if [[ -n "$plaintext_tmp" ]]; then
+    rm -f "$plaintext_tmp"
+  fi
+}
+trap cleanup EXIT
 printf '%s\n' "$LITERATURE_KEY" > "$key_file"
 
 decrypted=0
@@ -43,7 +50,13 @@ for enc_file in "${encrypted_files[@]}"; do
     ((skipped += 1))
     continue
   fi
-  age -d -i "$key_file" -o "$out_file" "$enc_file"
+  # Keep incomplete decryptions out of the final path. mktemp creates a 0600
+  # file on the same filesystem, so successful publication is a rename.
+  plaintext_tmp="$(mktemp "${out_file}.XXXXXX.decrypt-tmp")"
+  age -d -i "$key_file" -o "$plaintext_tmp" "$enc_file"
+  chmod 0600 "$plaintext_tmp"
+  mv "$plaintext_tmp" "$out_file"
+  plaintext_tmp=""
   ((decrypted += 1))
 done
 

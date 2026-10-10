@@ -1,6 +1,13 @@
 # Sanctions Evasion Literature — References
 
-Documents found but not available as full text via web fetch. Listed here for manual retrieval.
+This project-maintained file is a dated-in-content retrieval backlog, not a
+source publication or a statement of present-day access. The precise retrieval
+snapshot date was not recorded. Each status below describes the access or
+extraction condition reported when that entry was written; it must be
+rechecked before being treated as current. “Not retrieved,” blocked automated
+access, and failed text extraction are different from permanent
+unavailability. The file also contains project summaries of reported content;
+verify those against the linked publication before relying on them.
 
 ---
 

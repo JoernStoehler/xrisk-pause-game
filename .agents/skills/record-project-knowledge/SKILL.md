@@ -1,6 +1,6 @@
 ---
 name: record-project-knowledge
-description: Preserve project knowledge in a durable, checkable form. Use when recording web or literature investigations, curated source extracts, Jörn interviews, expert-model or market reasoning, current best guesses about project success, difficult decisions that will recur, postmortem learning, or a repeated workflow that should become executable by Luna or Terra without reconstructing Sol-level context. Also use when deciding among docs/, raw source storage, code/tests, AGENTS.md, a skill, a script, a handoff, or temporary scratch state.
+description: Preserve project knowledge in a durable, checkable form. Use when recording web or literature investigations, curated source extracts, Jörn interviews, expert-model or market reasoning, current best guesses about project success, difficult decisions that will recur, postmortem learning, or a repeated workflow that should become executable by a lower-context agent without reconstructing the whole investigation. Also use when deciding among docs/, raw source storage, code/tests, AGENTS.md, a skill, a script, a handoff, or temporary scratch state.
 ---
 
 # Record Project Knowledge
@@ -10,16 +10,17 @@ use the result. Do not preserve volume merely because work was expensive.
 
 ## Choose the artifact
 
-- `docs/`: durable human-readable knowledge—curated quotations or paraphrases,
+- `docs/`: durable topic knowledge—curated quotations or paraphrases,
   research and analysis, living models, alternatives and discriminators,
   decisions, specifications, review results, and development guidance.
 - Raw source storage: the original JSONL, downloaded paper, dataset, screenshot,
   generated output, code, or test result. Keep it with its owning tool, corpus,
-  or producer; link it from the human-readable artifact. Do not invent a repo
+  or producer; link it from the topic brief. Do not invent a repo
   raw-source directory or copy private session logs merely for colocation.
-- Code, tests, and `docs/game-model/model.yaml`: implemented or intended
-  executable behavior.
-- `AGENTS.md`: short project-wide boundaries every agent needs.
+- Code and tests: implemented behavior, once present. A named, current
+  specification: intended behavior. Do not assume the archived model is current.
+- `AGENTS.md`: short project-wide boundaries every agent needs; scoped
+  `literature/AGENTS.md` owns corpus maintenance.
 - A skill: a conditional, repeated workflow or role-specific knowledge whose
   description should trigger loading only when relevant.
 - A skill script, test, linter, or generator: deterministic repeated work that
@@ -34,7 +35,12 @@ workflow, or choosing a template.
 
 ## Record the result
 
-Inspect existing owner files first. Update the narrowest current artifact when
+Inspect existing owner files first. Topic briefs live directly under `docs/`;
+source interview records live under `interviews/`, literature under `literature/`.
+Preserve quotations and attributed paraphrases distinctly. A stored source list
+is neither exhaustive nor a reason to skip a needed current search.
+
+ Update the narrowest current artifact when
 the new evidence changes its best guess; avoid adding a second synthesis merely
 because it is easier than reconciling the first.
 

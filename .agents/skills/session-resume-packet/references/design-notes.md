@@ -4,6 +4,10 @@ Read this only when updating, reviewing, or diagnosing this skill or nearby
 AGENTS/chat-convention guidance. Do not read it just to write an ordinary
 session resume packet.
 
+Status: historical skill-design rationale from July 2026, not current project
+instructions or a model capability benchmark. References to the then-current
+AGENTS.md describe that session, not requirements for the present repository.
+
 This file records enough context from the session that created the skill for a
 future agent to continue the design without rederiving the problem from chat.
 It is not source truth for game-domain claims or project status.
@@ -52,7 +56,7 @@ the skill itself says when not to use it, the added live guidance is only mildly
 harmful in false-positive triggers and more useful in normal triggers.
 
 The project now keeps the multi-session premise in `AGENTS.md` and the packet
-contract here. Add examples or stronger production guidance only if GPT-5.6
+contract here. Add examples or stronger production guidance only if current-model
 packets fail after reading the reduced skill.
 
 ## Design Choices

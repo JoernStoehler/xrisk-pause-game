@@ -10,8 +10,8 @@ subagent results, compaction, and transcript provenance. Derived summaries and
 task notes are downstream artifacts. This skill does not apply to experiment
 JSONL, ordinary repository search, or Git history.
 
-Read `references/session-log-queries.md` for current paths, event shapes, and
-tested `jq` recipes. Inspect the actual event shape before relying on the dated
+Read `references/session-log-queries.md` for dated path examples, event shapes,
+and `jq` recipes. Inspect the actual event shape before relying on the dated
 schema map.
 
 Logs contain private material, including instructions, messages, tool output,
