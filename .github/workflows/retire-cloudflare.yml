@@ -1,0 +1,91 @@
+name: Retire legacy Cloudflare Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Inspect or retire the single legacy global-pause project
+        type: choice
+        required: true
+        default: inspect
+        options:
+          - inspect
+          - retire
+
+permissions:
+  contents: read
+
+jobs:
+  retire:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      RETIRE_MODE: ${{ inputs.mode }}
+    steps:
+      - name: Inspect or retire global-pause only
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+          account = os.environ['CLOUDFLARE_ACCOUNT_ID']
+          token = os.environ['CLOUDFLARE_API_TOKEN']
+          if not account or not token:
+              raise SystemExit('Cloudflare credentials are missing')
+          api = 'https://api.cloudflare.com/client/v4'
+          path = '/accounts/' + account + '/pages/projects/global-pause'
+          def call(method, suffix, body=None, allow_missing=False):
+              raw = json.dumps(body).encode() if body is not None else None
+              req = urllib.request.Request(api + suffix, data=raw, method=method,
+                  headers={'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as response:
+                      data = json.load(response)
+              except urllib.error.HTTPError as error:
+                  try:
+                      data = json.load(error)
+                  except Exception:
+                      data = {}
+                  codes = [item.get('code') for item in data.get('errors', [])]
+                  if allow_missing and (error.code == 404 or 8000007 in codes):
+                      return None
+                  raise SystemExit('Cloudflare request failed: HTTP ' + str(error.code) + ', codes ' + str(codes))
+              if not data.get('success'):
+                  raise SystemExit('Cloudflare API returned an unsuccessful result')
+              return data.get('result')
+          project = call('GET', path, allow_missing=True)
+          if project is None:
+              print('global-pause project already absent')
+              raise SystemExit(0)
+          if project.get('name') != 'global-pause':
+              raise SystemExit('Unexpected project identity')
+          source = project.get('source') or {}
+          print(json.dumps({
+              'project': project['name'],
+              'subdomain': project.get('subdomain'),
+              'domains': project.get('domains', []),
+              'git_source_type': source.get('type'),
+              'git_source_repo': (source.get('config') or {}).get('repo_name'),
+              'git_source_owner': (source.get('config') or {}).get('owner'),
+              'production_auto_deploy': (source.get('config') or {}).get('production_deployments_enabled'),
+              'preview_auto_deploy': (source.get('config') or {}).get('preview_deployment_setting')
+          }, sort_keys=True))
+          if os.environ['RETIRE_MODE'] != 'retire':
+              raise SystemExit(0)
+          subdomain = project.get('subdomain')
+          custom = [domain for domain in project.get('domains', []) if domain != subdomain]
+          if custom:
+              # Do not leave custom DNS dangling or modify an unrelated zone.
+              # Project deletion waits for separate verified DNS cleanup.
+              if source.get('type') == 'github':
+                  call('PATCH', path, {'source': {'type': 'github', 'config': {
+                      'production_deployments_enabled': False,
+                      'preview_deployment_setting': 'none'}}})
+                  print('Automatic deployments disabled')
+              raise SystemExit('Custom domains need DNS cleanup before project deletion: ' + ', '.join(custom))
+          call('DELETE', path)
+          missing = call('GET', path, allow_missing=True)
+          if missing is not None:
+              raise SystemExit('Project still present after deletion')
+          print('Deleted global-pause project and verified it is absent')
+          PY
