@@ -37,8 +37,9 @@ prerequisite for resuming this repository. The GitHub workflow performs validati
 only. The legacy `global-pause` Pages project and its deployments were subsequently
 deleted at Jörn's request; the API confirmed absence. It had no Git connection
 or custom domains. The two repository Cloudflare secrets and temporary retirement
-workflow were removed; the last served HTML and linked assets are in the private
-restart backup. Cloudflare retirement is complete. Missing transcripts and historical
+workflow were removed. An unnecessary copy of served build artifacts was
+discarded; Git history preserves the retired source. Cloudflare retirement is
+complete. Missing transcripts and historical
 prototype refs need recovery only when a concrete next question depends on
 them. Select that question before refreshing literature or choosing a game
 stack; there is no mandatory whole-corpus rehabilitation task.
