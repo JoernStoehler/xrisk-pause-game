@@ -10,12 +10,18 @@ or deployment had been performed.
 
 ## Integration and follow-ups — 13 October 2026
 
-Jörn approved merging, cleanup, and pushing this checkpoint. The integration
-retains the recovery tag and archives the inventory/proposal branch at
-`archive/restart-inventory-2026-10-10`. Temporary worktrees from this task can
-be removed after confirming the ignored plaintexts also match main and the
-private backup. The independent sandbox-winddown worktree is outside this
-cleanup. Domain/player-facing claims remain draft.
+Jörn approved merging, cleanup, and pushing this checkpoint. It was merged into
+main and pushed on 13 October. Both the pre-restart recovery tag and the
+inventory/proposal archive at `archive/restart-inventory-2026-10-10` were pushed.
+The task's implementation and inventory worktrees and branches were removed
+after confirming that ignored plaintexts match main and the private backup.
+Previous build/test outputs were privately archived, and the old dependency
+installation was removed. The independent sandbox-winddown worktree remains
+outside this cleanup. Domain/player-facing claims remain draft.
+
+[GitHub validation for the integration](https://github.com/JoernStoehler/xrisk-pause-game/actions/runs/38388162264)
+passed, including the secret-scanning step. A second verified local Git bundle
+and the cleanup-artifact archive are in the same private backup directory.
 
 The next environment session should establish its actual capabilities and fill
 in [INSTALL](../INSTALL.md), including source-history access and instruction
@@ -90,7 +96,7 @@ retrieved a treaty passage, interpreted the conditional inference estimate,
 planned an unfamiliar cloud setup, and found the scoped literature workflow
 without assuming browser/npm installation or exhaustive coverage.
 
-## Evidence and limits
+## Evidence and limits at the 10 October review
 
 - All four interview bodies match the baseline exactly.
 - Of 119 baseline tracked literature files, 113 are byte-identical. Changes are
