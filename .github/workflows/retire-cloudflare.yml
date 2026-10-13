@@ -18,6 +18,7 @@ permissions:
 jobs:
   retire:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -34,6 +35,10 @@ jobs:
               raise SystemExit('Cloudflare credentials are missing')
           api = 'https://api.cloudflare.com/client/v4'
           path = '/accounts/' + account + '/pages/projects/global-pause'
+          class ApiError(Exception):
+              def __init__(self, status, codes):
+                  self.status, self.codes = status, codes
+                  super().__init__('Cloudflare request failed: HTTP ' + str(status) + ', codes ' + str(codes))
           def call(method, suffix, body=None, allow_missing=False):
               raw = json.dumps(body).encode() if body is not None else None
               req = urllib.request.Request(api + suffix, data=raw, method=method,
@@ -49,7 +54,7 @@ jobs:
                   codes = [item.get('code') for item in data.get('errors', [])]
                   if allow_missing and (error.code == 404 or 8000007 in codes):
                       return None
-                  raise SystemExit('Cloudflare request failed: HTTP ' + str(error.code) + ', codes ' + str(codes))
+                  raise ApiError(error.code, codes)
               if not data.get('success'):
                   raise SystemExit('Cloudflare API returned an unsuccessful result')
               return data.get('result')
@@ -83,7 +88,28 @@ jobs:
                       'preview_deployment_setting': 'none'}}})
                   print('Automatic deployments disabled')
               raise SystemExit('Custom domains need DNS cleanup before project deletion: ' + ', '.join(custom))
-          call('DELETE', path)
+          active = (project.get('canonical_deployment') or project.get('production_deployment') or {}).get('id')
+          for batch in range(100):
+              try:
+                  call('DELETE', path)
+                  break
+              except ApiError as error:
+                  if 8000076 not in error.codes:
+                      raise
+              # Cloudflare documents project deletion failing above 100
+              # deployments. Prune a batch, retaining active production, then
+              # retry. Re-list page 1 after deletions to avoid pagination shifts.
+              deployments = call('GET', path + '/deployments?per_page=100&page=1')
+              candidates = [item for item in deployments
+                  if item.get('id') != active and
+                  (active or item.get('environment') != 'production')]
+              if not candidates:
+                  raise SystemExit('No safely removable deployments; active production identity unavailable or no candidates')
+              for deployment in candidates:
+                  call('DELETE', path + '/deployments/' + deployment['id'] + '?force=true')
+              print('Pruned ' + str(len(candidates)) + ' old deployments; retained active production')
+          else:
+              raise SystemExit('Deployment cleanup reached its bounded batch limit')
           missing = call('GET', path, allow_missing=True)
           if missing is not None:
               raise SystemExit('Project still present after deletion')
