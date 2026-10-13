@@ -73,6 +73,17 @@ bash scripts/decrypt-literature.sh
 
 Keep the key private and do not commit it. The owner must provide any key separately. A clone alone cannot recover or decrypt the plaintext corpus.
 
+Key-recovery lead, checked 13 October 2026: the older setup notes at
+`2552820:docs/development-environment.md`, “Codex Cloud,” expected
+`LITERATURE_KEY` in that environment's settings. Its actual presence there has
+not been verified. The current host's environment, repository `.env`, standard
+age key locations, and repository GitHub secret names did not provide it.
+Do not confuse the tracked public `literature/age-recipient.txt` with the private
+identity. All four plaintexts remain locally available and privately backed up;
+if the original key cannot be recovered, a replacement key and re-encryption
+can preserve access. Arrange durable private storage before distributing that
+replacement, and update the recipient/ciphertexts together.
+
 ## Recovering the prior game baseline
 
 The game stack retired during this cleanup is preserved at `archive/pre-restart-2026-10-10`, based on Git commit `2552820`. To inspect or work on that baseline without changing the cleaned checkout:
@@ -82,3 +93,7 @@ git worktree add ../xrisk-pause-game-pre-restart 2552820
 ```
 
 The archived baseline contains the former Node/Vite game setup. Its `wrangler.toml` names the Pages project `global-pause` and sets `dist` as the build output directory. That configuration does not establish that a deploy command or GitHub deploy step exists, nor verify the Cloudflare account, project, routing, or production build triggers. Treat deployment as unverified until those external details are checked.
+
+Cloudflare is historical recovery information, not a setup requirement for this
+knowledge checkpoint or a choice of hosting for the new game. The current
+GitHub workflow validates repository knowledge and does not deploy it.

@@ -16,8 +16,11 @@ inventory/proposal archive at `archive/restart-inventory-2026-10-10` were pushed
 The task's implementation and inventory worktrees and branches were removed
 after confirming that ignored plaintexts match main and the private backup.
 Previous build/test outputs were privately archived, and the old dependency
-installation was removed. The independent sandbox-winddown worktree remains
-outside this cleanup. Domain/player-facing claims remain draft.
+installation was removed. The remaining sandbox-winddown worktree was subsequently
+checked: it was a stale September setup-doc branch, not an active parallel
+project. Its commit was archived and pushed as
+`archive/sandbox-winddown-2026-09-19`, then its worktree and branch were removed.
+Only the main worktree remains. Domain/player-facing claims remain draft.
 
 [GitHub validation for the integration](https://github.com/JoernStoehler/xrisk-pause-game/actions/runs/38388162264)
 passed, including the secret-scanning step. A second verified local Git bundle
@@ -27,14 +30,16 @@ The next environment session should establish its actual capabilities and fill
 in [INSTALL](../INSTALL.md), including source-history access and instruction
 loading. Separately, arrange private access to the encrypted literature's key
 or an authorized plaintext transfer. Neither setup can be established from
-this host alone. Cloudflare credentials are absent on this host, so checking
-provider-side Git build triggers remains a follow-up; the repository's GitHub
-workflow performs validation only. Missing transcripts and historical
+this host alone. This knowledge checkpoint requires no hosting. Cloudflare is
+only the archived game's former deployment target; checking an old provider-side
+Git connection is relevant if keeping or retiring that old site. It is not a
+prerequisite for resuming this repository. The GitHub workflow performs validation
+only and does not use the two retained legacy Cloudflare GitHub secrets. Missing transcripts and historical
 prototype refs need recovery only when a concrete next question depends on
 them. Select that question before refreshing literature or choosing a game
 stack; there is no mandatory whole-corpus rehabilitation task.
 
-## Remaining gaps
+## Gaps identified at the 10 October review
 
 - **Portable encrypted-source access:** all four ignored plaintexts, including
   IABIED, were copied into this worktree and a private local backup with matching
@@ -51,7 +56,7 @@ stack; there is no mandatory whole-corpus rehabilitation task.
 - **Environment and hosting:** Claude chat cloud and ChatGPT Work images,
   capabilities, persistence, and instruction loading need a first run.
   Cloudflare account state and provider-side build triggers were not inspected.
-  Check triggers before merging removal of the old build files.
+  Old-site lifecycle remains separate from the new checkpoint's setup.
 - **Research coverage and fidelity:** most corpus metadata/conversions remain
   unaudited. The fresh-reader test demonstrates a few useful paths, not complete
   literature coverage or domain correctness. Further source checking and Jörn's
