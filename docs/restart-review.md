@@ -34,7 +34,11 @@ this host alone. This knowledge checkpoint requires no hosting. Cloudflare is
 only the archived game's former deployment target; checking an old provider-side
 Git connection is relevant if keeping or retiring that old site. It is not a
 prerequisite for resuming this repository. The GitHub workflow performs validation
-only and does not use the two retained legacy Cloudflare GitHub secrets. Missing transcripts and historical
+only. The legacy `global-pause` Pages project and its deployments were subsequently
+deleted at Jörn's request; the API confirmed absence. It had no Git connection
+or custom domains. The two repository Cloudflare secrets and temporary retirement
+workflow were removed; the last served HTML and linked assets are in the private
+restart backup. Cloudflare retirement is complete. Missing transcripts and historical
 prototype refs need recovery only when a concrete next question depends on
 them. Select that question before refreshing literature or choosing a game
 stack; there is no mandatory whole-corpus rehabilitation task.

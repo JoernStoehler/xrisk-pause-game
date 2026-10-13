@@ -97,3 +97,10 @@ The archived baseline contains the former Node/Vite game setup. Its `wrangler.to
 Cloudflare is historical recovery information, not a setup requirement for this
 knowledge checkpoint or a choice of hosting for the new game. The current
 GitHub workflow validates repository knowledge and does not deploy it.
+
+On 13 October 2026, the legacy `global-pause` Pages project and its deployments
+were deleted, and the API confirmed the project was absent. It had no Git
+connection or custom domains. Its two repository GitHub secrets and the
+temporary retirement workflow were removed. The last served HTML and linked
+assets were saved in the private restart backup. There is no Cloudflare setup
+follow-up for this checkpoint.
