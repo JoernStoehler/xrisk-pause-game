@@ -5,7 +5,28 @@ This records repository changes, checks, and unresolved gaps; it is not domain
 approval or evidence that a new game is fun, teaches, or reaches players.
 The pre-cleanup source tree is pinned at
 `255282028d6d5e13274bd21b80a00dbd7b902f44` /
-`archive/pre-restart-2026-10-10`. No merge, push, or deployment was performed.
+`archive/pre-restart-2026-10-10`. At the 10 October review, no merge, push,
+or deployment had been performed.
+
+## Integration and follow-ups — 13 October 2026
+
+Jörn approved merging, cleanup, and pushing this checkpoint. The integration
+retains the recovery tag and archives the inventory/proposal branch at
+`archive/restart-inventory-2026-10-10`. Temporary worktrees from this task can
+be removed after confirming the ignored plaintexts also match main and the
+private backup. The independent sandbox-winddown worktree is outside this
+cleanup. Domain/player-facing claims remain draft.
+
+The next environment session should establish its actual capabilities and fill
+in [INSTALL](../INSTALL.md), including source-history access and instruction
+loading. Separately, arrange private access to the encrypted literature's key
+or an authorized plaintext transfer. Neither setup can be established from
+this host alone. Cloudflare credentials are absent on this host, so checking
+provider-side Git build triggers remains a follow-up; the repository's GitHub
+workflow performs validation only. Missing transcripts and historical
+prototype refs need recovery only when a concrete next question depends on
+them. Select that question before refreshing literature or choosing a game
+stack; there is no mandatory whole-corpus rehabilitation task.
 
 ## Remaining gaps
 
