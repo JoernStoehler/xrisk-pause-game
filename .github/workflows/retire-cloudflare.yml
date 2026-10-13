@@ -36,9 +36,9 @@ jobs:
           api = 'https://api.cloudflare.com/client/v4'
           path = '/accounts/' + account + '/pages/projects/global-pause'
           class ApiError(Exception):
-              def __init__(self, status, codes):
+              def __init__(self, status, codes, method, messages):
                   self.status, self.codes = status, codes
-                  super().__init__('Cloudflare request failed: HTTP ' + str(status) + ', codes ' + str(codes))
+                  super().__init__('Cloudflare ' + method + ' failed: HTTP ' + str(status) + ', codes ' + str(codes) + ', ' + str(messages))
           def call(method, suffix, body=None, allow_missing=False):
               raw = json.dumps(body).encode() if body is not None else None
               req = urllib.request.Request(api + suffix, data=raw, method=method,
@@ -54,7 +54,9 @@ jobs:
                   codes = [item.get('code') for item in data.get('errors', [])]
                   if allow_missing and (error.code == 404 or 8000007 in codes):
                       return None
-                  raise ApiError(error.code, codes)
+                  messages = [str(item.get('message', ''))[:300].replace(token, '[token]').replace(account, '[account]')
+                      for item in data.get('errors', [])]
+                  raise ApiError(error.code, codes, method, messages)
               if not data.get('success'):
                   raise SystemExit('Cloudflare API returned an unsuccessful result')
               return data.get('result')
@@ -98,8 +100,9 @@ jobs:
                       raise
               # Cloudflare documents project deletion failing above 100
               # deployments. Prune a batch, retaining active production, then
-              # retry. Re-list page 1 after deletions to avoid pagination shifts.
-              deployments = call('GET', path + '/deployments?per_page=100&page=1')
+              # retry. Use Wrangler's query-free list request and re-list after
+              # deletions; this API rejects the documented pagination options.
+              deployments = call('GET', path + '/deployments')
               candidates = [item for item in deployments
                   if item.get('id') != active and
                   (active or item.get('environment') != 'production')]
